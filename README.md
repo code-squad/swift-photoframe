@@ -15,8 +15,8 @@
 
 ### 결과
 #### UI
-[첫번째 화면](capture/step1_01)!
-[두번째 화면](capture/step1_02)!
+![첫번째 화면](./capture/step1_01)
+![두번째 화면](./capture/step1_02)
 
 #### Console
 ```
