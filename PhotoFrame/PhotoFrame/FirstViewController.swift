@@ -10,14 +10,19 @@ import UIKit
 
 class FirstViewController: UIViewController {
     @IBOutlet weak var firstLabel: UILabel!
+    @IBOutlet weak var firstDescription: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         print(#file, #line, #function, #column)
-        self.firstLabel.text = "Jake의 사진액자"
-        self.firstLabel.textColor = UIColor.init(red: 1.0, green: 0.7, blue: 0.5, alpha: 0.6)
-        self.firstLabel.backgroundColor = UIColor.gray
+        self.firstLabel.text = "Jakestagram"
+        self.firstLabel.textColor = UIColor.init(red: 0.2, green: 1.0, blue: 0.2, alpha: 0.7)
+        self.firstLabel.backgroundColor = UIColor.lightGray
+
+        self.firstDescription.text = "story about Jake"
+        self.firstDescription.textColor = UIColor.init(red: 0.3, green: 0.1, blue: 0.9, alpha: 0.9)
+        self.firstDescription.backgroundColor = UIColor.init(red: 0.4, green: 0.2, blue: 0.8, alpha: 0.2)
     }
 
     override func didReceiveMemoryWarning() {
