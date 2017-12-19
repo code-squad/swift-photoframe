@@ -1,7 +1,6 @@
 # PhotoFrame
 
 ## Step1 (시작하기 - Tabbed App 템플릿)
-
 ### 요구사항
 - 포토프레임 프로젝트 저장소를 본인 저장소로 fork하고 로컬에 clone한다.
 - iOS 프로젝트 Tabbed App 템플릿을 만들고, 프로젝트 이름을 "PhotoFrame"으로 지정하고, 위에 만든 로컬 저장소 경로에 생성한다.
@@ -15,8 +14,8 @@
 
 ### 결과
 #### UI
-![첫번째 화면](./capture/step1_01)
-![두번째 화면](./capture/step1_02)
+![첫번째 화면](capture/step1_01.png)
+![두번째 화면](capture/step1_02.png)
 
 #### Console
 ```
