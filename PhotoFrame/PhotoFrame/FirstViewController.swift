@@ -9,11 +9,13 @@
 import UIKit
 
 class FirstViewController: UIViewController {
+    @IBOutlet weak var firstLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         print(#file, #line, #function, #column)
+        self.firstLabel.text = "Jake의 사진액자"
     }
 
     override func didReceiveMemoryWarning() {
