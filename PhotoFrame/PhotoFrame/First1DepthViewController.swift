@@ -25,6 +25,22 @@ class First1DepthViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        print(#file, #line, #function, #column)
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        print(#file, #line, #function, #column)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        print(#file, #line, #function, #column)
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        print(#file, #line, #function, #column)
+    }
+
     /*
     // MARK: - Navigation
 
