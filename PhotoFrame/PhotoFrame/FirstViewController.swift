@@ -9,9 +9,17 @@
 import UIKit
 
 class FirstViewController: UIViewController {
-
+    @IBOutlet weak var photoLable: UILabel!
+    @IBOutlet weak var firstDescription: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.photoLable.text = "Napster"
+        self.photoLable.font = UIFont.systemFont(ofSize: 50)
+        self.photoLable.textColor = UIColor.brown
+        self.firstDescription.text = "Napster의 사진액자 입니다. 반갑습니다."
+        // swiftlint:disable line_length
+        self.firstDescription.textColor = UIColor(red: CGFloat(255), green: CGFloat(255), blue: CGFloat(102), alpha: CGFloat(20))
+        self.firstDescription.backgroundColor = UIColor.gray
         print(#file, #line, #function, #column)
     }
 
