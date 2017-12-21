@@ -11,6 +11,16 @@ import UIKit
 class FirstViewController: UIViewController {
     @IBOutlet weak var photoLable: UILabel!
     @IBOutlet weak var firstDescription: UILabel!
+    @IBAction func touchDown(_ sender: Any) {
+        self.photoLable.font = UIFont.systemFont(ofSize: 50)
+        self.photoLable.textColor = UIColor.brown
+        self.photoLable.backgroundColor = UIColor.white
+    }
+    @IBAction func nextButtonTouched(_ sender: Any) {
+        self.photoLable.textColor = UIColor.blue
+        self.photoLable.backgroundColor = UIColor.yellow
+        self.photoLable.alpha = 0.5
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.photoLable.text = "Napster"
@@ -22,10 +32,8 @@ class FirstViewController: UIViewController {
         self.firstDescription.backgroundColor = UIColor.gray
         print(#file, #line, #function, #column)
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 }
