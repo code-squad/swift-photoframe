@@ -21,6 +21,8 @@ class FirstViewController: UIViewController {
         self.photoLable.backgroundColor = UIColor.yellow
         self.photoLable.alpha = 0.5
     }
+    @IBAction func nextScene(_ sender: Any) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.photoLable.text = "Napster"
@@ -31,6 +33,7 @@ class FirstViewController: UIViewController {
         self.firstDescription.textColor = UIColor(red: CGFloat(255), green: CGFloat(255), blue: CGFloat(102), alpha: CGFloat(20))
         self.firstDescription.backgroundColor = UIColor.gray
         print(#file, #line, #function, #column)
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
