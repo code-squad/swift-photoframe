@@ -72,3 +72,24 @@ self.firstLabel.text = "JK의 사진액자"
 #### UI
 ![버튼 누르기 전](capture/step3_01.png)
 ![버튼 누른 후](capture/step3_02.png)
+
+---
+## Step4 (Scene과 Segue)
+### 요구사항
+- 스토리보드 구성 요소에 대해 학습하고 새로운 Scene과 Segue를 추가한다.
+- 실행하고 새로운 화면을 캡처해서 readme.md 파일에 포함한다.
+
+### 프로그래밍 요구사항
+- Main 스토리보드에서 First Scene 옆에 ViewController를 드래그해서 새로운 Scene을 추가한다.
+- 앞 단계에서 추가한 [다음]버튼을 선택하고 Control + 드래그를 해서 새로 추가한 Scene에 연결한다.
+    + 팝업으로 표시되는 Action Segue에서 Show 항목을 선택한다.
+- Scene과 Scene 사이에 화살표를 선택하면 Segue 속성을 변경할 수 있다.
+- 새로 추가한 Scene 속성에서 배경 색상(Background Color)을 원하는 색상으로 변경한다. 새로 앱을 실행해보고 [다음] 버튼을 누르면 새로운 화면이 나타나는지 확인한다.
+- 다시 스토리보드에서 위에 추가한 Scene (혹은 ViewController)에 [다음] 버튼을 추가한다. 우측 옆에 한 단계 더 표현하기 위한 ViewController를 추가하고 배경 색상을 다른 색상으로 변경한다. 위와 마찬가지로 [다음]버튼에서 새 Scene으로 Segue를 연결한다.
+    + 예를 들어 First Scene 다음에 추가한 화면이 Yellow 화면이었다면, First Scene에서 [다음] 버튼을 누르면 Yellow 화면이 표시되고, Yellow 화면에서 [다음] 버튼을 누르면 Blue 화면이 나오는 방식으로 두 단계 표시한다.
+
+### 결과
+#### UI
+![첫 화면](capture/step4_01.png)
+![다음 버튼 누른 후](capture/step4_02.png)
+![다음 버튼 한번 더 누른 후](capture/step4_03.png)
