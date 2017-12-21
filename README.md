@@ -45,3 +45,30 @@ self.firstLabel.text = "JK의 사진액자"
 #### UI
 ![중간](capture/step2_01.png)
 ![최종](capture/step2_02.png)
+
+---
+## Step3 (IBAction)
+### 요구사항
+- First Scene에 버튼(UIButton)을 추가하고 IBAction으로 연결한다.
+- 연결한 액션에 대한 메서드를 구현한다.
+- 실행하고 버튼을 터치하기 이전/이후 화면을 캡처해서 readme.md 파일에 포함한다.
+
+### 프로그래밍 요구사항
+- Main.storyboard 에서 First Scene에 UIButton을 추가한다.
+    + 우측 유틸리티 영역 하단 3번째 탭 - 객체 라이브러리(Object Library)에서 Button 을 찾아서 View로 드래그한다.
+    + 추가한 버튼을 선택하고 우측 유틸리티 영역 상단 4번째 탭 - 속성(Attributes)에서 Title을 다음으로 변경한다.
+- 버튼을 선택하고 Control + 드래그해서 ViewController 코드에 IBAction으로 연결한다.
+- 팝업에서 Connection 항목에서 IBOutlet 대신 IBAction 으로 변경한다.
+- 액션 이름을 nextButtonTouched 로 지정한다.
+- ViewController 클래스에 추가된 nextButtonTouched() 메서드에 아래처럼 구현을 추가한다.
+```
+@IBAction func nextButtonTouched(_ sender: Any) {
+  self.firstLabel.textColor = UIColor.blue
+  self.firstLabel.backgroundColor = UIColor.yellow
+  self.firstLabel.alpha = 0.5
+}
+```
+### 결과
+#### UI
+![버튼 누르기 전](capture/step3_01.png)
+![버튼 누른 후](capture/step3_02.png)
