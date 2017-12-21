@@ -1,10 +1,10 @@
 # 사진액자 앱
 ## 시작하기 - Tabbed App 템플릿 step1
 * 최초 Tabbed App 프로젝트 생성, git의 issue, 프로젝트 설정. 사진앱 프로젝트를 시작하기위한 기본작업 완료.
-![step1_firstTapView_Screen_shot](./ScreenShot/step1_firstTapView_Screen_shot.png){: width="250" height="400"}
+![step1_firstTapView_Screen_shot](./ScreenShot/step1_firstTapView_Screen_shot.png)
 <br>> step1_firstTapView_Screen_shot 17.12.21
 <br>
-![step1_SecondTapView_Screen_shot](./ScreenShot/step1_SecondTapView_Screen_shot.png){: width="250" height="400"}
+![step1_SecondTapView_Screen_shot](./ScreenShot/step1_SecondTapView_Screen_shot.png)
 
 <br>> step2_SecondTapView_Screen_shot 17.12.21
 * 콘솔 창엔 프로그램 요구사항인 ```print(#file, #line, #function, #column)```가 출력되고있다.
@@ -21,7 +21,7 @@ self.firstDescription.text = "Napster의 사진액자 입니다. 반갑습니다
 self.firstDescription.textColor = UIColor(red: CGFloat(255), green: CGFloat(255), blue: CGFloat(102), alpha: CGFloat(20))
 self.firstDescription.backgroundColor = UIColor.gray
 ```
-![step2](./ScreenShot/step2_firstView.png){: width="250" height="400"}
+![step2](./ScreenShot/step2_firstView.png)
 <br>
 > Step2의 UILabel을 이용하여 변경한 모습. 
 
@@ -35,7 +35,11 @@ self.firstDescription.backgroundColor = UIColor.gray
 
 * 버튼을 눌렀을때 Label의 변화를 주었다. 17.12.21
 * Click Before<br>
-![step3_click_before](./ScreenShot/step3_click_before.png){: width="250" height="400"}
+![step3_click_before](./ScreenShot/step3_click_before.png)
 
 * Click After<br>
-![step3_click_after](./ScreenShot/step3_click_after.png){: width="250" height="400"}
+![step3_click_after](./ScreenShot/step3_click_after.png)
+
+## Scene과 Segue step4
+* Button을 눌렀을때, 다음 Scene(ViewController)로 연결되는 Segue 셋팅한다.
+![step4](./ScreenShot/step4.png)
