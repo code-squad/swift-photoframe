@@ -5,20 +5,14 @@
 <br>> step1_firstTapView_Screen_shot 17.12.21
 <br>
 ![step1_SecondTapView_Screen_shot](./ScreenShot/step1_SecondTapView_Screen_shot.png){: width="250" height="400"}
-<<<<<<< HEAD
-=======
 
->>>>>>> 130ae64a8af7a5f21d901f865ffe16a9bcdce38f
 <br>> step2_SecondTapView_Screen_shot 17.12.21
 * 콘솔 창엔 프로그램 요구사항인 ```print(#file, #line, #function, #column)```가 출력되고있다.
 
 * [UITapBar와 UITapBarController의 차이](http://llldddjjj.tistory.com/entry/iOSUITapBar%EC%99%80-UITapBarController%EC%9D%98-%EA%B0%84%EB%8B%A8%ED%95%9C-%EC%B0%A8%EC%9D%B4)
 
-<<<<<<< HEAD
-## 시작하기 - IBOutlet step2
 =======
 ## IBOutlet step2
->>>>>>> 130ae64a8af7a5f21d901f865ffe16a9bcdce38f
 * UILabel의 여러가지 속성을 변경해보았다. 
 ```swift
 self.photoLable.text = "Napster"
@@ -30,9 +24,6 @@ self.firstDescription.backgroundColor = UIColor.gray
 ```
 ![step2](./ScreenShot/step2_firstView.png){: width="250" height="400"}
 <br>
-<<<<<<< HEAD
-> Step2의 UILabel을 이용하여 변경한 모습. 
-=======
 > Step2의 UILabel을 이용하여 변경한 모습. 
 
 ## IBAction step3
