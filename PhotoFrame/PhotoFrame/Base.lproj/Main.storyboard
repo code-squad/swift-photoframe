@@ -61,10 +61,10 @@
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
-        <!--View Controller-->
+        <!--First1 Depth View Controller-->
         <scene sceneID="wrw-St-yaJ">
             <objects>
-                <viewController id="Hsc-A7-3pj" sceneMemberID="viewController">
+                <viewController id="Hsc-A7-3pj" customClass="First1DepthViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ugC-q4-ZmD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

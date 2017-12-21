@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E9DFE731FEB98CF0032A07E /* First1DepthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9DFE721FEB98CF0032A07E /* First1DepthViewController.swift */; };
 		8EC572191FE8FD9F00BFB3F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC572181FE8FD9F00BFB3F1 /* AppDelegate.swift */; };
 		8EC5721B1FE8FD9F00BFB3F1 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5721A1FE8FD9F00BFB3F1 /* FirstViewController.swift */; };
 		8EC5721D1FE8FD9F00BFB3F1 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5721C1FE8FD9F00BFB3F1 /* SecondViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E9DFE721FEB98CF0032A07E /* First1DepthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = First1DepthViewController.swift; sourceTree = "<group>"; };
 		8EC572151FE8FD9F00BFB3F1 /* PhotoFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC572181FE8FD9F00BFB3F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EC5721A1FE8FD9F00BFB3F1 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				8EC572211FE8FD9F00BFB3F1 /* Assets.xcassets */,
 				8EC572231FE8FD9F00BFB3F1 /* LaunchScreen.storyboard */,
 				8EC572261FE8FD9F00BFB3F1 /* Info.plist */,
+				8E9DFE721FEB98CF0032A07E /* First1DepthViewController.swift */,
 			);
 			path = PhotoFrame;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				8EC5721D1FE8FD9F00BFB3F1 /* SecondViewController.swift in Sources */,
 				8EC572191FE8FD9F00BFB3F1 /* AppDelegate.swift in Sources */,
 				8EC5721B1FE8FD9F00BFB3F1 /* FirstViewController.swift in Sources */,
+				8E9DFE731FEB98CF0032A07E /* First1DepthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
