@@ -11,7 +11,6 @@
 
 * [UITapBar와 UITapBarController의 차이](http://llldddjjj.tistory.com/entry/iOSUITapBar%EC%99%80-UITapBarController%EC%9D%98-%EA%B0%84%EB%8B%A8%ED%95%9C-%EC%B0%A8%EC%9D%B4)
 
-=======
 ## IBOutlet step2
 * UILabel의 여러가지 속성을 변경해보았다. 
 ```swift
@@ -40,4 +39,3 @@ self.firstDescription.backgroundColor = UIColor.gray
 
 * Click After<br>
 ![step3_click_after](./ScreenShot/step3_click_after.png){: width="250" height="400"}
->>>>>>> 130ae64a8af7a5f21d901f865ffe16a9bcdce38f
