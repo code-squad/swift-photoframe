@@ -16,6 +16,7 @@
 		4074BCCC1FEB4C8200171E5B /* PhotoFrameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4074BCCB1FEB4C8200171E5B /* PhotoFrameTests.swift */; };
 		4074BCD71FEB4C8200171E5B /* PhotoFrameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4074BCD61FEB4C8200171E5B /* PhotoFrameUITests.swift */; };
 		4074BCE61FEC93FA00171E5B /* RedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4074BCE51FEC93FA00171E5B /* RedViewController.swift */; };
+		4074BCE81FEC95CD00171E5B /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4074BCE71FEC95CD00171E5B /* GreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		4074BCD61FEB4C8200171E5B /* PhotoFrameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFrameUITests.swift; sourceTree = "<group>"; };
 		4074BCD81FEB4C8200171E5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4074BCE51FEC93FA00171E5B /* RedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedViewController.swift; sourceTree = "<group>"; };
+		4074BCE71FEC95CD00171E5B /* GreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		4074BCB31FEB4C8200171E5B /* PhotoFrame */ = {
 			isa = PBXGroup;
 			children = (
+				4074BCE71FEC95CD00171E5B /* GreenViewController.swift */,
 				4074BCB41FEB4C8200171E5B /* AppDelegate.swift */,
 				4074BCE51FEC93FA00171E5B /* RedViewController.swift */,
 				4074BCB61FEB4C8200171E5B /* FirstViewController.swift */,
@@ -286,6 +289,7 @@
 				4074BCB91FEB4C8200171E5B /* SecondViewController.swift in Sources */,
 				4074BCB51FEB4C8200171E5B /* AppDelegate.swift in Sources */,
 				4074BCB71FEB4C8200171E5B /* FirstViewController.swift in Sources */,
+				4074BCE81FEC95CD00171E5B /* GreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
