@@ -15,6 +15,7 @@
 		4074BCC11FEB4C8200171E5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4074BCBF1FEB4C8200171E5B /* LaunchScreen.storyboard */; };
 		4074BCCC1FEB4C8200171E5B /* PhotoFrameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4074BCCB1FEB4C8200171E5B /* PhotoFrameTests.swift */; };
 		4074BCD71FEB4C8200171E5B /* PhotoFrameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4074BCD61FEB4C8200171E5B /* PhotoFrameUITests.swift */; };
+		4074BCE61FEC93FA00171E5B /* RedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4074BCE51FEC93FA00171E5B /* RedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		4074BCD21FEB4C8200171E5B /* PhotoFrameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoFrameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4074BCD61FEB4C8200171E5B /* PhotoFrameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFrameUITests.swift; sourceTree = "<group>"; };
 		4074BCD81FEB4C8200171E5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4074BCE51FEC93FA00171E5B /* RedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				4074BCB41FEB4C8200171E5B /* AppDelegate.swift */,
+				4074BCE51FEC93FA00171E5B /* RedViewController.swift */,
 				4074BCB61FEB4C8200171E5B /* FirstViewController.swift */,
 				4074BCB81FEB4C8200171E5B /* SecondViewController.swift */,
 				4074BCBA1FEB4C8200171E5B /* Main.storyboard */,
@@ -279,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4074BCE61FEC93FA00171E5B /* RedViewController.swift in Sources */,
 				4074BCB91FEB4C8200171E5B /* SecondViewController.swift in Sources */,
 				4074BCB51FEB4C8200171E5B /* AppDelegate.swift in Sources */,
 				4074BCB71FEB4C8200171E5B /* FirstViewController.swift in Sources */,

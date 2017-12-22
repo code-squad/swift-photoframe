@@ -43,3 +43,5 @@ self.firstDescription.backgroundColor = UIColor.gray
 ## Scene과 Segue step4
 * Button을 눌렀을때, 다음 Scene(ViewController)로 연결되는 Segue 셋팅한다.
 ![step4](./ScreenShot/step4.png)
+
+## 
