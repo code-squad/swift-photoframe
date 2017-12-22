@@ -44,4 +44,7 @@ self.firstDescription.backgroundColor = UIColor.gray
 * Button을 눌렀을때, 다음 Scene(ViewController)로 연결되는 Segue 셋팅한다.
 ![step4](./ScreenShot/step4.png)
 
-## 
+## ViewController 프로그래밍 step5
+* Button을 눌러서 연결되는 Scene에 ViewController Class 연결, 그리고 연결을 바탕으로 화면이 그려질때 화면 생명주기에 맞추어 메소드들이 호출되는 관계를 알아봄.
+* Segue없이 코드로 View를 호출하는 방법을 학습.
+![step5](./ScreenShot/step5.png)
