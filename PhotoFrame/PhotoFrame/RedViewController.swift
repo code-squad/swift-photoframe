@@ -9,13 +9,8 @@
 import UIKit
 
 class RedViewController: UIViewController {
-    @IBAction func nextSceneButton(_ sender: Any) {
-        let storyBoard = self.storyboard!
-        let nextView = storyBoard.instantiateViewController(withIdentifier: "greenView")
-        present(nextView, animated: true, completion: nil)
-    }
     @IBAction func closeButtonTouched(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     override func viewDidLoad() {
         super.viewDidLoad()

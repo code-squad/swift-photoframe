@@ -7,7 +7,7 @@
 //
 
 import XCTest
-
+@testable import PhotoFrame
 class PhotoFrameUITests: XCTestCase {
     override func setUp() {
         super.setUp()
