@@ -148,3 +148,44 @@ self.firstLabel.text = "JK의 사진액자"
 /Users/chocozero/Desktop/MyProject/CodeSquad/Masters/Level3/swift-photoframe/PhotoFrame/PhotoFrame/First1DepthViewController.swift 37 viewWillDisappear 40
 /Users/chocozero/Desktop/MyProject/CodeSquad/Masters/Level3/swift-photoframe/PhotoFrame/PhotoFrame/First1DepthViewController.swift 41 viewDidDisappear 40
 ```
+
+---
+## Step6 (Container ViewController)
+### 요구사항
+- 내비게이션 컨트롤러(Navigation Controller)를 Embed 시켜서 동작하도록 개선한다.
+- 실행하고 새로운 화면을 캡처해서 readme.md 파일에 포함한다.
+
+### 프로그래밍 요구사항
+- 스토리보드에서 First Scene을 선택하고, Editor > Embed In > Navigation Controller 항목을 선택한다.
+- 실행해보면 화면 상단에 내비게이션바(Navigation Bar)가 추가되고 [다음]버튼을 누르면 다음 화면이 우측에서 좌측으로 애니메이션되면서 표시된다.
+- [닫기]버튼에 연결된 closeButtonTouched 코드를 다음과 같이 수정한다.
+```
+@IBAction func closeButtonTouched(_ sender: Any) {
+    self.navigationController?.popViewController(animated: true)
+}
+```
+- 위와 동일하게 세 번째 추가한 화면에 [닫기]버튼도 코드를 수정한다.
+- 뷰 컨트롤러 콜백 함수들 동작도 동일한지 확인한다.
+
+### 결과
+#### UI
+![첫 화면](capture/step6_01.png)
+![다음 버튼 누른 후](capture/step6_02.png)
+![다음 버튼 한번 더 누른 후](capture/step6_03.png)
+
+#### Console
+```
+/Users/chocozero/Desktop/MyProject/CodeSquad/Masters/Level3/swift-photoframe/PhotoFrame/PhotoFrame/FirstViewController.swift 18 viewDidLoad() 40
+/Users/chocozero/Desktop/MyProject/CodeSquad/Masters/Level3/swift-photoframe/PhotoFrame/PhotoFrame/First1DepthViewController.swift 29 viewWillAppear 40
+/Users/chocozero/Desktop/MyProject/CodeSquad/Masters/Level3/swift-photoframe/PhotoFrame/PhotoFrame/First1DepthViewController.swift 33 viewDidAppear 40
+/Users/chocozero/Desktop/MyProject/CodeSquad/Masters/Level3/swift-photoframe/PhotoFrame/PhotoFrame/First1DepthViewController.swift 37 viewWillDisappear 40
+/Users/chocozero/Desktop/MyProject/CodeSquad/Masters/Level3/swift-photoframe/PhotoFrame/PhotoFrame/First2DepthViewController.swift 30 viewWillAppear 40
+/Users/chocozero/Desktop/MyProject/CodeSquad/Masters/Level3/swift-photoframe/PhotoFrame/PhotoFrame/First1DepthViewController.swift 41 viewDidDisappear 40
+/Users/chocozero/Desktop/MyProject/CodeSquad/Masters/Level3/swift-photoframe/PhotoFrame/PhotoFrame/First2DepthViewController.swift 34 viewDidAppear 40
+/Users/chocozero/Desktop/MyProject/CodeSquad/Masters/Level3/swift-photoframe/PhotoFrame/PhotoFrame/First2DepthViewController.swift 38 viewWillDisappear 40
+/Users/chocozero/Desktop/MyProject/CodeSquad/Masters/Level3/swift-photoframe/PhotoFrame/PhotoFrame/First1DepthViewController.swift 29 viewWillAppear 40
+/Users/chocozero/Desktop/MyProject/CodeSquad/Masters/Level3/swift-photoframe/PhotoFrame/PhotoFrame/First2DepthViewController.swift 42 viewDidDisappear 40
+/Users/chocozero/Desktop/MyProject/CodeSquad/Masters/Level3/swift-photoframe/PhotoFrame/PhotoFrame/First1DepthViewController.swift 33 viewDidAppear 40
+/Users/chocozero/Desktop/MyProject/CodeSquad/Masters/Level3/swift-photoframe/PhotoFrame/PhotoFrame/First1DepthViewController.swift 37 viewWillDisappear 40
+/Users/chocozero/Desktop/MyProject/CodeSquad/Masters/Level3/swift-photoframe/PhotoFrame/PhotoFrame/First1DepthViewController.swift 41 viewDidDisappear 40
+```
