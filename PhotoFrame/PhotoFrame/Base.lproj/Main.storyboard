@@ -72,7 +72,7 @@
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="firstDescription" destination="A5M-7J-77L" id="pfp-bm-rHV"/>
-                        <outlet property="photoLable" destination="KQZ-1w-vlD" id="tMY-gi-vkZ"/>
+                        <outlet property="photoLabel" destination="KQZ-1w-vlD" id="tMY-gi-vkZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -94,7 +94,7 @@
                                 <state key="normal" title="Next"/>
                                 <connections>
                                     <action selector="nextScene:" destination="odi-v0-Wdg" eventType="touchUpInside" id="fy5-Zn-axm"/>
-                                    <segue destination="v9s-Wt-FAC" kind="show" id="hz0-S5-2GU"/>
+                                    <action selector="nextSceneButton:" destination="mwh-Dc-BMM" eventType="touchUpInside" id="0oV-Uo-Yb0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Rn-KK-AFa">
@@ -119,7 +119,7 @@
         <!--Green View Controller-->
         <scene sceneID="Pjf-b6-wFu">
             <objects>
-                <viewController id="v9s-Wt-FAC" customClass="GreenViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="greenView" id="v9s-Wt-FAC" customClass="GreenViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6iF-Wf-9bm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

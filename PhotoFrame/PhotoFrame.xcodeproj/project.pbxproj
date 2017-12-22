@@ -103,9 +103,9 @@
 		4074BCB31FEB4C8200171E5B /* PhotoFrame */ = {
 			isa = PBXGroup;
 			children = (
-				4074BCE71FEC95CD00171E5B /* GreenViewController.swift */,
 				4074BCB41FEB4C8200171E5B /* AppDelegate.swift */,
 				4074BCE51FEC93FA00171E5B /* RedViewController.swift */,
+				4074BCE71FEC95CD00171E5B /* GreenViewController.swift */,
 				4074BCB61FEB4C8200171E5B /* FirstViewController.swift */,
 				4074BCB81FEB4C8200171E5B /* SecondViewController.swift */,
 				4074BCBA1FEB4C8200171E5B /* Main.storyboard */,
