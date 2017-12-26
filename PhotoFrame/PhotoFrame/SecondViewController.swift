@@ -23,7 +23,7 @@ class SecondViewController: UIViewController {
         var imgName = ""
         let randomNumber = makeRandom()
         if randomNumber < 10 {
-            imgName = "0" + String(randomNumber)
+            imgName = String(format: "0%d", randomNumber)
         } else {
             imgName = String(randomNumber)
         }
