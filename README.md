@@ -119,3 +119,5 @@ UIView즉 View는 빌딩의 기초 벽돌과 같다. 나의 앱에서, 유저들
 그중에 하나가 바로 UIImageView이다. UIImageView는 특히 이미지를 보여주기 위해 특화된 클래스라고 할 수 있다.
 ![step7](./ScreenShot/step7.png)
 * 다음 버튼을 누를때마다, 이미지가 랜덤하게 보여진다. 
+* Sring format 을 적극 활용하자.
+[String format](https://stackoverflow.com/questions/25566581/leading-zeros-for-int-in-swift)
