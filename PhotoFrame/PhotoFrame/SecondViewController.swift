@@ -19,11 +19,8 @@ class SecondViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func nextImageButtonTouched(_ sender: Any) {
-        let imgExtension = ".jpg"
-        var imgName = ""
         let randomNumber = makeRandom()
-        imgName = String(format: "%02d", randomNumber)
-        self.photoImageView.image = UIImage(named: imgName + imgExtension)
+        self.photoImageView.image = UIImage(named: String(format: "%02d.jpg", randomNumber))
     }
     private func makeRandom() -> Int {
         let MAX: UInt32 = 22
