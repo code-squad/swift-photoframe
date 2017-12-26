@@ -22,7 +22,7 @@ class SecondViewController: UIViewController {
         let imgExtension = ".jpg"
         var imgName = ""
         let randomNumber = makeRandom()
-        randomNumber < 10 ? (imgName = String(format: "0%d", randomNumber)) : (imgName = String(randomNumber))
+        imgName = String(format: "%02d", randomNumber)
         self.photoImageView.image = UIImage(named: imgName + imgExtension)
     }
     private func makeRandom() -> Int {
