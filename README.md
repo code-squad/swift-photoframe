@@ -189,3 +189,27 @@ self.firstLabel.text = "JK의 사진액자"
 /Users/chocozero/Desktop/MyProject/CodeSquad/Masters/Level3/swift-photoframe/PhotoFrame/PhotoFrame/First1DepthViewController.swift 37 viewWillDisappear 40
 /Users/chocozero/Desktop/MyProject/CodeSquad/Masters/Level3/swift-photoframe/PhotoFrame/PhotoFrame/First1DepthViewController.swift 41 viewDidDisappear 40
 ```
+
+---
+## Step7 (Second Scene 화면)
+### 요구사항
+- 탭바의 두 번째 화면 (Second Scene) 디자인을 변경하고 액자 앱을 동작을 구현한다.
+- 실행하고 새로운 화면을 캡처해서 readme.md 파일에 포함한다.
+
+### 프로그래밍 요구사항
+- 스토리보드에서 Second Scene을 선택하고, 다음과 같이 보이도록 화면을 디자인한다.
+    + 기존에 있던 두 번째 레이블은 삭제한다.
+    + UIImageView를 화면 상단 중앙에 240 x 240 크기로 배치하고, photoImageView 아웃렛으로 연결한다.
+    + 화면 하단에 [다음] 버튼을 추가하고 nextImageButtonTouched 액션으로 연결한다.
+- 앱에 포함할 사진 리소스를 이미지 다운로드 링크에서 다운로드한다. 압축을 풀고 이미지 파일들을 Xcode 프로젝트로 드래그해서 추가한다.
+    + 참고) 리소스 파일을 추가할 때는 Copy 옵션을 꼭 지정하고 Target을 체크되어 있는지 확인한다.
+- [다음]버튼에 연결된 nextImageButtonTouched에서는 01부터 22까지 랜덤으로 숫자를 선택해서 해당하는 이미지 파일을 photoImageView에 표시한다. 이미지뷰에 표시하는 방법은 다음과 같다.
+```
+self.photoImageView.image = UIImage(named: "01.jpg")
+```
+- 이미지뷰의 속성을 조정해서 이미지가 비율에 맞춰서 표시되도록 조정한다.
+
+### 결과
+#### UI
+![두번째 화면](capture/step7_01.png)
+![다음 버튼 누른 후](capture/step7_02.png)
