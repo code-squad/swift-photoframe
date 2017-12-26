@@ -22,6 +22,8 @@ class SecondViewController: UIViewController {
     }
 
     @IBAction func nextImageButtonTouched(_ sender: Any) {
+        self.photoImageView.image = UIImage(named: String(format: "%02d.jpg", Int(arc4random_uniform(22) + 1)))
+        self.photoImageView.contentMode = .scaleAspectFit
     }
 
 }

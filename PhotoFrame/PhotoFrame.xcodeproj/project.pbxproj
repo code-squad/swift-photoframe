@@ -124,7 +124,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8E646BB91FF1EE9D0091733C /* images */ = {
+		8EC5720C1FE8FD9F00BFB3F1 = {
 			isa = PBXGroup;
 			children = (
 				8E646B951FF1EE720091733C /* 01.jpg */,
@@ -149,14 +149,6 @@
 				8E646B8E1FF1EE720091733C /* 20.jpg */,
 				8E646B931FF1EE720091733C /* 21.jpg */,
 				8E646B9C1FF1EE730091733C /* 22.jpg */,
-			);
-			path = images;
-			sourceTree = "<group>";
-		};
-		8EC5720C1FE8FD9F00BFB3F1 = {
-			isa = PBXGroup;
-			children = (
-				8E646BB91FF1EE9D0091733C /* images */,
 				8EC572171FE8FD9F00BFB3F1 /* PhotoFrame */,
 				8EC5722E1FE8FDA000BFB3F1 /* PhotoFrameTests */,
 				8EC572391FE8FDA000BFB3F1 /* PhotoFrameUITests */,
