@@ -107,3 +107,15 @@ self.firstDescription.backgroundColor = UIColor.gray
 * UINavigationController<br>
  UINavigationController는 스택에서 관련 정보를 나타내는 뷰 컨트롤러의 배열을 유지한다. UIViewController가 스택 꼭대기에 있을때 그 컨트롤러의 view가 보인다.
  UINavigationController의 인스턴스를 초기화할 때, 인스턴스에 UIViewController를 전해줘야한다. 이때, UIViewController가 내비게이션 컨트롤러의 viewControllers 배열에 추가되고, 내비게이션 컨트롤러의 뷰 컨트롤러가 된다. 그래서 루트 뷰 컨트롤러는 항상 스택의 맨 바닥에 놓이고, pop, push연산으로 view들을 관리한다.
+
+## Second Scene 화면 step7
+### UIView와 UIImageView 
+UIImageView는 UIView를 상속받는다.<br>
+Views are the fundamental building blocks of your app's user interface, and the UIView class defines the behaviors that are common to all views. A view object renders content within its bounds rectangle and handles any interactions with that content.The UIView class is a concrete class that you can instantiate and use to display a fixed background color. You can also subclass it to draw more sophisticated content. To display labels, images, buttons, and other interface elements commonly found in apps, use the view subclasses provided by the UIKit framework rather than trying to define your own.<br>
+ > 내맘대로 번역!<br>
+
+UIView즉 View는 빌딩의 기초 벽돌과 같다. 나의 앱에서, 유저들과 소통하는. 그리고 UIView Class는 행동을 정의한다. 모든 공통의 view들의. view object는 콘텐츠를 만든다. 사각형의 모양안에서. 그리고 다룬다. 어떠한 상호작용들을. 그 콘텐츠와 함께. UIView Class는 실체가 있는 클래스. 그 클래스는 내가 설명하고, 사용한다. 고정된 배경색을 보여주는데. 나는 좀더 세련된 콘텐츠로 분류할 수 있다. 라벨, 이미지, 버튼, 그리고 공통의 앱에서 찾을 수 있는 인터페이스 요소들들 보여주기위해, view의 세부 클래스들을 사용한다. UIKit framework을 사용해서 내가만들기보단.<br>
+
+그중에 하나가 바로 UIImageView이다. UIImageView는 특히 이미지를 보여주기 위해 특화된 클래스라고 할 수 있다.
+![step7](./ScreenShot/step7.png)
+* 다음 버튼을 누를때마다, 이미지가 랜덤하게 보여진다. 
