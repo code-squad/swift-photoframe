@@ -26,5 +26,8 @@ class SecondViewController: UIViewController {
         self.photoImageView.contentMode = .scaleAspectFit
     }
 
+    @IBAction func selectButtonTouched(_ sender: Any) {
+    }
+
 }
 
