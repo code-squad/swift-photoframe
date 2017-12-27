@@ -213,3 +213,31 @@ self.photoImageView.image = UIImage(named: "01.jpg")
 #### UI
 ![두번째 화면](capture/step7_01.png)
 ![다음 버튼 누른 후](capture/step7_02.png)
+
+---
+## Step8 (추가 요구사항)
+### 요구사항
+- 이미지 테두리 액자 화면을 추가한다.
+- 사진 앨범에서 사진을 가져와서 보여줄 수 있도록 개선한다.
+- 실행하고 새로운 화면을 캡처해서 readme.md 파일에 포함한다.
+
+### 프로그래밍 요구사항
+- 스토리보드에서 Second Scene을 선택하고, 다음과 같이 화면을 개선한다.
+    + 새로운 UIImageView를 추가하고, 기존 photoImageView보다 아래에 배치한다.
+- 다음 액자 사진을 액자 이미지 다운로드한다. Xcode 프로젝트로 드래그해서 추가한다.
+    + 참고) 리소스 파일을 추가할 때는 Copy 옵션을 꼭 지정하고 Target을 체크되어 있는지 확인한다.
+- PhotoFrame 이미지 뷰의 Identity 항목중에 Document > Label 값을 PhotoFrame 처럼 입력하면 좌측 화면 항목에서 구분하기 쉽다.
+- PhotoFrame 이미지 뷰의 Attributes 항목중에 Image View > Image 값을 다운로드 받은 photoframe-border.png로 선택한다.
+- 스토리보드에서 Second Scene을 선택하고, [다음]버튼 아래 [선택] 버튼을 추가하고 IBAction을 selectButtonTouched로 연결한다.
+- selectButtonTouched에서는 UIImagePickerController로 사진 앱 - 카메라롤에서 사진을 가져오도록 구현한다.
+    + 카메라롤에서 사진을 가져오기 위해 해줘야 하는 동작들을 찾아서 구현한다.
+    + 권한 설정이 필요하면 Info.plist에 추가한다.
+    + 선택한 사진을 받기 위해서 구현해야 하는 메서드는 어떤게 있는지 찾아 구현한다.
+
+### 결과
+#### UI
+![두번째 화면](capture/step8_01.png)
+![선택 버튼 누른 후](capture/step8_02.png)
+![사진앨범 목록](capture/step8_03.png)
+![사진 목록](capture/step8_04.png)
+![choose 버튼 누른 후](capture/step8_05.png)
