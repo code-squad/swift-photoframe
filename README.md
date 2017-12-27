@@ -6,6 +6,7 @@
 <img src="1_tabbedapp_firstview.png" width="40%"></img>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="1_tabbedapp_secondview.png" width="40%"></img>
 
 <br/>
+
 #### 1. viewDidLoad()에 print(#file, #line, #function, #column) 수행
 
 ```swift
