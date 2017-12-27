@@ -7,7 +7,7 @@
 
 <br/>
 
-#### 1. viewDidLoad()에 print(#file, #line, #function, #column) 수행
+### viewDidLoad()에 print(#file, #line, #function, #column) 수행
 
 ```swift
 class FirstViewController: UIViewController {
@@ -19,15 +19,21 @@ class FirstViewController: UIViewController {
 
 }
 ```
+- 결과: 
+ 
+![커맨드창결과](1_command.png)
+
 - SecondViewController 에 적용 시, Second 탭 선택 후 출력됨.
 
-![커맨드창결과](1_command.png)
+<br/>
 
 ### 학습거리
 - ***View*** : 
 	- 데이터를 **어떻게** 보여주고 유저와 상호작용 시 **어떻게** 입력값을 받고 피드백을 보여줄지 아는 객체. 
 - ***Controller*** : 
 	- **무슨** 데이터를 보여주고 유저 입력값으로 **무엇을** 해야 하는 지 아는 객체.
+- ***View와 Controller의 차이점*** : 
+	- **How**와 **What**의 차이
 - ***UITabBar*** : 
 	- UIView로, 유저에게 **탭들을 어떻게 보여주고** 탭 클릭 시 **어떻게 반응할 건지 (피드백을 어떻게 보여줄지)** 안다.
 	- 보통 UITabBarController와 함께 사용하지만, 혼자 쓰일 수도 있다.
@@ -42,8 +48,6 @@ class FirstViewController: UIViewController {
 	- 특정 탭 선택 시, 해당 뷰컨트롤러의 **루트뷰**를 보여준다. (이전에 어떤 뷰를 봤건 상관없이 항상 루트뷰를 보여준다.)
 	- UITabBarItem을 뷰컨트롤러와 연결시키려면, UITabBarItem 객체를 생성한 후 뷰컨트롤러의 **tabBarItem** 프로퍼티에 할당한다.(커스텀뷰가 아니면 디폴트 Item이 생성됨)
 	- 유저가 **탭 선택 시, 탭바 컨트롤러는 상호작용 내용을 delegate 객체에 전달**한다.(delegate는 어떤 객체든 상관없지만, UITabBarControllerDelegate를 채택해야 함) delegate를 사용하면 다른 탭들이 선택되지 않도록 제어하거나 특정 작업을 수행하게 만들 수 있다. 또한, **탭 내부의 뷰컨트롤러가 NavigationController로 구성되어 있으면 여기서 일어나는 변화를 감지할 수 있다.**
-	- 탭바 개수가 4개 이상되면, 처음 4개 + '...'(standard More item) 탭만 보여진다.
+	- 탭바 개수가 4개 이상되면, 처음 **4개 + '...'(standard More item) 탭**만 보여진다.
 	- 탭바 컨트롤러의 구성:
 	- ![](1_tabbar_controller.png)
-- ***UITabBar와 UITabBarController의 차이점*** : 
-	- **How**(*View*)와 **What**(*Controller*)의 차이
