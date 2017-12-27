@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     @IBOutlet weak var photoImageView: UIImageView!
 
     override func viewDidLoad() {
@@ -27,6 +27,14 @@ class SecondViewController: UIViewController {
     }
 
     @IBAction func selectButtonTouched(_ sender: Any) {
+        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum) {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = .savedPhotosAlbum;
+            imagePicker.allowsEditing = true
+            print("jake test")
+            present(imagePicker, animated: true, completion: nil)
+        }
     }
 
 }
