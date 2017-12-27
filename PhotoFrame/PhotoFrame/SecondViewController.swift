@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class SecondViewController: UIViewController {
     @IBOutlet weak var photoImageView: UIImageView!
 
     override func viewDidLoad() {
@@ -26,16 +26,30 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
         self.photoImageView.contentMode = .scaleAspectFit
     }
 
+}
+
+extension SecondViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+
     @IBAction func selectButtonTouched(_ sender: Any) {
-        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum) {
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
-            imagePicker.sourceType = .savedPhotosAlbum;
+            imagePicker.sourceType = .photoLibrary;
             imagePicker.allowsEditing = true
-            print("jake test")
             present(imagePicker, animated: true, completion: nil)
         }
     }
 
-}
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
+        if let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            self.photoImageView.contentMode = .scaleAspectFit
+            self.photoImageView.image = selectedImage
+        }
+        dismiss(animated: true, completion: nil)
+    }
 
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+
+}
