@@ -19,6 +19,7 @@ class FirstViewController: UIViewController {
 
 }
 ```
+
 - 결과: 
  
 ![커맨드창결과](1_command.png)
@@ -49,5 +50,5 @@ class FirstViewController: UIViewController {
 	- UITabBarItem을 뷰컨트롤러와 연결시키려면, UITabBarItem 객체를 생성한 후 뷰컨트롤러의 **tabBarItem** 프로퍼티에 할당한다.(커스텀뷰가 아니면 디폴트 Item이 생성됨)
 	- 유저가 **탭 선택 시, 탭바 컨트롤러는 상호작용 내용을 delegate 객체에 전달**한다.(delegate는 어떤 객체든 상관없지만, UITabBarControllerDelegate를 채택해야 함) delegate를 사용하면 다른 탭들이 선택되지 않도록 제어하거나 특정 작업을 수행하게 만들 수 있다. 또한, **탭 내부의 뷰컨트롤러가 NavigationController로 구성되어 있으면 여기서 일어나는 변화를 감지할 수 있다.**
 	- 탭바 개수가 4개 이상되면, 처음 **4개 + '...'(standard More item) 탭**만 보여진다.
-	- 탭바 컨트롤러의 구성:
+	- **탭바 컨트롤러의 구성**:
 	- ![](1_tabbar_controller.png)
