@@ -104,6 +104,7 @@
 				EE74A8511FF36D7300B5C04F /* Resources */,
 				CCFF577719098262B5B22611 /* [CP] Embed Pods Frameworks */,
 				8FB2026A5F039D6744F77A36 /* [CP] Copy Pods Resources */,
+				EEAE3CAA1FF4E364008EAD84 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -209,6 +210,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotoFrame/Pods-PhotoFrame-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		EEAE3CAA1FF4E364008EAD84 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -357,12 +371,14 @@
 			baseConfigurationReference = C4D9BB44B0E6B6AE7FDE2D32 /* Pods-PhotoFrame.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VY6BWEP79H;
 				INFOPLIST_FILE = PhotoFrame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = undervineg.ios.school.PhotoFrame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -373,12 +389,14 @@
 			baseConfigurationReference = 9502663B98987554F7BC6622 /* Pods-PhotoFrame.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VY6BWEP79H;
 				INFOPLIST_FILE = PhotoFrame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = undervineg.ios.school.PhotoFrame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
