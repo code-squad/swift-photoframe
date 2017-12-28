@@ -3,7 +3,7 @@
 ## Tabbed App 템플릿 시작
 
 ### Tabbed App 템플릿 초기화면
-<img src="1_tabbedapp_firstview.png" width="40%"></img>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="1_tabbedapp_secondview.png" width="40%"></img>
+<img src="img/1_tabbedapp_firstview.png" width="40%"></img>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/1_tabbedapp_secondview.png" width="40%"></img>
 
 <br/>
 
@@ -22,7 +22,7 @@ class FirstViewController: UIViewController {
 
 - 결과: 
  
-![](1_command.png)
+![](img/1_command.png)
 
 - SecondViewController 에 적용 시, Second 탭 선택 후 출력됨.
 
@@ -51,14 +51,14 @@ class FirstViewController: UIViewController {
 	- 유저가 **탭 선택 시, 탭바 컨트롤러는 상호작용 내용을 delegate 객체에 전달**한다.(delegate는 어떤 객체든 상관없지만, UITabBarControllerDelegate를 채택해야 함) delegate를 사용하면 다른 탭들이 선택되지 않도록 제어하거나 특정 작업을 수행하게 만들 수 있다. 또한, **탭 내부의 뷰컨트롤러가 NavigationController로 구성되어 있으면 여기서 일어나는 변화를 감지할 수 있다.**
 	- 탭바 개수가 4개 이상되면, 처음 **4개 + '...'(standard More item) 탭**만 보여진다.
 	- **탭바 컨트롤러의 구성**:
-![](1_tabbar_controller.png)
+![](img/1_tabbar_controller.png)
 
 <br/>
 
 ## Tabbed App 템플릿 시작
 
 ### IBOutlet으로 UILabel 적용
-<img src="2_IBoutlet.png" width="40%"></img>
+<center><img src="img/2_IBoutlet.png" width="40%"></img></center>
 
 <br/>
 
@@ -69,7 +69,7 @@ class FirstViewController: UIViewController {
 	- attributedText는 NSAttributedString을 사용해서 개별 글자나 글자 그룹을 커스터마이즈 할 수 있다. 
 	- **[How to make an attributed string in Swift](https://stackoverflow.com/questions/24666515/how-do-i-make-an-attributed-string-using-swift)**
 
-<center><img src="2_attributedtext.png" width="50%"></img></center>
+<center><img src="img/2_attributedtext.png" width="50%"></img></center>
 
 - Color
 - Font
@@ -91,7 +91,7 @@ class FirstViewController: UIViewController {
 	- **allowsDefaultTighteningForTruncation**: true로 설정 시, 글자를 자르기 전에 글자 사이의 간격을 줄이도록 한다.
 	- **[UILabel 다루기 참고](http://padgom.tistory.com/category/개발/iOS)**
 
-<center><img src="2_autoshrink.png" width="80%"></img></center>
+<center><img src="img/2_autoshrink.png" width="80%"></img></center>
 
 #### Advanced Attributes
 - Highlighted: highlightedTextColor
