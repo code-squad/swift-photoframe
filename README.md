@@ -126,3 +126,4 @@ $ git rm -r --cached .
 $ git add .
 $ git commit -m "fixed untracked files”
 ```
+**[출처: 아이군의 블로그](http://theeye.pe.kr/archives/2091)**
