@@ -98,3 +98,20 @@ class FirstViewController: UIViewController {
 - Shadow: shadowColor
 - Shadow Offset: shadowOffset
 
+<br/>
+
+# .gitignore 설정하기
+## 사용 목적
+- **원격 저장소 폴더에 올리고 싶지 않은 파일 또는 폴더가 있을 때**, .gitignore파일에 해당 파일 또는 폴더를 추가하여 제외 가능하다.
+- 한 번 제외된 파일 또는 폴더는 commit 대상에서 제외된다.
+- **깃허브로 협업 시, SwiftLint를 cocoapod 으로 설치한 경우는 install 이후에 생기는 Pods 하위 디렉토리를 ignore 시켜야 한다. 다른 개발자도 pod install로 다운받아 빌드하는 것이 권장된다.**
+
+## 커맨드라인에서 사용하기 (macOS, bash.sh 기준)
+### 설치
+```
+$ echo "function gi() { curl -L -s https://www.gitignore.io/api/\$@ ;}" >> ~/.bash_profile && source ~/.bash_profile
+```
+### 사용 예시
+```
+gi cocoapods >> .gitignore
+```
