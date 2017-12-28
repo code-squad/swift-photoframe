@@ -45,7 +45,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="nextButtonClicked:" destination="9pv-A4-QxB" eventType="touchUpInside" id="i5S-jV-ZoL"/>
                                     <action selector="nextButtonTouched:" destination="9pv-A4-QxB" eventType="touchUpInside" id="DXC-9e-Zy6"/>
                                 </connections>
                             </button>
