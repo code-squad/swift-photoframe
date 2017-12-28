@@ -29,15 +29,17 @@ class FirstViewController: UIViewController {
         let attributedString = NSMutableAttributedString(attributedString: photoLabelAttributeText)
         // 제목 텍스트 생성 및 폰트 적용
         let nameRange = NSRange(location: 0, length: 5)
-        let defaultFont = modifyFont(attributedString, nameRange, "Chalkduster", 35.0)
+        let restRange = NSRange(location: 6, length: 4)
         modifyBackgroundColor(attributedString, nameRange, to: UIColor.yellow)
-        modifyFontSize(attributedString, nameRange, defaultFont, to: 33.0)
+        modifyTextColor(attributedString, restRange, to: UIColor.yellow)
         photoLabel.attributedText = attributedString
     }
 
     private func makeDefaultText(_ attributedString: NSMutableAttributedString) {
         let nameRange = NSRange(location: 0, length: 5)
         let restRange = NSRange(location: 6, length: 4)
+        let defaultFont = modifyFont(attributedString, nameRange, "Chalkduster", 35.0)
+        modifyFontSize(attributedString, nameRange, defaultFont, to: 33.0)
         modifyBackgroundColor(attributedString, nameRange, to: UIColor.gray)
         modifyTextColor(attributedString, nameRange, to: UIColor.white)
         modifyForegroundColor(attributedString, restRange, to: UIColor.gray)
