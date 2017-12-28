@@ -19,10 +19,10 @@ class FirstViewController: UIViewController {
         let fontAttribute = [NSAttributedStringKey.font: defaultFont]
         let myString = NSMutableAttributedString(string: "Min's 사진액자", attributes: fontAttribute)
         let sizeRange = NSRange.init(location: 6, length: 4)
-        let sizeAttribute = [NSAttributedStringKey.font:defaultFont?.withSize(33.0)]
+        let sizeAttribute = [NSAttributedStringKey.font: defaultFont?.withSize(33.0)]
         myString.addAttributes(sizeAttribute, range: sizeRange)
         let backgroundRange = NSRange(location: 0, length: 5)
-        let backgroundAttribute = [NSAttributedStringKey.backgroundColor:UIColor.yellow]
+        let backgroundAttribute = [NSAttributedStringKey.backgroundColor: UIColor.yellow]
         myString.addAttributes(backgroundAttribute, range: backgroundRange)
         photoLabel.attributedText = myString
         firstDescription.text = "일상 속으로"
@@ -35,6 +35,4 @@ class FirstViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
 }
-
