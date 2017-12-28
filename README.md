@@ -22,13 +22,13 @@ class FirstViewController: UIViewController {
 
 - 결과: 
  
-![커맨드창결과](1_command.png)
+![](1_command.png)
 
 - SecondViewController 에 적용 시, Second 탭 선택 후 출력됨.
 
 <br/>
 
-### 학습거리
+### UITabBar와 UITabBarController의 차이: How와 What의 차이
 - ***View*** : 
 	- 데이터를 **어떻게** 보여주고 유저와 상호작용 시 **어떻게** 입력값을 받고 피드백을 보여줄지 아는 객체. 
 - ***Controller*** : 
@@ -51,4 +51,50 @@ class FirstViewController: UIViewController {
 	- 유저가 **탭 선택 시, 탭바 컨트롤러는 상호작용 내용을 delegate 객체에 전달**한다.(delegate는 어떤 객체든 상관없지만, UITabBarControllerDelegate를 채택해야 함) delegate를 사용하면 다른 탭들이 선택되지 않도록 제어하거나 특정 작업을 수행하게 만들 수 있다. 또한, **탭 내부의 뷰컨트롤러가 NavigationController로 구성되어 있으면 여기서 일어나는 변화를 감지할 수 있다.**
 	- 탭바 개수가 4개 이상되면, 처음 **4개 + '...'(standard More item) 탭**만 보여진다.
 	- **탭바 컨트롤러의 구성**:
-	- ![](1_tabbar_controller.png)
+![](1_tabbar_controller.png)
+
+<br/>
+
+## Tabbed App 템플릿 시작
+
+### IBOutlet으로 UILabel 적용
+<img src="2_IBoutlet.png" width="40%"></img>
+
+<br/>
+
+### UILabel
+#### Core Attributes
+- Text: 
+	- 텍스트 내용(이하 콘텐츠)은 **NSString** 또는 **NSAttributedText** 객체를 **text, attributedText 속성**에 할당할 수 있다.
+	- attributedText는 NSAttributedString을 사용해서 개별 글자나 글자 그룹을 커스터마이즈 할 수 있다. 
+	- **[How to make an attributed string in Swift](https://stackoverflow.com/questions/24666515/how-do-i-make-an-attributed-string-using-swift)**
+
+<center><img src="2_attributedtext.png" width="50%"></img></center>
+
+- Color
+- Font
+- Alignment
+- Lines: 
+	- **numberOfLines**: 라벨에 들어갈 최대 라인 수를 제한할 수 있다. 0으로 설정 시, 라벨 범위 내에서 최대한 들어갈 수 있는 만큼 들어가게 된다. 
+- Behavior: isEnabled, isHighlighted
+
+#### Text Spacing Attributes
+- Baseline: 
+	- **baselineAdjustment**: 서체 크기가 조절될 때 텍스트가 어느 위치에 들어갈지 보정해주는 속성
+- Line Breaks: 
+	- **lineBreakMode**: 문단에서 다음 행으로 넘어갈 시 텍스트가 잘리는 경우 어떻게 자를지, 마지막 줄에서 안 보이는 부분을 어떻게 처리할지를 결정
+	- **라벨의 디폴트 크기**는 **콘텐츠가 한 줄에 다 보이는 크기**이다. 만약 오토레이아웃으로 위치 및 **가로크기만 설정해 놓으면 라벨은 자동으로 모든 콘텐츠를 보이게끔 세로 사이즈를 조정**한다.
+	- 하지만 가로, 세로 모든 사이즈를 설정하게 되면 콘텐츠가 잘리는 상황에 대해 대처할 필요가 있다. 이를 해결하기 위해 Auto Shrink 속성을 활용한다.
+- Auto Shrink: 라벨 내 글자 사이즈 줄이기
+	- **adjustsFontSizeToFitWidth**: 라벨의 너비에 맞춰 텍스트가 모두 보일 수 있도록 해준다. true로 설정한다. 하지만 글자크기가 너무 줄어들 수 있는데, 이 때 사용하는 것이 minimumScaleFactor 속성이다. 
+	- **minimumScaleFactor**: 글자 크기를 줄이는 최소 비율을 설정한다. 0 ~ 1 사이 값을 준다. 
+	- **allowsDefaultTighteningForTruncation**: true로 설정 시, 글자를 자르기 전에 글자 사이의 간격을 줄이도록 한다.
+	- **[UILabel 다루기 참고](http://padgom.tistory.com/category/개발/iOS)**
+
+<center><img src="2_autoshrink.png" width="80%"></img></center>
+
+#### Advanced Attributes
+- Highlighted: highlightedTextColor
+- Shadow: shadowColor
+- Shadow Offset: shadowOffset
+
