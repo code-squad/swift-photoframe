@@ -102,7 +102,6 @@
 				EE74A84F1FF36D7300B5C04F /* Sources */,
 				EE74A8501FF36D7300B5C04F /* Frameworks */,
 				EE74A8511FF36D7300B5C04F /* Resources */,
-				EEA9EE941FF4CD0A00486589 /* ShellScript */,
 				CCFF577719098262B5B22611 /* [CP] Embed Pods Frameworks */,
 				8FB2026A5F039D6744F77A36 /* [CP] Copy Pods Resources */,
 			);
@@ -210,19 +209,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotoFrame/Pods-PhotoFrame-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		EEA9EE941FF4CD0A00486589 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint";
 		};
 /* End PBXShellScriptBuildPhase section */
 
