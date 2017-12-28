@@ -115,3 +115,14 @@ $ echo "function gi() { curl -L -s https://www.gitignore.io/api/\$@ ;}" >> ~/.ba
 ```
 gi cocoapods >> .gitignore
 ```
+
+## 정상적으로 적용되지 않는 경우
+- 이미 푸시한 레파지토리의 .gitignore에 내용 추가 시, **이미 저장소에 푸시된 내용이 삭제되지는 않는 경우**가 있음.
+ 
+### 해결방법
+ 
+```swift
+$ git rm -r --cached .
+$ git add .
+$ git commit -m "fixed untracked files”
+```
