@@ -55,9 +55,8 @@ class FirstViewController: UIViewController {
 
 <br/>
 
-## Tabbed App 템플릿 시작
+## IBOutlet으로 UILabel 적용
 
-### IBOutlet으로 UILabel 적용
 <center><img src="img/2_IBoutlet.png" width="40%"></img></center>
 
 <br/>
@@ -97,6 +96,60 @@ class FirstViewController: UIViewController {
 - Highlighted: highlightedTextColor
 - Shadow: shadowColor
 - Shadow Offset: shadowOffset
+
+<br/>
+
+## IBAction으로 버튼 동작 적용
+
+<img src="img/3_firsttab_view1.png" width="40%"></img>
+<img src="img/3_firsttab_view2.png" width="40%"></img>
+
+<br/>
+
+### IBOutlet과 IBAction의 연결 구조
+- 뷰와 컨트롤러는 IBOutlet 또는 IBAction으로 연결된다.
+- **사용자는 뷰 객체와 상호작용**하며, 뷰에 변화가 생기면 **해당 뷰와 연결되어있는 IBAction에 메시지**를 보낸다. 이 때, 해당 뷰의 포인터를 파라미터로 전달한다.
+- 컨트롤러는 특정 로직을 수행하여 뷰에 변경사항이 생기면 **어떤 것을 변경하라는 지시**를 내린다. 이 때, **해당 뷰의 포인터인 IBOutlet을 사용**한다.
+
+![](img/3_mechanism.png)
+
+### IBAction 이벤트 종류
+- ***Touch Up Inside***: 
+	- A **touch-up** event in the control where **the finger is inside the bounds** of the control.
+- ***Touch Up Outside***: 
+	- A **touch-up** event in the control where **the finger is outside the bounds** of the control.
+- ***Touch Cancel***: 
+	- A **system event** canceling the current touches for the control.
+- ***Touch Down***: 
+	- A **touch-down** event in the control.
+- ***Touch Down Repeat***: 
+	- A repeated touch-down event in the control; for this event **the value of the UITouch tapCount method is greater than one**.
+- ***Touch Drag Enter***: 
+	- An event where a **finger is dragged into the bounds** of the control.
+- ***Touch Drag Inside***: 
+	- An event where a **finger is dragged inside the bounds** of the control.
+- ***Touch Drag Outside***: 
+	- An event where a **finger is dragged just outside the bounds** of the control.
+- ***Touch Drag Exit***: 
+	- An event where a **finger is dragged from within a control to outside its bounds**.
+- ***Value Changed***: 
+	- A touch dragging or otherwise manipulating a control, **causing it to emit a series of different values**.
+- ***PrimaryActionTriggered***: 
+	- A semantic action triggered by buttons.
+- ***Editing Did Begin***: 
+	- **A touch initiating an editing session** in a UITextField object **by entering its bounds**.
+- ***Editing Changed***: 
+	- **A touch making an editing change** in a 
+UITextField object.
+- ***Editing Did End***: 
+	- **A touch ending an editing session** in a UITextField object **by leaving its bounds**.
+- ***(Editing) Did End On Exit***: 
+	- **A touch ending an editing session** in a 
+UITextField object.
+
+**[참고: UIControlEvents](https://developer.apple.com/documentation/uikit/uicontrolevents)**
+
+![](img/3_IBAction_events.png)
 
 <br/>
 
