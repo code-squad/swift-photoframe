@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Data {
+struct FrameInfo {
     static let title = "Min's 사진액자"
     static let subtitle = "Developed by min, undervine"
     static let nameRange = NSRange(location: 0, length: 5)

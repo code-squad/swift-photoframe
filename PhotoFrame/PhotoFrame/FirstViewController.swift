@@ -16,10 +16,10 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // 속성이 지정된 문자열을 라벨에 적용
-        let attributedString = NSMutableAttributedString(string: Data.title)
+        let attributedString = NSMutableAttributedString(string: FrameInfo.title)
         makeDefaultText(attributedString)
         // 부제목 텍스트 속성 변경
-        firstDescription.text = Data.subtitle
+        firstDescription.text = FrameInfo.subtitle
         firstDescription.textColor = UIColor.darkGray
     }
 
@@ -28,8 +28,8 @@ class FirstViewController: UIViewController {
         guard let photoLabelAttributeText = photoLabel.attributedText else { return }
         let attributedString = NSMutableAttributedString(attributedString: photoLabelAttributeText)
         // 제목 텍스트 생성 및 폰트 적용
-        modifyBackgroundColor(attributedString, Data.nameRange, to: UIColor.yellow)
-        modifyTextColor(attributedString, Data.restRange, to: UIColor.yellow)
+        modifyBackgroundColor(attributedString, FrameInfo.nameRange, to: UIColor.yellow)
+        modifyTextColor(attributedString, FrameInfo.restRange, to: UIColor.yellow)
         photoLabel.attributedText = attributedString
     }
 
@@ -37,11 +37,11 @@ class FirstViewController: UIViewController {
 
 extension FirstViewController {
     private func makeDefaultText(_ attributedString: NSMutableAttributedString) {
-        let defaultFont = modifyFont(attributedString, Data.nameRange, Data.fontName, CGFloat(Data.fontSize))
-        modifyFontSize(attributedString, Data.nameRange, defaultFont, to: 33.0)
-        modifyBackgroundColor(attributedString, Data.nameRange, to: UIColor.gray)
-        modifyTextColor(attributedString, Data.nameRange, to: UIColor.white)
-        modifyForegroundColor(attributedString, Data.restRange, to: UIColor.gray)
+        let defaultFont = modifyFont(attributedString, FrameInfo.nameRange, FrameInfo.fontName, CGFloat(FrameInfo.fontSize))
+        modifyFontSize(attributedString, FrameInfo.nameRange, defaultFont, to: 33.0)
+        modifyBackgroundColor(attributedString, FrameInfo.nameRange, to: UIColor.gray)
+        modifyTextColor(attributedString, FrameInfo.nameRange, to: UIColor.white)
+        modifyForegroundColor(attributedString, FrameInfo.restRange, to: UIColor.gray)
         photoLabel.attributedText = attributedString
     }
 
