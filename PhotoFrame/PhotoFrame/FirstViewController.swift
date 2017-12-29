@@ -16,10 +16,10 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // 속성이 지정된 문자열을 라벨에 적용
-        let attributedString = NSMutableAttributedString(string: "Min's 사진액자")
+        let attributedString = NSMutableAttributedString(string: Data.title)
         makeDefaultText(attributedString)
         // 부제목 텍스트 속성 변경
-        firstDescription.text = "Developed by min, undervine"
+        firstDescription.text = Data.subtitle
         firstDescription.textColor = UIColor.darkGray
     }
 
@@ -28,21 +28,20 @@ class FirstViewController: UIViewController {
         guard let photoLabelAttributeText = photoLabel.attributedText else { return }
         let attributedString = NSMutableAttributedString(attributedString: photoLabelAttributeText)
         // 제목 텍스트 생성 및 폰트 적용
-        let nameRange = NSRange(location: 0, length: 5)
-        let restRange = NSRange(location: 6, length: 4)
-        modifyBackgroundColor(attributedString, nameRange, to: UIColor.yellow)
-        modifyTextColor(attributedString, restRange, to: UIColor.yellow)
+        modifyBackgroundColor(attributedString, Data.nameRange, to: UIColor.yellow)
+        modifyTextColor(attributedString, Data.restRange, to: UIColor.yellow)
         photoLabel.attributedText = attributedString
     }
 
+}
+
+extension FirstViewController {
     private func makeDefaultText(_ attributedString: NSMutableAttributedString) {
-        let nameRange = NSRange(location: 0, length: 5)
-        let restRange = NSRange(location: 6, length: 4)
-        let defaultFont = modifyFont(attributedString, nameRange, "Chalkduster", 35.0)
-        modifyFontSize(attributedString, nameRange, defaultFont, to: 33.0)
-        modifyBackgroundColor(attributedString, nameRange, to: UIColor.gray)
-        modifyTextColor(attributedString, nameRange, to: UIColor.white)
-        modifyForegroundColor(attributedString, restRange, to: UIColor.gray)
+        let defaultFont = modifyFont(attributedString, Data.nameRange, Data.fontName, CGFloat(Data.fontSize))
+        modifyFontSize(attributedString, Data.nameRange, defaultFont, to: 33.0)
+        modifyBackgroundColor(attributedString, Data.nameRange, to: UIColor.gray)
+        modifyTextColor(attributedString, Data.nameRange, to: UIColor.white)
+        modifyForegroundColor(attributedString, Data.restRange, to: UIColor.gray)
         photoLabel.attributedText = attributedString
     }
 
@@ -78,5 +77,4 @@ class FirstViewController: UIViewController {
         let backgroundAttribute = [NSAttributedStringKey.foregroundColor: color]
         attributedString.addAttributes(backgroundAttribute, range: range)
     }
-
 }
