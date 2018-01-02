@@ -14,7 +14,7 @@
 		EE74A85E1FF36D7300B5C04F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE74A85C1FF36D7300B5C04F /* Main.storyboard */; };
 		EE74A8601FF36D7300B5C04F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE74A85F1FF36D7300B5C04F /* Assets.xcassets */; };
 		EE74A8631FF36D7300B5C04F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE74A8611FF36D7300B5C04F /* LaunchScreen.storyboard */; };
-		EE94C1F01FF5D84E001C4116 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE94C1EF1FF5D84E001C4116 /* Model.swift */; };
+		EE94C1F01FF5D84E001C4116 /* FrameInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE94C1EF1FF5D84E001C4116 /* FrameInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 		EE74A85F1FF36D7300B5C04F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE74A8621FF36D7300B5C04F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE74A8641FF36D7300B5C04F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EE94C1EF1FF5D84E001C4116 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		EE94C1EF1FF5D84E001C4116 /* FrameInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +76,8 @@
 			children = (
 				EE74A8561FF36D7300B5C04F /* AppDelegate.swift */,
 				EE74A8581FF36D7300B5C04F /* FirstViewController.swift */,
-				EE94C1EF1FF5D84E001C4116 /* Model.swift */,
 				EE74A85A1FF36D7300B5C04F /* SecondViewController.swift */,
+				EE94C1EF1FF5D84E001C4116 /* FrameInfo.swift */,
 				EE74A85C1FF36D7300B5C04F /* Main.storyboard */,
 				EE74A85F1FF36D7300B5C04F /* Assets.xcassets */,
 				EE74A8611FF36D7300B5C04F /* LaunchScreen.storyboard */,
@@ -237,7 +237,7 @@
 				EE74A85B1FF36D7300B5C04F /* SecondViewController.swift in Sources */,
 				EE74A8571FF36D7300B5C04F /* AppDelegate.swift in Sources */,
 				EE74A8591FF36D7300B5C04F /* FirstViewController.swift in Sources */,
-				EE94C1F01FF5D84E001C4116 /* Model.swift in Sources */,
+				EE94C1F01FF5D84E001C4116 /* FrameInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

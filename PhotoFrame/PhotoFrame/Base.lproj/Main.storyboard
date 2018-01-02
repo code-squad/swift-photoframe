@@ -45,7 +45,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="nextButtonTouched:" destination="9pv-A4-QxB" eventType="touchUpInside" id="DXC-9e-Zy6"/>
+                                    <action selector="nextButtonClicked:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Ysa-By-I8M"/>
+                                    <segue destination="a8a-0B-fRH" kind="show" id="iAp-mG-rkv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -60,13 +61,62 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
                     <connections>
-                        <outlet property="firstDescription" destination="A5M-7J-77L" id="F90-V3-7H6"/>
-                        <outlet property="photoLabel" destination="KQZ-1w-vlD" id="hWQ-yh-aRG"/>
+                        <outlet property="firstDescription" destination="A5M-7J-77L" id="jdg-I9-Hs7"/>
+                        <outlet property="photoLabel" destination="KQZ-1w-vlD" id="byq-pd-b0y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
+        </scene>
+        <!--Blue Controller-->
+        <scene sceneID="eSH-Qr-gvl">
+            <objects>
+                <viewController id="a8a-0B-fRH" customClass="BlueController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6kB-yH-IXL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5pQ-qS-MvZ">
+                                <rect key="frame" x="16" y="571" width="70" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="next">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="wwy-rP-1eD" kind="show" id="KAa-qv-sGy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="YDL-Hn-eT6"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="alc-hh-edL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1412" y="-320"/>
+        </scene>
+        <!--Pink Controller-->
+        <scene sceneID="wf1-QA-dRJ">
+            <objects>
+                <viewController id="wwy-rP-1eD" customClass="PinkController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F7B-Wj-pbz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.80784314869999996" green="0.027450980619999999" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="5OF-Ig-Qed"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jyR-G0-GXv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2078" y="-320"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
