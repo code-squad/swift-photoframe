@@ -166,6 +166,66 @@ UITextField object.
 ```
 - 해결방법: 특정 뷰와 컨트롤러를 연결한 후, 연결 삭제/재연결/수정 등을 했을 때 기존 연결이 IB에 남아있으므로 지워줘야 함.
 
+## 앱 인터페이스와 구성요소
+### 화면을 구성하는 세 가지 주요객체
+1. UIScreen: 기기에 연결되는 물리적인 화면을 정의하는 객체
+2. UIWindow: 화면 그리기 지원 도구를 제공하는 객체. 
+	- 디바이스 스크린을 빈틈없이 채우기 위한 객체
+	- 항상 유저 인터페이스 표현 계층의 최상위에 위치한다. 
+	- 뷰의 일종이지만 직접 콘텐츠를 가지지 않는다. UIView들이 콘텐츠를 표현하면 디바이스 스크린에 이를 표현한다.
+	- 화면이 전환되더라도 윈도우 객체는 전환되지 않는다. 내부에 배치된 뷰의 콘텐츠만 변경된다.
+3. UIView: 그리기를 수행할 객체 세트
+	- 콘텐츠를 담아 스크린상에 표시한다. 
+	- 사용자의 입력에 반응한다. 
+	- 윈도우의 일부를 자신의 영역으로 정의하고, 이에 필요한 콘텐츠를 채워넣는다.
+	- 윈도우로부터 전달된 사용자 입력에 반응하고 그에 맞는 결과를 처리한다.
+
+![](img/5_architect.png)
+
+## 뷰 컨트롤러 프로그래밍
+### VC1 ➤ VC2
+<img src="img/5_viewtransition1.png" width="40%"></img>
+<img src="img/5_viewtransition2.png" width="40%"></img>
+![](img/5_viewtransition1_log.png)
+### VC2 ➤ VC3
+<img src="img/5_viewtransition2.png" width="40%"></img>
+<img src="img/5_viewtransition3.png" width="40%"></img>
+![](img/5_viewtransition2_log.png)
+### VC3 ➤ VC2
+<img src="img/5_viewtransition3.png" width="40%"></img>
+<img src="img/5_viewtransition2.png" width="40%"></img>
+![](img/5_viewtransition3_log.png)
+### VC2 ➤ VC1
+<img src="img/5_viewtransition2.png" width="40%"></img>
+<img src="img/5_viewtransition1.png" width="40%"></img>
+![](img/5_viewtransition4_log.png)
+
+### 뷰 컨트롤러 생명주기
+- Not Running(Disappeared) --> Inactive(Appearing) --> Active(Appeared) --> Suspended(Disappearing) --> Not Running(Disappeared)
+- 뷰 컨트롤러의 생명주기는 **씬의 전환과 복귀에 밀접하게 관련**이 있다. 뷰컨트롤러 객체의 생성과 소멸이 발생하기 때문.
+- 앱의 화면 상태에 따라 메모리를 효율적으로 관리(튜닝)해야 한다.
+- 뷰 컨트롤러 상태 변화에 따른 API 호출:
+	![](img/5_viewcontroller_lifecycle.png)
+	- **Appearing**: 뷰컨트롤러 **등장 - 등장완료 직전**까지의 상태. 이 때 퇴장중인 다른 뷰컨트롤러의 상태는 Disappearing이 된다.
+	- **Appeared**: 뷰컨트롤러가 스크린 전체에 **완전히 등장**한 상태.
+	- **Disappearing**: 뷰컨트롤러가 스크린에서 **가려지(퇴장하)기 시작 - 완전히 가려지(퇴장하)기 직전**까지의 상태. 이 때 등장중인 다른 뷰컨트롤러의 상태는 Appearing이 된다.
+	- **Disappeared**: 뷰컨트롤러가 스크린에서 **완전히 가려졌거나 퇴장**한 상태.
+- **Appearing이나 Disappearing 상태**가 있는 것은 **애니메이션을 적용할 경우** 수 초에 걸쳐 천천히 진행되기 때문에 **진행 중에 있는 상태를 나타내는 상태값이 필요**하기 때문이다.
+	- 예를 들어, 스크린으로부터 화면이 퇴장하는 도중에 사용자의 액션에 의해 재등장하는 경우가 있다. (스와이핑하여 화면을 넘기려다가 만 경우 등)
+- 생명주기를 이용하면 다음과 같은 문제를 쉽게 해결할 수 있다.
+	- 특정 화면 진입 시 로그인이나 권한 여부 체크
+	- 화면이 표시될 때마다 최신 데이터로 업데이트
+	- 메모리 부족을 체크하여 가용 메모리를 확보하는 코드 작성
+	- 화면이 완전히 표시되었는지 체크하여 알림창 공지
+	- 저장 버튼을 누르지 않아도 현재 화면 상태 유지
+
+#### [참고] 앱 런칭 후 수행 과정
+- Launch.storyboard 스크린 표시 -> AppDelegate 클래스의 application() 메소드 호출 -> Main.storyboard 스크린 표시
+
+#### [참고] 뷰 컨트롤러의 didReceiveMemoryWarning() 역할
+- 메모리가 부족할 때 시스템에서 자동으로 호출하는 메소드.
+- 메모리 부족 경고가 발생할 경우 메모리 확보를 위해 필요 없는 객체의 메모리를 해제하여 재사용 가능하도록 만들어주는 처리를 해줘야 한다.
+
 ## 화면전환의 종류
 ### 1. 뷰를 이용한 화면 전환 (지양)
 - 하나의 뷰 컨트롤러 안에서 두 개의 루트뷰를 두고 바꿔치기/덮어쓰기 하는 방법.
@@ -193,7 +253,7 @@ UITextField object.
 	- 현재 뷰 컨트롤러는 **presentedViewController 속성**에 대상 뷰 컨트롤러의 포인터를, 대상 뷰 컨트롤러는 **presentingViewController 속성**에 현재 뷰 컨트롤러의 포인터를 저장한다.
 	- 이렇게 서로 참조하는 이유는, 이전화면으로 복귀하는 등의 상황에 필요하기 때문이다. 
 	- 복귀 메소드는 **dismiss(animated:completion:)**을 사용한다. 여기서의 completion은 화면 복귀가 완전히 처리되고 실행할 구문을 넣는다. 
-	- 화면 복귀 시 자신을 띄우고 있는 **이전 뷰 컨트롤러가 새 화면을 걷어낸다.** 즉 새 뷰 컨트롤러가 이전 뷰 컨트롤러에게 복귀를 요청해야 하는데, 이 때 요청대상인 presentingViewController 속성이 필요하다. 즉 dismiss() 함수는 이전 뷰 컨트롤러가 수행해야 하므로, **self.presentingViewController.dismiss()** 라고 사용해야 한다.
+	- 화면 복귀 시 자신을 띄우고 있는 **이전 뷰 컨트롤러가 새 화면을 걷어낸다.** 즉 새 뷰 컨트롤러가 이전 뷰 컨트롤러에게 복귀를 요청해야 하는데, 이 때 요청대상인 presentingViewController 속성이 필요하다. 즉 dismiss() 함수는 이전 뷰 컨트롤러가 수행해야 하므로, **self.presentingViewController.dismiss()** 라고 사용해야 한다. (self.dismiss()도 동작은 하지만, 세 번째 인자인 complete 동작에 문제가 생길 수 있다. self가 사라지고 나서 어떤 동작을 수행한다는 게 이상하기 때문)
 
 	```
 	@IBAction BlueViewController: UIViewController {
@@ -209,7 +269,7 @@ UITextField object.
 	- **내비게이션 인터페이스**: 내비게이션 정보 표시.
 	- 화면 전환이 발생하는 **뷰 컨트롤러들의 포인터를 스택으로 관리** → 원하는 화면에 접근 쉬움.
 	- 자신만의 화면을 가지지 않는 대신, 자신이 제어하는 모든 뷰 컨트롤러에 **내비게이션 바를 생성**.
-- **루트 뷰 컨트롤러**: 콘텐츠 계층 구조의 시작점 역할을 하는 하는 뷰 컨트롤러. **Navigation controller에 직접 연결된 컨트롤러**로, **화면 UI 상단에 내비게이션 바가 표시된다. **루트 뷰 컨트롤러에서 화면 전환이 발생해도 상단의 내비게이션 바는 그대로 유지된다.**
+- **루트 뷰 컨트롤러**: 콘텐츠 계층 구조의 시작점 역할을 하는 하는 뷰 컨트롤러. **Navigation controller에 직접 연결된 컨트롤러**로, 화면 UI 상단에 내비게이션 바가 표시된다. **루트 뷰 컨트롤러에서 화면 전환이 발생해도 상단의 내비게이션 바는 그대로 유지된다.**
 - 최상위 뷰 컨트롤러는 화면에 표시되므로, **스택의 최상위 뷰 컨트롤러를 더하거나 빼는 것은 화면을 전환하는 것**과 같다.
 	- **pushViewController(_:animated:)** - 새 화면 표시.
 	- **popViewController(_:animated:)** - 이전 화면 되돌아감.
@@ -387,6 +447,7 @@ UITextField object.
 	- **네트워크 전송**: 서버에 데이터를 전송하여 저장. (추후 설명)
 
 **[출처: 꼼꼼한 재은씨의 스위프트3](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&barcode=9791186710104)**
+
 <br/>
 
 # .gitignore 설정하기
