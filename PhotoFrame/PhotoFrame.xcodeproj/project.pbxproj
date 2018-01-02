@@ -80,8 +80,8 @@
 			children = (
 				EE74A8561FF36D7300B5C04F /* AppDelegate.swift */,
 				EE74A8581FF36D7300B5C04F /* FirstViewController.swift */,
-				EEAC74BD1FFB5F8100815A85 /* PinkViewController.swift */,
 				EEAC74BF1FFB5FA200815A85 /* BlueViewController.swift */,
+				EEAC74BD1FFB5F8100815A85 /* PinkViewController.swift */,
 				EE74A85A1FF36D7300B5C04F /* SecondViewController.swift */,
 				EE94C1EF1FF5D84E001C4116 /* FrameInfo.swift */,
 				EE74A85C1FF36D7300B5C04F /* Main.storyboard */,

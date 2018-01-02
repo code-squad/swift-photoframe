@@ -43,7 +43,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="nextButtonClicked:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Ysa-By-I8M"/>
-                                    <segue destination="a8a-0B-fRH" kind="show" id="iAp-mG-rkv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -69,7 +68,7 @@
         <!--Blue View Controller-->
         <scene sceneID="eSH-Qr-gvl">
             <objects>
-                <viewController id="a8a-0B-fRH" customClass="BlueViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BVC" id="a8a-0B-fRH" customClass="BlueViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6kB-yH-IXL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -87,7 +86,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="wwy-rP-1eD" kind="show" id="KAa-qv-sGy"/>
+                                    <action selector="nextButtonTouched:" destination="a8a-0B-fRH" eventType="touchUpInside" id="lMy-by-qXz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7Q-IJ-Geh">
@@ -118,7 +117,7 @@
         <!--Pink View Controller-->
         <scene sceneID="wf1-QA-dRJ">
             <objects>
-                <viewController id="wwy-rP-1eD" customClass="PinkViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PVC" id="wwy-rP-1eD" customClass="PinkViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F7B-Wj-pbz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
