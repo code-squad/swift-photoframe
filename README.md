@@ -276,9 +276,9 @@ UITextField object.
 	class CustomSegue: UIStoryboardSegue {
 		override func perform() {
 			UIView.transition(from: self.source.view,
-								  to: self.destination.view,
-								  duration: 2,
-								  options: .transitionCurlDown)
+			to: self.destination.view,
+			duration: 2,
+			options: .transitionCurlDown)
 		}
 	}
 	```
@@ -326,9 +326,9 @@ UITextField object.
 	- 프레젠테이션 또는 내비게이션 방식: **instantiateViewContoller()** 사용
 		- instantiateViewController()로 생성된 인스턴스는 기본적으로 UIViewController 타입인데, 커스텀 클래스에서 정의한 특정 메소드나 프로퍼티 등을 사용하려면 해당 뷰컨트롤러 타입으로 다운캐스팅 해야 한다. 단순한 화면전환 시에는 그냥 사용해도 된다.
 	
-			```swift
-				guard let rvc = self.storyboard?.instantiateViewController(withIdentifier: "RVC") as? ResultViewController else { return }
-			```	
+		```swift
+		guard let rvc = self.storyboard?.instantiateViewController(withIdentifier: "RVC") as? ResultViewController else { return }
+		```	
 		
 	- 세그웨이 사용: **.destination** 속성 사용
 4. VC1: VC2가 정의한 인스턴스 프로퍼티에 값을 대입한다. 위에서 생성 또는 참조한 뷰컨트롤러 인스턴스의 속성변수에 직접 값을 대입하면 된다. 그리고나서 화면을 전환한다.
@@ -342,7 +342,7 @@ UITextField object.
 	self.present(rvc, animated: true)
 	```
 5. VC2: 전달받은 값 표시
-	- 전달된 값 표시 시점: 화면이 메모리에 로드되고 난 직후인 viewDidLoad()에 작성.
+	- 전달된 값 표시 시점: 화면이 메모리에 로드되고 난 직후인 **viewDidLoad()**에 작성.
 
 #### 내비게이션 컨트롤러 사용 시
 - present()와 dismiss()를 pushViewController()와 pullViewController()로만 변경하면 된다.
@@ -386,6 +386,7 @@ UITextField object.
 	- **파일 저장**: 이미지, 미디어 파일 등 큰 사이즈의 데이터 저장. (추후 설명)
 	- **네트워크 전송**: 서버에 데이터를 전송하여 저장. (추후 설명)
 
+**[출처: 꼼꼼한 재은씨의 스위프트3](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&barcode=9791186710104)**
 <br/>
 
 # .gitignore 설정하기
