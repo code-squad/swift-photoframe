@@ -223,9 +223,9 @@ UITextField object.
 <img src="img/6_tabbar.png" width="50%"></img>
 
 ### Navigation View Controller 사용해 보기
-<img src="img/6_navigation1.png" width="50%"></img>
-<img src="img/6_navigation2.png" width="50%"></img>
-<img src="img/6_navigation3.png" width="50%"></img>
+<img src="img/6_navigation1.png" width="30%"></img>
+<img src="img/6_navigation2.png" width="30%"></img>
+<img src="img/6_navigation3.png" width="30%"></img>
 
 #### 첫번째 뷰컨트롤러의 내비게이션 바 없애기
 
@@ -606,6 +606,55 @@ UITextField object.
 	- AVFoundation: AV-
 
 **[출처: 꼼꼼한 재은씨의 스위프트3](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&barcode=9791186710104)**
+
+<br/>
+
+## UIImageView 활용하기
+<img src="img/7_imageview1.png" width="30%"></img>
+<img src="img/7_imageview2.png" width="30%"></img>
+<img src="img/7_imageview3.png" width="30%"></img>
+
+### 뷰컨트롤러 클래스 내부의 지역변수 초기화하기
+- 지역변수 초기화 시, **required init?(coder aDecoder: NSCoder)** 생성자를 사용해야 한다.
+- 모든 지역변수 초기화 후 **super.init(coder: aDecoder)**를 호출해야 한다.
+
+```swift
+required init?(coder aDecoder: NSCoder) {
+    self.imageFileNames = []
+    super.init(coder: aDecoder)
+    self.imageFileNames = setJPGImageFileNames()
+}
+```
+
+### 번들에 있는 모든 이미지 파일 이름 불러오기
+- 프로젝트 내 이미지 리소스의 경로를 가져오려면 `Bundle.main.resourcePath`를 사용한다.
+- 파일 매니저를 이용하여 해당 경로의 파일명을 가져온다: `FileManager.default.contentsOfDirectory(atPath:)`
+- 특정 확장자를 가진 파일만 가져오려면 `<파일명>.hasSuffix("<확장자>")`를 활용한다.
+
+```swift
+func setJPGImageFileNames() -> [String] {
+    guard let path = Bundle.main.resourcePath else { return [] }
+    let fileManager = FileManager.default
+    var jpgImageFiles: [String] = []
+    if let fileNames = try? fileManager.contentsOfDirectory(atPath: path) {
+        // 폴더명은 따로 붙여줄 필요 없음.
+        jpgImageFiles = fileNames.filter({ $0.hasSuffix(".jpg") })
+    }
+    return jpgImageFiles
+}
+```
+
+#### 주의사항
+- **뷰컨트롤러 클래스에서 생성자가 실패하면**: 번들에 있는 모든 JPG 파일을 찾아서 이미지로 만들 때, 생성자에 넣으면 초기화가 실패할 경우 **View Controller가 생기지 않는다.** 
+- 이런 경우 init()을 하되, 이미지 객체 생성은 **lazy 방식을 적용**하거나, 길더라도 **파일명을 포함한 데이터 구조**를 활용한다. 
+- 예: 
+
+```swift
+self.photoImageView.image = UIImage(named: String(format: "%02d.jpg", Int(arc4random_uniform(<이미지개수>) + 1)))
+```
+
+- **미리 객체를 만들어놓는 방식이 항상 좋은 것은 아니다**: ViewController 생성 시점에 모든 이미지를 한꺼번에 메모리에 올리게 되면 폴더에 파일이 100개, 1000개 이상 있는 경우 화면이 보이지도 않고 **시커먼 화면**이 보일지도 모른다.
+- **보통 사용자가 편하면 개발자가 (작성한 코드까지도!) 불편해진다.**
 
 <br/>
 
