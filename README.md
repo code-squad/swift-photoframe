@@ -215,7 +215,36 @@ UITextField object.
 <br/>
 
 ## Container ViewController
+- 컨테이너 뷰 컨트롤러는 한 개의 **view**와 여러 개의 **child view controller** 를 다룬다.
+- 뷰를 재사용할 수 있고, child view 들은 child view controller 들이 관리하므로, 뷰컨트롤러에 의지할 수 있다는 것이 장점이다.
+- UIKit에 미리 만들어져 있는 컨테이너 뷰컨트롤러의 종류로는 UINavigationController, UISplitViewController(아이패드 한정), UITabBarController 가 있다.
+![](img/6_navigation.png)
+![](img/6_splitview.png)
+<img src="img/6_tabbar.png" width="50%"></img>
 
+### Navigation View Controller 사용해 보기
+<img src="img/6_navigation1.png" width="50%"></img>
+<img src="img/6_navigation2.png" width="50%"></img>
+<img src="img/6_navigation3.png" width="50%"></img>
+
+#### 첫번째 뷰컨트롤러의 내비게이션 바 없애기
+
+```swift
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+```
+
+#### IB 사용 시 vs. 코드로 작성 시
+- IB 사용 시: 세그로 연결하면 자동으로 코드 작성 없이 화면 전환 가능하며, Back 버튼이 자동으로 생성됨
+- 코드 작성 시: push, pop을 이용하여 내비게이션 스택에 쌓아야 함. Back 버튼은 push된 뷰컨트롤러엔 자동으로 생김
+
+### Custom Container ViewController 구현하기
+스토리보드에 container view 객체를 추가하고, child container와 연결한다. 이 뷰를 이용하여 child view controllers의 root view 들을 크기 조정, 위치 지정할 수 있다. ([IB를 쓰지 않으면 별도의 코드를 작성해야 한다](https://developer.apple.com/library/content/featuredarticles/ViewControllerPGforiPhoneOS/ImplementingaContainerViewController.html#//apple_ref/doc/uid/TP40007457-CH11-SW13))
 
 <br/>
 
@@ -316,6 +345,7 @@ UITextField object.
 - 여러 페이지에 걸쳐 단계적으로 이동하고 있을 때 한 방에 원하는 화면으로 돌아가기 위해서는, 돌아가기 원하는 뷰컨트롤러에 unwind 메소드를 정의하고, 현재 뷰컨트롤러의 특정 버튼(홈버튼이라든지)을 Exit에 드래그하여 아까 정의한 unwind 메소드를 선택하면 된다.
 	- ***dealloc***: 스택 중간에 차례대로 쌓여있던 뷰 컨트롤러 인스턴스들은 메모리에서 모두 해제된다.
 	- **Unwind 메소드 이름**은 앱 프로젝트 영역에서 구분될 수 있어야 하며, **각 뷰컨트롤러를 대표할 수 있는 이름**으로 만드는 것이 좋다.
+
 #### 커스텀 세그
 - UIKit 프레임워크는 **UIStoryboardSegue 클래스를 서브클래싱**하여 새로운 기능을 갖춘 세그웨이 객체를 정의할 수 있도록 지원한다.
 - 커스텀 클래스 작성: UIStorybaordSegue 클래스에서 **세그웨이의 실행을 처리하는 메소드: perform()** → **오버라이드**한다.
