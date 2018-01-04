@@ -8,6 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		C40D1B2E869825B64F74E5FB /* Pods_PhotoFrame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 648383AD94B57965EF87E190 /* Pods_PhotoFrame.framework */; };
+		EE38A1DA1FFE0E2200D3DE1C /* 07.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE38A1C41FFE0E1C00D3DE1C /* 07.jpg */; };
+		EE38A1DB1FFE0E2200D3DE1C /* 18.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE38A1C51FFE0E1C00D3DE1C /* 18.jpg */; };
+		EE38A1DC1FFE0E2200D3DE1C /* 20.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE38A1C61FFE0E1D00D3DE1C /* 20.jpg */; };
+		EE38A1DD1FFE0E2200D3DE1C /* 01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE38A1C71FFE0E1D00D3DE1C /* 01.jpg */; };
+		EE38A1DE1FFE0E2200D3DE1C /* 21.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE38A1C81FFE0E1D00D3DE1C /* 21.jpg */; };
+		EE38A1DF1FFE0E2200D3DE1C /* 05.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE38A1C91FFE0E1D00D3DE1C /* 05.jpg */; };
+		EE38A1E01FFE0E2200D3DE1C /* 02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE38A1CA1FFE0E1E00D3DE1C /* 02.jpg */; };
+		EE38A1E11FFE0E2200D3DE1C /* 09.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE38A1CB1FFE0E1E00D3DE1C /* 09.jpg */; };
+		EE38A1E21FFE0E2200D3DE1C /* 16.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE38A1CC1FFE0E1E00D3DE1C /* 16.jpg */; };
+		EE38A1E31FFE0E2200D3DE1C /* 15.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE38A1CD1FFE0E1F00D3DE1C /* 15.jpg */; };
+		EE38A1E41FFE0E2200D3DE1C /* 04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE38A1CE1FFE0E1F00D3DE1C /* 04.jpg */; };
+		EE38A1E51FFE0E2200D3DE1C /* 11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE38A1CF1FFE0E1F00D3DE1C /* 11.jpg */; };
+		EE38A1E61FFE0E2200D3DE1C /* 03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE38A1D01FFE0E1F00D3DE1C /* 03.jpg */; };
+		EE38A1E71FFE0E2200D3DE1C /* 10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE38A1D11FFE0E2000D3DE1C /* 10.jpg */; };
+		EE38A1E81FFE0E2200D3DE1C /* 14.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE38A1D21FFE0E2000D3DE1C /* 14.jpg */; };
+		EE38A1E91FFE0E2200D3DE1C /* 22.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE38A1D31FFE0E2000D3DE1C /* 22.jpg */; };
+		EE38A1EA1FFE0E2200D3DE1C /* 08.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE38A1D41FFE0E2100D3DE1C /* 08.jpg */; };
+		EE38A1EB1FFE0E2200D3DE1C /* 12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE38A1D51FFE0E2100D3DE1C /* 12.jpg */; };
+		EE38A1EC1FFE0E2200D3DE1C /* 13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE38A1D61FFE0E2100D3DE1C /* 13.jpg */; };
+		EE38A1ED1FFE0E2200D3DE1C /* 06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE38A1D71FFE0E2100D3DE1C /* 06.jpg */; };
+		EE38A1EE1FFE0E2200D3DE1C /* 17.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE38A1D81FFE0E2200D3DE1C /* 17.jpg */; };
+		EE38A1EF1FFE0E2200D3DE1C /* 19.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE38A1D91FFE0E2200D3DE1C /* 19.jpg */; };
 		EE74A8571FF36D7300B5C04F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE74A8561FF36D7300B5C04F /* AppDelegate.swift */; };
 		EE74A8591FF36D7300B5C04F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE74A8581FF36D7300B5C04F /* FirstViewController.swift */; };
 		EE74A85B1FF36D7300B5C04F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE74A85A1FF36D7300B5C04F /* SecondViewController.swift */; };
@@ -23,6 +45,28 @@
 		648383AD94B57965EF87E190 /* Pods_PhotoFrame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoFrame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9502663B98987554F7BC6622 /* Pods-PhotoFrame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoFrame.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoFrame/Pods-PhotoFrame.release.xcconfig"; sourceTree = "<group>"; };
 		C4D9BB44B0E6B6AE7FDE2D32 /* Pods-PhotoFrame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoFrame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoFrame/Pods-PhotoFrame.debug.xcconfig"; sourceTree = "<group>"; };
+		EE38A1C41FFE0E1C00D3DE1C /* 07.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 07.jpg; sourceTree = "<group>"; };
+		EE38A1C51FFE0E1C00D3DE1C /* 18.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 18.jpg; sourceTree = "<group>"; };
+		EE38A1C61FFE0E1D00D3DE1C /* 20.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 20.jpg; sourceTree = "<group>"; };
+		EE38A1C71FFE0E1D00D3DE1C /* 01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 01.jpg; sourceTree = "<group>"; };
+		EE38A1C81FFE0E1D00D3DE1C /* 21.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 21.jpg; sourceTree = "<group>"; };
+		EE38A1C91FFE0E1D00D3DE1C /* 05.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 05.jpg; sourceTree = "<group>"; };
+		EE38A1CA1FFE0E1E00D3DE1C /* 02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 02.jpg; sourceTree = "<group>"; };
+		EE38A1CB1FFE0E1E00D3DE1C /* 09.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 09.jpg; sourceTree = "<group>"; };
+		EE38A1CC1FFE0E1E00D3DE1C /* 16.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 16.jpg; sourceTree = "<group>"; };
+		EE38A1CD1FFE0E1F00D3DE1C /* 15.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 15.jpg; sourceTree = "<group>"; };
+		EE38A1CE1FFE0E1F00D3DE1C /* 04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 04.jpg; sourceTree = "<group>"; };
+		EE38A1CF1FFE0E1F00D3DE1C /* 11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11.jpg; sourceTree = "<group>"; };
+		EE38A1D01FFE0E1F00D3DE1C /* 03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 03.jpg; sourceTree = "<group>"; };
+		EE38A1D11FFE0E2000D3DE1C /* 10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10.jpg; sourceTree = "<group>"; };
+		EE38A1D21FFE0E2000D3DE1C /* 14.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 14.jpg; sourceTree = "<group>"; };
+		EE38A1D31FFE0E2000D3DE1C /* 22.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 22.jpg; sourceTree = "<group>"; };
+		EE38A1D41FFE0E2100D3DE1C /* 08.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 08.jpg; sourceTree = "<group>"; };
+		EE38A1D51FFE0E2100D3DE1C /* 12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 12.jpg; sourceTree = "<group>"; };
+		EE38A1D61FFE0E2100D3DE1C /* 13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 13.jpg; sourceTree = "<group>"; };
+		EE38A1D71FFE0E2100D3DE1C /* 06.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 06.jpg; sourceTree = "<group>"; };
+		EE38A1D81FFE0E2200D3DE1C /* 17.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 17.jpg; sourceTree = "<group>"; };
+		EE38A1D91FFE0E2200D3DE1C /* 19.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 19.jpg; sourceTree = "<group>"; };
 		EE74A8531FF36D7300B5C04F /* PhotoFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE74A8561FF36D7300B5C04F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE74A8581FF36D7300B5C04F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +101,35 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EE38A1F01FFE0E2700D3DE1C /* img */ = {
+			isa = PBXGroup;
+			children = (
+				EE38A1C71FFE0E1D00D3DE1C /* 01.jpg */,
+				EE38A1CA1FFE0E1E00D3DE1C /* 02.jpg */,
+				EE38A1D01FFE0E1F00D3DE1C /* 03.jpg */,
+				EE38A1CE1FFE0E1F00D3DE1C /* 04.jpg */,
+				EE38A1C91FFE0E1D00D3DE1C /* 05.jpg */,
+				EE38A1D71FFE0E2100D3DE1C /* 06.jpg */,
+				EE38A1C41FFE0E1C00D3DE1C /* 07.jpg */,
+				EE38A1D41FFE0E2100D3DE1C /* 08.jpg */,
+				EE38A1CB1FFE0E1E00D3DE1C /* 09.jpg */,
+				EE38A1D11FFE0E2000D3DE1C /* 10.jpg */,
+				EE38A1CF1FFE0E1F00D3DE1C /* 11.jpg */,
+				EE38A1D51FFE0E2100D3DE1C /* 12.jpg */,
+				EE38A1D61FFE0E2100D3DE1C /* 13.jpg */,
+				EE38A1D21FFE0E2000D3DE1C /* 14.jpg */,
+				EE38A1CD1FFE0E1F00D3DE1C /* 15.jpg */,
+				EE38A1CC1FFE0E1E00D3DE1C /* 16.jpg */,
+				EE38A1D81FFE0E2200D3DE1C /* 17.jpg */,
+				EE38A1C51FFE0E1C00D3DE1C /* 18.jpg */,
+				EE38A1D91FFE0E2200D3DE1C /* 19.jpg */,
+				EE38A1C61FFE0E1D00D3DE1C /* 20.jpg */,
+				EE38A1C81FFE0E1D00D3DE1C /* 21.jpg */,
+				EE38A1D31FFE0E2000D3DE1C /* 22.jpg */,
+			);
+			path = img;
+			sourceTree = "<group>";
+		};
 		EE74A84A1FF36D7300B5C04F = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +157,7 @@
 				EEAC74BD1FFB5F8100815A85 /* PinkViewController.swift */,
 				EE74A85A1FF36D7300B5C04F /* SecondViewController.swift */,
 				EE94C1EF1FF5D84E001C4116 /* FrameInfo.swift */,
+				EE38A1F01FFE0E2700D3DE1C /* img */,
 				EE74A85C1FF36D7300B5C04F /* Main.storyboard */,
 				EE74A85F1FF36D7300B5C04F /* Assets.xcassets */,
 				EE74A8611FF36D7300B5C04F /* LaunchScreen.storyboard */,
@@ -163,9 +237,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE38A1E91FFE0E2200D3DE1C /* 22.jpg in Resources */,
+				EE38A1E81FFE0E2200D3DE1C /* 14.jpg in Resources */,
+				EE38A1EB1FFE0E2200D3DE1C /* 12.jpg in Resources */,
+				EE38A1ED1FFE0E2200D3DE1C /* 06.jpg in Resources */,
+				EE38A1E51FFE0E2200D3DE1C /* 11.jpg in Resources */,
+				EE38A1E31FFE0E2200D3DE1C /* 15.jpg in Resources */,
+				EE38A1EC1FFE0E2200D3DE1C /* 13.jpg in Resources */,
+				EE38A1DE1FFE0E2200D3DE1C /* 21.jpg in Resources */,
+				EE38A1EA1FFE0E2200D3DE1C /* 08.jpg in Resources */,
+				EE38A1DB1FFE0E2200D3DE1C /* 18.jpg in Resources */,
+				EE38A1EF1FFE0E2200D3DE1C /* 19.jpg in Resources */,
+				EE38A1DA1FFE0E2200D3DE1C /* 07.jpg in Resources */,
 				EE74A8631FF36D7300B5C04F /* LaunchScreen.storyboard in Resources */,
+				EE38A1E21FFE0E2200D3DE1C /* 16.jpg in Resources */,
+				EE38A1DF1FFE0E2200D3DE1C /* 05.jpg in Resources */,
+				EE38A1E61FFE0E2200D3DE1C /* 03.jpg in Resources */,
+				EE38A1E01FFE0E2200D3DE1C /* 02.jpg in Resources */,
 				EE74A8601FF36D7300B5C04F /* Assets.xcassets in Resources */,
 				EE74A85E1FF36D7300B5C04F /* Main.storyboard in Resources */,
+				EE38A1DC1FFE0E2200D3DE1C /* 20.jpg in Resources */,
+				EE38A1E71FFE0E2200D3DE1C /* 10.jpg in Resources */,
+				EE38A1E41FFE0E2200D3DE1C /* 04.jpg in Resources */,
+				EE38A1EE1FFE0E2200D3DE1C /* 17.jpg in Resources */,
+				EE38A1DD1FFE0E2200D3DE1C /* 01.jpg in Resources */,
+				EE38A1E11FFE0E2200D3DE1C /* 09.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
