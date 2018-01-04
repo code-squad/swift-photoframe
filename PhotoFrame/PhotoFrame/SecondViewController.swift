@@ -11,47 +11,47 @@ import UIKit
 class SecondViewController: UIViewController {
 
     @IBOutlet weak var photoImageView: UIImageView!
-    private var images: [UIImage]
+    private var imageFileNames: [String]
 
     required init?(coder aDecoder: NSCoder) {
-        self.images = []
+        self.imageFileNames = []
         super.init(coder: aDecoder)
-        guard let images = generateUIImages(getJPGImageFileNames()) else { return nil }
-        self.images = images
+        self.imageFileNames = setJPGImageFileNames()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         NSLog(#file, #line, #function, #column)
-        self.photoImageView.image = getRandomImage()
-        self.photoImageView.contentMode = .scaleAspectFill
+        showRandomImage()
+        self.photoImageView.contentMode = .scaleAspectFit
     }
 
     @IBAction func nextImageButtonTouched(_ sender: UIButton) {
-        if let randomImage = getRandomImage() {
-            self.photoImageView.image = randomImage
-        }
+        showRandomImage()
     }
 
-    private func generateUIImages(_ directoryAndFileNames: [String]?) -> [UIImage]? {
-        guard let fileNames = directoryAndFileNames else { return nil }
-        let uiImages = fileNames.flatMap { UIImage(named: $0) }
-        return uiImages
+    private func showRandomImage() {
+        let randomIndex = getRandomIndex(self.imageFileNames.count)
+        let randomImage = generateUIImage(randomIndex)
+        self.photoImageView.image = randomImage
     }
 
-    private func getJPGImageFileNames() -> [String]? {
-        guard let path = Bundle.main.resourcePath else { return nil }
+    private func generateUIImage(_ fileIndex: Int) -> UIImage? {
+        return UIImage(named: self.imageFileNames[fileIndex])
+    }
+
+    private func getRandomIndex(_ maxNumber: Int) -> Int {
+        return Int(arc4random_uniform(UInt32(maxNumber)))
+    }
+
+    private func setJPGImageFileNames() -> [String] {
+        guard let path = Bundle.main.resourcePath else { return [] }
         let fileManager = FileManager.default
-        var jpgFileNames: [String]?
+        var jpgImageFiles: [String] = []
         if let fileNames = try? fileManager.contentsOfDirectory(atPath: path) {
             // 폴더명은 따로 붙여줄 필요 없음.
-            jpgFileNames = fileNames.filter({ $0.hasSuffix(".jpg") })
+            jpgImageFiles = fileNames.filter({ $0.hasSuffix(".jpg") })
         }
-        return jpgFileNames
-    }
-
-    private func getRandomImage() -> UIImage? {
-        let randomIndex = Int(arc4random_uniform(UInt32(self.images.count)))
-        return self.images[randomIndex]
+        return jpgImageFiles
     }
 }
