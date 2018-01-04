@@ -28,6 +28,14 @@ class FirstViewController: UIViewController {
         firstDescription.textColor = UIColor.darkGray
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+
     // 세그 없이 다음 화면 이동.
     @IBAction func nextButtonClicked(_ sender: UIButton) {
         // 기존 텍스트의 속성 받아옴.
@@ -37,7 +45,8 @@ class FirstViewController: UIViewController {
         photoLabel.attributedText = attributedString
         // 다음 화면으로 이동.
         if let bvc = self.storyboard?.instantiateViewController(withIdentifier: "BVC") {
-            self.present(bvc, animated: true, completion: nil)
+            self.navigationController?.pushViewController(bvc, animated: true)
+//            self.present(bvc, animated: true, completion: nil)
         }
     }
 

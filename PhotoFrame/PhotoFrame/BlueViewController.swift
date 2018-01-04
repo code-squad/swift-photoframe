@@ -18,11 +18,13 @@ class BlueViewController: UIViewController {
     // 세그 없이 다음 화면 이동.
     @IBAction func nextButtonTouched(_ sender: UIButton) {
         if let pvc = self.storyboard?.instantiateViewController(withIdentifier: "PVC") {
-            self.present(pvc, animated: true, completion: nil)
+            self.navigationController?.pushViewController(pvc, animated: true)
+//            self.present(pvc, animated: true, completion: nil)
         }
     }
     @IBAction func closeButtonTouched(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
+//        self.dismiss(animated: true, completion: nil)
         //self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
 
