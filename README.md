@@ -658,6 +658,143 @@ self.photoImageView.image = UIImage(named: String(format: "%02d.jpg", Int(arc4ra
 
 <br/>
 
+## UIImagePickerController 활용하기
+
+<img src="img/8_imagepicker1.png" width="19%"></img>
+<img src="img/8_imagepicker2.png" width="19%"></img>
+<img src="img/8_imagepicker3.png" width="19%"></img>
+<img src="img/8_imagepicker4.png" width="19%"></img>
+<img src="img/8_imagepicker5.png" width="19%"></img>
+
+### 구현과정
+#### 이미지 피커 불러오기
+- 아래 [이미지 피커 컨트롤러 사용방법] 참고
+
+#### 권한 설정
+- 앱에서 유저의 사적인 데이터에 접근하기 위해서는 유저에게 권한을 요청해야 한다. 
+- 권한이 필요한 프레임워크로는 **Calendar , Contact , Reminder , Photo , Bluetooth Sharing , Microphone , Camera , Location , Heath , HomeKit , Media Library , Motion , CallKit , Speech Recognition , SiriKit , TV Provider** 가 있다.
+- 앱에서 필요한 권한은 **Info.plist 파일**에 선언할 수 있다.
+- **[privacy key 확인하기](https://iosdevcenters.blogspot.com/2016/09/infoplist-privacy-settings-in-ios-10.html)**
+
+#### 선택된 사진 받아오기
+- delegate 클래스 내부에 **[imagePickerController(_:didFinishPickingMediaWithInfo:)](https://developer.apple.com/documentation/uikit/uiimagepickercontrollerdelegate/1619126-imagepickercontroller)** 함수 구현: 유저가 이미지나 영상을 pick했다는 것을 delegate에게 알려줌.
+	1. 두번째 파라미터 **info**: **유저가 선택한 이미지의 원본 및 수정본 또는 유저가 선택한 영상의 파일경로를 포함하는 딕셔너리**. 관련된 수정 정보도 가지고 있다. **Editing Information Keys**는 다음과 같다.
+	2. 사진이 nil 이 아닌 경우, UIImageView에 사진을 표시한다.
+	3. 이미지 피커를 dismiss 한다.
+
+		> Editing Information Keys
+		>
+		>- UIImagePickerControllerMediaType: 유저가 선택한 미디어의 타입
+		>- UIImagePickerControllerOriginalImage: 유저가 선택한 이미지 원본
+		>- UIImagePickerControllerImageURL: 유저가 선택한 이미지 파일 URL
+		>- UIImagePickerControllerEditedImage: 유저가 수정한 이미지
+		>- UIImagePickerControllerCropRect: 원본을 crop한 사각형 이미지
+		>- UIImagePickerControllerMediaURL: 영상의 파일경로 URL
+		>- UIImagePickerControllerMediaMetaData: 카메라로 새로 찍은 이미지의 메타데이터
+		>- UIImagePickerControllerLivePhoto: 새로 찍거나 선택한 이미지의 라이브 포토
+		>- UIImagePickerControllerPHAsset: 이미지의 Photos asset 가져옴
+
+**[참고: Coding Explorer Blog](http://www.codingexplorer.com/choosing-images-with-uiimagepickercontroller-in-swift/)**
+
+<br/>
+
+### UIImagePickerController란?
+- 이미지 피커 컨트롤러는 사용자가 원하는 결과를 delegate 객체에 전달한다. 그리고 **source type**에 따라 이미지 피커 컨트롤러의 역할이나 표시방식이 달라진다.
+	- **camera**의 sourceType: 카메라 인터페이스 제공
+	- **photoLibrary** 또는 **savedPhotosAlbum**의 sourceType: 사진앨범 인터페이스 제공
+
+#### 이미지 피커 컨트롤러 사용방법
+1. 기기가 선택한 sourceType을 지원하는 지 확인: 
+	- `if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) { ... }`
+
+2. 선택한 sourceType에서 사용 가능한 미디어 타입 확인: availableMediaTypes()
+
+3. 이미지 피커 컨트롤러의 mediaType 프로퍼티를 사용하여 미디어 타입에 따라 UI를 맞추도록 요청한다.
+
+4. 이미지 피커 컨트롤러를 화면에 띄운다.
+	- iPhone: **모달 방식**(present)
+	- iPad: 
+		- Camera: **Full Screen**
+		- Photo Library: **Popover**(must)
+		- Saved Photos Album: **Popover**(must)
+	- [참고: UIPopoverPresentationController](https://developer.apple.com/documentation/uikit/uipopoverpresentationcontroller)
+
+5. 콘텐츠를 선택하거나 취소 버튼을 누르는 등의 이벤트 발생 시, delegate 객체를 이용하여 이미지 피커를 dismiss 한다.
+
+>- UIImagePickerController 클래스는 **portrait 모드만 지원**한다.
+>- as-is로 사용해야 하며, 서브클래싱을 지원하지 않는다.
+>- **cameraOverlayView** 프로퍼티에 커스텀 뷰를 할당할 수 있으며, 이 뷰를 이용해서 추가적인 정보를 보여주거나 카메라 인터페이스와 커스텀 코드 사이를 이어줄 수 있다.
+
+[참고: UIImagePickerController](https://developer.apple.com/documentation/uikit/uiimagepickercontroller)
+
+<br/>
+
+#### 그 외 작업 가능 사항
+- 플래시 모드로 전환
+- 동영상 작업하기
+- 라이브 포토 다루기
+- 캡쳐 및 검색하기
+- [참고: Apple Developer 문서](https://developer.apple.com/documentation/uikit/uiimagepickercontroller)
+
+<br/>
+
+#### 주제별 관련 인터페이스
+- 피커에 발생하는 이벤트에 반응하기
+	- [delegate](https://developer.apple.com/documentation/uikit/uiimagepickercontroller/1619145-delegate)
+
+- 피커에 리소스 세팅하기
+	- [sourceType](https://developer.apple.com/documentation/uikit/uiimagepickercontroller/1619167-sourcetype)
+	- [availableMediaTypes(for: UIImagePickerControllerSourceType)](https://developer.apple.com/documentation/uikit/uiimagepickercontroller/1619169-availablemediatypes)
+	- [isSourceTypeAvailable(UIImagePickerControllerSourceType)](https://developer.apple.com/documentation/uikit/uiimagepickercontroller/1619144-issourcetypeavailable)
+
+- 피커 설정하기
+	- [mediaTypes](https://developer.apple.com/documentation/uikit/uiimagepickercontroller/1619173-mediatypes)
+	- [allowsEditing](https://developer.apple.com/documentation/uikit/uiimagepickercontroller/1619137-allowsediting)
+
+- 이미지나 영상 캡쳐하기
+	- [takePicture()](https://developer.apple.com/documentation/uikit/uiimagepickercontroller/1619160-takepicture)
+	- [startVideoCapture()](https://developer.apple.com/documentation/uikit/uiimagepickercontroller/1619123-startvideocapture)
+	- [stopVideoCapture()](https://developer.apple.com/documentation/uikit/uiimagepickercontroller/1619140-stopvideocapture)
+
+- 사용할 카메라 설정하기
+	- [isCameraDeviceAvailable(UIImagePickerControllerCameraDevice)](https://developer.apple.com/documentation/uikit/uiimagepickercontroller/1619159-iscameradeviceavailable)
+	- [cameraDevice](https://developer.apple.com/documentation/uikit/uiimagepickercontroller/1619117-cameradevice)
+
+- 이미지를 앱으로 보내기
+	- [imageExportPreset](https://developer.apple.com/documentation/uikit/uiimagepickercontroller/2897484-imageexportpreset)
+	- [videoExportPreset](https://developer.apple.com/documentation/uikit/uiimagepickercontroller/2890964-videoexportpreset)
+
+- 기타
+	- 카메라 기능 커스터마이징하기
+	- 비디오 캡쳐 옵션 설정하기
+	- 카메라 캡쳐 모드 설정하기
+	- 플래시 설정하기
+
+<br/>
+
+## MVC와 delegate, protocol의 상관관계
+### View --[Delegate]--> Controller
+- MVC 패턴에서 뷰는 컨트롤러에게 일정 책임을 위임한다. 뷰 객체에는 delegate 프로퍼티가 있다.
+- 뷰마다 위임할 수 있는 역할이 각 뷰의 Delegate 프로토콜에 정의되어 있다.
+- delegate는 뷰 객체의 프로퍼티인데, 뷰 컨트롤러는 자기자신을 할당한다. delegate 프로토콜에 들어갈 수 있는 타입이 정해져 있으므로, 컨트롤러는 해당 Delegate 프로토콜을 채택해야 한다.
+- 뷰의 프로퍼티일 뿐인 delegate에는 어떤 타입의 객체가 들어올지 모르기 때문에 프로토콜 타입으로 정의되어 있다.
+- **뷰의 delegate에 뷰컨트롤러를 할당하지 않으면** 아무리 뷰컨트롤러에서 delegate 인터페이스들을 구현했더라도, **뷰와 뷰컨트롤러가 연결되지 않았으므로 뷰컨트롤러에 구현한 메소드가 실행되지 않는다.**
+
+```swift
+// 뷰에 특정 이벤트가 발생하면 델리게이트 프로토콜에 정의된 메소드가 호출되고, 뷰컨트롤러에 구현한 로직이 실행된다.
+self.imagePicker.delegate = self
+```
+
+### View <--[Data Source]-- Controller
+- 뷰는 모델에 변경이 있으면 갱신되어야 한다. 
+- 기본적으로 뷰와 모델은 소통할 수 없다.
+- 따라서 뷰는 뷰컨트롤러에게 데이터의 변경사항이 있는지 물어본다. 
+- 이 때 물어보는 메시지를 전달하는 프로토콜을 DataSource 라고 부른다.
+
+**[참고: 허진한의 성장하는 개발자 이야기](http://hjh5488.tistory.com/27)**
+
+<br/>
+
 # .gitignore 설정하기
 ## 사용 목적
 - **원격 저장소 폴더에 올리고 싶지 않은 파일 또는 폴더가 있을 때**, .gitignore파일에 해당 파일 또는 폴더를 추가하여 제외 가능하다.
