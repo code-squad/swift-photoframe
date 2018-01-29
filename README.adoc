@@ -24,11 +24,11 @@ class FirstViewController: UIViewController {
 }
 ----
 
-image::./image/console-view.png[]
+image::./image/console-view.png[50%, 50%]
 
-image::./image/first-view.png[] 
+image::./image/first-view.png[30%, 30%]
 
-image::./image/second-view.png[]
+image::./image/second-view.png[30%, 30%]
 
 ==== https://developer.apple.com/library/content/documentation/WindowsViews/Conceptual/ViewPG_iPhoneOS/CreatingViews/CreatingViews.html[View]
 
@@ -110,30 +110,48 @@ self.firstLabel.text = "JK의 사진액자"
 
 ===== 실행결과 
 
-image::./image/result-2.png[]
-
 [source, swift]
 ----
-override func viewDidLoad() {
-    super.viewDidLoad()
-    print(#file, #line, #function, #column)
-    
-    self.photoLabel.text = "AMING의 사진액자"
-    self.photoLabel.textColor = UIColor(red: 0.333, green: 0.455, blue: 0.116, alpha: 1.0)
-    self.photoLabel.font = UIFont.boldSystemFont(ofSize: 40)
-    self.firstDescription.text = "AMING의 사진액자입니다 :)"
-    self.firstDescription.textColor = UIColor.green
-}
+self.photoLabel.text = "AMING의 사진액자"
+        self.photoLabel.textColor = UIColor(red: 0.333, green: 0.455, blue: 0.116, alpha: 1.0)
+        self.photoLabel.font = UIFont.boldSystemFont(ofSize: 40)
+        self.firstDescription.text = "AMING의 사진액자입니다 :)"
+        self.firstDescription.textColor = UIColor.green
 ----
 
+image::./image/result-2.png[[30%, 30%]
+
 ===== https://developer.apple.com/documentation/uikit/uilabel[UILabel]
-* Core
-.속성
-|===
-^| 속성 ^| 기능 
+* Core Attributes
+** Text
+*** 런타임때, https://developer.apple.com/documentation/uikit/uilabel/1620538-text[Text] => https://developer.apple.com/documentation/foundation/nsstring[NSString], https://developer.apple.com/documentation/uikit/uilabel/1620542-attributedtext[AttributedText] => https://developer.apple.com/documentation/foundation/nsattributedstring[NSAttributedString] 이용하여 Label 텍스트 내용을 바꿀 수 있음
+*** NSAttributedString API를 이용하며 개별 문자나 문자 그룹의 속성을 바꿀 수 있음
+** Color
+*** Label 텍스트의 색상을 바꿀 수 있음. String, UIImage 타입의 값을 바인딩 할 수 있음
+** Font
+*** Label 텍스트의 글꼴을 바꿀 수 있음
+** Alignment
+*** Label 텍스트의 수평방향 정렬을 제어함
+** Lines
+*** Label 텍스트가 사용할 수 있는 최대 행을 정할 수 있음. 0으로 설정하면 최대 행을 사용할 수 있음. https://developer.apple.com/documentation/uikit/uilabel/1620539-numberoflines[numberOfLines] 속성을 이용함
+** Behavior
+*** https://developer.apple.com/documentation/uikit/uilabel/1620530-isenabled[isEnabeld => Label 사용 여부]
+*** https://developer.apple.com/documentation/uikit/uilabel/1620526-ishighlighted[isHighlighted => Label 문자열 강조 여부]
 
-| |
+* Spacing Attributes
+** Baseline
+*** 자동 축소 기능을 사용할 때, 수직 정렬을 제어함. 일반적으로 bottom 속성
+*** https://developer.apple.com/documentation/uikit/uilabel/1620524-baselineadjustment[baseLineAdjustment] 
+** Line Breaks
+*** 텍스트의 길이가 라벨의 프레임보다 클 경우 어떤 기준으로 텍스트를 나눌지를 설정함
+*** https://developer.apple.com/documentation/uikit/uilabel/1620525-linebreakmode[lineBreakMode => Label 텍스트를 자르거나 줄바꿈을 사용하는 속성]
+** Autoshrink 
+*** Label이 잘리기 전에 Label를 조정함. Label 텍스트의 크기가 작아짐. https://developer.apple.com/documentation/uikit/uilabel/1620544-minimumscalefactor[minimumScaleFactor], https://developer.apple.com/documentation/uikit/uilabel/1620533-allowsdefaulttighteningfortrunca[allowsDefaultTighteningForTruncation]
 
-
-|===
-
+* Advanced Appearance Attributes
+** Highlighted
+*** https://developer.apple.com/documentation/uikit/uilabel/1620540-highlightedtextcolor[highlightedTextColor]
+** Shadow
+*** https://developer.apple.com/documentation/uikit/uilabel/1620536-shadowcolor[shadowColor]
+** Shadow Offset
+*** https://developer.apple.com/documentation/uikit/uilabel/1620528-shadowoffset[shadowOffset]
