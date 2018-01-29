@@ -143,7 +143,7 @@ image::./image/result-2.png[[30%, 30%]
 *** 자동 축소 기능을 사용할 때, 수직 정렬을 제어함. 일반적으로 bottom 속성
 *** https://developer.apple.com/documentation/uikit/uilabel/1620524-baselineadjustment[baseLineAdjustment] 
 ** Line Breaks
-*** 텍스트의 길이가 라벨의 프레임보다 클 경우 어떤 기준으로 텍스트를 나눌지를 설정함
+*** 텍스트의 길이가 라벨의 프레임보다 클 경우 어떤 기준으로 텍스트를 나눌지 설정함
 *** https://developer.apple.com/documentation/uikit/uilabel/1620525-linebreakmode[lineBreakMode => Label 텍스트를 자르거나 줄바꿈을 사용하는 속성]
 ** Autoshrink 
 *** Label이 잘리기 전에 Label를 조정함. Label 텍스트의 크기가 작아짐. https://developer.apple.com/documentation/uikit/uilabel/1620544-minimumscalefactor[minimumScaleFactor], https://developer.apple.com/documentation/uikit/uilabel/1620533-allowsdefaulttighteningfortrunca[allowsDefaultTighteningForTruncation]
