@@ -99,7 +99,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="9pv-A4-QxB" kind="show" id="OHD-bl-6z7"/>
+                                    <segue destination="49e-Tb-3d3" kind="show" id="C50-pd-94K"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -109,7 +109,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fPb-qF-Ya3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1209" y="-288"/>
+            <point key="canvasLocation" x="1470" y="-321"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="y1c-0E-CCy">
@@ -136,7 +136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NV9-Zq-cyL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1497" y="75"/>
+            <point key="canvasLocation" x="2190" y="99"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="llK-Ko-lIv">
@@ -163,7 +163,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IaW-Kc-22w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1556" y="-346"/>
+            <point key="canvasLocation" x="2190" y="-616"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
@@ -200,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="833" y="774"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -226,8 +226,6 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qs9-DL-heC"/>
-        <segue reference="VeG-ny-k6H"/>
-        <segue reference="OHD-bl-6z7"/>
+        <segue reference="sZH-Zl-WBj"/>
     </inferredMetricsTieBreakers>
 </document>
