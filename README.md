@@ -17,3 +17,15 @@
 
   - UILabel 클래스 속성(Property)는 어떤게 있는지 학습한다.
     - Attributes Inspector 활용
+
+## Step3. IBAction
+  - Main.storyboard 에서 First Scene에 UIButton을 추가하고, IBAction으로 연결한다.
+  - 실행화면
+  ![screemsh_step3](./img/Step3.png)
+
+  - IBAction 과 IBOutlet 연결 구조에 대해 이해한 내용을 정리한다.
+    - IBOutlet : 연결통로라는 의미, 인터페이스빌더에서 프로그램과의 연결통로
+    - IBAction : 조작과 메서드를 연결, 사용자가 부품을 조작했을 때 실행할 일을 지정
+    
+  - 버튼에 IBAction을 추가할 때 이벤트(Event) 종류에는 어떤 것들이 있는지 학습한다.
+  ![screemsh_step3_2](./img/Step3_2.png)
