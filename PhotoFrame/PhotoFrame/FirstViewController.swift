@@ -12,10 +12,12 @@ class FirstViewController: UIViewController {
 
     @IBOutlet weak var firstLabel: UILabel!
     @IBOutlet weak var firstDescription: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.firstLabel.text = "Jack의 사진액자"
         self.firstDescription.text = "Kwon Jack's PhotoFrame"
+        print(#file, #line, #function, #column)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
