@@ -15,6 +15,8 @@
 		047734AB201AB83F001CC404 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047734A9201AB83F001CC404 /* LaunchScreen.storyboard */; };
 		047734B6201AB83F001CC404 /* PhotoFrameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047734B5201AB83F001CC404 /* PhotoFrameTests.swift */; };
 		047734C1201AB83F001CC404 /* PhotoFrameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047734C0201AB83F001CC404 /* PhotoFrameUITests.swift */; };
+		04AC0042201F0F8C006C46C4 /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC0041201F0F8C006C46C4 /* BlueViewController.swift */; };
+		04AC0044201F13E9006C46C4 /* OrangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC0043201F13E9006C46C4 /* OrangeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		047734BC201AB83F001CC404 /* PhotoFrameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoFrameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		047734C0201AB83F001CC404 /* PhotoFrameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFrameUITests.swift; sourceTree = "<group>"; };
 		047734C2201AB83F001CC404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04AC0041201F0F8C006C46C4 /* BlueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueViewController.swift; sourceTree = "<group>"; };
+		04AC0043201F13E9006C46C4 /* OrangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 			children = (
 				0477349E201AB83F001CC404 /* AppDelegate.swift */,
 				047734A0201AB83F001CC404 /* FirstViewController.swift */,
+				04AC0041201F0F8C006C46C4 /* BlueViewController.swift */,
+				04AC0043201F13E9006C46C4 /* OrangeViewController.swift */,
 				047734A2201AB83F001CC404 /* SecondViewController.swift */,
 				047734A4201AB83F001CC404 /* Main.storyboard */,
 				047734A7201AB83F001CC404 /* Assets.xcassets */,
@@ -263,7 +269,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				047734A3201AB83F001CC404 /* SecondViewController.swift in Sources */,
+				04AC0044201F13E9006C46C4 /* OrangeViewController.swift in Sources */,
 				0477349F201AB83F001CC404 /* AppDelegate.swift in Sources */,
+				04AC0042201F0F8C006C46C4 /* BlueViewController.swift in Sources */,
 				047734A1201AB83F001CC404 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

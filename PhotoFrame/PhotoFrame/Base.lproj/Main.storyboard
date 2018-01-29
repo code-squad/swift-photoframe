@@ -60,46 +60,34 @@
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
-        <!--View Controller-->
+        <!--Blue View Controller-->
         <scene sceneID="1tu-NZ-Zme">
             <objects>
-                <viewController id="tHA-vh-BiP" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="VEJ-r1-bcG">
+                <viewController id="tHA-vh-BiP" customClass="BlueViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VEJ-r1-bcG" customClass="Blue">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSR-Eu-pBb">
-                                <rect key="frame" x="157" y="259" width="61" height="33"/>
+                                <rect key="frame" x="157" y="317" width="61" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="Orange">
                                     <color key="titleColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="4un-4d-xTo" kind="show" id="qs9-DL-heC"/>
+                                    <action selector="nextPage:" destination="tHA-vh-BiP" eventType="touchUpInside" id="n9J-jn-5e3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33A-GV-iIR">
-                                <rect key="frame" x="172" y="339" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61O-Ty-iIQ">
+                                <rect key="frame" x="157" y="365" width="57" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Red">
-                                    <color key="titleColor" red="0.97022749352331605" green="0.30045062315512128" blue="0.18033556185587837" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="0Zb-3j-MEK" kind="popoverPresentation" popoverAnchorView="33A-GV-iIR" id="eaD-LU-XG5">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9i-pU-2Eh">
-                                <rect key="frame" x="13" y="20" width="52" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="뒤로가기">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="49e-Tb-3d3" kind="show" id="C50-pd-94K"/>
+                                    <action selector="closeButtonTouched:" destination="tHA-vh-BiP" eventType="touchUpInside" id="f6K-sR-bk4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -109,51 +97,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fPb-qF-Ya3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1470" y="-321"/>
+            <point key="canvasLocation" x="1469.5999999999999" y="-321.58920539730138"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="y1c-0E-CCy">
-            <objects>
-                <viewController id="0Zb-3j-MEK" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Y0S-tQ-5zY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cs1-TO-Rsg">
-                                <rect key="frame" x="13" y="20" width="52" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="뒤로가기">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="tHA-vh-BiP" kind="showDetail" id="sZH-Zl-WBj"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.97022749350000004" green="0.30045062319999999" blue="0.1803355619" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="aQy-Yv-Pze"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NV9-Zq-cyL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2190" y="99"/>
-        </scene>
-        <!--View Controller-->
+        <!--Orange View Controller-->
         <scene sceneID="llK-Ko-lIv">
             <objects>
-                <viewController id="4un-4d-xTo" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OrangePage" id="4un-4d-xTo" customClass="OrangeViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iY3-d6-07D">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBs-5i-Vi3">
-                                <rect key="frame" x="16" y="20" width="52" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9xR-YS-Rjd">
+                                <rect key="frame" x="159" y="365" width="57" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="뒤로가기">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Close">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="tHA-vh-BiP" kind="showDetail" id="VeG-ny-k6H"/>
+                                    <action selector="closeButtonTouched:" destination="4un-4d-xTo" eventType="touchUpInside" id="5la-rS-MfP"/>
+                                    <action selector="closeButtonTouched:" destination="tHA-vh-BiP" eventType="touchUpInside" id="zTc-4J-Nv6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -163,7 +126,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IaW-Kc-22w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2190" y="-616"/>
+            <point key="canvasLocation" x="2232.8000000000002" y="-321.58920539730138"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
@@ -225,7 +188,4 @@
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="sZH-Zl-WBj"/>
-    </inferredMetricsTieBreakers>
 </document>
