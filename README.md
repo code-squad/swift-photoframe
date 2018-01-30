@@ -92,3 +92,25 @@
     - UINavigationController : 계층적인 성격을 띄는 콘텐츠 구조를 관리하기 위한 뷰컨트롤러.
     - 화면 전환이 발생하는 뷰 컨트롤러들의 포인터를 스택으로 관리하기 때문이다.
     - 즉, 최상위 뷰 컨트롤러는 화면에 표시되므로, 스택의 최상위 뷰 컨트롤러를 더하거나 빼는 것은 화면을 전환하는 것과 같다.
+
+## Step7. Second Scene 화면
+  - 탭바의 두 번째 화면 (Second Scene) 디자인을 변경하고 액자 앱을 동작을 구현한다.
+  - 실행화면
+  - ![screemsh_step7](./img/Step7.png)
+  - 이미지뷰의 속성을 조정해서 이미지가 비율에 맞춰서 표시되도록 조정한다.
+    - 내부 UIImageView의 Inspector를 이용해, CurrentMode - Scale To Fill으로 조정
+  - UIImageView 와 UIImage 클래스는 각각 어떤 역할을 담당하는지 학습한다.
+    - UIView -> UIImageView -> UIImage
+    1. UIImageView : 단일이미지 혹은 움직이는 복수이미지의 표시를 담당하는 객체
+    2. UIImage : 이미지데이터를 관리하는 객체
+  - 이미지 뷰의 속성은 어떤 것들이 있는지 애플 개발자 문서를 참고한다.
+    - 애플 개발자 문서
+    - ![screemsh_step7_2](./img/Step7_2.png)
+      1. Image View: 이미지
+        - Image : 표시할 이미지
+        - Hilighted : 해당 이미지가 강조되었을 때의 이미지
+        - State : 이미지 상태, Hilighted 이미지를 표시할 때 사용한다.
+      2. xcode 내부 인스펙터 설정(View - contentMode)
+        - Scale To Fill: 이미지를 이미지뷰에 맞는 크기로 확대, 축소한다. 가로세로 비율이 변경될 수 있기 때문에 이미지가 수직이 되거나 수평이될 수 있다.
+        - Aspect Fit: 이미지의 가로세로비율은 변경하지 않고 이미지가 모두 표시되도록 확대, 축소한다. 이미지뷰의 상하좌우에 틈새가 날 수 있다.
+        - Aspect Fill: 이미지 가로세로 비율은 변경하지 않고 이미지뷰에 틈새가 나지 않도록 확대, 축소한다. 이미지 상하 좌우가 이미지뷰에서 벗어날 수 있다.
