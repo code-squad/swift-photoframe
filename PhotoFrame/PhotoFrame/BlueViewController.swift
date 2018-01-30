@@ -22,13 +22,8 @@ class BlueViewController: UIViewController {
     }
     
     @IBAction func closeButtonTouched(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
-    @IBAction func nextPage(_ sender: Any) {
-        let orangeViewController = self.storyboard?.instantiateViewController(withIdentifier: "OrangePage")
-        orangeViewController?.modalTransitionStyle = UIModalTransitionStyle.coverVertical
-        self.present(orangeViewController!, animated: true, completion: nil)
-    }
 
 }
