@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var photoImageView: UIImageView!
     override func viewDidLoad() {
@@ -23,11 +23,23 @@ class SecondViewController: UIViewController {
     }
     
     @IBAction func selectButtonTouched(_ sender: Any) {
-    
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.delegate = self
+        present(imagePicker, animated: true, completion: nil)
     }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            let imagePickerView = UIImageView.init(image: image)
+            imagePickerView.contentMode = .scaleAspectFit
+            self.photoImageView.image = imagePickerView.image
+            dismiss(animated: true, completion: nil)
+        }
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 
