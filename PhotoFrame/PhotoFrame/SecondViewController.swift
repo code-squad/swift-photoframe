@@ -22,6 +22,9 @@ class SecondViewController: UIViewController {
         self.photoImageView.image = UIImage(named: String.init(format: "%02d.jpg", randomPhotoNumber))
     }
     
+    @IBAction func selectButtonTouched(_ sender: Any) {
+    
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
