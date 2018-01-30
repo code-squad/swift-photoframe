@@ -124,7 +124,7 @@ image::./image/result-2.png[[30%, 30%]
 ===== https://developer.apple.com/documentation/appkit/constants/interface_builder_constants/iboutlet[IBOutlet]
 * `IB-` => Interface Builder
 * 앱 코드에서 스토리 보드 객체로 연결함
-* https://developer.apple.com/documentation/appkit/constants/interface_builder_constants?language=objc[Interface Builder Constants
+* https://developer.apple.com/documentation/appkit/constants/interface_builder_constants?language=objc[Interface Builder Constants]
 * https://soooprmx.com/archives/5123[IBOutlet]
 
 > Type qualifier used by Interface Builder to expose a symbol as a connection point for sending messages from app code to a user interface element. Used immediately before an object type in a property or instance variable declaration. 
@@ -216,4 +216,4 @@ image::./image/photoframe-target-action.png[]
 
 ===== IBAction에서 여러가지 이벤트 설정할 수 있음
 
-image::./image/multiple-event.png[]
+image::./image/multiple-event.png[50%, 50%]
