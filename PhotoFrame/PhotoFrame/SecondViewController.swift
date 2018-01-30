@@ -19,11 +19,7 @@ class SecondViewController: UIViewController {
     
     @IBAction func nextImageButtonTouched(_ sender: Any) {
         let randomPhotoNumber = arc4random_uniform(22) + 1
-        if randomPhotoNumber < 10 {
-                    self.photoImageView.image = UIImage(named: "0\(randomPhotoNumber).jpg")
-            return
-        }
-        self.photoImageView.image = UIImage(named: "\(randomPhotoNumber).jpg")
+        self.photoImageView.image = UIImage(named: String.init(format: "%02d", randomPhotoNumber) + ".jpg")
     }
     
     override func didReceiveMemoryWarning() {
