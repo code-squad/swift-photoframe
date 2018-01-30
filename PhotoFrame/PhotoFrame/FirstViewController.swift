@@ -16,16 +16,27 @@ class FirstViewController: UIViewController {
         super.viewDidLoad()
         print(#file, #line, #function, #column)
         
-        self.photoLabel.text = "AMING의 사진액자"
-        self.photoLabel.textColor = UIColor(red: 0.333, green: 0.455, blue: 0.116, alpha: 1.0)
-        self.photoLabel.font = UIFont.boldSystemFont(ofSize: 40)
-        self.firstDescription.text = "AMING의 사진액자입니다 :)"
-        self.firstDescription.textColor = UIColor.green
+        loadPhotoLabelDefaultProperty()
+        self.photoLabel.text = "AMING's Photoframe"
+        self.firstDescription.text = "감자, 웅의 예쁜 사진이 있습니다 :)"
     }
 
     override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
+        super.didReceiveMemoryWarning()   
+    }
+    
+    @IBAction func nextButtonTouched(_ sender: Any) {
+        self.photoLabel.textColor = UIColor.white
+        self.photoLabel.backgroundColor = UIColor.black
+    }
+    
+    @IBAction func nextButtonTouchDown(_ sender: Any) {
+        loadPhotoLabelDefaultProperty()
+    }
+    
+    func loadPhotoLabelDefaultProperty() {
+        self.photoLabel.textColor = UIColor.black
+        self.photoLabel.font = UIFont.boldSystemFont(ofSize: 39)
     }
 }
 
