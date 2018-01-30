@@ -73,3 +73,22 @@
     let ViewController인스턴스 = self.storyboard?.instantiateViewController(withIdentifier: “Storyboard ID값”)
     self.navigationController?.pushViewController(ViewController인스턴스!, animated: true)
     ```
+
+## Step6. Container ViewController
+  - 내비게이션 컨트롤러(Navigation Controller)를 Embed 시켜서 동작하도록 개선한다.
+  - 실행화면
+  - ![screemsh_step6](./img/Step6.png)
+  - ![screemsh_step6_2](./img/Step6_2.png)
+
+  - 뷰컨트롤러 컨테이너 동작을 이해한다.
+    - 컨테이너 뷰 컨트롤러는 한 개의 view와 여러 개의 child ViewController를 다루고, ViewController에 의지할 수 있다는 것이 장점.
+  - 뷰컨트롤러 컨테이너는 또 어떤 클래스가 있는지 찾아보고 학습한다.
+    -  UINavigationController, UISplitViewController(아이패드 한정), UITabBarController
+  - 내비게이션 컨트롤러가 있을 경우와 없을 경우 화면 전환 동작이 어떻게 다른지, 화면들 포함관계가 있는지 학습한다.
+    - IB 사용 시 vs. 코드로 작성 시
+      - IB 사용 시: 세그로 연결하면 자동으로 코드 작성 없이 화면 전환 가능하며, Back 버튼이 자동으로 생성됨
+      - 코드 작성 시: push, pop을 이용하여 내비게이션 스택에 쌓아야 함. Back 버튼은 push된 뷰컨트롤러엔 자동으로 생김
+  - 내비게이션 컨트롤러 관련 메서드가 왜 push / pop 인지 학습한다.
+    - UINavigationController : 계층적인 성격을 띄는 콘텐츠 구조를 관리하기 위한 뷰컨트롤러.
+    - 화면 전환이 발생하는 뷰 컨트롤러들의 포인터를 스택으로 관리하기 때문이다.
+    - 즉, 최상위 뷰 컨트롤러는 화면에 표시되므로, 스택의 최상위 뷰 컨트롤러를 더하거나 빼는 것은 화면을 전환하는 것과 같다.
