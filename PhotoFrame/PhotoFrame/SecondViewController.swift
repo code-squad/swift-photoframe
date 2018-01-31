@@ -31,9 +31,7 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            let imagePickerView = UIImageView.init(image: image)
-            imagePickerView.contentMode = .scaleAspectFit
-            self.photoImageView.image = imagePickerView.image
+            self.photoImageView.image = image
             dismiss(animated: true, completion: nil)
         }
     }
