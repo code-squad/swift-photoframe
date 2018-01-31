@@ -100,9 +100,9 @@
   - 이미지뷰의 속성을 조정해서 이미지가 비율에 맞춰서 표시되도록 조정한다.
     - 내부 UIImageView의 Inspector를 이용해, CurrentMode - Aspect Fit으로 조정
   - UIImageView 와 UIImage 클래스는 각각 어떤 역할을 담당하는지 학습한다.
-    - UIView -> UIImageView -> UIImage
-    1. UIImageView : 단일이미지 혹은 움직이는 복수이미지의 표시를 담당하는 객체
-    2. UIImage : 이미지데이터를 관리하는 객체
+    - UIView -> UIImageView(뷰) -> UIImage(파일)
+    1. UIImageView : 단일이미지 혹은 움직이는 복수이미지의 표시를 담당하는 객체, 즉 이미지를 보여주는 View
+    2. UIImage : 이미지데이터를 관리하는 객체, 즉 이미지파일에 대한 접근을 담당한다.
   - 이미지 뷰의 속성은 어떤 것들이 있는지 애플 개발자 문서를 참고한다.
     - 애플 개발자 문서
     - ![screemsh_step7_2](./img/Step7_2.png)
