@@ -105,6 +105,9 @@
                                 <rect key="frame" x="172" y="154" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="닫기"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="lfI-5T-xXW" eventType="touchUpInside" id="NsX-mQ-diY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.97797474110000004" green="1" blue="0.51631929389999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
