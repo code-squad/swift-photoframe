@@ -12,6 +12,7 @@ class YellowViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(#file, #line, #function, #column)
     }
 
     override func didReceiveMemoryWarning() {
