@@ -162,3 +162,42 @@ self.firstDescription.textColor = UIColor.green
 ##### IBAction에서 여러가지 이벤트 설정할 수 있음
 
 <img src="./image/multiple-event.png" width="50%"></img>
+
+### 4단계
+
+##### 요구사항
+* 사진액자 - IBAction 요구사항을 구현한 상태로 시작함
+* 스토리보드 구성 요소에 대해 학습하고 새로운 Scene과 Segue를 추가함
+* 실행하고 새로운 화면을 캡처해서 readme.md 파일에 포함함
+
+##### 프로그래밍 요구사항
+* Main 스토리보드에서 First Scene 옆에 ViewController를 드래그해서 새로운 Scene을 추가함
+* 앞 단계에서 추가한 [다음]버튼을 선택하고 `Control + 드래그` 를 해서 새로 추가한 Scene에 연결함
+* 팝업으로 표시되는 Action Segue에서 Show 항목을 선택함
+
+<img src="./image/photoframe-add-scene.png" width="40%"></img>
+<img src="./image/photoframe-action-segue.png" width="40%"></img>
+
+* Scene과 Scene 사이에 화살표를 선택하면 Segue 속성을 변경할 수 있음
+* 새로 추가한 Scene 속성에서 배경 색상(Background Color)을 원하는 색상으로 변경함. 새로 앱을 실행해보고 [다음] 버튼을 누르면 새로운 화면이 나타나는지 확인함
+* 다시 스토리보드에서 위에 추가한 Scene (혹은 ViewController)에 [다음] 버튼을 추가함. 우측 옆에 한 단계 더 표현하기 위한 ViewController를 추가하고 배경 색상을 다른 색상으로 변경함. 위와 마찬가지로 [다음]버튼에서 새 Scene으로 Segue를 연결함
+* 예를 들어 First Scene 다음에 추가한 화면이 Yellow 화면이었다면, First Scene에서 [다음] 버튼을 누르면 Yellow 화면이 표시되고, Yellow 화면에서 [다음] 버튼을 누르면 Blue 화면이 나오는 방식으로 두 단계 표시함
+
+##### 실행결과
+
+<img src="./image/photoframe-result-4.png" width="70%"></img>
+
+##### [Using Segues](https://developer.apple.com/library/content/featuredarticles/ViewControllerPGforiPhoneOS/UsingSegues.html)
+* Show(Push)
+    * A navigation controller pushes the new view controller onto its navigation stack.
+    * `showViewController:sender:`
+* Show Detail(Replace)
+    * Only using a iPad  
+    * This segue is relevant only for view controllers embedded inside a [UISplitViewController] (https://developer.apple.com/documentation/uikit/uisplitviewcontroller) object. With this segue, a split view controller replaces its second child view controller (the detail controller) with the new content.
+    * `showDetailViewController:sender:`
+* Present Modally
+    * This segue displays the view controller modally using the specified presentation and transition styles. 
+    * The navigation stack has no effect.
+* Present as Popover
+    * Show simple pop-up on iPhone 
+    * In a horizontally regular environment, the view controller appears in a popover.
