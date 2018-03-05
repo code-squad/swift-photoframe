@@ -69,3 +69,35 @@ Background, Shadow, Selection, Image Tint, Style, Bar Tint, Item Positioning를 
 
 ---
 
+
+
+# PhotoFrame step2
+
+>  IBOutlet
+First Scene에 만들어져 있는 레이블을 IBOutlet으로 연결하고 속성을 바꿔본다.
+
+---
+
+- ***코드 작성***
+```swift
+@IBOutlet weak var firstLabel: UILabel!
+@IBOutlet weak var firstDescription: UILabel!
+override func viewDidLoad() {
+super.viewDidLoad()
+self.firstLabel.text = "Elly의 사진액자"
+self.firstDescription.text = "글자색, 배경색, 투명도, 글자 크기를 바꿔본 Description"
+self.firstDescription.textColor = UIColor.white
+self.firstDescription.backgroundColor = UIColor.blue.withAlphaComponent(0.5)
+self.firstDescription.font = UIFont.boldSystemFont(ofSize: 15)
+
+print(#file, #line, #function, #column)
+}
+```
+
+
+- ***실행 화면***
+
+<img src="/img/IBOutlet.png" width="30%" height="30%">
+
+---
+
