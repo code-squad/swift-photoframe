@@ -60,18 +60,18 @@
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
-        <!--View Controller-->
+        <!--Blue View Controller-->
         <scene sceneID="zf8-CQ-eWy">
             <objects>
-                <viewController id="wPa-NA-c3g" sceneMemberID="viewController">
+                <viewController id="wPa-NA-c3g" customClass="BlueViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8We-b5-uzf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JcG-ip-ybX">
-                                <rect key="frame" x="164" y="191" width="46" height="30"/>
+                                <rect key="frame" x="172" y="191" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="다음"/>
                                 <connections>
                                     <segue destination="lfI-5T-xXW" kind="show" id="V2U-Cb-IkL"/>
                                 </connections>
