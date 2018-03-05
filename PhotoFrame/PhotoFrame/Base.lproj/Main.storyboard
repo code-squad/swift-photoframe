@@ -32,11 +32,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcF-sv-ShA">
-                                <rect key="frame" x="164" y="210" width="46" height="30"/>
+                                <rect key="frame" x="172" y="210" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="다음"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="9pv-A4-QxB" eventType="touchUpInside" id="jYI-mj-VSO"/>
+                                    <segue destination="wPa-NA-c3g" kind="show" id="oKZ-Ju-xGn"/>
                                 </connections>
                             </button>
                         </subviews>
