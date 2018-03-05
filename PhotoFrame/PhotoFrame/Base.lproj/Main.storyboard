@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06k-cE-ej3">
-                                <rect key="frame" x="298" y="563" width="61" height="30"/>
+                                <rect key="frame" x="298" y="564" width="61" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="20"/>
                                 <state key="normal" title="&gt;">
@@ -43,7 +43,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CbO-1g-Uw6">
-                                <rect key="frame" x="0.0" y="358" width="375" height="21"/>
+                                <rect key="frame" x="0.0" y="339" width="375" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -95,6 +95,23 @@
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
         </scene>
+        <!--Third-->
+        <scene sceneID="IhV-Yb-2so">
+            <objects>
+                <viewController id="jGx-h3-ySJ" customClass="ThirdViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WpT-rh-EMv" customClass="Trying">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="zmA-cQ-saZ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Third" image="second" selectedImage="second" id="EhR-wh-Eve"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nmG-c9-udy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="730.39999999999998" y="1045.7271364317842"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="H3c-2D-EjW">
             <objects>
@@ -140,10 +157,10 @@
             </objects>
             <point key="canvasLocation" x="1431" y="364"/>
         </scene>
-        <!--View Controller-->
+        <!--Pink View Controller-->
         <scene sceneID="JY4-rc-y6P">
             <objects>
-                <viewController id="6nF-rT-jMG" sceneMemberID="viewController">
+                <viewController id="6nF-rT-jMG" customClass="PinkViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6eO-iP-ooL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -164,6 +181,20 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7s-as-Zwg">
+                                <rect key="frame" x="298" y="560" width="61" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="20"/>
+                                <state key="normal" title="&gt;">
+                                    <color key="titleColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextButtonTouchCancel:" destination="9pv-A4-QxB" eventType="touchCancel" id="UGR-eV-ABE"/>
+                                    <action selector="nextButtonTouchDown:" destination="9pv-A4-QxB" eventType="touchDown" id="IWw-V4-xTQ"/>
+                                    <action selector="nextButtonTouched:" destination="9pv-A4-QxB" eventType="touchUpInside" id="dKh-If-WwE"/>
+                                    <action selector="nextPageButton:" destination="6nF-rT-jMG" eventType="touchUpInside" id="aOB-rf-msN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="c9l-sl-Als"/>
@@ -171,7 +202,35 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QUb-8Z-t0O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2094" y="366"/>
+            <point key="canvasLocation" x="2175" y="359"/>
+        </scene>
+        <!--Blue View Controller-->
+        <scene sceneID="d0u-Zd-xYs">
+            <objects>
+                <viewController storyboardIdentifier="BlueViewController" id="wB7-8R-rhu" customClass="BlueViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wf1-xF-Ype">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o1U-ha-QMe">
+                                <rect key="frame" x="101" y="268" width="172" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="closedButtonTouched:" destination="wB7-8R-rhu" eventType="touchUpInside" id="Lbv-kf-zuN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="bBl-XC-wEJ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="96U-EE-tpF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2850.4000000000001" y="358.4707646176912"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -185,6 +244,7 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="jGx-h3-ySJ" kind="relationship" relationship="viewControllers" id="ars-PO-90U"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
