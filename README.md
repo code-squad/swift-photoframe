@@ -162,3 +162,36 @@ self.firstLabel.alpha = 0.5
 <img src="/img/IBAction_before.png" width="30%" height="30%">  <img src="/img/IBAction_after.png" width="30%" height="30%">
 
 ---
+
+
+
+# PhotoFrame step4
+
+> Scene과 Segue
+스토리보드 구성 요소에 대해 학습하고 새로운 Scene과 Segue를 추가한다
+실행하고 새로운 화면을 캡처해서 readme.md 파일에 포함한다.
+
+---
+
+- ***학습꺼리***
+### # Segue에 액션에 있는 여러 항목들은 어떤 효과가 있는지 값을 바꿔보며 실행해서 학습한다.
+
+<img src="/img/segue.png" width="30%" height="30%">
+
+```
+- Show: 새로운 화면을 보여줌
+- Show Detail: Show와 비슷해 보이나 세부 컨텐츠를 보여줄 때 쓰이는 것 같다.
+(UISplitViewController객체 내부에 포함 된 뷰 컨트롤러에만 관련된 새로운 컨텐츠를 보여줌.)
+- Present Modally: 지정된 표현 및 전환 스타일을 사용하여보기 컨트롤러를 Modal로 표시해준다.
+- Present As Popover: 수평적으로 일정한 환경에서는 팝업으로, 압축된 환경에서는 Modal로 표시해준다.
+- Custom: 제공하는 segue 액션 외에 개발자가 원하는대로 만들 수 있음.
+```
+
+
+- ***실행 화면***
+
+<img src="/img/scene1.png" width="30%" height="30%">  <img src="/img/scene2.png" width="30%" height="30%">  <img src="/img/scene3.png" width="30%" height="30%">
+
+---
+
+
