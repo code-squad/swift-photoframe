@@ -256,6 +256,11 @@ self.firstDescription.textColor = UIColor.green
 * `Dismiss` deals with only single view-controller it will remove the current view-controller from memory.
 * `Unwind segue` can be used to navigate back through push, modal or popover segues, On top of that you can actually unwind through not only one but a series of push/modal/popover segues, e.g. "go back" multiple steps in your navigation hierarchy with a single unwind action.
 * [What's the difference between popping a view controller, dismissing a view controller, and using an unwind segue?](https://stackoverflow.com/questions/45318855/whats-the-difference-between-popping-a-view-controller-dismissing-a-view-contr)
+* `SecondViewController().dismiss(animated: true, completion: nil)`를 BlueViewController에서 호출할 때 반응이 없음
+    * [dismiss(animated:completion:)](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621505-dismiss) 에서 아래 내용을 확인함
+    > If you present several view controllers in succession, thus building a stack of presented view controllers, calling this method on a view controller lower in the stack dismisses its immediate child view controller and all view controllers above that child on the stack.     
+    * JK's feedbacks 
+    * 포토프레임은 되는것만 확인하기 보다 이런저런 상황에서 자기 확신을 가질 수 있도록 이상하다? 싶으면 확인해보는게 중요합니다. 그래야 다른 경우에 실수를 안하게 됩니다. 현재 `presenting 되어있는 VC에서 self.dismiss() 하는 것과 이전에 presentedVC에서 띄워놓은 VC를 dismiss 하는 것과 차이`를 꼭 알고 넘어가세요.
 
 ##### YellowViewController에서 Segue를 제거하고 다음 화면을 보여줄 때 코드로 보여주는 방법을 찾아보고 적용함
 * [UIStoryBoard](https://developer.apple.com/documentation/uikit/uistoryboard)
@@ -271,3 +276,31 @@ self.firstDescription.textColor = UIColor.green
     }))
 }
 ```
+
+### 6단계
+
+##### 요구사항
+* 내비게이션 컨트롤러(Navigation Controller)를 Embed 시켜서 동작하도록 개선함
+
+##### 프로그래밍 요구사항
+* 스토리보드에서 First Scene을 선택하고, Editor > Embed In > Navigation Controller 항목을 선택함
+* 실행해보면 화면 상단에 내비게이션바(Navigation Bar)가 추가되고 [다음]버튼을 누르면 다음 화면이 우측에서 좌측으로 애니메이션되면서 표시됨
+
+<img src="./image/photoframe-navigationcontroller.png" width="70%"></img>
+
+* [닫기]버튼에 연결된 closeButtonTouched 코드를 다음과 같이 수정함
+
+```swift
+@IBAction func closeButtonTouched(_ sender: Any) {
+    self.navigationController?.popViewController(animated: true)
+}
+```
+
+* 위와 동일하게 세 번째 추가한 화면에 [닫기]버튼도 코드를 수정함
+* 뷰 컨트롤러 콜백 함수들 동작도 동일한지 확인함
+
+##### 뷰컨트롤러 컨테이너 동작 
+
+##### 내비게이션 컨트롤러가 있을 경우와 없을 경우 화면 전환 동작의 차이점, 화면들 포함관계
+
+##### 내비게이션 컨트롤러 관련 메서드가 왜 `push, pop` 일까?
