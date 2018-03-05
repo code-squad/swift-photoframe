@@ -18,4 +18,3 @@ class SecondViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 }
-
