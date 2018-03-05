@@ -193,7 +193,7 @@ self.firstDescription.textColor = UIColor.green
     * `showViewController:sender:`
 * Show Detail(Replace)
     * Only using a iPad  
-    * This segue is relevant only for view controllers embedded inside a [UISplitViewController] (https://developer.apple.com/documentation/uikit/uisplitviewcontroller) object. With this segue, a split view controller replaces its second child view controller (the detail controller) with the new content.
+    * This segue is relevant only for view controllers embedded inside a [UISplitViewController](https://developer.apple.com/documentation/uikit/uisplitviewcontroller) object. With this segue, a split view controller replaces its second child view controller (the detail controller) with the new content.
     * `showDetailViewController:sender:`
 * Present Modally
     * This segue displays the view controller modally using the specified presentation and transition styles. 
