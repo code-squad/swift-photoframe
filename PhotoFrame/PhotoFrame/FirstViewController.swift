@@ -29,7 +29,7 @@ class FirstViewController: UIViewController {
     }
     
     @IBAction func nextButtonTouchDown(_ sender: UIButton) {
-        loadPhotoLabelDefaultProperty()
+        loadPhotoLabelDefaultProperties()
     }
 
     private func loadPhotoLabelDefaultProperties() {
