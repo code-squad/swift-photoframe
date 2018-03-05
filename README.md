@@ -201,3 +201,73 @@ self.firstDescription.textColor = UIColor.green
 * Present as Popover
     * Show simple pop-up on iPhone 
     * In a horizontally regular environment, the view controller appears in a popover.
+* [What are the differences between segues: “show”, “show detail”, “present modally”, “present as popover”?](https://stackoverflow.com/questions/26287247/what-are-the-differences-between-segues-show-show-detail-present-modally)
+
+### 5단계
+
+##### 요구사항
+* 사진액자 - Scene과 Segue 요구사항을 구현한 상태로 시작함
+* 스토리보드 구성 요소와 클래스 코드와 연결해서 동작을 확장함
+
+##### 프로그래밍 요구사항
+* 프로젝트에 새로운 ViewController 클래스를 추가한다. File > New... > File... 메뉴를 선택함. 다음과 같은 화면에서 Cocoa Touch Class를 선택함
+* 다음과 같이 UIViewController에서 상속받도록 입력하고, 원하는 클래스명을 입력함 (예시 YellowViewController)
+* 다음 화면에서는 프로젝트내 어떤 경로에 저장하며, 프로젝트 그룹/타깃에 저장할 것인지 선택함
+    * 하위 디렉토리가 있거나 원하는 하위 그룹이 있으면 변경할 수 있음
+    * 빌드하는 타깃이 여러 개인 경우, 복수로 선택할 수도 있음
+* 스토리보드에서 새로 추가한 Scene을 선택하고, 우측 유틸리티 영역 3번째 Identity 탭을 선택함
+    * Custom Class > Class 항목에 YellowViewController (자신이 생성한 클래스 이름)을 지정함
+    * 자동완성이 되야 클래스가 제대로 생성된 것! 자동완성이 안된다면 앞 단계를 다시 확인해서 UIViewController에서 상속 받도록 만들었는지 확인하고 클래스를 다시 만듦
+* 이제 스토리보드에서 YellowViewController 화면에 [닫기] 버튼을 추가함
+* Assistant Editor를 선택하고 [닫기] 버튼에 대한 IBAction 액션을 연결함
+    * 만약 방금 추가한 YellowViewController (혹은 자신이 생성한 클래스)가 우측에 자동으로 연결되지 않으면 Custom Class가 정상적으로 연결되지 않았거나
+    * 우측 Assistant 편집기 상단에 점프바(JumpBar)에 `Automatic` 이라고 선택되어 있는지 확인함. 다른 상태인 경우 `Automatic으로 변경함`
+
+<img src="./image/photoframe-add-cocoatouch.png" width="40%"></img>
+<img src="./image/photoframe-yellowVC.png" width="40%"></img>
+<img src="./image/photoframe-file-group.png" width="40%"></img>
+<img src="./image/photoframe-yellowVC-class.png" width="40%"></img>
+
+* IBAction 이름은 `closeButtonTouched` 로 지정하고 다음과 같이 코드를 작성함
+
+```swift
+@IBAction func closeButtonTouched(_ sender: Any) {
+    self.dismiss(animated: true, completion: nil)
+}
+```
+
+* 위와 동일하게 세 번째 추가한 화면에 대해 ViewController 클래스를 지정하고, [닫기]버튼을 추가하고, 액션을 연결해서 화면을 닫는 동작이 동작하도록 구현함
+* 뷰 컨트롤러 강의 자료에 있는 화면 관련 콜백 함수들에 모두 print(#file, #line, #function, #column) 코드를 추가함
+    * `viewWillAppear()`
+    * `viewDidAppear()`
+    * `viewWillDisappear()`
+    * `viewDidDisappear()`
+
+##### 실행결과
+* 번외
+    * [Trying to add 3rd tab to tabBarController](https://stackoverflow.com/questions/10054865/trying-to-add-3rd-tab-to-tabbarcontroller)
+
+<img src="./image/photoframe-result-5.png" width="70%"></img>
+
+##### View Life Cycle
+* [App Life Cycle 정리](https://github.com/yuaming/practice-swift/tree/master/AppLifeCycle)
+
+##### `dismiss` 와 뒤로 돌아가는 Segue 연결의 차이점
+* `Dismiss` deals with only single view-controller it will remove the current view-controller from memory.
+* `Unwind segue` can be used to navigate back through push, modal or popover segues, On top of that you can actually unwind through not only one but a series of push/modal/popover segues, e.g. "go back" multiple steps in your navigation hierarchy with a single unwind action.
+* [What's the difference between popping a view controller, dismissing a view controller, and using an unwind segue?](https://stackoverflow.com/questions/45318855/whats-the-difference-between-popping-a-view-controller-dismissing-a-view-contr)
+
+##### YellowViewController에서 Segue를 제거하고 다음 화면을 보여줄 때 코드로 보여주는 방법을 찾아보고 적용함
+* [UIStoryBoard](https://developer.apple.com/documentation/uikit/uistoryboard)
+* [Instantiate and Present a viewController in Swift](https://stackoverflow.com/questions/24035984/instantiate-and-present-a-viewcontroller-in-swift)
+* [Custom segue to a different storyboard](https://stackoverflow.com/questions/26189950/custom-segue-to-a-different-storyboard?rq=1)
+
+```swift
+@IBAction func nextPageButton(_ sender: UIButton) {
+    let blueViewController: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BlueViewController")
+    
+    self.present(blueViewController, animated: true, completion: ({
+        print("Segue 호출 확인:)")
+    }))
+}
+```
