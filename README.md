@@ -195,3 +195,43 @@ self.firstLabel.alpha = 0.5
 ---
 
 
+
+# PhotoFrame step5
+
+>  ViewController 프로그래밍
+스토리보드 구성 요소와 클래스 코드와 연결해서 동작을 확장한다.
+실행하고 새로운 화면을 캡처해서 readme.md 파일에 포함한다.
+
+- ***학습꺼리***
+### # 화면 전환이 이루어지는 사이에 뷰컨트롤러 라이프사이클이 어떻게 변화하는지 학습한다.
+화면 전환이 될 때 viewDidLoad(), viewWillAppear()이 호출되고,
+이후 닫기 버튼을 누르면 viewWillDisappear(), viewDidDisappear()이 호출된다.
+
+컨트롤러 상태 변화에 따른 API를 그림으로 보면 다음과 같다.
+
+<img src="/img/viewController_state.png" width="30%" height="30%">
+
+
+### # YellowViewController에서 Segue를 제거하고 다음 화면을 보여줄 때 코드로 보여주는 방법을 찾아보고 적용해본다.
+Segue를 제거하고, SkyBlueViewController를 만들어서 파란색 화면 Scene과 연결시켰다. 그리고 다음 버튼에 IBAction을 연결 시켜서 버튼을 눌렀을 때 다음 화면인 YellowViewController를 부르도록 만들었다.
+
+```swift
+class SkyBlueViewController: UIViewController {
+
+@IBAction func nextButtonTouched(_ sender: Any) {
+if let skyBlueView = self.storyboard?.instantiateViewController(withIdentifier: "YellowViewController") {
+self.present(skyBlueView, animated: true, completion: nil)
+}
+}
+```
+
+
+- ***실행 화면***
+
+<img src="/img/viewController1.png" width="30%" height="30%">  <img src="/img/viewController2.png" width="30%" height="30%">
+<img src="/img/viewController3.png" width="30%" height="30%">  <img src="/img/viewController4.png" width="30%" height="30%">
+
+---
+
+
+
