@@ -101,3 +101,64 @@ print(#file, #line, #function, #column)
 
 ---
 
+
+# PhotoFrame step3
+
+>  IBAction
+First Scene에 버튼(UIButton)을 추가하고 IBAction으로 연결한다.
+
+---
+
+- ***학습꺼리***
+### # 버튼에 IBAction을 추가할 때 이벤트(Event) 종류에는 어떤 것들이 있는지 학습한다.
+
+<img src="/img/IBAction_event.png" width="30%" height="30%">
+
+```
+- Did End On Exit: 키보드의 Return 키 눌렀을 때
+- Editing Changed: 내용이 변경되었을 때
+- Editing Did Begin: 포커스가 들어왔을 때
+- Editing Did End: 포커스가 나갔을 때
+- Primary Action Triggered
+- Touch Cancel: 다른 터치 이벤트를 취소
+- Touch Down: 버튼을 한 번 누를 때 이벤트
+- Touch Down Repeat: 버튼을 두 번 이상 누를 때 이벤트
+- Touch Drag Enter: 손가락이 컨트롤의 경계로 드래그
+- Touch Drag Exit: 컨트롤 내에서 손가락이 경계 밖으로 드래그
+- Touch Drag Inside: 컨트롤의 범위 내에서 손가락을 드래그
+- Touch Drag Outside: 손가락이 컨트롤의 바깥 쪽에서 드래그
+- Touch Up inside: 손가락이 컨트롤의 경계 안에 있을 때 손가락을 떼면 동작
+- Touch Up Outside: 손가락이 컨트롤의 경계 밖에 있을 때 손가락을 떼면 동작
+- Value Changed: 터치를 드래그하거나 다른 방법으로 조작하여 일련의 다른 값을 방출
+```
+[참고]
+
+https://developer.apple.com/documentation/uikit/uicontrolevents
+http://susemi99.tistory.com/984
+
+### # 버튼에 액션을 여러개 추가할 수 있을까?
+: 여러개 추가할 수는 있으나 제일 마지막 IBAction이 실행된다.
+```swift
+@IBAction func nextButtonTouched(_ sender: Any) {
+self.firstLabel.textColor = UIColor.blue
+self.firstLabel.backgroundColor = UIColor.yellow
+self.firstLabel.alpha = 0.5
+}
+
+@IBAction func prevButtonTouched(_ sender: Any) {
+self.firstLabel.textColor = UIColor.cyan
+self.firstLabel.backgroundColor = UIColor.darkGray
+self.firstLabel.alpha = 0.5
+}
+```
+
+### # 버튼이 여러일 때 하나의 액션에 추가할 수 있을까?
+: 하나의 액션에 여러개의 버튼을 추가할 수 있다.
+만들어둔 하나의 메소드에 여러번 접근할 수 있듯, 하나의 액션도 여러개의 버튼을 추가할 수 있는 것 같다.
+
+
+- ***실행 화면***
+
+<img src="/img/IBAction_before.png" width="30%" height="30%">  <img src="/img/IBAction_after.png" width="30%" height="30%">
+
+---
