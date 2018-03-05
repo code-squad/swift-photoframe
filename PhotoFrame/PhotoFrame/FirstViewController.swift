@@ -16,7 +16,7 @@ class FirstViewController: UIViewController {
         super.viewDidLoad()
         print(#file, #line, #function, #column)
         
-        loadPhotoLabelDefaultProperty()
+        loadPhotoLabelDefaultProperties()
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,7 +32,7 @@ class FirstViewController: UIViewController {
         loadPhotoLabelDefaultProperty()
     }
 
-    private func loadPhotoLabelDefaultProperty() {
+    private func loadPhotoLabelDefaultProperties() {
         self.photoLabel.textColor = UIColor.black
         self.photoLabel.font = UIFont.boldSystemFont(ofSize: 39)
         self.photoLabel.text = "AMING's Photoframe"
