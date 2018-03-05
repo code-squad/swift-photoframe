@@ -31,8 +31,8 @@ class FirstViewController: UIViewController {
     @IBAction func nextButtonTouchDown(_ sender: UIButton) {
         loadPhotoLabelDefaultProperty()
     }
-    
-    func loadPhotoLabelDefaultProperty() {
+
+    private func loadPhotoLabelDefaultProperty() {
         self.photoLabel.textColor = UIColor.black
         self.photoLabel.font = UIFont.boldSystemFont(ofSize: 39)
         self.photoLabel.text = "AMING's Photoframe"
