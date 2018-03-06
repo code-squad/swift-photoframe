@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8781CF77204E6A6200E4B0D0 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8781CF76204E6A6200E4B0D0 /* 1.jpg */; };
 		87B27AD0204D1D9100AB56DA /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B27ACF204D1D9100AB56DA /* BlueViewController.swift */; };
 		87B27AD2204D22E200AB56DA /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B27AD1204D22E200AB56DA /* ThirdViewController.swift */; };
 		87B27AD4204D272E00AB56DA /* PinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B27AD3204D272E00AB56DA /* PinkViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8781CF76204E6A6200E4B0D0 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		87B27ACF204D1D9100AB56DA /* BlueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueViewController.swift; sourceTree = "<group>"; };
 		87B27AD1204D22E200AB56DA /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		87B27AD3204D272E00AB56DA /* PinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinkViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8781CF75204E6A1000E4B0D0 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				8781CF76204E6A6200E4B0D0 /* 1.jpg */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		87DE5C71201EC6DF00C780BC = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +115,7 @@
 		87DE5C7C201EC6DF00C780BC /* PhotoFrame */ = {
 			isa = PBXGroup;
 			children = (
+				8781CF75204E6A1000E4B0D0 /* images */,
 				87DE5C7D201EC6DF00C780BC /* AppDelegate.swift */,
 				87DE5C7F201EC6DF00C780BC /* FirstViewController.swift */,
 				87B27ACF204D1D9100AB56DA /* BlueViewController.swift */,
@@ -245,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87DE5C8A201EC6DF00C780BC /* LaunchScreen.storyboard in Resources */,
+				8781CF77204E6A6200E4B0D0 /* 1.jpg in Resources */,
 				87DE5C87201EC6DF00C780BC /* Assets.xcassets in Resources */,
 				87DE5C85201EC6DF00C780BC /* Main.storyboard in Resources */,
 			);
