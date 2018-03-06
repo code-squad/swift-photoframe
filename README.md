@@ -470,7 +470,8 @@ private func loadImages() {
 }
 ```
 
-<img src="./image/photoframe-result-7.png" width="50%" />
+<img src="./image/photoframe-result-7.png" width="30%"></img>
+<img src="./image/photoframe-result-7-2.png" width="30%"></img>
 
 ##### UIImage, UIImageView 차이
 * `UIImage store data` from an image(i.e. data from a png file)
