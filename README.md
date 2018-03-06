@@ -62,7 +62,7 @@ class FirstViewController: UIViewController {
 * 사용자가 TabBar Interface를 선택하였을 때 TabBarController 객체에서 일어나는 상호작용을 Delegate에게 알려야 함
 * [UITabBarControllerDelegate](https://developer.apple.com/documentation/uikit/uitabbarcontrollerdelegate) 프로토콜에 준수해야 함
 * Delegate는 TabBar를 선택할 때 작업을 추가하거나 선택하지 못하게 제어할 수 있음. 그리고 Navigation Controller로 구성된 TabBar의 변화를 알 수 있음
-* UITabBarController는 UIViewController를 상속받았기 때문에 TabbarController는 [View](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621460-view) 속성으로 접근할 수 있는 View를 소유할 수 있음
+* UITabBarController는 UIViewController를 상속받았기 때문에 TabbarController는 [view](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621460-view) 속성으로 접근할 수 있는 View를 소유할 수 있음
 * TabBarController View는 TabBar View와 View 내용을 담는 컨테이너
 * TabBar View는 항목에 대한 선택을 제어할 수 있음
 * ToolBar View와 TabBar에 대한 항목은 변하지만, 그것을 관리하는 View는 변하지 않음
@@ -244,8 +244,7 @@ self.firstDescription.textColor = UIColor.green
     * `viewDidDisappear()`
 
 ##### 실행결과
-* 번외
-    * [Trying to add 3rd tab to tabBarController](https://stackoverflow.com/questions/10054865/trying-to-add-3rd-tab-to-tabbarcontroller)
+* [Trying to add 3rd tab to tabBarController](https://stackoverflow.com/questions/10054865/trying-to-add-3rd-tab-to-tabbarcontroller)
 
 <img src="./image/photoframe-result-5.png" width="70%"></img>
 
@@ -299,8 +298,134 @@ self.firstDescription.textColor = UIColor.green
 * 위와 동일하게 세 번째 추가한 화면에 [닫기]버튼도 코드를 수정함
 * 뷰 컨트롤러 콜백 함수들 동작도 동일한지 확인함
 
-##### 뷰컨트롤러 컨테이너 동작 
+##### 실행결과
+* SecondViewController를 실행할 때 왼쪽 이미지처럼 실행되지만, BlueViewController에서 NavigationController에서 pushViewController로 SecondViewController를 호출하면 오른쪽 이미지의 결과를 확인할 수 있음
+* [edgesForExtendedLayout](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621515-edgesforextendedlayout)
+```swift
+class BlueViewController: UIViewController {
+    
+    // ...
+    
+    @IBAction func closedButtonTouched(_ sender: UIButton) {        
+        self.navigationController?.popViewController(animated: true)
+        
+        let secondViewController: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SecondViewController")
 
-##### 내비게이션 컨트롤러가 있을 경우와 없을 경우 화면 전환 동작의 차이점, 화면들 포함관계
+        self.navigationController?.pushViewController(secondViewController, animated: true)
+    }
+}
+
+// NavigationController를 추가하니 Main.storyboard 에서 아래 코드가 추가된 것을 확인할 수 있음
+<extendedEdge key="edgesForExtendedLayout" top="YES"/>
+```
+<img src="./image/photoframe-result-6-2.png" width="40%"></img>
+<img src="./image/photoframe-result-6.png" width="40%"></img>
+
+<img src="./image/photoframe-result-6-3.png" width="50%"></img>
+
+##### 뷰컨트롤러 컨테이너 동작 
+* [Implementing a Container View Controller](https://developer.apple.com/library/content/featuredarticles/ViewControllerPGforiPhoneOS/ImplementingaContainerViewController.html)
+
+##### iOS 다양한 화면 전환 방법
+* View Controller의 View 위에 다른 View 교체하기
+    * 기존 View를 제거하고 새로운 View를 추가하거나, 기존 View를 숨기고 숨기고 있던 View를 보여줌
+    * View Controller에서 최소 두 개 이상의 View를 관리하기 때문에 좋은 방법이 아님
+* View Controller를 직접 호출하여 화면 전환하기
+    * 현재 View Controller에서 이동할 대상 View Controller를 직접 호출하여 화면을 표시함. 프레젠테이션 방식이라고 함
+
+    ```swift
+    @IBAction func nextPageButton(_ sender: UIButton) {
+        // self.storyboard도 참조 가능함
+        // if let uvc = self.storyboard?.instantiateViewControllerWithIdentifier("BlueViewController")
+
+        // 스토리보드가 여러 개이거나 특정 번들에서 스토리보드를 가져올 때 아래와 같은 코드를 통해서 가져올 수 있음
+        let blueViewController: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BlueViewController")
+        
+        self.present(blueViewController, animated: true, completion: ({
+            print("Segue 호출 확인:)")
+        }))
+    }
+
+    // BlueViewController 
+
+    @IBAction func closeTouchedButton(sender: UIButton) {
+        // 이전 화면으로 되돌아가기
+        self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+    }
+    ```
+ 
+* Navigation Controller를 사용하여 화면 전환하기
+    * Navigation Controller는 반드시 시작이 되는 View Controller를 가져야 하는데, 이를 `Root View Controller` 라고 함
+
+    ```swift
+    class ViewController : UIViewController {
+        // ...
+
+        @IBAction func nextPageButton(sender: UIButton) {
+            if let viewController = self.storyboard?.instantiateViewControllerWithIdentifier("SecondViewController") {
+                // 화면을 전환할 때 애니메이션 정의
+                viewController.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
+
+                // 화면을 전환함
+                self.navigationController?.pushViewController(viewController, animated: true) 
+            }
+        }
+    }
+
+    class SecondViewController : UIViewController {
+        // ...
+
+        @IBAction func prevPageButton(sender: UIButton) {
+            // 이전 화면으로 되돌아가기
+            self.navigationViewController?.popViewControllerAnimated(true)
+        }
+    }
+    ```
+
+* 화면 전환용 객체 Segueway를 사용하여 화면 전환하기
+    * 화면 전환과 뷰 컨트롤러의 연결을 관리하는 객체를 `Segueway 또는 Segue` 라고 함
+    * 화면과 화면의 연결을 위한 소스 코드 없이도 스토리보드 상에서 화면 전환 기능을 직접 구현할 수 있는 장점이 있음
+    * 출발점은 뷰 컨트롤러 자체가 될 수도 있고 버튼이나 테이블 셀 등의 컨트롤이 될 수도 있음. 출발점이 뷰 컨트롤러 자체인 경우를 Manual Segue, 컨트롤이 출발점인 경우를 Action Segue 또는 Trigger Segue라고 나누어 부르기도 함
+    * Manual Segue를 실행하려면 UIKit 프레임워크에 정의된 `performSegueWithIdentifier(_:sender:)` 사용함. 소스 코드에서 적절한 시점에 이 메서드를 호출하기만 하면 세그웨이가 실행되어 화면 전환이 이루어짐
+    * 반면 Action Segue는 버튼의 클릭/터치 이벤트가 세그 실행으로 자동 연결되므로 실행 메서드 없이 스토리보드에서 연결만 해도 화면 전환 기능을 구현할 수 있음
+    * Segueway를 통해 이동한 화면에서 원래 화면으로 돌아오기 위해서는 Exit 아이콘을 통해 `Unwind Segue` 기능을 구현하여 연결하면 됨
+
+    ```swift
+    // Manual Segueway 예제 
+    class ViewController : UIViewController {
+        // ...
+    
+        @IBAction func wind(sender: AnyObject) {
+            // 세그웨이를 실행함
+            performSegueWithIdentifier("ManualWind", sender: self)
+        }
+    
+        // Unwind Segue가 실행되면서 이 메서드를 호출함
+        @IBAction func unwindToMainViewController(segue : UIStoryboardSegue) { }
+    }
+
+    // Action Segue, Manual Segue 호출하기 전 특정 메세드를 호출하는 것을 전처리 메서드라고 함
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // ...
+    } 
+
+    // Segueway가 실행되기 전 호출되는 전처리 메서드에서 화면 이동 전 값을 저장하거나 전달해야 하는 경우에 많이 사용함
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "segue2") {
+            // ...
+        } else if (segue.identifier == "segue3") {
+            // ...
+        } else {
+            // ...
+        }
+    } 
+    ```
 
 ##### 내비게이션 컨트롤러 관련 메서드가 왜 `push, pop` 일까?
+* [Navigation Controllers](https://developer.apple.com/library/content/documentation/WindowsViews/Conceptual/ViewControllerCatalog/Chapters/NavigationControllers.html)
+* Figure 1-3 shows the relevant relationships between the navigation controller and the `objects on the navigation stack`. (Note that the top view controller and the visible view controller are are not necessarily the same. For example, if you present a view controller modally, the value of the `visibleViewController` property changes to reflect the modal view controller that was presented, but the `topViewController` property does not change.)
+* 실행결과의 오른쪽 이미지의 결과가 나온 이유는 아래 이미지를 보면 왜 그런지 이해할 수 있었음
+
+<img src="./image/navigation-interface.png" width="50%"></img>
+
+<img src="./image/navigation-stack.png" width="50%"></img>
