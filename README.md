@@ -455,6 +455,15 @@ self.photoImageView.image = UIImage(named: "01.jpg")
 
 ##### 실행결과
 
+```swift
+private func loadImages() {
+    self.photoImage.image = UIImage(named: "1.jpg")
+    self.photoImage.contentMode = .scaleAspectFit
+}
+```
+
+<img src="./image/photoframe-result-7.png" width="50%" />
+
 ##### UIImage, UIImageView 차이
 * `UIImage store data` from an image(i.e. data from a png file)
 * `UIImageView is a control that display UIImage data`
