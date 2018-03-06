@@ -235,3 +235,51 @@ self.present(skyBlueView, animated: true, completion: nil)
 
 
 
+# PhotoFrame step6
+
+>  Container ViewController
+뷰컨트롤러 컨테이너 강의 슬라이드를 읽고 학습한다.
+내비게이션 컨트롤러(Navigation Controller)를 Embed 시켜서 동작하도록 개선한다.
+실행하고 새로운 화면을 캡처해서 readme.md 파일에 포함한다.
+
+- ***학습꺼리***
+### # 뷰컨트롤러 컨테이너 동작을 이해한다.
+
+### # 뷰컨트롤러 컨테이너는 또 어떤 클래스가 있는지 찾아보고 학습한다.
+```
+- 네비게이션 컨트롤러 (UINavigationController)
+- 탭 바 컨트롤러 (UITabBarController)
+- 테이블 뷰 컨트롤러 (UITableViewController)
+- 페이지 뷰 컨트롤러 (UIPageViewController)
+- 스필릿뷰 컨트롤러 (UISplitViewController)
+- 팝오버 컨트롤러 (UIPopoverController)
+```
+
+### # 내비게이션 컨트롤러가 있을 경우와 없을 경우 화면 전환 동작이 어떻게 다른지, 화면들 포함관계가 있는지 학습한다.
+내비게이션 컨트롤러가 있을 경우 우측에서 화면이 들어오면서 전환되고, 없을 경우 하단에서 화면이 들어오면서 전환된다.
+내비게이션 컨트롤러는 root 뷰 컨트롤러와 연결되어 있고, 자식 뷰 컨트롤러들이 추가되는 형태로 구성되었다.
+
+### # 내비게이션 컨트롤러 관련 메서드가 왜 push / pop 인지 학습한다.
+내비게이션 컨트롤러의 자식 뷰 컨트롤러는 stack처럼 관리된다. 따라서 관련 메서드 네이밍도 push / pop으로 되어있다.
+```swift
+@IBAction func nextButtonTouched(_ sender: Any) {
+if let skyBlueView = self.storyboard?.instantiateViewController(withIdentifier: "YellowViewController") {
+self.navigationController?.pushViewController(skyBlueView, animated: true)
+}
+}
+```
+```swift
+@IBAction func closeButtonTouched(_ sender: Any) {
+print("close button")
+self.navigationController?.popViewController(animated: true)
+}
+```
+
+
+- ***실행 화면***
+
+<img src="/img/ContainerViewController1.png" width="30%" height="30%">  <img src="/img/ContainerViewController2.png" width="30%" height="30%">
+<img src="/img/ContainerViewController3.png" width="30%" height="30%">  <img src="/img/ContainerViewController4.png" width="30%" height="30%">
+
+---
+
