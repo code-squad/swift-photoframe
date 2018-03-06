@@ -426,6 +426,46 @@ class BlueViewController: UIViewController {
 * Figure 1-3 shows the relevant relationships between the navigation controller and the `objects on the navigation stack`. (Note that the top view controller and the visible view controller are are not necessarily the same. For example, if you present a view controller modally, the value of the `visibleViewController` property changes to reflect the modal view controller that was presented, but the `topViewController` property does not change.)
 * 실행결과의 오른쪽 이미지의 결과가 나온 이유는 아래 이미지를 보면 왜 그런지 이해할 수 있었음
 
-<img src="./image/navigation-interface.png" width="50%"></img>
+<img src="./image/navigation-interface.png" width="45%"></img>
+<img src="./image/navigation-stack.png" width="45%"></img>
 
-<img src="./image/navigation-stack.png" width="50%"></img>
+### 7단계
+
+##### 요구사항
+* 사진액자 - Container ViewController 요구사항을 구현한 상태로 시작함
+* TabBar 두 번째 화면 (Second Scene) 디자인을 변경하고 액자 앱을 동작을 구현함
+
+##### 프로그래밍 요구사항
+* 스토리보드에서 Second Scene을 선택하고, 다음과 같이 보이도록 화면을 디자인함
+    * 기존에 있던 두 번째 레이블은 삭제함
+    * UIImageView를 화면 상단 중앙에 240 x 240 크기로 배치하고, `photoImageView` 아웃렛으로 연결함
+    * 화면 하단에 [다음] 버튼을 추가하고 `nextImageButtonTouched` 액션으로 연결함
+
+<img src="./image/photoframe-second-scene.png" width="50%"></img>
+
+* 압축을 풀고 이미지 파일들을 Xcode 프로젝트로 드래그해서 추가함
+    * 리소스 파일을 추가할 때는 Copy 옵션을 꼭 지정하고 Target을 체크되어 있는지 확인함
+* [다음]버튼에 연결된 `nextImageButtonTouched` 에서는 01부터 22까지 랜덤으로 숫자를 선택해서 해당하는 이미지 파일을 photoImageView에 표시함. 이미지뷰에 표시하는 방법은 다음과 같음
+
+```swift
+self.photoImageView.image = UIImage(named: "01.jpg")
+```
+
+* 이미지뷰의 속성을 조정해서 이미지가 비율에 맞춰서 표시되도록 조정함
+
+##### 실행결과
+
+##### UIImage, UIImageView 차이
+* `UIImage store data` from an image(i.e. data from a png file)
+* `UIImageView is a control that display UIImage data`
+
+##### [UIImage](https://developer.apple.com/documentation/uikit/uiimage)
+* Loading and Caching Images
+    * `init?(named: String)`
+
+##### [UIImageView](https://developer.apple.com/documentation/uikit/uiimageview)
+* Animating a Sequence of Images
+    * `func startAnimating()`
+    * `func stopAnimating()`
+    * `var isAnimating: Bool`
+    * `var animationDuration: TimeInterval`
