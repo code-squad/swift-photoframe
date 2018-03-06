@@ -26,27 +26,26 @@ class FirstViewController: UIViewController {
 <img src="./image/console-view.png" width="70%"></img>
 
 ##### [View](https://developer.apple.com/library/content/documentation/WindowsViews/Conceptual/ViewPG_iPhoneOS/CreatingViews/CreatingViews.html)
-
-> View objects are the main way your application interacts with the user, they have many responsibilities
+* View objects are the main way your application interacts with the user, they have many responsibilities
 
 ##### [View Controllers](https://developer.apple.com/documentation/uikit/view_controllers)
 * View를 제어하는 Controller 객체
 * _View의 라이프 사이클을 관리함_
 * [View Controller Programming Guide for iOS](https://developer.apple.com/library/content/featuredarticles/ViewControllerPGforiPhoneOS/index.html#//apple_ref/doc/uid/TP40007457-CH2-SW1)
 
-<img src="./image/relationship-between-a-view-controller-and-its-views.png"></img>
+<img src="./image/relationship-between-a-view-controller-and-its-views.png" width="70%"></img>
 
 ##### [UITabBar](https://developer.apple.com/documentation/uikit/uitabbar)
 * 일반적으로 [UITabBarController](https://developer.apple.com/documentation/uikit/uitabbarcontroller)와 함께 사용하지만, 독립적인 컨트롤 형태로도 사용할 수 있음
 * 하단에 있으며 [UITabBarItem](https://developer.apple.com/documentation/uikit/uitabbaritem)객체를 보여줌
-* UITabbar는 Interface Builder, 생성자, [setItems](https://developer.apple.com/documentation/uikit/uitabbar/1623455-setitems)를 통해 설정할 수 있지만 _UITabBarController는 TabBar에 제공하는 객체를 개발자가 직접 만들어야 함_
+* UITabBar는 Interface Builder, 생성자, [setItems](https://developer.apple.com/documentation/uikit/uitabbar/1623455-setitems)를 통해 설정할 수 있지만 _UITabBarController는 TabBar에 제공하는 객체를 개발자가 직접 만들어야 함_
 * [UIToolBar](https://developer.apple.com/documentation/uikit/uitoolbar)와 비슷하지만, 목적이 다름
     * UITabbar
         * 화면 전환 시 사용
     * UIToolbar 
         * 하나의 화면에서 탭 메뉴 사용
-* Tabbar는 선택 항목, 사용자 지정 항목에 대해 Delegate 객체에 알려야 함
-* Tabbar를 만들 때 Tabbar 항목의 선택, 추가, 삭제, 정렬에 대한 정보를 Delegate([UITabBarDelegate](https://developer.apple.com/documentation/uikit/uitabbardelegate)) 객체에 알려야 함
+* TabBar는 선택 항목, 사용자 지정 항목에 대해 Delegate 객체에 알려야 함
+* TabBar를 만들 때 TabBar 항목의 선택, 추가, 삭제, 정렬에 대한 정보를 Delegate([UITabBarDelegate](https://developer.apple.com/documentation/uikit/uitabbardelegate)) 객체에 알려야 함
 
 ##### [UITabBarController](https://developer.apple.com/documentation/uikit/uitabbarcontroller)
 * 보이는 화면과 선택된 탭 관계는 일반적으로 AS-IS 관계지만, subclass일 수도 있음
@@ -55,7 +54,7 @@ class FirstViewController: UIViewController {
 * TabBar Interface는 서로 다른 유형의 화면을 보여줌
     * 아이폰의 시계 앱에서 하단 메뉴를 TabBar Interface로 이용하여 만듦
 
-<img src="./image/clock-app.png"></img>
+<img src="./image/clock-app.png" width="70%"></img>
 
 * TabBarController에 직접 접근하면 안 됨. [viewControllers](https://developer.apple.com/documentation/uikit/uitabbarcontroller/1621185-viewcontrollers) 프로퍼티를 이용해야 함
 * 개발자가 지정한 순서대로 화면에 나타나며 [selectedViewController](https://developer.apple.com/documentation/uikit/uitabbarcontroller/1621172-selectedviewcontroller) 프로퍼티를 이용하여 먼저 보여줄 화면을 정할 수 있음
@@ -69,7 +68,7 @@ class FirstViewController: UIViewController {
 * 현재 선택된 Tab의 View Controller만 반영하여 View를 바꿈
 * Navigation Controller와 Custom View Controller는 Tab의 RootViewController로 사용할 수 있음
 
-<img src="./image/the-primary-views-of-a-tab-bar-controller.png"></img>
+<img src="./image/the-primary-views-of-a-tab-bar-controller.png" width="70%"></img>
 
 ### 2단계
 
@@ -106,13 +105,6 @@ self.photoLabel.font = UIFont.boldSystemFont(ofSize: 40)
 self.firstDescription.text = "AMING의 사진액자입니다 :)"
 self.firstDescription.textColor = UIColor.green
 ```
-##### [IBOutlet](https://developer.apple.com/documentation/appkit/constants/interface_builder_constants/iboutlet)
-* `IB- (Interface Builder)`
-* 앱 코드에서 스토리 보드 객체로 연결함
-* [Interface Builder Constants](https://developer.apple.com/documentation/appkit/constants/interface_builder_constants?language=objc)
-* [IBOutlet](https://soooprmx.com/archives/5123)
-
-> Type qualifier used by Interface Builder to expose a symbol as a connection point for sending messages from app code to a user interface element. Used immediately before an object type in a property or instance variable declaration. 
 
 ### 3단계
 
@@ -145,13 +137,20 @@ self.firstDescription.textColor = UIColor.green
     self.photoLabel.backgroundColor = UIColor.black
 }
 ```
+##### [IBOutlet](https://developer.apple.com/documentation/appkit/constants/interface_builder_constants/iboutlet)
+* `IB- (Interface Builder)`
+* 앱 코드에서 스토리 보드 객체로 연결함
+* [Interface Builder Constants](https://developer.apple.com/documentation/appkit/constants/interface_builder_constants?language=objc)
+* [IBOutlet](https://soooprmx.com/archives/5123)
+
+> Type qualifier used by Interface Builder to expose a symbol as a connection point for sending messages from app code to a user interface element. Used immediately before an object type in a property or instance variable declaration. 
 
 ##### IBAction, IBOutlet 연결구조
 * ViewController가 제어하려는 객체는 ViewController가 프로퍼티 등으로 지정하여 알고 있어야 함. Interface Builder 객체를 ViewController와 연결하기 위해서 해당 객체를 IBOutlet으로 연결함
 * UI 요소는 ViewController에게 액션 메시지를 전달함. 사용자 동작에 대해 액션을 수행할 수 있음. 이 때 IBAction으로 연결함
 * [ViewController Outlet, Action](https://soooprmx.com/archives/4486)
 
-<img src="./image/photoframe-target-action.png"></img>
+<img src="./image/photoframe-target-action.png" width="70%"></img>
 
 ##### [UIControlEvents](https://developer.apple.com/documentation/uikit/uicontrolevents)
 * [How to get event from IBAction method?](https://stackoverflow.com/questions/9344378/how-to-get-event-from-ibaction-method)
