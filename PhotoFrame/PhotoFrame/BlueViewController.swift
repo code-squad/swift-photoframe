@@ -21,7 +21,18 @@ class BlueViewController: UIViewController {
     }
     
     @IBAction func closedButtonTouched(_ sender: UIButton) {
-        print(#file, #line, #function, #column)
-        self.dismiss(animated: true, completion: nil)
+//        print(#file, #line, #function, #column)
+//        self.dismiss(animated: true, completion: nil)
+        
+        self.navigationController?.popViewController(animated: true)
+        
+//        let fisrtViewController: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FisrtViewController")
+        
+        let secondViewController: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SecondViewController")
+
+        
+        self.navigationController?.pushViewController(secondViewController, animated: true)
+        
+//        self.navigationController?.popViewController(animated: true)
     }
 }

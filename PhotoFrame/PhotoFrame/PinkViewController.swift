@@ -20,11 +20,11 @@ class PinkViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func nextPageButton(_ sender: UIButton) {
-        let blueViewController: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BlueViewController")
-        
-        self.present(blueViewController, animated: true, completion: ({
-            print("Segue 호출 확인:)")
-        }))
-    }
+//    @IBAction func nextPageButton(_ sender: UIButton) {
+//        let blueViewController: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BlueViewController")
+//        
+//        self.present(blueViewController, animated: true, completion: ({
+//            print("Segue 호출 확인:)")
+//        }))
+//    }
 }
