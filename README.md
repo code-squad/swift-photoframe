@@ -23,7 +23,7 @@ class FirstViewController: UIViewController {
 }
 ```
 
-<img src="./image/console-view.png"></img>
+<img src="./image/console-view.png" width="70%"></img>
 
 ##### [View](https://developer.apple.com/library/content/documentation/WindowsViews/Conceptual/ViewPG_iPhoneOS/CreatingViews/CreatingViews.html)
 
@@ -81,11 +81,11 @@ class FirstViewController: UIViewController {
 * Xcode 프로젝트 내비게이터에서 Main.storyboard 파일을 선택하고 First Scene 에 있는 'First View' 레이블(Label)을 선택하고 Assistant Editor 모드로 변경함
 * 레이블을 선택하고 `Control + 드래그` 해서 ViewController 코드에 IBOutlet으로 연결함
 
-<img src="./image/photoframe-iboutlet-1.png"></img>
+<img src="./image/photoframe-iboutlet-1.png" width="50%"></img>
 
 * Outlet 이름으로 photoLabel을 입력함
 
-<img src="./image/photoframe-iboutlet-2.png"></img>
+<img src="./image/photoframe-iboutlet-2.png" width="50%"></img>
 
 * ViewController 클래스 viewDidLoad() 함수에서 위에 추가한 아웃렛 변수에 값을 변경하고 다시 실행함
 
@@ -125,15 +125,15 @@ self.firstDescription.textColor = UIColor.green
     * 우측 유틸리티 영역 하단 3번째 탭 - 객체 라이브러리(Object Library)에서 Button 을 찾아서 View로 드래그함
     * 추가한 버튼을 선택하고 우측 유틸리티 영역 상단 4번째 탭 - 속성(Attributes)에서 Title을 다음으로 변경함
 
-<img src="./image/photoframe-add-button-1.png"></img>
+<img src="./image/photoframe-add-button-1.png" width="50%"></img>
 
 * 버튼을 선택하고 `Control + 드래그` 해서 ViewController 코드에 `IBAction으로 연결함`
 
-<img src="./image/photoframe-ibaction-2.png"></img>
+<img src="./image/photoframe-ibaction-2.png" width="50%"></img>
 
 * 다음과 팝업에서 Connection 항목에서 IBOutlet 대신 IBAction 으로 변경함
 
-<img src="./image/photoframe-ibaction-popup-3.png"></img>
+<img src="./image/photoframe-ibaction-popup-3.png" width="50%"></img>
 
 * 액션 이름을 nextButtonTouched으로 지정함
 
@@ -161,7 +161,7 @@ self.firstDescription.textColor = UIColor.green
 
 ##### IBAction에서 여러가지 이벤트 설정할 수 있음
 
-<img src="./image/multiple-event.png" width="50%"></img>
+<img src="./image/multiple-event.png" width="40%"></img>
 
 ### 4단계
 
