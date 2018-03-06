@@ -420,6 +420,14 @@ class BlueViewController: UIViewController {
         }
     } 
     ```
+* JK's Feedbacks
+    * UIButton에 IBAction 과 Segue를 둘 다 연결하면 어떻게 되나요? 둘 중에 어느게 우선일까요? 둘 다 연결해서 사용하는 경우가 있을까요?
+    * 아래 이미지는 IBAction과 Segue 연결했을 때 결과임. IBAction이 우선순위가 높은 것을 확인할 수 있음.
+    * [Segues and Nevigation](https://digitalleaves.com/define-segues-programmatically/)
+    * [Give IBAction priority instead of segue](https://stackoverflow.com/questions/15555384/give-ibaction-priority-instead-of-segue)
+    * `IBAction이 실행되고 performSegueWithIdentifier과 SegueID를 찾아가기 때문에 IBAction의 실행 순위가 Segue보다 높으며 실행 순서를 바꿀 수 없기 때문에 각각 사용하는 것이 좋은 것 같다고 대답함`
+
+<img src="./image/photoframe-result-6-4.png" width="50%"></img>
 
 ##### 내비게이션 컨트롤러 관련 메서드가 왜 `push, pop` 일까?
 * [Navigation Controllers](https://developer.apple.com/library/content/documentation/WindowsViews/Conceptual/ViewControllerCatalog/Chapters/NavigationControllers.html)
