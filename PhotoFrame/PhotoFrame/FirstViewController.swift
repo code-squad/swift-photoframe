@@ -22,18 +22,10 @@ class FirstViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()   
     }
-    
-    @IBAction func nextButtonTouched(_ sender: UIButton) {
-        self.photoLabel.textColor = UIColor.white
-        self.photoLabel.backgroundColor = UIColor.black
-    }
-    
-    @IBAction func nextButtonTouchDown(_ sender: UIButton) {
-        loadPhotoLabelDefaultProperties()
-    }
 
     private func loadPhotoLabelDefaultProperties() {
-        self.photoLabel.textColor = UIColor.black
+        self.photoLabel.textColor = UIColor.white
+        self.photoLabel.backgroundColor = UIColor.black
         self.photoLabel.font = UIFont.boldSystemFont(ofSize: 39)
         self.photoLabel.text = "AMING's Photoframe"
         self.photoLabel.textAlignment = .center
