@@ -19,7 +19,8 @@ class SecondViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
-
+    @IBAction func nextImageButtonTouched(_ sender: Any) {
+    }
     
 }
 
