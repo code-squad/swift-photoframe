@@ -250,16 +250,6 @@ self.firstDescription.textColor = UIColor.green
 ##### View Life Cycle
 * [App Life Cycle 정리](https://github.com/yuaming/practice-swift/tree/master/AppLifeCycle)
 
-##### `dismiss` 와 뒤로 돌아가는 Segue 연결의 차이점
-* `Dismiss` deals with only single view-controller it will remove the current view-controller from memory.
-* `Unwind segue` can be used to navigate back through push, modal or popover segues, On top of that you can actually unwind through not only one but a series of push/modal/popover segues, e.g. "go back" multiple steps in your navigation hierarchy with a single unwind action.
-* [What's the difference between popping a view controller, dismissing a view controller, and using an unwind segue?](https://stackoverflow.com/questions/45318855/whats-the-difference-between-popping-a-view-controller-dismissing-a-view-contr)
-* `SecondViewController().dismiss(animated: true, completion: nil)`를 BlueViewController에서 호출할 때 반응이 없음
-    * [dismiss(animated:completion:)](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621505-dismiss) 에서 아래 내용을 확인함
-    > If you present several view controllers in succession, thus building a stack of presented view controllers, calling this method on a view controller lower in the stack dismisses its immediate child view controller and all view controllers above that child on the stack.     
-    * JK's feedbacks 
-    * 포토프레임은 되는것만 확인하기 보다 이런저런 상황에서 자기 확신을 가질 수 있도록 이상하다? 싶으면 확인해보는게 중요합니다. 그래야 다른 경우에 실수를 안하게 됩니다. 현재 `presenting 되어있는 VC에서 self.dismiss() 하는 것과 이전에 presentedVC에서 띄워놓은 VC를 dismiss 하는 것과 차이`를 꼭 알고 넘어가세요.
-
 ##### YellowViewController에서 Segue를 제거하고 다음 화면을 보여줄 때 코드로 보여주는 방법을 찾아보고 적용함
 * [UIStoryBoard](https://developer.apple.com/documentation/uikit/uistoryboard)
 * [Instantiate and Present a viewController in Swift](https://stackoverflow.com/questions/24035984/instantiate-and-present-a-viewcontroller-in-swift)
@@ -322,8 +312,10 @@ class BlueViewController: UIViewController {
 
 <img src="./image/photoframe-result-6-3.png" width="50%"></img>
 
-##### 뷰컨트롤러 컨테이너 동작 
-* [Implementing a Container View Controller](https://developer.apple.com/library/content/featuredarticles/ViewControllerPGforiPhoneOS/ImplementingaContainerViewController.html)
+##### [Implementing a Container View Controller](https://developer.apple.com/library/content/featuredarticles/ViewControllerPGforiPhoneOS/ImplementingaContainerViewController.html)
+* 컨테이너 뷰 컨트롤러는 한 개의 View와 여러 개의 Child View Controller 를 다룸
+* View를 재사용할 수 있고, Child View 들은 Child View Controller 들을 관리하므로, 뷰컨트롤러에 의존할 수 있는 것이 장점임
+* UIKit에 미리 만들어져 있는 컨테이너 뷰컨트롤러의 종류로는 UINavigationController, UISplitViewController(아이패드 한정), UITabBarController 가 있음
 
 ##### iOS 다양한 화면 전환 방법
 * View Controller의 View 위에 다른 View 교체하기
@@ -419,14 +411,22 @@ class BlueViewController: UIViewController {
         }
     } 
     ```
-* JK's Feedbacks
-    * UIButton에 IBAction 과 Segue를 둘 다 연결하면 어떻게 되나요? 둘 중에 어느게 우선일까요? 둘 다 연결해서 사용하는 경우가 있을까요?
-    * 아래 이미지는 IBAction과 Segue 연결했을 때 결과임. IBAction이 우선순위가 높은 것을 확인할 수 있음.
-    * [Segues and Nevigation](https://digitalleaves.com/define-segues-programmatically/)
-    * [Give IBAction priority instead of segue](https://stackoverflow.com/questions/15555384/give-ibaction-priority-instead-of-segue)
-    * `IBAction이 실행되고 performSegueWithIdentifier과 SegueID를 찾아가기 때문에 IBAction의 실행 순위가 Segue보다 높으며 실행 순서를 바꿀 수 없기 때문에 각각 사용하는 것이 좋은 것 같다고 대답함`
-
-<img src="./image/photoframe-result-6-4.png" width="50%"></img>
+* `dismiss` 와 `뒤로 돌아가는 Segue 연결` 차이점
+    * `Dismiss` deals with only single view-controller it will remove the current view-controller from memory.
+    * `Unwind segue` can be used to navigate back through push, modal or popover segues, On top of that you can actually unwind through not only one but a series of push/modal/popover segues, e.g. "go back" multiple steps in your navigation hierarchy with a single unwind action.
+    * [What's the difference between popping a view controller, dismissing a view controller, and using an unwind segue?](https://stackoverflow.com/questions/45318855/whats-the-difference-between-popping-a-view-controller-dismissing-a-view-contr)
+    * `SecondViewController().dismiss(animated: true, completion: nil)`를 BlueViewController에서 호출할 때 반응이 없음
+        * [dismiss(animated:completion:)](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621505-dismiss) 에서 아래 내용을 확인함
+        > If you present several view controllers in succession, thus building a stack of presented view controllers, calling this method on a view controller lower in the stack dismisses its immediate child view controller and all view controllers above that child on the stack.     
+        * JK's feedbacks 
+        * 포토프레임은 되는것만 확인하기 보다 이런저런 상황에서 자기 확신을 가질 수 있도록 이상하다? 싶으면 확인해보는게 중요합니다. 그래야 다른 경우에 실수를 안하게 됩니다. 현재 `presenting 되어있는 VC에서 self.dismiss() 하는 것과 이전에 presentedVC에서 띄워놓은 VC를 dismiss 하는 것과 차이`를 꼭 알고 넘어가세요.
+* UIButton의 IBAction과 Segue 연결의 우선순위
+    * IBAction이 먼저 실행되는 것을 확인할 수 있음 
+        * JK's Feedbacks
+            * UIButton에 IBAction 과 Segue를 둘 다 연결하면 어떻게 되나요? 둘 중에 어느게 우선일까요? 둘 다 연결해서 사용하는 경우가 있을까요?
+            * _IBAction이 실행되고 performSegueWithIdentifier과 SegueID를 찾아가기 때문에 IBAction의 실행 순위가 Segue보다 높으며 실행 순서를 바꿀 수 없기 때문에 각각 사용하는 것이 좋음_
+            * [Segues and Nevigation](https://digitalleaves.com/define-segues-programmatically/)
+            * [Give IBAction priority instead of segue](https://stackoverflow.com/questions/15555384/give-ibaction-priority-instead-of-segue)
 
 ##### 내비게이션 컨트롤러 관련 메서드가 왜 `push, pop` 일까?
 * [Navigation Controllers](https://developer.apple.com/library/content/documentation/WindowsViews/Conceptual/ViewControllerCatalog/Chapters/NavigationControllers.html)
@@ -493,7 +493,7 @@ private func loadImages() {
 * 화면 요소들을 겹쳐서 디자인 하는 경우 z축으로 위-아래를 구분해서 학습함
 * UIImagePickerController처럼 이미 만들어놓은 시스템 컨트롤러들에 대해 학습함
     * [View Controllers](https://nextstep.camp/courses/-Kv6PmBDDnfeJOzqThWG/-Kv6V6bhwNBghOJqjGzy/lessons/-KvG09xWMcb4xPZt4xKc)
-* 델리게이트(Delegate)와 프로토콜(Protocol) 상관 관계에 대해 학습함
+* 델리게이트(Delegate)와 프로토콜(Protocol)상관 관계에 대해 학습함
 * 이미지 테두리 액자 화면을 추가함
 * 사진 앨범에서 사진을 가져와서 보여줄 수 있도록 개선함
 
@@ -501,7 +501,7 @@ private func loadImages() {
 * 스토리보드에서 Second Scene을 선택하고, 다음과 같이 화면을 개선함
     * 새로운 UIImageView를 추가하고, 기존 photoImageView보다 아래에 배치함
 
-<img src="./image/photoframe-second-scene-border.png/" width="70%"></img>
+<img src="./image/photoframe-second-scene-border.png" width="70%"></img>
 
 * 액자 이미지를 추가함
     * 리소스 파일을 추가할 때는 Copy 옵션을 꼭 지정하고 Target을 체크되어 있는지 확인함
@@ -515,3 +515,78 @@ private func loadImages() {
     * 권한 설정이 필요하면 Info.plist에 추가함
     * 선택한 사진을 받기 위해서 구현해야 하는 메서드는 어떤게 있는지 찾아 구현함
 
+##### 실행결과
+
+<img src="./image/photoframe-result-8.png" width="40%"></img>
+
+##### 에러 처리
+* 시뮬레이터에서 포토 라이브러리의 사진을 선택할 때 `Error Domain=PlugInKit Code=13 "query cancelled" UserInfo={NSLocalizedDescription=query cancelled}` 에러 메세지가 출력되는 것을 확인할 수 있음
+    * [PhotoPicker discovery error: Error Domain=PlugInKit Code=13](https://exceptionshub.com/photopicker-discovery-error-error-domainpluginkit-code13.html)에 해결책이 몇 가지 있지만 해결이 되지 않음
+    * 실제 폰으로 테스트함
+* UIViewController 초기화 하는 방법
+
+<img src="./image/require-init.png" width="70%"></img>
+
+```swift
+private var imagePicker: UIImagePickerController
+
+require init?(coder aDecoder: NSCoder) {
+    self.imagePicker = UIImagePickerController()
+    super.init(coder: aDecoder)
+}
+```
+
+```swift
+// 정의
+class ViewController: UIViewController {
+
+    var tap: UITapGestureRecognizer?
+
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)   {
+        print("init nibName style")
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        tap = UITapGestureRecognizer(target: self, action: Selector("handleTap:"))
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        print("init coder style")
+        super.init(coder: aDecoder)
+        tap = UITapGestureRecognizer(target: self, action: Selector("handleTap:"))
+    }
+
+    // ...
+}
+```
+
+##### [UIImagePickerController](https://developer.apple.com/documentation/uikit/uiimagepickercontroller), [UIImagePickerControllerDelegate](https://developer.apple.com/documentation/uikit/uiimagepickercontrollerdelegate)
+* [Taking Pictures and Movies](https://developer.apple.com/library/content/documentation/AudioVideo/Conceptual/CameraAndPhotoLib_TopicsForIOS/Articles/TakingPicturesAndMovies.html#//apple_ref/doc/uid/TP40010406)
+* Camera, Photo Library 가져오는 방법은 `UIImagePickerController Overview 참고`
+* 이벤트 처리 방식에 [`Delegates and Data Sources`](https://developer.apple.com/library/content/documentation/General/Conceptual/CocoaEncyclopedia/DelegatesandDataSources/DelegatesandDataSources.html) 과 [`Target-Action`](https://developer.apple.com/library/content/documentation/General/Conceptual/CocoaEncyclopedia/Target-Action/Target-Action.html#//apple_ref/doc/uid/TP40010810-CH12-SW1) 두 가지 방식이 있음
+    * The programming mechanism of delegation gives objects a chance to coordinate their appearance and state with changes occurring elsewhere in a program, changes usually brought about by user actions. More importantly, delegation makes it possible for one object to alter the behavior of another object without the need to inherit from it. The delegate is almost always one of your custom objects, and by definition it incorporates application-specific logic that the generic and delegating object cannot possibly know itself. 
+    * Delegate 패턴을 쓰지 않고 객체 자체를 넘겨주거나 상속하게 되면 로직과 관련되지 않는 부분까지 신경써야 하지만, Delegate 패턴로 Protocol을 사용하면 위임받은 객체가 위임받은 부분 만 구현하기 때문에 관리 포인트가 줄어듬
+    * 문서에서 *required* 표시된 부분은 필수로 구현해야 함
+
+##### Delegate, DataSource 를 연결하는 방법은 2가지 존재
+* 스토리 보드에서 연결하는 방법
+    * `Control + 드래그` 하여 View Controller을 선택함 
+
+<img src="https://github.com/yuaming/practice-swift/raw/master/image/delegate-view-controller-2.png" width="40%"></img>
+<img src="https://github.com/yuaming/practice-swift/raw/master/image/delegate-view-controller-3.png" width="40%"></img>
+    
+* 코드로 연결하는 방법
+
+```swift
+extension SecondViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    // ...
+    
+    private func openPhotoLibrary() {
+        let imagePicker: UIImagePickerController = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = .photoLibrary
+        
+        self.present(imagePicker, animated: true)
+    }
+    
+    // ...
+}
+```
