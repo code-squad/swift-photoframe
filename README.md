@@ -121,11 +121,8 @@ self.firstDescription.textColor = UIColor.green
 * 액션 이름을 `nextButtonTouched` 으로 지정함
 
 <img src="./image/photoframe-add-button-1.png" width="30%"></img>
-
 <img src="./image/photoframe-ibaction-2.png" width="30%"></img>
-
 <img src="./image/photoframe-ibaction-popup-3.png" width="30%"></img>
-
 
 ##### 실행결과
 
