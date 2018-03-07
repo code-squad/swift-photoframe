@@ -283,3 +283,32 @@ self.navigationController?.popViewController(animated: true)
 
 ---
 
+
+
+# PhotoFrame step7
+
+>  Second Scene 화면
+사진액자 - Container ViewController 요구사항을 구현한 상태로 시작한다.
+탭바의 두 번째 화면 (Second Scene) 디자인을 변경하고 액자 앱을 동작을 구현한다.
+실행하고 새로운 화면을 캡처해서 readme.md 파일에 포함한다.
+
+```swift
+@IBOutlet weak var photoImageView: UIImageView!
+@IBAction func nextImageButtonTouched(_ sender: Any) {
+let randomNumber: UInt32 = arc4random_uniform(22) + 1;
+self.photoImageView.image = UIImage(named: randomNumber < 10 ? "0\(randomNumber).jpg" : "\(randomNumber).jpg")
+}
+```
+
+- ***학습꺼리***
+### # UIImageView 와 UIImage 클래스는 각각 어떤 역할을 담당하는지 학습한다.
+UIImage 클래스는 가져올 이미지를 지정해주고, UIImageView는 이미지를 출력해 줄 컴포넌트 역할을 한다.
+### # 이미지 뷰의 속성은 어떤 것들이 있는지 애플 개발자 문서를 참고한다.
+<img src="/img/imageViewProperty.png" width="30%" height="30%">
+
+
+- ***실행 화면***
+
+<img src="/img/SecondScene1.png" width="30%" height="30%">  <img src="/img/SecondScene2.png" width="30%" height="30%">  <img src="/img/SecondScene3.png" width="30%" height="30%">
+
+---
