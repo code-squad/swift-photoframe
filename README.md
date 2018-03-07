@@ -511,7 +511,7 @@ private func loadImages() {
 
 ##### 실행결과
 
-<img src="./image/photoframe-result-8.png"></img>
+<img src="./image/photoframe-result-8.png" width="45%"></img>
 
 ##### 에러 처리
 * 시뮬레이터에서 포토 라이브러리의 사진을 선택할 때 `Error Domain=PlugInKit Code=13 "query cancelled" UserInfo={NSLocalizedDescription=query cancelled}` 에러 메세지가 출력되는 것을 확인할 수 있음
