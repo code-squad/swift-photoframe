@@ -13,8 +13,6 @@ class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setImageDefaultProperties()
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,15 +20,14 @@ class SecondViewController: UIViewController {
     }
     
     @IBAction func nextImageButtonTouched(_ sender: UIButton) {
-        loadImages()
+        setImages(UIImage(named: "1.jpg"))
     }
     
-    private func setImageDefaultProperties() {
-        photoImage.contentMode = .scaleAspectFit
-    }
-    
-    private func loadImages() {
-        photoImage.image = UIImage(named: "1.jpg")
+    private func setImages(_ image: UIImage?) {
+        if let image = image {
+            photoImage.image = image
+            photoImage.contentMode = .scaleAspectFit
+        }
     }
 }
 
@@ -48,8 +45,8 @@ extension SecondViewController: UIImagePickerControllerDelegate, UINavigationCon
         guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage else {
             return
         }
-        
-        photoImage.image = image
+
+        setImages(image)
         closePhotoLibrary(picker)
     }
     
