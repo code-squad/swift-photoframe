@@ -10,10 +10,11 @@ import UIKit
 
 class SecondViewController: UIViewController {
     @IBOutlet weak var photoImage: UIImageView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(#file, #line, #function, #column)
+        
+        setImageDefaultProperties()
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,8 +25,47 @@ class SecondViewController: UIViewController {
         loadImages()
     }
     
+    private func setImageDefaultProperties() {
+        photoImage.contentMode = .scaleAspectFit
+    }
+    
     private func loadImages() {
-        self.photoImage.image = UIImage(named: "1.jpg")
-        self.photoImage.contentMode = .scaleAspectFit
+        photoImage.image = UIImage(named: "1.jpg")
+    }
+}
+
+extension SecondViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    @IBAction func selectButtonTouched(_ sender: UIButton) {
+        guard UIImagePickerController.isSourceTypeAvailable(.photoLibrary) else {
+            print("포토 라이브러리를 열 수 없습니다.")
+            return
+        }
+    
+        openPhotoLibrary()
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage else {
+            return
+        }
+        
+        photoImage.image = image
+        closePhotoLibrary(picker)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        closePhotoLibrary(picker)
+    }
+    
+    private func openPhotoLibrary() {
+        let imagePicker: UIImagePickerController = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = .photoLibrary
+        
+        self.present(imagePicker, animated: true)
+    }
+    
+    private func closePhotoLibrary(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
     }
 }
