@@ -33,7 +33,7 @@ class FirstViewController: UIViewController {
 * _View의 라이프 사이클을 관리함_
 * [View Controller Programming Guide for iOS](https://developer.apple.com/library/content/featuredarticles/ViewControllerPGforiPhoneOS/index.html#//apple_ref/doc/uid/TP40007457-CH2-SW1)
 
-<img src="./image/relationship-between-a-view-controller-and-its-views.png" width="70%"></img>
+<img src="./image/relationship-between-a-view-controller-and-its-views.png"></img>
 
 ##### [UITabBar](https://developer.apple.com/documentation/uikit/uitabbar)
 * 일반적으로 [UITabBarController](https://developer.apple.com/documentation/uikit/uitabbarcontroller)와 함께 사용하지만, 독립적인 컨트롤 형태로도 사용할 수 있음
@@ -54,7 +54,7 @@ class FirstViewController: UIViewController {
 * TabBar Interface는 서로 다른 유형의 화면을 보여줌
     * 아이폰의 시계 앱에서 하단 메뉴를 TabBar Interface로 이용하여 만듦
 
-<img src="./image/clock-app.png" width="70%"></img>
+<img src="./image/clock-app.png"></img>
 
 * TabBarController에 직접 접근하면 안 됨. [viewControllers](https://developer.apple.com/documentation/uikit/uitabbarcontroller/1621185-viewcontrollers) 프로퍼티를 이용해야 함
 * 개발자가 지정한 순서대로 화면에 나타나며 [selectedViewController](https://developer.apple.com/documentation/uikit/uitabbarcontroller/1621172-selectedviewcontroller) 프로퍼티를 이용하여 먼저 보여줄 화면을 정할 수 있음
@@ -68,7 +68,7 @@ class FirstViewController: UIViewController {
 * 현재 선택된 Tab의 View Controller만 반영하여 View를 바꿈
 * Navigation Controller와 Custom View Controller는 Tab의 RootViewController로 사용할 수 있음
 
-<img src="./image/the-primary-views-of-a-tab-bar-controller.png" width="70%"></img>
+<img src="./image/the-primary-views-of-a-tab-bar-controller.png"></img>
 
 ### 2단계
 
@@ -80,11 +80,11 @@ class FirstViewController: UIViewController {
 * Xcode 프로젝트 내비게이터에서 Main.storyboard 파일을 선택하고 First Scene 에 있는 'First View' 레이블(Label)을 선택하고 Assistant Editor 모드로 변경함
 * 레이블을 선택하고 `Control + 드래그` 해서 ViewController 코드에 IBOutlet으로 연결함
 
-<img src="./image/photoframe-iboutlet-1.png" width="50%"></img>
+<img src="./image/photoframe-iboutlet-1.png"></img>
 
 * Outlet 이름으로 photoLabel을 입력함
 
-<img src="./image/photoframe-iboutlet-2.png" width="50%"></img>
+<img src="./image/photoframe-iboutlet-2.png"></img>
 
 * ViewController 클래스 viewDidLoad() 함수에서 위에 추가한 아웃렛 변수에 값을 변경하고 다시 실행함
 
@@ -116,18 +116,16 @@ self.firstDescription.textColor = UIColor.green
 * Main.storyboard 에서 First Scene에 UIButton을 추가함
     * 우측 유틸리티 영역 하단 3번째 탭 - 객체 라이브러리(Object Library)에서 Button 을 찾아서 View로 드래그함
     * 추가한 버튼을 선택하고 우측 유틸리티 영역 상단 4번째 탭 - 속성(Attributes)에서 Title을 다음으로 변경함
-
-<img src="./image/photoframe-add-button-1.png" width="50%"></img>
-
 * 버튼을 선택하고 `Control + 드래그` 해서 ViewController 코드에 `IBAction으로 연결함`
-
-<img src="./image/photoframe-ibaction-2.png" width="50%"></img>
-
 * 다음과 팝업에서 Connection 항목에서 IBOutlet 대신 IBAction 으로 변경함
+* 액션 이름을 `nextButtonTouched` 으로 지정함
 
-<img src="./image/photoframe-ibaction-popup-3.png" width="50%"></img>
+<img src="./image/photoframe-add-button-1.png" width="30%"></img>
 
-* 액션 이름을 nextButtonTouched으로 지정함
+<img src="./image/photoframe-ibaction-2.png" width="30%"></img>
+
+<img src="./image/photoframe-ibaction-popup-3.png" width="30%"></img>
+
 
 ##### 실행결과
 
@@ -150,7 +148,7 @@ self.firstDescription.textColor = UIColor.green
 * UI 요소는 ViewController에게 액션 메시지를 전달함. 사용자 동작에 대해 액션을 수행할 수 있음. 이 때 IBAction으로 연결함
 * [ViewController Outlet, Action](https://soooprmx.com/archives/4486)
 
-<img src="./image/photoframe-target-action.png" width="70%"></img>
+<img src="./image/photoframe-target-action.png"></img>
 
 ##### [UIControlEvents](https://developer.apple.com/documentation/uikit/uicontrolevents)
 * [How to get event from IBAction method?](https://stackoverflow.com/questions/9344378/how-to-get-event-from-ibaction-method)
@@ -174,8 +172,8 @@ self.firstDescription.textColor = UIColor.green
 * 앞 단계에서 추가한 [다음]버튼을 선택하고 `Control + 드래그` 를 해서 새로 추가한 Scene에 연결함
 * 팝업으로 표시되는 Action Segue에서 Show 항목을 선택함
 
-<img src="./image/photoframe-add-scene.png" width="40%"></img>
-<img src="./image/photoframe-action-segue.png" width="40%"></img>
+<img src="./image/photoframe-add-scene.png" width="45%"></img>
+<img src="./image/photoframe-action-segue.png" width="45%"></img>
 
 * Scene과 Scene 사이에 화살표를 선택하면 Segue 속성을 변경할 수 있음
 * 새로 추가한 Scene 속성에서 배경 색상(Background Color)을 원하는 색상으로 변경함. 새로 앱을 실행해보고 [다음] 버튼을 누르면 새로운 화면이 나타나는지 확인함
@@ -184,7 +182,7 @@ self.firstDescription.textColor = UIColor.green
 
 ##### 실행결과
 
-<img src="./image/photoframe-result-4.png" width="70%"></img>
+<img src="./image/photoframe-result-4.png"></img>
 
 ##### [Using Segues](https://developer.apple.com/library/content/featuredarticles/ViewControllerPGforiPhoneOS/UsingSegues.html)
 * Show(Push)
@@ -222,10 +220,10 @@ self.firstDescription.textColor = UIColor.green
     * 만약 방금 추가한 YellowViewController (혹은 자신이 생성한 클래스)가 우측에 자동으로 연결되지 않으면 Custom Class가 정상적으로 연결되지 않았거나
     * 우측 Assistant 편집기 상단에 점프바(JumpBar)에 `Automatic` 이라고 선택되어 있는지 확인함. 다른 상태인 경우 `Automatic으로 변경함`
 
-<img src="./image/photoframe-add-cocoatouch.png" width="40%"></img>
-<img src="./image/photoframe-yellowVC.png" width="40%"></img>
-<img src="./image/photoframe-file-group.png" width="40%"></img>
-<img src="./image/photoframe-yellowVC-class.png" width="40%"></img>
+<img src="./image/photoframe-add-cocoatouch.png" width="45%"></img>
+<img src="./image/photoframe-yellowVC.png" width="45%"></img>
+<img src="./image/photoframe-file-group.png" width="45%"></img>
+<img src="./image/photoframe-yellowVC-class.png" width="45%"></img>
 
 * IBAction 이름은 `closeButtonTouched` 로 지정하고 다음과 같이 코드를 작성함
 
@@ -245,10 +243,10 @@ self.firstDescription.textColor = UIColor.green
 ##### 실행결과
 * [Trying to add 3rd tab to tabBarController](https://stackoverflow.com/questions/10054865/trying-to-add-3rd-tab-to-tabbarcontroller)
 
-<img src="./image/photoframe-result-5.png" width="70%"></img>
+<img src="./image/photoframe-result-5.png"></img>
 
 ##### View Life Cycle
-* [App Life Cycle 정리](https://github.com/yuaming/practice-swift/tree/master/AppLifeCycle)
+* [View Life Cycle 정리](https://github.com/yuaming/practice-swift/tree/master/AppLifeCycle)
 
 ##### YellowViewController에서 Segue를 제거하고 다음 화면을 보여줄 때 코드로 보여주는 방법을 찾아보고 적용함
 * [UIStoryBoard](https://developer.apple.com/documentation/uikit/uistoryboard)
@@ -274,7 +272,7 @@ self.firstDescription.textColor = UIColor.green
 * 스토리보드에서 First Scene을 선택하고, Editor > Embed In > Navigation Controller 항목을 선택함
 * 실행해보면 화면 상단에 내비게이션바(Navigation Bar)가 추가되고 [다음]버튼을 누르면 다음 화면이 우측에서 좌측으로 애니메이션되면서 표시됨
 
-<img src="./image/photoframe-navigationcontroller.png" width="70%"></img>
+<img src="./image/photoframe-navigationcontroller.png"></img>
 
 * [닫기]버튼에 연결된 closeButtonTouched 코드를 다음과 같이 수정함
 
@@ -307,10 +305,9 @@ class BlueViewController: UIViewController {
 // NavigationController를 추가하니 Main.storyboard 에서 아래 코드가 추가된 것을 확인할 수 있음
 <extendedEdge key="edgesForExtendedLayout" top="YES"/>
 ```
-<img src="./image/photoframe-result-6-2.png" width="40%"></img>
-<img src="./image/photoframe-result-6.png" width="40%"></img>
-
-<img src="./image/photoframe-result-6-3.png" width="50%"></img>
+<img src="./image/photoframe-result-6-2.png" width="30%"></img>
+<img src="./image/photoframe-result-6.png" width="30%"></img>
+<img src="./image/photoframe-result-6-3.png" width="30%"></img>
 
 ##### [Implementing a Container View Controller](https://developer.apple.com/library/content/featuredarticles/ViewControllerPGforiPhoneOS/ImplementingaContainerViewController.html)
 * 컨테이너 뷰 컨트롤러는 한 개의 View와 여러 개의 Child View Controller 를 다룸
@@ -448,7 +445,7 @@ class BlueViewController: UIViewController {
     * UIImageView를 화면 상단 중앙에 240 x 240 크기로 배치하고, `photoImageView` 아웃렛으로 연결함
     * 화면 하단에 [다음] 버튼을 추가하고 `nextImageButtonTouched` 액션으로 연결함
 
-<img src="./image/photoframe-second-scene.png" width="50%"></img>
+<img src="./image/photoframe-second-scene.png"></img>
 
 * 압축을 풀고 이미지 파일들을 Xcode 프로젝트로 드래그해서 추가함
     * 리소스 파일을 추가할 때는 Copy 옵션을 꼭 지정하고 Target을 체크되어 있는지 확인함
@@ -469,8 +466,8 @@ private func loadImages() {
 }
 ```
 
-<img src="./image/photoframe-result-7.png" width="30%"></img>
-<img src="./image/photoframe-result-7-2.png" width="30%"></img>
+<img src="./image/photoframe-result-7.png" width="45%"></img>
+<img src="./image/photoframe-result-7-2.png" width="45%"></img>
 
 ##### UIImage, UIImageView 차이
 * `UIImage store data` from an image(i.e. data from a png file)
@@ -501,7 +498,7 @@ private func loadImages() {
 * 스토리보드에서 Second Scene을 선택하고, 다음과 같이 화면을 개선함
     * 새로운 UIImageView를 추가하고, 기존 photoImageView보다 아래에 배치함
 
-<img src="./image/photoframe-second-scene-border.png" width="70%"></img>
+<img src="./image/photoframe-second-scene-border.png"></img>
 
 * 액자 이미지를 추가함
     * 리소스 파일을 추가할 때는 Copy 옵션을 꼭 지정하고 Target을 체크되어 있는지 확인함
@@ -517,7 +514,7 @@ private func loadImages() {
 
 ##### 실행결과
 
-<img src="./image/photoframe-result-8.png" width="40%"></img>
+<img src="./image/photoframe-result-8.png"></img>
 
 ##### 에러 처리
 * 시뮬레이터에서 포토 라이브러리의 사진을 선택할 때 `Error Domain=PlugInKit Code=13 "query cancelled" UserInfo={NSLocalizedDescription=query cancelled}` 에러 메세지가 출력되는 것을 확인할 수 있음
@@ -525,7 +522,7 @@ private func loadImages() {
     * 실제 폰으로 테스트함
 * UIViewController 초기화 하는 방법
 
-<img src="./image/require-init.png" width="70%"></img>
+<img src="./image/require-init.png"></img>
 
 ```swift
 private var imagePicker: UIImagePickerController
@@ -570,8 +567,8 @@ class ViewController: UIViewController {
 * 스토리 보드에서 연결하는 방법
     * `Control + 드래그` 하여 View Controller을 선택함 
 
-<img src="https://github.com/yuaming/practice-swift/raw/master/image/delegate-view-controller-2.png" width="40%"></img>
-<img src="https://github.com/yuaming/practice-swift/raw/master/image/delegate-view-controller-3.png" width="40%"></img>
+<img src="https://github.com/yuaming/practice-swift/raw/master/image/delegate-view-controller-2.png" width="45%"></img>
+<img src="https://github.com/yuaming/practice-swift/raw/master/image/delegate-view-controller-3.png" width="45%"></img>
     
 * 코드로 연결하는 방법
 
