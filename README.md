@@ -312,3 +312,54 @@ UIImage 클래스는 가져올 이미지를 지정해주고, UIImageView는 이�
 <img src="/img/SecondScene1.png" width="30%" height="30%">  <img src="/img/SecondScene2.png" width="30%" height="30%">  <img src="/img/SecondScene3.png" width="30%" height="30%">
 
 ---
+
+
+# PhotoFrame step8
+
+>  마무리
+사진액자 - Second Scene 요구사항을 구현한 상태로 시작한다.
+이미지 테두리 액자 화면을 추가한다.
+사진 앨범에서 사진을 가져와서 보여줄 수 있도록 개선한다.
+실행하고 새로운 화면을 캡처해서 readme.md 파일에 포함한다.
+
+```swift
+@IBAction func selectButtonTouched(_ sender: Any) {
+    let picker = UIImagePickerController()
+    picker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+    picker.allowsEditing = true
+    picker.delegate = self
+    self.present(picker, animated: false, completion: nil)
+}
+func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    if let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+        self.photoImageView.image = selectedImage
+        print(selectedImage)
+        picker.dismiss(animated: false, completion: nil)
+    }
+}
+func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+    picker.dismiss(animated: false, completion: nil)
+    let alert = UIAlertController(title: "", message: "이미지 선택이 취소되었습니다.", preferredStyle: .alert)
+    alert.addAction(UIAlertAction(title: "확인", style: .cancel, handler: nil))
+    self.present(alert, animated: false, completion: nil)
+}
+```
+
+- ***학습꺼리***
+### # 화면 요소들을 겹쳐서 디자인 하는 경우 z축으로 위-아래를 구분해서 학습한다.
+### #UIImagePickerController처럼 이미 만들어놓은 시스템 컨트롤러들에 대해 학습한다.
+: 시스템 컨트롤러는 시스템 인터페이스를 관리하는 컨트롤러로써 앱에서 쉽게 시스템 컨텐츠에 접근할 수 있도록 해준다. <br  />
+UIImagePickerController 뿐만 아니라 View, Navigation, Search, Document Browser, PrintPicker 등 다양한 시스템 컨트롤러가 있다.<br  />
+( 참고: https://developer.apple.com/documentation/uikit/view_controllers )<br  /><br  />
+### #델리게이트(Delegate)와 프로토콜(Protocol) 상관 관계에 대해 학습한다.
+프로토콜은  델리게이트 패턴을 구현하기 위해 사용한다고 한다.<br  />
+델리게이트를 구현한다는 것은 클래스가 델리게이트 프로토콜을 구현한다고 선언하고, 그 프로토콜의 메서드 중 원하는 메서드를 구현하는 것이다.<br  />
+참고문서: http://aroundck.tistory.com/4671 [돼지왕 왕돼지 놀이터] <br  />
+
+
+- ***실행 화면***
+
+<img src="/img/last1.png" width="30%" height="30%">  <img src="/img/last2.png" width="30%" height="30%">  <img src="/img/last3.png" width="30%" height="30%">    <img src="/img/last4.png" width="30%" height="30%">
+
+---
+
