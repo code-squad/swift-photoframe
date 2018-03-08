@@ -29,14 +29,14 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
         picker.sourceType = UIImagePickerControllerSourceType.photoLibrary
         picker.allowsEditing = true
         picker.delegate = self
-        self.present(picker, animated: false, completion: nil)
+        self.present(picker, animated: true, completion: nil)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             self.photoImageView.image = selectedImage
             print(selectedImage)
-            picker.dismiss(animated: false, completion: nil)
+            picker.dismiss(animated: true, completion: nil)
         }
     }
     
@@ -44,7 +44,7 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
         picker.dismiss(animated: false, completion: nil)
         let alert = UIAlertController(title: "", message: "이미지 선택이 취소되었습니다.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "확인", style: .cancel, handler: nil))
-        self.present(alert, animated: false, completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
     
 }
