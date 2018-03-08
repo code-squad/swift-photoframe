@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     @IBOutlet weak var photoImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +23,15 @@ class SecondViewController: UIViewController {
         let randomNumber: UInt32 = arc4random_uniform(22) + 1;
         self.photoImageView.image = UIImage(named: String.init(format: "%02d.jpg", randomNumber))
     }
+    
+    @IBAction func selectButtonTouched(_ sender: Any) {
+        let picker = UIImagePickerController()
+        picker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        picker.allowsEditing = true
+        picker.delegate = self
+        self.present(picker, animated: false, completion: nil)
+    }
+    
     
 }
 
