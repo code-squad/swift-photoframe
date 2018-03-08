@@ -32,6 +32,13 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
         self.present(picker, animated: false, completion: nil)
     }
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            self.photoImageView.image = selectedImage
+            print(selectedImage)
+            picker.dismiss(animated: false, completion: nil)
+        }
+    }
     
 }
 
