@@ -361,5 +361,12 @@ UIImagePickerController 뿐만 아니라 View, Navigation, Search, Document Brow
 
 <img src="/img/last1.png" width="30%" height="30%">  <img src="/img/last2.png" width="30%" height="30%">  <img src="/img/last3.png" width="30%" height="30%">    <img src="/img/last4.png" width="30%" height="30%">
 
+
+- ***phone에서 테스트 화면***
+
+<img src="/img/phone1.png" width="30%" height="30%">  <img src="/img/phone2.png" width="30%" height="30%">  <img src="/img/phone3.png" width="30%" height="30%">  <img src="/img/phone4.png" width="30%" height="30%">  <img src="/img/phone5.png" width="30%" height="30%">  <img src="/img/phone6.png" width="30%" height="30%">  <img src="/img/phone7.png" width="30%" height="30%">  <img src="/img/phone8.png" width="30%" height="30%">  <img src="/img/phone9.png" width="30%" height="30%">
+
+
 ---
+
 
