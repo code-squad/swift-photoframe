@@ -40,5 +40,12 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
         }
     }
     
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: false, completion: nil)
+        let alert = UIAlertController(title: "", message: "이미지 선택이 취소되었습니다.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "확인", style: .cancel, handler: nil))
+        self.present(alert, animated: false, completion: nil)
+    }
+    
 }
 
