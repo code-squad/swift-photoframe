@@ -17,6 +17,7 @@
 - UILabel 클래스 속성 (계속 추가할 예정)
   - `vat text: String? { get set }`
   - `var textColor: UIColor! { get set }`
+    - [Custom textColor를 사용하는 방법 정리](https://jinios.github.io/ios/2018/03/11/ios_color_literal/)
   - `var font: UIFont! { get set }`
     - font속성 사용 : `labelName.font = labelName.font.withSize(15)`
 - IBOutlet과 IBAction : 스토리보드와 코드를 연결해준다. 스토리보드에 있는 UI요소들과 연결하고싶은 속성을 코드로 정의했다면 아래의 키워드를 이용해서 연결시킬 수 있다.
