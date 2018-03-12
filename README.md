@@ -14,21 +14,40 @@
 - 구현 화면: 2018.03.11 19:20
   ![screenshot_step2_IBOutlet](./Screenshot/screenshot_step2_IBOutletProperty.png)
 
-#### 알게 된 것들
-- UILabel 클래스 속성 (계속 추가할 예정)
+#### UILabel 클래스 속성 (계속 추가할 예정)
   - `vat text: String? { get set }`
   - `var textColor: UIColor! { get set }`
     - [Custom textColor를 사용하는 방법 정리](https://jinios.github.io/ios/2018/03/11/ios_color_literal/)
   - `var font: UIFont! { get set }`
-    - font속성 사용 : `labelName.font = labelName.font.withSize(15)`
-- IBOutlet과 IBAction : 아울렛 연결 및 작업 연결을 할 때 사용한다. 스토리보드에 있는 UI요소들과 연결하고싶은 속성을 코드로 정의했다면 아래의 키워드를 이용해서 연결시킬 수 있다.
-  - IBOutlet(ex. 코드와 연결된 버튼) -> 코드는 그 버튼을 조정할 수 있게 됨 -> IBAction(버튼을 동작시켰을때 어떻게 변화해야하는지에 대한 동작을 담고있는 메소드)
-  - IBOutlet :
+    - font속성 사용예시 : `labelName.font = labelName.font.withSize(15)`
+
+#### UI
+User Interface의 약자로, 사용자와 직접 상호작용 하는 접점을 뜻한다. 모바일 앱 개발에서는 사용자가 보는 화면이라고 생각하면 됨.
+
+#### Interface Builder & Storyboard
+***Interface Builder:*** Xcode에서, 앱의 UI요소들을 visualized해서 컨트롤 할 수 있도록 해주는 인터페이스 빌더.
+
+***Storyboard:*** device상에서 사용자에게 나타나는 UI를 보여주는 파일. <br/>템플릿으로부터 만들어진 모든 프로젝트들은 Main.storyboard파일과 iOS앱의 경우 LaunchScreen.storyboard파일이 있다.(앱이 런칭될 때 화면) 이 스토리보드 파일은 뷰컨트롤러와 뷰를 가지고있는데 스토리보드 파일 내의 UI요소들을 확인하면서 인터페이스 빌더를 통해 이를 변경/확인할 수 있다.
+
+#### IBOutlet과 IBAction의 관계
+![screenshot_step2_IBOutlet_IBAction](./Screenshot/step2_IBOutlet_IBAction.png)
+
+- ***IBOutlet과 IBAction:***
+  - 화면(View)와 컨트롤러를 연결하고 매핑시키는 작업을 할 때 사용한다.
+  - 사용자는 View와 상호작용한다.
+  - IBAction은 사용자를 통해 발생한 이벤트를 감지해서 Controller에 메시지를 보낸다.
+  - 컨트롤러는 특정 로직을 수행하고 뷰에 변경사항이 있으면 어떤 것을 변경하라는 지시를 내린다.
+  - IBOutlet은 처리 결과를 View단에 알려서 원하는 동작을 이끌어낸다.
+
+
+`IBOutlet(ex. 코드와 연결된 버튼) -> 코드는 그 버튼을 조정할 수 있게 됨 -> IBAction(버튼을 동작시켰을때 어떻게 변화해야하는지에 대한 동작을 담고있는 메소드)`
+스토리보드에 있는 UI요소들과 연결하고싶은 속성을 코드로 정의했다면 아래의 키워드를 이용해서 연결시킬 수 있다.
+  - ***IBOutlet :***
   인터페이스 빌더에서 사용되는 타입 한정자로, 코드가 UI 엘리먼트에 메시지를 보낼 수 있도록 하기 위한 연결점같은 개념이다. 속성이나 객체변수를 선언할때 객체 변수의 앞에 쓴다.
     ```swift
     @IBOutlet weak var photoLabel: UILabel!
     ```
-  - IBAction:
+  - ***IBAction:***
   인터페이스 빌더에서 사용되는 타입 한정자로, 메소드를 UI 엘리먼트와 코드 간의 연결점해주기 위한 개념이다. 메소드 선언 시 `void` 리턴타입 대신 사용한다.
     ```swift
     @IBAction func likedThis(sender: UIButton) {
