@@ -27,6 +27,10 @@ class FirstViewController: UIViewController {
         print(#file, #line, #function, #column)
     }
 
+    @IBAction func moveToNavy(_ sender: Any) {
+        performSegue(withIdentifier: "toNavy", sender: self)
+    }
+
     override func didReceiveMemoryWarning() {
         // Dispose of any resources that can be recreated.
     }
