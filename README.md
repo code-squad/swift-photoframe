@@ -21,7 +21,7 @@
   - `var font: UIFont! { get set }`
     - font속성 사용예시 : `labelName.font = labelName.font.withSize(15)`
 
-#### UI
+### UI
 User Interface의 약자로, 사용자와 직접 상호작용 하는 접점을 뜻한다. 모바일 앱 개발에서는 사용자가 보는 화면이라고 생각하면 됨.
 
 #### Interface Builder & Storyboard
@@ -128,7 +128,7 @@ User Interface의 약자로, 사용자와 직접 상호작용 하는 접점을 �
 ![screenshot_step4-1](./Screenshot/step4_first.png)
 ![screenshot_step4-2](./Screenshot/step4_second.png)
 ![screenshot_step4-3](./Screenshot/step4_third.png)
-#### Segue
+### Segue
 Segue는 앱 인터페이스의 흐름이다. 즉 segue는 앱의 스토리보드 파일에서 두개의 뷰 컨트롤러 간 변환되는 과정 자체를 나타낸다고 볼 수 있다. Segue의 시작점을 버튼이나 table row, 또는 segue를 동작하게 하는 제스쳐이고, 종료지점은 보여주고 싶은 뷰 컨트롤러이다.
 Segue는 항상 새로운 뷰 컨트롤러를 보여주지만 unwind segue를 이용하여 뷰 컨트롤러를 보이지 않게(화면에서 없어지게- 만약 현재 뷰 컨트롤러를 보이지 않게 만들때, 새로운 뷰 컨트롤러를 덮어서 안보이게 하는 것이 아니라 현재 뷰를 화면에서 없앰으로서) 만들 수 있다.
 [참고링크](https://developer.apple.com/library/content/featuredarticles/ViewControllerPGforiPhoneOS/UsingSegues.html)
@@ -136,7 +136,7 @@ Segue는 항상 새로운 뷰 컨트롤러를 보여주지만 unwind segue를 �
 ![screenshot_step4-segueObject](./Screenshot/step4_segueObject.png)
 
 
-#### Segue action
+### Segue action
 
 ***Show*** - Pushes the destination view controller onto the navigation stack, sliding overtop from right to left, providing a back button to return to the source - or if not embedded in a navigation controller it will be presented modally
 Example: Navigating inboxes/folders in Mail
@@ -164,3 +164,52 @@ Segue 객체를 만들고 IBAction과 연결 할 수 있다. 스토리보드에�
 - 파라미터 `withIdentifier:`는 스토리보드에서 segue를 만들고 Attributes Inspector에서 identifier로 설정해준 문자열을 입력하면 된다.
 ![screenshot_step4-3](./Screenshot/step4-segue-identifier.png)
 [참고링크](https://www.youtube.com/watch?v=WfT-hJXuiys)
+
+### Step5 - ViewController 프로그래밍
+> 스토리보드 구성 요소와 클래스 코드와 연결해서 동작을 확장한다.
+
+- 구현 화면 : 2018.03.13 19:00
+- FirstViewController > BlueViewController > NavyViewController > FirstViewController
+- ![screenshot_step5-1](./Screenshot/step5-1.png)
+- ![screenshot_step5-2](./Screenshot/step5-2.png)
+- ![screenshot_step5-3](./Screenshot/step5-3.png)
+- ![screenshot_step5-4](./Screenshot/step5-4.png)
+
+
+### 뷰 생명주기
+뷰 생명주기의 기본 flow는
+- ***viewDidLoad > viewWillAppear > viewDidAppear > viewWillDisappear > viewDidDisappear***
+(단, viewDidLoad는 rootView이기때문에 한번만 호출되는 것이 일반적이다. [참고링크](http://zeddios.tistory.com/43))
+
+FirstView - BlueView - NavyView - FirstView로 연결된 flow일때, `print(#file, #line, #function, #column)`로 콘솔에 표시
+```
+.../FirstViewController.swift 27 viewDidLoad() 40 >> 첫번째 뷰 로드
+.../FirstViewController.swift 48 viewWillAppear 40 >> 첫번째 뷰가 보일 것이다.
+.../FirstViewController.swift 52 viewDidAppear 40 >> 첫번째 뷰가 보임.  
+------- 버튼 터치 ------- (FirstView -> BlueView)
+.../BlueViewController.swift 15 viewDidLoad() 40 >> 첫번째 뷰에서 다음버튼 터치 순간실행. BlueViewController 차례시작, 다음(blue)뷰가 로드되고
+.../FirstViewController.swift 56 viewWillDisappear 40 >> 이전(first)뷰가 사라질 준비
+.../BlueViewController.swift 28 viewWillAppear 40 >> 다음 뷰가 로드될 준비
+.../BlueViewController.swift 32 viewDidAppear 40 >> 다음 뷰 나타남
+.../FirstViewController.swift 60 viewDidDisappear 40 >> 이전 뷰 사라짐
+------- 버튼 터치 ------- (BlueView -> NavyView)
+.../NavyViewController.swift 15 viewDidLoad() 40 >> BlueView에서 다음 버튼 터치 순간실행. NavyView차례 시작. NavyView 로드
+.../BlueViewController.swift 45 viewWillDisappear 40 >> BlueView는 사라질 예정
+.../NavyViewController.swift 32 viewWillAppear 40 >> NavyView가 나타날 준비
+.../NavyViewController.swift 36 viewDidAppear 40 >> NavyView가 나타남
+.../BlueViewController.swift 49 viewDidDisappear 40 >> BlueView 사라짐
+------- 버튼 터치 ------- (NavyView -> FirstView)
+.../FirstViewController.swift 27 viewDidLoad() 40 >> FirstView 로드
+.../NavyViewController.swift 40 viewWillDisappear 40 >> NavyView가 사라질 예정
+.../FirstViewController.swift 48 viewWillAppear 40 >> FirstView가 나타날 준비
+.../FirstViewController.swift 52 viewDidAppear 40 >> FirstView가 나타남
+.../NavyViewController.swift 44 viewDidDisappear 40 >> NavyView 사라짐
+
+```
+- **중요** : 다음`(Next)`뷰는 이전`(Previous)`뷰가 사라진 다음에 나타나는 것이 아니라, **다음 뷰가 나타나고(viewDidAppear) 그 이후에 이전 뷰가 사라진(viewDidDisappear)다!**
+- **비교** : 앞서말한 [참고링크](http://zeddios.tistory.com/43)의 설명과 달리 FirstViewController가 NavyViewController로부터 재호출 될때 viewDidLoad가 한번 더 호출 된 이유는, FirstViewController를 호출할때 `instantiateViewController(withIdentifier:)`를 사용했기 때문인 것 같다. <br/>이 메서드는 호출하고싶은 뷰 컨트롤러의 인스턴스를 호출할때마다 만든다는 특징이 있다.(This method creates a new instance of the specified view controller each time you call it. [참고](https://developer.apple.com/documentation/uikit/uistoryboard/1616214-instantiateviewcontroller))
+
+
+### 콜백함수
+- 사용자에 의해 호출되는 것이 아닌 특정 함수에서 호출돼 필요시 코드 내에서 사용되는 함수.
+- 호출된 함수를 알려주어, 다른 프로그램 또는 다른 모듈에서 함수를 호출 하게 하는 방법
