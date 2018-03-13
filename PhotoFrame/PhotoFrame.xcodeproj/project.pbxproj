@@ -14,6 +14,7 @@
 		E81A043320525E2300F5E055 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E81A043220525E2300F5E055 /* Assets.xcassets */; };
 		E81A043620525E2300F5E055 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E81A043420525E2300F5E055 /* LaunchScreen.storyboard */; };
 		E86E06462057DE22004B8188 /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86E06452057DE22004B8188 /* BlueViewController.swift */; };
+		E86E06482057E421004B8188 /* NavyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86E06472057E421004B8188 /* NavyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E81A043520525E2300F5E055 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E81A043720525E2300F5E055 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E86E06452057DE22004B8188 /* BlueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueViewController.swift; sourceTree = "<group>"; };
+		E86E06472057E421004B8188 /* NavyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				E81A042920525E2300F5E055 /* AppDelegate.swift */,
 				E81A042B20525E2300F5E055 /* FirstViewController.swift */,
 				E86E06452057DE22004B8188 /* BlueViewController.swift */,
+				E86E06472057E421004B8188 /* NavyViewController.swift */,
 				E81A042D20525E2300F5E055 /* SecondViewController.swift */,
 				E81A042F20525E2300F5E055 /* Main.storyboard */,
 				E81A043220525E2300F5E055 /* Assets.xcassets */,
@@ -145,6 +148,7 @@
 				E81A042E20525E2300F5E055 /* SecondViewController.swift in Sources */,
 				E81A042A20525E2300F5E055 /* AppDelegate.swift in Sources */,
 				E86E06462057DE22004B8188 /* BlueViewController.swift in Sources */,
+				E86E06482057E421004B8188 /* NavyViewController.swift in Sources */,
 				E81A042C20525E2300F5E055 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

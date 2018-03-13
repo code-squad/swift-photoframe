@@ -1,5 +1,5 @@
 //
-//  BlueViewController.swift
+//  NavyViewController.swift
 //  PhotoFrame
 //
 //  Created by YOUTH on 2018. 3. 13..
@@ -8,15 +8,12 @@
 
 import UIKit
 
-class BlueViewController: UIViewController {
+class NavyViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         print(#file, #line, #function, #column)
         // Do any additional setup after loading the view.
-    }
-    @IBAction func closeButtonTouched(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,6 +36,7 @@ class BlueViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         print(#file, #line, #function, #column)
     }
+
 
     /*
     // MARK: - Navigation
