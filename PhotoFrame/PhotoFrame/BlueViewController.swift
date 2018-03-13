@@ -15,8 +15,17 @@ class BlueViewController: UIViewController {
         print(#file, #line, #function, #column)
         // Do any additional setup after loading the view.
     }
+
+    // 스토리보드에서 segue이용하여 생성
     @IBAction func closeButtonTouched(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+
+    // 스토리보드에서 segue이용하지 않고 생성
+    @IBAction func newNextButtonTouched(_ sender: Any) {
+        if let navyVC = self.storyboard?.instantiateViewController(withIdentifier: "navyView") {
+            self.present(navyVC, animated: true, completion: nil)
+        }
     }
 
     override func didReceiveMemoryWarning() {
