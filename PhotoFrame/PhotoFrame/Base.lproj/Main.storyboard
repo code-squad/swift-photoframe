@@ -49,6 +49,14 @@
                                     <segue destination="CLj-jK-x2L" kind="show" id="3LN-dI-WGT"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRK-9v-niZ">
+                                <rect key="frame" x="168" y="456" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="마지막"/>
+                                <connections>
+                                    <action selector="moveToNavy:" destination="9pv-A4-QxB" eventType="touchUpInside" id="bVa-xd-rhP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -64,6 +72,7 @@
                         <outlet property="firstDescription" destination="A5M-7J-77L" id="jUH-9x-NsH"/>
                         <outlet property="nextButton" destination="6UE-7x-MbT" id="RCL-u7-z4T"/>
                         <outlet property="photoLabel" destination="KQZ-1w-vlD" id="ewW-hV-MBU"/>
+                        <segue destination="UDG-6m-DeQ" kind="show" identifier="toNavy" id="4vV-d9-Kd7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -186,4 +195,7 @@
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="pg1-kC-2zT"/>
+    </inferredMetricsTieBreakers>
 </document>
