@@ -70,6 +70,7 @@
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="firstDescription" destination="A5M-7J-77L" id="jUH-9x-NsH"/>
+                        <outlet property="moveToLast" destination="zRK-9v-niZ" id="yaM-Dc-DYV"/>
                         <outlet property="nextButton" destination="6UE-7x-MbT" id="RCL-u7-z4T"/>
                         <outlet property="photoLabel" destination="KQZ-1w-vlD" id="ewW-hV-MBU"/>
                         <segue destination="UDG-6m-DeQ" kind="show" identifier="toNavy" id="4vV-d9-Kd7"/>
@@ -196,6 +197,6 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pg1-kC-2zT"/>
+        <segue reference="4vV-d9-Kd7"/>
     </inferredMetricsTieBreakers>
 </document>
