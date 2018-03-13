@@ -158,10 +158,9 @@ Segue 객체를 만들고 IBAction과 연결 할 수 있다. 스토리보드에�
 시작점의 ViewController코드에서 아래와 같이 `performSegue()`메소드를 사용한다.
 ```swift
   @IBAction func moveToNavy(_ sender: Any) {
-      performSegue(withIdentifier: "toNavy", sender: self)
+     performSegue(withIdentifier: "toNavy", sender: self)
   }
 ```
-- 파라미터 withIdentifier는 스토리보드에서 segue를 만들고 Attributes Inspector에서 identifier로 설정해준 문자열을 입력하면 된다.
+- 파라미터 `withIdentifier:`는 스토리보드에서 segue를 만들고 Attributes Inspector에서 identifier로 설정해준 문자열을 입력하면 된다.
 ![screenshot_step4-3](./Screenshot/step4-segue-identifier.png)
-- `sender: self`부분은
 [참고링크](https://www.youtube.com/watch?v=WfT-hJXuiys)

@@ -15,7 +15,6 @@ class FirstViewController: UIViewController {
 
     @IBOutlet weak var nextButton: UIButton!
 
-    @IBOutlet weak var moveToLast: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.photoLabel.text = "알린의 사진액자"
@@ -29,8 +28,9 @@ class FirstViewController: UIViewController {
     }
 
     @IBAction func moveToNavy(_ sender: Any) {
-        performSegue(withIdentifier: "toNavy", sender: moveToLast)
+        performSegue(withIdentifier: "toNavy", sender: self)
     }
+
 
     override func didReceiveMemoryWarning() {
         // Dispose of any resources that can be recreated.
