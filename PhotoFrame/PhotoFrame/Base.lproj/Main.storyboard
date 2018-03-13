@@ -79,10 +79,10 @@
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
-        <!--View Controller-->
+        <!--Blue View Controller-->
         <scene sceneID="3dl-f7-HKQ">
             <objects>
-                <viewController id="CLj-jK-x2L" sceneMemberID="viewController">
+                <viewController id="CLj-jK-x2L" customClass="BlueViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pqB-Em-jpW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -100,6 +100,14 @@
                                 <state key="normal" title="다음"/>
                                 <connections>
                                     <segue destination="UDG-6m-DeQ" kind="presentation" id="pg1-kC-2zT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YEc-RB-gEt">
+                                <rect key="frame" x="172" y="341" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="닫기"/>
+                                <connections>
+                                    <action selector="closeButtonClicked:" destination="CLj-jK-x2L" eventType="touchUpInside" id="bOk-Du-tjI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -196,6 +204,6 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4vV-d9-Kd7"/>
+        <segue reference="pg1-kC-2zT"/>
     </inferredMetricsTieBreakers>
 </document>
