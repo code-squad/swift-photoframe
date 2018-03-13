@@ -16,6 +16,13 @@ class NavyViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+
+    @IBAction func homeButtonTouched(_ sender: Any) {
+        if let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "firstView") {
+            self.present(homeVC, animated: true, completion: nil)
+        }
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
