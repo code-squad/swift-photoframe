@@ -16,6 +16,9 @@ class NavyViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func closeButtonTouched(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
 
     @IBAction func homeButtonTouched(_ sender: Any) {
         if let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "firstView") {
