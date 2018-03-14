@@ -213,3 +213,67 @@ FirstView - BlueView - NavyView - FirstView로 연결된 flow일때, `print(#fil
 ### 콜백함수
 - 사용자에 의해 호출되는 것이 아닌 특정 함수에서 호출돼 필요시 코드 내에서 사용되는 함수.
 - 호출된 함수를 알려주어, 다른 프로그램 또는 다른 모듈에서 함수를 호출 하게 하는 방법
+
+
+### Step6 - Container ViewController
+
+스토리보드에서 First Scene을 선택하고, Editor > Embed In > Navigation Controller 항목을 선택한다. - FirstScene을 루트 뷰 컨트롤러로 설정(UINavigationController를 초기화할때 인스턴스에 UIVIewController를 전해줘야하는데, 이 UIVIewController가 내비게이션 컨트롤러의 viewControllers 배열에 추가되고, 루트 뷰 컨트롤러가 된다.)
+
+#### UINavigationController
+> 스택, 뷰 컨트롤러의 배열을 가진다
+
+- 내비게이션 컨트롤러가 있을 경우와 없을 경우 화면 전환 동작이 어떻게 다른지, 화면들 포함관계가 있는지 학습한다.
+- 내비게이션 컨트롤러 관련 메서드가 왜 push / pop 인지 학습한다.
+
+![screenshot_step5-1](./Screenshot/step6-UINavigationController-diagram.png)
+
+항상 두 개의 하위 뷰를 가지는데, UINavigationBar와 topViewController의 view다.
+스택 구조로 뷰 컨트롤러를 가지기 때문에, push, pop단어가 메서드 이름에 들어간다.
+뷰 컨트롤러가 스택에 푸시되면 컨트롤러의 view가 우측에서부터 미끄러지듯이 화면에 나타난다.
+스택이 팝 될때는 (마지막 항목, 스택의 맥 위의 - presenting 뷰 컨트롤러가 제거) view는 우측으로 사라진다. 즉 topViewController의 view가 사용자에게 보여지는 것이다.
+
+
+#### Issue: close 버튼에 추가한 함수 에러
+> popViewController()
+
+close 버튼을 누르면 previous 뷰가 나오듯이 동작해야 함? 아래 애플문서에 기재된 글처럼 rootView를 pop하려고 해서 나는 에러는 아닌것 같다.
+This method removes the top view controller from the stack and makes the new top of the stack the active view controller. If the view controller at the top of the stack is the root view controller, this method does nothing. In other words, you cannot pop the last item on the stack. - 루트 뷰는 pop할 수 없다.
+
+- 콘솔에 뜬 에러 내용 : 첫번째 화면 > Next > light-blue 화면에서 close 터치 시 발생
+```
+2018-03-14 15:46:53.764490+0900 PhotoFrame[15032:176458] -[PhotoFrame.BlueViewController closeButtonClicked:]: unrecognized selector sent to instance 0x7fa956429ca0
+2018-03-14 15:46:53.934517+0900 PhotoFrame[15032:176458] *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '-[PhotoFrame.BlueViewController closeButtonClicked:]: unrecognized selector sent to instance 0x7fa956429ca0'
+*** First throw call stack:
+(
+	0   CoreFoundation                      0x0000000104b4612b __exceptionPreprocess + 171
+	1   libobjc.A.dylib                     0x0000000100db9f41 objc_exception_throw + 48
+	2   CoreFoundation                      0x0000000104bc7024 -[NSObject(NSObject) doesNotRecognizeSelector:] + 132
+	3   UIKit                               0x0000000101889f51 -[UIResponder doesNotRecognizeSelector:] + 295
+	4   CoreFoundation                      0x0000000104ac8f78 ___forwarding___ + 1432
+	5   CoreFoundation                      0x0000000104ac8958 _CF_forwarding_prep_0 + 120
+	6   UIKit                               0x0000000101657972 -[UIApplication sendAction:to:from:forEvent:] + 83
+	7   UIKit                               0x00000001017d6c3c -[UIControl sendAction:to:forEvent:] + 67
+	8   UIKit                               0x00000001017d6f59 -[UIControl _sendActionsForEvents:withEvent:] + 450
+	9   UIKit                               0x00000001017d5e86 -[UIControl touchesEnded:withEvent:] + 618
+	10  UIKit                               0x00000001016cd807 -[UIWindow _sendTouchesForEvent:] + 2807
+	11  UIKit                               0x00000001016cef2a -[UIWindow sendEvent:] + 4124
+	12  UIKit                               0x0000000101672365 -[UIApplication sendEvent:] + 352
+	13  UIKit                               0x0000000101fbea1d __dispatchPreprocessedEventFromEventQueue + 2809
+	14  UIKit                               0x0000000101fc1672 __handleEventQueueInternal + 5957
+	15  CoreFoundation                      0x0000000104ae9101 __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 17
+	16  CoreFoundation                      0x0000000104b88f71 __CFRunLoopDoSource0 + 81
+	17  CoreFoundation                      0x0000000104acda19 __CFRunLoopDoSources0 + 185
+	18  CoreFoundation                      0x0000000104accfff __CFRunLoopRun + 1279
+	19  CoreFoundation                      0x0000000104acc889 CFRunLoopRunSpecific + 409
+	20  GraphicsServices                    0x00000001072bf9c6 GSEventRunModal + 62
+	21  UIKit                               0x00000001016565d6 UIApplicationMain + 159
+	22  PhotoFrame                          0x00000001004980e7 main + 55
+	23  libdyld.dylib                       0x0000000105cddd81 start + 1
+	24  ???                                 0x0000000000000001 0x0 + 1
+)
+libc++abi.dylib: terminating with uncaught exception of type NSException
+(lldb)
+```
+
+#### firstTab과 secondTab을 전환할때 콜백함수 호출 변화
+ 
