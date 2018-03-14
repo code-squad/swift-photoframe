@@ -20,7 +20,7 @@ class FirstViewController: UIViewController {
         self.photoLabel.text = "알린의 사진액자"
         self.photoLabel.textColor = UIColor.green
         self.photoLabel.font = photoLabel.font.withSize(50)
-        self.firstDescription.text = "사진액자 firstDescription"
+        self.firstDescription.text = "Welcom to my first Album"
         let colorLiteral = #colorLiteral(red: 0.1380051349, green: 0.3703911386, blue: 1, alpha: 0.7430436644)
         self.firstDescription.textColor = colorLiteral
         self.nextButton.backgroundColor = UIColor.green
