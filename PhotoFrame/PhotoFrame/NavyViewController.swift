@@ -9,7 +9,6 @@
 import UIKit
 
 class NavyViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         print(#file, #line, #function, #column)
@@ -17,7 +16,7 @@ class NavyViewController: UIViewController {
     }
 
     @IBAction func closeButtonTouched(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
     }
 
     @IBAction func homeButtonTouched(_ sender: Any) {

@@ -16,9 +16,8 @@ class BlueViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    // 스토리보드에서 segue이용하여 생성
     @IBAction func closeButtonTouched(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
 
     // 스토리보드에서 segue이용하지 않고 생성

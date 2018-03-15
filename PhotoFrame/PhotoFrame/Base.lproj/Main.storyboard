@@ -72,7 +72,6 @@
                         <outlet property="firstDescription" destination="A5M-7J-77L" id="jUH-9x-NsH"/>
                         <outlet property="nextButton" destination="6UE-7x-MbT" id="RCL-u7-z4T"/>
                         <outlet property="photoLabel" destination="KQZ-1w-vlD" id="ewW-hV-MBU"/>
-                        <segue destination="UDG-6m-DeQ" kind="show" identifier="toNavy" id="4vV-d9-Kd7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -99,7 +98,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Close"/>
                                 <connections>
-                                    <action selector="closeButtonClicked:" destination="CLj-jK-x2L" eventType="touchUpInside" id="bOk-Du-tjI"/>
+                                    <action selector="closeButtonTouched:" destination="CLj-jK-x2L" eventType="touchUpInside" id="hyc-s7-4ww"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8aC-Ko-SCd">
@@ -139,7 +138,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Close"/>
                                 <connections>
-                                    <action selector="closeButtonTouched:" destination="UDG-6m-DeQ" eventType="touchUpInside" id="CWw-HA-kpR"/>
+                                    <action selector="closeButtonTouched:" destination="UDG-6m-DeQ" eventType="touchUpInside" id="mdo-MK-mEF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8H-SD-6u0">
