@@ -285,11 +285,7 @@ libc++abi.dylib: terminating with uncaught exception of type NSException
 > 내비게이션 컨트롤러(Navigation Controller)를 Embed 시켜서 동작하도록 개선한다.
 
 - 구현 사항: 2018.03.15 18:00
-![screenshot_step6-1](./Screenshot/step6-1.png){: width="20%" height="20%"}
-![screenshot_step6-2](./Screenshot/step6-2.png){: width="20%" height="20%"}
-![screenshot_step6-3](./Screenshot/step6-3.png){: width="20%" height="20%"}
-![screenshot_step6-4](./Screenshot/step6-4.png){: width="20%" height="20%"}
-![screenshot_step6-5](./Screenshot/step6-5.png){: width="20%" height="20%"}
+<img src="./Screenshot/step6-1.png" width="20%"><img src="./Screenshot/step6-2.png" width="20%"><img src="./Screenshot/step6-3.png" width="20%"><img src="./Screenshot/step6-4.png" width="20%"><img src="./Screenshot/step6-5.png" width="20%">
 
 ## 프레임워크
 > 프레임워크는 기본적으로 어떤 것을 이루는 뼈대, 구조를 의미하는데, 소프트웨어에서의 프레임워크는 애플리케이션 제작을 빠르고 편리하게 할 수 있도록 미리 뼈대를 이루는 각종 코드를 제작하여 모아둔 것. 예를들어 버튼용 클래스를 미리 만들어둔 UIKit프레임워크를 사용하면 내가 따로 버튼을 구현할 필요가 없다!
