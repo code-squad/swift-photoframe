@@ -285,6 +285,7 @@ libc++abi.dylib: terminating with uncaught exception of type NSException
 > 내비게이션 컨트롤러(Navigation Controller)를 Embed 시켜서 동작하도록 개선한다.
 
 - 구현 사항: 2018.03.15 18:00
+- 
 <img src="./Screenshot/step6-1.png" width="20%"><img src="./Screenshot/step6-2.png" width="20%"><img src="./Screenshot/step6-3.png" width="20%"><img src="./Screenshot/step6-4.png" width="20%"><img src="./Screenshot/step6-5.png" width="20%">
 
 ## 프레임워크
