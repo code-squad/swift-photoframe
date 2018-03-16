@@ -25,6 +25,11 @@ class NavyViewController: UIViewController {
         }
     }
 
+    @IBAction func closeButtonA(_ sender: Any) {
+        self.dismiss(animated: true, completion: {(print("self.dismiss NAVY View"))})
+    }
+
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
