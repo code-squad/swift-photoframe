@@ -27,21 +27,6 @@ class BlueViewController: UIViewController {
         }
     }
 
-    @IBAction func closeButtonA(_ sender: Any) {
-        self.dismiss(animated: true, completion: {(print("closeButtonA BLUE View"))})
-    }
-
-    @IBAction func closeButtonB(_ sender: Any) {
-        self.presentingViewController?.dismiss(animated: true, completion: {(print("closeButtonB BLUE View"))})
-    }
-
-    @IBAction func nextButtonA(_ sender: Any) {
-        if let navyVC = self.storyboard?.instantiateViewController(withIdentifier: "navyView") {
-            self.present(navyVC, animated: true, completion: {(print("blue to Navy"))})
-        }
-    }
-
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
