@@ -23,9 +23,24 @@ class BlueViewController: UIViewController {
     // 스토리보드에서 segue이용하지 않고 생성
     @IBAction func newNextButtonTouched(_ sender: Any) {
         if let navyVC = self.storyboard?.instantiateViewController(withIdentifier: "navyView") {
-            self.present(navyVC, animated: true, completion: nil)
+        self.navigationController?.pushViewController(navyVC, animated: true)
         }
     }
+
+    @IBAction func closeButtonA(_ sender: Any) {
+        self.dismiss(animated: true, completion: {(print("closeButtonA BLUE View"))})
+    }
+
+    @IBAction func closeButtonB(_ sender: Any) {
+        self.presentingViewController?.dismiss(animated: true, completion: {(print("closeButtonB BLUE View"))})
+    }
+
+    @IBAction func nextButtonA(_ sender: Any) {
+        if let navyVC = self.storyboard?.instantiateViewController(withIdentifier: "navyView") {
+            self.present(navyVC, animated: true, completion: {(print("blue to Navy"))})
+        }
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

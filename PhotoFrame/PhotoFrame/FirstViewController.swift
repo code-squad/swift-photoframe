@@ -31,6 +31,22 @@ class FirstViewController: UIViewController {
         performSegue(withIdentifier: "toNavy", sender: self)
     }
 
+    @IBAction func nextButtonA(_ sender: Any) {
+        if let blueVC = self.storyboard?.instantiateViewController(withIdentifier: "blueView") {
+            self.present(blueVC, animated: true, completion:
+                {(print("first to blue"))}
+            )
+        }
+    }
+
+    @IBAction func closeButtonA(_ sender: Any) {
+        self.dismiss(animated: true, completion: {(print("self.dismiss FIRST View"))})
+    }
+
+    @IBAction func closeButtonB(_ sender: Any) {
+        self.presentedViewController?.dismiss(animated: true, completion: {(print("first.dismiss BLUE View"))})
+    }
+
 
     override func didReceiveMemoryWarning() {
         // Dispose of any resources that can be recreated.
