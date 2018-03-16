@@ -16,7 +16,8 @@ class NavyViewController: UIViewController {
     }
 
     @IBAction func closeButtonTouched(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
+        //self.dismiss(animated: true, completion: nil)
     }
 
     @IBAction func homeButtonTouched(_ sender: Any) {
@@ -24,11 +25,6 @@ class NavyViewController: UIViewController {
             self.present(homeVC, animated: true, completion: nil)
         }
     }
-
-    @IBAction func closeButtonA(_ sender: Any) {
-        self.dismiss(animated: true, completion: {(print("self.dismiss NAVY View"))})
-    }
-
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
