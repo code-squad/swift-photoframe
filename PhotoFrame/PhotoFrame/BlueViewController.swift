@@ -20,7 +20,7 @@ class BlueViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
 
-    // 스토리보드에서 segue이용하지 않고 생성
+    // 스토리보드에서 segue이용하지 않고 navyVC로 화면 전환
     @IBAction func newNextButtonTouched(_ sender: Any) {
         if let navyVC = self.storyboard?.instantiateViewController(withIdentifier: "navyView") {
         self.navigationController?.pushViewController(navyVC, animated: true)

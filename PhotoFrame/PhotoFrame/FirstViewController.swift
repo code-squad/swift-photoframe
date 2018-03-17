@@ -27,10 +27,7 @@ class FirstViewController: UIViewController {
         print(#file, #line, #function, #column)
     }
 
-    @IBAction func moveToNavy(_ sender: Any) {
-        performSegue(withIdentifier: "toNavy", sender: self)
-    }
-//
+
 //    @IBAction func nextButtonA(_ sender: Any) {
 //        if let blueVC = self.storyboard?.instantiateViewController(withIdentifier: "blueView") {
 //            self.present(blueVC, animated: true, completion:
