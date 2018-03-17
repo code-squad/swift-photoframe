@@ -183,27 +183,27 @@ Segue 객체를 만들고 IBAction과 연결 할 수 있다. 스토리보드에�
 
 FirstView - BlueView - NavyView - FirstView로 연결된 flow일때, `print(#file, #line, #function, #column)`로 콘솔에 표시
 ```
-.../FirstViewController.swift 27 viewDidLoad() 40 >> 첫번째 뷰 로드
-.../FirstViewController.swift 48 viewWillAppear 40 >> 첫번째 뷰가 보일 것이다.
-.../FirstViewController.swift 52 viewDidAppear 40 >> 첫번째 뷰가 보임.  
+.../FirstViewController.swift 27 viewDidLoad() >> 첫번째 뷰 로드
+.../FirstViewController.swift 48 viewWillAppear >> 첫번째 뷰가 보일 것이다.
+.../FirstViewController.swift 52 viewDidAppear >> 첫번째 뷰가 보임.  
 ------- 버튼 터치 ------- (FirstView -> BlueView)
-.../BlueViewController.swift 15 viewDidLoad() 40 >> 첫번째 뷰에서 다음버튼 터치 순간실행. BlueViewController 차례시작, 다음(blue)뷰가 로드되고
-.../FirstViewController.swift 56 viewWillDisappear 40 >> 이전(first)뷰가 사라질 준비
-.../BlueViewController.swift 28 viewWillAppear 40 >> 다음 뷰가 로드될 준비
-.../BlueViewController.swift 32 viewDidAppear 40 >> 다음 뷰 나타남
-.../FirstViewController.swift 60 viewDidDisappear 40 >> 이전 뷰 사라짐
+.../BlueViewController.swift 15 viewDidLoad() >> 첫번째 뷰에서 다음버튼 터치 순간실행. BlueViewController 차례시작, 다음(blue)뷰가 로드되고
+.../FirstViewController.swift 56 viewWillDisappear >> 이전(first)뷰가 사라질 준비
+.../BlueViewController.swift 28 viewWillAppear >> 다음 뷰가 로드될 준비
+.../BlueViewController.swift 32 viewDidAppear >> 다음 뷰 나타남
+.../FirstViewController.swift 60 viewDidDisappear >> 이전 뷰 사라짐
 ------- 버튼 터치 ------- (BlueView -> NavyView)
-.../NavyViewController.swift 15 viewDidLoad() 40 >> BlueView에서 다음 버튼 터치 순간실행. NavyView차례 시작. NavyView 로드
-.../BlueViewController.swift 45 viewWillDisappear 40 >> BlueView는 사라질 예정
-.../NavyViewController.swift 32 viewWillAppear 40 >> NavyView가 나타날 준비
-.../NavyViewController.swift 36 viewDidAppear 40 >> NavyView가 나타남
-.../BlueViewController.swift 49 viewDidDisappear 40 >> BlueView 사라짐
+.../NavyViewController.swift 15 viewDidLoad() >> BlueView에서 다음 버튼 터치 순간실행. NavyView차례 시작. NavyView 로드
+.../BlueViewController.swift 45 viewWillDisappear >> BlueView는 사라질 예정
+.../NavyViewController.swift 32 viewWillAppear >> NavyView가 나타날 준비
+.../NavyViewController.swift 36 viewDidAppear >> NavyView가 나타남
+.../BlueViewController.swift 49 viewDidDisappear >> BlueView 사라짐
 ------- 버튼 터치 ------- (NavyView -> FirstView)
-.../FirstViewController.swift 27 viewDidLoad() 40 >> FirstView 로드
-.../NavyViewController.swift 40 viewWillDisappear 40 >> NavyView가 사라질 예정
-.../FirstViewController.swift 48 viewWillAppear 40 >> FirstView가 나타날 준비
-.../FirstViewController.swift 52 viewDidAppear 40 >> FirstView가 나타남
-.../NavyViewController.swift 44 viewDidDisappear 40 >> NavyView 사라짐
+.../FirstViewController.swift 27 viewDidLoad() >> FirstView 로드
+.../NavyViewController.swift viewWillDisappear >> NavyView가 사라질 예정
+.../FirstViewController.swift 48 viewWillAppear >> FirstView가 나타날 준비
+.../FirstViewController.swift 52 viewDidAppear >> FirstView가 나타남
+.../NavyViewController.swift 44 viewDidDisappear >> NavyView 사라짐
 
 ```
 - **중요** : 다음`(Next)`뷰는 이전`(Previous)`뷰가 사라진 다음에 나타나는 것이 아니라, **다음 뷰가 나타나고(viewDidAppear) 그 이후에 이전 뷰가 사라진(viewDidDisappear)다!**
@@ -239,53 +239,11 @@ FirstView - BlueView - NavyView - FirstView로 연결된 flow일때, `print(#fil
 뷰 컨트롤러가 스택에 푸시되면 컨트롤러의 view가 우측에서부터 미끄러지듯이 화면에 나타난다.
 스택이 팝 될때는 (마지막 항목, 스택의 맥 위의 - presenting 뷰 컨트롤러가 제거) view는 우측으로 사라진다. 즉 topViewController의 view가 사용자에게 보여지는 것이다.
 
-
-#### Issue: close 버튼에 추가한 함수 에러
-> popViewController()
-
-close 버튼을 누르면 previous 뷰가 나오듯이 동작해야 함? 아래 애플문서에 기재된 글처럼 rootView를 pop하려고 해서 나는 에러는 아닌것 같다.
-This method removes the top view controller from the stack and makes the new top of the stack the active view controller. If the view controller at the top of the stack is the root view controller, this method does nothing. In other words, you cannot pop the last item on the stack. - 루트 뷰는 pop할 수 없다.
-
-- 콘솔에 뜬 에러 내용 : 첫번째 화면 > Next > light-blue 화면에서 close 터치 시 발생
-```
-2018-03-14 15:46:53.764490+0900 PhotoFrame[15032:176458] -[PhotoFrame.BlueViewController closeButtonClicked:]: unrecognized selector sent to instance 0x7fa956429ca0
-2018-03-14 15:46:53.934517+0900 PhotoFrame[15032:176458] *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '-[PhotoFrame.BlueViewController closeButtonClicked:]: unrecognized selector sent to instance 0x7fa956429ca0'
-*** First throw call stack:
-(
-	0   CoreFoundation                      0x0000000104b4612b __exceptionPreprocess + 171
-	1   libobjc.A.dylib                     0x0000000100db9f41 objc_exception_throw + 48
-	2   CoreFoundation                      0x0000000104bc7024 -[NSObject(NSObject) doesNotRecognizeSelector:] + 132
-	3   UIKit                               0x0000000101889f51 -[UIResponder doesNotRecognizeSelector:] + 295
-	4   CoreFoundation                      0x0000000104ac8f78 ___forwarding___ + 1432
-	5   CoreFoundation                      0x0000000104ac8958 _CF_forwarding_prep_0 + 120
-	6   UIKit                               0x0000000101657972 -[UIApplication sendAction:to:from:forEvent:] + 83
-	7   UIKit                               0x00000001017d6c3c -[UIControl sendAction:to:forEvent:] + 67
-	8   UIKit                               0x00000001017d6f59 -[UIControl _sendActionsForEvents:withEvent:] + 450
-	9   UIKit                               0x00000001017d5e86 -[UIControl touchesEnded:withEvent:] + 618
-	10  UIKit                               0x00000001016cd807 -[UIWindow _sendTouchesForEvent:] + 2807
-	11  UIKit                               0x00000001016cef2a -[UIWindow sendEvent:] + 4124
-	12  UIKit                               0x0000000101672365 -[UIApplication sendEvent:] + 352
-	13  UIKit                               0x0000000101fbea1d __dispatchPreprocessedEventFromEventQueue + 2809
-	14  UIKit                               0x0000000101fc1672 __handleEventQueueInternal + 5957
-	15  CoreFoundation                      0x0000000104ae9101 __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 17
-	16  CoreFoundation                      0x0000000104b88f71 __CFRunLoopDoSource0 + 81
-	17  CoreFoundation                      0x0000000104acda19 __CFRunLoopDoSources0 + 185
-	18  CoreFoundation                      0x0000000104accfff __CFRunLoopRun + 1279
-	19  CoreFoundation                      0x0000000104acc889 CFRunLoopRunSpecific + 409
-	20  GraphicsServices                    0x00000001072bf9c6 GSEventRunModal + 62
-	21  UIKit                               0x00000001016565d6 UIApplicationMain + 159
-	22  PhotoFrame                          0x00000001004980e7 main + 55
-	23  libdyld.dylib                       0x0000000105cddd81 start + 1
-	24  ???                                 0x0000000000000001 0x0 + 1
-)
-libc++abi.dylib: terminating with uncaught exception of type NSException
-(lldb)
-```
 ### Step6 - Container ViewController
 > 내비게이션 컨트롤러(Navigation Controller)를 Embed 시켜서 동작하도록 개선한다.
 
 - 구현 사항: 2018.03.15 18:00
-- 
+-
 <img src="./Screenshot/step6-1.png" width="20%"><img src="./Screenshot/step6-2.png" width="20%"><img src="./Screenshot/step6-3.png" width="20%"><img src="./Screenshot/step6-4.png" width="20%"><img src="./Screenshot/step6-5.png" width="20%">
 
 ## 프레임워크
@@ -386,4 +344,184 @@ iOS는 항상 디바이스 스크린에 꽉 들어차는 하나의 화면만을 
     @IBAction func closeButtonTouched(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+```
+#### JK의 질문 + 알아 본 것들
+
+- ***내비게이션뷰컨트롤러에 push 한 경우에 dismiss 하면 어떻게 되나요?***
+  - BlueVC에서 NavyVC로 화면을 전환할때 `present`에서 `push`사용으로 메소드 수정
+  - NavyVC에서 `dismiss` 실행하니 아무 변화도 일어나지 않음. 자신이 `push`된 메소드이므로 스택에 들어가게됐는데, 스택에 들어가면 pop하지 않는이상 dismiss는 맞는 명령이 아니므로 아무 일도 일어나지 않음.
+  - ***`present`메소드와 `push`의 차이***
+    - `present`: Presents a view controller modally. 만약 스토리보드에서, 이전 뷰에서 segue 연결 없이 다음 뷰를 present한다면 둘은 아무 관계가 없고 그저 두 번째 뷰의 형태만 첫번째 뷰 위에 띄우는 방식. 프레젠테이션 방식으로 화면 전환 시, iOS 시스템은 두 뷰 컨트롤러 사이에 참조할 수 있는 포인터를 생성하여 서로 참조할 수 있게 한다.
+    - Modal 방식: 현재 뷰 컨트롤러에서 이동할 대상 뷰 컨트롤러를 직접 호출하여 표시하는 방식으로, 프레젠테이션 방식이라고 함.
+    - `push`: UINavigationController가 가지는 stack에 (순서대로라면) 첫번째 뷰가 스택에 쌓이고 두번째 뷰가 그 위에 쌓인다. 두 뷰는 스택의 순서에 따르는 순서를 가지게 됨.
+  - [Pushing, Popping, Presenting, & Dismissing ViewControllers](https://medium.com/@felicity.johnson.mail/pushing-popping-dismissing-viewcontrollers-a30e98731df5)
+- ***self.dismiss()와 present했던 곳에서 nextViewController.dismiss() 하는 것과 어떤 차이가 있을까요?***
+  - present했던 곳 : FirstViewController , presentingViewController(ancestor)
+  - BlueViewController에 예시로 두 가지 닫기 버튼(A,B)을 만듦
+
+```swift
+// FirstViewController.swift
+
+  @IBAction func closeButtonA(_ sender: Any) {
+   self.dismiss(animated: true, completion: {(print("self.dismiss BLUE View"))})
+  }
+
+  @IBAction func closeButtonB(_ sender: Any) {
+    self.presentingViewController?.dismiss(animated: true, completion: {(print("first.dismiss BLUE View"))})
+  }
+  // BlueVC의 presenting에서 dismiss(), 즉 FirstVC.dismiss()를 코드로 기재한 것
+  // >> 이렇게 한다고해서 FirstVC가 없어지는게 아니었다!
+```
+- **실행결과 두 메소드는 모두 똑같이 동작했으며 completion처리또한 문제 없었다.**
+- `self.dismiss`의 의미는 "나 자신을 없앤다"는 의미가 아니다.
+- 만약 두번째 뷰에서 `self.dismiss`를 하면,
+  - 내부적으로는 UIKit이 현재 뷰(두번째 뷰)의 ancestor인 **(첫번째 뷰)에게** *'너가 띄우고 있는 presented를 없애라'* 는 명령을 보낸다. 즉, 내부적으로는 위의 closeButtonB()에 써있는 코드대로 동작한다는 것이다.
+- closeButtonA와 B의 차이는 메서드 A보다 B가 좀 더 presenting과 presented의 참조관계를 코드적으로 명확히 써줬다는 차이일뿐, 동작은 동일하다.
+- **뷰 생명주기와 completion동작 실행시점 비교**
+```
+<< closeButtonB() 실행 >>
+
+FirstViewController.swift 27 viewDidLoad()
+FirstViewController.swift 64 viewWillAppear
+FirstViewController.swift 68 viewDidAppear
+BlueViewController.swift 15 viewDidLoad()
+FirstViewController.swift 72 viewWillDisappear
+BlueViewController.swift 51 viewWillAppear
+BlueViewController.swift 55 viewDidAppear
+FirstViewController.swift 76 viewDidDisappear
+FirstVC 에서 BlueVC로 뷰 전환
+BlueViewController.swift 59 viewWillDisappear
+FirstViewController.swift 64 viewWillAppear
+FirstViewController.swift 68 viewDidAppear
+BlueViewController.swift 63 viewDidDisappear
+closeButtonB BLUE View
+
+
+<< closeButtonA() 실행 >>
+
+FirstViewController.swift 27 viewDidLoad()
+FirstViewController.swift 64 viewWillAppear
+FirstViewController.swift 68 viewDidAppear
+BlueViewController.swift 15 viewDidLoad()
+FirstViewController.swift 72 viewWillDisappear
+BlueViewController.swift 51 viewWillAppear
+BlueViewController.swift 55 viewDidAppear
+FirstViewController.swift 76 viewDidDisappear
+FirstVC 에서 BlueVC로 뷰 전환
+BlueViewController.swift 59 viewWillDisappear
+FirstViewController.swift 64 viewWillAppear
+FirstViewController.swift 68 viewDidAppear
+BlueViewController.swift 63 viewDidDisappear
+closeButtonA BLUE View
+
+```
+
+- ***dismiss나 pop하지 않고 Button을 누르면 창을 닫도록 하기 위해서 인터페이스 빌더에서 처리하는 방법은 무얼까요?***
+  - 인터페이스 빌더는 레이아웃파일이기때문에, 인터페이스 빌더만 가지고는 dismiss()나 pop()을 할 수 없지만, 코드로 segue를 만들거나 custom UIButton을 만들고 dismiss나 pop동작을 연결하면 사용할 수 있다. [참고링크1](https://stackoverflow.com/questions/14111448/interface-builder-dismiss-modal-view-controller-without-code) [참고링크2](https://stackoverflow.com/questions/9362749/moving-back-from-a-controller-to-a-previous-one/9363429#9363429)
+
+
+#### presentedViewController
+> Instance property. 자신이 호출한 뷰 컨트롤러(child) 저장.
+> 쉽게말해 1번, 2번 뷰가 있고 순서대로 호출했다면, 1번의 presentedViewController는 2번이 됨
+
+The view controller that is presented by this view controller, or one of its ancestors in the view controller hierarchy.
+When you present a view controller modally (either explicitly or implicitly) using the `present(_:animated:completion:)` method, the view controller that called the method has this property set to the view controller that it presented. If the current view controller did not present another view controller modally, the value in this property is nil.
+
+#### presentingViewController
+> Instance property. 자신을 호출한 뷰 컨트롤러(ancestor) 저장.
+> 쉽게말해 1번, 2번 뷰가 있고 순서대로 호출했다면, 2번의 presentingViewController는 1번이 됨
+
+The view controller that presented this view controller.
+When you present a view controller modally (either explicitly or implicitly) using the `present(_:animated:completion:)` method, the view controller that was presented has this property set to the view controller that presented it. If the view controller was not presented modally, but one of its ancestors was, this property contains the view controller that presented the ancestor. If neither the current view controller or any of its ancestors were presented modally, the value in this property is nil.
+
+
+
+### Step7 - Second Scene 화면
+> 탭바의 두 번째 화면 (Second Scene) 디자인을 변경하고 액자 앱을 동작을 구현한다.
+
+- 구현 화면 : 2018.03.17 14:30
+  - `다음`을 누르면 사진이 랜덤하게 변경
+<img src="./Screenshot/step7-1.png" width="33%"><img src="./Screenshot/step7-2.png" width="33%"><img src="./Screenshot/step7-3.png" width="33%">
+
+
+#### 그 외 알게된 것들
+- Int format을 0부터 시작하게 하고싶을때 String의 initializer사용
+  - `String(format: "%02d", 1)`
+```swift
+//String's init(format:_:) initializer
+
+let string0 = String(format: "%02d", 0) // returns "00"
+let string1 = String(format: "%02d", 1) // returns "01"
+let string2 = String(format: "%02d", 10) // returns "10"
+let string3 = String(format: "%02d", 100) // returns "100"
+```
+
+
+### 특이점..
+왜 여기서는 viewDidDisappear 다음에 viewDidAppear일까!?.. 이게 정상이었음 대체 위에선 왜 그렇게 나왔던 것일까
+(First to Blue : Segue show로 연결, Blue to Navy : pushViewController로 연결)
+```
+FirstViewController.swift 27 viewDidLoad()
+FirstViewController.swift 61 viewWillAppear
+FirstViewController.swift 65 viewDidAppear
+=====
+BlueViewController.swift 15 viewDidLoad()
+FirstViewController.swift 69 viewWillDisappear
+BlueViewController.swift 36 viewWillAppear
+FirstViewController.swift 73 viewDidDisappear
+BlueViewController.swift viewDidAppear
+=====
+NavyViewController.swift 14 viewDidLoad()
+BlueViewController.swift 44 viewWillDisappear
+NavyViewController.swift 35 viewWillAppear
+BlueViewController.swift 48 viewDidDisappear
+NavyViewController.swift 39 viewDidAppear
+===== (NavyViewController의 homeButtonTouched실행)
+FirstViewController.swift 27 viewDidLoad() // 첫번째 뷰로 가면서 다시 viewDidLoad호출
+NavyViewController.swift 43 viewWillDisappear
+FirstViewController.swift 61 viewWillAppear
+NavyViewController.swift 47 viewDidDisappear
+FirstViewController.swift 65 viewDidAppear
+```
+- NavyVC에서 FirstVC로 전환될때 실행되는 homeButtonTouched()메소드는 FirstVC를 새로 생성하고 present한다. 이미 스택에 로드된 FirstVC와는 똑같이 생겼지만 다른 FirstVC가 나타나는 것이다. 따라서 해당 메소드와 연결된 `Home`버튼을 누를때마다 FirstVC의 viewDidLoad가 호출된다.
+- 특히, 원래 FirstVC에서 다음으로 가는 버튼을 누르면 '알린의 사진액자'라벨이 연두색에서 하늘색으로 바뀌도록 동작한다. 만약 stack에서 pop동작으로(내비게이션컨트롤러에서 `< Back`과 같음) FirstVC의 다음 뷰를 없앴다면 나타나는 FirstVC의 라벨은 하늘색이다. 하지만 NavyVC에서 homeButtonTouched을 실행하면 가장 초기 상태의 FirstVC가 나온다.
+
+| FirstVC다음 뷰에서 stack pop했을때   | NavyVC에서 homeButtonTouched()했을때     |
+| :------------- | :------------- |
+| <img src="./Screenshot/step7-4.png">  | <img src="./Screenshot/step7-5.png">       |
+| Root view로 돌아갔으므로 내비게이션 상단 바에 `< Back`버튼도 없고, `Go to Next Screen` 버튼을 눌렀을때 변경된 라벨 색이 그대로 유지된다.   | 새로운 스택이 NavyVC위에 생기는 것이기 때문에 변경된 라벨 색이 유지되지 않는다. 현재 뷰가 rootView도 아니기때문에, `< Back`버튼도  있다.  |
+[뷰 생명주기, viewDidLoad참고 블로그](http://zeddios.tistory.com/44)
+
+#### viewDidLoad()의 실행유무 알아보기
+```
+FirstVC
+FirstViewController.swift 27 viewDidLoad()
+FirstViewController.swift 61 viewWillAppear
+FirstViewController.swift 65 viewDidAppear
+
+FirstVC to BlueVC
+BlueViewController.swift 15 viewDidLoad()
+FirstViewController.swift 69 viewWillDisappear
+BlueViewController.swift 36 viewWillAppear
+FirstViewController.swift 73 viewDidDisappear
+BlueViewController.swift 40 viewDidAppear
+
+BlueVC to NavyVC
+NavyViewController.swift 14 viewDidLoad()
+BlueViewController.swift 44 viewWillDisappear
+NavyViewController.swift 36 viewWillAppear
+BlueViewController.swift 48 viewDidDisappear
+NavyViewController.swift 40 viewDidAppear
+
+NavyVC to BlueVC: 이미 stack에 로드된 BlueVC로 가는 것이기 때문에 viewDidLoad()실행안됨
+NavyViewController.swift 44 viewWillDisappear
+BlueViewController.swift 36 viewWillAppear
+NavyViewController.swift 48 viewDidDisappear
+BlueViewController.swift 40 viewDidAppear
+
+BlueVC to FirstVC: 이미 stack에 로드된 FirstVC로 가는 것이기 때문에 viewDidLoad()실행안됨
+BlueViewController.swift 44 viewWillDisappear
+FirstViewController.swift 61 viewWillAppear
+BlueViewController.swift 48 viewDidDisappear
+FirstViewController.swift 65 viewDidAppear
 ```
