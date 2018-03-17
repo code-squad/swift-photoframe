@@ -21,8 +21,13 @@ class SecondViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    private func generateRandomImageNumber() -> String {
+        let randomNumber = Int(arc4random_uniform(21))+1
+        return String(format: "%02d", randomNumber)
+    }
+
     @IBAction func nextImageButtonTouched(_ sender: Any) {
-        self.photoImageView.image = UIImage(named: "DemoImages/01.jpg")
+        self.photoImageView.image = UIImage(named: "DemoImages/\(self.generateRandomImageNumber()).jpg")
     }
     
 }
