@@ -138,7 +138,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Home"/>
                                 <connections>
-                                    <action selector="homeButtonTouched:" destination="UDG-6m-DeQ" eventType="touchUpInside" id="eOz-gG-Vd7"/>
+                                    <segue destination="9pv-A4-QxB" kind="show" id="8xg-oI-rUQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -148,7 +148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CD6-2W-ToX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3006" y="-322"/>
+            <point key="canvasLocation" x="3005.5999999999999" y="-322.48875562218893"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
@@ -236,4 +236,7 @@
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="8xg-oI-rUQ"/>
+    </inferredMetricsTieBreakers>
 </document>
