@@ -417,8 +417,14 @@ closeButtonA BLUE View
 ```
 
 - ***dismiss나 pop하지 않고 Button을 누르면 창을 닫도록 하기 위해서 인터페이스 빌더에서 처리하는 방법은 무얼까요?***
-  - 인터페이스 빌더는 레이아웃파일이기때문에, 인터페이스 빌더만 가지고는 dismiss()나 pop()을 할 수 없지만, 코드로 segue를 만들거나 custom UIButton을 만들고 dismiss나 pop동작을 연결하면 사용할 수 있다. [참고링크1](https://stackoverflow.com/questions/14111448/interface-builder-dismiss-modal-view-controller-without-code) [참고링크2](https://stackoverflow.com/questions/9362749/moving-back-from-a-controller-to-a-previous-one/9363429#9363429)
+  - 인터페이스 빌더는 레이아웃파일이기때문에, 인터페이스 빌더만 가지고는 dismiss()나 pop()을 할 수 없지만, 코드로 segue를 만들거나 custom UIButton을 만들고 dismiss나 pop동작을 연결하면 사용할 수 있다.
+  [참고링크1](https://stackoverflow.com/questions/14111448/interface-builder-dismiss-modal-view-controller-without-code)
+  [참고링크2](https://stackoverflow.com/questions/9362749/moving-back-from-a-controller-to-a-previous-one/9363429#9363429)
 
+#### presentedViewController / presentingViewController
+기준을 어디에 두느냐에 따라서 헷갈리기 쉬운데, A > B > C 세개의 뷰 컨트롤러가 있고 순서대로 present로 뷰를 띄운 상태일때, **B를 기준으로**,
+- presenting: **B를 띄우고있는** 뷰 컨트롤러, A
+- presented: **B가 띄우고있는** 뷰 컨트롤러, C
 
 #### presentedViewController
 > Instance property. 자신이 호출한 뷰 컨트롤러(child) 저장.
@@ -434,7 +440,7 @@ When you present a view controller modally (either explicitly or implicitly) usi
 The view controller that presented this view controller.
 When you present a view controller modally (either explicitly or implicitly) using the `present(_:animated:completion:)` method, the view controller that was presented has this property set to the view controller that presented it. If the view controller was not presented modally, but one of its ancestors was, this property contains the view controller that presented the ancestor. If neither the current view controller or any of its ancestors were presented modally, the value in this property is nil.
 
-
+[참고링크: Start from the Beginning 블로그](http://blog.naver.com/itperson/220983305936)
 
 ### Step7 - Second Scene 화면
 > 탭바의 두 번째 화면 (Second Scene) 디자인을 변경하고 액자 앱을 동작을 구현한다.
@@ -449,7 +455,10 @@ When you present a view controller modally (either explicitly or implicitly) usi
 > UIImageVIew: 이미지를 display하는 오브젝트. **UIImage 클래스가 저장하고 관리하는 이미지 데이터를 뷰에 draw / display할 수 있도록 함.** (Image views let you efficiently draw any image that can be specified using a UIImage object.)
 
 ### contentMode
-> Image view는 contentMode 속성을 통해서 어떻게 이미지를 보여줄지 결정하게 된다.
+> contentmode는 뷰의 한 층에 있는 비트맵 이미지가 뷰 바운드에 변화가 일어났을때 어떻게 다르게 조정되는지에 대한 프로퍼티이다. 주로 리사이징에 많이 사용된다. 변화가 일어날때마다 콘텐츠를 redrawing하는 대신에, 이 프로퍼티를 이용하면 리사이징을 하거나(비율을 유지하거나 유지하지 않고), 뷰의 특정 위치에 위치시킬 수 있다.
+> 만약 위의 설명과 달리 뷰의 콘텐츠를 redrawing하고싶다면 setNeedsDisplay()메소드를 호출해서 redrawing할 수 있다.
+> **Image view는 contentMode 속성을 통해서 어떻게 이미지를 보여줄지 결정하게 된다.**
+
 
 - content mode의 종류는 스토리보드의 유틸리티영역에서 `view - content mode`에서 볼 수 있다.
   - <img src="./Screenshot/step7-6.png" width="33%">
@@ -458,9 +467,10 @@ When you present a view controller modally (either explicitly or implicitly) usi
   @IBOutlet weak var photoImageView: UIImageView!
   photoImageView.contentMode = .ScaleToFill  // UIViewContentMode enum 케이스
 ```
+[참고링크: ContentMode 애플공식문서](https://developer.apple.com/documentation/uikit/uiview/1622619-contentmode)
 [참고링크: UIViewContentMode 애플공식문서](https://developer.apple.com/documentation/uikit/uiviewcontentmode)
 [참고링크: Use your loaf](https://useyourloaf.com/blog/stretching-redrawing-and-positioning-with-contentmode/)
-
+[참고링크: stackoverflow ](https://stackoverflow.com/questions/4804649/what-is-the-mode-property-in-interface-builder-which-offers-scale-to-fill)
 
 
 #### 그 외 알게된 것들
@@ -475,7 +485,7 @@ let string2 = String(format: "%02d", 10) // returns "10"
 let string3 = String(format: "%02d", 100) // returns "100"
 ```
 
-### 뷰 실행주기 - viewDidLoad()
+### 뷰 생명주기 - viewDidLoad()
 
 #### Next를 터치하여 화면 전환할때 viewDidLoad()
 - First to Blue : Segue - show로 연결
@@ -548,5 +558,3 @@ FirstViewController.swift 61 viewWillAppear
 BlueViewController.swift 48 viewDidDisappear
 FirstViewController.swift 65 viewDidAppear
 ```
-
-####
