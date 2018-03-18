@@ -444,6 +444,25 @@ When you present a view controller modally (either explicitly or implicitly) usi
 <img src="./Screenshot/step7-1.png" width="33%"><img src="./Screenshot/step7-2.png" width="33%"><img src="./Screenshot/step7-3.png" width="33%">
 
 
+### UIImage & UIImageVIew
+> UIImage: 이미지를 저장하고 관리하는 데이터 오브젝트
+> UIImageVIew: 이미지를 display하는 오브젝트. **UIImage 클래스가 저장하고 관리하는 이미지 데이터를 뷰에 draw / display할 수 있도록 함.** (Image views let you efficiently draw any image that can be specified using a UIImage object.)
+
+### contentMode
+> Image view는 contentMode 속성을 통해서 어떻게 이미지를 보여줄지 결정하게 된다.
+
+- content mode의 종류는 스토리보드의 유틸리티영역에서 `view - content mode`에서 볼 수 있다.
+  - <img src="./Screenshot/step7-6.png" width="33%">
+- 사용 코드 예시
+```swift
+  @IBOutlet weak var photoImageView: UIImageView!
+  photoImageView.contentMode = .ScaleToFill  // UIViewContentMode enum 케이스
+```
+[참고링크: UIViewContentMode 애플공식문서](https://developer.apple.com/documentation/uikit/uiviewcontentmode)
+[참고링크: Use your loaf](https://useyourloaf.com/blog/stretching-redrawing-and-positioning-with-contentmode/)
+
+
+
 #### 그 외 알게된 것들
 - Int format을 0부터 시작하게 하고싶을때 String의 initializer사용
   - `String(format: "%02d", 1)`
@@ -456,10 +475,12 @@ let string2 = String(format: "%02d", 10) // returns "10"
 let string3 = String(format: "%02d", 100) // returns "100"
 ```
 
+### 뷰 실행주기 - viewDidLoad()
 
-### 특이점..
-왜 여기서는 viewDidDisappear 다음에 viewDidAppear일까!?.. 이게 정상이었음 대체 위에선 왜 그렇게 나왔던 것일까
-(First to Blue : Segue show로 연결, Blue to Navy : pushViewController로 연결)
+#### Next를 터치하여 화면 전환할때 viewDidLoad()
+- First to Blue : Segue - show로 연결
+- Blue to Navy : pushViewController()로 연결
+- Navy to First : homeButtonTouched()로 연결. present 사용
 ```
 FirstViewController.swift 27 viewDidLoad()
 FirstViewController.swift 61 viewWillAppear
@@ -476,6 +497,7 @@ BlueViewController.swift 44 viewWillDisappear
 NavyViewController.swift 35 viewWillAppear
 BlueViewController.swift 48 viewDidDisappear
 NavyViewController.swift 39 viewDidAppear
+
 ===== (NavyViewController의 homeButtonTouched실행)
 FirstViewController.swift 27 viewDidLoad() // 첫번째 뷰로 가면서 다시 viewDidLoad호출
 NavyViewController.swift 43 viewWillDisappear
@@ -483,8 +505,9 @@ FirstViewController.swift 61 viewWillAppear
 NavyViewController.swift 47 viewDidDisappear
 FirstViewController.swift 65 viewDidAppear
 ```
-- NavyVC에서 FirstVC로 전환될때 실행되는 homeButtonTouched()메소드는 FirstVC를 새로 생성하고 present한다. 이미 스택에 로드된 FirstVC와는 똑같이 생겼지만 다른 FirstVC가 나타나는 것이다. 따라서 해당 메소드와 연결된 `Home`버튼을 누를때마다 FirstVC의 viewDidLoad가 호출된다.
-- 특히, 원래 FirstVC에서 다음으로 가는 버튼을 누르면 '알린의 사진액자'라벨이 연두색에서 하늘색으로 바뀌도록 동작한다. 만약 stack에서 pop동작으로(내비게이션컨트롤러에서 `< Back`과 같음) FirstVC의 다음 뷰를 없앴다면 나타나는 FirstVC의 라벨은 하늘색이다. 하지만 NavyVC에서 homeButtonTouched을 실행하면 가장 초기 상태의 FirstVC가 나온다.
+- NavyVC에서 FirstVC로 전환될때 실행되는 homeButtonTouched()메소드는 FirstVC를 새로 생성하고 present한다. **이미 스택에 로드된 FirstVC와는 똑같이 생겼지만 다른 FirstVC가 나타나는 것이다.**
+- 따라서 해당 메소드와 연결된 `Home`버튼을 누를때마다 FirstVC의 viewDidLoad가 호출된다.
+- 특히, 원래 FirstVC에서 다음으로 가는 버튼을 누르면 '알린의 사진액자'라벨이 연두색에서 하늘색으로 바뀌도록 동작한다. 만약 stack에서 pop동작으로(내비게이션컨트롤러에서 `< Back`과 같음) FirstVC의 다음 뷰를 없앴다면 나타나는 FirstVC의 라벨은 하늘색이다. **하지만 NavyVC에서 homeButtonTouched을 실행하면 가장 초기 상태의 FirstVC가 나온다.**
 
 | FirstVC다음 뷰에서 stack pop했을때   | NavyVC에서 homeButtonTouched()했을때     |
 | :------------- | :------------- |
@@ -492,7 +515,7 @@ FirstViewController.swift 65 viewDidAppear
 | Root view로 돌아갔으므로 내비게이션 상단 바에 `< Back`버튼도 없고, `Go to Next Screen` 버튼을 눌렀을때 변경된 라벨 색이 그대로 유지된다.   | 새로운 스택이 NavyVC위에 생기는 것이기 때문에 변경된 라벨 색이 유지되지 않는다. 현재 뷰가 rootView도 아니기때문에, `< Back`버튼도  있다.  |
 [뷰 생명주기, viewDidLoad참고 블로그](http://zeddios.tistory.com/44)
 
-#### viewDidLoad()의 실행유무 알아보기
+#### close나 <Back을 터치했을때의 viewDidLoad()의 실행유무
 ```
 FirstVC
 FirstViewController.swift 27 viewDidLoad()
@@ -525,3 +548,5 @@ FirstViewController.swift 61 viewWillAppear
 BlueViewController.swift 48 viewDidDisappear
 FirstViewController.swift 65 viewDidAppear
 ```
+
+####
