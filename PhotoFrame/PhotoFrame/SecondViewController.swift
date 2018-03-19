@@ -11,6 +11,7 @@ import UIKit
 class SecondViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var photoImageView: UIImageView!
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -28,6 +29,8 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate, U
 
     @IBAction func nextImageButtonTouched(_ sender: Any) {
         self.photoImageView.image = UIImage(named: "\(self.generateRandomImageNumber()).jpg")
+        photoImageView.contentMode = .scaleAspectFill
+        photoImageView.clipsToBounds = true
     }
     
     @IBAction func selectButtonTouched(_ sender: UIButton) {
@@ -53,6 +56,8 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate, U
         self.dismiss(animated: false) {() in
             let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage
             self.photoImageView.image = selectedImage
+            self.photoImageView.contentMode = .scaleAspectFill
+            self.photoImageView.clipsToBounds = true
         } // completion 파라미터 부분 트레일링 클로저 사용
     }
 }
