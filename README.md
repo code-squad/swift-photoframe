@@ -417,9 +417,25 @@ closeButtonA BLUE View
 ```
 
 - ***dismiss나 pop하지 않고 Button을 누르면 창을 닫도록 하기 위해서 인터페이스 빌더에서 처리하는 방법은 무얼까요?***
-  - 인터페이스 빌더는 레이아웃파일이기때문에, 인터페이스 빌더만 가지고는 dismiss()나 pop()을 할 수 없지만, 코드로 segue를 만들거나 custom UIButton을 만들고 dismiss나 pop동작을 연결하면 사용할 수 있다.
-  [참고링크1](https://stackoverflow.com/questions/14111448/interface-builder-dismiss-modal-view-controller-without-code)
-  [참고링크2](https://stackoverflow.com/questions/9362749/moving-back-from-a-controller-to-a-previous-one/9363429#9363429)
+  - 처음엔 마지막VC(시작점)에서 첫번째VC(도착지점)으로 가는 segue를 만들어서 언결했는데, 이렇게하면 **뷰가 진짜 첫번째로 돌아간게 아니라 그냥 첫번째 뷰가 하나 더 만들어져서 마지막 뷰 위에 뜨는 것 뿐이었다.(원하는 방법이 아님)**
+
+  - 위의 방법과 달리 **인터페이스 빌더 내에서 `Exit`버튼에 연결하는 방법이 있다.**
+    - destination ViewController에 아래의 코드를 추가한다. 메소드 명은 달라도 상관 없다.
+    ```swift
+    // FirstViewController.swift
+
+    @IBAction func unwindToGlobal(segue: UIStoryboardSegue) {
+        // this may be blank
+    }
+    ```
+    - 출발지점 Viewcontroller에 버튼을 추가하고, 스토리보드에서 캔버스에 있는 Exit과 버튼을 연결한다. 연결과 동시에 모달 뷰가 뜨고 destination에 추가한 메소드가 보인다.
+    <img src="./Screenshot/step8-1.png">
+
+  - 동작 스크린샷은 아래와 같다.
+  <img src="./Screenshot/step8-2.png" width="25%"><img src="./Screenshot/step8-3.png" width="25%"><img src="./Screenshot/step8-4.png" width="25%"><img src="./Screenshot/step8-5.png" width="25%">
+
+  - 마지막에 뜬 FirstVC의 '알린의 사진액자'라벨 색이 변경된 것을 보니 제대로 unwind된 것이 맞다. (흰 배경: Start -> 남색 배경: Destination)
+
 
 #### presentedViewController / presentingViewController
 기준을 어디에 두느냐에 따라서 헷갈리기 쉬운데, A > B > C 세개의 뷰 컨트롤러가 있고 순서대로 present로 뷰를 띄운 상태일때, **B를 기준으로**,
