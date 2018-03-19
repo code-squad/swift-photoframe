@@ -20,13 +20,6 @@ class NavyViewController: UIViewController {
         //self.dismiss(animated: true, completion: nil)
     }
 
-    // firstView를 또 만들어서 present함
-    @IBAction func homeButtonTouched(_ sender: Any) {
-        if let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "firstView") {
-            self.present(homeVC, animated: true, completion: nil)
-        }
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

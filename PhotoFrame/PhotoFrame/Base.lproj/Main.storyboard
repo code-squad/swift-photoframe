@@ -133,18 +133,10 @@
                                     <action selector="closeButtonTouched:" destination="UDG-6m-DeQ" eventType="touchUpInside" id="mdo-MK-mEF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8H-SD-6u0">
-                                <rect key="frame" x="166" y="228" width="41" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Home"/>
-                                <connections>
-                                    <segue destination="9pv-A4-QxB" kind="show" id="8xg-oI-rUQ"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQn-kY-SdS">
-                                <rect key="frame" x="150" y="438" width="74" height="30"/>
+                                <rect key="frame" x="151" y="221" width="72" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="New Close"/>
+                                <state key="normal" title="Go to First"/>
                                 <connections>
                                     <segue destination="T0J-hi-tQ9" kind="unwind" unwindAction="unwindToGlobalWithSegue:" id="wy3-53-eqH"/>
                                 </connections>
@@ -245,7 +237,4 @@
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="8xg-oI-rUQ"/>
-    </inferredMetricsTieBreakers>
 </document>
