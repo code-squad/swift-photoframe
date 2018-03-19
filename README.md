@@ -581,8 +581,53 @@ FirstViewController.swift 61 viewWillAppear
 BlueViewController.swift 48 viewDidDisappear
 FirstViewController.swift 65 viewDidAppear
 ```
- 
+
 ### Step8 - 마무리하기
 > 델리게이트(Delegate)와 프로토콜(Protocol) 상관 관계에 대해 학습한다.
 이미지 테두리 액자 화면을 추가한다.
 사진 앨범에서 사진을 가져와서 보여줄 수 있도록 개선한다.
+
+- 구현 화면 : 2018.03.19 16:00
+<img src="./Screenshot/step8-6.png" width="25%"><img src="./Screenshot/step8-8.png" width="25%"><img src="./Screenshot/step8-9.png" width="25%"><img src="./Screenshot/step8-10.png" width="25%">
+
+
+### UIImagePickerController
+>이미지 피커 컨트롤러는 사용자와 상호작용하면서, 사용자가 원하는 결과를 delegate 객체에 전달한다.  또한 source type에 따라 이미지 피커 컨트롤러의 역할이나 표시방식이 달라진다.
+> - camera의 sourceType: 카메라 인터페이스 제공
+> - photoLibrary 또는 savedPhotosAlbum의 sourceType: 사진앨범 인터페이스 제공
+
+#### 권한 선언하기
+UIImagePickerController는 사용자의 사적인 데이터에 접근하는 객체이므로, 사용을 위해서는 접근권한을 설정해줘야 한다. 권한이 필요한 프레임워크로는 *Calendar , Contact , Reminder , Photo , Bluetooth Sharing , Microphone , Camera , Location , Heath , HomeKit , Media Library , Motion , CallKit , Speech Recognition , SiriKit , TV Provider* 가 있다.
+- Info.plist 파일 열기
+- 나열된 목록에서 `+` 버튼 클릭하고 Key, Value에 Description 추가하기
+- 앱이 실행되고 사진 라이브러리에 접근하려고 하면 alert가 뜨고 승인하면 라이브러리에 접근이 가능하다.
+- [참고링크](https://iosdevcenters.blogspot.com/2016/09/infoplist-privacy-settings-in-ios-10.html)
+
+#### 사진 비율 맞춰서 리사이징하기
+UIImageVIew의 사이즈와 라이브러리에서 선택한 사진의 가로, 세로 길이 비율이 맞지 않으면 사진이 비율이 왜곡되어 보이거나, 프레임 밖으로 나오게 보여질 수 있다. contentMode 속성을 적용해서 이를 조절할 수 있다.
+- 사진액자 앱의 프레임은 정사각형이다. 이 프레임에 맞출 직사각형 사진을 선택했다.
+- 가장 오른쪽에 있는 사진이 비율 왜곡과 프레임 이탈 없이 프레임에 맞는 경우이다.
+<img src="./Screenshot/step8-11.png" width="30%"> <img src="./Screenshot/step8-12.png" width="30%"> <img src="./Screenshot/step8-13.png" width="30%">
+
+- ***첫번째 사진 scaleToFill***: (contentMode의 default 설정)
+  - ScaleToFill: Stretches the view to fill the available space without maintaining the aspect ratio - 이미지 뷰의 표시 가능한 공간까지 모두 이미지를 채우는 옵션으로, 이미지의 원래 비율이 유지되지 않는다.
+- ***두번째 사진 scaleAspectFill***:
+    - scaleAspectFill: Scales the content to totally fill the view maintaining the aspect ratio. This can result in the content being larger than the bounds of the view. - 이미지의 원래 비율을 유지하면서 뷰를 채우지만, 경계보다 이미지가 더 커질 수 있다.
+- ***세번째 사진(완성) clipsToBounds = true***:
+    - clipsToBounds 설정을 변경해주면 콘텐츠 밖의 경계에 있는 여백을 없앨 수 있다.
+    - A Boolean value that determines whether subviews are confined to the bounds of the view. - 서브뷰(콘텐츠)를 경계 내부에 가두고(한정시키고)싶으면 값을 `true`로 설정한다.
+
+- contentMode의 설정은 아래 코드처럼 적용할 수 있다.
+```swift
+// SecondViewController.swift
+@IBOutlet weak var photoImageView: UIImageView!
+
+func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+       self.dismiss(animated: false) {() in
+           let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage
+           self.photoImageView.image = selectedImage
+           self.photoImageView.contentMode = .scaleAspectFill
+           self.photoImageView.clipsToBounds = true
+       } // completion 파라미터 부분 트레일링 클로저 사용
+   }
+```
