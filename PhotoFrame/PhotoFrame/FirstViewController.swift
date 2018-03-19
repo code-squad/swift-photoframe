@@ -26,7 +26,10 @@ class FirstViewController: UIViewController {
         self.nextButton.backgroundColor = UIColor.green
         print(#file, #line, #function, #column)
     }
-
+    
+    @IBAction func unwindToGlobal(segue: UIStoryboardSegue) {
+        // this may be blank
+    }
 
 //    @IBAction func nextButtonA(_ sender: Any) {
 //        if let blueVC = self.storyboard?.instantiateViewController(withIdentifier: "blueView") {
