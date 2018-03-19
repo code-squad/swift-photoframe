@@ -24,11 +24,11 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate, U
 
     private func generateRandomImageNumber() -> String {
         let randomNumber = Int(arc4random_uniform(21))+1
-        return String(format: "%02d", randomNumber)
+        return String(format: "%02d.jpg", randomNumber)
     }
 
     @IBAction func nextImageButtonTouched(_ sender: Any) {
-        self.photoImageView.image = UIImage(named: "\(self.generateRandomImageNumber()).jpg")
+        self.photoImageView.image = UIImage(named: self.generateRandomImageNumber())
         photoImageView.contentMode = .scaleAspectFill
         photoImageView.clipsToBounds = true
     }
@@ -43,7 +43,7 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate, U
 
     // 이미지 피커에서 이미지 선택 안했을 때
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        self.dismiss(animated: false, completion: {() in
+        picker.dismiss(animated: false, completion: {() in
             let alert = UIAlertController(title: "", message: "이미지 선택 취소", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "확인", style: .cancel))
             self.present(alert, animated: false)
@@ -53,7 +53,7 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate, U
 
     // 이미지 피커에서 이미지 선택 했을 때
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        self.dismiss(animated: false) {() in
+        picker.dismiss(animated: false) {() in
             let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage
             self.photoImageView.image = selectedImage
             self.photoImageView.contentMode = .scaleAspectFill
