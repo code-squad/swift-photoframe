@@ -10,7 +10,12 @@ import UIKit
 
 class SecondViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var photoImageView: UIImageView!
-
+    var randomImage: String {
+        get {
+            let randomNumber = Int(arc4random_uniform(21))+1
+            return String(format: "%02d.jpg", randomNumber)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,13 +27,8 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate, U
         // Dispose of any resources that can be recreated.
     }
 
-    private func generateRandomImageNumber() -> String {
-        let randomNumber = Int(arc4random_uniform(21))+1
-        return String(format: "%02d.jpg", randomNumber)
-    }
-
     @IBAction func nextImageButtonTouched(_ sender: Any) {
-        self.photoImageView.image = UIImage(named: self.generateRandomImageNumber())
+        self.photoImageView.image = UIImage(named: self.randomImage)
         photoImageView.contentMode = .scaleAspectFill
         photoImageView.clipsToBounds = true
     }
