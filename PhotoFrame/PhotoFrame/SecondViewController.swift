@@ -10,6 +10,7 @@ import UIKit
 
 class SecondViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var photoImageView: UIImageView!
+    
     var randomImage: String {
         get {
             let randomNumber = Int(arc4random_uniform(21))+1
@@ -27,10 +28,14 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate, U
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func nextImageButtonTouched(_ sender: Any) {
-        self.photoImageView.image = UIImage(named: self.randomImage)
+    private func setSquareImage() {
         photoImageView.contentMode = .scaleAspectFill
         photoImageView.clipsToBounds = true
+    }
+
+    @IBAction func nextImageButtonTouched(_ sender: Any) {
+        self.photoImageView.image = UIImage(named: self.randomImage)
+        self.setSquareImage()
     }
     
     @IBAction func selectButtonTouched(_ sender: UIButton) {
@@ -56,8 +61,7 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate, U
         picker.dismiss(animated: false) {() in
             let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage
             self.photoImageView.image = selectedImage
-            self.photoImageView.contentMode = .scaleAspectFill
-            self.photoImageView.clipsToBounds = true
+            self.setSquareImage()
         } // completion 파라미터 부분 트레일링 클로저 사용
     }
 }
