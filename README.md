@@ -316,18 +316,32 @@ iOS는 항상 디바이스 스크린에 꽉 들어차는 하나의 화면만을 
 - 화면 전환 방식에 따라 이전 화면으로 되돌아가는 방법이 다름
   ex) present메소드로 전환했으면 dismiss로 돌아가야함
 
-### 관련 이슈 - VC close하기
+
+### JK의 질문 + 알아 본 것들
+
+#### ***내비게이션뷰컨트롤러에 push 한 경우에 dismiss 하면 어떻게 되나요?***
+  - BlueVC에서 NavyVC로 화면을 전환할때 `present`에서 `push`사용으로 메소드 수정
+  - NavyVC에서 `dismiss` 실행하니 아무 변화도 일어나지 않음. 자신이 `push`된 메소드이므로 스택에 들어가게됐는데, 스택에 들어가면 pop하지 않는이상 dismiss는 맞는 명령이 아니므로 아무 일도 일어나지 않음.
+  - ***`present`메소드와 `push`의 차이***
+    - `present`: Presents a view controller modally. 만약 스토리보드에서, 이전 뷰에서 segue 연결 없이 다음 뷰를 present한다면 둘은 아무 관계가 없고 그저 두 번째 뷰의 형태만 첫번째 뷰 위에 띄우는 방식. 프레젠테이션 방식으로 화면 전환 시, iOS 시스템은 두 뷰 컨트롤러 사이에 참조할 수 있는 포인터를 생성하여 서로 참조할 수 있게 한다.
+    - Modal 방식: 현재 뷰 컨트롤러에서 이동할 대상 뷰 컨트롤러를 직접 호출하여 표시하는 방식으로, 프레젠테이션 방식이라고 함.
+    - `push`: UINavigationController가 가지는 stack에 (순서대로라면) 첫번째 뷰가 스택에 쌓이고 두번째 뷰가 그 위에 쌓인다. 두 뷰는 스택의 순서에 따르는 순서를 가지게 됨.
+  - [참고링크: Pushing, Popping, Presenting, & Dismissing ViewControllers](https://medium.com/@felicity.johnson.mail/pushing-popping-dismissing-viewcontrollers-a30e98731df5)
+
+#### 관련 이슈 - VC close하기
 > closeButtonTouched()메소드와 연결된 버튼을 터치했을때 에러 / 아무 동작도 일어나지 않았던 상황 정리
 
 1. 첫번째(FirstVC) 화면에서 두번째(BlueVC)로 가는 동작은 Segue로 연결되어있다.
 -> `pop`으로 두번째 화면을 닫는다 > 첫번째 FirstVC로 잘 되돌아간다.
 ```Swift
+    // Blue to First
     @IBAction func closeButtonTouched(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
 ```
-2. 두번째(BlueVC)에서 세번째 (NavyVC)로 가는 동작은 코드로 작성했다.
+2. 두번째(BlueVC)에서 세번째 (NavyVC)로 가는 동작은 코드로 작성했다. - `present()`
 ```swift
+    // Blue to Navy
     @IBAction func newNextButtonTouched(_ sender: Any) {
         if let navyVC = self.storyboard?.instantiateViewController(withIdentifier: "navyView") {
             self.present(navyVC, animated: true, completion: nil)
@@ -336,26 +350,19 @@ iOS는 항상 디바이스 스크린에 꽉 들어차는 하나의 화면만을 
 ```
   -> 위에서 설명한대로 `present()`로 구현했다면 `dismiss`를 사용했어야했는데, BlueVC에서처럼 pop을 사용했더니 아무 동작도 하지 않고 계속 NavyVC만 표시되는 상태였는데, `present()`로 뷰를 띄웠으니 **pop할 뷰가 없어서 아무 동작도 하지 않았던 것.**
 ```swift
+  // NavyViewController.swift
+
   // Before Code
     @IBAction func closeButtonTouched(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
-  // After Code
+  // After Code - 동작 성공
     @IBAction func closeButtonTouched(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
 ```
-#### JK의 질문 + 알아 본 것들
 
-- ***내비게이션뷰컨트롤러에 push 한 경우에 dismiss 하면 어떻게 되나요?***
-  - BlueVC에서 NavyVC로 화면을 전환할때 `present`에서 `push`사용으로 메소드 수정
-  - NavyVC에서 `dismiss` 실행하니 아무 변화도 일어나지 않음. 자신이 `push`된 메소드이므로 스택에 들어가게됐는데, 스택에 들어가면 pop하지 않는이상 dismiss는 맞는 명령이 아니므로 아무 일도 일어나지 않음.
-  - ***`present`메소드와 `push`의 차이***
-    - `present`: Presents a view controller modally. 만약 스토리보드에서, 이전 뷰에서 segue 연결 없이 다음 뷰를 present한다면 둘은 아무 관계가 없고 그저 두 번째 뷰의 형태만 첫번째 뷰 위에 띄우는 방식. 프레젠테이션 방식으로 화면 전환 시, iOS 시스템은 두 뷰 컨트롤러 사이에 참조할 수 있는 포인터를 생성하여 서로 참조할 수 있게 한다.
-    - Modal 방식: 현재 뷰 컨트롤러에서 이동할 대상 뷰 컨트롤러를 직접 호출하여 표시하는 방식으로, 프레젠테이션 방식이라고 함.
-    - `push`: UINavigationController가 가지는 stack에 (순서대로라면) 첫번째 뷰가 스택에 쌓이고 두번째 뷰가 그 위에 쌓인다. 두 뷰는 스택의 순서에 따르는 순서를 가지게 됨.
-  - [Pushing, Popping, Presenting, & Dismissing ViewControllers](https://medium.com/@felicity.johnson.mail/pushing-popping-dismissing-viewcontrollers-a30e98731df5)
-- ***self.dismiss()와 present했던 곳에서 nextViewController.dismiss() 하는 것과 어떤 차이가 있을까요?***
+#### ***self.dismiss()와 present했던 곳에서 nextViewController.dismiss() 하는 것과 어떤 차이가 있을까요?***
   - present했던 곳 : FirstViewController , presentingViewController(ancestor)
   - BlueViewController에 예시로 두 가지 닫기 버튼(A,B)을 만듦
 
@@ -416,7 +423,7 @@ closeButtonA BLUE View
 
 ```
 
-- ***dismiss나 pop하지 않고 Button을 누르면 창을 닫도록 하기 위해서 인터페이스 빌더에서 처리하는 방법은 무얼까요?***
+#### ***dismiss나 pop하지 않고 Button을 누르면 창을 닫도록 하기 위해서 인터페이스 빌더에서 처리하는 방법은 무얼까요?***
   - 처음엔 마지막VC(시작점)에서 첫번째VC(도착지점)으로 가는 segue를 만들어서 언결했는데, 이렇게하면 **뷰가 진짜 첫번째로 돌아간게 아니라 그냥 첫번째 뷰가 하나 더 만들어져서 마지막 뷰 위에 뜨는 것 뿐이었다.(원하는 방법이 아님)**
 
   - 위의 방법과 달리 **인터페이스 빌더 내에서 `Exit`버튼에 연결하는 방법이 있다.**
@@ -574,3 +581,8 @@ FirstViewController.swift 61 viewWillAppear
 BlueViewController.swift 48 viewDidDisappear
 FirstViewController.swift 65 viewDidAppear
 ```
+ 
+### Step8 - 마무리하기
+> 델리게이트(Delegate)와 프로토콜(Protocol) 상관 관계에 대해 학습한다.
+이미지 테두리 액자 화면을 추가한다.
+사진 앨범에서 사진을 가져와서 보여줄 수 있도록 개선한다.
