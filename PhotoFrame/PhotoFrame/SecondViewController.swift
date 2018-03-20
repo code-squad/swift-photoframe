@@ -28,14 +28,15 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate, U
         // Dispose of any resources that can be recreated.
     }
 
-    private func setSquareImage() {
+    private func setSquareImageView(_ selectImage: UIImage?) {
+        self.photoImageView.image = selectImage
         photoImageView.contentMode = .scaleAspectFill
         photoImageView.clipsToBounds = true
     }
 
     @IBAction func nextImageButtonTouched(_ sender: Any) {
-        self.photoImageView.image = UIImage(named: self.randomImage)
-        self.setSquareImage()
+        self.setSquareImageView(UIImage(named: self.randomImage))
+
     }
     
     @IBAction func selectButtonTouched(_ sender: UIButton) {
@@ -61,7 +62,7 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate, U
         picker.dismiss(animated: false) {() in
             let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage
             self.photoImageView.image = selectedImage
-            self.setSquareImage()
+            self.setSquareImageView(selectedImage)
         } // completion 파라미터 부분 트레일링 클로저 사용
     }
 }
