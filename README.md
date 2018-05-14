@@ -31,3 +31,43 @@
 #### 참고링크  
 [UITabBarController](https://developer.apple.com/documentation/uikit/uitabbarcontroller)   
 [UITabBar](https://developer.apple.com/documentation/uikit/uitabbar)
+
+  
+      
+
+## PhotoFrame - step2
+
+### 요구사항  
+* 사진액자 앱 - 시작하기 요구사항을 구현한 상태로 시작한다.
+* First Scene에 만들어져 있는 레이블을 IBOutlet으로 연결한다.
+* 연결한 아웃렛 변수에 값을 변경한다.
+* 실행한 화면을 캡처해서 readme.md 파일에 포함한다.
+  
+### 프로그래밍 요구사항
+* Xcode 프로젝트 내비게이터에서 Main.storyboard 파일을 선택하고 First Scene 에 있는 'First View' 레이블(Label)을 선택하고 Assistant Editor 모드로 변경한다.
+* 레이블을 선택하고 Control + 드래그해서 ViewController 코드에 IBOutlet으로 연결한다.
+* Outlet 이름으로 photoLabel을 입력한다.
+* ViewController 클래스 viewDidLoad() 함수에서 위에 추가한 아웃렛 변수에 값을 변경하고 다시 실행한다.
+* 위와 같이 코드로 firstLabel의 속성을 변경해본다. 글자색, 배경색, 투명도, 글자 크기를 바꿔본다.
+* firstLabel 아래 있는 레이블도 firstDescription 아웃렛으로 연결한다.
+	* 마찬가지 방식으로 값을 변경해서 꾸며본다.
+
+  
+![consol](image/firstLabel.png)
+
+* UILabel 클래스 속성(Property)는 어떤게 있는지 학습한다.
+
+### UILabel  
+text - Label 내용을 지정  
+textColor - text color를 지정  
+font - 문자열의 글꼴을 지정  
+textAlignment - 문자의 가로정렬 왼쪽, 오른쪽, 가운데정렬 선택  
+numberOfLines - 문자를 렌더링할때 최대 line 수를 지정 
+
+
+
+
+
+#### 참고링크  
+[UILabel](https://developer.apple.com/documentation/uikit/uilabel)  
+[RGB to UIColor Converter](http://uicolor.xyz/#/rgb-to-ui)
