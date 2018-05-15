@@ -31,6 +31,14 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z36-y9-pBK">
+                                <rect key="frame" x="173" y="502" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="다음"/>
+                                <connections>
+                                    <action selector="nextButtonTouched:" destination="9pv-A4-QxB" eventType="touchUpInside" id="laR-8P-w6M"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.61565085784537921" green="0.84550178676280641" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -45,7 +53,6 @@
                     <connections>
                         <outlet property="firstDescription" destination="A5M-7J-77L" id="wn0-d0-osd"/>
                         <outlet property="firstLabel" destination="KQZ-1w-vlD" id="Jie-Jv-6F5"/>
-                        <outlet property="firstView" destination="tsR-hK-woN" id="xYT-hG-aMU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
