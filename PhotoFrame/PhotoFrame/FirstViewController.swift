@@ -9,16 +9,16 @@
 import UIKit
 
 class FirstViewController: UIViewController {
-
-    @IBOutlet var firstView: UIView!
+    
     @IBOutlet weak var firstLabel: UILabel!
     @IBOutlet weak var firstDescription: UILabel!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.firstView.backgroundColor = UIColor(red:0.58, green:0.76, blue:0.93, alpha:1.0)
+        self.view.backgroundColor = UIColor(red:0.58, green:0.76, blue:0.93, alpha:1.0)
         self.firstLabel.text = "hyun의 사진액자"
-        self.firstLabel.textColor = UIColor(red:0.04, green:0.44, blue:0.62, alpha:1.0)
+        let firstLabelTextColor = #colorLiteral(red: 1, green: 0.6679624844, blue: 0.81585554, alpha: 1)
+        self.firstLabel.textColor = firstLabelTextColor
         self.firstLabel.backgroundColor = UIColor.clear
         self.firstLabel.font = UIFont.systemFont(ofSize: 50)
         self.firstDescription.text = "photo frame 🌃"
@@ -33,6 +33,11 @@ class FirstViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func nextButtonTouched(_ sender: Any) {
+        self.firstLabel.textColor = UIColor.blue
+        self.firstLabel.backgroundColor = UIColor.yellow
+        self.firstLabel.alpha = 0.5
+    }
 
 }
 
