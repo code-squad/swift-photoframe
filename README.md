@@ -53,7 +53,7 @@
 	* 마찬가지 방식으로 값을 변경해서 꾸며본다.
 
   
-![firstLabel](image/firstLabel.png)
+![consol](image/firstLabel.png)
 
 * UILabel 클래스 속성(Property)는 어떤게 있는지 학습한다.
 
@@ -70,67 +70,4 @@ numberOfLines - 문자를 렌더링할때 최대 line 수를 지정
 
 #### 참고링크  
 [UILabel](https://developer.apple.com/documentation/uikit/uilabel)  
-[RGB to UIColor Converter](http://uicolor.xyz/#/rgb-to-ui)  
-
-
-## PhotoFrame - step3  
-  
-### 요구사항    
-* 사진액자 - IBOutlet 요구사항을 구현한 상태로 시작한다.
-* First Scene에 버튼(UIButton)을 추가하고 IBAction으로 연결한다.
-* 연결한 액션에 대한 메서드를 구현한다.
-* 실행하고 버튼을 터치하기 이전/이후 화면을 캡처해서 readme.md 파일에 포함한다.  
-
-### 프로그래밍 요구사항  
-* Main.storyboard 에서 First Scene에 UIButton을 추가한다.
-	* 우측 유틸리티 영역 하단 3번째 탭 - 객체 라이브러리(Object Library)에서 Button 을 찾아서 View로 드래그한다.
-	* 방금 추가한 버튼을 선택하고 우측 유틸리티 영역 상단 4번째 탭 - 속성(Attributes)에서 Title을 `다음`으로 변경한다.
-* 버튼을 선택하고 `Control + 드래그`해서 ViewController 코드에 IBAction으로 연결한다. 
-* 다음과 팝업에서 Connection 항목에서 IBOutlet 대신 IBAction 으로 변경한다.
-* 액션 이름을 `nextButtonTouched` 로 지정한다.
-* ViewController 클래스에 추가된 nextButtonTouched() 메서드에 아래처럼 구현을 추가한다.   
-
-![before](image/before.png)
-![after](image/after.png)
-
-
-
-### 학습꺼리
-* IBAction 과 IBOutlet 연결 구조에 대해 이해한 내용을 정리한다.  
-
-![photoframe-target-action](image/photoframe-target-action.png)  
-
-  
-IBAction과 IBOutlet은 iOS 프로그래밍에서 MVC 패턴을 구현하기 위한 개념으로 사용된다
-
-MVC 패턴이란 데이터를 소유한 Model과 사용자에게 보여지는 View 그리고 View에서 발생되는 Event를 받아서 Model을 갱신하는 Controller를 의미하는데 View와 ViewController를 연결해주는 역할을 하는 것이 IBAction과 IBOutlet이다
-
-MVC(Model View Controller)의 약자로 에플리케이션을 세가지의 역할로 구분한 개발 방법론이다. 아래의 그림처럼 사용자가 Controller를 조작하면 Controller는 Model을 통해서 데이터를 가져오고 그 정보를 바탕으로 시각적인 표현을 담당하는 View를 제어해서 사용자에게 전달하게 된다. 
-
-![MVC](image/mvc.png)  
-
-
-IBAction은 View에서 Event가 발생되었을 때 호출되는 함수이며 IBOutlet은 Controller 함수에서 Button 등 View의 Control에 접근하기 위한 변수이다  
-
-
-
-* 버튼에 IBAction을 추가할 때 이벤트(Event) 종류에는 어떤 것들이 있는지 학습한다.  
-
-![events](image/event.png)  
-
-
-* 버튼에 액션을 여러개 추가할 수 있을까?
-	* 버튼에 액션을 여러개 추가할 수 있다
-	* sender를 이용해서 구분해서 사용할수 있다
-* 버튼이 여러개일 때 하나의 액션에 추가할 수 있을까?
-	*  여러개의 버튼에 하나의 액션을 추가할 수 있다
-
-
-
-
-#### 참고링크    
-[IBAction과 IBOutlet](http://blog.devez.net/59)  
-[MVC 생활코딩](https://opentutorials.org/course/697/3828)  
-[UIButton](https://developer.apple.com/documentation/uikit/uibutton)  
-[UIControl](https://developer.apple.com/documentation/uikit/uicontrol?changes=latest_minor&preferredLanguage=occ)  
-[iOS IBAction](https://m.blog.naver.com/PostView.nhn?blogId=itperson&logNo=220972510635&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F)
+[RGB to UIColor Converter](http://uicolor.xyz/#/rgb-to-ui)
