@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D647DC4420AC416A00C80477 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D647DC4320AC416A00C80477 /* YellowViewController.swift */; };
+		D647DC4620AC459800C80477 /* PinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D647DC4520AC459800C80477 /* PinkViewController.swift */; };
 		D6E2BAFB20A5776B00D3FB4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E2BAFA20A5776B00D3FB4F /* AppDelegate.swift */; };
 		D6E2BAFD20A5776B00D3FB4F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E2BAFC20A5776B00D3FB4F /* FirstViewController.swift */; };
 		D6E2BAFF20A5776B00D3FB4F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E2BAFE20A5776B00D3FB4F /* SecondViewController.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D647DC4320AC416A00C80477 /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
+		D647DC4520AC459800C80477 /* PinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinkViewController.swift; sourceTree = "<group>"; };
 		D6E2BAF720A5776B00D3FB4F /* PhotoFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6E2BAFA20A5776B00D3FB4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6E2BAFC20A5776B00D3FB4F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +105,8 @@
 			children = (
 				D6E2BAFA20A5776B00D3FB4F /* AppDelegate.swift */,
 				D6E2BAFC20A5776B00D3FB4F /* FirstViewController.swift */,
+				D647DC4320AC416A00C80477 /* YellowViewController.swift */,
+				D647DC4520AC459800C80477 /* PinkViewController.swift */,
 				D6E2BAFE20A5776B00D3FB4F /* SecondViewController.swift */,
 				D6E2BB0020A5776B00D3FB4F /* Main.storyboard */,
 				D6E2BB0320A5776D00D3FB4F /* Assets.xcassets */,
@@ -259,9 +265,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D647DC4420AC416A00C80477 /* YellowViewController.swift in Sources */,
 				D6E2BAFF20A5776B00D3FB4F /* SecondViewController.swift in Sources */,
 				D6E2BAFB20A5776B00D3FB4F /* AppDelegate.swift in Sources */,
 				D6E2BAFD20A5776B00D3FB4F /* FirstViewController.swift in Sources */,
+				D647DC4620AC459800C80477 /* PinkViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

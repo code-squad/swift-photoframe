@@ -32,9 +32,9 @@ class FirstViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+//    액션을 연결해서 처리하는 것과 세그웨이를 연결하는 것의 차이를 확실히 구분해보세요
 
-//    IBOutlet 과 IBAction 역할에 대해서 확실하게 이해하는 단계를 만드세요.
-//    이름을 수정하면 어떤 오류가 발생하는지 어떻게 해결하는지도 확인하세요.
     
     @IBAction func nextButtonTouch(_ sender: Any) {
         self.firstLabel.textColor = UIColor.blue
