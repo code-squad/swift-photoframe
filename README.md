@@ -180,3 +180,49 @@ Segue의 종류
 [Segue](http://blog.naver.com/PostView.nhn?blogId=jdub7138&logNo=220393890771&parentCategoryNo=58&categoryNo=&viewDate=&isShowPopularPosts=true&from=search)
 
 
+## PhotoFrame - step5 
+ 
+### 요구사항        
+* 사진액자 - Scene과 Segue 요구사항을 구현한 상태로 시작한다.
+* 뷰컨트롤러 강의 슬라이드를 읽고 학습한다.
+* 스토리보드 구성 요소와 클래스 코드와 연결해서 동작을 확장한다.
+* 실행하고 새로운 화면을 캡처해서 readme.md 파일에 포함한다.  
+
+### 프로그래밍 요구사항  
+* 프로젝트에 새로운 ViewController 클래스를 추가한다. File > New... > File... 메뉴를 선택한다. 다음과 같은 화면에서 Cocoa Touch Class를 선택한다.
+* 다음과 같이 UIViewController에서 상속받도록 입력하고, 원하는 클래스명을 입력한다. (예시 YellowViewController)  
+* 다음 화면에서는 프로젝트내 어떤 경로에 저장하며, 프로젝트 그룹/타깃에 저장할 것인지 선택한다.  
+	* 하위 디렉토리가 있거나 원하는 하위 그룹이 있으면 변경할 수 있다.
+	* 빌드하는 타깃이 여러 개인 경우, 복수로 선택할 수도 있다. 
+
+* 스토리보드에서 새로 추가한 Scene을 선택하고, 우측 유틸리티 영역 3번째 Identity 탭을 선택한다.  
+	* Custom Class > Class 항목에 YellowViewController (자신이 생성한 클래스 이름)을 지정한다.
+	* 자동완성이 되야 클래스가 제대로 생성된 것이다. 자동완성이 안된다면 앞 단계를 다시 확인해서 UIViewController에서 상속 받도록 만들었는지 확인하고 클래스를 다시 만든다.
+* 이제 스토리보드에서 YellowViewController 화면에 [닫기] 버튼을 추가한다.
+* Assistant Editor를 선택하고 [닫기] 버튼에 대한 IBAction 액션을 연결한다.
+	* 만약 방금 추가한 `YellowViewController` (혹은 자신이 생성한 클래스)가 우측에 자동으로 연결되지 않으면 Custom Class가 정상적으로 연결되지 않았거나
+
+	* 우측 Assistant 편집기 상단에 점프바(JumpBar)에 `Automatic` 이라고 선택되어 있는지 확인한다. 다른 상태인 경우 `Automatic`으로 변경한다.
+* IBAction 이름은 `closeButtonTouched`로 지정하고 다음과 같이 코드를 작성한다.
+
+* 위와 동일하게 세 번째 추가한 화면에 대해 ViewController 클래스를 지정하고, [닫기]버튼을 추가하고, 액션을 연결해서 화면을 닫는 동작이 동작하도록 구현한다.
+* 뷰 컨트롤러 강의 자료에 있는 화면 관련 콜백 함수들에 모두 `print(#file, #line, #function, #column)` 코드를 추가한다.
+	* viewWillAppear()
+	* viewDidAppear()
+	* viewWillDisappear()
+	* viewDidDisappear()
+
+
+![firstvc](image/firstvc.png)
+![yellowvc](image/yellowvc.png)
+![pinkvc](image/pinkvc.png)
+
+### 학습꺼리    
+* 화면 전환이 이루어지는 사이에 뷰컨트롤러 라이프사이클이 어떻게 변화하는지 학습한다.
+* 뷰컨트롤러와 관련된 새로운 용어들에 대해 학습한다.
+* YellowViewController에서 Segue를 제거하고 다음 화면을 보여줄 때 코드로 보여주는 방법을 찾아보고 적용해본다.
+
+
+#### 참고링크      
+[Swift 화면 전환](http://blog.naver.com/PostView.nhn?blogId=baek2304&logNo=220885876605&parentCategoryNo=68&categoryNo=&viewDate=&isShowPopularPosts=true&from=search)  
+[화면 전환](http://mytoygift.com/152)
