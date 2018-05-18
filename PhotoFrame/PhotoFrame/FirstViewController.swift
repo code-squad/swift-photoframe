@@ -32,10 +32,7 @@ class FirstViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-//    액션을 연결해서 처리하는 것과 세그웨이를 연결하는 것의 차이를 확실히 구분해보세요
 
-    
     @IBAction func nextButtonTouch(_ sender: Any) {
         self.firstLabel.textColor = UIColor.blue
         self.firstLabel.backgroundColor = UIColor.yellow
