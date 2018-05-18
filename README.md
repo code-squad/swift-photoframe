@@ -225,4 +225,45 @@ Segue의 종류
 
 #### 참고링크      
 [Swift 화면 전환](http://blog.naver.com/PostView.nhn?blogId=baek2304&logNo=220885876605&parentCategoryNo=68&categoryNo=&viewDate=&isShowPopularPosts=true&from=search)  
-[화면 전환](http://mytoygift.com/152)
+[화면 전환](http://mytoygift.com/152)  
+
+
+## PhotoFrame - step6
+
+### 요구사항  
+* 사진액자 - ViewController 요구사항을 구현한 상태로 시작한다.
+* 뷰컨트롤러 컨테이너 강의 슬라이드를 읽고 학습한다.
+* 내비게이션 컨트롤러(Navigation Controller)를 Embed 시켜서 동작하도록 개선한다.
+* 실행하고 새로운 화면을 캡처해서 readme.md 파일에 포함한다.  
+
+### 프로그래밍 요구사항    
+* 스토리보드에서 First Scene을 선택하고, Editor > Embed In > Navigation Controller 항목을 선택한다.
+* 실행해보면 화면 상단에 내비게이션바(Navigation Bar)가 추가되고 [다음]버튼을 누르면 다음 화면이 우측에서 좌측으로 애니메이션되면서 표시된다.
+* [닫기]버튼에 연결된 `loseButtonTouched` 코드를 다음과 같이 수정한다.
+* 위와 동일하게 세 번째 추가한 화면에 [닫기]버튼도 코드를 수정한다.
+* 뷰 컨트롤러 콜백 함수들 동작도 동일한지 확인한다.
+
+![navigation1](image/navigation1.png)  
+![navigation2](image/navigation2.png)  
+![navigation3](image/navigation3.png)  
+
+
+### 학습꺼리  
+* 뷰컨트롤러 컨테이너 동작을 이해한다.
+* 뷰컨트롤러 컨테이너는 또 어떤 클래스가 있는지 찾아보고 학습한다.  
+UINavigationController, UISplitViewController(아이패드 한정), UITabBarController
+* 내비게이션 컨트롤러가 있을 경우와 없을 경우 화면 전환 동작이 어떻게 다른지, 화면들 포함관계가 있는지 학습한다.
+	내비게이션 컨트롤러를 적용할 경우 우측에서 화면이 들어오면서 전환이 되고,
+적용 하지 않을 경우 하단에서 화면이 들어오면서 전환 된다 
+
+* 내비게이션 컨트롤러 관련 메서드가 왜 push / pop 인지 학습한다.  
+ 화면 전환이 발생하는 뷰 컨트롤러들의 포인터를 스택(Stack)으로 관리하여 원하는 화면에 접근하기 쉽게 한다. 내비게이션 컨트롤러는 뷰 컨트롤러들의 계층적 구조를 관리하는 역할이기 때문에, 직접 콘텐츠를 담고 화면을 구성하지는 않는 대신 다른 뷰 컨트롤러들을 포함하고 있다. 스토리보드에서 보이는 것과 다르게 독립된 자신만의 화면을 가지지 않는 대신 이 컨트롤러가 제어하는 모든 뷰 컨트롤러에 내비게이션 바를 생성하는 특징 (내비게이션 바를 통해 넘어가거나 show 방식으로 넘어갈 경우에 내비게이션이 생성됨) 이 있다.  
+ 최상위 뷰 컨트롤러는 화면에 표시되므로, 스택의 최상위 뷰 컨트롤러를 더하거나 빼는 것은 화면을 전환하는 것과 같다. 따라서 관련 메서드 네이밍도 pop/push 로 뷰를 관리한다.
+	* 다른 뷰 컨트롤러 호출 메소드 pushViewController(_:animated:)  
+	* 이전의 뷰 컨트롤러로 되돌아가는 메소드popViewController(_:animated:)
+
+
+
+[[출처] Swift 화면 전환 기법](http://blog.naver.com/PostView.nhn?blogId=baek2304&logNo=220885876605&parentCategoryNo=68&categoryNo=&viewDate=&isShowPopularPosts=true&from=search)
+
+
