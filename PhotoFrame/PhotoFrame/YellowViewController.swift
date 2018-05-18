@@ -21,14 +21,8 @@ class YellowViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func nextButtonTouched(_ sender: Any) {
-        guard let pinkvc = self.storyboard?.instantiateViewController(withIdentifier: "PinkVC") else { return }
-        pinkvc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
-        self.present(pinkvc, animated: true, completion: nil)
-    }
-    
     @IBAction func closeButtonTouched(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     override func viewDidAppear(_ animated: Bool) {
