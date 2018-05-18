@@ -109,6 +109,14 @@
                                     <action selector="closeButtonTouched:" destination="9hf-j1-C7o" eventType="touchUpInside" id="g2Z-fd-aF2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xl7-8I-jpA">
+                                <rect key="frame" x="172" y="487" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="닫기"/>
+                                <connections>
+                                    <action selector="pinkVCCloseButtonTouched:" destination="9hf-j1-C7o" eventType="touchUpInside" id="PfM-tZ-1do"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.83451172559999998" blue="0.96343688139999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="BI1-Dv-2cO"/>
