@@ -40,6 +40,12 @@ class PinkViewController: UIViewController {
         print(#file, #line, #function, #column)
     }
     
+    @IBAction func pinkVCCloseButtonTouched(_ sender: Any) {
+//        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    
     /*
     // MARK: - Navigation
 
