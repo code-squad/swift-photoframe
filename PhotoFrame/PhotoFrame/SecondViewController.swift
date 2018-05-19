@@ -10,6 +10,8 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet weak var photoImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print(#file, #line, #function, #column)
@@ -21,6 +23,15 @@ class SecondViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func nextImageButtonTouched(_ sender: Any) {
+        let randomNumber: UInt32 = arc4random_uniform(22)+1
+        if randomNumber < 10 {
+            self.photoImageView.image = UIImage(named: "0\(randomNumber).jpg")
+        } else {
+            self.photoImageView.image = UIImage(named: "\(randomNumber).jpg")
+        }
+        
+    }
+    
 }
 
