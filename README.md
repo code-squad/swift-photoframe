@@ -307,4 +307,50 @@ UINavigationController, UISplitViewController(아이패드 한정), UITabBarCont
 
 #### 참고링크    
 [UIImageView](https://developer.apple.com/documentation/uikit/uiimageview)  
-[UIImage](https://developer.apple.com/documentation/uikit/uiimage)
+[UIImage](https://developer.apple.com/documentation/uikit/uiimage)  
+
+
+## PhotoFrame - step8  
+
+### 추가 학습꺼리  
+* 화면 요소들을 겹쳐서 디자인 하는 경우 z축으로 위-아래를 구분해서 학습한다.
+* UIImagePickerController처럼 이미 만들어놓은 시스템 컨트롤러들에 대해 학습한다.
+	* [뷰컨트롤러 애플 개발자 문서](https://developer.apple.com/documentation/uikit/view_controllers)
+* 델리게이트(Delegate)와 프로토콜(Protocol) 상관 관계에 대해 학습한다.
+
+* 이미지 테두리 액자 화면을 추가한다.
+
+* 사진 앨범에서 사진을 가져와서 보여줄 수 있도록 개선한다.  
+
+### 추가요구사항 #1  
+* 스토리보드에서 Second Scene을 선택하고, 다음과 같이 화면을 개선한다.
+
+	* 새로운 UIImageView를 추가하고, 기존 photoImageView보다 아래에 배치한다.  
+
+* 다음 액자 사진을 액자 이미지 다운로드한다. Xcode 프로젝트로 드래그해서 추가한다.
+
+	* 참고) 리소스 파일을 추가할 때는 Copy 옵션을 꼭 지정하고 Target을 체크되어 있는지 확인한다.
+`PhotoFrame` 이미지 뷰의 Identity 항목중에 Document > Label 값을 PhotoFrame 처럼 입력하면 좌측 화면 항목에서 구분하기 쉽다.
+* PhotoFrame 이미지 뷰의 Attributes 항목중에 Image View > Image 값을 다운로드 받은 `photoframe-border.png`로 선택한다.
+
+
+### 추가요구사항 #2  
+
+* 스토리보드에서 Second Scene을 선택하고, [다음]버튼 아래 [선택] 버튼을 추가하고 IBAction을 selectButtonTouched로 연결한다.
+* `selectButtonTouched`에서는 UIImagePickerController로 사진 앱 - 카메라롤에서 사진을 가져오도록 구현한다.
+	* 카메라롤에서 사진을 가져오기 위해 해줘야 하는 동작들을 찾아서 구현한다.
+	* 권한 설정이 필요하면 Info.plist에 추가한다.
+	* 선택한 사진을 받기 위해서 구현해야 하는 메서드는 어떤게 있는지 찾아 구현한다.
+
+![selectButton](image/selectphoto1.png)
+![selectAlbum](image/selectphoto2.png)
+![albumPhoto](image/selectphoto3.png)
+![selectCamera](image/selectphoto4.png)
+![screenShot](image/selectphoto5.png)
+![cameraPhoto](image/selectphoto6.png)
+
+
+#### 참고링크   
+[카메라에서 이미지 가져오기](http://zeddios.tistory.com/125)  
+[카메라 사진 찍기](http://g-y-e-o-m.tistory.com/11)  
+[ImagePickerController 애플 개발자 문서](https://developer.apple.com/documentation/uikit/uiimagepickercontroller)
