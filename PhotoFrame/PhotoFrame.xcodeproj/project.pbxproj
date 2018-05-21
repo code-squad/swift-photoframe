@@ -31,6 +31,7 @@
 		D69E56C220AFD99A0045C86B /* 15.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D69E56AC20AFD9990045C86B /* 15.jpg */; };
 		D69E56C320AFD99A0045C86B /* 04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D69E56AD20AFD9990045C86B /* 04.jpg */; };
 		D69E56C420AFD99A0045C86B /* 07.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D69E56AE20AFD99A0045C86B /* 07.jpg */; };
+		D69E570120B2858A0045C86B /* photoframe-border.png in Resources */ = {isa = PBXBuildFile; fileRef = D69E570020B2858A0045C86B /* photoframe-border.png */; };
 		D6E2BAFB20A5776B00D3FB4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E2BAFA20A5776B00D3FB4F /* AppDelegate.swift */; };
 		D6E2BAFD20A5776B00D3FB4F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E2BAFC20A5776B00D3FB4F /* FirstViewController.swift */; };
 		D6E2BAFF20A5776B00D3FB4F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E2BAFE20A5776B00D3FB4F /* SecondViewController.swift */; };
@@ -83,6 +84,7 @@
 		D69E56AC20AFD9990045C86B /* 15.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 15.jpg; sourceTree = "<group>"; };
 		D69E56AD20AFD9990045C86B /* 04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 04.jpg; sourceTree = "<group>"; };
 		D69E56AE20AFD99A0045C86B /* 07.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 07.jpg; sourceTree = "<group>"; };
+		D69E570020B2858A0045C86B /* photoframe-border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photoframe-border.png"; sourceTree = "<group>"; };
 		D6E2BAF720A5776B00D3FB4F /* PhotoFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6E2BAFA20A5776B00D3FB4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6E2BAFC20A5776B00D3FB4F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				D69E569B20AFD9970045C86B /* 20.jpg */,
 				D69E569C20AFD9970045C86B /* 21.jpg */,
 				D69E56A620AFD9980045C86B /* 22.jpg */,
+				D69E570020B2858A0045C86B /* photoframe-border.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				D69E56B620AFD99A0045C86B /* 06.jpg in Resources */,
 				D69E56C320AFD99A0045C86B /* 04.jpg in Resources */,
 				D69E56BF20AFD99A0045C86B /* 02.jpg in Resources */,
+				D69E570120B2858A0045C86B /* photoframe-border.png in Resources */,
 				D69E56B420AFD99A0045C86B /* 16.jpg in Resources */,
 				D69E56B720AFD99A0045C86B /* 10.jpg in Resources */,
 				D69E56B120AFD99A0045C86B /* 20.jpg in Resources */,
