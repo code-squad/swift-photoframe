@@ -16,6 +16,7 @@ class FirstViewController: UIViewController {
         super.viewDidLoad()
         
         print(#file, #line, #function, #column)
+        self.photoLabel.text = "Mason의 사진액자"
     }
 
     override func didReceiveMemoryWarning() {
