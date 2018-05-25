@@ -12,21 +12,12 @@ class FirstViewController: UIViewController {
 
     @IBOutlet weak var photoLabel: UILabel!
     @IBOutlet weak var photoDescription: UILabel!
-
-    private let TITLE: String = "Mason의 사진액자"
-    private let DESCRIPTION: String = "위 작품은 Mason의 사진액자 입니다."
-    private let photoLabelAlpha: CGFloat = 0.7
-    private let photoDescriptionAlpha: CGFloat = 0.5
-    private let photoLabelFont: UIFont! = UIFont(name: "Zapfino", size: 30)
-    private let photoDescriptionFontSize: CGFloat = 20
-    private let photoLabelBackgroundColor: UIColor = UIColor(red: 0, green: 0, blue: 1.0, alpha: 0.3)
-    private let photoDescriptionBackgroundColor: UIColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.3)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print(#file, #line, #function, #column)
-        setPhotoLabel()
-        setPhotoDescription()
+        set(label: self.photoLabel, type: .title)
+        set(label: self.photoDescription, type: .description)
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,20 +25,64 @@ class FirstViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func setPhotoLabel() {
-        self.photoLabel.text = self.TITLE
-        self.photoLabel.textColor = UIColor.blue
-        self.photoLabel.backgroundColor = self.photoLabelBackgroundColor
-        self.photoLabel.alpha = self.photoLabelAlpha
-        self.photoLabel.font = self.photoLabelFont
-    }
-    
-    func setPhotoDescription() {
-        self.photoDescription.text = self.DESCRIPTION
-        self.photoDescription.textColor = UIColor.red
-        self.photoDescription.backgroundColor = self.photoDescriptionBackgroundColor
-        self.photoDescription.alpha = self.photoDescriptionAlpha
-        self.photoDescription.font = self.photoDescription.font.withSize(self.photoDescriptionFontSize)
+    func set(label: UILabel, type labelSetter: LabelSetter) {
+        label.text = labelSetter.text
+        label.textColor = labelSetter.textColor
+        label.backgroundColor = labelSetter.backgroundColor
+        label.alpha = labelSetter.alpha
+        label.font = labelSetter.font
     }
 }
 
+extension FirstViewController {
+    
+    enum LabelSetter {
+        case title
+        case description
+        
+        var text: String {
+            switch self {
+            case .title:
+                return "Mason의 사진액자"
+            case .description:
+                return "위 작품은 Mason의 사진액자 입니다."
+            }
+        }
+        
+        var textColor: UIColor {
+            switch self {
+            case .title:
+                return UIColor.blue
+            case .description:
+                return UIColor.red
+            }
+        }
+        
+        var alpha: CGFloat {
+            switch self {
+            case .title:
+                return 0.7
+            case .description:
+                return 0.5
+            }
+        }
+        
+        var font: UIFont! {
+            switch self {
+            case .title:
+                return UIFont(name: "Zapfino", size: 30)
+            case .description:
+                return UIFont(name: "Zapfino", size: 20)
+            }
+        }
+        
+        var backgroundColor: UIColor {
+            switch self {
+            case .title:
+                return UIColor(red: 0, green: 0, blue: 1.0, alpha: 0.3)
+            default:
+                return UIColor(red: 1, green: 0, blue: 0, alpha: 0.3)
+            }
+        }
+    }
+}
