@@ -21,14 +21,10 @@ class FirstViewController: UIViewController {
         self.photoLabel.textColor = UIColor.blue
         self.photoLabel.backgroundColor = UIColor(red: 0, green: 0, blue: 1.0, alpha: 0.3)
         self.photoLabel.alpha = 0.7
-        // 사용가능한 Font family name확인
-        for name in UIFont.familyNames {
-            print(name)
-        }
         self.photoLabel.font = UIFont(name: "Zapfino", size: 30)
         
         self.photoDescription.text = "위 작품은 Mason의 사진액자 입니다."
-        
+        self.photoDescription.textColor = UIColor.red
     }
 
     override func didReceiveMemoryWarning() {
