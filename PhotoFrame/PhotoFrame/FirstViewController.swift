@@ -27,6 +27,7 @@ class FirstViewController: UIViewController {
         self.photoDescription.textColor = UIColor.red
         self.photoDescription.backgroundColor = UIColor(red: 1.0, green: 0, blue: 0, alpha: 0.3)
         self.photoDescription.alpha = 0.5
+        self.photoDescription.font = self.photoDescription.font.withSize(20)
     }
 
     override func didReceiveMemoryWarning() {
