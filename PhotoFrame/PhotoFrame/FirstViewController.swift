@@ -26,6 +26,9 @@ class FirstViewController: UIViewController {
             print(name)
         }
         self.photoLabel.font = UIFont(name: "Zapfino", size: 30)
+        
+        self.photoDescription.text = "위 작품은 Mason의 사진액자 입니다."
+        
     }
 
     override func didReceiveMemoryWarning() {
