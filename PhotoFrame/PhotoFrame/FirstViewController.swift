@@ -16,8 +16,8 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print(#file, #line, #function, #column)
-        setPhotoLabel()
-        setPhotoDescription()
+        set(label: self.photoLabel, type: .title)
+        set(label: self.photoDescription, type: .description)
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,47 +25,64 @@ class FirstViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func setPhotoLabel() {
-        self.photoLabel.text = LabelText.title
-        self.photoLabel.textColor = LabelTextColor.title
-        self.photoLabel.backgroundColor = LabelBackgroundColor.title
-        self.photoLabel.alpha = LabelAlpha.title
-        self.photoLabel.font = LabelFont.title
-    }
-    
-    func setPhotoDescription() {
-        self.photoDescription.text = LabelText.description
-        self.photoDescription.textColor = LabelTextColor.description
-        self.photoDescription.backgroundColor = LabelBackgroundColor.description
-        self.photoDescription.alpha = LabelAlpha.description
-        self.photoDescription.font = LabelFont.description
+    func set(label: UILabel, type labelSetter: LabelSetter) {
+        label.text = labelSetter.text
+        label.textColor = labelSetter.textColor
+        label.backgroundColor = labelSetter.backgroundColor
+        label.alpha = labelSetter.alpha
+        label.font = labelSetter.font
     }
 }
 
 extension FirstViewController {
     
-    enum LabelText {
-        static let title: String = "Mason의 사진액자"
-        static let description: String = "위 작품은 Mason의 사진액자 입니다."
-    }
-    
-    enum LabelTextColor {
-        static let title: UIColor = UIColor.blue
-        static let description: UIColor = UIColor.red
-    }
-    
-    enum LabelAlpha {
-        static let title: CGFloat = 0.7
-        static let description: CGFloat = 0.5
-    }
-    
-    enum LabelFont {
-        static let title: UIFont! = UIFont(name: "Zapfino", size: 30)
-        static let description: UIFont! = UIFont(name: "Zapfino", size: 20)
-    }
-    
-    enum LabelBackgroundColor {
-        static let title: UIColor = UIColor(red: 0, green: 0, blue: 1.0, alpha: 0.3)
-        static let description: UIColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.3)
+    enum LabelSetter {
+        case title
+        case description
+        
+        var text: String {
+            switch self {
+            case .title:
+                return "Mason의 사진액자"
+            case .description:
+                return "위 작품은 Mason의 사진액자 입니다."
+            }
+        }
+        
+        var textColor: UIColor {
+            switch self {
+            case .title:
+                return UIColor.blue
+            case .description:
+                return UIColor.red
+            }
+        }
+        
+        var alpha: CGFloat {
+            switch self {
+            case .title:
+                return 0.7
+            case .description:
+                return 0.5
+            }
+        }
+        
+        var font: UIFont! {
+            switch self {
+            case .title:
+                return UIFont(name: "Zapfino", size: 30)
+            case .description:
+                return UIFont(name: "Zapfino", size: 20)
+            }
+        }
+        
+        var backgroundColor: UIColor {
+            switch self {
+            case .title:
+                return UIColor(red: 0, green: 0, blue: 1.0, alpha: 0.3)
+            default:
+                return UIColor(red: 1, green: 0, blue: 0, alpha: 0.3)
+            }
+        }
     }
 }
