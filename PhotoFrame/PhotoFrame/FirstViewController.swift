@@ -26,6 +26,7 @@ class FirstViewController: UIViewController {
         self.photoDescription.text = "위 작품은 Mason의 사진액자 입니다."
         self.photoDescription.textColor = UIColor.red
         self.photoDescription.backgroundColor = UIColor(red: 1.0, green: 0, blue: 0, alpha: 0.3)
+        self.photoDescription.alpha = 0.5
     }
 
     override func didReceiveMemoryWarning() {
