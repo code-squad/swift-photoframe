@@ -18,6 +18,7 @@ class FirstViewController: UIViewController {
         print(#file, #line, #function, #column)
         self.photoLabel.text = "Mason의 사진액자"
         self.photoLabel.textColor = UIColor.blue
+        self.photoLabel.backgroundColor = UIColor(red: 0, green: 0, blue: 1.0, alpha: 0.3)
     }
 
     override func didReceiveMemoryWarning() {
