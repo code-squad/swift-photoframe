@@ -36,6 +36,9 @@ class FirstViewController: UIViewController {
     
     // MARK: IBAction
     @IBAction func nextButtonTouched(_ sender: Any) {
+        self.photoLabel.textColor = UIColor.red
+        self.photoLabel.backgroundColor = UIColor.yellow
+        self.photoLabel.alpha = 0.5
     }
 }
 
