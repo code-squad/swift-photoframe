@@ -10,6 +10,7 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+    // MARK: IBOutlet
     @IBOutlet weak var photoLabel: UILabel!
     @IBOutlet weak var photoDescription: UILabel!
     
@@ -31,6 +32,10 @@ class FirstViewController: UIViewController {
         label.backgroundColor = labelSetter.backgroundColor
         label.alpha = labelSetter.alpha
         label.font = labelSetter.font
+    }
+    
+    // MARK: IBAction
+    @IBAction func nextButtonTouched(_ sender: Any) {
     }
 }
 
