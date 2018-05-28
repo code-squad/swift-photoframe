@@ -11,14 +11,14 @@ import UIKit
 class FirstViewController: UIViewController {
 
     // MARK: IBOutlet
-    @IBOutlet weak var photoLabel: UILabel!
+    @IBOutlet weak var photoTitle: UILabel!
     @IBOutlet weak var photoDescription: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print(#file, #line, #function, #column)
         
-        setup(label: photoLabel, setter: TitleLabel.self)
+        setup(label: photoTitle, setter: TitleLabel.self)
         setup(label: photoDescription, setter: DescriptionLabel.self)
     }
 
@@ -37,9 +37,9 @@ class FirstViewController: UIViewController {
     
     // MARK: IBAction
     @IBAction func nextButtonTouched(_ sender: Any) {
-        self.photoLabel.textColor = UIColor.red
-        self.photoLabel.backgroundColor = UIColor.yellow
-        self.photoLabel.alpha = 0.5
+        self.photoTitle.textColor = UIColor.red
+        self.photoTitle.backgroundColor = UIColor.yellow
+        self.photoTitle.alpha = 0.5
     }
 }
 
