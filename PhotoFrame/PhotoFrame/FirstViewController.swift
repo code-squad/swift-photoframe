@@ -24,6 +24,14 @@ class FirstViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func setup(label: UILabel, setter: LabelSettable) {
+        label.text = setter.text
+        label.textColor = setter.textColor
+        label.backgroundColor = setter.backgroundColor
+        label.alpha = setter.alpha
+        label.font = setter.font
+    }
+    
     // MARK: IBAction
     @IBAction func nextButtonTouched(_ sender: Any) {
         self.photoLabel.textColor = UIColor.red
