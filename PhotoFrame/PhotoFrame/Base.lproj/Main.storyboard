@@ -74,6 +74,9 @@
                                 <state key="normal" title="다음">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="XIQ-qv-xqB" kind="show" id="1NQ-0a-WYB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.47571842289999999" green="0.81857874460000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -83,6 +86,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fHW-No-D9S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1576" y="-314"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="3rO-dJ-VFV">
+            <objects>
+                <viewController id="XIQ-qv-xqB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IVq-CO-PfI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="RIE-2y-Puk"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pN8-Mh-qcb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2322" y="-314"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
