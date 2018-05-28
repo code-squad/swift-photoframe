@@ -21,6 +21,23 @@ class FirstViewController: UIViewController {
         setup(label: photoTitle, setter: TitleLabel.self)
         setup(label: photoDescription, setter: DescriptionLabel.self)
     }
+    
+    //MARK: ViewController life cycle methods
+    override func viewWillAppear(_ animated: Bool) {
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        print(#file, #line, #function, #column)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
