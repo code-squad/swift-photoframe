@@ -46,7 +46,7 @@
 ![setp3_0](./images/step3_0.gif)
 
 
-### Step4 - SCene과 Segue
+## Step4 - Scene과 Segue
 
 1. 프로그래밍 요구사항
 	- Main 스토리보드에서 First Scene 옆에 ViewController를 드래그해서 새로운 Scene을 추가한다.
@@ -58,3 +58,25 @@
 ### 진행사항 (완성날짜: 2018/05/28 17:14)
 ![step4_0](./images/step4_0.png)
 
+
+## Step5 - ViewController 프로그래밍
+
+1. 프로그래밍 요구사항
+	- 프로젝트에 새로운 ViewController 클래스를 추가한다. File > New... > File... 메뉴를 선택한다. 다음과 같은 화면에서 Cocoa Touch Class를 선택한다.
+	- UIViewController에서 상속받도록 입력하고, 원하는 클래스명을 입력한다. (예시 YellowViewController)
+	- 스토리보드에서 YellowViewController 화면에 [닫기] 버튼을 추가한다.
+	- Assistant Editor를 선택하고 [닫기] 버튼에 대한 IBAction 액션을 연결한다.
+	- ViewController를 dismiss하는 action method를 구현한다.
+	- 위와 동일하게 세 번째 추가한 화면에 대해 ViewController 클래스를 지정하고, [닫기]버튼을 추가하고, 액션을 연결해서 화면을 닫는 동작이 동작하도록 구현한다.
+	- 뷰 컨트롤러 강의 자료에 있는 화면 관련 콜백 함수들에 모두 print(#file, #line, #function, #column) 코드를 추가한다.
+		- viewWillAppear()
+		- viewDidAppear()
+		- viewWillDisappear()
+		- viewDidDisappear()
+		
+2. 학습꺼리
+	- 화면전환의 사이에 뷰컨트롤러 라이프사이클이 어떻게 변화하는지 확인한다.
+	- YelloViewController에서 Segue를 제거하고 코드로 다음화면을 보여주는 방법을 찾고 적용한다.
+	
+### 진행사항 (완성날짜: 2018/05/28 21:51)
+![setp5_0](./images/step5_0.png)
