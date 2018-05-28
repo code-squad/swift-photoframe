@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		737D09DA20BC0FAE00D3651A /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737D09D920BC0FAE00D3651A /* YellowViewController.swift */; };
+		737D09DC20BC206B00D3651A /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737D09DB20BC206B00D3651A /* BlueViewController.swift */; };
 		73DE01A820B6528000CEF1E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DE01A720B6528000CEF1E1 /* AppDelegate.swift */; };
 		73DE01AA20B6528000CEF1E1 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DE01A920B6528000CEF1E1 /* FirstViewController.swift */; };
 		73DE01AC20B6528000CEF1E1 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DE01AB20B6528000CEF1E1 /* SecondViewController.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		737D09D920BC0FAE00D3651A /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
+		737D09DB20BC206B00D3651A /* BlueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueViewController.swift; sourceTree = "<group>"; };
 		73DE01A420B6528000CEF1E1 /* PhotoFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73DE01A720B6528000CEF1E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73DE01A920B6528000CEF1E1 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				73DE01A720B6528000CEF1E1 /* AppDelegate.swift */,
 				73DE01A920B6528000CEF1E1 /* FirstViewController.swift */,
 				737D09D920BC0FAE00D3651A /* YellowViewController.swift */,
+				737D09DB20BC206B00D3651A /* BlueViewController.swift */,
 				73DE01AB20B6528000CEF1E1 /* SecondViewController.swift */,
 				73DE01AD20B6528000CEF1E1 /* Main.storyboard */,
 				73DE01B020B6528100CEF1E1 /* Assets.xcassets */,
@@ -206,6 +209,7 @@
 				737D09DA20BC0FAE00D3651A /* YellowViewController.swift in Sources */,
 				73DE01AC20B6528000CEF1E1 /* SecondViewController.swift in Sources */,
 				73DE01A820B6528000CEF1E1 /* AppDelegate.swift in Sources */,
+				737D09DC20BC206B00D3651A /* BlueViewController.swift in Sources */,
 				73DE01AA20B6528000CEF1E1 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
