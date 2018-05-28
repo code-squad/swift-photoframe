@@ -44,6 +44,14 @@ class FirstViewController: UIViewController {
 
 extension FirstViewController {
     
+    struct TitleLabel {
+        static let text: String = "Mason의 사진액자"
+        static let textColor: UIColor = UIColor.blue
+        static let alpha: CGFloat = 0.7
+        static let font: UIFont! = UIFont(name: "Zapfino", size: 30)
+        static let backgroundColor: UIColor = UIColor(red: 0, green: 0, blue: 1.0, alpha: 0.3)
+    }
+    
     enum LabelSetter {
         case title
         case description
