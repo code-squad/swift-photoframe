@@ -16,6 +16,28 @@ class YellowViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    //MARK: UIViewController life cycle methods
+    override func viewWillAppear(_ animated: Bool) {
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        print(#file, #line, #function, #column)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
