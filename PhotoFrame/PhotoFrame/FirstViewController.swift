@@ -33,28 +33,28 @@ class FirstViewController: UIViewController {
 }
 
 protocol LabelSettable {
-    static var text: String { get }
-    static var textColor: UIColor { get }
-    static var alpha: CGFloat { get }
-    static var font: UIFont! { get }
-    static var backgroundColor: UIColor { get }
+    var text: String { get }
+    var textColor: UIColor { get }
+    var alpha: CGFloat { get }
+    var font: UIFont! { get }
+    var backgroundColor: UIColor { get }
 }
 
 extension FirstViewController {
     
-    struct TitleLabel {
-        static let text: String = "Mason의 사진액자"
-        static let textColor: UIColor = UIColor.blue
-        static let alpha: CGFloat = 0.7
-        static let font: UIFont! = UIFont(name: "Zapfino", size: 30)
-        static let backgroundColor: UIColor = UIColor(red: 0, green: 0, blue: 1.0, alpha: 0.3)
+    struct TitleLabel: LabelSettable {
+        let text: String = "Mason의 사진액자"
+        let textColor: UIColor = UIColor.blue
+        let alpha: CGFloat = 0.7
+        let font: UIFont! = UIFont(name: "Zapfino", size: 30)
+        let backgroundColor: UIColor = UIColor(red: 0, green: 0, blue: 1.0, alpha: 0.3)
     }
     
-    struct DescriptionLabel {
-        static let text: String = "위 작품은 Mason의 사진액자 입니다."
-        static let textColor: UIColor = UIColor.red
-        static let alpha: CGFloat = 0.5
-        static let font: UIFont! = UIFont(name: "Zapfino", size: 20)
-        static let backgroundColor: UIColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.3)
+    struct DescriptionLabel: LabelSettable {
+        let text: String = "위 작품은 Mason의 사진액자 입니다."
+        let textColor: UIColor = UIColor.red
+        let alpha: CGFloat = 0.5
+        let font: UIFont! = UIFont(name: "Zapfino", size: 20)
+        let backgroundColor: UIColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.3)
     }
 }
