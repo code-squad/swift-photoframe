@@ -14,6 +14,7 @@ class BlueViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        print(#file, #line, #function, #column)
     }
     
     //MARK: UIViewController life cycle methods
