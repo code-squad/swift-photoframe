@@ -17,21 +17,11 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print(#file, #line, #function, #column)
-        set(label: self.photoLabel, type: .title)
-        set(label: self.photoDescription, type: .description)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func set(label: UILabel, type labelSetter: LabelSetter) {
-        label.text = labelSetter.text
-        label.textColor = labelSetter.textColor
-        label.backgroundColor = labelSetter.backgroundColor
-        label.alpha = labelSetter.alpha
-        label.font = labelSetter.font
     }
     
     // MARK: IBAction
@@ -50,6 +40,14 @@ extension FirstViewController {
         static let alpha: CGFloat = 0.7
         static let font: UIFont! = UIFont(name: "Zapfino", size: 30)
         static let backgroundColor: UIColor = UIColor(red: 0, green: 0, blue: 1.0, alpha: 0.3)
+    }
+    
+    struct DescriptionLabel {
+        static let text: String = "위 작품은 Mason의 사진액자 입니다."
+        static let textColor: UIColor = UIColor.red
+        static let alpha: CGFloat = 0.5
+        static let font: UIFont! = UIFont(name: "Zapfino", size: 20)
+        static let backgroundColor: UIColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.3)
     }
     
     enum LabelSetter {
