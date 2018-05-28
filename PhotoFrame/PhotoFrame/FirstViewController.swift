@@ -17,6 +17,9 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print(#file, #line, #function, #column)
+        
+        setup(label: photoLabel, setter: TitleLabel())
+        setup(label: photoDescription, setter: DescriptionLabel())
     }
 
     override func didReceiveMemoryWarning() {
