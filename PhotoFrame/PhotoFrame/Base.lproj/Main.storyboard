@@ -111,6 +111,9 @@
                                 <state key="normal" title="닫기">
                                     <color key="titleColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="XIQ-qv-xqB" eventType="touchUpInside" id="9F8-SP-r5q"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
