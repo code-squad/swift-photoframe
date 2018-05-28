@@ -75,7 +75,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="XIQ-qv-xqB" kind="show" id="1NQ-0a-WYB"/>
+                                    <action selector="nextButtonTouched:" destination="fv0-4k-9zD" eventType="touchUpInside" id="G8x-Wx-Xov"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3sg-qq-5mD">
