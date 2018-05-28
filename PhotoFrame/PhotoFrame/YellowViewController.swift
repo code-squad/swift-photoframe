@@ -43,6 +43,8 @@ class YellowViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func nextButtonTouched(_ sender: Any) {
+    }
     /*
     // MARK: - Navigation
 
