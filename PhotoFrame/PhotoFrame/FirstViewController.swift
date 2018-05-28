@@ -22,7 +22,7 @@ class FirstViewController: UIViewController {
         setup(label: photoDescription, setter: DescriptionLabel.self)
     }
     
-    //MARK: ViewController life cycle methods
+    //MARK: UIViewController life cycle methods
     override func viewWillAppear(_ animated: Bool) {
         print(#file, #line, #function, #column)
     }
