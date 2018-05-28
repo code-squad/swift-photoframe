@@ -44,6 +44,7 @@ class YellowViewController: UIViewController {
     }
     
     @IBAction func nextButtonTouched(_ sender: Any) {
+        self.performSegue(withIdentifier: "ShowBlueVC", sender: nil)
     }
     /*
     // MARK: - Navigation

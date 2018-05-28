@@ -92,6 +92,9 @@
                         <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="5Lh-ST-pwh"/>
                     </view>
+                    <connections>
+                        <segue destination="XIQ-qv-xqB" kind="show" identifier="ShowBlueVC" id="yr4-vh-XvP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fHW-No-D9S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -100,7 +103,7 @@
         <!--Blue View Controller-->
         <scene sceneID="3rO-dJ-VFV">
             <objects>
-                <viewController id="XIQ-qv-xqB" customClass="BlueViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BlueVC" id="XIQ-qv-xqB" customClass="BlueViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IVq-CO-PfI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
