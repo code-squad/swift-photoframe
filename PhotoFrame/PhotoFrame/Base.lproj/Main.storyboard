@@ -67,7 +67,7 @@
                     <view key="view" contentMode="scaleToFill" id="dys-3I-Dzs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.47571842289999999" green="0.81857874460000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="5Lh-ST-pwh"/>
                     </view>
                 </viewController>
