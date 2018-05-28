@@ -37,6 +37,7 @@
                                 <state key="normal" title="다음"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="9pv-A4-QxB" eventType="touchUpInside" id="V1m-SY-cH4"/>
+                                    <segue destination="fv0-4k-9zD" kind="show" id="7US-cs-Fey"/>
                                 </connections>
                             </button>
                         </subviews>
