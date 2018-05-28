@@ -32,6 +32,14 @@ class FirstViewController: UIViewController {
     }
 }
 
+protocol LabelSettable {
+    static var text: String { get }
+    static var textColor: UIColor { get }
+    static var alpha: CGFloat { get }
+    static var font: UIFont! { get }
+    static var backgroundColor: UIColor { get }
+}
+
 extension FirstViewController {
     
     struct TitleLabel {
