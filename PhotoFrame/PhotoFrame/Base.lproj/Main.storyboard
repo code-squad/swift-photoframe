@@ -92,9 +92,6 @@
                         <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="5Lh-ST-pwh"/>
                     </view>
-                    <connections>
-                        <segue destination="XIQ-qv-xqB" kind="show" identifier="ShowBlueVC" id="yr4-vh-XvP"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fHW-No-D9S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

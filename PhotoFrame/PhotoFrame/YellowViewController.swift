@@ -44,7 +44,9 @@ class YellowViewController: UIViewController {
     }
     
     @IBAction func nextButtonTouched(_ sender: Any) {
-        self.performSegue(withIdentifier: "ShowBlueVC", sender: nil)
+        if let blueVC = self.storyboard?.instantiateViewController(withIdentifier: "BlueVC") {
+            self.present(blueVC, animated: true, completion: nil)
+        }
     }
     /*
     // MARK: - Navigation
