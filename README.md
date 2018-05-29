@@ -80,3 +80,5 @@
 	
 ### 진행사항 (완성날짜: 2018/05/28 21:51)
 ![setp5_0](./images/step5_0.png)
+
+![step5_1](./images/step5_1.gif)
