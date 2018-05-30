@@ -82,3 +82,38 @@
 ![setp5_0](./images/step5_0.png)
 
 ![step5_1](./images/step5_1.gif)
+
+
+### Summary
+* 뷰 컨트롤러
+	- 뷰 컨트롤러 : 화면을 구성하고 콘텐츠를 표현하는 기본 뷰 컨트롤러, UIViewController class
+	- 내비게이션 컨트롤러 : 화면의 이동과 계층적 탐색을 위한 컨트롤러, UINavigationController
+	- 테이블 뷰 컨트롤러 : 목록을 구현하기 위한 컨트롤러, UITableViewController
+	- 탭 바 컨트롤러 : 병렬적(카테고리) 화면을 탭으로 구분하기 위한 컨트롤러, UITabbarController
+	- 스플릿 뷰 컨트롤러 : 메인-서브 화면 분할용 컨트롤러, UISplitViewController
+- View Controller Life Cycle
+![ViewControllerLifeCycle](./images/step5_2.png)
+
+	* `viewDidLoad()`
+		- 뷰 계층이 메모리에 로드된 직후 호출되는 메서드
+		- 뷰의 추가적인 초기화 작업을 하기 좋은 시점, 메모리에 처음 로드될 때 한번만 호출된다.
+	* `viewWillAppear(animated:)`
+		- 뷰가 뷰 계층에 추가되고 화면이 표시되기 직전에 호출되는 메서드
+		- viewDidLoad와 달리 뷰가 보일 때마다 호출 되므로 화면이 나타날때마다 해야하는 작업을 하기 좋다.
+	* `viewDidAppear(animated:)`
+		- 뷰가 뷰 계층에 추가되어 화면이 표시되면 호출되는 메서드
+		- 뷰가 화면에 다 나타나고나서 해야하는 추가작업을 하기 좋음.
+		- 특히 애니메이션, API정보를 받아와 화면을 업데이트할 때 이곳에 구현하면 좋다.
+	* `viewWillDisappear(animated:)`
+		- 뷰가 뷰 계층에서 사라지기 직전에 호출되는 메서드.
+	* `viewDidDisappear(animated:)`
+		- 뷰가 뷰 계층에서 사라진 후 호출되는 메서드.
+	
+* [화면전환 present 방식](./docs/화면전환.md)
+* [화면전환 segue 방식](./docs/화면전환_세그웨이.md)
+* 내비게이션 사용시 -> stack처럼 push와 pop의 개념
+* 새로운 뷰 컨트롤러를 내리고 다시 이전 뷰 컨트롤러로 복귀하기
+	- present로 구현 시 : `dismiss(animated:completion:)`
+	- 내비게이션 컨트롤러 이용 시 : `popViewController(animated:)`사용
+
+출처 : 꼼꼼한 재은씨, Apple Document, 코드스쿼드 강의자료, [UIViewController](https://developer.apple.com/documentation/uikit/uiviewcontroller?changes=_3), [View Controller Programming Guide for iOS](https://developer.apple.com/library/content/featuredarticles/ViewControllerPGforiPhoneOS/index.html#//apple_ref/doc/uid/TP40007457-CH2-SW1), [H.I.G](https://developer.apple.com/ios/human-interface-guidelines/overview/themes/), [UIModalPresentationStyle](https://developer.apple.com/documentation/uikit/uimodalpresentationstyle)
