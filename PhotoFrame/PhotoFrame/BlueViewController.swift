@@ -40,6 +40,7 @@ class BlueViewController: UIViewController {
     }
     
     @IBAction func closeButtonTouched(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     /*
