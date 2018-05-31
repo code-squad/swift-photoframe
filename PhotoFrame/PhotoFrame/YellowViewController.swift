@@ -43,6 +43,10 @@ class YellowViewController: UIViewController {
     }
     
     @IBAction func nextButtonTouched(_ sender: Any) {
+        guard let blueVC = self.storyboard?.instantiateViewController(withIdentifier: "BlueVC") else {
+            return
+        }
+        self.navigationController?.pushViewController(blueVC, animated: true)
     }
     /*
     // MARK: - Navigation
