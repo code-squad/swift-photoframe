@@ -117,3 +117,71 @@
 	- 내비게이션 컨트롤러 이용 시 : `popViewController(animated:)`사용
 
 출처 : 꼼꼼한 재은씨, Apple Document, 코드스쿼드 강의자료, [UIViewController](https://developer.apple.com/documentation/uikit/uiviewcontroller?changes=_3), [View Controller Programming Guide for iOS](https://developer.apple.com/library/content/featuredarticles/ViewControllerPGforiPhoneOS/index.html#//apple_ref/doc/uid/TP40007457-CH2-SW1), [H.I.G](https://developer.apple.com/ios/human-interface-guidelines/overview/themes/), [UIModalPresentationStyle](https://developer.apple.com/documentation/uikit/uimodalpresentationstyle)
+
+
+## Step6 - Container ViewController
+
+1. 프로그래밍 요구사항
+	- 스토리보드에서 First Scene을 선택하고, Editor > Embed In > Navigation Controller 항목을 선택한다.
+	- 실행해보면 화면 상단에 내비게이션바(Navigation Bar)가 추가되고 [다음]버튼을 누르면 다음 화면이 우측에서 좌측으로 애니메이션되면서 표시된다.
+	- [닫기]버튼에 연결된 closeButtonTouched 코드를 다음과 같이 수정한다.
+		```
+		 @IBAction func closeButtonTouched(_ sender: Any) {
+		 self.navigationController?.popViewController(animated: true)
+		 }
+		```
+	- 위와 동일하게 세 번째 추가한 화면에 [닫기]버튼도 코드를 수정한다.
+	- 뷰 컨트롤러 콜백 함수들 동작도 동일한지 확인한다.
+	
+	```
+	// 앱 실행
+	FirstViewController.swift 19 viewDidLoad() 40
+	FirstViewController.swift 27 viewWillAppear 40
+	FirstViewController.swift 31 viewDidAppear 40
+	
+	// FirstViewController [다음] 클릭 후
+	YellowViewController.swift 17 viewDidLoad() 40
+	FirstViewController.swift 35 viewWillDisappear 40
+	YellowViewController.swift 22 viewWillAppear 40
+	FirstViewController.swift 39 viewDidDisappear 40
+	YellowViewController.swift 26 viewDidAppear 40
+	
+	// YellowViewController [다음] 클릭 후 
+	BlueViewController.swift 17 viewDidLoad() 40
+	YellowViewController.swift 30 viewWillDisappear 40
+	BlueViewController.swift 22 viewWillAppear 40
+	YellowViewController.swift 34 viewDidDisappear 40
+	BlueViewController.swift 26 viewDidAppear 40
+	
+	// BlueViewController [닫기] 클릭 후
+	BlueViewController.swift 30 viewWillDisappear 40
+	YellowViewController.swift 22 viewWillAppear 40
+	BlueViewController.swift 34 viewDidDisappear 40
+	YellowViewController.swift 26 viewDidAppear 40
+	
+	// YellowViewController [닫기] 클릭 후
+	YellowViewController.swift 30 viewWillDisappear 40
+	FirstViewController.swift 27 viewWillAppear 40
+	YellowViewController.swift 34 viewDidDisappear 40
+	FirstViewController.swift 31 viewDidAppear 40
+	```
+	
+	* 내비게이션 컨트롤러를 사용하지 않았을 때와 다른점
+		- 호출된 다음 뷰 컨트롤러의 `viewWillAppear`이 호출되자마자 이전 뷰 컨트롤러의 `viewDidDisappear`이 호출되면서 다음 뷰 컨트롤러가 `viewDidAppear`을 호출하기 전에 사라진다.
+		- 기존의 내비게이션 컨트롤러를 사용하지 않았을 경우 : 다음 뷰 컨트롤러의 `viewWillAppear`과 `viewDidAppear`이 호출되고 나서 이전 뷰 컨트롤러의 `viewDidDisappear`이 호출되면서 사라진다.
+	
+2. 학습꺼리
+	- 뷰컨트롤러 컨테이너 동작을 이해한다.
+		- [View Controller Programming Guide](https://developer.apple.com/library/content/featuredarticles/ViewControllerPGforiPhoneOS/ImplementingaContainerViewController.html) 중에 Implementing a Container View Controller 참고하기
+		- 컨테이너 뷰 컨트롤러는 뷰 컨트롤러 자체의 콘텐츠를 표시하는 것이 아닌 내비게이션 컨트롤러나 탭바 컨트롤러와 같이 뷰 컨트롤러가 다른 여러 뷰 컨트롤러를 포함하고 이를 관리한다. 이 중 내비게이션은 다른 뷰 컨트롤러를 스택과 같은 형태로 뷰 컨트롤러를 관리하며(pop, push로 뷰 컨트롤러 이동), 내비게이션 컨트롤러는 back button을 제공한다. 내비게이션 스택의 가장 최상위에 있는 뷰 컨트롤러의 콘텐츠를 화면에 표시하게 된다.
+		- [왜 `addChildViewController`를 사용해야하는가?](http://minsone.github.io/mac/ios/why-use-addchildviewcontroller-_-implementing-a-container-view-controller)
+	- 뷰컨트롤러 컨테이너는 또 어떤 클래스가 있는지 찾아보고 학습한다.
+		- `UINavigationController`, `UITabBarController`, `UISplitViewController`
+		- 아이폰에서는 보여주고자 하는 구조에 따라 Navigation과 TabBar을 적절히 선택하여 사용.(H.I.G 가이드라인 참조하기)
+	- 내비게이션 컨트롤러가 있을 경우와 없을 경우 화면 전환 동작이 어떻게 다른지, 화면들 포함관계가 있는지 학습한다.
+		- 내비게이션 컨트롤러가 있을 경우 내비게이션 stack을 통해 pop, push로 내비게이션 스택을 통해 뷰 컨트롤러를 관리할 수 있다. 다음 뷰 컨트롤러가 나타나도 이전 뷰 컨트롤러가 유지된다.
+		- 내비게이션 컨트롤러를 사용안하고 present modally하게 보여줄 경우 호출된 새로운 뷰 컨트롤러가 보여지게 되면 이전 뷰 컨트롤러는 사라진다. (`overCurrrentContext`를 사용할 경우 이전 뷰 컨트롤러가 보여진다.)
+	- 내비게이션 컨트롤러 관련 메서드가 왜 push / pop 인지 학습한다.
+		- 내비게이션 스택으로 뷰 컨트롤러를 관리 (이 때문에 내비게이션 컨트롤러에서 push로 불려온 뷰 컨트롤러는 dismiss가 작동하지 않는다.)
+	- view controller 참고하기 : [view controller programming guide](https://developer.apple.com/library/content/featuredarticles/ViewControllerPGforiPhoneOS/ImplementingaContainerViewController.html)
+	- `var navigationController`: UINavigationController? : 뷰 컨트롤러 계층구조에서 가장 가까운 navigation controller를 가르킨다.
