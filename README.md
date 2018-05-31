@@ -185,3 +185,6 @@
 		- 내비게이션 스택으로 뷰 컨트롤러를 관리 (이 때문에 내비게이션 컨트롤러에서 push로 불려온 뷰 컨트롤러는 dismiss가 작동하지 않는다.)
 	- view controller 참고하기 : [view controller programming guide](https://developer.apple.com/library/content/featuredarticles/ViewControllerPGforiPhoneOS/ImplementingaContainerViewController.html)
 	- `var navigationController`: UINavigationController? : 뷰 컨트롤러 계층구조에서 가장 가까운 navigation controller를 가르킨다.
+	
+### 진행사항 (완성날짜: 2018/05/31 19:00)
+![구현화면](./images/step6_0.gif)
