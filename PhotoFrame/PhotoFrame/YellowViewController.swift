@@ -40,11 +40,9 @@ class YellowViewController: UIViewController {
     }
     
     @IBAction func closeButtonTouched(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func nextButtonTouched(_ sender: Any) {
-        performSegue(withIdentifier: "ShowBlueVC", sender: sender)
     }
     /*
     // MARK: - Navigation
