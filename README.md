@@ -188,3 +188,33 @@
 	
 ### 진행사항 (완성날짜: 2018/05/31 19:00)
 ![구현화면](./images/step6_0.gif)
+
+
+## Step7 - Second Scene 화면
+
+1. 프로그래밍 요구사항
+	- UIImageView를 화면 상단 중앙에 240 x 240 크기로 배치하고, photoImageView 아웃렛으로 연결한다.
+	- 화면 하단에 [다음] 버튼을 추가하고 nextImageButtonTouched 액션으로 연결한다.
+	- 앱에 포함할 사진 리소스를 이미지 다운로드 링크에서 다운로드한다. 압축을 풀고 이미지 파일들을 Xcode 프로젝트로 드래그해서 추가한다. (리소스 파일을 추가할 때는 Copy 옵션을 꼭 지정하고 Target을 체크되어 있는지 확인한다.)
+	- [다음]버튼에 연결된 nextImageButtonTouched에서는 01부터 22까지 랜덤으로 숫자를 선택해서 해당하는 이미지 파일을 photoImageView에 표시한다. 이미지뷰에 표시하는 방법은 다음과 같다.
+		- `self.photoImageView.image = UIImage(named: "01.jpg")`
+	- 이미지뷰의 속성을 조정해서 이미지가 비율에 맞춰서 표시되도록 조정한다.
+	
+2. 학습꺼리
+	- UIImageView 와 UIImage 클래스는 각각 어떤 역할을 담당하는지 학습한다.
+	- 이미지 뷰의 속성은 어떤 것들이 있는지 애플 개발자 문서를 참고한다.
+		- UIImageView class : An object that displays a single image or a sequence of animated images in your interface.
+		- UIImageView는 UIImage object를 통해 이미지를 효과적으로 그릴 수 있다.
+		- UIImageView의 contentMode 프로퍼티를 통해 이미지를 어떻게 display 할 지 결정할 수 있다.
+		- ![contentmode](./images/step7_1.png)
+			- (출처: [http://beankhan.tistory.com/40](http://beankhan.tistory.com/40))
+		- UIImageView 클래스를 통해 animationImages 프로퍼티에 애니메이션 할 이미지들을 저장 후 이미지들을 Animating 할 수 있다.
+		- UIImage 클래스는 이미지 데이터를 관리하는 객체다.
+		- UIImage 클래스의 이미지 데이터를 얻거나, 이미지의 사이즈 또는 스케일과 이미지 속성에 접근 가능하다.
+		- UIImageView는 말그대로 UIImage 뷰다. UIImage를 뷰에 어떻게 보여줘야하는지에 초점이 맞춰져있다면, UIImage 클래스는 이미지(데이터) 자체에 조금 더 초점이 맞춰져있다.
+		- [UIImageView 클래스](https://developer.apple.com/documentation/uikit/uiimageview?changes=_4)
+		- [UIImage 클래스](https://developer.apple.com/documentation/uikit/uiimage?changes=_3)
+		- 이 외에도 참고하기 좋은 자료 : [UIImage VS CGImage VS CIImage](http://zeddios.tistory.com/455)
+		
+### 진행사항 (완성날짜: 2018/06/01 22:00)
+![구현화면](./images/step7_0.gif)
