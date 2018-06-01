@@ -31,6 +31,7 @@ class SecondViewController: UIViewController {
         guard let photoImage = UIImage(named: imageName) else {
             return
         }
+        self.photoImageView.contentMode = .scaleAspectFit
         self.photoImageView.image = photoImage
     }
     
@@ -45,4 +46,3 @@ class SecondViewController: UIViewController {
     }
     
 }
-
