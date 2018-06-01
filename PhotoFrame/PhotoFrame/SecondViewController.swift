@@ -27,6 +27,11 @@ class SecondViewController: UIViewController {
     }
 
     @IBAction func nextImageButtonTouched(_ sender: Any) {
+        let imageName: String = String(format: "Demo Images/%02d.jpg", self.generateRandomNumber())
+        guard let photoImage = UIImage(named: imageName) else {
+            return
+        }
+        self.photoImageView.image = photoImage
     }
     
     private func generateRandomNumber() -> Int {
