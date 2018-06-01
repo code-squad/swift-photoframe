@@ -12,6 +12,8 @@ class SecondViewController: UIViewController {
 
     @IBOutlet weak var photoImageView: UIImageView!
     
+    private let numberOfImages: UInt32 = 22
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,6 +27,10 @@ class SecondViewController: UIViewController {
 
     @IBAction func nextImageButtonTouched(_ sender: Any) {
         
+    }
+    
+    private func generateRandomNumber() -> Int {
+        return Int(arc4random_uniform(self.numberOfImages) + 1)
     }
     
 }
