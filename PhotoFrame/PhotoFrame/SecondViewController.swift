@@ -23,6 +23,9 @@ class SecondViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func nextImageButtonTouched(_ sender: Any) {
+        
+    }
+    
 }
 
