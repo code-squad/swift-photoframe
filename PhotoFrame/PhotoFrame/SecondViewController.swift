@@ -13,7 +13,7 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var photoImageView: UIImageView!
     
     private let numberOfImages: UInt32 = 22
-    private var currentImageNumber: Int = 0
+    private var currentImageNumber: UInt32 = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,11 +35,11 @@ class SecondViewController: UIViewController {
         self.photoImageView.image = photoImage
     }
     
-    private func generateRandomNumber() -> Int {
+    private func generateRandomNumber() -> UInt32 {
         // 이미 현재 이미지의 고르지 않도록 중복방지
-        var randomNumber = Int(arc4random_uniform(self.numberOfImages)) + 1
+        var randomNumber = arc4random_uniform(self.numberOfImages) + 1
         while randomNumber == self.currentImageNumber {
-            randomNumber = Int(arc4random_uniform(self.numberOfImages)) + 1
+            randomNumber = arc4random_uniform(self.numberOfImages) + 1
         }
         self.currentImageNumber = randomNumber
         return randomNumber
