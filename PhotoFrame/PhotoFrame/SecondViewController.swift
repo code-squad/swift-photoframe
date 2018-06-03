@@ -71,4 +71,8 @@ extension SecondViewController: UIImagePickerControllerDelegate, UINavigationCon
         }
         picker.presentingViewController?.dismiss(animated: true, completion: nil)
     }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
 }
