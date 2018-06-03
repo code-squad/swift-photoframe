@@ -65,5 +65,10 @@ class SecondViewController: UIViewController {
 }
 
 extension SecondViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let editedImage = info[UIImagePickerControllerEditedImage] as? UIImage {
+            self.photoImageView.image = editedImage
+        }
+        picker.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
 }
