@@ -151,7 +151,7 @@
                                     <action selector="nextImageButtonTouched:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="3zf-QO-Y7o"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ejh-fn-PEQ" userLabel="PhotoFrame">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photoframe.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ejh-fn-PEQ" userLabel="PhotoFrame">
                                 <rect key="frame" x="47" y="17" width="280" height="280"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -212,6 +212,7 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="photoframe.png" width="720" height="720"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>
