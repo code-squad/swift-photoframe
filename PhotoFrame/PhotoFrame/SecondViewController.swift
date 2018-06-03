@@ -12,8 +12,14 @@ class SecondViewController: UIViewController {
 
     @IBOutlet weak var photoImageView: UIImageView!
     
+    private let imagePicker: UIImagePickerController
     private let numberOfImages: UInt32 = 22
     private var currentImageNumber: Int = 0
+    
+    required init?(coder aDecoder: NSCoder) {
+        self.imagePicker = UIImagePickerController()
+        super.init(coder: aDecoder)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
