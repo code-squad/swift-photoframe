@@ -32,6 +32,7 @@ class SecondViewController: UIViewController {
             return
         }
         self.photoImageView.contentMode = .scaleAspectFill
+        self.photoImageView.clipsToBounds = true
         self.photoImageView.image = photoImage
     }
     
