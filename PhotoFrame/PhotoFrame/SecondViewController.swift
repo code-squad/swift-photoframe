@@ -34,7 +34,12 @@ class SecondViewController: UIViewController {
 
     //MARK: IBAction methods
     @IBAction func selectButtonTouched(_ sender: Any) {
-        
+        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum) {
+            self.imagePicker.delegate = self
+            self.imagePicker.sourceType = .savedPhotosAlbum
+            self.imagePicker.allowsEditing = true
+            self.present(self.imagePicker, animated: true, completion: nil)
+        }
     }
     
     @IBAction func nextImageButtonTouched(_ sender: Any) {
