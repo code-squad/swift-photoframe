@@ -26,6 +26,11 @@ class SecondViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    //MARK: IBAction methods
+    @IBAction func selectButtonTouched(_ sender: Any) {
+        
+    }
+    
     @IBAction func nextImageButtonTouched(_ sender: Any) {
         let imageName: String = String(format: "Demo Images/%02d.jpg", self.generateRandomNumber())
         guard let photoImage = UIImage(named: imageName) else {
