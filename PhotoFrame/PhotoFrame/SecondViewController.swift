@@ -58,3 +58,7 @@ class SecondViewController: UIViewController {
     }
     
 }
+
+extension SecondViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+}
