@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Photos
 
 class SecondViewController: UIViewController {
 
@@ -23,7 +24,6 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         print(#file, #line, #function, #column)
     }
 
@@ -34,6 +34,7 @@ class SecondViewController: UIViewController {
 
     //MARK: IBAction methods
     @IBAction func selectButtonTouched(_ sender: Any) {
+        self.checkPhotoLibraryPermission()
         if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum) {
             self.imagePicker.delegate = self
             self.imagePicker.sourceType = .savedPhotosAlbum
@@ -60,6 +61,27 @@ class SecondViewController: UIViewController {
         }
         self.currentImageNumber = randomNumber
         return randomNumber
+    }
+    
+    private func checkPhotoLibraryPermission() {
+        let photoAuthorizationStatus = PHPhotoLibrary.authorizationStatus()
+        switch photoAuthorizationStatus {
+        case .authorized:
+            print("Access is granted by user")
+        case .notDetermined:
+            PHPhotoLibrary.requestAuthorization({
+                (newStatus) in
+                print("status is \(newStatus)")
+                if newStatus ==  PHAuthorizationStatus.authorized {
+                    print("success")
+                }
+            })
+            print("It is not determined until now")
+        case .restricted:
+            print("User do not have access to photo album.")
+        case .denied:
+            print("User has denied the permission.")
+        }
     }
     
 }
