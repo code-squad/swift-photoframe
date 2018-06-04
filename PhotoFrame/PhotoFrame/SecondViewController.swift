@@ -13,14 +13,8 @@ class SecondViewController: UIViewController {
 
     @IBOutlet weak var photoImageView: UIImageView!
     
-    private let imagePicker: UIImagePickerController
     private let numberOfImages: UInt32 = 22
     private var currentImageNumber: UInt32 = 0
-    
-    required init?(coder aDecoder: NSCoder) {
-        self.imagePicker = UIImagePickerController()
-        super.init(coder: aDecoder)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,11 +28,12 @@ class SecondViewController: UIViewController {
 
     //MARK: IBAction methods
     @IBAction func selectButtonTouched(_ sender: Any) {
+        let imagePicker: UIImagePickerController = UIImagePickerController()
         if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum) {
-            self.imagePicker.delegate = self
-            self.imagePicker.sourceType = .savedPhotosAlbum
-            self.imagePicker.allowsEditing = true
-            self.present(self.imagePicker, animated: true, completion: nil)
+            imagePicker.delegate = self
+            imagePicker.sourceType = .savedPhotosAlbum
+            imagePicker.allowsEditing = true
+            self.present(imagePicker, animated: true, completion: nil)
         }
     }
     
