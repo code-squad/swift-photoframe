@@ -218,3 +218,28 @@
 		
 ### 진행사항 (완성날짜: 2018/06/01 22:00)
 ![구현화면](./images/step7_0.gif)
+
+
+
+## Step8
+
+* 참조 : [Apple PhotoPicker sample code](https://developer.apple.com/library/content/samplecode/PhotoPicker/Listings/PhotoPicker_APLViewController_swift.html#//apple_ref/doc/uid/DTS40010196-PhotoPicker_APLViewController_swift-DontLinkElementID_5), [UIImagePicker](https://developer.apple.com/documentation/uikit/uiimagepickercontroller), [내 사진앨범에/카메라에서 이미지가져오기](http://zeddios.tistory.com/125), 아론힐리가스 iOS, [How to Access Photo Camera and Library in Swift](https://turbofuture.com/cell-phones/Access-Photo-Camera-and-Library-in-Swift)
+
+1. 추가 학습꺼리
+	- 델리게이트(Delegate)와 프로토콜(Protocol) 상관 관계에 대해 학습한다.
+		- 일단 델리게이트는 하나의 객체가 모든 일을 처리하는 것이 아니라 처리해야 할 일 중 일부를 다른 객체에게 넘기는 것.
+		- 기능을 위임하여 기능을 분담하여 구현하기 때문에 한 객체가 모든 일을 하지 않아도 된다.
+		- 이미지피커로 예를 들면 사용자가 이미지 피커의 동작에 대한 이벤트를 이미지피커의 델리게이트 객체에게 전달을 하고 처리는 델리게이트가 하게 된다.
+		- 이미지피커는 사용자와의 상호작용을, 이미지피커 델리게이트 객체는 받은 이벤트를 이미지피커대신 처리하여 역할을 나눌 수 있다.
+		- 델리게이트가 특정 클래스의 객체가 아닌 프로토콜을 통해 구현됨으로써 얻게 되는 이점
+			- 어떤 객체든 프로토콜을 통해 델리게이트가 될 수 있다. -> 특정 객체에 의존하는 것이 아니라 프로토콜에 의존하게 된다. -> 테스트와 객체 교체가 용이하다. -> 뷰는 이벤트를 전달하는 객체에 대해 알 필요가 없다. 단순히 델리게이트에게 전달만하면 델리게이트가 된 객체가 알아서 이를 받아서 처리한다.
+		- 보통 Delegate와 Data Source를 사용하는데 뷰가 컨트롤러에게 Delegate를 통해 이벤트를 전달하고,
+		- 뷰가 Data Source를 통해 모델의 변경 사항이 있는지 체크하고 이를 통해 자신이 어떻게 그려져야할지 안다.(ex: tableView)
+	- UIImagePickerController처럼 이미 만들어놓은 시스템 컨트롤러들에 대해 학습한다.
+		- [UIViewController](https://developer.apple.com/documentation/uikit/view_controllers)의 시스템 컨트롤러
+	- 화면 요소들을 겹쳐서 디자인 하는 경우 z축으로 위-아래를 구분해서 학습한다.
+		- 가장 마지막에 추가된 subview가 가장 위에 보이게 된다.
+		- 스토리보드에서는 DocumentOutline 목록에서 더 아래에 있을 수록 위에 보여지게 된다.
+
+### 진행사항 (완성날짜: 2018/06/03 17:00)
+![구현화면](./images/step8_0.gif)
