@@ -34,7 +34,6 @@ class SecondViewController: UIViewController {
 
     //MARK: IBAction methods
     @IBAction func selectButtonTouched(_ sender: Any) {
-        self.checkPhotoLibraryPermission()
         if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum) {
             self.imagePicker.delegate = self
             self.imagePicker.sourceType = .savedPhotosAlbum
@@ -61,27 +60,6 @@ class SecondViewController: UIViewController {
         }
         self.currentImageNumber = randomNumber
         return randomNumber
-    }
-    
-    private func checkPhotoLibraryPermission() {
-        let photoAuthorizationStatus = PHPhotoLibrary.authorizationStatus()
-        switch photoAuthorizationStatus {
-        case .authorized:
-            
-        case .notDetermined:
-            PHPhotoLibrary.requestAuthorization({
-                (newStatus) in
-                
-                if newStatus ==  PHAuthorizationStatus.authorized {
-                    print("success")
-                }
-            })
-            
-        case .restricted:
-            
-        case .denied:
-            
-        }
     }
     
 }
