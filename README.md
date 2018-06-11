@@ -1,57 +1,32 @@
-# 진행 방법
+## Tabbed App 탬플릿
 
-- 포토프레임에 대한 요구사항을 파악한다.
-- 요구사항에 대한 구현을 완료한 후 자신의 github 아이디에 해당하는 브랜치에 Pull Request(이하 PR)를 통해 코드 리뷰 요청을 한다.
-- 코드 리뷰 피드백에 대한 개선 작업을 하고 다시 PUSH한다.
-- 모든 피드백을 완료하면 다음 단계를 도전하고 앞의 과정을 반복한다.
+- #file : 자신의 경로를 반환
+- #line : 해당 코드의 라인을 반환
+- #function : 해당 코드를 실행하는 함수명을 반환
+- #column : 해당 코드의 가로 수?를 반환
 
-# 코드 리뷰 과정
-> 저장소 브랜치에 자신의 github 아이디에 해당하는 브랜치가 존재해야 한다.
->
-> 자신의 github 아이디에 해당하는 브랜치가 있는지 확인한다.
+![](PhotoFrameImg/Photoframe_step1.png)
 
-1. 자신의 github 아이디에 해당하는 브랜치가 없는 경우 브랜치 생성 요청 채널을 통해 브랜치 생성을 요청한다.
-프로젝트를 자신의 계정으로 fork한다. 저장소 우측 상단의 fork 버튼을 활용한다.
+### Step1
 
-2. fork한 프로젝트를 자신의 컴퓨터로 clone한다.
-```
-git clone https://github.com/{본인_아이디}/{저장소 아이디}
-ex) https://github.com/godrm/swift-photoframe
-```
+요구 사항
+- 애플 UIKit View Management 클래스 중에서 UITabBarController 와 UITabBar에 대해 학습한다.
+  - 각 클래스 역할은 무엇인가? 어떤 경우에 사용하나?
+  - UITabBar와 UITabBarController의 차이점은 무엇인가?
+관련 클래스는 무엇이 있나?
 
-3. clone한 프로젝트 이동
-```
-cd {저장소 아이디}
-ex) cd swift-photoframe
-```
+  - UITabBarController 이란?
 
-4. 본인 아이디로 브랜치를 만들기 위한 checkout
-```
-git checkout -t origin/본인_아이디
-ex) git checkout -t origin/godrm
-```
+    - A container view controller that manages a radio-style selection interface, where the selection determines which child view controller to display.
 
-5. commit
-```
-git status //확인
-git rm 파일명 //삭제된 파일
-git add 파일명(or * 모두) // 추가/변경 파일
-git commit -m "메세지" // 커밋
-```
+    - radio-style interface : radio-style 이란 여러가지 선택할 수 있는 보기가 있을떄 선택한 하나만 선택 할 수 있는 방식
 
-6. 본인 원격 저장소에 올리기
-```
-git push origin 본인_아이디
-ex) git push origin godrm
-```
+    - UIViewController 상속 : UITabBarController는 UIViewController를 상속 받고 있음
 
-7. pull request
-8. pull request는 github 서비스에서 진행할 수 있다.
-9. pull request는 반드시 original 저장소의 브랜치와 fork한 자신의 저장소 브랜치 이름이 같아야 하며, 브랜치 이름은 자신의 github 아이디여야 한다.
-10. code review 및 push
-11. pull request를 통해 피드백을 받는다.
-12. 코드 리뷰 피드백에 대한 개선 작업을 하고 다시 PUSH한다.
+  - UITabBar 이란?
 
-## 앞의 코드 리뷰 과정은 [영상 보기](https://www.youtube.com/watch?v=ZSZoaG0PqLg) 를 통해 참고 가능
+    - A control that displays one or more buttons in a tab bar for selecting between different subtasks, views, or modes in an app
 
-## 실습 중 모든 질문은 슬랙 채널에서...
+    - TabBar View는 UIView로 되어있음
+
+    - TabBarItem은 TapBar에 최소 1개 이상 있어야됌
