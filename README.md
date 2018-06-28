@@ -28,3 +28,9 @@
 - When the user selects a specific tab, the tab bar controller displays the root view of the corresponding view controller, replacing any previous views
 - If you add six or more custom view controllers to a tab bar controller, the tab bar controller displays only the first four items plus the standard More item on the tab bar
 - 관련 클래스 : selectedViewController, UITabBarItem, UITabBarItem, UITabBarControllerDelegate protocol
+
+## 스텝 2
+
+1. storyBoard 의 UILabel 을 IBOutlet 으로 viewController 에 photoLabel 변수로 연결
+2. @IBOutlet weak var photoLabel: UILabel! 로 코드 자동 생성
+3. self.photoLabel.인자 로 해당 UILabel 속성값 조절 가능
