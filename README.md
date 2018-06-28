@@ -1,57 +1,30 @@
-# 진행 방법
+# 포토 프레임 앱
 
-- 포토프레임에 대한 요구사항을 파악한다.
-- 요구사항에 대한 구현을 완료한 후 자신의 github 아이디에 해당하는 브랜치에 Pull Request(이하 PR)를 통해 코드 리뷰 요청을 한다.
-- 코드 리뷰 피드백에 대한 개선 작업을 하고 다시 PUSH한다.
-- 모든 피드백을 완료하면 다음 단계를 도전하고 앞의 과정을 반복한다.
+## 스텝 1
 
-# 코드 리뷰 과정
-> 저장소 브랜치에 자신의 github 아이디에 해당하는 브랜치가 존재해야 한다.
->
-> 자신의 github 아이디에 해당하는 브랜치가 있는지 확인한다.
+1. print(#file, #line, #function, #column) 코드 결과 확인
+- #file : 해당 코드가 실행된 파일의 상대위치값
+- #line : 실행된 코드 라인 위치
+- #function : 실행된 함수 이름
+- #column : 실행됬을때 컬럼 번호(문자열의 경우 글자수)
 
-1. 자신의 github 아이디에 해당하는 브랜치가 없는 경우 브랜치 생성 요청 채널을 통해 브랜치 생성을 요청한다.
-프로젝트를 자신의 계정으로 fork한다. 저장소 우측 상단의 fork 버튼을 활용한다.
+2. View Controllers
+- controller manages a single root view
+- Every app has at least one view controller
+- container view controller embeds the content of other view controllers
+3. UITabBar
+- Tab bars always appear across the bottom edge of the screen and display the contents of one or more UITabBarItem objects
+- Use tab bars to convey and change your app’s mode
+- You can configure tab bar items using Interface Builder or create and configure them programmatically in your code
+- A tab bar displays all of its tabs onscreen at once, using the itemPositioning property to determine how to position items in the available space
+- If you have more items than can fit in the available space, display only a subset of them and let the user select which tabs are displayed
+- The contents of each item are stored in a UITabBarItem object
+- For tab bars with an associated tab bar controller, the tab bar controller automatically manages selections and displays the appropriate view controller. The only time you have to manage selections yourself is when you create the tab bar without a tab bar controller
+- 관련 클래스 : UIToolbar
 
-2. fork한 프로젝트를 자신의 컴퓨터로 clone한다.
-```
-git clone https://github.com/{본인_아이디}/{저장소 아이디}
-ex) https://github.com/godrm/swift-photoframe
-```
-
-3. clone한 프로젝트 이동
-```
-cd {저장소 아이디}
-ex) cd swift-photoframe
-```
-
-4. 본인 아이디로 브랜치를 만들기 위한 checkout
-```
-git checkout -t origin/본인_아이디
-ex) git checkout -t origin/godrm
-```
-
-5. commit
-```
-git status //확인
-git rm 파일명 //삭제된 파일
-git add 파일명(or * 모두) // 추가/변경 파일
-git commit -m "메세지" // 커밋
-```
-
-6. 본인 원격 저장소에 올리기
-```
-git push origin 본인_아이디
-ex) git push origin godrm
-```
-
-7. pull request
-8. pull request는 github 서비스에서 진행할 수 있다.
-9. pull request는 반드시 original 저장소의 브랜치와 fork한 자신의 저장소 브랜치 이름이 같아야 하며, 브랜치 이름은 자신의 github 아이디여야 한다.
-10. code review 및 push
-11. pull request를 통해 피드백을 받는다.
-12. 코드 리뷰 피드백에 대한 개선 작업을 하고 다시 PUSH한다.
-
-## 앞의 코드 리뷰 과정은 [영상 보기](https://www.youtube.com/watch?v=ZSZoaG0PqLg) 를 통해 참고 가능
-
-## 실습 중 모든 질문은 슬랙 채널에서...
+4. UITabBarController
+- A container view controller that manages a radio-style selection interface, where the selection determines which child view controller to display
+- The tab bar interface displays tabs at the bottom of the window for selecting between the different modes and for displaying the views for that mode
+- When the user selects a specific tab, the tab bar controller displays the root view of the corresponding view controller, replacing any previous views
+- If you add six or more custom view controllers to a tab bar controller, the tab bar controller displays only the first four items plus the standard More item on the tab bar
+- 관련 클래스 : selectedViewController, UITabBarItem, UITabBarItem, UITabBarControllerDelegate protocol
