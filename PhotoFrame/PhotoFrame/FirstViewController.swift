@@ -13,7 +13,7 @@ class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.photoLabel.text = "JK의 사진액자"
+        self.photoLabel.text = "Drake의 사진액자"
         self.photoLabel.backgroundColor = UIColor.cyan
         print(#file, #line, #function, #column)
         // Do any additional setup after loading the view, typically from a nib.
