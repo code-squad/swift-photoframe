@@ -9,9 +9,11 @@
 import UIKit
 
 class FirstViewController: UIViewController {
-
+    @IBOutlet weak var photoLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.photoLabel.text = "JK의 사진액자"
         print(#file, #line, #function, #column)
         // Do any additional setup after loading the view, typically from a nib.
     }
