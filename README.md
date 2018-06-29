@@ -40,3 +40,9 @@
 1. 버튼을 IBAction 으로 연결하면 터치 시 해당 펑션이 작동한다.
 2. IBOutlet, IBAction 등으로 ViewController 에 연결하면 ViewController 내부의 선언 변수명을 수정해도 적용되지 않는다. 
 3. 선언 후 수정하기 위해선 storyBoard 내부 코드 수정이 필요하며, 해당 변수명 우클릭 > refactor > rename 을 선택하면 일괄 수정이 가능하다.
+
+## 스텝 4
+
+1. 버튼을 segue 로 연결해서 다른 ViewContoroller 로 화면이동이 가능하다.
+2. segue 는 세그 혹은 세그웨이 라고 발음한다.
+3. 버튼의 경우 보더 설정이 안보인다. 코드로 작성해야됨.
