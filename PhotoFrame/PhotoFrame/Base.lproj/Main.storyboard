@@ -62,10 +62,10 @@
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
         </scene>
-        <!--View Controller-->
+        <!--Green View Controller-->
         <scene sceneID="A59-rP-i6h">
             <objects>
-                <viewController id="1ce-wd-FtG" sceneMemberID="viewController">
+                <viewController id="1ce-wd-FtG" customClass="GreenViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HFL-OC-dds">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,6 +80,16 @@
                                 </state>
                                 <connections>
                                     <segue destination="XKl-0n-08h" kind="show" id="2nS-ff-oYS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1nz-tM-pUS">
+                                <rect key="frame" x="80" y="473" width="222" height="112"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="56"/>
+                                <state key="normal" title="닫기"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="1ce-wd-FtG" eventType="touchUpInside" id="KGu-Rx-IdA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -107,6 +117,16 @@
                                 <state key="normal" title="처음으로"/>
                                 <connections>
                                     <segue destination="49e-Tb-3d3" kind="show" id="1JY-4x-AhB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xS6-FE-741">
+                                <rect key="frame" x="85" y="473" width="208" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="51"/>
+                                <state key="normal" title="닫기"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="XKl-0n-08h" eventType="touchUpInside" id="e34-yW-5y1"/>
                                 </connections>
                             </button>
                         </subviews>
