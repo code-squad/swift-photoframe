@@ -62,3 +62,12 @@
 	6. B.viewWillAppear()
 	7. B.viewdidAppear()
 	8. A.viewDidDisappear()
+3. segue 를 사용하지 않고 코드로 화면이동 하는 방법. 요점은 present 메소드 사용.
+	1. 버튼생성 후 IBAction 으로 연결
+	2. 이하 코드를 이용하여 연결
+
+> let ViewController인스턴스 = self.storyboard?.instantiateViewController(withIdentifier: “Storyboard ID값”)
+ViewController인스턴스?.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+self.present(ViewController인스턴스!, animated: true, completion: nil)
+
+>출처 : https://medium.com/@mingdaejo/ios-%ED%99%94%EB%A9%B4-%EC%A0%84%ED%99%98-b979188a1a82
