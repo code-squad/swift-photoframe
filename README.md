@@ -39,3 +39,4 @@
 
 1. 버튼을 IBAction 으로 연결하면 터치 시 해당 펑션이 작동한다.
 2. IBOutlet, IBAction 등으로 ViewController 에 연결하면 ViewController 내부의 선언 변수명을 수정해도 적용되지 않는다. 
+3. 선언 후 수정하기 위해선 storyBoard 내부 코드 수정이 필요하며, 해당 변수명 우클릭 > refactor > rename 을 선택하면 일괄 수정이 가능하다.
