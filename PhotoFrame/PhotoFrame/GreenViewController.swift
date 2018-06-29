@@ -42,6 +42,12 @@ print(#file, #line, #function, #column)
         print(#file, #line, #function, #column)
     }
 
+    @IBAction func NextViewProgrammaticllay(_ sender: Any) {
+        let ThirdViewController = self.storyboard?.instantiateViewController(withIdentifier: "ThirdViewController")
+        ThirdViewController?.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+        self.present(ThirdViewController!, animated: true, completion: nil)
+    }
+    
     
     /*
     // MARK: - Navigation

@@ -92,6 +92,16 @@
                                     <action selector="closeButtonTouched:" destination="1ce-wd-FtG" eventType="touchUpInside" id="KGu-Rx-IdA"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GoA-X2-aJo">
+                                <rect key="frame" x="80" y="318" width="202" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <state key="normal" title="코드로 다음"/>
+                                <connections>
+                                    <action selector="NextViewProgrammaticllay:" destination="1ce-wd-FtG" eventType="touchUpInside" id="zFY-zV-Qhp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.68276829459999999" green="1" blue="0.02544303157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Hgj-Y8-JxU"/>
@@ -104,7 +114,7 @@
         <!--Third View Controller-->
         <scene sceneID="B0Z-l1-jF6">
             <objects>
-                <viewController id="XKl-0n-08h" customClass="ThirdViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ThirdViewController" id="XKl-0n-08h" customClass="ThirdViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sbv-H1-zql">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
