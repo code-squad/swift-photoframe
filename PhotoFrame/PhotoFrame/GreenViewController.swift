@@ -12,16 +12,37 @@ class GreenViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+print(#file, #line, #function, #column)
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
     }
     
+    @IBAction func closeButtonTouched(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    override func viewWillAppear(_ animated: Bool){
+        super.viewWillAppear(animated)
+        print(#file, #line, #function, #column)
+    }
+    override func    viewDidAppear(_ animated: Bool){
+        super.viewDidAppear(animated)
+        print(#file, #line, #function, #column)
+    }
+    override func viewWillDisappear(_ animated: Bool){
+        super.viewWillDisappear(animated)
+        print(#file, #line, #function, #column)
+    }
+    override func viewDidDisappear(_ animated: Bool){
+        super.viewDidDisappear(animated)
+        print(#file, #line, #function, #column)
+    }
 
+    
     /*
     // MARK: - Navigation
 
