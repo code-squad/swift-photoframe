@@ -15,6 +15,7 @@
 		D56A0D9620E4F312004AAB4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D56A0D9420E4F312004AAB4F /* LaunchScreen.storyboard */; };
 		D56A0DA120E4F312004AAB4F /* PhotoFrameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56A0DA020E4F312004AAB4F /* PhotoFrameTests.swift */; };
 		D56A0DAC20E4F312004AAB4F /* PhotoFrameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56A0DAB20E4F312004AAB4F /* PhotoFrameUITests.swift */; };
+		D5B633B720E5EEF200BDD397 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B633B620E5EEF200BDD397 /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		D56A0DA720E4F312004AAB4F /* PhotoFrameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoFrameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D56A0DAB20E4F312004AAB4F /* PhotoFrameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFrameUITests.swift; sourceTree = "<group>"; };
 		D56A0DAD20E4F312004AAB4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5B633B620E5EEF200BDD397 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				D56A0D8B20E4F312004AAB4F /* FirstViewController.swift */,
 				D56A0D8D20E4F312004AAB4F /* SecondViewController.swift */,
 				D56A0D8F20E4F312004AAB4F /* Main.storyboard */,
+				D5B633B620E5EEF200BDD397 /* ThirdViewController.swift */,
 				D56A0D9220E4F312004AAB4F /* Assets.xcassets */,
 				D56A0D9420E4F312004AAB4F /* LaunchScreen.storyboard */,
 				D56A0D9720E4F312004AAB4F /* Info.plist */,
@@ -264,6 +267,7 @@
 			files = (
 				D56A0D8E20E4F312004AAB4F /* SecondViewController.swift in Sources */,
 				D56A0D8A20E4F312004AAB4F /* AppDelegate.swift in Sources */,
+				D5B633B720E5EEF200BDD397 /* ThirdViewController.swift in Sources */,
 				D56A0D8C20E4F312004AAB4F /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
