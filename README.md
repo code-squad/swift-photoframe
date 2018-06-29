@@ -31,7 +31,7 @@
 
 ## 스텝 2
 
-1. storyBoard 의 UILabel 을 IBOutlet 으로 viewController 에 photoLabel 변수로 연결
+1. Storyboard 의 UILabel 을 IBOutlet 으로 viewController 에 photoLabel 변수로 연결
 2. @IBOutlet weak var photoLabel: UILabel! 로 코드 자동 생성
 3. self.photoLabel.인자 로 해당 UILabel 속성값 조절 가능
 
@@ -39,10 +39,26 @@
 
 1. 버튼을 IBAction 으로 연결하면 터치 시 해당 펑션이 작동한다.
 2. IBOutlet, IBAction 등으로 ViewController 에 연결하면 ViewController 내부의 선언 변수명을 수정해도 적용되지 않는다. 
-3. 선언 후 수정하기 위해선 storyBoard 내부 코드 수정이 필요하며, 해당 변수명 우클릭 > refactor > rename 을 선택하면 일괄 수정이 가능하다.
+3. 선언 후 수정하기 위해선 Storyboard 내부 코드 수정이 필요하며, 해당 변수명 우클릭 > refactor > rename 을 선택하면 일괄 수정이 가능하다.
 
 ## 스텝 4
 
 1. 버튼을 segue 로 연결해서 다른 ViewContoroller 로 화면이동이 가능하다.
 2. segue 는 세그 혹은 세그웨이 라고 발음한다.
 3. 버튼의 경우 보더 설정이 안보인다. 코드로 작성해야됨.
+4. UIStoryboardSegue
+	- An object that prepares for and performs the visual transition between two view controllers.
+	- You do not create segue objects directly. Instead, the storyboard runtime creates them when it must perform a segue between two view controllers.
+
+## 스텝 5
+
+1. dismiss 명령어는 view 를 메모리에서 내린다.
+2. 생명주기 순서는 다음뷰 로드 -> 이전뷰 사라짐 예고 -> 다음뷰 생김 예고 -> 다음뷰 생김 완료 -> 이전뷰 사라짐 완료 순. 다음뷰가 생성 완료 되어야 이전뷰가 사라진다.
+	1. A.viewDidLoad()
+	2. A.viewWillAppear()
+	3. A.viewDidAppear()
+	4. B.viewDidLoad()
+	5. A.viewWillDisappear()
+	6. B.viewWillAppear()
+	7. B.viewdidAppear()
+	8. A.viewDidDisappear()
