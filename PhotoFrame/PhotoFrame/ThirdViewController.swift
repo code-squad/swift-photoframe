@@ -25,10 +25,11 @@ class ThirdViewController: UIViewController {
     }
     
     @IBAction func closeButtonTouched(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     override func viewWillAppear(_ animated: Bool){
         super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.tintColor = UIColor.green
         print(#file, #line, #function, #column)
     }
     override func    viewDidAppear(_ animated: Bool){
