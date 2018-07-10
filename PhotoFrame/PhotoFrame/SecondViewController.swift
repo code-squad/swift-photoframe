@@ -22,8 +22,8 @@ class SecondViewController: UIViewController {
     @IBAction func nextImageButtonTouched(_ sender: Any) {
         // 1~22 의 랜덤문자열 생성
         let fileNumber = literalize(random())
+        self.photoImageView.contentMode = UIViewContentMode.scaleAspectFit
         self.photoImageView.image = UIImage(named: "\(fileNumber).jpg")
-        
     }
     
     /// 1~22 까지의 랜덤정수를 리턴하는 함수
