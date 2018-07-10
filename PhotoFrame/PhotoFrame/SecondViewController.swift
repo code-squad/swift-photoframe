@@ -17,6 +17,12 @@ class SecondViewController: UIViewController {
         print(#file, #line, #function, #column)
     }
 
+    @IBOutlet weak var photoImageView: UIImageView!
+    
+    @IBAction func nextImageButtonTouched(_ sender: Any) {
+        self.photoImageView.image = UIImage(named: "01.jpg")
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
