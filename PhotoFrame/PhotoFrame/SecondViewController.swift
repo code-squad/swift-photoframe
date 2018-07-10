@@ -20,7 +20,25 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var photoImageView: UIImageView!
     
     @IBAction func nextImageButtonTouched(_ sender: Any) {
-        self.photoImageView.image = UIImage(named: "01.jpg")
+        // 1~22 의 랜덤문자열 생성
+        let fileNumber = literalize(random())
+        self.photoImageView.image = UIImage(named: "\(fileNumber).jpg")
+        
+    }
+    
+    /// 1~22 까지의 랜덤정수를 리턴하는 함수
+    func random()-> Int {
+        return Int(arc4random_uniform(22))+1
+    }
+    
+    /// 정수를 입력받아서 두글자 문자열로 리턴하는 함수
+    func literalize(_ num: Int) -> String{
+        if num < 10 {
+            return "0\(num)"
+        }
+        else {
+            return "\(num)"
+        }
     }
     
     override func didReceiveMemoryWarning() {
