@@ -71,3 +71,12 @@ ViewController인스턴스?.modalTransitionStyle = UIModalTransitionStyle.coverV
 self.present(ViewController인스턴스!, animated: true, completion: nil)
 
 >출처 : https://medium.com/@mingdaejo/ios-%ED%99%94%EB%A9%B4-%EC%A0%84%ED%99%98-b979188a1a82
+
+## 스텝 6
+
+1. 네이게이션 컨트롤러의 장점 : 현재 위치를 유저에게 쉽게 알려주고 순서대로 이동하도록 유도.
+2. 단점 : 
+3. Although the navigation bar and toolbar are customizable views, you must never modify the views in the navigation hierarchy directly. The only way to customize these views is through methods of the UINavigationController and UIViewController classes. 왜 직접 수정하면 안되는지 후술.
+4. In most cases, you do not have to pop view controllers off the stack programmatically. Instead, the navigation controller provides a back button on the navigation bar that pops the topmost view controller automatically when the user taps it.
+5. When a navigation bar is used in conjunction with a navigation controller, you always use the setNavigationBarHidden:animated: method of UINavigationController to show and hide the navigation bar. You must never hide the navigation bar by modifying the UINavigationBar object’s hidden property directly. 네비게이션 바 를 숨기는것은 가능하며 UINavigationController 의 속성을 사용할것. UINavigationBar의 속성은 건들지 말것.
+6. 
