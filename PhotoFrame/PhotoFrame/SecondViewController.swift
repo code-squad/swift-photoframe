@@ -34,12 +34,7 @@ class SecondViewController: UIViewController {
     
     /// 정수를 입력받아서 두글자 문자열로 리턴하는 함수
     func literalize(_ num: Int) -> String{
-        if num < 10 {
-            return "0\(num)"
-        }
-        else {
-            return "\(num)"
-        }
+        return String(format:"%02d",num)
     }
     
     override func didReceiveMemoryWarning() {
