@@ -15,6 +15,8 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         print(#file, #line, #function, #column)
+        
+        self.photoImageView.contentMode = UIViewContentMode.scaleAspectFit
     }
 
     @IBOutlet weak var photoImageView: UIImageView!
@@ -22,7 +24,6 @@ class SecondViewController: UIViewController {
     @IBAction func nextImageButtonTouched(_ sender: Any) {
         // 1~22 의 랜덤문자열 생성
         let fileNumber = literalize(random())
-        self.photoImageView.contentMode = UIViewContentMode.scaleAspectFit
         self.photoImageView.image = UIImage(named: "\(fileNumber).jpg")
     }
     
