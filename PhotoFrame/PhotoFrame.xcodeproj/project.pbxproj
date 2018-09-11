@@ -16,6 +16,7 @@
 		47340BDB214794AF002939CD /* PhotoFrameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47340BDA214794AF002939CD /* PhotoFrameTests.swift */; };
 		47340BE6214794AF002939CD /* PhotoFrameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47340BE5214794AF002939CD /* PhotoFrameUITests.swift */; };
 		47340BF4214794E6002939CD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 47340BF3214794E6002939CD /* README.md */; };
+		47340BF6214797D5002939CD /* CaptureImage in Resources */ = {isa = PBXBuildFile; fileRef = 47340BF5214797D5002939CD /* CaptureImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		47340BE5214794AF002939CD /* PhotoFrameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFrameUITests.swift; sourceTree = "<group>"; };
 		47340BE7214794AF002939CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47340BF3214794E6002939CD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		47340BF5214797D5002939CD /* CaptureImage */ = {isa = PBXFileReference; lastKnownFileType = folder; name = CaptureImage; path = ../CaptureImage; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				47340BE4214794AF002939CD /* PhotoFrameUITests */,
 				47340BC1214794AE002939CD /* Products */,
 				47340BF3214794E6002939CD /* README.md */,
+				47340BF5214797D5002939CD /* CaptureImage */,
 			);
 			sourceTree = "<group>";
 		};
@@ -235,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47340BF6214797D5002939CD /* CaptureImage in Resources */,
 				47340BD0214794AF002939CD /* LaunchScreen.storyboard in Resources */,
 				47340BCD214794AF002939CD /* Assets.xcassets in Resources */,
 				47340BF4214794E6002939CD /* README.md in Resources */,
