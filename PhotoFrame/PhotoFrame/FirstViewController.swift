@@ -23,9 +23,22 @@ class FirstViewController: UIViewController {
         self.firstLabel.shadowColor = UIColor.darkGray
         self.firstLabel.shadowOffset = CGSize.init(width: 5, height: 5)
         
-        self.firstDescription.textColor = UIColor.red
-        self.firstDescription.lineBreakMode = NSLineBreakMode.byClipping
+        // AttributeString 사용방법
+        let descAttribute = [NSAttributedStringKey.backgroundColor : UIColor.orange]
+        let descString = NSMutableAttributedString(string: "사진액자", attributes: descAttribute)
+        let attrString = NSAttributedString(string: " 의 설명부분 입니다.")
+        descString.append(attrString)
         
+        // Using addAttribute
+        var descRange = NSRange(location: 11, length: 5)
+        descString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.red, range: descRange)
+        
+        // Using addAttributes
+        descRange = NSRange(location: 3, length: 10)
+        let anotherAttribute = [NSAttributedStringKey.backgroundColor: UIColor.yellow]
+        descString.addAttributes(anotherAttribute, range: descRange)
+        
+        self.firstDescription.attributedText = descString
     }
 
     override func didReceiveMemoryWarning() {
