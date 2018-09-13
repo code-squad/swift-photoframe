@@ -37,6 +37,31 @@
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="9pv-A4-QxB" eventType="touchUpInside" id="DD4-Qo-heo"/>
+                                    <action selector="nextButtonTouchedDown:" destination="9pv-A4-QxB" eventType="touchDown" id="pIL-lE-Y9Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VbS-3N-Bdb">
+                                <rect key="frame" x="164" y="69" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="duplicatedTouchUpOutside:" destination="9pv-A4-QxB" eventType="touchUpInside" id="jHP-jN-ZQb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kB-Xy-2U6">
+                                <rect key="frame" x="164" y="145" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="duplicatedTouchUpOutside:" destination="9pv-A4-QxB" eventType="touchUpInside" id="ADu-W9-SfP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSV-Ma-Zol">
+                                <rect key="frame" x="164" y="107" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="duplicatedTouchUpOutside:" destination="9pv-A4-QxB" eventType="touchUpInside" id="VWu-oW-rMC"/>
                                 </connections>
                             </button>
                         </subviews>

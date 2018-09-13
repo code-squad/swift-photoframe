@@ -32,7 +32,7 @@
  : 레이블은 많은 사용자와 통신할 수 있는 중요한 컨트롤 중 하나이므로 국제화가 중요합니다. 따라서 국제화 구현도 가능합니다. ( 아래 URL 참조 )
 [About Internationalization and Localization](https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPInternational/Introduction/Introduction.html#//apple_ref/doc/uid/10000171i)
 
-#### Topics
+### Topics
 
 ---
 ##### Accessing the Text Attributes (텍스트 속성 엑세스)
@@ -110,13 +110,55 @@ weak 는 옵셔널이기 때문에 참조하는 값이 없다면 nil 로 값이 
 크러시가 발생하게 될 것입니다.
 ```
 #### 참고
-[fonts - How do I make an attributed string using Swift? - Stack Overflow](https://stackoverflow.com/questions/24666515/how-do-i-make-an-attributed-string-using-swift)
-[때로는 까칠하게.. :: Swift ARC(Automatic Reference Counting)](http://kka7.tistory.com/21)
-[스위프트 ARC와 순환참조와 클로저 · Out of Bedlam](https://outofbedlam.github.io/swift/2016/01/31/Swift-ARC-Closure-weakself/)
-
-
+ - [fonts - How do I make an attributed string using Swift? - Stack Overflow](https://stackoverflow.com/questions/24666515/how-do-i-make-an-attributed-string-using-swift)
+ - [때로는 까칠하게.. :: Swift ARC(Automatic Reference Counting)](http://kka7.tistory.com/21)
+ - [스위프트 ARC와 순환참조와 클로저 · Out of Bedlam](https://outofbedlam.github.io/swift/2016/01/31/Swift-ARC-Closure-weakself/)
 
 ![Step2_1](CaptureImage/Step2_1.png)
 
 ---
+
+## Step3 - IBAction
+
+### IBAction 이벤트 종류
+| 이름 | 내용 |
+| --- | :---: |
+| Did End On Exit | 
+
+| Editing Changed | UITextField 객체에서 편집 변경을 수행하는 터치 |
+| Editing Did Begin | UITextField 객체에서 해당 경계에 들어서면서 편집 세션을 시작하는 터치 |
+| Editing Did End | UITextField 객체에서 해당 경계를 벗어나 편집 세션을 종료하는 터치 |
+| Primary Action Triggered | 버튼에 의해 트리거(시작)된 의미 동작 |
+| Touch Cancel | 컨트롤의 현재 터치를 취소하는 시스템 이벤트 |
+| Touch Down | 버튼을 누를 때의 상태 이벤트 |
+| Touch Down Repeat | 컨트롤에서 반복된 터치다운 이벤트 (이 이벤트의 경우 UITouch tapCount 메소드의 값이 1보다 큽니다) |
+| Touch Drag Enter | 제어 범위로 손가락을 끄는 이벤트 |
+| Touch Drag Exit | 제어 범위내에서 밖으로 손가락을 끄는 이벤트 |
+| Touch Drag Inside | 제어 범위내에서 손가락을 끄는 이벤트 |
+| Touch Drag Outside | 제어 범위 바로 밖에서 손가락을 끄는 이벤트 |
+| Touch Up Inside (Default) | 제어 범위내에서 버튼을 누르고 땠을 때의 상태 이벤트 |
+| Touch Up OutSide | 제어 범위밖에서 버튼을 누르고 땠을 때의 상태 이벤트 |
+| Value Changed | 터치를 드래그하거나 다른 방식으로 조작하여 일련의 다른 값을 방출하도록하는 컨트롤 |
+
+### 버튼 클릭 Before & After 스크린샷
+![Step3_1](CaptureImage/Step3_1.png)
+![Step3_2](CaptureImage/Step3_2.png)
+
+### 버튼에 액션을 여러개 추가할 수 있을까?
+ - 가능 : 아래 스크린샷 참고
+![Step3_3](CaptureImage/Step3_3.png) 
+
+### 버튼이 여러일 때 하나의 액션에 추가할 수 있을까?
+ - 가능 : 하나의 액션을 만들고 추가적으로 버튼을 해당 액션에 드래그해서 중복 설정이 가능합니다.
+
+#### 참고
+ - [UIControl.Event - UIControl | Apple Developer Documentation](https://developer.apple.com/documentation/uikit/uicontrol/event)
+
+
+
+
+
+
+
+
 
