@@ -16,6 +16,12 @@ class FirstViewController: UIViewController {
         self.firstLabel.backgroundColor = UIColor.yellow
         self.firstLabel.alpha = 0.5
     }
+    @IBAction func nextButtonTouchedDown(_ sender: Any) {
+        self.firstLabel.textColor = UIColor.red
+    }
+    @IBAction func duplicatedTouchUpOutside(_ sender: Any) {
+        // for Test
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
