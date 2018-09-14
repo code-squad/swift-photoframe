@@ -93,7 +93,7 @@
         <!--Yellow View Controller-->
         <scene sceneID="crF-Qu-YRG">
             <objects>
-                <viewController id="IUy-Wr-cjA" customClass="YellowViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="YellowViewController" id="IUy-Wr-cjA" customClass="YellowViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qL6-zi-Xxc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,7 +107,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Next Page Button"/>
                                         <connections>
-                                            <segue destination="N0P-1Z-NrC" kind="show" id="t7x-mD-HSg"/>
+                                            <action selector="nextButtonTouched:" destination="IUy-Wr-cjA" eventType="touchUpInside" id="gnl-Cg-i1o"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Daj-0s-8rw">
@@ -115,7 +115,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
-                                            <action selector="closeButtonTouched:" destination="IUy-Wr-cjA" eventType="touchUpInside" id="ufd-tY-nZq"/>
+                                            <action selector="closeButtonTouched:" destination="IUy-Wr-cjA" eventType="touchUpInside" id="odm-BK-BTJ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -133,7 +133,7 @@
         <!--Blue View Controller-->
         <scene sceneID="uT0-WX-864">
             <objects>
-                <viewController id="N0P-1Z-NrC" customClass="BlueViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BlueViewController" id="N0P-1Z-NrC" customClass="BlueViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s5S-81-YIv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
