@@ -276,5 +276,55 @@ let myView = UIView(frame: rect)
 
 ---
 
+## Step5 - ViewController 프로그래밍
 
+#### View Controller 라이프 사이클 용어
+1. ViewDidLoad
+ - 해당 뷰 컨트롤러 클래스가 생성될 때 실행됩니다.
+ - Low memory와 같은 특별한 경우가 아니라면 딱 한번만 실행되기 때문에 초기화 할 때 사용합니다.
+ 
+2. ViewWillAppear
+ - 뷰 컨트롤러가 화면에 나타나기 직전에 실행됩니다. 
+ - 뷰 컨트롤러가 나타나기 전에 항상 실행되기 때문에 해당 뷰 컨트롤러가 나타나기 직전마다 일어나는 작업들을 해당 부분에 배치합니다.
+ 
+3. ViewDidAppear
+ - 뷰 컨트롤러가 화면에 나타난 직후에 실행됩니다.
+ - 화면에 적용될 애니메이션을 그리거나 API로부터 정보를 받아와 화면을 업데이트 할 때 이곳에 로직을 위치시키면 좋습니다.
+ - 왜냐하면 지나치게 빨리 애니메이션을 그리거나 API에서 정보를 받아와 뷰 컨트롤러를 업데이트 할 경우 화면에 반영되지 않습니다.
 
+4. ViewWill / DidDisappear
+ - 뷰 컨트롤러가 화면에 나타난 직전 / 직후에 실행됩니다.
+
+#### Yellow & Blue View 이동 할 때의 라이프 사이클 변화
+```
+1. in YellowView
+- viewDidLoad
+- viewWillAppear
+- viewDidAppear
+
+2. out YellowView & in BlueView
+- viewDidLoad (Blue)
+- viewWillDisappear (Yellow)
+- viewWillAppear (Blue)
+- viewDidAppear (Blue)
+- viewDidDisappear (Yellow)
+
+3. out BlueView & back YellowView
+- viewWillDisappear (Blue)
+- viewWillAppear (Yellow)
+- viewDidAppear (Yellow)
+- viewDidDisappear (Blue)
+```
+
+#### StoryBoard 사용하지 않고 다음 화면으로 넘기는 방법
+```
+@IBAction func nextButtonTouched(_ sender: Any) {
+    if let blueVC = self.storyboard?.instantiateViewController(withIdentifier: "BlueViewController") as? BlueViewController {
+        self.present(blueVC, animated: true, completion: nil)
+    }
+}
+```
+
+#### 참고
+- [UIViewController - UIKit | Apple Developer Documentation](https://developer.apple.com/documentation/uikit/uiviewcontroller)
+- [앱 생명주기(App Lifecycle) vs 뷰 컨트롤러 생명주기(ViewController Lifecycle) in iOS](https://medium.com/ios-development-with-swift/%EC%95%B1-%EC%83%9D%EB%AA%85%EC%A3%BC%EA%B8%B0-app-lifecycle-vs-%EB%B7%B0-%EC%83%9D%EB%AA%85%EC%A3%BC%EA%B8%B0-view-lifecycle-in-ios-336ae00d1855)
