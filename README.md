@@ -240,11 +240,41 @@ let myView = UIView(frame: rect)
  ### Topic
   - [UIView - UIKit | Apple Developer Documentation](https://developer.apple.com/documentation/uikit/uiview) 참고하십시오.
 
+### Segue 종류
 
+#### Show 
+ - 가장 일반적인 세그웨이이며 새 화면으로 이동 , Stack 구조로서 새 화면이 원래 화면 위를 덮는 구조
+ - View 컨트롤러가 UINavigationController 에 있을 때 다음 View 컨트롤러를 탐색하고 스택으로 푸시하는 방법  
+ - 이렇게 하면 사용자가 뒤로 버튼을 클릭하여 이전화면으로 돌아갈 수 있습니다.
+ - 화면에 보여지고 있는 마스터 또는 디테일 영역에 뷰를 로드합니다.
+ - 마스터와 디테일 영역 모두 화면에 보여지고 있을 경우 로드되는 새로운 컨텐츠 뷰는 디테일 영역의 네비게이션 스택에 푸시됩니다.
+ - 마스터와 디테일 영역 중 하나만 보여지고 있을 경우 현재 뷰 컨트롤러 스택의 최상단에 푸시됩니다.
 
+#### Show Detail
+ - SplitView 구조에서 원래 화면을 Master , 새 화면을 Detail로 표시합니다. 
+ - 아이폰에서는 똑같아 보이지만 아이패드로 보면 화면이 둘로 분할되서 보이게 됩니다.
+ - View 컨트롤러가 UISplitViewController에 있는 경우 UISplitView의 세부 보기 측면이 다음 뷰 컨트롤러로 대체되는 방법
+ - show 와 비슷하지만 푸시가 아닌 교체(replace) 됩니다. 마스터와 디테일 영역 모두 화면에 보여지고 있을 경우 로드되는 뷰는 디테일 여역을 교체하게 되며 둘 중 하나만 보여지고 있을 경우 현재 뷰컨트롤러 스택의 최상단 뷰를 교체합니다.
+ 
+ #### Present Modally
+ - 새 화면이 모달처럼 원래 화면 위 전체를 뒤덮습니다. 원래 화면은 새 화면 뒤에 그대로 존재하게 됩니다.
+ - 이 컨트롤러는 일반적으로 UINavigationController 또는 UISplitView Controller의 일부일 필요는 없습니다.
+ - 이것은 보통 사용자가 마침이나 취소를 해야 할 때 사용됩니다.
+ - 또한 , Presentation(보여지는 스타일) & Transition(트랜지션 스타일) 설정을 통해 추가적인 애니메이션 구성도 가능합니다.
 
+#### Popover Presentation
+ - 아이패드에서 팝업 형태로 컨텐츠 뷰를 띄웁니다. 아이폰 앱에서는 Show Detail 과 마찬가지로 효과가 나타나지 않습니다.
+ - UIPopoverArrowDirection 옵션을 사용하여 창에 붙어있는 엣지의 방향을 설정 할 수 있습니다.
 
+#### Custom
+ - 사용자 정의 Segue
+ 
+ ##### 참고
+ - [[iOS Swift] 화면이동 - Segue : 네이버 블로그](https://m.blog.naver.com/jdub7138/220393890771)
+ - [Segue between Swift View Controllers — Coding Explorer Blog](http://www.codingexplorer.com/segue-swift-view-controllers/)
+ - [XCode 스토리보드 사용시에 Segue 이용방법 3가지 | 아이군의 블로그](http://theeye.pe.kr/archives/2292)
 
+---
 
 
 
