@@ -328,3 +328,46 @@ let myView = UIView(frame: rect)
 #### 참고
 - [UIViewController - UIKit | Apple Developer Documentation](https://developer.apple.com/documentation/uikit/uiviewcontroller)
 - [앱 생명주기(App Lifecycle) vs 뷰 컨트롤러 생명주기(ViewController Lifecycle) in iOS](https://medium.com/ios-development-with-swift/%EC%95%B1-%EC%83%9D%EB%AA%85%EC%A3%BC%EA%B8%B0-app-lifecycle-vs-%EB%B7%B0-%EC%83%9D%EB%AA%85%EC%A3%BC%EA%B8%B0-view-lifecycle-in-ios-336ae00d1855)
+
+---
+
+#### 시도 : IBAction 과 Segue를 동시에 연결하는 경우
+ - 동작에는 무리가 없지만 콘솔을 확인 했을 때 아래와 같은 메세지가 나타났습니다. ( 어떤 의미인건지 궁금합니다. )
+ - 또한, IBAction 에서 break point 걸었을 때 동작하는 것으로 봐서 IBAction 만 동작하거나 둘다 동작하는 것 같은데 Segue 가 동작하는지 어떻게 확인할 수 있을까요?
+ - Step6 를 시도해보다가 동시에 연결하는 경우 둘다 동작하는 것으로 확신이 들었습니다.
+```
+2018-09-14 15:55:11.857577+0900 PhotoFrame[44663:5856086] <UIView: 0x7fe538e0cbb0; frame = (0 0; 414 896); autoresize = W+H; layer = <CALayer: 0x600003418600>>'s window is not equal to <PhotoFrame.BlueViewController: 0x7fe536412fb0>'s view's window!
+```
+
+---
+
+## Step6 - Container ViewController
+
+#### 실행화면
+![Step6_1](CaptureImage/Step6_1.png)
+![Step6_2](CaptureImage/Step6_2.png)
+
+#### 뷰컨트롤러 컨테이너 동작을 이해한다.
+ - UIViewController 라는 수퍼클래스 아래 UITabBarController , UINavigationController 등이 있습니다.
+ - UIViewController , UITableViewController 와 같은 단일 뷰 컨트롤러만 사용 할 수도 있으며 뷰 컨트롤러 컨테이너 안에 추가하여 사용할 수도 있습니다.
+ - 계층 관계로는 Window - UINavigationController - UIViewController - View - Button / etc 과 같이 구분되고 있습니다.
+ - 뷰 컨트롤러 컨테이너는 직접 사용자 뷰에 관여 하지 않지만 뷰의 구조를 잡기 위한 도구로서의 역할을 합니다.
+ - 뷰 컨트롤러 컨테이너를 추가하고 싶은 경우에는 원하는 뷰 컨트롤러를 선택한 후에 Menu - Editor - Embed in - Select 할 수 있습니다.
+ - 참고 : [프로그래머스](https://programmers.co.kr/learn/courses/4/lessons/595)
+
+#### 뷰컨트롤러 컨테이너는 또 어떤 클래스가 있는지 찾아보고 학습한다.
+ - UITabBarController 가 있습니다.
+ - TabBarController 에 ViewController 를 추가하고 싶으면 TabBar에서 클릭&드래그를 하여 RelationShip Segue 아래의 view controllers 를 클릭합니다.
+ - 또다른 것으로는 UIPageViewController , UISplitViewController 등이 있습니다.
+ - 참고1 : [프로그래머스](https://programmers.co.kr/learn/courses/4/lessons/596#)
+ - 참고2 : [[iOS 앱 만들기 005] 뷰 컨트롤러의 종류 · Wireframe](https://soooprmx.com/archives/4496)
+ 
+ #### 내비게이션 컨트롤러가 있을 경우와 없을 경우 화면 전환 동작이 어떻게 다른지, 화면들 포함관계가 있는지 학습한다.
+ - 내비게이션 컨트롤러를 Embed 한 컨트롤러에서 버튼을 눌러 다른 컨트롤러로 이동하는 경우에는 Back 버튼이 자동 생성됩니다.
+ - 내비게이션 컨트롤러 있는 경우 : 화면이 옆으로 움직이는 애니메이션 효과
+ - 내비게이션 컨트롤러 없는 경우 : 화면이 상하로 움직이는 애니메이션 효과
+ 
+ #### 내비게이션 컨트롤러 관련 메서드가 왜 push / pop 인지 학습한다.
+ - 스택구조를 가지고 있기 때문에 push / pop 을 활용하여 뷰를 보여주거나 뒤로가거나 할 수 있습니다.
+ - 내비게이션 컨트롤러 이용시 사용자가 화면을 보는 것은 하나이기 때문에 탑을 쌓듯이 화면이 쌓이게 됩니다.
+ - 따라서, 현재 사용자에게 보이고 있는 화면을 가져오고 싶은 경우에는 TopViewController 를 이용해 가져올수도 있습니다.

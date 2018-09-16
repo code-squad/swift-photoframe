@@ -10,13 +10,15 @@ import UIKit
 
 class YellowViewController: UIViewController {
     @IBAction func closeButtonTouched(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+//        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func nextButtonTouched(_ sender: Any) {
-        if let blueVC = self.storyboard?.instantiateViewController(withIdentifier: "BlueViewController") as? BlueViewController {
-            self.present(blueVC, animated: true, completion: nil)
-        }
+//        if let blueVC = self.storyboard?.instantiateViewController(withIdentifier: "BlueViewController") as? BlueViewController {
+//            self.present(blueVC, animated: true, completion: nil)
+//            self.navigationController?.pushViewController(blueVC, animated: true)
+//        }
     }
     
     override func viewDidLoad() {
