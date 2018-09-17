@@ -28,14 +28,12 @@ class SecondViewController: UIViewController {
     }
     
     func randomImage(){
-        let number = random()
-        self.photoImageView.image = UIImage(named: "DemoImages/\(number).jpg")
+        self.photoImageView.image = UIImage(named: randomImageName())
     }
 
-    func random() -> String {
+    func randomImageName() -> String {
         let random = Int(arc4random_uniform(22) + 1)
-        return String(format: "%02d" , random)
+        return String(format: "DemoImages/%02d.jpg" , random)
     }
-
 }
 
