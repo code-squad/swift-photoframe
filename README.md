@@ -123,8 +123,6 @@ weak 는 옵셔널이기 때문에 참조하는 값이 없다면 nil 로 값이 
 ### IBAction 이벤트 종류
 | 이름 | 내용 |
 | --- | :---: |
-| Did End On Exit | 
-
 | Editing Changed | UITextField 객체에서 편집 변경을 수행하는 터치 |
 | Editing Did Begin | UITextField 객체에서 해당 경계에 들어서면서 편집 세션을 시작하는 터치 |
 | Editing Did End | UITextField 객체에서 해당 경계를 벗어나 편집 세션을 종료하는 터치 |
