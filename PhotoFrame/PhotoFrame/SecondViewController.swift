@@ -19,8 +19,7 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         print("Second : " , #file , #line , #function , #column)
-//        randomImage()
-        self.photoImageView.image = UIImage(named: "DemoImages/18.jpg")
+        randomImage()
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,10 +34,7 @@ class SecondViewController: UIViewController {
 
     func random() -> String {
         let random = Int(arc4random_uniform(22) + 1)
-        if random < 10 {
-            return String("0\(random)")
-        }
-        return String(random)
+        return String(format: "%02d" , random)
     }
 
 }
