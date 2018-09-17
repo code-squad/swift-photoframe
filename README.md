@@ -371,3 +371,57 @@ let myView = UIView(frame: rect)
  - 스택구조를 가지고 있기 때문에 push / pop 을 활용하여 뷰를 보여주거나 뒤로가거나 할 수 있습니다.
  - 내비게이션 컨트롤러 이용시 사용자가 화면을 보는 것은 하나이기 때문에 탑을 쌓듯이 화면이 쌓이게 됩니다.
  - 따라서, 현재 사용자에게 보이고 있는 화면을 가져오고 싶은 경우에는 TopViewController 를 이용해 가져올수도 있습니다.
+
+---
+
+## Step7 - Second Scene 화면
+
+#### UIImageView 와 UIImage 클래스는 각각 어떤 역할을 담당하는지 학습한다.
+
+###### 공통
+ - PNG / JPG 파일을 추천하며 PNG 는 무손실이기 때문에 앱 인터페이스에서 사용하는 이미지에 특히 좋습니다.
+
+###### UIImageView
+ > 사용자에게 직접 영향
+ - 실제로 사용자에게 이미지가 보이는 영역 ( UIImage를 사용하여 표시 )
+ - [contentMode](https://developer.apple.com/documentation/uikit/uiview/1622619-contentmode) 를 이용해 이미지 크기 조절
+ - 애니메이션 설정
+ - 터치 이벤트 관련 설정
+
+###### UIImage
+ > 사용자에게 간접 영향
+ - 이미지 데이터 관리
+ - 이미지 객체 생성 
+ - 이미지 크기 및 속성 변경
+ - 그림 그리기
+ - 이미지 비교
+
+#### 이미지 뷰의 속성은 어떤 것들이 있는지 애플 개발자 문서를 참고한다.
+
+![Step7_4_ScaleToFill](CaptureImage/Step7_4_ScaleToFill.png)
+![Step7_4_AspectFit](CaptureImage/Step7_4_AspectFit.png)
+![Step7_4_AspectFill](CaptureImage/Step7_4_AspectFill.png)
+![Step7_4_Redraw](CaptureImage/Step7_4_Redraw.png)
+![Step7_4_Center](CaptureImage/Step7_4_Center.png)
+
+![Step7_4_Top](CaptureImage/Step7_4_Top.png)
+![Step7_4_Bottom](CaptureImage/Step7_4_Bottom.png)
+![Step7_4_Left](CaptureImage/Step7_4_Left.png)
+![Step7_4_Right](CaptureImage/Step7_4_Right.png)
+
+![Step7_4_TopLeft](CaptureImage/Step7_4_TopLeft.png)
+![Step7_4_TopRight](CaptureImage/Step7_4_TopRight.png)
+![Step7_4_BottomLeft](CaptureImage/Step7_4_BottomLeft.png)
+![Step7_4_BottomRight](CaptureImage/Step7_4_BottomRight.png)
+
+
+#### 이미지 성능 향상을 위한 팁
+ - 이미지 확장과 알파 혼합은 앱 성능에 영향을 줄 수 있는 상대적으로 비용이 많이 드는 두 가지 작업입니다. 이미지 보기 코드의 성능을 극대화하려면 다음 팁을 고려하십시오.
+ - 자주 사용하는 이미지의 크기를 조정합니다. 축소된 축소판 그림 보기에서 특정 대형 이미지가 자주 표시될 것으로 예상하는 경우 축소된 이미지를 미리 생성하여 축소 이미지 캐시에 저장하는 것이 좋습니다. 이렇게 하면 각 이미지 보기를 개별적으로 확장할 필요가 줄어듭니다.
+ - 크기가 영상 보기 크기와 가까운 영상을 사용합니다. 큰 이미지를 이미지 보기에 할당하는 대신 이미지 보기의 현재 크기와 일치하는 크기 조정 버전을 만들었습니다. UIImage를 사용하여 크기 조정 가능한 영상 개체를 생성할 수도 있습니다.크기 조정모드.타일 옵션: 이미지를 확장하는 대신 패싱할 수 있습니다.
+ - 가능하면 언제든지 이미지 보기를 불투명하게 만듭니다. 투명도를 포함하는 이미지(예: 그리기 UI 요소)를 의도적으로 사용하지 않는 경우 이미지 보기의 isOpaque 속성이 true로 설정되어 있는지 확인합니다. 투명도의 결정 방법에 대한 자세한 내용은 이미지의 최종 투명도 결정을 참조하십시오.
+
+#### 참고
+ - [UIImageView - UIKit | Apple Developer Documentation](https://developer.apple.com/documentation/uikit/uiimageview)
+ - [UIImage - UIKit | Apple Developer Documentation](https://developer.apple.com/documentation/uikit/uiimage)
+ - [contentMode - UIView | Apple Developer Documentation](https://developer.apple.com/documentation/uikit/uiview/1622619-contentmode)

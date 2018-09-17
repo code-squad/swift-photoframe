@@ -9,18 +9,37 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-
+    @IBOutlet weak var photoImageView: UIImageView!
+    
+    @IBAction func nextImageButtonTouched(_ sender: Any) {
+        randomImage()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         print("Second : " , #file , #line , #function , #column)
+//        randomImage()
+        self.photoImageView.image = UIImage(named: "DemoImages/18.jpg")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func randomImage(){
+        let number = random()
+        self.photoImageView.image = UIImage(named: "DemoImages/\(number).jpg")
+    }
 
+    func random() -> String {
+        let random = Int(arc4random_uniform(22) + 1)
+        if random < 10 {
+            return String("0\(random)")
+        }
+        return String(random)
+    }
 
 }
 
