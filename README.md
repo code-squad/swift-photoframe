@@ -423,3 +423,24 @@ let myView = UIView(frame: rect)
  - [UIImageView - UIKit | Apple Developer Documentation](https://developer.apple.com/documentation/uikit/uiimageview)
  - [UIImage - UIKit | Apple Developer Documentation](https://developer.apple.com/documentation/uikit/uiimage)
  - [contentMode - UIView | Apple Developer Documentation](https://developer.apple.com/documentation/uikit/uiview/1622619-contentmode)
+
+---
+
+## Step8 - 추가꺼리
+
+![Step8_1](CaptureImage/Step8_1.png)
+![Step8_2](CaptureImage/Step8_2.png)
+![Step8_3](CaptureImage/Step8_3.png)
+![Step8_4](CaptureImage/Step8_4.png)
+
+#### 델리게이트(Delegate)와 프로토콜(Protocol) 상관 관계에 대해 학습한다.
+ - 델리게이트는 `위임자` 와 같은 역할로써 객체가 할 일을 대신 처리해 줍니다.
+ - 델리게이트와 프로토콜의 상관 관계는 이미 정의된 델리게이트 메소드 중에 하나를 선택해 그 안에서 객체가 할 일을 처리해주게 됩니다.
+ - 따라서 이미 정의된 델리게이트(프로토콜)을 상속받고 그 안에 정의된 메소드 중 하나를 선택하여 할일을 적어줍니다.
+
+#### 참고
+ - [ios - Swift - UIImagePickerController - how to use it? - Stack Overflow](https://stackoverflow.com/questions/24625687/swift-uiimagepickercontroller-how-to-use-it)
+ - [imagePickerController(_:didFinishPickingMediaWithInfo:) - UIImagePickerControllerDelegate | Apple Developer Documentation](https://developer.apple.com/documentation/uikit/uiimagepickercontrollerdelegate/1619126-imagepickercontroller)
+ - [UIImagePickerControllerDelegate - UIKit | Apple Developer Documentation](https://developer.apple.com/documentation/uikit/uiimagepickercontrollerdelegate)
+ - [UIImagePickerController - UIKit | Apple Developer Documentation](https://developer.apple.com/documentation/uikit/uiimagepickercontroller)
+ - [iOS ) 왕초보를 위한 delegate정리](https://zeddios.tistory.com/8)

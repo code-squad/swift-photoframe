@@ -20,6 +20,7 @@
 		47CFACC6214B7AAF00EFF8D5 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CFACC5214B7AAF00EFF8D5 /* YellowViewController.swift */; };
 		47CFACC8214B7D6B00EFF8D5 /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CFACC7214B7D6B00EFF8D5 /* BlueViewController.swift */; };
 		47DCDFA6214F6A0B00BF53D4 /* DemoImages in Resources */ = {isa = PBXBuildFile; fileRef = 47DCDFA5214F6A0B00BF53D4 /* DemoImages */; };
+		47DCDFAA214FE6D000BF53D4 /* photoframe-border.png in Resources */ = {isa = PBXBuildFile; fileRef = 47DCDFA9214FE6CF00BF53D4 /* photoframe-border.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		47CFACC5214B7AAF00EFF8D5 /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
 		47CFACC7214B7D6B00EFF8D5 /* BlueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueViewController.swift; sourceTree = "<group>"; };
 		47DCDFA5214F6A0B00BF53D4 /* DemoImages */ = {isa = PBXFileReference; lastKnownFileType = folder; name = DemoImages; path = ../../../../../Downloads/DemoImages; sourceTree = "<group>"; };
+		47DCDFA9214FE6CF00BF53D4 /* photoframe-border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "photoframe-border.png"; path = "../../../../../Downloads/photoframe-border.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 		47340BB7214794AE002939CD = {
 			isa = PBXGroup;
 			children = (
+				47DCDFA9214FE6CF00BF53D4 /* photoframe-border.png */,
 				47DCDFA5214F6A0B00BF53D4 /* DemoImages */,
 				47340BC2214794AE002939CD /* PhotoFrame */,
 				47340BD9214794AF002939CD /* PhotoFrameTests */,
@@ -248,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47340BF6214797D5002939CD /* CaptureImage in Resources */,
+				47DCDFAA214FE6D000BF53D4 /* photoframe-border.png in Resources */,
 				47340BD0214794AF002939CD /* LaunchScreen.storyboard in Resources */,
 				47340BCD214794AF002939CD /* Assets.xcassets in Resources */,
 				47340BF4214794E6002939CD /* README.md in Resources */,
