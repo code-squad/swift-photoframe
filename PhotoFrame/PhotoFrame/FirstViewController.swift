@@ -37,7 +37,7 @@ class FirstViewController: UIViewController {
 
         var textColor: UIColor {
             switch self {
-            case .Title: return UIColor.darkGray
+            case .Title: return UIColor.black
             case .SubTitle: return UIColor.lightGray
             }
         }
@@ -52,9 +52,14 @@ class FirstViewController: UIViewController {
         }
 
         private func applyTitleStyle(to label: UILabel) {
-            label.textColor = UIColor.darkGray
+            let attributes: [NSAttributedString.Key : Any] = [
+                NSAttributedString.Key.strokeColor : UIColor.darkGray,
+                NSAttributedString.Key.foregroundColor : UIColor.white,
+                NSAttributedString.Key.strokeWidth : -4.0,
+                NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 40)]
             label.shadowColor = UIColor.lightGray
             label.shadowOffset = CGSize(width: 2, height: 2)
+            label.attributedText = NSAttributedString.init(string: label.text ?? "", attributes: attributes)
         }
 
         private func applySubTitleStyle(to label: UILabel) {
