@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A398E79121B141B40052B837 /* CustomStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A398E79021B141B40052B837 /* CustomStyle.swift */; };
+		A398E79321B142130052B837 /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A398E79221B142130052B837 /* TitleLabel.swift */; };
+		A398E79521B1423C0052B837 /* SubTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A398E79421B1423C0052B837 /* SubTitleLabel.swift */; };
 		A3E6D22821AE5207000C6DC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E6D22721AE5207000C6DC3 /* AppDelegate.swift */; };
 		A3E6D22A21AE5207000C6DC3 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E6D22921AE5207000C6DC3 /* FirstViewController.swift */; };
 		A3E6D22C21AE5207000C6DC3 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E6D22B21AE5207000C6DC3 /* SecondViewController.swift */; };
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A398E79021B141B40052B837 /* CustomStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStyle.swift; sourceTree = "<group>"; };
+		A398E79221B142130052B837 /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
+		A398E79421B1423C0052B837 /* SubTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubTitleLabel.swift; sourceTree = "<group>"; };
 		A3E6D22421AE5207000C6DC3 /* PhotoFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3E6D22721AE5207000C6DC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3E6D22921AE5207000C6DC3 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +82,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A398E78F21B141750052B837 /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				A398E79021B141B40052B837 /* CustomStyle.swift */,
+				A398E79221B142130052B837 /* TitleLabel.swift */,
+				A398E79421B1423C0052B837 /* SubTitleLabel.swift */,
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
 		A3E6D21B21AE5207000C6DC3 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +115,7 @@
 		A3E6D22621AE5207000C6DC3 /* PhotoFrame */ = {
 			isa = PBXGroup;
 			children = (
+				A398E78F21B141750052B837 /* Label */,
 				A3E6D22721AE5207000C6DC3 /* AppDelegate.swift */,
 				A3E6D22921AE5207000C6DC3 /* FirstViewController.swift */,
 				A3E6D22B21AE5207000C6DC3 /* SecondViewController.swift */,
@@ -259,8 +276,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A398E79521B1423C0052B837 /* SubTitleLabel.swift in Sources */,
+				A398E79121B141B40052B837 /* CustomStyle.swift in Sources */,
 				A3E6D22C21AE5207000C6DC3 /* SecondViewController.swift in Sources */,
 				A3E6D22821AE5207000C6DC3 /* AppDelegate.swift in Sources */,
+				A398E79321B142130052B837 /* TitleLabel.swift in Sources */,
 				A3E6D22A21AE5207000C6DC3 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
