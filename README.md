@@ -1,6 +1,7 @@
 # 사진액자 앱
 
-1. [시작하기 - Tabbed App 템플릿][]
+1. <a href="#1-시작하기---tabbed-app-템플릿">시작하기 - Tabbed App 템플릿</a>
+2. <a href="#2-IBOutlet">IBOutlet</a>
 
 
 
@@ -55,3 +56,39 @@ class SecondViewController: UIViewController {
 
 - **`UITabBarController`** : 보여줄 자식 뷰 컨트롤러를 라디오스타일 셀렉션으로 관리하는 뷰 컨트롤러
 - **`UITabBar`** : 탭 아이템을 보여주고 제어하는 뷰
+
+
+
+
+
+## 2. IBOutlet
+
+#### 추가 내용
+
+1. `@IBOutlet` 을 사용하여 `FirstViewController` 내 두 개의 `UILabel` 을 코드와 연결해주었습니다.
+
+```swift
+@IBOutlet weak var photoLabel: UILabel!
+@IBOutlet weak var photoDescription: UILabel!
+```
+
+- **`IBOutlet`** 속성은 위에 선언한 `photoLabel` 과 `photoDescription` 프로퍼티가 **Interface Builder** 와 연결된 것임을 Xcode가 알 수 있게 해줍니다.
+-  **`weak`** 키워드를 사용하면 레퍼런스 카운트를 올리지않아, 참조순환이 발생하는 것을 방지해줍니다.
+
+
+
+2. `UILabel` 클래스 프로퍼티를 활용해 텍스트 내용과 스타일을 변경했습니다.
+
+- `var text: String?` : 텍스트 내용
+- `var attriutedText: NSAttributedString?` 
+  - `NSAttributedString` : 하이퍼링크나 데이터 접근, 스타일 등의 여러 관련 속성을 갖고있는 문자열입니다. `[NSAttributedString.Key : Any]?` 의 속성 딕셔너리로 초기화합니다.
+- `var font: UIFont!` : 텍스트 폰트
+- `var textColor: UIColor!` : 텍스트 컬러
+- `var shadowColor: UIColor?` : 텍스트 그림자 컬러
+- `var shadowOffset: CGSize` : 텍스트 그림자 두께
+
+
+
+#### 실행 화면
+
+![스크린샷 2018-11-30 오후 1.40.59](/Users/yxxjy/DevNote/swift-photoframe/images/step2/스크린샷 2018-11-30 오후 1.40.59.png)
