@@ -22,20 +22,53 @@ class FirstViewController: UIViewController {
     }
 
     @IBAction func nextButtonTouched(_ sender: Any) {
-        photoLabel.textColor = UIColor.blue
-        photoLabel.backgroundColor = UIColor.yellow
-        photoLabel.alpha = 0.5
-        resultOfButtonAction.text = "TOUCH UP INSIDE"
+        let buttonAction = "TOUCH UP INSIDE"
+        showResult(of: buttonAction)
     }
-
+    
     @IBAction func nextButtonTouchedUpOutside(_ sender: Any) {
-        photoLabel.setDefaultStyle()
-        resultOfButtonAction.text = "TOUCH UP OUTSIDE"
+        let buttonAction = "TOUCH UP OUTSIDE"
+        showResult(of: buttonAction)
+    }
+    
+    @IBAction func nextButtonTouchedDown(_ sender: Any) {
+        let buttonAction = "TOUCH DOWN"
+        showResult(of: buttonAction)
+    }
+    
+    @IBAction func nextButtonTouchedDownRepeatedly(_ sender: Any) {
+        let buttonAction = "TOUCH DOWN REPEAT"
+        showResult(of: buttonAction)
+    }
+    
+    @IBAction func nextButtonTouchedDragInside(_ sender: Any) {
+        let buttonAction = "TOUCH DRAG INSIDE"
+        showResult(of: buttonAction)
     }
 
-    @IBAction func nextButtonTouchedDown(_ sender: Any) {
-        photoLabel.setDefaultStyle()
-        resultOfButtonAction.text = "TOUCH DOWN"
+    @IBAction func nextButtonTouchedDragOutside(_ sender: Any) {
+        let buttonAction = "TOUCH DRAG OUTSIDE"
+        showResult(of: buttonAction)
+    }
+
+    @IBAction func nextButtonTouchCanceled(_ sender: Any) {
+        let buttonAction = "TOUCH CANCEL"
+        showResult(of: buttonAction)
+    }
+
+    @IBAction func nextButtonTouchDragExited(_ sender: Any) {
+        let buttonAction = "TOUCH DRAG EXIT"
+        showResult(of: buttonAction)
+    }
+
+    @IBAction func nextButtonTouchDragEntered(_ sender: Any) {
+        let buttonAction = "TOUCH DRAG ENTER"
+        showResult(of: buttonAction)
+    }
+
+    private func showResult(of result: String) {
+        resultOfButtonAction.text = result
+        print(result)
     }
 
 }
