@@ -52,6 +52,7 @@
                                     <action selector="nextButtonTouchedDragInside:" destination="9pv-A4-QxB" eventType="touchDragInside" id="UZf-UP-ouD"/>
                                     <action selector="nextButtonTouchedDragOutside:" destination="9pv-A4-QxB" eventType="touchDragOutside" id="ESY-Cv-yFf"/>
                                     <action selector="nextButtonTouchedUpOutside:" destination="9pv-A4-QxB" eventType="touchUpOutside" id="ga2-jV-7vY"/>
+                                    <segue destination="37y-06-fo0" kind="show" id="uWA-aD-yKz"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -74,6 +75,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="749.27536231884062" y="-320.75892857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ZZs-sH-44W">
+            <objects>
+                <viewController id="37y-06-fo0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ht7-Ej-Lce">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbq-6r-pyV">
+                                <rect key="frame" x="192" y="433" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="다음"/>
+                                <connections>
+                                    <segue destination="qKW-GN-nqS" kind="show" id="dRw-OF-wmZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92264410621761661" green="0.69813542995322553" blue="0.0805544014477583" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="2qb-Cb-QUS"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CUI-jH-qqf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1490" y="-321"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Dny-Vz-sQd">
+            <objects>
+                <viewController id="qKW-GN-nqS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mI3-JB-XXP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.60049447714368887" blue="0.49236883913277907" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Oe0-CO-QFF"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F4t-06-d9V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2238" y="-321"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
