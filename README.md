@@ -2,6 +2,9 @@
 
 1. <a href="#1-시작하기---tabbed-app-템플릿">시작하기 - Tabbed App 템플릿</a>
 2. <a href="#2-IBOutlet">IBOutlet</a>
+3. <a href="#3-IBAction">IBAction</a>
+
+
 
 
 
@@ -101,3 +104,45 @@ class SecondViewController: UIViewController {
 #### 실행 화면
 
 ![스크린샷 2018-11-30 오후 1.40.59](./images/step2/스크린샷 2018-11-30 오후 1.40.59.png)
+
+
+
+
+
+## 3. IBAction
+
+#### 추가 내용
+
+1. 버튼에 `@IBAction` 으로 아래에 기재한 터치 이벤트를 추가했습니다.
+
+- **UIControl.Event**
+  -  `touchUpInside` : **터치업**(터치 후 손가락을 떼는 행위) 이벤트가 컨트롤 경계 **내부**에서 일어났을 때.
+  - `touchUpOutside` : **터치업** 이벤트가 컨트롤 경계 **외부**에서 일어났을 때.
+  - `touchDown` : 터치다운. 단어 그대로 손가락이 **터치** 행위를 하고 있을 때.
+  - `touchDownRepeat` : 터치다운 이벤트가 **반복**해서 일어났을 때. 이 때는 UITouch의 `tapCount` 가 1보다 크다.
+  - `touchDragInside` : 컨트롤 경계 **내부**에서 **드래그**를 했을 때.
+  - `touchDragOutside` : 컨트롤 경계 **외부**에서 **드래그**를 했을 때.
+  - `touchDragEnter` : **드래그** 이벤트가 컨트롤 경계 외부에서 일어나다가 **내부로 진입**했을 때.
+  - `touchDragExit` : **드래그** 이벤트가 컨트롤 경계 내부에서 일어나다가 **외부로 나갔**을 때.
+  - `touchCancel` : 현재 터치 이벤트를 **중단**시키는 **시스템 이벤트**가 일어났을 때.
+
+
+
+#### 실행 화면
+
+추가한 터치 이벤트 액션이 실행되는 것을 확인하기 위해, 액션마다 아래의 메소드를 실행해주었습니다.
+
+```swift
+private func showResult(of result: String) {
+	resultOfButtonAction.text = result
+	print(result)
+}
+```
+
+- 시뮬레이터
+
+![스크린샷 2018-12-03 오후 1.55.17](./images/step3/스크린샷 2018-12-03 오후 1.55.17.png)
+
+- 콘솔
+
+![스크린샷 2018-12-03 오후 2.06.46](./images/step3/스크린샷 2018-12-03 오후 2.06.46.png)
