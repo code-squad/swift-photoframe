@@ -197,3 +197,29 @@ private func showResult(of result: String) {
  `다음` 버튼 ——*Segue*——> Yellow-background `Scene` 의 `다음` 버튼 ——*Segue*——> Pink-background `Scene`
 
 ![Dec-04-2018](./images/step4/Dec-04-2018.gif)
+
+<br>
+
+### 추가 학습 내용
+
+#### Unwind Segue
+
+Segue를 사용하면 연결되는 뷰 컨트롤러가 스택구조에 계속해서 쌓이게 된다. **Unwind Segue** 를 사용하면 트랜지션 전에 보여졌던 뷰 컨트롤러를 해제할 수 있다.
+
+```swift
+@IBAction func unwindToFirstViewController(unwindSegue: UIStoryboardSegue) {
+    // no need to add anything
+}
+```
+
+`FirstViewController` 에 위의 `IBAction` 을 추가한 후, Yellow-background Scene에 새로 추가한 `이전` 버튼을  아래의 Exit으로 Ctrl-Drag하여 만들어놓은 메소드를 선택한다.
+
+![Exit-스크린샷-2018-12-04](./images/step4/Exit-스크린샷-2018-12-04.png)
+
+![SelectUnwindSegue-스크린샷-2018-12-04](./images/step4/SelectUnwindSegue-스크린샷-2018-12-04.png)
+
+#### Unwind Segue 실행 화면
+
+위의 실행화면과 비교해보았을 때, First Scene과 Yellow-background Scene 사이의 `Segue` 와 `Unwind Segue` 는 트랜지션 애니메이션 차이로도 다름을 알 수 있다.
+
+![UnwindSegue-Dec-04-2018](./images/step4/UnwindSegue-Dec-04-2018.gif)
