@@ -111,6 +111,7 @@
                         <color key="backgroundColor" red="1" green="0.60049447714368887" blue="0.49236883913277907" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Oe0-CO-QFF"/>
                     </view>
+                    <navigationItem key="navigationItem" id="0bs-7d-4S2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F4t-06-d9V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
