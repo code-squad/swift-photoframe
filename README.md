@@ -279,3 +279,17 @@ PinkViewController.viewDidDisappear()
 
 ![Dec-06-2018](./images/step5/Dec-06-2018.gif)
 
+<br>
+
+### 추가 학습 내용
+
+Storyboard에서 `YellowViewController` 의 Segue를 제거한 후, `present(_:animated:completion:)` 메소드를 활용하여 다음 화면으로  `PinkViewController` 를 보여주도록 수정했습니다.
+
+```swift
+@IBAction func nextButtonTouched(_ sender: Any) {
+	if let pinkViewController = self.storyboard?.instantiateViewController(withIdentifier: "PinkViewController") as? PinkViewController {
+		self.present(pinkViewController, animated: true, completion: nil)
+	}
+}
+```
+
