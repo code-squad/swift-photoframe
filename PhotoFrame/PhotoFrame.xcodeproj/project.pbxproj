@@ -10,6 +10,7 @@
 		A398E79121B141B40052B837 /* CustomStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A398E79021B141B40052B837 /* CustomStyle.swift */; };
 		A398E79321B142130052B837 /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A398E79221B142130052B837 /* TitleLabel.swift */; };
 		A398E79521B1423C0052B837 /* SubTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A398E79421B1423C0052B837 /* SubTitleLabel.swift */; };
+		A398E79921B7AF320052B837 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A398E79821B7AF320052B837 /* YellowViewController.swift */; };
 		A3E6D22821AE5207000C6DC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E6D22721AE5207000C6DC3 /* AppDelegate.swift */; };
 		A3E6D22A21AE5207000C6DC3 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E6D22921AE5207000C6DC3 /* FirstViewController.swift */; };
 		A3E6D22C21AE5207000C6DC3 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E6D22B21AE5207000C6DC3 /* SecondViewController.swift */; };
@@ -41,6 +42,7 @@
 		A398E79021B141B40052B837 /* CustomStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStyle.swift; sourceTree = "<group>"; };
 		A398E79221B142130052B837 /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
 		A398E79421B1423C0052B837 /* SubTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubTitleLabel.swift; sourceTree = "<group>"; };
+		A398E79821B7AF320052B837 /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
 		A3E6D22421AE5207000C6DC3 /* PhotoFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3E6D22721AE5207000C6DC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3E6D22921AE5207000C6DC3 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				A398E78F21B141750052B837 /* Label */,
 				A3E6D22721AE5207000C6DC3 /* AppDelegate.swift */,
 				A3E6D22921AE5207000C6DC3 /* FirstViewController.swift */,
+				A398E79821B7AF320052B837 /* YellowViewController.swift */,
 				A3E6D22B21AE5207000C6DC3 /* SecondViewController.swift */,
 				A3E6D22D21AE5207000C6DC3 /* Main.storyboard */,
 				A3E6D23021AE5209000C6DC3 /* Assets.xcassets */,
@@ -279,6 +282,7 @@
 				A398E79521B1423C0052B837 /* SubTitleLabel.swift in Sources */,
 				A398E79121B141B40052B837 /* CustomStyle.swift in Sources */,
 				A3E6D22C21AE5207000C6DC3 /* SecondViewController.swift in Sources */,
+				A398E79921B7AF320052B837 /* YellowViewController.swift in Sources */,
 				A3E6D22821AE5207000C6DC3 /* AppDelegate.swift in Sources */,
 				A398E79321B142130052B837 /* TitleLabel.swift in Sources */,
 				A3E6D22A21AE5207000C6DC3 /* FirstViewController.swift in Sources */,
