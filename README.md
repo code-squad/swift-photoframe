@@ -4,6 +4,7 @@
 2. <a href="#2-IBOutlet">IBOutlet</a>
 3. <a href="#3-IBAction">IBAction</a>
 4. <a href="#4-Scene과-Segue">Scene과 Segue</a>
+5. <a href="#5-ViewController-프로그래밍">ViewController 프로그래밍</a>
 
 <br>
 
@@ -223,3 +224,58 @@ Segue를 사용하면 연결되는 뷰 컨트롤러가 스택구조에 계속해
 위의 실행화면과 비교해보았을 때, First Scene과 Yellow-background Scene 사이의 `Segue` 와 `Unwind Segue` 는 트랜지션 애니메이션 차이로도 다름을 알 수 있다.
 
 ![UnwindSegue-Dec-04-2018](./images/step4/UnwindSegue-Dec-04-2018.gif)
+
+<br>
+
+## 5. ViewController 프로그래밍
+
+### 추가 내용
+
+1. 위 단계에서 추가했던 두 개의 새로운 Scene에 대해 `UIViewController` 를 상속받는 `YellowViewController` , `PinkViewController`  클래스를 새로 만들어 각 화면에 지정해주었습니다. 또한, 두 화면에  `닫기` 버튼을 추가하여 아래의 IBAction을 추가해주었습니다.
+
+```swift
+@IBAction func closeButtonTouched(_ sender: Any) {
+    self.dismiss(animated: true, completion: nil)
+}
+```
+
+<br>
+
+2. 각 뷰 컨트롤러에 화면 관련 주요 콜백 메소드를 추가해 화면 전환이 이루어지는 과정을 확인해보았습니다.
+
+![Valid State Transitions](./images/step5/Valid State Transitions.png)
+
+- `viewWillAppear()` : 뷰 컨트롤러의 뷰가 뷰 계층(view hierarchy)에 **포함될 예정**임을 알려준다.
+- `viewDidAppear()` : 뷰 컨트롤러의 뷰가 뷰 계층(view hierarchy)에 **포함되었음**을 알려준다.
+- `viewWillDisappear()` : 뷰 컨트롤러의 뷰가 뷰 계층(view hierarchy)에서 **빠질 예정**임을 알려준다.
+- `viewDidDisappear()` : 뷰 컨트롤러의 뷰가 뷰 계층(view hierarchy)에서 **빠졌음**을 알려준다.
+
+<br>
+
+### 실행 화면
+
+위에 추가한 화면 관련 뷰 컨트롤러 콜백 메소드 실행 부분에 Debug Identifier를 출력하여 화면 전환시에  이루어지는 동작을 확인해보았습니다.
+
+```swift
+// First Scene의 "다음" 버튼 클릭 시
+YellowViewController.viewWillAppear()
+YellowViewController.viewDidAppear()
+
+// Yellow-background Scene의 "다음" 버튼 클릭 시
+YellowViewController.viewWillDisappear()
+PinkViewController.viewWillAppear()
+PinkViewController.viewDidAppear()
+YellowViewController.viewDidDisappear()
+
+...
+
+// Pink-background Scene의 "닫기" 버튼 클릭 시
+PinkViewController.closeButtonTouched()
+PinkViewController.viewWillDisappear()
+YellowViewController.viewWillAppear()
+YellowViewController.viewDidAppear()
+PinkViewController.viewDidDisappear()
+```
+
+![Dec-06-2018](./images/step5/Dec-06-2018.gif)
+
