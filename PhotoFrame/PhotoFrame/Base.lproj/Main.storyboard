@@ -76,10 +76,10 @@
             </objects>
             <point key="canvasLocation" x="749.27536231884062" y="-320.75892857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Yellow View Controller-->
         <scene sceneID="ZZs-sH-44W">
             <objects>
-                <viewController id="37y-06-fo0" sceneMemberID="viewController">
+                <viewController id="37y-06-fo0" customClass="YellowViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ht7-Ej-Lce">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,6 +98,14 @@
                                 <state key="normal" title="이전"/>
                                 <connections>
                                     <segue destination="rn6-dF-cuu" kind="unwind" unwindAction="unwindToFirstViewControllerWithUnwindSegue:" id="w4T-wy-tgd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ir-Ye-902">
+                                <rect key="frame" x="321" y="94" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="닫기"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="37y-06-fo0" eventType="touchUpInside" id="9uT-6C-8MY"/>
                                 </connections>
                             </button>
                         </subviews>
