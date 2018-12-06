@@ -109,7 +109,7 @@ class SecondViewController: UIViewController {
 
 ### 실행 화면
 
-![스크린샷-2018-11-30](./images/step2/스크린샷-2018-11-30.png)
+![스크린샷-2018-11-30](./images/step2/screenshot-2018-11-30.png)
 
 <br>
 
@@ -147,13 +147,13 @@ private func showResult(of result: String) {
 
 `다음` 버튼에 `TOUCH UP INSIDE` 이벤트가 일어난 것을 보여줍니다.
 
-![스크린샷 2018-12-03 오후 1.55.17](./images/step3/스크린샷-2018-12-03.png)
+![스크린샷 2018-12-03 오후 1.55.17](./images/step3/screenshot-2018-12-03.png)
 
 - 콘솔
 
 위의 `다음` 버튼에 일어난 터치 이벤트가 콘솔에 기록됩니다.
 
-![스크린샷 2018-12-03 오후 2.06.46](./images/step3/스크린샷2-2018-12-03.png)
+![스크린샷 2018-12-03 오후 2.06.46](./images/step3/screenshot2-2018-12-03.png)
 
 
 
@@ -215,9 +215,9 @@ Segue를 사용하면 연결되는 뷰 컨트롤러가 스택구조에 계속해
 
 `FirstViewController` 에 위의 `IBAction` 을 추가한 후, Yellow-background Scene에 새로 추가한 `이전` 버튼을  아래의 Exit으로 Ctrl-Drag하여 만들어놓은 메소드를 선택한다.
 
-![Exit-스크린샷-2018-12-04](./images/step4/Exit-스크린샷-2018-12-04.png)
+![Exit-스크린샷-2018-12-04](./images/step4/Exit-screenshot-2018-12-04.png)
 
-![SelectUnwindSegue-스크린샷-2018-12-04](./images/step4/SelectUnwindSegue-스크린샷-2018-12-04.png)
+![SelectUnwindSegue-스크린샷-2018-12-04](./images/step4/SelectUnwindSegue-screenshot-2018-12-04.png)
 
 #### Unwind Segue 실행 화면
 
