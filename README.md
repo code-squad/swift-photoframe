@@ -5,6 +5,7 @@
 3. <a href="#3-IBAction">IBAction</a>
 4. <a href="#4-Scene과-Segue">Scene과 Segue</a>
 5. <a href="#5-ViewController-프로그래밍">ViewController 프로그래밍</a>
+6. <a href="#6-Container-ViewController">Container ViewController</a>
 
 <br>
 
@@ -245,6 +246,8 @@ Segue를 사용하면 연결되는 뷰 컨트롤러가 스택구조에 계속해
 
 ![Valid State Transitions](./images/step5/Valid State Transitions.png)
 
+[이미지 출처][https://developer.apple.com/documentation/uikit/uiviewcontroller]
+
 - `viewWillAppear()` : 뷰 컨트롤러의 뷰가 뷰 계층(view hierarchy)에 **포함될 예정**임을 알려준다.
 - `viewDidAppear()` : 뷰 컨트롤러의 뷰가 뷰 계층(view hierarchy)에 **포함되었음**을 알려준다.
 - `viewWillDisappear()` : 뷰 컨트롤러의 뷰가 뷰 계층(view hierarchy)에서 **빠질 예정**임을 알려준다.
@@ -293,3 +296,67 @@ Storyboard에서 `YellowViewController` 의 Segue를 제거한 후, `present(_:a
 }
 ```
 
+<br>
+
+## 6. Container ViewController
+
+### 추가 내용
+
+1. 스토리보드에서 FirstScene에 Navigation Controller를 추가했습니다. 
+
+![navigationController-screenshot-2018-12-07](./images/step6/navigationController-screenshot-2018-12-07.png)
+
+<br>
+
+2. Navigation Stack에 뷰 컨트롤러를 push/pop 하는 메소드를 필요한 부분에 추가했습니다.
+
+- 전 단계에서 `YellowViewController` 에서 `PinkViewController` 로의 Segue를 삭제하고 `present()` 를 사용해서 화면 전환을 시켰기때문에, navigation stack에 push하는 부분을 따로 추가하여 명시해주었습니다.
+
+```swift
+@IBAction func nextButtonTouched(_ sender: Any) {
+    if ... {
+        ...
+    	self.navigationController?.pushViewController(pinkViewController, animated: true)
+    }
+}
+```
+
+- `YellowViewController` 와 `PinkViewController` 의 닫기 버튼을 누르면, navigation stack 에서 pop되도록 수정해주었습니다. 
+
+```swift
+@IBAction func closeButtonTouched(_ sender: Any) {
+	self.navigationController?.popViewController(animated: true)
+}
+```
+
+<br>
+
+### 실행 화면
+
+![Dec-07-2018](./images/step6/Dec-07-2018.gif)
+
+<br>
+
+### 추가 학습 내용
+
+#### Container View Controller
+
+- 컨테이너 뷰 컨트롤러는 여러 개의 뷰 컨트롤러를 하나의 유저 인터페이스로 모아주는 역할을 합니다. 
+- `UIKit` 에 있는 컨테이터 뷰 컨트롤러 예시입니다.
+  - `UINavigationController`
+  - `UITabBarController`
+  - `UISplitViewController`
+
+<br>
+
+#### Navigation Controller
+
+아래 이미지는 내비게이션 인터페이스의 구조입니다. 내비게이션 컨트롤러는 한 번에 하나의 자식 뷰 컨트롤러만 보여줍니다. 
+
+![structure-of-navigation-interface](./images/step6/structure-of-navigation-interface.png)
+
+[이미지 출처][https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/ImplementingaContainerViewController.html]
+
+- 내비게이션 컨트롤러 관련 메소드 명이 `push` 와 `pop` 을 사용한 이유
+
+  내비게이션 컨트롤러는 내부에서 `var viewControllers: [UIViewController]` 라는 프로퍼티에 뷰 컨트롤러를 담아 **Navigation Stack** 으로 관리하기 때문입니다.
