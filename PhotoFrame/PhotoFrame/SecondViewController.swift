@@ -10,11 +10,12 @@ import UIKit
 
 class SecondViewController: UIViewController {
     @IBOutlet weak var photoImageView: UIImageView!
-    @IBOutlet weak var photoLabel: UILabel!
-
+    @IBOutlet weak var photoLabel: TitleLabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        photoLabel.text = "랜덤 사진 앨범"
+        self.photoLabel.setDefaultStyle()
+        self.photoLabel.text = "랜덤 사진 앨범"
         print(#file, #line, #function, #column)
     }
 
