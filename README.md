@@ -6,6 +6,7 @@
 4. <a href="#4-Scene과-Segue">Scene과 Segue</a>
 5. <a href="#5-ViewController-프로그래밍">ViewController 프로그래밍</a>
 6. <a href="#6-Container-ViewController">Container ViewController</a>
+7. <a href="#7-Second-Scene-화면">Second Scene 화면</a>
 
 <br>
 
@@ -360,3 +361,56 @@ Storyboard에서 `YellowViewController` 의 Segue를 제거한 후, `present(_:a
 - 내비게이션 컨트롤러 관련 메소드 명이 `push` 와 `pop` 을 사용한 이유
 
   내비게이션 컨트롤러는 내부에서 `var viewControllers: [UIViewController]` 라는 프로퍼티에 뷰 컨트롤러를 담아 **Navigation Stack** 으로 관리하기 때문입니다.
+
+<br>
+
+## 7. Second Scene 화면
+
+### 추가 내용
+
+1. 앱에 포함할 이미지 리소스를 프로젝트에 포함시켰습니다. 이미지를 담고있는 폴더를 프로젝트로 드래그하여 포함시킬 때, 아래와 같은 사항을 유의해야합니다.
+
+#### Options for adding files
+
+- Destination
+  - **Copy items if needed** : 해당 옵션을 체크하면 리소스 파일을 복사하여 프로젝트에 포함시키고, 체크하지 않는다면 현재 리소스 파일이 존재하는 경로를 포함시키게 됩니다.
+- Added folders
+  - **Create groups** : 추가하고자하는 모든 리소스 파일을 프로젝트 번들 최상위 단계에 포함시키는   방법으로, 프로젝트 내에서 해당 리소스 파일을 접근할 때 파일 명만으로도 탐색이 가능해집니다.
+  - Create folder references : 추가하고자하는 리소스 파일의 **폴더** 아래에 포함시키는 방법으로, 해당 리소스 파일에 접근할 때 폴더명까지 명시해주어야 파일을 인식할 수 있습니다.
+
+![screenshot-2018-12-07](./images/step7/screenshot-2018-12-07.png)
+
+<br>
+
+2. Second Scene에 새로운 `ImageView` 를 추가하고, 버튼 클릭 시 데모 이미지를 랜덤하게 보여주도록 추가했습니다.
+
+```swift
+@IBAction func nextImageButtonTouched(_ sender: Any) {
+	let randomImage = makeRandomImage()
+    // makeRandomImage() 메소드 반환값 예시 : "07.jpg"
+	self.photoImageView.image = UIImage(named: randomImage)
+}
+```
+
+- **`UIImage`**
+  - 앱에서 이미지 데이터를 관리하는 객체
+  - `init?(named: String)` : 파일명으로 이미지 객체를 생성하여 반환합니다.
+
+<br>
+
+### 실행 화면
+
+![Dec-07-2018](./images/step7/Dec-07-2018.gif)
+
+<br>
+
+### 추가 학습 내용
+
+- **`UIImageView`**
+  - 인터페이스에 하나의 이미지나 애니메이션 효과를 입힌 이미지 여러 개를 보여주는 객체입니다.
+  - `UIImage` 로 init 합니다.
+  - `[UIImage]` 으로 애니메이션을 보여줄 수 있습니다.
+    - 애니메이션 될 이미지들은 모두 같은 `size` 와 같은 `content scale factor` 를 가지고 있어야합니다. 
+  - 이미지 스캐일링은 상대적으로 많은 리소스를 소모하기 때문에 성능을 위해서 몇 가지를 더 고려해주면 좋습니다.
+    - 자주 쓰이는 이미지 파일이 너무 크다면, 미리 사이즈를 줄리고 사용하는 것이 좋습니다.
+    - 사용하는 이미지 뷰와 비슷한 사이즈의 이미지를 사용하는 것이 좋습니다.
