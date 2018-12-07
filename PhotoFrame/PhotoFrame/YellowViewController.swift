@@ -16,12 +16,12 @@ class YellowViewController: UIViewController {
 
     @IBAction func nextButtonTouched(_ sender: Any) {
         if let pinkViewController = self.storyboard?.instantiateViewController(withIdentifier: "PinkViewController") as? PinkViewController {
-            self.present(pinkViewController, animated: true, completion: nil)
+            self.navigationController?.pushViewController(pinkViewController, animated: true)
         }
     }
 
     @IBAction func closeButtonTouched(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
         print(#file, #line, #function, #column)
     }
 
