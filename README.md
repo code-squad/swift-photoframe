@@ -244,9 +244,9 @@ Segue를 사용하면 연결되는 뷰 컨트롤러가 스택구조에 계속해
 
 2. 각 뷰 컨트롤러에 화면 관련 주요 콜백 메소드를 추가해 화면 전환이 이루어지는 과정을 확인해보았습니다.
 
-![Valid State Transitions](./images/step5/Valid State Transitions.png)
+![Valid State Transitions](./images/step5/Valid-State-Transitions.png)
 
-[이미지 출처][https://developer.apple.com/documentation/uikit/uiviewcontroller]
+<a href="https://developer.apple.com/documentation/uikit/uiviewcontroller">이미지 출처</a>
 
 - `viewWillAppear()` : 뷰 컨트롤러의 뷰가 뷰 계층(view hierarchy)에 **포함될 예정**임을 알려준다.
 - `viewDidAppear()` : 뷰 컨트롤러의 뷰가 뷰 계층(view hierarchy)에 **포함되었음**을 알려준다.
@@ -355,7 +355,7 @@ Storyboard에서 `YellowViewController` 의 Segue를 제거한 후, `present(_:a
 
 ![structure-of-navigation-interface](./images/step6/structure-of-navigation-interface.png)
 
-[이미지 출처][https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/ImplementingaContainerViewController.html]
+<a href="https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/ImplementingaContainerViewController.html">이미지 출처</a>
 
 - 내비게이션 컨트롤러 관련 메소드 명이 `push` 와 `pop` 을 사용한 이유
 
