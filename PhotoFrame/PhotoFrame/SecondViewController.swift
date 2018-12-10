@@ -14,7 +14,6 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.photoLabel.setDefaultStyle()
         self.photoLabel.text = "랜덤 사진 앨범"
         print(#file, #line, #function, #column)
     }

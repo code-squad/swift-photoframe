@@ -10,6 +10,11 @@ import UIKit
 
 class SubTitleLabel: UILabel, CustomStyle {
 
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setDefaultStyle()
+    }
+
     private struct Default {
         static let text = "아직 추가된 사진이 없습니다."
         static let textColor = UIColor.lightGray

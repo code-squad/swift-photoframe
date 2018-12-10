@@ -182,7 +182,7 @@
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="photoImageView" destination="cDn-cw-rlh" id="JPO-br-stM"/>
-                        <outlet property="photoLabel" destination="zEq-FU-wV5" id="3GL-HZ-iPj"/>
+                        <outlet property="photoLabel" destination="zEq-FU-wV5" id="Pno-fx-vwy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>

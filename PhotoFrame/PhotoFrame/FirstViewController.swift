@@ -15,8 +15,6 @@ class FirstViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        photoLabel.setDefaultStyle()
-        photoDescription.setDefaultStyle()
         resultOfButtonAction.textAlignment = .center
         resultOfButtonAction.text = "NO ACTION"
     }
