@@ -10,6 +10,11 @@ import UIKit
 
 class TitleLabel: UILabel, CustomStyle {
 
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setDefaultStyle()
+    }
+
     private struct Default {
         static let text = "제이미의 사진액자 🖼"
         static let textColor = UIColor.black
