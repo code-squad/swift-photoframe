@@ -21,10 +21,9 @@ class SecondViewController: UIViewController {
 
     private func makeRandomImage() -> String {
         let firstImageNumber = 1, lastImageNumber = 22
-        let imageFormat = "jpg"
         let randomNumber = Int.random(in: firstImageNumber...lastImageNumber)
-        let nameOfImage = "\(randomNumber).\(imageFormat)"
-        return randomNumber < 10 ? "0\(nameOfImage)" : nameOfImage
+        let nameOfImage = String(format: "%02d.jpg", randomNumber)
+        return nameOfImage
     }
 
     @IBAction func nextImageButtonTouched(_ sender: Any) {
