@@ -32,5 +32,28 @@ class SecondViewController: UIViewController {
         self.photoImageView.image = UIImage(named: randomImage)
     }
 
+    @IBAction func selectButtonTouched(_ sender: Any) {
+        let sourceType = UIImagePickerController.SourceType.savedPhotosAlbum
+        guard UIImagePickerController.isSourceTypeAvailable(sourceType) else { return }
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.sourceType = sourceType
+        self.present(imagePickerController, animated: true, completion: nil)
+    }
+
 }
 
+extension SecondViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let imageSelected = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            self.photoImageView.image = imageSelected
+        }
+        picker.dismiss(animated: true, completion: nil)
+    }
+
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+
+}
