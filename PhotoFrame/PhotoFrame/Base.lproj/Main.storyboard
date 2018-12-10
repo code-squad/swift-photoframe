@@ -171,6 +171,10 @@
                                     <action selector="nextImageButtonTouched:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="JU7-RE-SWX"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photoframe-border.png" translatesAutoresizingMaskIntoConstraints="NO" id="gaO-33-drf" userLabel="PhotoFrame">
+                                <rect key="frame" x="51" y="106" width="311" height="304"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -181,6 +185,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
                     <connections>
+                        <outlet property="photoFrameImageView" destination="gaO-33-drf" id="X0J-KP-oLp"/>
                         <outlet property="photoImageView" destination="cDn-cw-rlh" id="JPO-br-stM"/>
                         <outlet property="photoLabel" destination="zEq-FU-wV5" id="Pno-fx-vwy"/>
                     </connections>
@@ -229,6 +234,7 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="photoframe-border.png" width="720" height="720"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>
