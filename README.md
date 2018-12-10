@@ -7,6 +7,7 @@
 5. <a href="#5-ViewController-프로그래밍">ViewController 프로그래밍</a>
 6. <a href="#6-Container-ViewController">Container ViewController</a>
 7. <a href="#7-Second-Scene-화면">Second Scene 화면</a>
+8. <a href="#8-마무리하기">마무리하기</a>
 
 <br>
 
@@ -414,3 +415,63 @@ Storyboard에서 `YellowViewController` 의 Segue를 제거한 후, `present(_:a
   - 이미지 스캐일링은 상대적으로 많은 리소스를 소모하기 때문에 성능을 위해서 몇 가지를 더 고려해주면 좋습니다.
     - 자주 쓰이는 이미지 파일이 너무 크다면, 미리 사이즈를 줄리고 사용하는 것이 좋습니다.
     - 사용하는 이미지 뷰와 비슷한 사이즈의 이미지를 사용하는 것이 좋습니다.
+
+<br>
+
+## 8. 마무리하기
+
+### 추가 내용
+
+1. Second Scene에 `photoFrameImageView` 를 추가하고 기존 `photoImageView` 보다 뒤에 위치할 수 있도록 `photoFrameImageView.layer.zPosition` 값을 수정해주었습니다. 
+
+```swift
+var zPoisition: CGFloat { get set }
+```
+
+디폴트 값은 0이며, zPsition이 높은 값일수록 낮은 값의 뷰 보다 더 위쪽에 위치합니다.
+
+<br>
+
+2. `UIImagePickerController` 를 사용하여 사진 앱 - 카메라 롤 이미지를 사진 액자로 가져올 수 있도록 추가했습니다.
+
+- `사진 선택하기` 버튼을 추가했습니다.
+
+- 위 버튼에 클릭 IBAction 메소드를 추가했습니다
+
+  ```swift
+  @IBAction func selectButtonTouched(_ sender: Any) {
+  	let sourceType = UIImagePickerController.SourceType.savedPhotosAlbum
+  	guard UIImagePickerController.isSourceTypeAvailable(sourceType) else { return }
+  	let imagePickerController = UIImagePickerController()
+  	imagePickerController.delegate = self
+  	imagePickerController.sourceType = sourceType
+  	self.present(imagePickerController, animated: true, completion: nil)
+  }
+  ```
+
+- `SecondViewController` 가 `UIImagePickerControllerDelegate` 와 `UINavigationControllerDelegate` 프로토콜을 채택하도록 추가했습니다.
+
+  ```swift
+  extension SecondViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+  
+      // 유저가 이미지를 선택했을 때 호출되는 메소드
+      func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+          if let imageSelected = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+              self.photoImageView.image = imageSelected
+          }
+          picker.dismiss(animated: true, completion: nil)
+      }
+  
+      // 유저가 피커창을 취소했을 때 호출되는 메소드
+      func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+          picker.dismiss(animated: true, completion: nil)
+      }
+  
+  }
+  ```
+
+<br>
+
+### 실행 화면
+
+![Dec-10-2018](./images/step8/Dec-10-2018.gif)
