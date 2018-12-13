@@ -16,7 +16,7 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        self.photoLabel.text = "흥푸의 사진애크자"
         
         print(#file, #line, #function, #column)
     }
