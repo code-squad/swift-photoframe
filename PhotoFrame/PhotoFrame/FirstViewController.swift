@@ -22,6 +22,11 @@ class FirstViewController: UIViewController {
         self.photoLabel.alpha = 0.7
         self.photoLabel.font = UIFont.systemFont(ofSize: 26)
         
+        self.firstDescription.text = "애크자(x) -> 액자(o)"
+        self.firstDescription.textColor = UIColor.lightGray
+        self.firstDescription.backgroundColor = UIColor.darkGray
+        self.firstDescription.alpha = 0.3
+        self.firstDescription.font = UIFont.systemFont(ofSize: 20)
         print(#file, #line, #function, #column)
     }
 
