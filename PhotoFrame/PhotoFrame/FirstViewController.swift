@@ -17,6 +17,10 @@ class FirstViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.photoLabel.text = "흥푸의 사진애크자"
+        self.photoLabel.textColor = UIColor.red
+        self.photoLabel.backgroundColor = UIColor.blue
+        self.photoLabel.alpha = 0.7
+        self.photoLabel.font = UIFont.systemFont(ofSize: 26)
         
         print(#file, #line, #function, #column)
     }
