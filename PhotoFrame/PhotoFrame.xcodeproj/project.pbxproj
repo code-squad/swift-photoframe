@@ -13,6 +13,7 @@
 		7D9C26E921C25523007F16D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D9C26E721C25523007F16D5 /* Main.storyboard */; };
 		7D9C26EB21C25524007F16D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D9C26EA21C25524007F16D5 /* Assets.xcassets */; };
 		7D9C26EE21C25524007F16D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D9C26EC21C25524007F16D5 /* LaunchScreen.storyboard */; };
+		7DACE5D521C3798400CF11BA /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DACE5D421C3798400CF11BA /* YellowViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		7D9C26EA21C25524007F16D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D9C26ED21C25524007F16D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D9C26EF21C25524007F16D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DACE5D421C3798400CF11BA /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 		7D9C26D521C25523007F16D5 = {
 			isa = PBXGroup;
 			children = (
+				7DACE5D421C3798400CF11BA /* YellowViewController.swift */,
 				7D9C26E021C25523007F16D5 /* PhotoFrame */,
 				7D9C26DF21C25523007F16D5 /* Products */,
 			);
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DACE5D521C3798400CF11BA /* YellowViewController.swift in Sources */,
 				7D9C26E621C25523007F16D5 /* SecondViewController.swift in Sources */,
 				7D9C26E221C25523007F16D5 /* AppDelegate.swift in Sources */,
 				7D9C26E421C25523007F16D5 /* FirstViewController.swift in Sources */,
