@@ -14,6 +14,7 @@
 		7D9C26EB21C25524007F16D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D9C26EA21C25524007F16D5 /* Assets.xcassets */; };
 		7D9C26EE21C25524007F16D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D9C26EC21C25524007F16D5 /* LaunchScreen.storyboard */; };
 		7DACE5D721C37B1300CF11BA /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DACE5D621C37B1300CF11BA /* YellowViewController.swift */; };
+		7DACE5D921C37C9D00CF11BA /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DACE5D821C37C9D00CF11BA /* GreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		7D9C26ED21C25524007F16D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D9C26EF21C25524007F16D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DACE5D621C37B1300CF11BA /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
+		7DACE5D821C37C9D00CF11BA /* GreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				7D9C26E121C25523007F16D5 /* AppDelegate.swift */,
 				7DACE5D621C37B1300CF11BA /* YellowViewController.swift */,
 				7D9C26E321C25523007F16D5 /* FirstViewController.swift */,
+				7DACE5D821C37C9D00CF11BA /* GreenViewController.swift */,
 				7D9C26E521C25523007F16D5 /* SecondViewController.swift */,
 				7D9C26E721C25523007F16D5 /* Main.storyboard */,
 				7D9C26EA21C25524007F16D5 /* Assets.xcassets */,
@@ -145,6 +148,7 @@
 				7D9C26E621C25523007F16D5 /* SecondViewController.swift in Sources */,
 				7D9C26E221C25523007F16D5 /* AppDelegate.swift in Sources */,
 				7D9C26E421C25523007F16D5 /* FirstViewController.swift in Sources */,
+				7DACE5D921C37C9D00CF11BA /* GreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
