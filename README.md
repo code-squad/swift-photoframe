@@ -77,3 +77,8 @@ self.performSegueWithIdentifier("identifier값", sender: self)
 명령어를 통해 다음 화면을 보여줄수있다.
 
 ![](https://user-images.githubusercontent.com/38850628/49986665-149f9900-ffb4-11e8-8452-a7e52611c37c.png )
+
+
+## 스텝6
+
+
