@@ -1,9 +1,11 @@
-### 시작하기 - Tabbed App 템플릿
+# 시작하기 - Tabbed App 템플릿
 
 출력내용
 
 /Users/hngfu/Documents/swift-photoframe/PhotoFrame/PhotoFrame/FirstViewController.swift 18 viewDidLoad() 40
 /Users/hngfu/Documents/swift-photoframe/PhotoFrame/PhotoFrame/SecondViewController.swift 17 viewDidLoad() 40
+
+## 스텝2
 
 #file - 해당 메서드가 있는 파일의 경로 및 파일명
 
@@ -21,6 +23,13 @@ var font: UIFont! // default is nil (system font 17 plain) - Label의 폰트 관
 
 - 스텝2 사진
 ![step2](https://user-images.githubusercontent.com/38850628/49932117-98517b00-ff0b-11e8-8186-c2641baeb5e8.png)
+
+## 스텝3
+
+
+
+- 버튼에 액션을 여러개 추가할 수 있을까? 추가할 수 있다.
+![](https://user-images.githubusercontent.com/38850628/49980196-d0050500-ff95-11e8-9c8e-4ebbb9319c9a.png)
 
 - 스텝3 변경 전 사진
 ![stepBefore](https://user-images.githubusercontent.com/38850628/49979836-2ffaac00-ff94-11e8-8284-ecbd9bf5c499.png)
