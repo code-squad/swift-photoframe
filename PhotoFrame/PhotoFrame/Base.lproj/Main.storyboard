@@ -140,9 +140,6 @@
                                 <state key="normal" title="연두신의 분홍버튼입니다.">
                                     <color key="titleColor" red="1" green="0.52120530610000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                                <connections>
-                                    <segue destination="qEH-Bu-HUx" kind="show" animates="NO" id="UVT-iB-lsW"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vke-ct-Zii">
                                 <rect key="frame" x="128" y="391" width="125" height="30"/>
@@ -159,6 +156,9 @@
                         <viewLayoutGuide key="safeArea" id="gMD-Sj-b8k"/>
                     </view>
                     <navigationItem key="navigationItem" id="8XX-Zo-qr3"/>
+                    <connections>
+                        <segue destination="qEH-Bu-HUx" kind="show" identifier="segueNext" id="fzT-gc-G36"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1DG-5w-aUz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
