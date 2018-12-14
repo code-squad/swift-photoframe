@@ -31,6 +31,9 @@ var font: UIFont! // default is nil (system font 17 plain) - Label의 폰트 관
 - 버튼에 액션을 여러개 추가할 수 있을까? 추가할 수 있다.
 ![](https://user-images.githubusercontent.com/38850628/49980196-d0050500-ff95-11e8-9c8e-4ebbb9319c9a.png)
 
+- 버튼이 여러일 때 하나의 액션에 추가할 수 있을까? 추가할 수 있다.
+![](https://user-images.githubusercontent.com/38850628/49980315-528dc480-ff96-11e8-9a2d-ccc504a7a4e4.png)
+
 - 스텝3 변경 전 사진
 ![stepBefore](https://user-images.githubusercontent.com/38850628/49979836-2ffaac00-ff94-11e8-8284-ecbd9bf5c499.png)
 
