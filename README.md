@@ -81,4 +81,15 @@ self.performSegueWithIdentifier("identifier값", sender: self)
 
 ## 스텝6
 
+- 뷰 컨트롤러 콜백 함수들 동작도 동일한지 확인한다. 다르게 동작한다.
+
+GreenViewController.swift 20 viewWillAppear 40
+GreenViewController.swift 24 viewDidAppear 40
+GreenViewController.swift 28 viewWillDisappear 40
+YellowViewController.swift 20 viewWillAppear 40
+GreenViewController.swift 32 viewDidDisappear 40
+YellowViewController.swift 24 viewDidAppear 40
+
+*GreenViewController가 DidDisappear되고 YellowViewController가 DidAppear된다.*
+
 
