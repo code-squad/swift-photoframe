@@ -53,3 +53,18 @@ var font: UIFont! // default is nil (system font 17 plain) - Label의 폰트 관
 
 - 스텝4 새로운 화면
 ![](https://user-images.githubusercontent.com/38850628/49981137-d09f9a80-ff99-11e8-8b2a-c0f09478e2f6.png)
+
+## 스텝5
+
+- 화면 전환이 이루어지는 사이에 뷰컨트롤러 라이프사이클이 어떻게 변화하는지 학습한다.
+
+GreenViewController.swift 20 viewWillAppear 40
+GreenViewController.swift 24 viewDidAppear 40
+GreenViewController.swift 28 viewWillDisappear 40
+YellowViewController.swift 20 viewWillAppear 40
+YellowViewController.swift 24 viewDidAppear 40
+GreenViewController.swift 32 viewDidDisappear 40
+
+초록화면 WillDisappear가 나오고 노랑화면이 Appear되고 초록화면 DidDisappear이 나온다.
+*DidDisappear은 다음 뷰가 Will,DidAppear된 후 콜백된다.*
+
