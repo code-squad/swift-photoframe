@@ -68,3 +68,12 @@ GreenViewController.swift 32 viewDidDisappear 40
 초록화면 WillDisappear가 나오고 노랑화면이 Appear되고 초록화면 DidDisappear이 나온다.
 *DidDisappear은 다음 뷰가 Will,DidAppear된 후 콜백된다.*
 
+- YellowViewController에서 Segue를 제거하고 다음 화면을 보여줄 때 코드로 보여주는 방법을 찾아보고 적용해본다.
+
+manual segue를 만들고 segue의 identifier에 값을 주고
+```swift
+self.performSegueWithIdentifier("identifier값", sender: self)
+```
+명령어를 통해 다음 화면을 보여줄수있다.
+
+![](https://user-images.githubusercontent.com/38850628/49986665-149f9900-ffb4-11e8-8452-a7e52611c37c.png )
