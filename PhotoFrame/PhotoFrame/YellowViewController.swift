@@ -17,6 +17,8 @@ class YellowViewController: UIViewController {
     }
     
 
+    @IBAction func closeButtonTouched(_ sender: Any) {
+    }
     /*
     // MARK: - Navigation
 
