@@ -26,7 +26,8 @@ var font: UIFont! // default is nil (system font 17 plain) - Label의 폰트 관
 
 ## 스텝3
 
-
+- 버튼에 IBAction을 추가할 때 이벤트(Event) 종류에는 어떤 것들이 있는지
+메서드 이름 설정, 어떠한 상황에서 메서드를 실행할지(예를들어 손가락을 뗏을때 실행한다.)
 
 - 버튼에 액션을 여러개 추가할 수 있을까? 추가할 수 있다.
 ![](https://user-images.githubusercontent.com/38850628/49980196-d0050500-ff95-11e8-9c8e-4ebbb9319c9a.png)
