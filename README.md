@@ -93,3 +93,13 @@ YellowViewController.swift 24 viewDidAppear 40
 *GreenViewController가 DidDisappear되고 YellowViewController가 DidAppear된다.*
 
 
+- 뷰컨트롤러 컨테이너는 또 어떤 클래스가 있는지 찾아보고 학습한다.
+
+Navigation Controllers
+Tab Bar Controllers
+Page View Controllers
+Split View Controllers
+Popovers
+
+![](https://developer.apple.com/library/archive/documentation/WindowsViews/Conceptual/ViewControllerCatalog/Art/intro.png)
+출처 - developer.apple.com
