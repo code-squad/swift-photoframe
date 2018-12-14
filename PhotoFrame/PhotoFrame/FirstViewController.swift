@@ -35,6 +35,10 @@ class FirstViewController: UIViewController {
         self.photoLabel.backgroundColor = UIColor.yellow
         self.photoLabel.alpha = 0.5
     }
-    
+
+    @IBAction func doGreeting(_ sender: Any) {
+        print("Hi~! I'm Hngfu,")
+        print("Where do you want to go?")
+    }
 }
 
