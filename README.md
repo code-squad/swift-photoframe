@@ -41,3 +41,7 @@ var font: UIFont! // default is nil (system font 17 plain) - Label의 폰트 관
 - 스텝3 변경 후 사진
 ![step3After](https://user-images.githubusercontent.com/38850628/49979837-2ffaac00-ff94-11e8-8627-668274c58adb.png)
 
+## 스텝4
+
+- 스텝4 새로운 화면
+![](https://user-images.githubusercontent.com/38850628/49981137-d09f9a80-ff99-11e8-8b2a-c0f09478e2f6.png)
