@@ -150,6 +150,9 @@
                                 <state key="normal" title="저는 빨강버튼입니다.">
                                     <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="vmX-b2-bcu" eventType="touchUpInside" id="8SB-Xe-f9P"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
