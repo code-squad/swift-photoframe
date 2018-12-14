@@ -42,6 +42,14 @@ var font: UIFont! // default is nil (system font 17 plain) - Label의 폰트 관
 ![step3After](https://user-images.githubusercontent.com/38850628/49979837-2ffaac00-ff94-11e8-8627-668274c58adb.png)
 
 ## 스텝4
+- Seque에 액션에 있는 여러 항목들은 어떤 효과가 있는지
+
+일단 가장먼저 scene이 아래에서 위로 올라오는 애니메이션 효과가 default로 되어있는데 애니메이션 효과를 끌 수 있다.
+그리고 식별자를 지정하거나 클래스를 연결해줄 수 있다.
+
+모달형식, 팝업형식으로 띄우도록 설정 가능하다.
+
+- 버튼을 이용해 segue를 연결하는 방법 말고도 manual segue라고 컨트롤러를 이용하여 연결하는 방법도 있다.
 
 - 스텝4 새로운 화면
 ![](https://user-images.githubusercontent.com/38850628/49981137-d09f9a80-ff99-11e8-8b2a-c0f09478e2f6.png)
