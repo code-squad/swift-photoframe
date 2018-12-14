@@ -45,5 +45,8 @@ class GreenViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func touchNext(_ sender: Any) {
+        self.performSegue(withIdentifier: "segueNext", sender: self)
+    }
+    
 }
