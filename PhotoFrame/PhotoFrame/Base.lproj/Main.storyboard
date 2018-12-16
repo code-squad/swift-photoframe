@@ -79,41 +79,55 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="87" y="312" width="201.5" height="43"/>
+                                <rect key="frame" x="87" y="412" width="201.5" height="43"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pX8-k6-Lew">
-                                <rect key="frame" x="67" y="64" width="240" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pX8-k6-Lew">
+                                <rect key="frame" x="67.5" y="113.5" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Mq8-Xi-VWq"/>
+                                    <constraint firstAttribute="height" constant="240" id="PXu-pT-aKF"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fem-gG-o2n">
-                                <rect key="frame" x="172" y="392" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="다음"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fem-gG-o2n">
+                                <rect key="frame" x="172.5" y="475" width="30" height="30"/>
+                                <state key="normal" title="다음">
+                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="nextImageButtonTouched:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="ig7-hA-zxw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyI-Re-25G">
-                                <rect key="frame" x="172" y="448" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="선택"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyI-Re-25G">
+                                <rect key="frame" x="172.5" y="525" width="30" height="30"/>
+                                <state key="normal" title="선택">
+                                    <color key="titleColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="selectButtonTouched:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Cls-Ga-t06"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photoframe-border.png" translatesAutoresizingMaskIntoConstraints="NO" id="VvO-Wp-cet" userLabel="PhotoFrame">
-                                <rect key="frame" x="57" y="34" width="260" height="276"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photoframe-border.png" translatesAutoresizingMaskIntoConstraints="NO" id="VvO-Wp-cet" userLabel="PhotoFrame">
+                                <rect key="frame" x="37.5" y="83.5" width="300" height="300"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="pX8-k6-Lew" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" constant="-100" id="4tO-si-k6g"/>
+                            <constraint firstItem="pX8-k6-Lew" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="5vx-Nx-5lD"/>
+                            <constraint firstItem="fem-gG-o2n" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="9HK-X5-Iej"/>
+                            <constraint firstItem="pX8-k6-Lew" firstAttribute="leading" secondItem="VvO-Wp-cet" secondAttribute="leading" constant="30" id="BVp-pR-7Aq"/>
+                            <constraint firstItem="hyI-Re-25G" firstAttribute="top" secondItem="fem-gG-o2n" secondAttribute="bottom" constant="20" id="CLO-uB-ZUe"/>
+                            <constraint firstItem="pX8-k6-Lew" firstAttribute="trailing" secondItem="VvO-Wp-cet" secondAttribute="trailing" constant="-30" id="SDU-H4-hc4"/>
+                            <constraint firstItem="pX8-k6-Lew" firstAttribute="bottom" secondItem="VvO-Wp-cet" secondAttribute="bottom" constant="-30" id="fOK-Tx-tra"/>
                             <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" constant="-100" id="qzY-Ky-pLD"/>
+                            <constraint firstItem="hyI-Re-25G" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="tuf-4n-HSK"/>
+                            <constraint firstItem="fem-gG-o2n" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="20" id="vfc-c6-0FN"/>
+                            <constraint firstItem="pX8-k6-Lew" firstAttribute="top" secondItem="VvO-Wp-cet" secondAttribute="top" constant="30" id="y6w-TT-nvp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
