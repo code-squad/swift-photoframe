@@ -38,6 +38,7 @@
 		7DACE6B221C6B62000CF11BA /* 22.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DACE69B21C6B62000CF11BA /* 22.jpg */; };
 		7DACE6B321C6B62000CF11BA /* 18.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DACE69C21C6B62000CF11BA /* 18.jpg */; };
 		7DACE6B421C6B62000CF11BA /* 19.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DACE69D21C6B62000CF11BA /* 19.jpg */; };
+		7DACE6B621C6C04800CF11BA /* photoframe-border.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DACE6B521C6C04800CF11BA /* photoframe-border.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		7DACE69B21C6B62000CF11BA /* 22.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 22.jpg; sourceTree = "<group>"; };
 		7DACE69C21C6B62000CF11BA /* 18.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 18.jpg; sourceTree = "<group>"; };
 		7DACE69D21C6B62000CF11BA /* 19.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 19.jpg; sourceTree = "<group>"; };
+		7DACE6B521C6C04800CF11BA /* photoframe-border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photoframe-border.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				7DACE5D821C37C9D00CF11BA /* GreenViewController.swift */,
 				7D9C26E521C25523007F16D5 /* SecondViewController.swift */,
 				7D9C26E721C25523007F16D5 /* Main.storyboard */,
+				7DACE6B521C6C04800CF11BA /* photoframe-border.png */,
 				7DACE68621C6B62000CF11BA /* Demo Images */,
 				7D9C26EA21C25524007F16D5 /* Assets.xcassets */,
 				7D9C26EC21C25524007F16D5 /* LaunchScreen.storyboard */,
@@ -221,6 +224,7 @@
 				7D9C26EB21C25524007F16D5 /* Assets.xcassets in Resources */,
 				7D9C26E921C25523007F16D5 /* Main.storyboard in Resources */,
 				7DACE6A421C6B62000CF11BA /* 02.jpg in Resources */,
+				7DACE6B621C6C04800CF11BA /* photoframe-border.png in Resources */,
 				7DACE6B421C6B62000CF11BA /* 19.jpg in Resources */,
 				7DACE6A221C6B62000CF11BA /* 17.jpg in Resources */,
 				7DACE6AD21C6B62000CF11BA /* 04.jpg in Resources */,
