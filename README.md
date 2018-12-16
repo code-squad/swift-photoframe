@@ -133,4 +133,5 @@ contentMode 속성은 이미지를 어떻게 보여줄지를 결정한다.
 
 투명도 조절이나, 강조, 동적인 이미지를 start, stop할 수 있는 속성들이 있다.
 
-
+스텝7 화면
+![](https://user-images.githubusercontent.com/38850628/50056590-76712600-01a1-11e9-9495-6614e638333f.png)
