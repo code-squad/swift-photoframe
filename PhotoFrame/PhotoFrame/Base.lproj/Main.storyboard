@@ -97,6 +97,14 @@
                                     <action selector="nextImageButtonTouched:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="ig7-hA-zxw"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyI-Re-25G">
+                                <rect key="frame" x="172" y="448" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="선택"/>
+                                <connections>
+                                    <action selector="selectButtonTouched:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Cls-Ga-t06"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photoframe-border.png" translatesAutoresizingMaskIntoConstraints="NO" id="VvO-Wp-cet" userLabel="PhotoFrame">
                                 <rect key="frame" x="57" y="34" width="260" height="276"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
