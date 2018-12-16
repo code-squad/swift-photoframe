@@ -119,3 +119,12 @@ Popovers
 스텝6 화면
 ![](https://user-images.githubusercontent.com/38850628/50056086-b84a9e00-019a-11e9-924f-15ad0650a07d.png)
 
+## 스텝7
+
+- UIImageView 와 UIImage 클래스는 각각 어떤 역할을 담당하는지 학습한다.
+
+UIImage: 이미지 데이터를 관리하는 객체
+
+UIImageView: 단일 이미지 또는 연속적인 애니메이션 이미지를 표시하는 객체
+
+
