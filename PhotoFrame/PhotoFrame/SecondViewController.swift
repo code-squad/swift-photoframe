@@ -19,6 +19,7 @@ class SecondViewController: UIViewController {
     }
     
     @IBAction func nextImageButtonTouched(_ sender: Any) {
+        self.photoImageView.image = UIImage(named: "\(randomImageName()).jpg")
     }
     
     private func randomImageName() -> String {
