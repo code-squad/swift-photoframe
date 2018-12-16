@@ -115,3 +115,7 @@ Popovers
 
 ![](https://user-images.githubusercontent.com/38850628/50056000-6f461a00-0199-11e9-85a2-96e76437b620.png)
 출처 - developer.apple.com
+
+스텝6 화면
+![](https://user-images.githubusercontent.com/38850628/50056086-b84a9e00-019a-11e9-924f-15ad0650a07d.png)
+
