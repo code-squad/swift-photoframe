@@ -31,6 +31,8 @@ class SecondViewController: UIViewController {
     }
     
     @IBAction func selectButtonTouched(_ sender: Any) {
+        picker.sourceType = .photoLibrary
+        present(picker, animated: false, completion: nil)
     }
 }
 
