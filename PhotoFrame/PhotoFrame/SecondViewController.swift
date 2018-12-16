@@ -10,6 +10,7 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet weak var photoImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -17,6 +18,8 @@ class SecondViewController: UIViewController {
         print(#file, #line, #function, #column)
     }
     
-
+    @IBAction func nextImageButtonTouched(_ sender: Any) {
+    }
+    
 }
 
