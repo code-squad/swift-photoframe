@@ -92,6 +92,10 @@ YellowViewController.swift 24 viewDidAppear 40
 
 *GreenViewController가 DidDisappear되고 YellowViewController가 DidAppear된다.*
 
+- 뷰컨트롤러 컨테이너 동작을 이해한다.
+
+화면에 콘텐츠를 표기하지 않고 뷰컨트롤러들을 가지고 있다.
+하나의 뷰 컨트롤러에서 다른 뷰 컨트롤러로 자연스럽게 이어지도록 다양한 수단을 제공.
 
 - 뷰컨트롤러 컨테이너는 또 어떤 클래스가 있는지 찾아보고 학습한다.
 
