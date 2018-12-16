@@ -107,3 +107,11 @@ Popovers
 
 ![](https://developer.apple.com/library/archive/documentation/WindowsViews/Conceptual/ViewControllerCatalog/Art/intro.png)
 출처 - developer.apple.com
+
+- 내비게이션 컨트롤러가 있을 경우와 없을 경우 화면 전환 동작이 어떻게 다른지, 화면들 포함관계가 있는지 학습한다. 내비게이션 컨트롤러 관련 메서드가 왜 push / pop 인지 학습한다.
+
+일반적으로는 'present' 메서드로 view를 띄우고 'dismiss'메서드로 view를 닫는다.
+하지만 내비게이션 컨트롤러는 스택구조로 되어있다. 그렇기 때문에 뷰를 닫을때 'popViewController' 메서드를 이용하여 닫는다.
+
+![](https://user-images.githubusercontent.com/38850628/50056000-6f461a00-0199-11e9-85a2-96e76437b620.png)
+출처 - developer.apple.com
