@@ -21,5 +21,9 @@ class SecondViewController: UIViewController {
     @IBAction func nextImageButtonTouched(_ sender: Any) {
     }
     
+    private func randomImageName() -> String {
+        let random = arc4random_uniform(22) + 1
+        return String(format: "%02d", random)
+    }
+    
 }
-
