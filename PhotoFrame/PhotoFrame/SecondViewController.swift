@@ -27,4 +27,6 @@ class SecondViewController: UIViewController {
         return String(format: "%02d", random)
     }
     
+    @IBAction func selectButtonTouched(_ sender: Any) {
+    }
 }
