@@ -135,3 +135,10 @@ contentMode 속성은 이미지를 어떻게 보여줄지를 결정한다.
 
 스텝7 화면
 ![](https://user-images.githubusercontent.com/38850628/50056590-76712600-01a1-11e9-9495-6614e638333f.png)
+
+## 스텝8
+
+![](https://user-images.githubusercontent.com/38850628/50057162-ef747b80-01a9-11e9-954c-6389e5db3f0f.png)
+![](https://user-images.githubusercontent.com/38850628/50057163-ef747b80-01a9-11e9-94f6-49387f3f3e02.png)
+![](https://user-images.githubusercontent.com/38850628/50057164-ef747b80-01a9-11e9-8228-36ff178c97ce.png)
+![](https://user-images.githubusercontent.com/38850628/50057165-f00d1200-01a9-11e9-868e-7f611de50082.png)
