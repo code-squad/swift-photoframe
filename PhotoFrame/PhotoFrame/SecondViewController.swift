@@ -11,9 +11,12 @@ import UIKit
 class SecondViewController: UIViewController {
 
     @IBOutlet weak var photoImageView: UIImageView!
+    let picker = UIImagePickerController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        picker.delegate = self
         self.photoImageView.contentMode = .scaleAspectFit
         print(#file, #line, #function, #column)
     }
@@ -29,4 +32,8 @@ class SecondViewController: UIViewController {
     
     @IBAction func selectButtonTouched(_ sender: Any) {
     }
+}
+
+extension SecondViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
 }
