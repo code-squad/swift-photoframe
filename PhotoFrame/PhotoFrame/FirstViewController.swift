@@ -9,11 +9,19 @@
 import UIKit
 
 class FirstViewController: UIViewController {
-
+    @IBOutlet weak var firstDescription: UILabel!
+    @IBOutlet weak var firstLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         print(#file, #line, #function, #column)
+        self.firstLabel.text = "저스틴의 사진액자"
+        self.firstLabel.textColor = UIColor.gray
+        self.firstLabel.shadowColor = UIColor.black
+        self.firstDescription.text = "첫번째 사진앨범"
+        self.firstDescription.textColor = UIColor.gray
+        self.firstDescription.shadowColor = UIColor.black
     }
 }
 
