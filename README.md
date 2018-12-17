@@ -12,14 +12,14 @@
  * IBOutlet : 처리 결과를 View 단에 알리고 원하는 동작을 이끌어 내게한다 -> View에 존재하는 요소와 Controller를 연결하기 위한 변수이다.
  * IBAction : 유저를 통한 특정 이벤트를 감지해서 Controller에 알리는 역할을 한다 -> 특정 이벤트 발생 시 실행될 액션이다.
  
- ![firstScreen](./1)
+ ![firstScreen](./1.png)
  
 * 작업한 내용의 결과를 쉽게 확인할 수 있는 Assistant Editor 모드로 전환해 준다.
 
-![secondScreen](./2)
+![secondScreen](./2.png)
 
 * first Label을 IBOutlet으로 `Control + Drag` 하여 연결시켜 준다.
 
-![thirdScreen](./3)
+![thirdScreen](./3.png)
 
 * 연결된 Outlet 변수를 통해 프로퍼티의 속성을 바꾸어 준다.
