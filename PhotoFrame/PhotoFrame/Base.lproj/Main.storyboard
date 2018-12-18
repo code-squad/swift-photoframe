@@ -61,10 +61,10 @@
             </objects>
             <point key="canvasLocation" x="750" y="-308"/>
         </scene>
-        <!--View Controller-->
+        <!--Next Sceen Controller-->
         <scene sceneID="ESh-MW-aH0">
             <objects>
-                <viewController id="FSF-Y9-OCa" sceneMemberID="viewController">
+                <viewController id="FSF-Y9-OCa" customClass="NextSceenController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jpX-y7-y1z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,13 +78,13 @@
                                     <segue destination="h7z-YI-9Zh" kind="presentation" modalPresentationStyle="pageSheet" modalTransitionStyle="coverVertical" id="H0g-KP-lC7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rMs-XQ-SB8">
-                                <rect key="frame" x="16" y="486" width="155" height="92"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxX-yb-h30">
+                                <rect key="frame" x="41" y="486" width="155" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                 <state key="normal" title="Previous"/>
                                 <connections>
-                                    <segue destination="9pv-A4-QxB" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="h5S-pg-gSD"/>
+                                    <segue destination="wPT-io-gEh" kind="unwind" unwindAction="myExitWithSender:" id="68s-5w-UnZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -93,6 +93,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="65e-uk-fxZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="wPT-io-gEh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1544.8" y="-308.09595202398805"/>
         </scene>
@@ -104,15 +105,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6A-e4-2ke">
-                                <rect key="frame" x="44" y="501" width="155" height="92"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kwF-t0-1jv">
+                                <rect key="frame" x="16" y="492" width="155" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                 <state key="normal" title="Previous"/>
                                 <connections>
-                                    <segue destination="FSF-Y9-OCa" kind="popoverPresentation" popoverAnchorView="o6A-e4-2ke" id="wMI-dp-JRS">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES"/>
-                                    </segue>
+                                    <segue destination="DYK-fk-YHg" kind="unwind" unwindAction="secondSceenExitWithSender:" id="hVq-9I-OcI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -121,6 +120,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="avf-Nt-Qww" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="DYK-fk-YHg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2281" y="-308"/>
         </scene>
@@ -184,8 +184,4 @@
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="wMI-dp-JRS"/>
-        <segue reference="h5S-pg-gSD"/>
-    </inferredMetricsTieBreakers>
 </document>
