@@ -15,6 +15,7 @@
 		9D27E84C21C782FA00B2C8FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D27E84A21C782FA00B2C8FF /* LaunchScreen.storyboard */; };
 		9D27E85721C782FA00B2C8FF /* PhotoFrameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D27E85621C782FA00B2C8FF /* PhotoFrameTests.swift */; };
 		9D27E86221C782FA00B2C8FF /* PhotoFrameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D27E86121C782FA00B2C8FF /* PhotoFrameUITests.swift */; };
+		9DD576F621C8EC3D001BBEAD /* NextSceenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD576F521C8EC3D001BBEAD /* NextSceenController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		9D27E85D21C782FA00B2C8FF /* PhotoFrameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoFrameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D27E86121C782FA00B2C8FF /* PhotoFrameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFrameUITests.swift; sourceTree = "<group>"; };
 		9D27E86321C782FA00B2C8FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DD576F521C8EC3D001BBEAD /* NextSceenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NextSceenController.swift; path = PhotoFrame/NextSceenController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		9D27E83321C782F900B2C8FF = {
 			isa = PBXGroup;
 			children = (
+				9DD576F521C8EC3D001BBEAD /* NextSceenController.swift */,
 				9D27E83E21C782F900B2C8FF /* PhotoFrame */,
 				9D27E85521C782FA00B2C8FF /* PhotoFrameTests */,
 				9D27E86021C782FA00B2C8FF /* PhotoFrameUITests */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D27E84421C782F900B2C8FF /* SecondViewController.swift in Sources */,
+				9DD576F621C8EC3D001BBEAD /* NextSceenController.swift in Sources */,
 				9D27E84021C782F900B2C8FF /* AppDelegate.swift in Sources */,
 				9D27E84221C782F900B2C8FF /* FirstViewController.swift in Sources */,
 			);

@@ -34,5 +34,7 @@ class FirstViewController: UIViewController {
         self.firstDescription.textColor = UIColor.red
     }
     
+    @IBAction func myExit(sender: UIStoryboardSegue) {
+    }
 }
 

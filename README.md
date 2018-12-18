@@ -55,6 +55,11 @@
 
 * 연결된 화살표를 누르면 화면전환 효과를 설정할 수 있다.
 
-![tenScreen](./10.png)
+![tenScreen](./11.png)
 
-* 새로 만든 View에도 버튼을 추가하여 화면 간 전환이 가능하도록 구현한다.
+* Segue를 통해 화면을 전환할 때에는 항상 새로운 ViewController 객체를 생성한다.
+* 이전 화면으로 전환을 위해서 이전 화면에 IBAction을 스크린샷과 같이 구현한다.
+
+![elevenScreen](./10.png)
+
+* `Control + 드래그`를 사용하여 Exit로 드래그한다.
