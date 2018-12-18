@@ -23,5 +23,16 @@ class FirstViewController: UIViewController {
         self.firstDescription.textColor = UIColor.gray
         self.firstDescription.shadowColor = UIColor.black
     }
+    
+    @IBAction func nextButtonTouched(_ sender: Any) {
+        self.firstLabel.textColor = UIColor.blue
+        self.firstLabel.backgroundColor = UIColor.yellow
+        self.firstLabel.alpha = 0.5
+    }
+    
+    @IBAction func twoTouched(_ sender: Any) {
+        self.firstDescription.textColor = UIColor.red
+    }
+    
 }
 
