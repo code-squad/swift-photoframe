@@ -32,12 +32,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jAB-et-4wH">
-                                <rect key="frame" x="173" y="209" width="30" height="30"/>
+                                <rect key="frame" x="172" y="209" width="32" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="다음"/>
+                                <state key="normal" title="Next"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="9pv-A4-QxB" eventType="touchUpInside" id="bxN-Pi-vhG"/>
                                     <action selector="twoTouched:" destination="9pv-A4-QxB" eventType="touchUpInside" id="IIE-K7-Qcx"/>
+                                    <segue destination="FSF-Y9-OCa" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="partialCurl" id="0GL-5z-U7p"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -58,7 +59,70 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="750" y="-308"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ESh-MW-aH0">
+            <objects>
+                <viewController id="FSF-Y9-OCa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jpX-y7-y1z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vsx-vS-pxo">
+                                <rect key="frame" x="204" y="486" width="155" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="h7z-YI-9Zh" kind="presentation" modalPresentationStyle="pageSheet" modalTransitionStyle="coverVertical" id="H0g-KP-lC7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rMs-XQ-SB8">
+                                <rect key="frame" x="16" y="486" width="155" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <state key="normal" title="Previous"/>
+                                <connections>
+                                    <segue destination="9pv-A4-QxB" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="h5S-pg-gSD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.19850522844486695" blue="0.14487927020631219" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="Xf7-3E-heZ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="65e-uk-fxZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1544.8" y="-308.09595202398805"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Esp-Lf-wqq">
+            <objects>
+                <viewController id="h7z-YI-9Zh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JQV-NC-TSN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6A-e4-2ke">
+                                <rect key="frame" x="44" y="501" width="155" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <state key="normal" title="Previous"/>
+                                <connections>
+                                    <segue destination="FSF-Y9-OCa" kind="popoverPresentation" popoverAnchorView="o6A-e4-2ke" id="wMI-dp-JRS">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95176046047720886" green="1" blue="0.18367175553368176" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="DG7-Hh-VEb"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="avf-Nt-Qww" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2281" y="-308"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
@@ -120,4 +184,8 @@
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="wMI-dp-JRS"/>
+        <segue reference="h5S-pg-gSD"/>
+    </inferredMetricsTieBreakers>
 </document>

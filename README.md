@@ -43,3 +43,18 @@
 ![sevenScreen](./7.png)
 
 * 버튼을 누른 후 바뀐 화면
+
+##### **Step 4**
+
+![eightScreen](./8.png)
+
+* ViewController 새로운 Sceen을 추가한다.
+* First View의 다음 버튼을 `control + 드래그`하여 새로 만든 sceen에 연결한다.
+
+![nineScreen](./9.png)
+
+* 연결된 화살표를 누르면 화면전환 효과를 설정할 수 있다.
+
+![tenScreen](./10.png)
+
+* 새로 만든 View에도 버튼을 추가하여 화면 간 전환이 가능하도록 구현한다.
