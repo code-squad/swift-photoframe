@@ -23,3 +23,23 @@
 ![thirdScreen](./3.png)
 
 * 연결된 Outlet 변수를 통해 프로퍼티의 속성을 바꾸어 준다.
+
+
+##### **Step 3**
+
+![fourthScreen](./4.png)
+
+* 버튼을 First View에 추가해주고, 버튼을 Ctrl + `드래그` 액션으로 IBAction을 추가해준다.
+
+![fifthScreen](./5.png)
+
+* Action이 일어났을 때 일어날 행동을 정의해준다.
+* 글자색, 배경화면, 투명도를 변경해주었다.
+
+![sixthScreen](./6.png)
+
+* 버튼을 누르기 전 화면
+
+![sevenScreen](./7.png)
+
+* 버튼을 누른 후 바뀐 화면
