@@ -63,3 +63,39 @@
 ![elevenScreen](./10.png)
 
 * `Control + 드래그`를 사용하여 Exit로 드래그한다.
+
+
+##### **Step 5**
+
+ 이전 화면으로 돌아가기 위한 방식을 구현하기 위한 방법에는 2가지가 있다. Unwind를 이용한 방식과 IBAction을 구현해 `dissmiss` 메소드를 사용하는 방법이다.
+ 이번 단계에서는 `Dismiss`를 사용하는 방식으로 구현해보았다.
+ 
+ 1. `File -> New -> Cocoa Touch Clss`를 생성해준다.
+ ![twelveScreen](./12.png)
+ 
+ 2. 적당한 저장경로를 선택한다.
+ ![thirteenScreen](./13.png)
+ 
+ 3. `Dismiss`를 구현할 View로 이동하여 방금 생성한 Class로 `Custom Class`를 지정하여 준다.
+ ![fourteenScreen](./14.png)
+ 
+ 4. View에 `IBAction` 메소드를 구현하고 다음과 같은 코드를 추가하여 준다. 이렇게 완료되면 이전으로 돌아가기 버튼이 완성된다.
+ ![fifteenScreen](./15.png)
+ 
+ 
+ * 추가적으로 Segue를 통해 화면전환이 일어나는 방식이 아닌, 코드를 통해 화면전환을 하는 방법을 사용해보았다.
+ 
+ 1. `instantiateViewController(withIdentifier: "YellowViewController")` 메소드를 사용하는데 withIdentifier에 ViewController의 ID가 필요하다. 이를 위해 ViewController의 Identifier를 설정해야 한다.
+ ![sixteenScreen](./16.png)
+ 
+ 2. 그 후 버튼을 생성 후 `IBAction` 을 구현한다. 코드에 밑 그림과 같이 추가해준다.
+ ![seventeenScreen](./17.png)
+ 
+ * **ViewController 콜백 함수**
+ 1. `viewWillAppear() : View가 생성되기 전에 호출된다.
+ 2. `viewDidAppear() : View가 생성되면서 호출된다.
+ 3. `viewWillDisappear() : View가 버려지기 전에 호출된다.
+ 4. `viewDidAppear() : View가 버려지면서 호출된다.
+ 
+ 1 -> 2 -> 3 -> 4 순으로 콜백함수들이 호출된다.
+ 
