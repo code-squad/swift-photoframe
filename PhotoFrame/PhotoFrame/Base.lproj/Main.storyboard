@@ -97,10 +97,10 @@
             </objects>
             <point key="canvasLocation" x="1544.8" y="-308.09595202398805"/>
         </scene>
-        <!--View Controller-->
+        <!--Yellow View Controller-->
         <scene sceneID="Esp-Lf-wqq">
             <objects>
-                <viewController id="h7z-YI-9Zh" sceneMemberID="viewController">
+                <viewController id="h7z-YI-9Zh" customClass="YellowViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JQV-NC-TSN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -114,6 +114,15 @@
                                     <segue destination="DYK-fk-YHg" kind="unwind" unwindAction="secondSceenExitWithSender:" id="hVq-9I-OcI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eN6-4H-sLJ">
+                                <rect key="frame" x="191" y="50" width="155" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <state key="normal" title="닫기"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="h7z-YI-9Zh" eventType="touchUpInside" id="ZQr-ek-d6e"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.95176046047720886" green="1" blue="0.18367175553368176" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="DG7-Hh-VEb"/>
@@ -122,7 +131,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="avf-Nt-Qww" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="DYK-fk-YHg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2281" y="-308"/>
+            <point key="canvasLocation" x="2280.8000000000002" y="-308.09595202398805"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
