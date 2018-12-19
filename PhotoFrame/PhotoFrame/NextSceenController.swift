@@ -13,9 +13,15 @@ class NextSceenController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
     // MARK: - Table view data source
 
     @IBAction func secondSceenExit(sender: UIStoryboardSegue) {
+    }
+    
+    @IBAction func moveToNextSceen(_ sender: Any) {
+        let ViewController = self.storyboard?.instantiateViewController(withIdentifier: "YellowViewController")
+        ViewController?.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+        self.present(ViewController!, animated: true, completion: nil)
     }
 }
