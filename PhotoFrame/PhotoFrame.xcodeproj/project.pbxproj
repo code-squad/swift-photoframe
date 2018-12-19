@@ -51,8 +51,8 @@
 		9D27E85D21C782FA00B2C8FF /* PhotoFrameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoFrameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D27E86121C782FA00B2C8FF /* PhotoFrameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFrameUITests.swift; sourceTree = "<group>"; };
 		9D27E86321C782FA00B2C8FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9DD576F521C8EC3D001BBEAD /* NextSceenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NextSceenController.swift; path = PhotoFrame/NextSceenController.swift; sourceTree = "<group>"; };
-		9DD576F721C8F38C001BBEAD /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = YellowViewController.swift; path = PhotoFrame/YellowViewController.swift; sourceTree = "<group>"; };
+		9DD576F521C8EC3D001BBEAD /* NextSceenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextSceenController.swift; sourceTree = "<group>"; };
+		9DD576F721C8F38C001BBEAD /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +83,6 @@
 		9D27E83321C782F900B2C8FF = {
 			isa = PBXGroup;
 			children = (
-				9DD576F721C8F38C001BBEAD /* YellowViewController.swift */,
-				9DD576F521C8EC3D001BBEAD /* NextSceenController.swift */,
 				9D27E83E21C782F900B2C8FF /* PhotoFrame */,
 				9D27E85521C782FA00B2C8FF /* PhotoFrameTests */,
 				9D27E86021C782FA00B2C8FF /* PhotoFrameUITests */,
@@ -105,6 +103,8 @@
 		9D27E83E21C782F900B2C8FF /* PhotoFrame */ = {
 			isa = PBXGroup;
 			children = (
+				9DD576F721C8F38C001BBEAD /* YellowViewController.swift */,
+				9DD576F521C8EC3D001BBEAD /* NextSceenController.swift */,
 				9D27E83F21C782F900B2C8FF /* AppDelegate.swift */,
 				9D27E84121C782F900B2C8FF /* FirstViewController.swift */,
 				9D27E84321C782F900B2C8FF /* SecondViewController.swift */,

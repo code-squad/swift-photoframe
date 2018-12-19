@@ -87,6 +87,15 @@
                                     <segue destination="wPT-io-gEh" kind="unwind" unwindAction="myExitWithSender:" id="68s-5w-UnZ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOx-ND-JK9">
+                                <rect key="frame" x="204" y="219" width="155" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <state key="normal" title="Next2"/>
+                                <connections>
+                                    <action selector="moveToNextSceen:" destination="FSF-Y9-OCa" eventType="touchUpInside" id="Tnd-Vj-WDL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.19850522844486695" blue="0.14487927020631219" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="Xf7-3E-heZ"/>
@@ -100,7 +109,7 @@
         <!--Yellow View Controller-->
         <scene sceneID="Esp-Lf-wqq">
             <objects>
-                <viewController id="h7z-YI-9Zh" customClass="YellowViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="YellowViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="h7z-YI-9Zh" customClass="YellowViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JQV-NC-TSN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
