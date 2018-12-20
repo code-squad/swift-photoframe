@@ -18,11 +18,9 @@ class SecondViewController: UIViewController {
         self.photoImageView.contentMode = .scaleAspectFit
     }
 
-
     @IBAction func nextImageTouched(_ sender: Any) {
-        var photoNumber: [String] = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22"]
-        
-        self.photoImageView.image = UIImage(named: "\(photoNumber[Int(arc4random_uniform(22))]).jpg")
+        let imageName: String = String(format: "%02d", Int(arc4random_uniform(22))+1) + ".jpg"
+        self.photoImageView.image = UIImage(named: imageName)
     }
 }
 
