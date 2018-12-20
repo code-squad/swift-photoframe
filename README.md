@@ -99,3 +99,32 @@
  
  1 -> 2 -> 3 -> 4 순으로 콜백함수들이 호출된다.
  
+ ##### **Step 6**
+ 
+  이번 단계에서는 View Controller Container에 대해 학습하였다.
+  
+  우선 ContainerView를 사용하게 되면 View가 하위 View를 가질 수 있게 된다. 이를 통해 계층관계가 View사이에 형성된다. 
+  IOS에서 사용되는 ContainerView에는 몇몇개가 있는데 우선 2가지를 먼저 찾아보았다.
+  1. NavigationController
+  2. TabbarController
+  
+  * Navigation Controller
+  - 뷰 컨트롤러 사이 계층구조를 탐색할 수 있게 해주는 객체이다. 이 컨트롤러의 자식 뷰는 일종의 **Stack**으로 관리된다. 처음 표시되는 뷰 컨트롤러는 `rootViewController`라고 한다. 세부 항목으로 들어갈 때마다 다음 레벨 뷰 컨트롤러를 `Push`하고 반대로 나갈 때는 `Pop`을 하게 된다.
+  1. `pushViewController(viewController: UIViewController, animated: Bool)`
+  2. `popViewController(animated: Bool)`
+
+
+ * Tab Bar Controller
+ - 탭 바 컨트롤러는 네비게이션과는 다르게 서브 뷰컨트롤러의 사이가 수평적인 관계를 가지게 된다. 하단에 탭바 UI를 제공하고, 각각 선택하여 들어갈 수 있다.
+ 
+ 
+  Step을 진행하면서 알아 보았다.
+  
+  1. FirstSceen을 클릭해 Editor > Embeded in > Navigation Controller 를 선택해, Navigation Controller를 추가해준다. 상단에 네이게이션 바가 생긴 것을 확인할 수 있다.
+  ![eightteenScreen](./18.png)
+  ![nineteenScreen](./19.png)
+  
+  2. 이렇게 바꾸고나면 Navigation Controller는 Stack형식으로 동작하기 때문에 이전에 동작했던 dismiss 메소드가 동작하지 않게 된다. 이전 화면으로 빠져나가기 위해 아래와 같은 코드로 바꾸어준다. 
+  ![twentyScreen](./20.png)
+  
+ 
