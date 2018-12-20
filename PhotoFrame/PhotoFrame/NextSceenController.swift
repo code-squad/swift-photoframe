@@ -14,14 +14,16 @@ class NextSceenController: UIViewController {
         super.viewDidLoad()
     }
     
+    @IBAction func exitSceen(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     // MARK: - Table view data source
-
-    @IBAction func secondSceenExit(sender: UIStoryboardSegue) {
-    }
     
-    @IBAction func moveToNextSceen(_ sender: Any) {
-        let ViewController = self.storyboard?.instantiateViewController(withIdentifier: "YellowViewController")
-        ViewController?.modalTransitionStyle = UIModalTransitionStyle.coverVertical
-        self.present(ViewController!, animated: true, completion: nil)
-    }
+    // 다음 화면으로 전환하기 위한 코드 ( Not use Segue )
+//    @IBAction func moveToNextSceen(_ sender: Any) {
+//        let ViewController = self.storyboard?.instantiateViewController(withIdentifier: "YellowViewController")
+//        ViewController?.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+//        self.present(ViewController!, animated: true, completion: nil)
+//    }
+    
 }
