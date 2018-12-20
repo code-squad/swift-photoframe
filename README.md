@@ -127,4 +127,23 @@
   2. 이렇게 바꾸고나면 Navigation Controller는 Stack형식으로 동작하기 때문에 이전에 동작했던 dismiss 메소드가 동작하지 않게 된다. 이전 화면으로 빠져나가기 위해 아래와 같은 코드로 바꾸어준다. 
   ![twentyScreen](./20.png)
   
+  
+  ##### **Step 7**
+  
+  UIImageView 객체를 생성하고 이미지를 로드해와 화면 상에 띄어보았다. 그리고 그 속성을 변경해 비율에 맞게 표시되도록 진행해보았다.
+  비율을 조정해주는 프로퍼티로는 `contentMode`를 조정해서 사용할 수 있었다.
+  * .scaleToFill : 가로, 세로를 화면에 다 맞추어서 보여준다. 그렇기 때문에 화면이 찌그러질 수 있다.
+  * .scaleAspectFit : 원본의 비율을 유지하면서 화면을 자르지 않고 그래도 보여준다.
+  * .scaleAspectFill : 원본의 비율을 유지하면서 여백 없이 채운다. 그렇기 때문에 원본 이미지가 조금 잘려나갈 수 있다.
+  - 이 외에도 몇 가지의 속성이 있지만 잘 사용하지 않을 것 같아서 여기까지만 정리하였다.
+  
+   이제 UIImageView를 생성해서 직접 화면에 띄어보겠다.
+   
+  1. UIImageView를 생성한다.
+  ![twentyoneScreen](./21.png)
+  
+  2. UIImageView의 프로퍼티인 UIView에 로드해올 이미지를 넣어준다.
+  ![twentytwoScreen](./22.png)
+  
+  
  
