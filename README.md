@@ -104,7 +104,7 @@
   이번 단계에서는 View Controller Container에 대해 학습하였다.
   
   우선 ContainerView를 사용하게 되면 View가 하위 View를 가질 수 있게 된다. 이를 통해 계층관계가 View사이에 형성된다. 
-  IOS에서 사용되는 ContainerView에는 몇몇개가 있는데 우선 2가지를 먼저 찾아보았다.
+  IOS에서 사용되는 ContainerViewController에는 몇몇개가 있는데 우선 2가지를 먼저 찾아보았다.
   1. NavigationController
   2. TabbarController
   
