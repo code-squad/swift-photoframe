@@ -50,7 +50,10 @@ class SecondViewController: UIViewController {
             picker.sourceType = .camera
             present(picker, animated: false, completion: nil)
         } else {
-            print("Camera can't not use")
+            let warningAlert = UIAlertController(title: "주의", message: "카메라 기능에 접근할 수 없습니다.", preferredStyle: .alert)
+            let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            warningAlert.addAction(okayAction)
+            present(warningAlert, animated: true, completion: nil)
         }
     }
 }
