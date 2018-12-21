@@ -29,8 +29,8 @@ class SecondViewController: UIViewController {
     @IBAction func selectButtonTouched(_ sender: Any) {
         let alert = UIAlertController(title: "가져올 곳", message: "선택하시오", preferredStyle: .actionSheet)
         
-        let albumPickAction = UIAlertAction(title: "사진앨범", style: .default, handler: nil)
-        let cameraPickAction = UIAlertAction(title: "카메라", style: .default, handler: nil)
+        let albumPickAction = UIAlertAction(title: "사진앨범", style: .default) { (action) in self.openLibrary() }
+        let cameraPickAction = UIAlertAction(title: "카메라", style: .default) { (action) in self.openCamera() }
         let cancelPickAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
         
         alert.addAction(cameraPickAction)
@@ -38,6 +38,20 @@ class SecondViewController: UIViewController {
         alert.addAction(cancelPickAction)
     
         present(alert, animated: true, completion: nil)
+    }
+    
+    private func openLibrary() {
+        picker.sourceType = .photoLibrary
+        present(picker, animated: false, completion: nil)
+    }
+    
+    private func openCamera() {
+        if(UIImagePickerController.isSourceTypeAvailable(.camera)) {
+            picker.sourceType = .camera
+            present(picker, animated: false, completion: nil)
+        } else {
+            print("Camera can't not use")
+        }
     }
 }
 
