@@ -10,12 +10,13 @@ import UIKit
 
 class SecondViewController: UIViewController {
     @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var photoFrame: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.photoImageView.image = UIImage(named: "01.jpg")
-        self.photoImageView.contentMode = .scaleAspectFit
+        self.photoFrame.image = UIImage(named: "photoframe-border.png")
     }
 
     @IBAction func nextImageTouched(_ sender: Any) {
