@@ -11,14 +11,14 @@ import UIKit
 class SecondViewController: UIViewController {
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var photoFrame: UIImageView!
-    let picker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        picker.delegate = self
-        self.photoImageView.image = UIImage(named: "01.jpg")
-        self.photoFrame.image = UIImage(named: "photoframe-border.png")
+        let frame = "photoframe-border.png"
+        let initialImage = "01.jpg"
+        self.photoImageView.image = UIImage(named: initialImage)
+        self.photoFrame.image = UIImage(named: frame)
     }
 
     @IBAction func nextImageTouched(_ sender: Any) {
@@ -27,10 +27,13 @@ class SecondViewController: UIViewController {
     }
     
     @IBAction func selectButtonTouched(_ sender: Any) {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        
         let alert = UIAlertController(title: "가져올 곳", message: "선택하시오", preferredStyle: .actionSheet)
         
-        let albumPickAction = UIAlertAction(title: "사진앨범", style: .default) { (action) in self.openLibrary() }
-        let cameraPickAction = UIAlertAction(title: "카메라", style: .default) { (action) in self.openCamera() }
+        let albumPickAction = UIAlertAction(title: "사진앨범", style: .default) { (action) in self.openLibrary(picker) }
+        let cameraPickAction = UIAlertAction(title: "카메라", style: .default) { (action) in self.openCamera(picker) }
         let cancelPickAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
         
         alert.addAction(cameraPickAction)
@@ -40,12 +43,12 @@ class SecondViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
-    private func openLibrary() {
+    private func openLibrary(_ picker: UIImagePickerController) {
         picker.sourceType = .photoLibrary
         present(picker, animated: false, completion: nil)
     }
     
-    private func openCamera() {
+    private func openCamera(_ picker: UIImagePickerController) {
         if(UIImagePickerController.isSourceTypeAvailable(.camera)) {
             picker.sourceType = .camera
             present(picker, animated: false, completion: nil)
