@@ -11,10 +11,12 @@ import UIKit
 class SecondViewController: UIViewController {
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var photoFrame: UIImageView!
+    let picker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        picker.delegate = self
         self.photoImageView.image = UIImage(named: "01.jpg")
         self.photoFrame.image = UIImage(named: "photoframe-border.png")
     }
@@ -23,5 +25,21 @@ class SecondViewController: UIViewController {
         let imageName: String = String(format: "%02d", Int(arc4random_uniform(22))+1) + ".jpg"
         self.photoImageView.image = UIImage(named: imageName)
     }
+    
+    @IBAction func selectButtonTouched(_ sender: Any) {
+        let alert = UIAlertController(title: "가져올 곳", message: "선택하시오", preferredStyle: .actionSheet)
+        
+        let albumPickAction = UIAlertAction(title: "사진앨범", style: .default, handler: nil)
+        let cameraPickAction = UIAlertAction(title: "카메라", style: .default, handler: nil)
+        let cancelPickAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        
+        alert.addAction(cameraPickAction)
+        alert.addAction(albumPickAction)
+        alert.addAction(cancelPickAction)
+    
+        present(alert, animated: true, completion: nil)
+    }
 }
 
+extension SecondViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+}
