@@ -10,16 +10,21 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+    @IBOutlet weak var photoLabel: UILabel!
+    @IBOutlet weak var firstDescription: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.photoLabel.textColor = .blue
+        self.photoLabel.font = UIFont.systemFont(ofSize: 50)
+        self.photoLabel.alpha = 0.9
+        self.photoLabel.text = "Cony의 사진액자"
         
-//        https://docs.swift.org/swift-book/ReferenceManual/Expressions.html
-//        #file    String    파일이 나타나는 파일의 이름입니다.
-//        #line    Int    표시되는 행 번호.
-//        #column    Int    열이 시작되는 열 번호입니다.
-//        #function    String    이름이 나타나는 선언의 이름입니다.
-//        #dsohandle    UnsafeRawPointer    DSO (동적 공유 객체)는 사용중인 곳에서 처리합니다.
+        self.firstDescription.textColor = .black
+        self.firstDescription.backgroundColor = .yellow
+        self.firstDescription.font = UIFont.systemFont(ofSize: 15)
+        self.firstDescription.alpha = 0.6
+        self.firstDescription.text = "Cony"
         
         print(#file, #line, #function, #column)
     }
