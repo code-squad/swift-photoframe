@@ -18,4 +18,13 @@
 - ![screemsh_step2](./img/step2.png)
 
 - UILabel 클래스 속성(Property)는 어떤게 있는지 학습한다.
->
+>https://github.com/conyconydev/conyconydev.github.io/blob/master/_posts/ios/2019-03-12-UILabel.md
+
+## step3. IBAction
+- Main.storyboard 에서 First Scene에 UIButton을 추가하고, IBAction으로 연결한다.
+- 실행화면
+- ![screemsh_step3](./img/step3.png)
+
+- IBAction 과 IBOutlet 연결 구조에 대해 이해한 내용을 정리한다.
+- 버튼에 IBAction을 추가할 때 이벤트(Event) 종류에는 어떤 것들이 있는지 학습한다.
+> https://github.com/conyconydev/conyconydev.github.io/blob/master/_posts/ios/2019-03-12-IBAction_IBOutlet.md
