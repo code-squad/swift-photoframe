@@ -3,10 +3,10 @@
 
 <img width="1440" alt="스크린샷 2019-03-12 오후 5 21 53" src="https://user-images.githubusercontent.com/31604976/54185320-0ba76080-44ec-11e9-9cb2-4b44df2731ee.png">
 
-#file : /Users/jina/github/swift-photoframe/PhotoFrame/PhotoFrame/FirstViewController.swift
-#line : 16
-#function : viewDidLoad()
-#column : 40 (16번 행의 40번 열에 있다. #column이 시작되는 곳이 40번이다.)
+#file : /Users/jina/github/swift-photoframe/PhotoFrame/PhotoFrame/FirstViewController.swift  
+#line : 16  
+#function : viewDidLoad()  
+#column : 40 (16번 행의 40번 열에 있다. #column이 시작되는 곳이 40번이다.)  
 
 ### UITabBarController 와 UITabBar
 - UITabBarController
