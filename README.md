@@ -1,5 +1,6 @@
-# PhotoFrame
-## step1. Tabbed App 템플릿
+# PhotoFrame  
+
+## step1. Tabbed App 템플릿(19.03.12)
 
 <img width="1440" alt="스크린샷 2019-03-12 오후 5 21 53" src="https://user-images.githubusercontent.com/31604976/54185320-0ba76080-44ec-11e9-9cb2-4b44df2731ee.png">
 
@@ -22,6 +23,5 @@ UITabBarController와 사용되지만, 독립적으로 사용할 수 있다.
 UITabBarController는 버튼을 눌렀을 때 대체될 뷰를 보여주는 역할을 하고 UITabBar는 버튼자체를 프로그래머가 디자인 하고 보여주는 역할을 한다.
 
 
-
-
-
+## step2. IBOutlet
+<img width="1440" alt="스크린샷 2019-03-13 오후 9 42 25" src="https://user-images.githubusercontent.com/31604976/54279884-7e423a00-45d9-11e9-91af-7c492f53ae15.png">
