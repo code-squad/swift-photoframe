@@ -24,4 +24,4 @@ UITabBarController는 버튼을 눌렀을 때 대체될 뷰를 보여주는 역�
 
 
 ## step2. IBOutlet
-<img width="1440" alt="스크린샷 2019-03-13 오후 9 42 25" src="https://user-images.githubusercontent.com/31604976/54279884-7e423a00-45d9-11e9-91af-7c492f53ae15.png">
+<img width="547" alt="스크린샷 2019-03-13 오후 9 46 30" src="https://user-images.githubusercontent.com/31604976/54280188-3b349680-45da-11e9-9284-46804be03d75.png">
