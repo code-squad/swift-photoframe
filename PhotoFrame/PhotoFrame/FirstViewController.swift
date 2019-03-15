@@ -10,7 +10,7 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
-    @IBOutlet weak var photoLabel: UILabel!
+    @IBOutlet weak var photoLabel: TitleLabel!
     @IBOutlet weak var firstDescription: UILabel!
     
     override func viewDidLoad() {
@@ -19,6 +19,7 @@ class FirstViewController: UIViewController {
         self.photoLabel.font = UIFont.systemFont(ofSize: 50)
         self.photoLabel.alpha = 0.9
         self.photoLabel.text = "Cony의 사진액자"
+        
         
         self.firstDescription.textColor = .black
         self.firstDescription.backgroundColor = .yellow
@@ -30,9 +31,9 @@ class FirstViewController: UIViewController {
     }
 
     @IBAction func nextButtonTouched(_ sender: Any) {
-        self.photoLabel.textColor = UIColor.blue
-        self.photoLabel.backgroundColor = UIColor.yellow
-        self.photoLabel.alpha = 0.5
+        self.photoLabel.setTitleLabelStyle()
     }
     
+    
 }
+
