@@ -15,6 +15,9 @@
 		F352F9712235F88B00680FD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F352F96F2235F88B00680FD9 /* LaunchScreen.storyboard */; };
 		F352F97C2235F88B00680FD9 /* PhotoFrameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F352F97B2235F88B00680FD9 /* PhotoFrameTests.swift */; };
 		F352F9872235F88B00680FD9 /* PhotoFrameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F352F9862235F88B00680FD9 /* PhotoFrameUITests.swift */; };
+		F352F9B822394EB400680FD9 /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F352F9B722394EB400680FD9 /* TitleLabel.swift */; };
+		F3B53B92223A55D500183537 /* BlackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B53B91223A55D500183537 /* BlackView.swift */; };
+		F3B53B94223A56DB00183537 /* EmeraldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B53B93223A56DB00183537 /* EmeraldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		F352F9822235F88B00680FD9 /* PhotoFrameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoFrameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F352F9862235F88B00680FD9 /* PhotoFrameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFrameUITests.swift; sourceTree = "<group>"; };
 		F352F9882235F88B00680FD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F352F9B722394EB400680FD9 /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
+		F3B53B91223A55D500183537 /* BlackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackView.swift; sourceTree = "<group>"; };
+		F3B53B93223A56DB00183537 /* EmeraldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmeraldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +105,13 @@
 		F352F9632235F88800680FD9 /* PhotoFrame */ = {
 			isa = PBXGroup;
 			children = (
+				F352F9B622394E7F00680FD9 /* Label */,
 				F352F9642235F88800680FD9 /* AppDelegate.swift */,
 				F352F9662235F88800680FD9 /* FirstViewController.swift */,
 				F352F9682235F88800680FD9 /* SecondViewController.swift */,
+				F3B53B91223A55D500183537 /* BlackView.swift */,
 				F352F96A2235F88800680FD9 /* Main.storyboard */,
+				F3B53B93223A56DB00183537 /* EmeraldView.swift */,
 				F352F96D2235F88B00680FD9 /* Assets.xcassets */,
 				F352F96F2235F88B00680FD9 /* LaunchScreen.storyboard */,
 				F352F9722235F88B00680FD9 /* Info.plist */,
@@ -126,6 +135,14 @@
 				F352F9882235F88B00680FD9 /* Info.plist */,
 			);
 			path = PhotoFrameUITests;
+			sourceTree = "<group>";
+		};
+		F352F9B622394E7F00680FD9 /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				F352F9B722394EB400680FD9 /* TitleLabel.swift */,
+			);
+			name = Label;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,8 +277,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F352F9692235F88800680FD9 /* SecondViewController.swift in Sources */,
+				F352F9B822394EB400680FD9 /* TitleLabel.swift in Sources */,
 				F352F9652235F88800680FD9 /* AppDelegate.swift in Sources */,
 				F352F9672235F88800680FD9 /* FirstViewController.swift in Sources */,
+				F3B53B92223A55D500183537 /* BlackView.swift in Sources */,
+				F3B53B94223A56DB00183537 /* EmeraldView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
