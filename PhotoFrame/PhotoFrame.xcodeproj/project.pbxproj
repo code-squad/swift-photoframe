@@ -39,6 +39,7 @@
 		F357E9112240D98000DFC3CB /* 22.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F357E8FA2240D98000DFC3CB /* 22.jpg */; };
 		F357E9122240D98000DFC3CB /* 18.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F357E8FB2240D98000DFC3CB /* 18.jpg */; };
 		F357E9132240D98000DFC3CB /* 19.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F357E8FC2240D98000DFC3CB /* 19.jpg */; };
+		F357E9152240E37900DFC3CB /* 00.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F357E9142240E37900DFC3CB /* 00.jpg */; };
 		F3B53B92223A55D500183537 /* BlackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B53B91223A55D500183537 /* BlackView.swift */; };
 		F3B53B94223A56DB00183537 /* EmeraldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B53B93223A56DB00183537 /* EmeraldView.swift */; };
 /* End PBXBuildFile section */
@@ -99,6 +100,7 @@
 		F357E8FA2240D98000DFC3CB /* 22.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 22.jpg; sourceTree = "<group>"; };
 		F357E8FB2240D98000DFC3CB /* 18.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 18.jpg; sourceTree = "<group>"; };
 		F357E8FC2240D98000DFC3CB /* 19.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 19.jpg; sourceTree = "<group>"; };
+		F357E9142240E37900DFC3CB /* 00.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 00.jpg; sourceTree = "<group>"; };
 		F3B53B91223A55D500183537 /* BlackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackView.swift; sourceTree = "<group>"; };
 		F3B53B93223A56DB00183537 /* EmeraldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmeraldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -198,6 +200,7 @@
 				F357E8E62240D98000DFC3CB /* Thumbs.db */,
 				F357E8E72240D98000DFC3CB /* 14.jpg */,
 				F357E8E82240D98000DFC3CB /* 15.jpg */,
+				F357E9142240E37900DFC3CB /* 00.jpg */,
 				F357E8E92240D98000DFC3CB /* 01.jpg */,
 				F357E8EA2240D98000DFC3CB /* 17.jpg */,
 				F357E8EB2240D98000DFC3CB /* 03.jpg */,
@@ -326,6 +329,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F357E9152240E37900DFC3CB /* 00.jpg in Resources */,
 				F357E90D2240D98000DFC3CB /* 21.jpg in Resources */,
 				F357E9062240D98000DFC3CB /* 06.jpg in Resources */,
 				F357E9102240D98000DFC3CB /* 20.jpg in Resources */,
