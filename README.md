@@ -72,7 +72,8 @@
     - 컨테이너 뷰 컨트롤러는 한 개의 view와 여러 개의 child ViewController를 다루고, ViewController에 의지할 수 있다는 것이 장점.
     
 - 뷰컨트롤러 컨테이너는 또 어떤 클래스가 있는지 찾아보고 학습한다.
-    - UINavigationController, UISplitViewController, UITabBarController,UIViewController
+    - UINavigationController, UISplitViewController, UITabBarController
+    > UIViewController 에서 상속받아서 Container ViewController를 만들 수 있다. 그렇다고 UIViewController가 항상 컨테이너는 아니다. 그렇게 사용하는 경우 만 그렇다. UINavigationController, UISplitViewController, UITabBarController 는 컨테이너 형태로 다른 childViewController를 포함하기 때문에.
     
 - 내비게이션 컨트롤러가 있을 경우와 없을 경우 화면 전환 동작이 어떻게 다른지, 화면들 포함관계가 있는지 학습한다.
     - storyboard object 사용해서 구현 : 세그로 연결하면 코드 작성 없이 화면 전환 가능, Back 버튼이 자동으로 생성된다.
