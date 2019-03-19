@@ -22,7 +22,7 @@ class TitleLabel: UILabel {
             NSAttributedString.Key.strokeWidth : -1.0,
             NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 50)]
     }
-    
+
     func setTitleLabelStyle() {
         self.text = titleLabel.text
         self.textColor = titleLabel.textColor
@@ -30,5 +30,6 @@ class TitleLabel: UILabel {
         self.shadowOffset = titleLabel.shadowOffset
         self.attributedText = NSAttributedString(string: self.text ?? String(), attributes: titleLabel.attributes)
     }
+    
     
 }

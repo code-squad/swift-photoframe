@@ -34,6 +34,5 @@ class FirstViewController: UIViewController {
         self.photoLabel.setTitleLabelStyle()
     }
     
-    
 }
 
