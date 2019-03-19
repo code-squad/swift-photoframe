@@ -41,3 +41,24 @@
 3. present modally : 일전의 presentViewController: 메소드와 동일한 동작을 하게된다. 옵션에 따라 ViewController를 띄우는 애니메이션에 변화를 줄 수 있다. Navigation Controller의 스택에는 전혀 영향을 주지 않는다. 단, 'Modally'라는 단어에서 알 수 있듯이 이미 Presentation을 한 ViewController에서 다른 ViewContller를 presentation할 수 없다. Show에서와 같은 맥락으로 'UIViewControllerTransitioningDelegate'를 사용하면 보다 다양한 Presantation effect를 구현할 수 있다.
 4. popover presentation(iPad만 해당) : Show Detail과 같이 iPad에서만 볼 수 있는 View Transition이다. 작은 팝업 뷰 혹은 context menu 형식으로 ViewController를 띄우는 방법이다. 아이폰에서도 사용은 가능하지만 단순한 Modal View처럼 표시된다.
 5. custom : 사용자 정의 세그웨이를 만듭니다.
+
+
+## step5. ViewController 프로그래밍
+- 스토리보드 구성 요소와 클래스 코드와 연결해서 동작을 확장한다.
+- 기존 실행화면
+- ![screemsh_step5](./img/step5.png)
+
+- 화면 전환이 이루어지는 사이에 뷰컨트롤러 라이프사이클이 어떻게 변화하는지 학습한다.
+>  https://github.com/conyconydev/conyconydev.github.io/blob/master/_posts/ios/2019-03-13-ViewController.md
+- 뷰컨트롤러와 관련된 새로운 용어들에 대해 학습한다.
+
+- YellowViewController에서 Segue를 제거하고 다음 화면을 보여줄 때 코드로 보여주는 방법을 찾아보고 적용해본다.
+```
+// FirstViewController 적용
+//storyboard를 이용하지 않고, 코드상으로 연결하는 방법
+
+@IBAction func nextEmeraldViewBtn(sender: UIButton) {
+    let storyboardFind = self.storyboard?.instantiateViewController(withIdentifier: "emeraldView")as! EmeraldView
+    present(storyboardFind,animated: true , completion: nil)
+}
+```
