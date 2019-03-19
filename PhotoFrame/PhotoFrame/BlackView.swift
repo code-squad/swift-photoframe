@@ -16,7 +16,7 @@ class BlackView: UIViewController {
         print(#file, #line, #function, #column)
     }
     
-    @IBAction func dismissButtonPressed(_ sender: UIButton) {
+    @IBAction func closeButtonTouched(_ sender: UIButton) {
         dismiss(animated: true)
     }
     

@@ -30,7 +30,7 @@ class FirstViewController: UIViewController {
         print(#file, #line, #function, #column)
     }
 
-    @IBAction func nextButtonTouched(_ sender: Any) {
+    @IBAction func changeTitleLabelBtn(_ sender: Any) {
         self.photoLabel.setTitleLabelStyle()
     }
     
