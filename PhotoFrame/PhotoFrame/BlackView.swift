@@ -20,4 +20,20 @@ class BlackView: UIViewController {
         dismiss(animated: true)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        print("== ViewWillAppear ==")
+        print(#file, #line, #function, #column)
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        print("== ViewDidApper ==")
+        print(#file, #line, #function, #column)
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        print("== ViewWillDisappear ==")
+        print(#file, #line, #function, #column)
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        print("== ViewdidDisAppear ==")
+        print(#file, #line, #function, #column)
+    }
 }
