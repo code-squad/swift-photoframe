@@ -35,4 +35,5 @@ class EmeraldView: UIViewController {
         print("== ViewdidDisAppear ==")
         print(#file, #line, #function, #column)
     }
+    
 }

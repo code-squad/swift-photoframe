@@ -30,9 +30,16 @@ class FirstViewController: UIViewController {
         print(#file, #line, #function, #column)
     }
 
+    //Button을 누르면 TitleLabel의 모양이 변경하는 함수
     @IBAction func changeTitleLabelBtn(_ sender: Any) {
         self.photoLabel.setTitleLabelStyle()
     }
     
+    //storyboard를 이용하지 않고, 코드상으로 연결하는 방법
+    @IBAction func nextEmeraldViewBtn(sender: UIButton) {
+        //withIdentifier : viewController의 Identifier 이고, 뒤의 EmeraldView는 class 이름
+        let storyboardFind = self.storyboard?.instantiateViewController(withIdentifier: "emeraldView")as! EmeraldView
+        present(storyboardFind,animated: true , completion: nil)
+    }
 }
 
