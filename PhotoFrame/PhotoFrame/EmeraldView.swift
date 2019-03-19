@@ -16,7 +16,8 @@ class EmeraldView: UIViewController {
         print(#file, #line, #function, #column)
     }
     @IBAction func closeButtonTouched(_ sender: UIButton) {
-        dismiss(animated: true)
+        //dismiss(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
