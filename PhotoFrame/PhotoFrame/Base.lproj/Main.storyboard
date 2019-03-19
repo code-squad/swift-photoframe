@@ -168,6 +168,10 @@
                                     <action selector="nextImageButtonTouched:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="N3x-VK-YTU"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photoframe-border.png" translatesAutoresizingMaskIntoConstraints="NO" id="GbK-lA-NXC" userLabel="PhotoFrame">
+                                <rect key="frame" x="35" y="36" width="305" height="308"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -229,6 +233,7 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="photoframe-border.png" width="720" height="720"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>

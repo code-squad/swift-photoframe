@@ -40,6 +40,7 @@
 		F357E9122240D98000DFC3CB /* 18.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F357E8FB2240D98000DFC3CB /* 18.jpg */; };
 		F357E9132240D98000DFC3CB /* 19.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F357E8FC2240D98000DFC3CB /* 19.jpg */; };
 		F357E9152240E37900DFC3CB /* 00.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F357E9142240E37900DFC3CB /* 00.jpg */; };
+		F357E9172241B83200DFC3CB /* photoframe-border.png in Resources */ = {isa = PBXBuildFile; fileRef = F357E9162241B83200DFC3CB /* photoframe-border.png */; };
 		F3B53B92223A55D500183537 /* BlackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B53B91223A55D500183537 /* BlackView.swift */; };
 		F3B53B94223A56DB00183537 /* EmeraldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B53B93223A56DB00183537 /* EmeraldView.swift */; };
 /* End PBXBuildFile section */
@@ -101,6 +102,7 @@
 		F357E8FB2240D98000DFC3CB /* 18.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 18.jpg; sourceTree = "<group>"; };
 		F357E8FC2240D98000DFC3CB /* 19.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 19.jpg; sourceTree = "<group>"; };
 		F357E9142240E37900DFC3CB /* 00.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 00.jpg; sourceTree = "<group>"; };
+		F357E9162241B83200DFC3CB /* photoframe-border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photoframe-border.png"; sourceTree = "<group>"; };
 		F3B53B91223A55D500183537 /* BlackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackView.swift; sourceTree = "<group>"; };
 		F3B53B93223A56DB00183537 /* EmeraldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmeraldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -200,6 +202,7 @@
 				F357E8E62240D98000DFC3CB /* Thumbs.db */,
 				F357E8E72240D98000DFC3CB /* 14.jpg */,
 				F357E8E82240D98000DFC3CB /* 15.jpg */,
+				F357E9162241B83200DFC3CB /* photoframe-border.png */,
 				F357E9142240E37900DFC3CB /* 00.jpg */,
 				F357E8E92240D98000DFC3CB /* 01.jpg */,
 				F357E8EA2240D98000DFC3CB /* 17.jpg */,
@@ -337,6 +340,7 @@
 				F357E90E2240D98000DFC3CB /* 09.jpg in Resources */,
 				F357E9072240D98000DFC3CB /* 07.jpg in Resources */,
 				F357E8FD2240D98000DFC3CB /* Thumbs.db in Resources */,
+				F357E9172241B83200DFC3CB /* photoframe-border.png in Resources */,
 				F357E90B2240D98000DFC3CB /* 10.jpg in Resources */,
 				F352F9712235F88B00680FD9 /* LaunchScreen.storyboard in Resources */,
 				F357E9112240D98000DFC3CB /* 22.jpg in Resources */,
