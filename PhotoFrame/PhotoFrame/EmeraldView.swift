@@ -15,7 +15,7 @@ class EmeraldView: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         print(#file, #line, #function, #column)
     }
-    @IBAction func dismissButtonPressed(_ sender: UIButton) {
+    @IBAction func closeButtonTouched(_ sender: UIButton) {
         dismiss(animated: true)
     }
     
