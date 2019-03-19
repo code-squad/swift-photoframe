@@ -24,18 +24,15 @@ class FirstViewController: UIViewController {
         self.firstDescription.textColor = UIColor.blue.withAlphaComponent(0.5)
         self.firstDescription.backgroundColor = UIColor(red:0.97, green:0.98, blue:0.56, alpha:1.0)
         self.firstDescription.font = firstDescription.font.withSize(15)
-        
-        
-        /*
-        print(#file, #line, #function, #column)
-        
-         #file : /Users/jina/github/swift-photoframe/PhotoFrame/PhotoFrame/FirstViewController.swift
-         #line : 16
-         #function : viewDidLoad()
-         #column : 40 (16번 행의 40번 열에 있다. #column이 시작되는 곳이 40번이다.)
-        */
     }
-
+    
+    @IBAction func nextButtonTouched(_ sender: UIButton) {
+        self.firstLabel.textColor = UIColor.blue
+        self.firstLabel.backgroundColor = UIColor.yellow
+        self.firstLabel.alpha = 0.5
+    
+    }
+    
 
 }
 
