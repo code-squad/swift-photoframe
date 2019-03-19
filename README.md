@@ -69,8 +69,9 @@
 - ![screemsh_step6](./img/step6.png)
 
 - 뷰컨트롤러 컨테이너 동작을 이해한다.
+
     - 컨테이너 뷰 컨트롤러는 한 개의 view와 여러 개의 child ViewController를 다루고, ViewController에 의지할 수 있다는 것이 장점.
-    
+
 - 뷰컨트롤러 컨테이너는 또 어떤 클래스가 있는지 찾아보고 학습한다.
     - UINavigationController, UISplitViewController, UITabBarController
     > UIViewController 에서 상속받아서 Container ViewController를 만들 수 있다. 그렇다고 UIViewController가 항상 컨테이너는 아니다. 그렇게 사용하는 경우 만 그렇다. UINavigationController, UISplitViewController, UITabBarController 는 컨테이너 형태로 다른 childViewController를 포함하기 때문에.
@@ -82,4 +83,30 @@
 - 내비게이션 컨트롤러 관련 메서드가 왜 push / pop 인지 학습한다.
     - UINavigationController : 계층 적 컨텐츠를 탐색하기위한 스택 기반 스키마를 정의하는 컨테이너 뷰 컨트롤러.
    >  https://developer.apple.com/documentation/uikit/uinavigationcontroller
+
+## step7. Second Scene 화면
+- 탭바의 두 번째 화면 (Second Scene) 디자인을 변경하고 액자 앱을 동작을 구현한다.
+- 실행화면
+- ![screemsh_step7](./img/step7.png)
+
+- UIImageView를 화면 상단 중앙에 240 x 240 크기로 배치 한다.
+    - ImageView Width 240 , Height 240 으로 주었다.
+    - Autolayout 활용 : Top : Safe Area 50 , Bottom : Horizontally in Container 상단 중앙에 맞춤
+
+- UIImageView 와 UIImage 클래스는 각각 어떤 역할을 담당하는지 학습한다.
+    - UIView > UIImageView > UIImage
+
+    1. UIImageView : 단일 이미지 또는 애니메이션 이미지 시퀀스를 표시하는 객체, 즉 이미지 뷰를 사용하면 UIImage객체를 사용하여 지정할 수있는 이미지를 효율적으로 그릴 수 있다.
+
+        > https://developer.apple.com/documentation/uikit/uiimageview
+
+    2. UIImage : 앱의 이미지 데이터를 관리하는 객체, 이미지 객체를 사용하여 모든 종류의 이미지 데이터를 표현할수 있으며 클래스는 기본 플랫폼에서 지원하는 모든 이미지 형식의 데이터를 관리, 이미지 객체는 변경할 수 없으므로 항상 디스크의 이미지 파일이나 프로그래밍 방식으로 생성 된 이미지 데이터와 같은 기존 이미지 데이터에서 이미지 객체를 만든다.
+
+        > https://developer.apple.com/documentation/uikit/uiimage
+
+- 이미지 뷰의 속성은 어떤 것들이 있는지 애플 개발자 문서를 참고한다.
+    1. Image View:  Interface Builder에서 이미지 뷰에 대해 구성한 속성을 나열
+        - Image : 표시 할 이미지.
+        - Highlighted : 이미지 보기가 강조 표시 될 때 표시 할 이미지.
+        - State : 이미지의 초기 상태.
 
