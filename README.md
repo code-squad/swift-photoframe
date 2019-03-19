@@ -45,7 +45,7 @@
 
 ## step5. ViewController 프로그래밍
 - 스토리보드 구성 요소와 클래스 코드와 연결해서 동작을 확장한다.
-- 기존 실행화면
+- 실행화면
 - ![screemsh_step5](./img/step5.png)
 
 - 화면 전환이 이루어지는 사이에 뷰컨트롤러 라이프사이클이 어떻게 변화하는지 학습한다.
@@ -53,6 +53,7 @@
 - 뷰컨트롤러와 관련된 새로운 용어들에 대해 학습한다.
 
 - YellowViewController에서 Segue를 제거하고 다음 화면을 보여줄 때 코드로 보여주는 방법을 찾아보고 적용해본다.
+
 ```
 // FirstViewController 적용
 //storyboard를 이용하지 않고, 코드상으로 연결하는 방법
@@ -62,3 +63,22 @@
     present(storyboardFind,animated: true , completion: nil)
 }
 ```
+## step6. Container ViewController
+- 내비게이션 컨트롤러(Navigation Controller)를 Embed 시켜서 동작하도록 개선한다.
+- 실행화면
+- ![screemsh_step6](./img/step6.png)
+
+- 뷰컨트롤러 컨테이너 동작을 이해한다.
+    - 컨테이너 뷰 컨트롤러는 한 개의 view와 여러 개의 child ViewController를 다루고, ViewController에 의지할 수 있다는 것이 장점.
+    
+- 뷰컨트롤러 컨테이너는 또 어떤 클래스가 있는지 찾아보고 학습한다.
+    - UINavigationController, UISplitViewController, UITabBarController,UIViewController
+    
+- 내비게이션 컨트롤러가 있을 경우와 없을 경우 화면 전환 동작이 어떻게 다른지, 화면들 포함관계가 있는지 학습한다.
+    - storyboard object 사용해서 구현 : 세그로 연결하면 코드 작성 없이 화면 전환 가능, Back 버튼이 자동으로 생성된다.
+    - 코드 구현 : push, pop을 이용하여 내비게이션 스택에 쌓는다. Back 버튼은 push된 ViewController에 자동으로 생긴다.
+
+- 내비게이션 컨트롤러 관련 메서드가 왜 push / pop 인지 학습한다.
+    - UINavigationController : 계층 적 컨텐츠를 탐색하기위한 스택 기반 스키마를 정의하는 컨테이너 뷰 컨트롤러.
+   >  https://developer.apple.com/documentation/uikit/uinavigationcontroller
+
