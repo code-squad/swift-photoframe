@@ -33,9 +33,7 @@ UITabBarController는 버튼을 눌렀을 때 대체될 뷰를 보여주는 역�
 
 다음 버튼을 추가하여 버튼을 누르면 '노리의 사진액자' 배경색 변경
 
-<video width="400" src="/Users/jina/Desktop/화면 기록 2019-03-19 오후 5.33.12.mov"></video>
-
-
+<img widht="400" src="https://user-images.githubusercontent.com/31604976/54746618-f9c26d80-4c0f-11e9-842f-a28de4731633.jpg">
 
 - IBAction 과 IBOutlet
 
