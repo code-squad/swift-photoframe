@@ -48,3 +48,22 @@ MVC 패턴이란 데이터를 소유한 Model과 사용자에게 보여지는 Vi
 IBAction : View에서 Event가 발생되었을 때 호출되는 함수  
 
 IBOutlet : Button 등 View의 Controller에 접근하기 위한 변수
+
+# step4. Scene과 Segue
+
+First View옆에 새로운 view controller를 추가하여 다음 버튼과 연결하였을 때의 변화를 확인
+
+<img width="600" src="https://user-images.githubusercontent.com/31604976/54804955-bbcd5400-4cb8-11e9-8043-4dfade42bc70.png">
+
+<img width="1440" src="https://user-images.githubusercontent.com/31604976/54806229-bffb7080-4cbc-11e9-9e3f-eca866f74b09.png">
+
+<img width="350" src="https://user-images.githubusercontent.com/31604976/54806759-5b411580-4cbe-11e9-93ca-ffc48248c0b6.gif">
+
+* segue types 
+
+|          Type          |                           Behavior                           |
+| :--------------------: | :----------------------------------------------------------: |
+|      `show(push)`      |              새로운 내용의 뷰컨트롤러를 보여줌               |
+| `Show Detail(Repalce)` | show와 흡사하지만 푸시가 아닌 교체가 됨, split뷰컨트롤러에서 마스터영역을 오른쪽 디테일 뷰에 상세 내용을 표시해줌 |
+|   `Present Modally`    | 새로 로드하는 컨텐츠 뷰를 모달 형태로 띄움, 계층구조 또는 스택에 속하지 않고 뷰 위에 위치하며 새로운 뷰를 띄운다. |
+| `Present as Propover`  | 현재 보여지는 뷰 위에 앵커를 가진 팝업 형태(작은 뷰 컨트롤러) |
