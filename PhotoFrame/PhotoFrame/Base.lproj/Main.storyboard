@@ -37,6 +37,7 @@
                                 <state key="normal" title="다음"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Tgc-sY-7Ao"/>
+                                    <segue destination="rhS-ZI-W20" kind="show" id="npA-b4-UHS"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -58,6 +59,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="FQa-eM-GUj">
+            <objects>
+                <viewController id="rhS-ZI-W20" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lsQ-RG-0my">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K7t-TG-f8o">
+                                <rect key="frame" x="192" y="304" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="next"/>
+                                <connections>
+                                    <segue destination="7jT-DT-xVr" kind="show" id="4dT-7L-sp5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.57380741830000004" green="0.56553578380000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="twP-4n-4rM"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wbM-qg-Kx7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1475" y="-320"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="RGA-K6-oBw">
+            <objects>
+                <viewController id="7jT-DT-xVr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z30-tZ-p2R">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Pa8-DV-25Z"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xh2-lS-xMe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pR2-c7-Tfa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2207" y="-320"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
