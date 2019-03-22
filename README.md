@@ -110,3 +110,43 @@
         - Highlighted : 이미지 보기가 강조 표시 될 때 표시 할 이미지.
         - State : 이미지의 초기 상태.
 
+        
+
+## step8. 추가 구현사항
+-  이미지 테두리 액자 화면을 추가한다.
+-  사진 앨범에서 사진을 가져와서 보여줄 수 있도록 개선한다.
+
+- 실행화면
+- ![screemsh_step8](./img/step8.png)
+
+
+- selectButtonTouched에서는 UIImagePickerController로 사진 앱 - 카메라롤에서 사진을 가져오도록 구현한다.
+- 선택한 사진을 받기 위해서 구현해야 하는 메서드는 어떤게 있는지 찾아 구현한다.
+
+1. UIImagePickerController 인스턴스 생성과 UIImagePickerController Delegate 구성
+    - Xcode안에 자체적으로 이미지를 선택을 수월하게 할 수 있게 Delegate를 만들어놨다.
+    - UINavigationControllerDelegate 를 선언해 준 이유 :  UIImagePickerControllerDelegate의 delegate 속성은 UIImagePickerControllerDelegate와 UINavigationControllerDelegate 프로토콜을 모두 구현하는 객체로 정의되어있다. 
+      (picker.delegate =  self) self를  picker.delegate에 할당하려면 self는 UINavigationControllerDelegate 타입이어야 한다. 
+        지금, picker의 델리게이트를 UINavigationControllerDelegate에 위임해준 것인데, 대리자는 사용자가 이미지나 동영상을 선택하거나 picker화면을 종료할 때, 알림을 받는다. 
+
+    > https://developer.apple.com/documentation/uikit/uiimagepickercontroller
+    > https://developer.apple.com/documentation/uikit/uiimagepickercontrollerdelegate
+
+    
+
+2. info.plist에서 권한 설정 해주기.
+    - 사용자의 정보에 접근 할 때는 항상 권한 요청이 필요
+    - info.plist 에 가서 설정  (Privacy - Photo Library Usage Description(사진앨범 권한))
+
+    
+
+3. 이미지 저장하여 넘겨주기
+
+    - 사진에 관한 정보는 UIImagePickerController.InfoKey 를 통해 넘어온다.
+
+    
+- UIImagePickerController처럼 이미 만들어놓은 시스템 컨트롤러들에 대해 학습한다.
+    - [뷰컨트롤러 애플 개발자 문서](https://developer.apple.com/documentation/uikit/view_controllers)
+
+- 델리게이트(Delegate)와 프로토콜(Protocol) 상관 관계에 대해 학습한다.
+    - 델리게이트란? : 객체 지향 프로그래밍에서 하나의 객체가 모든 일을 처리하는 것이 아니라 처리 해야 할 일 중 일부를 다른 객체에 넘기는 것을 뜻함
