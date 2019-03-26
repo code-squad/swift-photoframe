@@ -30,7 +30,16 @@ class FirstViewController: UIViewController {
         self.firstLabel.textColor = UIColor.blue
         self.firstLabel.backgroundColor = UIColor.yellow
         self.firstLabel.alpha = 0.5
-    
+        
+        // segue 연결없이 화면 전환! ->>
+        // 이동할 뷰컨트롤러 객체를 스토리보드ID를 이용하여 참조
+        if let vc = self.storyboard?.instantiateViewController(withIdentifier: "greenView") {
+            // 화면을 전환할 때 애니메이션 정의
+            vc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+            
+            //인자값으로 받은 뷰 컨트롤러로 화면 이동
+            self.present(vc, animated: true, completion: nil)
+        }
     }
     
 
