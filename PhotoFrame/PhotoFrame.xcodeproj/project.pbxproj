@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C602C2D2248A01B00688526 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C602C2C2248A01B00688526 /* MyViewController.swift */; };
 		3CD763752236066700CC9303 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD763742236066700CC9303 /* AppDelegate.swift */; };
 		3CD763772236066700CC9303 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD763762236066700CC9303 /* FirstViewController.swift */; };
 		3CD763792236066700CC9303 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD763782236066700CC9303 /* SecondViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C602C2C2248A01B00688526 /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 		3CD763712236066700CC9303 /* PhotoFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CD763742236066700CC9303 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CD763762236066700CC9303 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				3CD763762236066700CC9303 /* FirstViewController.swift */,
 				3CD763782236066700CC9303 /* SecondViewController.swift */,
 				3CD7637A2236066700CC9303 /* Main.storyboard */,
+				3C602C2C2248A01B00688526 /* MyViewController.swift */,
 				3CD7637D2236066A00CC9303 /* Assets.xcassets */,
 				3CD7637F2236066A00CC9303 /* LaunchScreen.storyboard */,
 				3CD763822236066A00CC9303 /* Info.plist */,
@@ -140,6 +143,7 @@
 			files = (
 				3CD763792236066700CC9303 /* SecondViewController.swift in Sources */,
 				3CD763752236066700CC9303 /* AppDelegate.swift in Sources */,
+				3C602C2D2248A01B00688526 /* MyViewController.swift in Sources */,
 				3CD763772236066700CC9303 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
