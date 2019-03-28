@@ -125,17 +125,28 @@ if let vc = self.storyboard?.instantiateViewController(withIdentifier: "greenVie
 
 # step6. Container ViewController
 
-뷰 컨트롤러는 자식 뷰 컨트롤러를 소유할 수 있다는 개념으로 **UINavigationController, UITabBarController, UISplitViewController, UIPageViewController** 가 컨테이너 뷰컨트롤러에 속한다.
+> 뷰 컨트롤러는 자식 뷰 컨트롤러를 소유할 수 있다는 개념으로 **UINavigationController, UITabBarController, UISplitViewController, UIPageViewController** 가 컨테이너 뷰컨트롤러에 속한다.
 
 네비게이션 컨트롤러를 연결하여 동작확인
-
-<img width="1440" src="https://user-images.githubusercontent.com/31604976/55053072-5dc8b400-509e-11e9-8d5f-7d9c1c407c5e.png">
-
-네비게이션 컨트롤러를 연결했더니 firstView 다음 뷰에 '< Back' 바가 생겼다
 
 네비게이션 컨트롤러의 자식 뷰 컨트롤러들은 일종의 스택처럼 관리되는데, 맨 처음 표시되는 뷰 컨트롤러를 **rootViewController**라 하고, 세부 항목으로 들어갈 때마다 다음 레벨의 뷰 컨트롤러를 push하고, 반대방향으로 빠져나올 땐 pop한다. 즉, 화면에 표시되는 뷰는 스택의 top에 해당하는 뷰 컨트롤러의 뷰가 된다.
 
 참고 : https://soooprmx.com/archives/4496
 
 <img width="998" src="https://user-images.githubusercontent.com/31604976/55055457-4f7e9600-50a6-11e9-9b61-dd7d1b9e833e.png">
+
+
+
+<img width="1440" src="https://user-images.githubusercontent.com/31604976/55053072-5dc8b400-509e-11e9-8d5f-7d9c1c407c5e.png">
+
+네비게이션 컨트롤러 사용 시 back 버튼이 생기고 기존의 dismiss close 버튼이 동작하지 않는다. 네비게이션 컨트롤러의 popViewController를 사용하면 동작한다.
+
+```swift
+@IBAction func closeButtonTouched(_ sender: UIButton) {
+//        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
+    }
+```
+
+
 
