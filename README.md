@@ -148,5 +148,31 @@ if let vc = self.storyboard?.instantiateViewController(withIdentifier: "greenVie
     }
 ```
 
+# Step7.Second Scene 화면
 
+Second scene에 이미지 보여주기
+
+<center><img width="400" src="https://user-images.githubusercontent.com/31604976/55151566-e1170200-5191-11e9-8085-6e23f9863ea8.gif"><center>
+
+- UIImageView, UIImage
+
+UIImage를 이용해 이미지를 뷰에 올리기 위해 사용하는 것이 UIImageView이다.
+
+UIImageView : UIImage를 이용하여 단일 이미지 또는 연속적인 애니메이션 이미지를 보여준다.
+
+UIImage : 이미지 데이터를 관리해준다.
+
+- ContentMode 이미지 뷰의 속성
+
+|             Case             |                           Behavior                           |
+| :--------------------------: | :----------------------------------------------------------: |
+|        `scaleToFill`         | 뷰에 딱 맞게 이미지 사이즈를 조정               <img width="200" src="https://user-images.githubusercontent.com/31604976/55284411-0f265d00-53b1-11e9-80df-136ba46550ae.png"> |
+|       `scaleAspectFit`       | 이미지 비율을 유지하고 뷰의 남는 공간은 투명하게 한다.  <img width="200" src="https://user-images.githubusercontent.com/31604976/55284429-590f4300-53b1-11e9-9a86-60eed0a05ef5.png"><img width="200" src="https://user-images.githubusercontent.com/31604976/55284437-94aa0d00-53b1-11e9-85fe-5029651c8656.png"> |
+|      `scaleAspectFill`       | 뷰 크기를 채우기 위해 이미지를 확장한다. 이미지가 뷰 크기를 넘어가면 이미지가 잘림                                                  <img width="200" src="https://user-images.githubusercontent.com/31604976/55284540-0e42fa80-53b4-11e9-82e0-020e7ffc4302.png"> |
+|           `redraw`           | 뷰를 다시 그릴 필요가 있다고 시스템에 알릴 때 사용. 결과는 scaleToFill과 동일하지만 커스텀 뷰를 만들 때 사용하게 된다. 하지만 비용이 많이 들게되어 사용은 피하는 것을 권장한다. |
+|           `center`           | 이미지 비율은 동일하게 유지하면서 뷰의 중앙에 배치<img width="200" src="https://user-images.githubusercontent.com/31604976/55284744-bc9c6f00-53b7-11e9-8e57-5923d7e87263.png"> |
+|       `top` / `bottom`       | 뷰의 맨위 중앙에 이미지를 배치 / 뷰의 하단 중앙에 이미지를 배치                  <img width="200" src="https://user-images.githubusercontent.com/31604976/55284845-911a8400-53b9-11e9-832b-26989e7d8717.png"> <img width="200" src="https://user-images.githubusercontent.com/31604976/55284852-d0e16b80-53b9-11e9-880d-8eedbec26045.png"> |
+|       `left` / `right`       | 뷰의 왼쪽에 이미지 배치 / 뷰의 오른쪽에 이미지 배치                                                 <img width="200" src="https://user-images.githubusercontent.com/31604976/55284877-5f55ed00-53ba-11e9-81af-204590231697.png"> <img width="200" src="https://user-images.githubusercontent.com/31604976/55284892-8f9d8b80-53ba-11e9-96c4-2a13e1ef4728.png"> |
+|    `topLeft` / `topright`    | 뷰의 왼쪽 상단에 이미지 배치 / 뷰의 오른쪽 상단에 이미지 배치<img width="200" src="https://user-images.githubusercontent.com/31604976/55284910-fd49b780-53ba-11e9-9cd2-b584309c10a4.png"> <img width="200" src="https://user-images.githubusercontent.com/31604976/55284923-236f5780-53bb-11e9-9943-4e822d2d8a0d.png"> |
+| `bottomLeft` / `bottomRight` | 뷰의 왼쪽 하단에 이미지 배치 / 뷰의 오른쪽 하단에 이미지 배치<img width="200" src="https://user-images.githubusercontent.com/31604976/55284932-616c7b80-53bb-11e9-9c61-bde32eecbc9c.png"> <img width="200" src="https://user-images.githubusercontent.com/31604976/55284940-7a752c80-53bb-11e9-907e-13fe53ff0e19.png"> |
 
