@@ -176,3 +176,41 @@ UIImage : 이미지 데이터를 관리해준다.
 |    `topLeft` / `topright`    | 뷰의 왼쪽 상단에 이미지 배치 / 뷰의 오른쪽 상단에 이미지 배치<img width="200" src="https://user-images.githubusercontent.com/31604976/55284910-fd49b780-53ba-11e9-9cd2-b584309c10a4.png"> <img width="200" src="https://user-images.githubusercontent.com/31604976/55284923-236f5780-53bb-11e9-9943-4e822d2d8a0d.png"> |
 | `bottomLeft` / `bottomRight` | 뷰의 왼쪽 하단에 이미지 배치 / 뷰의 오른쪽 하단에 이미지 배치<img width="200" src="https://user-images.githubusercontent.com/31604976/55284932-616c7b80-53bb-11e9-9c61-bde32eecbc9c.png"> <img width="200" src="https://user-images.githubusercontent.com/31604976/55284940-7a752c80-53bb-11e9-907e-13fe53ff0e19.png"> |
 
+# 마무리하기
+
+camera roll 에서 사진을 가져와 보여주기
+
+<center><img width="400" src="https://user-images.githubusercontent.com/31604976/55286889-e7e58500-53dc-11e9-9134-9b4077d45bd9.gif"><center>
+
+[ViewControllers](https://developer.apple.com/documentation/uikit/view_controllers)?
+
+- 델리게이트(Delegate)와 프로토콜(Protocol) 상관 관계
+
+델리게이트 : 객체 지향 프로그래밍에서 하나의 객체가 모든 일을 처리하는 것이 아니라 처리 해야 할 일 중 일부를 다른 객체에 넘기는 것
+
+프로토콜 : 지켜야할 규약
+
+델리게이트는 프로토콜로 구현되어 있으며 어떠한 동작을 대신 해줄 함수를 불러와 그 함수에 하고 싶은 일을 구현할 수 있도록 해준다.
+
+- 선택 버튼을 눌렀을 때 카메라롤에서 선택한 사진이 보여지도록 구현
+
+```swift
+extension SecondViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[.originalImage] as? UIImage{
+            photoImageView.image = image
+        }
+        
+        dismiss(animated: true, completion: nil)
+    }
+}
+```
+
+picker를 사용하여 따로 뷰컨트롤러를 만들지 않아도 지원되는 라이브러리로 간단하게 구현 할 수 있다. 다만 선택한 이미지를 뷰에 보여주기 위해서는 UIImagePickerControllerDelegate와 UINavigationControllerDelegate를 채택해야 한다.
+
+> 이유 : UIImagePickerControllerDelegate의 delegate 속성은 UIImagePickerControllerDelegate와 UINavigationControllerDelegate 프로토콜을 모두 구현하는 객체로 정의되어있다. 
+>
+> (위에서 해준 picker.delegate =  self) self를  picker.delegate에 할당하려면 self는 UINavigationControllerDelegate 타입이어야 한다. 
+>
+> 지금, picker의 델리게이트를 UINavigationControllerDelegate에 위임해준 것인데, 대리자는 사용자가 이미지나 동영상을 선택하거나 picker화면을 종료할 때, 알림을 받는다. 
+
