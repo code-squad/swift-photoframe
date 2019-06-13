@@ -37,6 +37,10 @@
                                 <state key="normal" title="다음"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="9pv-A4-QxB" eventType="touchUpInside" id="2pe-6x-6jp"/>
+                                    <segue destination="Gyk-Gv-smF" kind="push" id="UH4-cl-Aa8">
+                                        <segue key="commit" inheritsFrom="parent" id="g9r-mR-uAU"/>
+                                        <segue key="preview" inheritsFrom="commit" id="Fmh-nx-JRx"/>
+                                    </segue>
                                 </connections>
                             </button>
                         </subviews>
@@ -58,6 +62,65 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="749.27536231884062" y="-320.08928571428572"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="HMU-3B-hNA">
+            <objects>
+                <viewController id="Gyk-Gv-smF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qmd-2G-vHF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FC8-HU-VXP">
+                                <rect key="frame" x="192" y="614" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="다음"/>
+                                <connections>
+                                    <segue destination="GGn-Jc-OJ1" kind="show" id="BAD-A0-4q6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a87-Lu-EeE">
+                                <rect key="frame" x="192" y="281" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="이전"/>
+                                <connections>
+                                    <segue destination="9pv-A4-QxB" kind="showDetail" id="uj4-Cg-Bl8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96720594169999996" green="0.8370828629" blue="0.28214806320000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="mZK-q7-HCB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="S2h-B0-rgV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1zL-Cq-G0L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1484" y="-318"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9xT-2g-S7J">
+            <objects>
+                <viewController id="GGn-Jc-OJ1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Md-tt-QnL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4jM-5B-Lis">
+                                <rect key="frame" x="192" y="278" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="이전"/>
+                                <connections>
+                                    <segue destination="Gyk-Gv-smF" kind="show" id="UON-e4-bOM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.32342785600000001" green="0.62204080819999996" blue="0.43526875970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="R3N-Hc-VcX"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DEg-T8-toV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2176" y="-320"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
@@ -119,4 +182,8 @@
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="UH4-cl-Aa8"/>
+        <segue reference="uj4-Cg-Bl8"/>
+    </inferredMetricsTieBreakers>
 </document>
