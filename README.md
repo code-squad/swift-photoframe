@@ -53,4 +53,19 @@
 
 * Present As Popover : 아이패드에서 팝업창을 띄웁지다. 아이폰 앱에서는 Show Detail 과 마찬가지로 큰 의미가 없습니다.
 
+## 2019.06.17 14:47
 
+![](R1280x0.jpg)
+
+### 화면 관련 콜백 함수
+* viewDidLoad() : 뷰가 나타나기 전에 실행됩니다. 화면이 처음 만들어질 때 한 번만 실행됩니다.
+
+* viewWillAppear() : viewDidLoad 와 같이 뷰가 나타나기 전에 실행되지만 viewDidLoad 와 달리 화면이 다시 나타날 때마다 반복적으로 실행됩니다.
+
+* viewDidAppear() : 뷰가 화면에 나타난 직후에 실행됩니다.
+
+* viewWillDisappear() : 뷰가 화면에 사라지기 직전에 실행됩니다.
+
+* viewDidDisappear() : 뷰가 화면에 사라진 직후에 실행됩니다.
+
+### 참고 : https://zeddios.tistory.com/43
