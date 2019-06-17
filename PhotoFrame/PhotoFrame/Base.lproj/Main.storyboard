@@ -80,6 +80,9 @@
                                 <rect key="frame" x="192" y="618" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="닫음"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="kxe-dt-yfx" eventType="touchUpInside" id="Ur5-Z6-W3R"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96720594169999996" green="0.8370828629" blue="0.28214806320000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -88,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iQR-u9-czK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1457" y="-322"/>
+            <point key="canvasLocation" x="1456.521739130435" y="-322.09821428571428"/>
         </scene>
         <!--Green View Controller-->
         <scene sceneID="32l-IZ-53J">
@@ -102,6 +105,9 @@
                                 <rect key="frame" x="192" y="629" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="닫음"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="y1O-C3-aZr" eventType="touchUpInside" id="MR1-81-QL2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.32342785600000001" green="0.62204080819999996" blue="0.43526875970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
