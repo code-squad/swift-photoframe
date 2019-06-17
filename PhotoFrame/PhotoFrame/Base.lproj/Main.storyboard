@@ -82,10 +82,6 @@
                                 <state key="normal" title="닫음"/>
                                 <connections>
                                     <action selector="closeButtonTouched:" destination="YgI-uE-b44" eventType="touchUpInside" id="cZZ-nG-6jf"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.96720594169999996" green="0.8370828629" blue="0.28214806320000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="ebN-94-SVa"/>
                     </view>
                 </viewController>
