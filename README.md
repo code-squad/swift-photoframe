@@ -69,3 +69,10 @@
 * viewDidDisappear() : 뷰가 화면에 사라진 직후에 실행됩니다.
 
 ### 참고 : https://zeddios.tistory.com/43
+
+
+## 2019.06.17 16:54
+
+![](11-6.png)
+
+### 네비게이션 추가
