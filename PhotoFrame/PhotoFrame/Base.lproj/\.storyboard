@@ -37,7 +37,6 @@
                                 <state key="normal" title="다음"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="9pv-A4-QxB" eventType="touchUpInside" id="2pe-6x-6jp"/>
-                                    <segue destination="YgI-uE-b44" kind="show" id="Rgh-X9-hT2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -60,64 +59,67 @@
             </objects>
             <point key="canvasLocation" x="749.27536231884062" y="-320.08928571428572"/>
         </scene>
+<<<<<<< HEAD
+=======
         <!--Yellow View Controller-->
-        <scene sceneID="2jH-aF-YFP">
+        <scene sceneID="T3z-xZ-cE0">
             <objects>
-                <viewController id="YgI-uE-b44" customClass="YellowViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="xKA-qf-vL3">
+                <viewController id="kxe-dt-yfx" customClass="YellowViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RBl-hX-20N">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDe-Tx-6kN">
-                                <rect key="frame" x="192" y="264" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2aE-Q6-6s8">
+                                <rect key="frame" x="192" y="271" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="다음"/>
                                 <connections>
-                                    <segue destination="exo-pU-Mwk" kind="show" id="Ewc-td-0kj"/>
+                                    <segue destination="y1O-C3-aZr" kind="show" id="aQs-ZR-3s2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2UL-FP-2q6">
-                                <rect key="frame" x="192" y="609" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcl-dI-bdB">
+                                <rect key="frame" x="192" y="569" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="닫음"/>
                                 <connections>
-                                    <action selector="closeButtonTouched:" destination="YgI-uE-b44" eventType="touchUpInside" id="cZZ-nG-6jf"/>
+                                    <action selector="closeButtonTouched:" destination="kxe-dt-yfx" eventType="touchUpInside" id="5Io-i1-ysD"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96720594169999996" green="0.8370828629" blue="0.28214806320000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <viewLayoutGuide key="safeArea" id="ebN-94-SVa"/>
+                        <viewLayoutGuide key="safeArea" id="DuR-22-5Y1"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tN3-sa-kpc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iQR-u9-czK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1485.5072463768117" y="-321.42857142857139"/>
+            <point key="canvasLocation" x="1457" y="-322"/>
         </scene>
         <!--Green View Controller-->
-        <scene sceneID="2tD-dO-BYd">
+        <scene sceneID="32l-IZ-53J">
             <objects>
-                <viewController id="exo-pU-Mwk" customClass="GreenViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ham-No-dl1">
+                <viewController id="y1O-C3-aZr" customClass="GreenViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Lm-LY-Pba">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SV7-yM-a3U">
-                                <rect key="frame" x="192" y="620" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zY-Xk-t0x">
+                                <rect key="frame" x="192" y="592" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="닫음"/>
                                 <connections>
-                                    <action selector="closeButtonTouched:" destination="exo-pU-Mwk" eventType="touchUpInside" id="gI6-fd-5fJ"/>
+                                    <action selector="closeButtonTouched:" destination="y1O-C3-aZr" eventType="touchUpInside" id="Acc-rG-2z2"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.32342785600000001" green="0.62204080819999996" blue="0.43526875970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <viewLayoutGuide key="safeArea" id="xzb-hm-xhO"/>
+                        <viewLayoutGuide key="safeArea" id="zhF-2c-cFw"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="snp-qU-R5G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OSV-Nb-3D9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2220" y="-327"/>
+            <point key="canvasLocation" x="2160.8695652173915" y="-329.46428571428572"/>
         </scene>
+>>>>>>> 5b42741... 생성 - GreenViewController, YellowViewController 추가
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
