@@ -9,16 +9,24 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-    let imagePath = "Demo Images/"
+    
+    
+    func getRandomImagePath() -> String {
+        let imageFolder = "Demo Images/"
+        let randNumber = Int.random(in: 1...22)
+    
+        return imageFolder+String(randNumber)+".jpg"
+    }
     
     @IBOutlet weak var photoImageView: UIImageView!
     @IBAction func nextImageButtonTouched(_ sender: Any) {
-        let randNumber = Int.random(in: 1...22)
-        self.photoImageView.image = UIImage(named: imagePath+String(randNumber)+".jpg")
+        let imagePath = getRandomImagePath()
+        self.photoImageView.image = UIImage(named: imagePath)
     }
 
     override func viewDidLoad() {
-        self.photoImageView.image = UIImage(named: imagePath+"01.jpg")
+        let imagePath = getRandomImagePath()
+        self.photoImageView.image = UIImage(named: imagePath)
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
