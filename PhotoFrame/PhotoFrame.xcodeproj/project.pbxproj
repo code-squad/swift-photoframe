@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		334C169F22B777A6000FD1E7 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334C169E22B777A6000FD1E7 /* YellowViewController.swift */; };
 		334C16A122B777C8000FD1E7 /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334C16A022B777C8000FD1E7 /* GreenViewController.swift */; };
+		334C16A322B87E2F000FD1E7 /* Demo Images in Resources */ = {isa = PBXBuildFile; fileRef = 334C16A222B87E2F000FD1E7 /* Demo Images */; };
 		33FC334422B2361700E939A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC334322B2361700E939A7 /* AppDelegate.swift */; };
 		33FC334622B2361700E939A7 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC334522B2361700E939A7 /* FirstViewController.swift */; };
 		33FC334822B2361700E939A7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC334722B2361700E939A7 /* SecondViewController.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		334C169E22B777A6000FD1E7 /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
 		334C16A022B777C8000FD1E7 /* GreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenViewController.swift; sourceTree = "<group>"; };
+		334C16A222B87E2F000FD1E7 /* Demo Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Demo Images"; sourceTree = "<group>"; };
 		33FC334022B2361700E939A7 /* PhotoFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33FC334322B2361700E939A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33FC334522B2361700E939A7 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				33FC334C22B2361C00E939A7 /* Assets.xcassets */,
 				33FC334E22B2361C00E939A7 /* LaunchScreen.storyboard */,
 				33FC335122B2361C00E939A7 /* Info.plist */,
+				334C16A222B87E2F000FD1E7 /* Demo Images */,
 			);
 			path = PhotoFrame;
 			sourceTree = "<group>";
@@ -133,6 +136,7 @@
 			files = (
 				33FC335022B2361C00E939A7 /* LaunchScreen.storyboard in Resources */,
 				33FC334D22B2361C00E939A7 /* Assets.xcassets in Resources */,
+				334C16A322B87E2F000FD1E7 /* Demo Images in Resources */,
 				33FC334B22B2361700E939A7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
