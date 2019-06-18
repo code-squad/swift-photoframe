@@ -9,8 +9,6 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-    
-    
     func getRandomImagePath() -> String {
         let imageFolder = "Demo Images/"
         let randNumber = Int.random(in: 1...22)
