@@ -109,6 +109,14 @@
                                     <action selector="closeButtonTouched:" destination="y1O-C3-aZr" eventType="touchUpInside" id="MR1-81-QL2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyX-Ba-8jG">
+                                <rect key="frame" x="181" y="283" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="처음으로"/>
+                                <connections>
+                                    <segue destination="9pv-A4-QxB" kind="show" id="FBS-a0-EX6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.32342785600000001" green="0.62204080819999996" blue="0.43526875970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="zhF-2c-cFw"/>
@@ -197,4 +205,7 @@
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="FBS-a0-EX6"/>
+    </inferredMetricsTieBreakers>
 </document>
