@@ -9,8 +9,16 @@
 import UIKit
 
 class SecondViewController: UIViewController {
+    let imagePath = "Demo Images/"
+    
+    @IBOutlet weak var photoImageView: UIImageView!
+    @IBAction func nextImageButtonTouched(_ sender: Any) {
+        let randNumber = Int.random(in: 1...22)
+        self.photoImageView.image = UIImage(named: imagePath+String(randNumber)+".jpg")
+    }
 
     override func viewDidLoad() {
+        self.photoImageView.image = UIImage(named: imagePath+"01.jpg")
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
