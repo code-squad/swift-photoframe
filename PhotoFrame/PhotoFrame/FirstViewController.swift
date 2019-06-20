@@ -22,6 +22,11 @@ class FirstViewController: UIViewController {
         firstDescription.font = UIFont(descriptor: .init(), size: 50)
     }
 
-
+    @IBAction func nextButtomTapped(_ sender: Any) {
+        firstLabel.textColor = UIColor.blue
+        firstLabel.backgroundColor = UIColor.yellow
+        firstLabel.alpha = 0.5
+    }
+    
 }
 
