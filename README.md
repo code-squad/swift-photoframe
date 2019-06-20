@@ -26,4 +26,4 @@ Text | String | 표시되는 문자열입니다. (예: `firstLabel.text = "SK의
 Text Color | UIColor | 텍스트의 색상입니다. (예: `firstLabel.textColor = UIColor(red: 1.0, green: 0.5, blue: 1.0, alpha: 1)`)
 Font | UIFont | 텍스트의 서체입니다. (예: `firstDescription.font = UIFont(descriptor: .init(), size: 50)`)
 
-![리터럴_표현식](asset/Step2_스크린샷.png)
+![Step2](asset/Step2_스크린샷.png)
