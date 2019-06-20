@@ -41,3 +41,5 @@ Font | UIFont | 텍스트의 서체입니다. (예: `firstDescription.font = UIF
 
 - 특정 객체에서 지정된 이벤트가 발생했을 때 명령을 실행하고 싶을 때 사용합니다.
 - 버튼이 탭이 되는 등 이벤트가 발생하면 연결된 명령을 실행합니다.
+
+![Step3](asset/Step3_스크린샷.png)
