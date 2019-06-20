@@ -10,3 +10,5 @@ Literal | Type | Value
 `#line` | `Int` | 코드가 실행된 줄의 번호입니다.
 `#column` | `Int` | 코드가 시작된 열의 번호입니다.
 `#function` | `String` | 코드가 실행된 함수의 이름입니다.
+
+![리터럴_표현식](asset/리터럴_표현식.png)
