@@ -10,12 +10,16 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+    @IBOutlet weak var firstLabel: UILabel!
+    @IBOutlet weak var firstDescription: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(#file)
-        print(#line)
-        print(#function)
-        print(#column)
+        
+        firstLabel.text = "SK의 사진 액자"
+        firstLabel.textColor = UIColor(red: 1.0, green: 0.5, blue: 1.0, alpha: 1)
+        
+        firstDescription.text = "사진 액자입니다."
+        firstDescription.font = UIFont(descriptor: .init(), size: 50)
     }
 
 
