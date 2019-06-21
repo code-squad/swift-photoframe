@@ -16,6 +16,13 @@ class BlueViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
+    @IBAction func nextButtonTapped(_ sender: Any) {
+        if let viewController = storyboard?.instantiateViewController(withIdentifier: "RedViewController") {
+            present(viewController, animated: true, completion: nil)
+        }
+    }
+    
     @IBAction func closeButtonTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
