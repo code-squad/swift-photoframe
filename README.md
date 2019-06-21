@@ -57,6 +57,17 @@ Font | UIFont | 텍스트의 서체입니다. (예: `firstDescription.font = UIF
 
 ## Step 5 (2019-06-21)
 
+### Segue를 사용하지 않고 ViewController 간에 이동하기
+
+ViewController에 Storyboard ID를 지정한 다음, 코드에서 `present`를 호출하여 ViewController 간에 이동할 수 있습니다.
+
+```
+if let viewController = storyboard?.instantiateViewController(withIdentifier: "RedViewController") {
+present(viewController, animated: true, completion: nil)
+}
+```
+
 ![Step5](asset/Step5_스크린샷.png)
+
 
 
