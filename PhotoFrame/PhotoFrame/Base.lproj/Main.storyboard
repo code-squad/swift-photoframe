@@ -60,10 +60,10 @@
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
-        <!--View Controller-->
+        <!--Blue View Controller-->
         <scene sceneID="oa7-yI-oYL">
             <objects>
-                <viewController id="PvV-cn-W3h" sceneMemberID="viewController">
+                <viewController id="PvV-cn-W3h" customClass="BlueViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KjQ-Rm-7r7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -76,8 +76,16 @@
                                     <segue destination="np1-AT-qHy" kind="show" id="PLg-e7-48o"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVJ-dz-UFw">
+                                <rect key="frame" x="192" y="769" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="닫기"/>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="PvV-cn-W3h" eventType="touchUpInside" id="Ir5-7D-QgJ"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.79313975663159086" green="1" blue="0.88704325963950215" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.64995504612910882" green="0.78962933903220855" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Hhy-ev-DF9"/>
                     </view>
                 </viewController>
@@ -85,13 +93,23 @@
             </objects>
             <point key="canvasLocation" x="1544" y="-315"/>
         </scene>
-        <!--View Controller-->
+        <!--Red View Controller-->
         <scene sceneID="x8M-eC-T0o">
             <objects>
-                <viewController id="np1-AT-qHy" sceneMemberID="viewController">
+                <viewController id="np1-AT-qHy" customClass="RedViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IGy-tL-7BO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t89-YV-loX">
+                                <rect key="frame" x="192" y="780" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="닫기"/>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="np1-AT-qHy" eventType="touchUpInside" id="Deo-DA-MYO"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.8380659891819886" blue="0.84950308391603591" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="3PN-UU-eDC"/>
                     </view>
