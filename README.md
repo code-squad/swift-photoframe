@@ -54,3 +54,9 @@ Font | UIFont | 텍스트의 서체입니다. (예: `firstDescription.font = UIF
 ## Step 4 (2019-06-20)
 
 ![Step4](asset/Step4_스크린샷.png)
+
+## Step 5 (2019-06-21)
+
+![Step5](asset/Step5_스크린샷.png)
+
+
