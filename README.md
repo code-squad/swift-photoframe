@@ -61,9 +61,9 @@ Font | UIFont | 텍스트의 서체입니다. (예: `firstDescription.font = UIF
 
 ViewController에 Storyboard ID를 지정한 다음, 코드에서 `present`를 호출하여 ViewController 간에 이동할 수 있습니다.
 
-```
+```swift
 if let viewController = storyboard?.instantiateViewController(withIdentifier: "RedViewController") {
-present(viewController, animated: true, completion: nil)
+    present(viewController, animated: true, completion: nil)
 }
 ```
 
