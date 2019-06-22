@@ -1,5 +1,5 @@
-![FirstView](/Users/hw/CodeSquard/swift-photoframe/images/FirstView.png)
+![firstView](./images/FirstView.png)
 
-![secondView](/Users/hw/CodeSquard/swift-photoframe/images/SecondView.png)
+![secondView](./images/SecondView.png)
 
-![consoleLog](/Users/hw/CodeSquard/swift-photoframe/images/consoleLog.png)
+![consoleLog](./images/consoleLog.png)
