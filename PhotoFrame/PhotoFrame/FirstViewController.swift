@@ -17,7 +17,22 @@ class FirstViewController: UIViewController {
         super.viewDidLoad()
         print(#file, #line, #function, #column)
     }
+    var isChanged: Bool = false
     
+    @IBAction func nextButtonTouched(_ sender: Any) {
+        if isChanged {
+            self.firstLabel.textColor = UIColor.blue
+            self.firstLabel.backgroundColor = UIColor.yellow
+            self.firstLabel.alpha = 0.5
+        }else{
+            willSetFirstViewSetting()
+        }
+        isChanged = !isChanged
+    }
+    
+    @IBAction func nextButtonTouched2(_ sender: Any) {
+        print("sender: \(sender)")
+    }
     private func willSetFirstViewSetting() {
         self.firstLabel.text = "Doran의 사진액자"
         self.firstLabel.font = UIFont(name: "Times New Roman", size: 19)
