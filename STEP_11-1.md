@@ -37,7 +37,7 @@
 
 
 
-![개념도](./images/tabBarView.png)
+![개념도](./images/step1/tabBarView.png)
 
 
 
@@ -127,8 +127,8 @@
 
 
 
-![FirstView](./images/FirstView.png)
+![FirstView](./images/step1/FirstView.png)
 
-![secondView](./images/SecondView.png)
+![secondView](./images/step1//SecondView.png)
 
-![consoleLog](./images/consoleLog.png)
+![consoleLog](./images/step1//consoleLog.png)
