@@ -73,10 +73,24 @@ if let viewController = storyboard?.instantiateViewController(withIdentifier: "R
 
 ### Container View Controller
 
-여러 View Controller를 가지고 있는 상위 View Controller 입니다.
+컨테이너 뷰 컨트롤러는 여러 뷰 컨트롤러의 내용을 단일 UI로 결합합니다. 탐색을 용이하게 해주고 기존 콘텐츠를 기반으로 새로운 UI를 만들 때 사용됩니다.
+
+Container View Controller의 종류로는 UITabBarController, UINavigationController, UISplitViewController 등이 있습니다.
 
 네비게이션 컨트롤러에서 View 간의 전환이 스택처럼 적재되고 나올 때에도 최근 View 부터 순차적으로 나오기 때문에 전환 메소드가 push / pop라는 이름으로 정의되어 있습니다.
 
-Container View Controller의 종류로는 Tab Bar Controller, Navigation Controller 등이 있습니다.
-
 ![Step6](asset/Step6_스크린샷.png)
+
+## Step 7 (2019-06-24)
+
+### UIImageView
+
+화면에 이미지를 나타내는 View 객체입니다.
+
+`<<객체 이름>>.image = UIImage(named: "<<이미지 이름>>")` 명령을 사용하여 표시될 이미지를 교체할 수 있습니다.
+
+### UIImage
+
+`UIImageView`가 속성으로 가지고 있으며, 표시할 이미지 객체입니다.
+
+![Step7](asset/Step7_스크린샷.png)
