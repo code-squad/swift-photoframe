@@ -19,12 +19,7 @@ class SecondViewController: UIViewController {
     
     @IBAction func nextButtonTapped(_ sender: Any) {
         let imgNumber = Int.random(in: 1...22)
-        var imgNumberStr = String(imgNumber)
-        while imgNumberStr.count < 2 {
-            imgNumberStr.insert("0", at: imgNumberStr.startIndex)
-        }
-        
-        photoView.image = UIImage(named: "\(imgNumberStr).jpg")
+        photoView.image = UIImage(named: "\(String(format: "%02d", imgNumber)).jpg")
     }
 }
 
