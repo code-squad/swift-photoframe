@@ -9,6 +9,8 @@
  - [STEP 11-2](./STEP_11-2.md)
  - [STEP 11-3](./STEP_11-3.md)
  - [STEP 11-3 IBAction vs IBOutlet](./STEP_11-3-2.md)
-
+ - [STEP 11-4](./STEP_11-4.md)
+ - [STEP 11-5](./STEP_11-5.md)
+ 
 
 
