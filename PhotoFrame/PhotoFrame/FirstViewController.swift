@@ -15,6 +15,14 @@ class FirstViewController: UIViewController {
         self.photoLabel.alpha = 0.5
         self.firstDescription.alpha = 1
     }
+    @IBAction func goToSkyBlueView(_ sender: Any) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let skyBlueVC = storyboard.instantiateViewController(withIdentifier:  "SkyBlueViewController")
+        if let skyBlueVC = skyBlueVC as? SkyBlueViewController {
+            skyBlueVC.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+            self.present(skyBlueVC, animated: true, completion: nil)
+        }
+    }
     @IBOutlet weak var photoLabel: UILabel!
     @IBOutlet weak var firstDescription: UILabel!
     
