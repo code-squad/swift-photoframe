@@ -85,9 +85,9 @@
 
 ## UILabel 코드작성 및 결과
 
-![Step2_코드](images/Step2_코드.png)
+![Step2_code](images/Step2_code.png)
 
-![Step2_결과](images/Step2_결과.png)
+![Step2_result](images/Step2_result.png)
 
 # Step3 - IBAction vs. IBOutlet (2019.6.26)
 
@@ -110,22 +110,22 @@
 
 ### IBAction의 Event 종류
 
-| Event              | 설명                                          |
-| ------------------ | --------------------------------------------- |
-| Did End On Exit    | 편집 후 포커스 없어짐                         |
-| Editing changed    | 편집                                          |
+|       Event        | 설명                                          |
+| :----------------: | --------------------------------------------- |
+|  Did End On Exit   | 편집 후 포커스 없어짐                         |
+|  Editing changed   | 편집                                          |
 | Editing Did Begin  | 편집을 시작할 떄                              |
-| Editing Did End    | 편집을 종료할 때                              |
-| Touch Cancel       | 터치 취소 시                                  |
-| Touch Down         | 터치 다운 시                                  |
+|  Editing Did End   | 편집을 종료할 때                              |
+|    Touch Cancel    | 터치 취소 시                                  |
+|     Touch Down     | 터치 다운 시                                  |
 | Touch Down Repeat  | 여러번 터치 다운 시                           |
-| Touch Drag Enter   | 드래그하여 객체에 들어갔을 때                 |
-| Touch Drag Exit    | 드래그하여 객체를 벗어날 때                   |
+|  Touch Drag Enter  | 드래그하여 객체에 들어갔을 때                 |
+|  Touch Drag Exit   | 드래그하여 객체를 벗어날 때                   |
 | Touch Drag Inside  | 객체를 터치 후 드래그할 때                    |
 | Touch Drag Outside | 객체를 터치 후 드래그하여 객체 밖으로 나올 때 |
-| Touch Up Inside    | 컨트롤에서 터치 업할 때                       |
-| Touch Up Outside   | 통제가 안되는 영역에서 터치 업할 때           |
-| Value Changed      | 값이 변경될 때                                |
+|  Touch Up Inside   | 컨트롤에서 터치 업할 때                       |
+|  Touch Up Outside  | 통제가 안되는 영역에서 터치 업할 때           |
+|   Value Changed    | 값이 변경될 때                                |
 
 - **하나의 버튼에 여러 액션을 추가할 수 있다.**
 
@@ -133,13 +133,39 @@
 
 ## UIButton 코드 작성 및 결과
 
-![](images/Step3_코드.png)
+![Step3_code](images/Step3_code.png)
 
 - 버튼 클릭 전
 
-![Step3_결과1](images/Step3_결과1.png)
+![Step3_result1](images/Step3_result1.png)
 
 - 버튼 클릭 후
 
-![Step3_결과2](images/Step3_결과2.png)
+![Step3_result2](images/Step3_result2.png)
+
+# Step4 - Scene과 Segue (2019.6.26)
+
+## Scene
+
+: 앱의 화면
+
+## Segue
+
+: Scene 간의 이동을 정의하고, 어떤 효과로 변할 것인지 정의하는 것
+
+|       Seque        | 설명                                                         |
+| :----------------: | ------------------------------------------------------------ |
+|        Show        | 새 화면으로 이동. Stack 구조로서 새 화면이 원래 화면 위를 덮는 구조 |
+|    Show Detail     | SplitView 구조에서 원래 화면은 Master, 새 화면은 Detail로 표시하는 구조. 아이폰에서는 똑같아 보이지만 아이패드로 보면 화면이 둘로 분할되서 보이게 된다. |
+|  Present Modally   | 새 화면이 모달처럼 원래 화면 위 전체를 덮는 구조. 원래 화면은 새 화면 뒤에 그대로 존재하게 된다. |
+| Present As Popover | 아이패드에서 팝업창을 띄운다. 아이폰에서는 큰 의미가 없다.   |
+|       Custom       | 사용자 정의 Segue를 만든다.                                  |
+
+## Scene, Segue 결과
+
+![Step3_result1](images/Step3_result1.png)
+
+![Step4_result1](images/Step4_result1.png)
+
+![Step4_result2](images/Step4_result2.png)
 
