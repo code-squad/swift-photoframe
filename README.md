@@ -88,3 +88,58 @@
 ![Step2_코드](images/Step2_코드.png)
 
 ![Step2_결과](images/Step2_결과.png)
+
+# Step3 - IBAction vs. IBOutlet (2019.6.26)
+
+## UIButton
+
+: 버튼에 연결된 모든 동작을 수행하고싶을 때 사용하는 클래스
+
+## IBOutlet
+
+- 객체의 속성을 제어할 목적으로 클래스의 프로퍼티에 연결
+- 컨트롤러 헤더 파일에 선언한 객체를 인터페이스 빌더가 알아 볼 수 있도록 하는 역할
+- 인터페이스 빌더의 객체와 클래스의 프로퍼티는 서로 타입이 일치해야한다.
+
+## IBAction
+
+- 객체의 이벤트 제어 ( 터치, 쿨릭 등 동적인 상태를 처리하는 메소드와 연결)
+- 특정 객체에서 지정된 이벤트가 발생했을 때 일련의 프로세스를 실행하고자 할 때
+- 해당 메소드가 액션 메소드라는 것을 인터페이스 빌더에게 알려주게 되며, 컨트롤러를 통해서 호출이 가능해진다. 
+- **하나의 액션에 여러 버튼을 설정할 수 있다.**
+
+### IBAction의 Event 종류
+
+| Event              | 설명                                          |
+| ------------------ | --------------------------------------------- |
+| Did End On Exit    | 편집 후 포커스 없어짐                         |
+| Editing changed    | 편집                                          |
+| Editing Did Begin  | 편집을 시작할 떄                              |
+| Editing Did End    | 편집을 종료할 때                              |
+| Touch Cancel       | 터치 취소 시                                  |
+| Touch Down         | 터치 다운 시                                  |
+| Touch Down Repeat  | 여러번 터치 다운 시                           |
+| Touch Drag Enter   | 드래그하여 객체에 들어갔을 때                 |
+| Touch Drag Exit    | 드래그하여 객체를 벗어날 때                   |
+| Touch Drag Inside  | 객체를 터치 후 드래그할 때                    |
+| Touch Drag Outside | 객체를 터치 후 드래그하여 객체 밖으로 나올 때 |
+| Touch Up Inside    | 컨트롤에서 터치 업할 때                       |
+| Touch Up Outside   | 통제가 안되는 영역에서 터치 업할 때           |
+| Value Changed      | 값이 변경될 때                                |
+
+- **하나의 버튼에 여러 액션을 추가할 수 있다.**
+
+![IBAction_events](images/IBAction_events.png)
+
+## UIButton 코드 작성 및 결과
+
+![](images/Step3_코드.png)
+
+- 버튼 클릭 전
+
+![Step3_결과1](images/Step3_결과1.png)
+
+- 버튼 클릭 후
+
+![Step3_결과2](images/Step3_결과2.png)
+
