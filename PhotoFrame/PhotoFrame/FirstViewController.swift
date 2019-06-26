@@ -16,7 +16,9 @@ class FirstViewController: UIViewController {
     }
     @IBOutlet weak var photoLabel: UILabel!
     @IBOutlet weak var firstDescription: UILabel!
-
+    @IBAction func hhh(_ sender: Any) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print(#file, #line, #function, #column)
