@@ -9,15 +9,14 @@
 import UIKit
 
 class FirstViewController: UIViewController {
-    @IBAction func nextButtonTouched(_ sender: Any) {
+    @IBAction func nextButtonToched(_ sender: Any) {
         self.photoLabel.textColor = UIColor.blue
         self.photoLabel.backgroundColor = UIColor.yellow
         self.photoLabel.alpha = 0.5
+        self.firstDescription.alpha = 1
     }
     @IBOutlet weak var photoLabel: UILabel!
     @IBOutlet weak var firstDescription: UILabel!
-    @IBAction func hhh(_ sender: Any) {
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
