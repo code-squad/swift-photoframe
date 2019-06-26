@@ -37,7 +37,15 @@
                                 <state key="normal" title="다음"/>
                                 <connections>
                                     <action selector="nextButtonToched:" destination="9pv-A4-QxB" eventType="touchUpInside" id="JyC-kz-vRf"/>
-                                    <segue destination="Oys-GY-Yud" kind="show" id="ytt-o4-VSc"/>
+                                    <segue destination="Oys-GY-Yud" kind="show" id="xPW-cV-Z8j"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzc-0d-erP">
+                                <rect key="frame" x="188" y="530" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="끝으로"/>
+                                <connections>
+                                    <action selector="goToSkyBlueView:" destination="9pv-A4-QxB" eventType="touchUpInside" id="dJe-ZR-AU5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -60,10 +68,10 @@
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
-        <!--View Controller-->
+        <!--Mint View Controller-->
         <scene sceneID="Dmc-YP-6rF">
             <objects>
-                <viewController id="Oys-GY-Yud" sceneMemberID="viewController">
+                <viewController id="Oys-GY-Yud" customClass="MintViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T6x-CD-tZz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -76,6 +84,16 @@
                                     <segue destination="CcB-4l-hYp" kind="show" id="oy3-hW-4DE"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFN-my-sIq">
+                                <rect key="frame" x="189" y="433" width="37" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="close">
+                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="Oys-GY-Yud" eventType="touchUpInside" id="DxP-Ns-yTa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="2d5-ib-AnU"/>
@@ -86,13 +104,25 @@
             </objects>
             <point key="canvasLocation" x="1432" y="-320"/>
         </scene>
-        <!--View Controller-->
+        <!--Sky Blue View Controller-->
         <scene sceneID="Bc1-d9-iup">
             <objects>
-                <viewController id="CcB-4l-hYp" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SkyBlueViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CcB-4l-hYp" customClass="SkyBlueViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5ul-Gg-Z4b">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRO-ve-g0P">
+                                <rect key="frame" x="189" y="433" width="37" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="close">
+                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="CcB-4l-hYp" eventType="touchUpInside" id="IU3-8M-Ahk"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="eZU-zR-kAP"/>
                     </view>

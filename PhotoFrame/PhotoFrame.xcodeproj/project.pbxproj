@@ -15,6 +15,8 @@
 		15A71B2A22C205B400896DE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15A71B2822C205B400896DE7 /* LaunchScreen.storyboard */; };
 		15A71B3522C205B500896DE7 /* PhotoFrameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A71B3422C205B500896DE7 /* PhotoFrameTests.swift */; };
 		15A71B4022C205B500896DE7 /* PhotoFrameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A71B3F22C205B500896DE7 /* PhotoFrameUITests.swift */; };
+		15A71B5222C367E600896DE7 /* MintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A71B5122C367E600896DE7 /* MintViewController.swift */; };
+		15A71B5422C36D5A00896DE7 /* SkyBlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A71B5322C36D5A00896DE7 /* SkyBlueViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		15A71B3B22C205B500896DE7 /* PhotoFrameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoFrameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		15A71B3F22C205B500896DE7 /* PhotoFrameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFrameUITests.swift; sourceTree = "<group>"; };
 		15A71B4122C205B500896DE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15A71B5122C367E600896DE7 /* MintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MintViewController.swift; sourceTree = "<group>"; };
+		15A71B5322C36D5A00896DE7 /* SkyBlueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyBlueViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 			children = (
 				15A71B1D22C205B300896DE7 /* AppDelegate.swift */,
 				15A71B1F22C205B300896DE7 /* FirstViewController.swift */,
+				15A71B5122C367E600896DE7 /* MintViewController.swift */,
+				15A71B5322C36D5A00896DE7 /* SkyBlueViewController.swift */,
 				15A71B2122C205B300896DE7 /* SecondViewController.swift */,
 				15A71B2322C205B300896DE7 /* Main.storyboard */,
 				15A71B2622C205B400896DE7 /* Assets.xcassets */,
@@ -261,6 +267,8 @@
 			files = (
 				15A71B2222C205B300896DE7 /* SecondViewController.swift in Sources */,
 				15A71B1E22C205B300896DE7 /* AppDelegate.swift in Sources */,
+				15A71B5222C367E600896DE7 /* MintViewController.swift in Sources */,
+				15A71B5422C36D5A00896DE7 /* SkyBlueViewController.swift in Sources */,
 				15A71B2022C205B300896DE7 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
