@@ -15,6 +15,7 @@
 		C5402EFE22C0684E00F3B33F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5402EFC22C0684E00F3B33F /* LaunchScreen.storyboard */; };
 		C5402F0922C0684E00F3B33F /* PhotoFrameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5402F0822C0684E00F3B33F /* PhotoFrameTests.swift */; };
 		C5402F1422C0684E00F3B33F /* PhotoFrameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5402F1322C0684E00F3B33F /* PhotoFrameUITests.swift */; };
+		C5402F2222C30F6200F3B33F /* PurpleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5402F2122C30F6200F3B33F /* PurpleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		C5402F0F22C0684E00F3B33F /* PhotoFrameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoFrameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5402F1322C0684E00F3B33F /* PhotoFrameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFrameUITests.swift; sourceTree = "<group>"; };
 		C5402F1522C0684E00F3B33F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5402F2122C30F6200F3B33F /* PurpleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				C5402EF122C0684B00F3B33F /* AppDelegate.swift */,
 				C5402EF322C0684B00F3B33F /* FirstViewController.swift */,
+				C5402F2122C30F6200F3B33F /* PurpleViewController.swift */,
 				C5402EF522C0684B00F3B33F /* SecondViewController.swift */,
 				C5402EF722C0684B00F3B33F /* Main.storyboard */,
 				C5402EFA22C0684E00F3B33F /* Assets.xcassets */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5402F2222C30F6200F3B33F /* PurpleViewController.swift in Sources */,
 				C5402EF622C0684B00F3B33F /* SecondViewController.swift in Sources */,
 				C5402EF222C0684B00F3B33F /* AppDelegate.swift in Sources */,
 				C5402EF422C0684B00F3B33F /* FirstViewController.swift in Sources */,
