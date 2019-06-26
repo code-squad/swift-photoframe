@@ -30,6 +30,20 @@ class FirstViewController: UIViewController {
         isChanged = !isChanged
     }
     
+    /// 반드시 Main.storyboard의 우측 utility bar에서
+    /// PurpleViewController의 identity로 storyboard ID를 등록해야 한다.
+    /// 클래스이름으로 등록해두면 편하다.
+    @IBAction func showPurpleView(_ sender: Any) {
+        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let purpleVC = storyboard.instantiateViewController(withIdentifier: "PurpleViewController")
+        if let purpleVC = purpleVC as? PurpleViewController  {
+            // 화면을 전환할 때 사용할 애니메이션 정의
+            purpleVC.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+            // 인자값으로 받은 뷰 컨트롤러로 화면 이동
+            self.present(purpleVC, animated: true, completion: nil)
+        }
+    }
+    
     @IBAction func nextButtonTouched2(_ sender: Any) {
         print("sender: \(sender)")
     }
