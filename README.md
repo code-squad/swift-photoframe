@@ -169,3 +169,60 @@
 
 ![Step4_result2](images/Step4_result2.png)
 
+# Step5 - ViewController Programming (2019.6.26)
+
+## ViewController의 라이프사이클
+
+1. Init
+2. loadView :
+   - Controller가 관리하는 View를 만드는 역할
+   - loadView가 View를 만들고 메모리에 올린 후 ViewDidLoad가 호출됨
+3. viewDidLoad : 
+   - View의 컨트롤러가 메모리에 로드되고 난 후 호출
+   - View의 로딩이 완료 되었을 떄 **시스템에 의해 자동으로 호출**
+   - 화면이 처음 만들어질 때 한번만 실행 (처음 한 번만 실행해야 하는 초기화 코드를 작성)
+4. viewWillAppear :
+   - View가 나타나기 직전 호출
+   - viewDidLoad와 유사하게 볼 수도 있지만 가장 큰 차이는 다른 View에 갔다가 다시 돌아오는 상황의 경우 viewDidLoad는 호출되지 않는다 (viewWillAppear은 호출됨)
+5. viewDidAppear : 
+   - View가 나타났다는 것을 알림
+6. viewWillDisappear :
+   - View가 사라지기 직전 호출되는 함수
+7. viewDidDisappear : (다시 4. viewWillAppear로 갈 수 있다.)
+   - View가 제거되었다는 것을 알림
+8. viewDidUnload (다시 2. loadView로 갈 수 있다.)
+
+
+
+## Step을 진행하면서 발생한 문제점과 해결방법
+
+새로운 버튼에 IBOutlet을 연결하여 코드작성 후 해당 코드를 지우고 빌드했을 때 해당 버튼을 누르자 아래와 같은 에러 발생
+
+![Step5_error_result](images/Step5_error_result.png)
+
+원인: 코드상으로는 지웠지만 연결이 남아있었다. (이점 꼭 유의하자!)
+
+![Step5_error_cause1](images/Step5_error_cause1.png)
+
+![Step5_error_cause2](images/Step5_error_cause2.png)
+
+## ViewController Programming 결과
+
+![Step5_print_result](images/Step5_print_result.png)
+
+![Step5_result1](images/Step5_result1.png)
+
+![Step5_result2](images/Step5_result2.png)
+
+![Step5_result3](images/Step5_result3.png)
+
+## 추가학습 결과
+
+Segue를 제거하고 다음 화면을 보여줄 때 코드로 보여주는 방법을 찾아보고 적용해본다.
+
+![Step5_additional_code](images/Step5_additional_code.png)
+
+- 유의사항: 반드시 utility Bar의 identitiy에 storyboardID와 restoraionID를 등록해야한다.
+
+![Step5_additional_precautions](images/Step5_additional_precautions.png)
+
