@@ -15,6 +15,7 @@ class FirstViewController: UIViewController {
         self.photoLabel.alpha = 0.5
         self.firstDescription.alpha = 1
     }
+    
     @IBAction func goToSkyBlueView(_ sender: Any) {
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let skyBlueVC = storyboard.instantiateViewController(withIdentifier:  "SkyBlueViewController")
@@ -26,9 +27,14 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var photoLabel: UILabel!
     @IBOutlet weak var firstDescription: UILabel!
     
+    override func loadView() {
+        super.loadView()
+        print("First view 로드", #file, #line, #function, #column)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(#file, #line, #function, #column)
+        print("First view가 로드되었어요",#file, #line, #function, #column)
         self.photoLabel.text = "Aiden의 사진액자"
         self.photoLabel.textColor = UIColor(red: 0.3, green: 0.5, blue: 1.0, alpha: 1)
         self.photoLabel.backgroundColor = UIColor.cyan
@@ -37,6 +43,25 @@ class FirstViewController: UIViewController {
         self.firstDescription.font = UIFont.italicSystemFont(ofSize: 20)
         self.firstDescription.alpha = 0.5
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("First view가 등장할꺼에요",#file,#line,#function,#column)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("First view가 등장했었어요",#file,#line,#function,#column)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("First view가 사라질꺼에요",#file,#line,#function,#column)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print("First view가 사라졌었어요",#file,#line,#function,#column)
+    }
 }
 
