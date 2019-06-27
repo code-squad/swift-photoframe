@@ -190,7 +190,7 @@
    - View가 사라지기 직전 호출되는 함수
 7. viewDidDisappear : (다시 4. viewWillAppear로 갈 수 있다.)
    - View가 제거되었다는 것을 알림
-8. viewDidUnload (다시 2. loadView로 갈 수 있다.)
+8. viewDidUnload (다시 2. loadView로 갈 수 있다.) **ios6부터 안 씀**
 
 
 
@@ -225,4 +225,3 @@ Segue를 제거하고 다음 화면을 보여줄 때 코드로 보여주는 방�
 - 유의사항: 반드시 utility Bar의 identitiy에 storyboardID와 restoraionID를 등록해야한다.
 
 ![Step5_additional_precautions](images/Step5_additional_precautions.png)
-
