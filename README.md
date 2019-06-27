@@ -225,3 +225,84 @@ Segue를 제거하고 다음 화면을 보여줄 때 코드로 보여주는 방�
 - 유의사항: 반드시 utility Bar의 identitiy에 storyboardID와 restoraionID를 등록해야한다.
 
 ![Step5_additional_precautions](images/Step5_additional_precautions.png)
+
+# Step6 - Container ViewController (2019.6.27)
+
+## Container ViewController
+
+: 여러 ViewController를 단일 사용자 interface로 결합하는 방법
+
+- **자신이 소유한 다른 ViewController(Child ViewController)의 presentation을 관리**
+- Child View는 **그대로 표시**하거나 Container View Controller가 **소유한 View와 같이 표시**한다.
+- Container View Controller의 서브클래스는 **public interface**를 선언하여 하위 인터페이스를 연결해야 한다.
+- Child ViewController 간에 공유관계를 Container View Controller가 정의한다.
+- 사용자가 만드는 컨테이너의 의미에 따라 달라진다.
+- Container ViewController를 **생성할 때 메소드를 재정의할 필요 없다.**
+- 가장 대표적인 객체:
+  1. **UINavigationController**: stack구조로 한번에 하나의 ViewController만 볼 수 있고, 하나 이상의 ViewController를 관리
+  2. **UISplitViewController**: masrter - detail 두개의 하위 ViewController를 관리
+  3. **UITabbarController**: 탭을 표시하여 여러 모드 중 선택하고 해당 모드의 보기를 표시
+  4. **UIPageViewController**: 페이지 간의 탐색을 관리 
+
+## 필수로 사용해야 할 메소드
+
+- **addChild(_ childController: UIViewController)** : 지정한 ViewController를 현재 ViewController의 하위로 추가
+- **removeFromParent( )** : ViewController를 상위 Contoller에서 제거
+- **willMove(toParent parent: UIViewController? )** : ViewController가 Container ViewController에 추가 또는 제거 되기 직전에 호출
+- **didMove(toParent parent: UIViewController? )** : ViewController가 Container ViewController에 추가 또는 제거된 후 호출
+
+## Navigation Controller
+
+- 계층별 컨텐츠 탐색을 위한 Stack 기반 구조를 정의하는 viewController Container 중 하나
+- 한번에 하나의 하위 View Controller만 볼 수 있다.
+- Delegate 객체를 사용하여 동작을 조정한다.
+
+![UINavigationController](images/UINavigationController.png)
+
+### Navigation Controller 관련 메서드가 push/pop인 이유?
+
+- 배열의 가장 첫번쨰는 Root View Controller가 가장 아래에 깔려있고 그 위로 View Controller들이 쌓이는 구조라 **Stack의 구조와 같다**. 그렇기 때문에 pushViewController를 사용하게 되면 해당 viewController가 위로 쌓이면서 보여지게 되고 popViewController를 하게되면 해당 viewController가 사라지게 되는 것이다.
+
+## NavigationController 결과
+
+### 코드
+
+![Step6_code](images/Step6_code.png)
+
+### 결과
+
+: NavigationController를 적용한 경우 화면 전환이 오른쪽에서 왼쪽으로 동작하였다.
+
+#### 콜백함수들의 동작 순서
+
+1. FirstView**(loadView)**
+
+2. FirstView**(viewDidLoad)**
+
+3. FirstView**(viewWillAppear)**
+
+4. FirstView**(viewDidAppear)**
+
+   **(다음 버튼 클릭)**
+
+5. MintView**(loadView)**
+
+6. MintView**(viewDidLoad)**
+
+7. FirstView**(viewWillDisappear)**
+
+8. MintView**(ViewWillAppear)**
+
+9. FirstView**(viewDidDisappear)**
+
+10. MintView**(viewDidAppear)**
+
+    **(close 버튼 클릭)**
+
+11. MintView**(viewWillDisappear)**
+
+12. FirstView**(viewWillAppear)**
+
+13. MintView**(viewDidDisappear)**
+
+14. FirstView**(viewDidAppear)**
