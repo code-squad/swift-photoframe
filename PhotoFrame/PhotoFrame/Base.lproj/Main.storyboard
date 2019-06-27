@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First-->
+        <!--First View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="9pv-A4-QxB" customClass="FirstViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" semanticContentAttribute="playback" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,23 +40,27 @@
                                     <action selector="nextButtonTouched:" destination="9pv-A4-QxB" eventType="touchUpInside" id="VU4-Zf-3Uh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CzX-P6-Mod">
-                                <rect key="frame" x="192" y="649" width="30" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="iQu-ZX-kOb">
+                                <rect key="frame" x="188" y="652" width="32" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="다음"/>
-                                <connections>
-                                    <segue destination="hfz-je-zwq" kind="show" id="usB-ZY-tUc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbP-Xr-xm4">
-                                <rect key="frame" x="191" y="700" width="32" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="퍼플"/>
-                                <connections>
-                                    <action selector="showPurpleView:" destination="9pv-A4-QxB" eventType="touchUpInside" id="vYF-TC-X3E"/>
-                                </connections>
-                            </button>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CzX-P6-Mod">
+                                        <rect key="frame" x="0.0" y="0.0" width="32" height="30"/>
+                                        <state key="normal" title="다음"/>
+                                        <connections>
+                                            <segue destination="hfz-je-zwq" kind="show" id="DNO-ev-G2N"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbP-Xr-xm4">
+                                        <rect key="frame" x="0.0" y="48" width="32" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="퍼플"/>
+                                        <connections>
+                                            <action selector="showPurpleView:" destination="9pv-A4-QxB" eventType="touchUpInside" id="vYF-TC-X3E"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -67,7 +71,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <navigationItem key="navigationItem" id="SoE-XO-drZ"/>
                     <connections>
                         <outlet property="firstDescription" destination="A5M-7J-77L" id="TrG-t8-muW"/>
                         <outlet property="firstLabel" destination="KQZ-1w-vlD" id="BVZ-6e-CNF"/>
@@ -75,12 +79,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.27536231884062" y="-320.08928571428572"/>
+            <point key="canvasLocation" x="1659.4202898550725" y="-320.08928571428572"/>
         </scene>
-        <!--View Controller-->
+        <!--Green View Controller-->
         <scene sceneID="Sty-fC-3HP">
             <objects>
-                <viewController id="hfz-je-zwq" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GreenViewController" modalTransitionStyle="partialCurl" id="hfz-je-zwq" customClass="GreenViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="right" semanticContentAttribute="playback" id="oNI-Pj-NDJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,18 +108,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="다음"/>
                                 <connections>
-                                    <segue destination="EbT-Ta-bC4" kind="showDetail" id="HwK-eW-hbN"/>
+                                    <segue destination="EbT-Ta-bC4" kind="show" id="80M-DW-HQ0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Sd-3u-7Dd">
-                                <rect key="frame" x="20" y="44" width="32" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IId-v0-SmV">
+                                <rect key="frame" x="174" y="502" width="66" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="뒤로"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="닫기"/>
                                 <connections>
-                                    <segue destination="9pv-A4-QxB" kind="popoverPresentation" popoverAnchorView="3Sd-3u-7Dd" id="5V6-T2-e1b">
-                                        <popoverArrowDirection key="popoverArrowDirection" left="YES" right="YES"/>
-                                    </segue>
+                                    <action selector="closeButtonTouched:" destination="hfz-je-zwq" eventType="touchUpInside" id="jVi-LO-eMQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -126,12 +128,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OGR-s3-TVK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1554" y="-496"/>
+            <point key="canvasLocation" x="2544.9275362318845" y="-320.08928571428572"/>
         </scene>
-        <!--View Controller-->
+        <!--Yellow View Controller-->
         <scene sceneID="1VG-Kg-dIG">
             <objects>
-                <viewController id="EbT-Ta-bC4" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="YellowViewController" id="EbT-Ta-bC4" customClass="YellowViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" semanticContentAttribute="playback" id="S1m-3b-AEB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -143,15 +145,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0a-1P-aLo">
-                                <rect key="frame" x="20" y="44" width="32" height="29"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECR-4d-xFc">
+                                <rect key="frame" x="198" y="542" width="30" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="뒤로"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="닫기"/>
                                 <connections>
-                                    <segue destination="hfz-je-zwq" kind="popoverPresentation" popoverAnchorView="R0a-1P-aLo" id="ZL5-gG-yuJ">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <action selector="closeButtonTouched:" destination="EbT-Ta-bC4" eventType="touchUpInside" id="LCX-7j-are"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -161,7 +161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h6w-dr-Ry0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2332" y="-496"/>
+            <point key="canvasLocation" x="3460.8695652173915" y="-320.08928571428572"/>
         </scene>
         <!--Purple View Controller-->
         <scene sceneID="WFm-p0-c2f">
@@ -171,14 +171,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbN-M5-hcr">
-                                <rect key="frame" x="123" y="225" width="30" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="UGj-YM-TBz">
+                                <rect key="frame" x="189" y="319" width="30" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="닫기"/>
-                                <connections>
-                                    <action selector="closeButtonTouched:" destination="UbW-RG-ng1" eventType="touchUpInside" id="Jnv-L8-2K4"/>
-                                </connections>
-                            </button>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uCB-Db-H5j">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="다음"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbN-M5-hcr">
+                                        <rect key="frame" x="0.0" y="41" width="30" height="30"/>
+                                        <state key="normal" title="닫기"/>
+                                        <connections>
+                                            <action selector="closeButtonTouched:" destination="UbW-RG-ng1" eventType="touchUpInside" id="Jnv-L8-2K4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.62631761462257429" green="0.35843511701261543" blue="0.82929889896373055" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Ule-g7-sCq"/>
@@ -186,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PK0-zg-nUq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1554" y="240"/>
+            <point key="canvasLocation" x="2544.9275362318845" y="359.59821428571428"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
@@ -235,7 +245,7 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="rzg-jV-qcz" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                     </connections>
                 </tabBarController>
@@ -243,13 +253,28 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
+        <!--First-->
+        <scene sceneID="Gbp-mh-jzm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rzg-jV-qcz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qUh-rn-Rtc">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="LNn-YN-8c2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Idz-Ju-hv1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.27536231884062" y="-320.08928571428572"/>
+        </scene>
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="usB-ZY-tUc"/>
-        <segue reference="5V6-T2-e1b"/>
-    </inferredMetricsTieBreakers>
 </document>
