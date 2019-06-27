@@ -71,5 +71,5 @@
 
 ### STEP 6 : green -> first 전환시  
 
-![10_9_step6_with_Navigation_back_logic](/Users/hw/CodeSquard/swift-photoframe/images/step6/10_9_step6_with_Navigation_back_logic.png)
+![10_9_step6_with_Navigation_back_logic](./images/step6/10_9_step6_with_Navigation_back_logic.png)
 

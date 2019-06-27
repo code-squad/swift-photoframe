@@ -16,7 +16,7 @@
 
 앱의 UI를 만드는 과정에서 split view controller는 대부분 앱의 window의 rootVC에 위치하지만, 다른 뷰 컨트롤러에 포함시킬 수 도 있습니다. split view controller 그 자체로는 별다른 중요한 모양(appearance)을 지니고 있지 않지고, 대부분의 외관(appearance)은 설치한 child 뷰 컨트롤러들에 의해 결정됩니다. 
 
-![그림](/Users/hw/CodeSquard/swift-photoframe/images/step6/splitViewController2.png)
+![그림](./images/step6/splitViewController2.png)
 
 ### **How to configure child VC of splitVC**
 
