@@ -16,7 +16,6 @@ class PurpleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("PurpleVC viewDidLoad ", #file, #line, #function, #column)
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
