@@ -275,34 +275,102 @@ Segue를 제거하고 다음 화면을 보여줄 때 코드로 보여주는 방�
 
 #### 콜백함수들의 동작 순서
 
-1. FirstView**(loadView)**
+1. FirstView **(loadView)**
 
-2. FirstView**(viewDidLoad)**
+2. FirstView **(viewDidLoad)**
 
-3. FirstView**(viewWillAppear)**
+3. FirstView **(viewWillAppear)**
 
-4. FirstView**(viewDidAppear)**
+4. FirstView **(viewDidAppear)**
 
    **(다음 버튼 클릭)**
 
-5. MintView**(loadView)**
+5. MintView **(loadView)**
 
-6. MintView**(viewDidLoad)**
+6. MintView **(viewDidLoad)**
 
-7. FirstView**(viewWillDisappear)**
+7. FirstView **(viewWillDisappear)**
 
-8. MintView**(ViewWillAppear)**
+8. MintView **(ViewWillAppear)**
 
-9. FirstView**(viewDidDisappear)**
+9. FirstView **(viewDidDisappear)**
 
-10. MintView**(viewDidAppear)**
+10. MintView **(viewDidAppear)**
 
     **(close 버튼 클릭)**
 
-11. MintView**(viewWillDisappear)**
+11. MintView **(viewWillDisappear)**
 
-12. FirstView**(viewWillAppear)**
+12. FirstView **(viewWillAppear)**
 
-13. MintView**(viewDidDisappear)**
+13. MintView **(viewDidDisappear)**
 
-14. FirstView**(viewDidAppear)**
+14. FirstView **(viewDidAppear)**
+
+# Step7 - UIImage (2019.6.27)
+
+## UIImageView
+
+: interface에 단일 이미지 또는 일련의 애니메이션 이미지를 표시하는 객체, 애니메이션 이미지의 경우 이 클래스의 메소드를 사용해서 애니메이션을 시작 및 중지할 수 있다.
+
+- UIView를 상속한다.
+- **resizableInsers(withCapInsets: resizingMode: )**을 사용해서 이미지의 크기 및 방향조절이 가능하다
+- **animatedImage(with: duration: )**을 사용해서 단일 UIImage 개체를 생성하면 영상을 만들 수 있다.
+- 기본적으로 사용자 이벤트를 무시한다. 사용자 이벤트도 처리하도록 하려면  **isUserInteractionEnabled** 속성의 값을 **true**로 하면 된다.
+
+### UIImageView의 속성
+
+|      속성       | 설명                                                         |
+| :-------------: | ------------------------------------------------------------ |
+|    **Image**    | **표시할 이미지.** 독립 실행형 이미지 및 asstes 이미지를 포함하여 Xcode Project에 원하는 이미지를 지정할 수 있다. 이 속성을 프로그래밍 방식으로 설정하려면 **Image**나 **animationImages** 속성을 사용하면 된다. |
+| **Highlighted** | 이미지 보기가 강조 표시될 때 표시할 이미지. 이 특성을 프로그래밍 방식으로 설정하려면 **hilightedImage**나 **highlightedAnimationImages** 속성을 사용하면 된다. |
+|    **State**    | 이미지의 초기 상태. 이 특성을 사용하여 이미지를 강조 표시한다. 이 속성을 프로그래밍 방식으로 설정하려면 **isHighlighted** 속성을 사용하면 된다. |
+
+
+
+### 성능 향상을 위한 Tip
+
+: 이미지 크기 조정과 알파 blending은 앱 성능에 영향을 줄 수 있는 상대적으로 비용이 많이 드는 작업이다. 성능을 최대화하려면 다음 팁을 고려해야한다.
+
+1. 축소된 축소 ImageView에 특정 대형 이미지가 자주 표시될 것으로 예상하는 경우 축소된 이미지를 미리 만들어 축소 이미지 캐시에 저장한다. 이렇게 하면 각 이미지 뷰가 개별적으로 크기를 조정할 필요가 완화된다.
+2. 크기가 ImageView 크기에 가까운 이미지를 사용한다.
+3. 가능할 때마다 ImageView를 불투명하게 만든다.
+
+## UIImage
+
+: 앱의 이미지 데이터를 관리하는 클래스
+
+- 이미지 개체는 모든 플랫폼 형식을 지원하지만 앱의 대부분 이미지에 **PNG** 또는 **JPEG**파일을 사용하는 것이 좋다. (이 형식은 다른 이미지 형식보다 나은 성능을 제공하고, 특히 PNG는 무손실이기 때문 응용프로그램의 interface에 사용하는 이미지를 사용하는 것이 좋다.)
+
+### 메소드
+
+- **Init(namedin: compatibleWith: )**나 **init(named:** ) 앱의 기본 번들(또는 일부 알려진 번들)에 있는 assest 또는 이미지 파일에서 이미지를 만든다. 이러한 방법은 이미지 데이터를 자동으로 캐시하므로 자주 사용하는 이미지에 특히 권장한다.
+- **imageWithContentsOfFile** 이나 **init(contentsOfFile: )**으로 초기 데이터가 번들에 포함되지 않은 이미지 개체를 만든다. 이 방법은 매번 디스크에서 이미지 데이터를 로드하므로 동일한 이미지를 반복적으로 로드하는데 사용하면 안 된다.
+- **animatedImage(with: duration: )** 그리고 **animatedImageNamed(_: duration: )** 메소드로 다중 시퀀스로 구성된 단일 UIImage 객체를 생성한다.
+- **isEqual(_: )** 메소드로 이미지 데이터를 비교한다.
+
+### 주의사항
+
+- 이미지 개체는 변경할 수 없기 때문에 생성 후 속성을 변경할 수 없다.
+- 대부분의 이미지 속성은 함께 제공되는 이미지 파일 또는 이미지 데이터의 메타 데이터를 사용하여 자동으로 설정된다.
+- 또한 이미지 개체의 불변성은 어떤 스레드에서도 안전하게 생성하고 사용할 수 있다는 것을 의미한다.
+
+## UIImage 결과
+
+### 코드
+
+![Step7_code](images/Step7_code.png)
+
+### 결과
+
+![Step7_result](images/Step7_result.png)
+
+### Tip
+
+1. Show the A\ttributes inspector - View - Content Mode 에서 보여지는 방식을 선택할 수 있다.
+
+![Image_size_adjustment](images/Image_size_adjustment.png)
+
+2. .xcassets에 이미지를 넣으면 경로에 대한 데이터를 줄 필요없이 파일명만으로 이미지를 찾을 수 있다. (결과 코드 참조) - 만약 해당 폴더에 이미지들을 넣지 않고 일반 폴더에 넣은 후 해당 폴더를 Xcode Project에 넣는다면 Bundle을 사용해 경로나 URL을 파악해서 이를 찾아야 한다.
+
+![image_copy](images/image_copy.png)
