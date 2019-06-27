@@ -15,9 +15,21 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         willSetFirstViewSetting()
         super.viewDidLoad()
-        print(#file, #line, #function, #column)
+        print("1. viewDidLoad\n", #file, #line, #function, #column)
     }
     var isChanged: Bool = false
+    override func viewWillAppear(_ animated: Bool) {
+        print("1. viewWillAppear\n", #file, #line, #function, #column)
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        print("1. viewWillDisappear\n", #file, #line, #function, #column)
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        print("1. viewDidAppear\n", #file, #line, #function, #column)
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        print("1. viewDidDisappear\n", #file, #line, #function, #column)
+    }
     
     @IBAction func nextButtonTouched(_ sender: Any) {
         if isChanged {
@@ -38,7 +50,19 @@ class FirstViewController: UIViewController {
         let purpleVC = storyboard.instantiateViewController(withIdentifier: "PurpleViewController")
         if let purpleVC = purpleVC as? PurpleViewController  {
             // 화면을 전환할 때 사용할 애니메이션 정의
-            purpleVC.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+//            purpleVC.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+//            purpleVC.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+//            purpleVC.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal
+//            purpleVC.modalTransitionStyle = UIModalTransitionStyle.partialCurl
+            
+//            purpleVC.modalPresentationStyle = UIModalPresentationStyle.currentContext
+//            purpleVC.modalPresentationStyle = UIModalPresentationStyle.formSheet
+//            purpleVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+//            purpleVC.modalPresentationStyle = UIModalPresentationStyle.popover
+//            purpleVC.modalPresentationStyle = UIModalPresentationStyle.pageSheet
+            purpleVC.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+//            purpleVC.modalPresentationStyle = UIModalPresentationStyle.overFullScreen
+//            purpleVC.modalPresentationStyle = UIModalPresentationStyle.custom
             // 인자값으로 받은 뷰 컨트롤러로 화면 이동
             self.present(purpleVC, animated: true, completion: nil)
         }
