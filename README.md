@@ -374,3 +374,264 @@ Segue를 제거하고 다음 화면을 보여줄 때 코드로 보여주는 방�
 2. .xcassets에 이미지를 넣으면 경로에 대한 데이터를 줄 필요없이 파일명만으로 이미지를 찾을 수 있다. (결과 코드 참조) - 만약 해당 폴더에 이미지들을 넣지 않고 일반 폴더에 넣은 후 해당 폴더를 Xcode Project에 넣는다면 Bundle을 사용해 경로나 URL을 파악해서 이를 찾아야 한다.
 
 ![image_copy](images/image_copy.png)
+
+# FinalStep - UIImagePickerController (2019.6.28)
+
+## UIImagePickerController
+
+: 사용자의 미디어 라이브러리에서 사진을 찍고, 동영상을 녹화하고, 항목을 선택하기 위해 시스템 interface를 관리하는 ViewController
+
+## UIImagePickerController 코드
+
+### 전체 코드
+
+```swift
+import UIKit
+
+class SecondViewController: UIViewController {
+    let picker = UIImagePickerController()
+
+  /// Step7에서 구현한 다음 버튼의 Action 이번 Step에서는 필요 없다.
+    @IBAction func nextImageButtonTouched(_ sender: Any) {
+        let fileNumber = Int.random(in: 1...22)
+        let fileName = String(format: "%02d", fileNumber)+".jpg"
+        self.photoImageView.image = UIImage(named: fileName)
+    }
+    @IBOutlet weak var photoImageView: UIImageView!
+  
+  /// 선택 버튼의 Action
+    @IBAction func selectButtonTouched(_ sender: Any) {
+        let alert = UIAlertController(title: "사진선택", message: "두가지 방법으로 선택해요", preferredStyle: .actionSheet)
+        
+        let library = UIAlertAction(title: "사진앨범", style: .default) {
+            (action) in self.openLibrary()
+        }
+        
+        let camera = UIAlertAction(title: "카메라", style: .default) {
+            (action) in self.openCamera()
+        }
+        
+        let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        
+        alert.addAction(library)
+        alert.addAction(camera)
+        alert.addAction(cancel)
+        present(alert, animated: true, completion: nil)
+    }
+    
+  /// 사진 앨범으로 이동하는 함수
+    func openLibrary() {
+        picker.sourceType = .photoLibrary
+        present(picker, animated: false, completion: nil)
+    }
+    
+  /// 카메라로 이동하는 함수
+    func openCamera() {
+        picker.sourceType = .camera
+        present(picker, animated: false, completion: nil)
+    }
+    
+  
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        picker.delegate = self
+    }
+}
+
+extension SecondViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+  
+  /// 선택한 이미지를 photoImageView에 나오도록 하는 함수
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+            photoImageView.image = image
+            print(info)
+        }
+        dismiss(animated: true, completion: nil)
+    }
+}
+
+```
+
+### 각 코드별 기능
+
+1. **alert**
+
+   - UIAlertController를 사용해 Alert 객체를 만들 수 있다. Title, message는 String? 타입으로 넣고 싶지않다면 nil을 입력해주면 된다.
+
+   ```swift
+   let alert = UIAlertController(title: "사진선택", message: "두가지 방법으로 선택해요", preferredStyle: .actionSheet)
+   ```
+
+   
+
+   - **preferredStyle**은 두가지가 있다.
+
+     1. **actionSheet** : 아래에서 위로 올리는 창 **(default)**
+
+        ![FinalStep_result2-2](images/FinalStep_result2-2.png)
+
+     2. **alert**: 권한설정의 허용, 허용 안함 같은 작은 창을 보여주는 창
+
+        ![alert_example](images/alert_example.png)
+
+   - 액션 버튼만들기
+
+     - **UIAlertAction**으로 만든다.
+     - **title**에 이름, **style**에 스타일을 넣으면 되고 스타일은 총 세가지이다.
+       1. **cancel**: default 보다 글씨가 더 굵고 맨 아래에 위치 (파란색으로 표시)
+       2. **default**: 파란색으로 표시
+       3. **destructive**: 빨간색으로 표시
+     - **handler**는 버튼을 눌렀을 때 실행해야하는 행동이다. 만약 아무 행동도 안 할꺼라면 nil
+
+   ```swift
+   let library = UIAlertAction(title: "사진앨범", style: .default) {
+     (action) in self.openLibrary()
+   }
+      
+   let camera = UIAlertAction(title: "카메라", style: .default) {
+     (action) in self.openCamera()
+   }
+           
+   let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+   ```
+
+   - 액션 버튼 추가 및 alert view 화면에 뜨게 만들기
+
+   ```swift
+   alert.addAction(library)
+   alert.addAction(camera)
+   alert.addAction(cancel)
+   present(alert, animated: true, completion: nil)
+   ```
+
+   
+
+2. **Delegate 채택 및 UIImagePickerController 인스턴스 생성**
+
+   - **UINavigationControllerDelegate**를 같이 선언하는 이유는 **UIImagePickerControllerDelegate**의 **delegate** 속성이 두가지 프로토콜을 모두 구현하는 객체로 정의가 되어있기 때문이다.
+   - 즉, 아래의 코드에 self를 picker.delegate에 할당하려면 self는 **UINavigationControllerDelegate** 타입이어야 한다.
+   - extension으로 구현한 이유는 클래스가 바로 상속받아도 되지만 **Swift에서 Delegate 채택 작업은 extension으로 빼는것이 좋기 때문이다.**
+
+   ```swift
+   let picker = UIImagePickerController()
+   ...
+   override func viewDidLoad() {
+     super.viewDidLoad()
+     picker.delegate = self
+   }
+   ...
+   extension SecondViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {}
+   ```
+
+   
+
+3. **사진앨범과 카메라로 이동하는 함수 구현**
+
+   ```swift
+   /// 사진 앨범으로 이동하는 함수
+       func openLibrary() {
+           picker.sourceType = .photoLibrary
+           present(picker, animated: false, completion: nil)
+       }
+       
+     /// 카메라로 이동하는 함수
+       func openCamera() {
+           picker.sourceType = .camera
+           present(picker, animated: false, completion: nil)
+       }
+   ```
+
+4. **Info.plist에서 권한 설정하기**
+
+   - 카메라와 갤러리를 사용할 수 있게 권한을 설정한다.
+
+     ![FinalStep_info](images/FinalStep_info.png)
+
+5. **선택한 이미지를 photoImageView에 넣는 함수**
+
+   - **imagePickerController()** 함수를 활용한다.
+
+   - info의 값을 UIImage로 가져올 수 있다.
+
+   - info를 프린트하면 아래와 같은 Dictionary타입의 데이터가 나온다 여기서 이미지를 가져오기 위해선 OriginalImage를 키로 가지는 값을 가져오면 된다.
+
+     ![image_url](images/image_url.png)
+
+   - dismiss를 구현하지 않으면 imagePickerController가 사라지지 않는다.
+
+```swift
+extension SecondViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+  
+  /// 선택한 이미지를 photoImageView에 나오도록 하는 함수
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+            photoImageView.image = image
+            print(info)
+        }
+        dismiss(animated: true, completion: nil)
+    }
+}
+```
+
+## 사이즈 조절
+
+- 폰 별로 해상도가 달라서 내가 배치한 item들의 위치가 달라질 수 있다
+- Constraint를 추가해서 비율을 맞춰줄 수 있다.
+
+![size](images/size.png)
+
+### 결과 (시뮬레이터에는 카메라 기능을 사용할 수 없기에 에러 발생)
+
+![FinalStep_result1](images/FinalStep_result1.png)
+
+![FinalStep_result2-2](images/FinalStep_result2-2.png)
+
+- **UIAlertController에 title과 message를 nil로 준 경우**
+
+```swift
+let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+```
+
+![FinalStep_result2-1](images/FinalStep_result2-1.png)
+
+![FinalStep_result3](images/FinalStep_result3.png)
+
+![FinalStep_result4](images/FinalStep_result4.png)
+
+![FinalStep_result5](images/FinalStep_result5.png)
+
+## 나의 IPhone으로 실행한 결과
+
+### iPhone으로 빌드하는 방법
+
+1. Xcode > Preference > Accounts에 들어가서 Apple ID를 등록
+
+   ![build1](images/build1.png)
+
+2. 진행중인 프로젝트를 누르고, Target, General로 들어가 Team (Personal Team) 설정
+
+   ![build2](images/build2.png)
+
+3. 아이폰을 맥과 연결 (아이폰은 잠금 해제)
+
+4. Xcode 시뮬레이터할 디바이스를 iPhone으로 선택한 후 빌드하면 끝
+
+   ![build3](images/build3.png)
+
+## 나의 IPhone으로 실행한 결과 (카메라 테스트)
+
+### 앱 생성
+
+![icon](images/icon.jpeg)
+
+### 카메라 권한 설정
+
+![phone_result1](images/phone_result1.jpeg)
+
+### 촬영한 사진을 쓸지말지 결정
+
+![phone_result2](images/phone_result2.jpeg)
+
+### 결과
+
+![phone_result3](images/phone_result3.jpeg)
