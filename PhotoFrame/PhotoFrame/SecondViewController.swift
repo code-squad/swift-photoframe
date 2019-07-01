@@ -10,12 +10,46 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet weak var photoImageView: UIImageView!
     override func viewDidLoad() {
-        print(#file, #line, #function, #column)
+        print("secondSceneVC viewDidLoad\n", #file, #line, #function, #column)
+        self.photoImageView.image = UIImage(named: "07.jpg")
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func displayNextImage(_ sender: Any) {
+        let imageId = generateImageId()
+        self.photoImageView.image = UIImage(named: "\(imageId).jpg")
+    }
+    
+    private func generateImageId() -> String {
+        let randomNumber = Int.random(in: 1..<23)
+        var result = ""
+        if randomNumber < 10 {
+            result = "0" + String(randomNumber)
+        }else{
+            result = String(randomNumber)
+        }
+        return result
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("secondSceneVC viewWillAppear\n", #file, #line, #function, #column)
+        super.viewWillAppear(true)
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        print("secondSceneVC viewDidAppear\n", #file, #line, #function, #column)
+        super.viewDidAppear(true)
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        print("secondSceneVC viewWillDisappear\n", #file, #line, #function, #column)
+        super.viewWillDisappear(true)
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        print("secondSceneVC viewDidDisappear\n", #file, #line, #function, #column)
+        super.viewDidDisappear(true)
+    }
 }
+
 
