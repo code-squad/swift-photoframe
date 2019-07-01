@@ -15,7 +15,6 @@ class SecondViewController: UIViewController {
         print("secondSceneVC viewDidLoad\n", #file, #line, #function, #column)
         self.photoImageView.image = UIImage(named: "07.jpg")
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func displayNextImage(_ sender: Any) {
