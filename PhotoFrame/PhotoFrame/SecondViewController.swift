@@ -24,12 +24,8 @@ class SecondViewController: UIViewController {
     
     private func generateImageId() -> String {
         let randomNumber = Int.random(in: 1..<23)
-        var result = ""
-        if randomNumber < 10 {
-            result = "0" + String(randomNumber)
-        }else{
-            result = String(randomNumber)
-        }
+        var result = String.init(format: "%.2d", randomNumber)
+        
         return result
     }
     
