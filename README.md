@@ -7,8 +7,7 @@
  - [STEP 11-3](./STEP_11-3.md) [2019/6/24/Mon]
  - [STEP 11-3 IBAction vs IBOutlet](./STEP_11-3-2.md) [2019/6/24/Mon]
  - [STEP 11-4](./STEP_11-4.md) [2019/6/25 Tue]
-
  - [STEP 11-5](./STEP_11-5.md) [2019/6/26 Wed]
  - [STEP_11-6](./STEP_11-6.md)[2019/6/27 Thu]
-
-- [STEP_11-7](./STEP_11-7.md)[2019/7/01 Mon]
+- [STEP_11-7](./STEP_11-7.md)[2019/7/01 Mon] - 추가요구사항 #1 
+- [STEP_11-2]() [ 2019/07/02 Tue] - 추가요구사항 #2
