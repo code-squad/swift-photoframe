@@ -18,13 +18,13 @@
 
 <br>
 
-## UITabBarController
+### UITabBarController
 
 > radio-style 선택 인터페이스를 관리하기 위한 컨테이너 뷰 컨트롤러. 선택시 표시할 차일드 뷰 컨트롤러를 결정한다.
 
 <br>
 
-### Declaration
+#### Declaration
 
 ```swift
 class UITabBarController: UIViewController
@@ -32,7 +32,7 @@ class UITabBarController: UIViewController
 
 <br>
 
-### Overview
+#### Overview
 
 탭 바 인터페이스는 스크린의 아래에 탭을 표시해 여러 다른 모드를 선택하고 해당 모드의 뷰를 보여준다.
 
@@ -56,7 +56,7 @@ class UITabBarController: UIViewController
 
 <br>
 
-### The views of a Tab Bar Controller
+#### The views of a Tab Bar Controller
 
 `UITabBarController` 클래스는 `UIViewController` 클래스를 상속받기 때문에, 탭 바 컨트롤러는 `view` 속성을 통해 접근할 수 있는 탭 바 컨트롤러의 뷰를 갖는다.
 
@@ -72,13 +72,13 @@ class UITabBarController: UIViewController
 
 <br>
 
-## UITabBar
+### UITabBar
 
 > 앱의 다른 서브태스크, 뷰들, 모드들을 선택하기 위해 탭바에 하나 이상의 버튼을 표시하는 컨트롤
 
 <br>
 
-### Declaration
+#### Declaration
 
 ```swift
 class UITabBar: UIView
@@ -86,7 +86,7 @@ class UITabBar: UIView
 
 <br>
 
-### Overview
+#### Overview
 
 보통, 탭 바는 `UITabBarController` 오브젝트와 결합해서 사용한다. 그러나 앱에서 UITabBar를 독립적으로 사용할 수도 있다. 
 
@@ -96,7 +96,7 @@ class UITabBar: UIView
 
 <br>
 
-### Responding to Tab Selections
+#### Responding to Tab Selections
 
 탭바 컨트롤러와 연결된 탭바는 컨트롤러가 자동으로 선택 항목을 관리하고 적절한 뷰 컨트롤러를 보여준다.
 
@@ -108,7 +108,7 @@ class UITabBar: UIView
 
 
 
-## UIViewController와 UIView의 차이점
+### UIViewController와 UIView의 차이점
 
 - 뷰는 스크린에 그리기 위한 오브젝트. 다른 서브뷰들을 포함할 수도 있다. 
 
@@ -127,7 +127,7 @@ class UITabBar: UIView
 
 <br>
 
-## UITabBarController와 UITabBar의 차이점
+### UITabBarController와 UITabBar의 차이점
 
 - UITabbar 객체는 뷰이기 때문에 데이터를 사용자에게 표시하고 사용자 입력을 허용하는 방법을 알고 있다.
 - UITabBar는 UIView의 하위 클래스이며 사용자에게 탭 항목 목록을 표시하고 사용자가 탭과 상호 작용할 때 사용자에게 피드백을 표시하는 방법이다.
@@ -136,3 +136,6 @@ class UITabBar: UIView
 
 - UITabbarController 객체는 컨트롤러이기때문에 사용자에게 표시 할 데이터와 사용자 입력으로 수행할 작업을 알고 있다. 
 - UITabBarController는 UIViewController의 하위 클래스이며 사용자에게 표시 할 탭과 사용자가 탭을 선택할 때 수행 할 작업을 알고 있다
+
+<br>
+
