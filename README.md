@@ -147,7 +147,7 @@ class UITabBar: UIView
 
 ### 실행 결과
 
-<img src = "./assets/Simulator Screen Shot - iPhone Xs - 2019-07-10 at 20.36.10.png" style = "height: 300px">
+<img src = "./assets/Simulator Screen Shot - iPhone Xs - 2019-07-10 at 20.36.10.png" width="300" height="600">
 
 
 
