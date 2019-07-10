@@ -5,6 +5,19 @@
 
 <br>
 
+## STEP-1. Tabbed App 템플릿
+
+<br>
+
+### 실행 결과
+
+![image-20190710184856258](./assets/image-20190710184856258.png)
+
+- 첫번째 탭: FirstViewController
+- 두번째 탭: SecondViewController
+
+<br>
+
 ## UITabBarController
 
 > radio-style 선택 인터페이스를 관리하기 위한 컨테이너 뷰 컨트롤러. 선택시 표시할 차일드 뷰 컨트롤러를 결정한다.
