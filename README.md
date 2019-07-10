@@ -147,7 +147,7 @@ class UITabBar: UIView
 
 ### 실행 결과
 
-<img src = "./assets/Simulator Screen Shot - iPhone Xs - 2019-07-10 at 20.36.10.png" style = "zoom:25%">
+<img src = "./assets/Simulator Screen Shot - iPhone Xs - 2019-07-10 at 20.36.10.png" style = "height: 300px">
 
 
 
