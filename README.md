@@ -153,3 +153,70 @@ class UITabBar: UIView
 
 
 
+<br>
+
+### IBOutlet
+
+> UI object에 메세지를 보내기 위해 필요한 연결을 위한 클래스 프로퍼티, 인터페이스 빌더와 연결을 위한 객체의 속성
+
+- 코드가 유저 인터페이스 객체에 메세지를 보낼 수 있게 하려면 유저 인터페이스 객체에서 *outlet*이라고 불리는 클래스의 특수한 프로퍼티에 연결을 해야한다.
+- Interface Builder는 아울렛에 대한 선언을 클래스에 추가하고 클래스 인스턴스를 아울렛에 연결한다. 
+- IBOutlet 에서 IB는 Interface Builder
+
+![image-20190710210542535](./assets/image-20190710210542535.png)
+
+- IBOutlet은 default로 `weak`
+  - `strong` 을 쓰는 경우: 복잡한 뷰 hierarchy를 가졌을 때, 중간에 있는 뷰가 dealloc 되면 하위뷰들도 같이 dealloc 된다. 그렇게 되면 의도치 않은 nil이 발생할 수 있다. 
+  - 그렇지만 일반적인 상황에서는 `weak`가 메모리 관리 차원에서 유리하다.
+  - 메모리가 부족하게 되면 메인 뷰를 nil 처리하게 되면서 main view와 subview들까지 dealloc 해서 메모리를 확보하게 된다. 이 때 strong이면 reference count가 절대 1 이하로 내려가지 않아서 parent 뷰가 dealloc 되어도 child view들은 dealloc 되지 않는다. 
+- Outlet이 옵셔널로 선언되는 이유
+  - 클래스나 구조체의 인스턴스가 초기화를 완료하기 전에 모든 저장 프로퍼티는 유효한 값을 가져야 한다.
+  - 뷰는 뷰 컨트롤러가 초기화 된 후에 로드된다. 그렇기 때문에 뷰 컨트롤러 클래스에 정의된 아웃렛들도 뷰 컨트롤러가 초기화된 직후에 바로 값을 갖지 않는다.
+  - 따라서 outlet은 implicitly unwrapped 옵셔널이다. (!)
+  - outlet이 확실히 연결되어 있다는 것을 알고 있기 때문에 !를 사용할 수 있다.
+  - 그러나 !로 사용했는데, 인터페이스 빌더와 아울렛을 연결하는 것을 까먹거나 하게되면 앱은 크래쉬가 나게 된다. 
+  - 값을 설정하기 전에 아울렛 변수에 접근하는 것은 위험할 수 있다. 뷰 컨트롤러가 뷰를 로드하기 전이나 뷰를 로드하는 중에 아울렛 변수에 접근하게 되면 런타임 에러가 발생한다.
+  - 필요에 따라 !, ? 를 사용
+
+<br>
+
+### UILabel Property
+
+- var text: String? : 레이블이 표시할 문자열
+  - text 프로퍼티에 값을 할당하면 attributedText 프로퍼티에도 똑같은 내용의 문자열이 할당
+- var attributedText: NSAttributedString? : 레이블이 표시할 속성 문자열
+  - NSAttributed 클래스를 사용한 속성 문자열 중 특정 부분의 속성을 변경 가능 (일부 글자만 변경 가능)
+  - attributedText 프로퍼티에 값을 할당하면 text 프로퍼티에도 똑같은 내용의 문자열이 할당
+- var textColor: UIColor! : 문자 색상
+- var font: UIFont! : 문자 폰트
+- var textAlignment: NSTextAlignment: 문자열의 가로 정렬
+  - left, right, center, justified, natural
+- var numberOfLines: Int : 문자를 나타내는 최대 라인 수
+  - 기본값 1
+  - 문자열을 모두 표시하고 싶을 때: 0
+  - 최대 라인 수를 초과하면 lineBreakMode 프로퍼티의 값에 따라 적절히 잘라서 표현
+  - adjustsFontSizeToFitWidth 프로퍼티 활용해 폰트 사이즈를 레이블의 넓이에 따라 자동 조절
+- var baselineAdjustment: UIBaselineAdjustment: 문자열이 autoshrink 되었을 때의 수직 정렬 방식
+  - Align Baseline: 문자가 작아졌을 때 기존 문자열의 기준선에 맞춤
+  - Align Center: 작아진 문자의 중앙선에 맞춤
+  - None: 기존 문자열의 위쪽 선에 맞춤
+- var lineBreakMode: NSLineBreakMode: 레이블의 경계선을 벗어나는 문자열에 대응하는 방식
+  - 기본값 Truncate tail
+  - Character wrap: 여러 줄 레이블에 주로 적용, 글자 단위로 줄 바꿈을 결정
+  - Word wrap: 여러 줄 레이블에 주로 적용, 단어 단위로 줄 바꿈을 결정
+  - Truncate head: 한 줄 레이블에 주로 적용, 앞쪽 텍스트를 자르고 '...' 으로 표시
+  - Truncate middle: 한 줄 레이블에 주로 적용, 중간 텍스트를 자르고 '...' 으로 표시
+  - Truncate tail: 한 줄 레이블에 주로 적용, 끝쪽 텍스트를 자르고 '...' 으로 표시
+
+<br>
+
+
+
+---
+
+### Reference
+
+http://monibu1548.github.io/2018/05/03/iboutlet-strong-weak/
+
+https://cocoacasts.com/should-outlets-be-optionals-or-implicitly-unwrapped-optionals
+
