@@ -25,8 +25,8 @@ class FirstViewController: UIViewController {
         photoLabel.backgroundColor = UIColor.init(red: 219/256, green: 161/256, blue: 205/256, alpha: 0.3)
         
         photoDescription.text = "Photo by Mindy"
+        photoDescription.alpha = 0.5
+        photoDescription.font = UIFont.systemFont(ofSize: 18, weight: .light)
     }
-
-
 }
 
