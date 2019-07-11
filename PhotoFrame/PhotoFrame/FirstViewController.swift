@@ -21,9 +21,9 @@ class FirstViewController: UIViewController {
     
     @IBAction func nextButtonTouched(_ sender: Any) {
         photoLabel.text = "민디의 사진액자🥳"
-        photoLabel.textColor = UIColor.init(red: 147/256, green: 203/256, blue: 255/256, alpha: 1)
+        photoLabel.textColor = UIColor.init(red: 147/255, green: 203/255, blue: 255/255, alpha: 1)
         photoLabel.font = UIFont.systemFont(ofSize: 35, weight: .black)
-        photoLabel.backgroundColor = UIColor.init(red: 219/256, green: 161/256, blue: 205/256, alpha: 0.3)
+        photoLabel.backgroundColor = UIColor.init(red: 219/255, green: 161/255, blue: 205/255, alpha: 0.3)
         
         photoDescription.text = "Photo by Mindy"
         photoDescription.alpha = 0.5
