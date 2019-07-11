@@ -30,5 +30,22 @@ class FirstViewController: UIViewController {
         photoDescription.alpha = 0.5
         photoDescription.font = UIFont.systemFont(ofSize: 18, weight: .light)
     }
+    
+    @IBAction func initButtonTouched(_ sender: Any) {
+        view.backgroundColor = .white
+        photoLabel.text = nil
+        photoDescription.text = nil
+        tadaLabel.text = nil
+    }
+    
+    @IBAction func tadaButtonTapped(_ sender: UIButton) {
+        sender.setTitle("TADA", for: .normal)
+        tadaLabel.text = "쨔쟈쟈쟈쟌"
+        tadaLabel.adjustsFontSizeToFitWidth = true
+    }
+    
+    @IBAction func backgroundButtonDraged(_ sender: Any) {
+        view.backgroundColor = UIColor.init(red: 249/255, green: 251/255, blue: 235/255, alpha: 1)
+    }
 }
 
