@@ -4,11 +4,13 @@
 
 ###Step1 - UITabBarController, UITabBar 
 
-- **UITabBar**
+- ####UITabBar
 
   - 일반적으로 하단 모서리에 위치한다.
 
-  - `UITabBarItem`을 하나이상 가진다.
+  - `radio - style` 을 가졌다. - 하나가 선택되고 다중선택을 불가능하다.
+
+  - `UITabBarItem`을 하나 이상 가진다.
 
   - `backGround` 이미지를 설정할 수 있다.
 
@@ -40,5 +42,17 @@
 | **Bar Tint**      | 선택된 `Bar`에 적용되는 색상이다.                            | **`tintColor`**                      |
 | **Item Position** | `TabBar`  에서 `TabItem` 의 위치를 표현하기위한 속성이다.    | **`itemPositioning`**                |
 
----
 
+
+**주요 메소드**
+
+| Method                                         | Description                                           |
+| ---------------------------------------------- | ----------------------------------------------------- |
+| **setItems( _  :animated:)**                   | `TabBar`  의 항목을 설정할 수 있게 해준다.            |
+| **beginCustomizingItems( _ : [UITabBarItem])** | 사용자가 `TabBar`  의 항목을 커스텀할 수 있게 해준다. |
+
+
+
+- #### UITabBarViewController
+
+  - 
