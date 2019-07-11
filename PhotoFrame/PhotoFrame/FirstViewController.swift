@@ -40,7 +40,7 @@ class FirstViewController: UIViewController {
     
     @IBAction func tadaButtonTapped(_ sender: UIButton) {
         sender.setTitle("TADA", for: .normal)
-        tadaLabel.text = "쨔쟈쟈쟈쟌"
+        tadaLabel.text = "💃쨔쟈쟈쟈쟌💃"
         tadaLabel.adjustsFontSizeToFitWidth = true
     }
     
