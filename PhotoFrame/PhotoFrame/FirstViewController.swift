@@ -12,6 +12,7 @@ class FirstViewController: UIViewController {
     
     @IBOutlet weak var photoLabel: UILabel!
     @IBOutlet weak var photoDescription: UILabel!
+    @IBOutlet weak var tadaLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
