@@ -5,7 +5,7 @@
 
 <br>
 
-## STEP-1. Tabbed App 템플릿
+## STEP 11-1. Tabbed App 템플릿
 
 <br>
 
@@ -141,7 +141,7 @@ class UITabBar: UIView
 
 
 
-## STEP-2. IBOutlet
+## STEP 11-2. IBOutlet
 
 <br>
 
@@ -209,6 +209,51 @@ class UITabBar: UIView
   - Truncate tail: 한 줄 레이블에 주로 적용, 끝쪽 텍스트를 자르고 '...' 으로 표시
 
 <br>
+
+## STEP 11-3. IBAction
+
+- 초기화면
+
+<img src = "./assets/Simulator Screen Shot - iPhone Xʀ - 2019-07-11 at 18.08.35.png" width = "300" height = "620">
+
+- **다음** 버튼 터치
+
+
+
+
+
+
+
+<img src = "./assets/Simulator Screen Shot - iPhone Xʀ - 2019-07-11 at 18.08.42.png" width = "300px" height = "620px">
+
+- 오른쪽 **Button** 버튼 터치
+  - Button -> TADA
+  - TADA -> 쨔쟈쟈쟈쟌 등장
+
+<img src = "./assets/Simulator Screen Shot - iPhone Xʀ - 2019-07-11 at 18.08.46.png" width = "300px" height = "630px">
+
+- **Background** 버튼 드래그 (Drag Outside)
+
+<img src = "./assets/Simulator Screen Shot - iPhone Xʀ - 2019-07-11 at 18.08.53.png" width="300px" height = "630px">
+
+- **초기화** 버튼 터치
+
+<img src = "./assets/Simulator Screen Shot - iPhone Xʀ - 2019-07-11 at 18.08.58.png" width = "300px" height = "630px">
+
+
+
+### 버튼에 액션을 여러개 추가
+
+- **Button** 버튼에는 nextButtonTouched(), tadaButtonTouched() 두가지 액션이 있다.
+- 민디의 사진 액자와 Photo By Mindy 레이블을 띄운다.
+- 자신의 텍스트를 TADA로 바꾸고 TADA 레이블은 💃쨔쟈쟈쟈쟌💃 으로 바꾼다.
+
+
+
+### 버튼이 여러개일 때 하나의 액션에 추가
+
+- ![image-20190711182340572](assets/image-20190711182340572.png)
+- nextButtonTouched() 는 **다음** 버튼과 **Button** 버튼에 연결되어 있다.
 
 
 
