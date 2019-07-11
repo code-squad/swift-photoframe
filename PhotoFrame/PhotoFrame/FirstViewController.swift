@@ -10,7 +10,6 @@ import UIKit
 
 class FirstViewController: UIViewController {
     
-    
     @IBOutlet weak var photoLabel: UILabel!
     @IBOutlet weak var photoDescription: UILabel!
     
@@ -18,7 +17,9 @@ class FirstViewController: UIViewController {
         super.viewDidLoad()
         
         print(#file, #line, #function, #column)
-        
+    }
+    
+    @IBAction func nextButtonTouched(_ sender: Any) {
         photoLabel.text = "민디의 사진액자🥳"
         photoLabel.textColor = UIColor.init(red: 147/256, green: 203/256, blue: 255/256, alpha: 1)
         photoLabel.font = UIFont.systemFont(ofSize: 35, weight: .black)
