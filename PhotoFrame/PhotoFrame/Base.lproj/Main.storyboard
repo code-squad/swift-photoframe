@@ -31,34 +31,35 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpH-Fw-ble">
-                                <rect key="frame" x="192" y="567" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="다음"/>
-                                <connections>
-                                    <action selector="nextButtonTouched:" destination="9pv-A4-QxB" eventType="touchUpInside" id="wb2-KL-e2r"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZq-o5-95G">
-                                <rect key="frame" x="258" y="567" width="86" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="nextButtonTouched:" destination="9pv-A4-QxB" eventType="touchUpInside" id="TDU-LO-QLa"/>
-                                    <action selector="tadaButtonTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="9RV-OT-X7E"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fS-si-5xV">
-                                <rect key="frame" x="114" y="567" width="39" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="초기화"/>
-                                <connections>
-                                    <action selector="initButtonTouched:" destination="9pv-A4-QxB" eventType="touchUpInside" id="9cg-XF-Psy"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5U2-K8-985">
-                                <rect key="frame" x="137" y="669" width="141" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="a9z-Tr-HTJ">
+                                <rect key="frame" x="117.5" y="514.5" width="179" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fS-si-5xV">
+                                        <rect key="frame" x="0.0" y="0.0" width="39" height="30"/>
+                                        <state key="normal" title="초기화"/>
+                                        <connections>
+                                            <action selector="initButtonTouched:" destination="9pv-A4-QxB" eventType="touchUpInside" id="9cg-XF-Psy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpH-Fw-ble">
+                                        <rect key="frame" x="71" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="다음"/>
+                                        <connections>
+                                            <action selector="nextButtonTouched:" destination="9pv-A4-QxB" eventType="touchUpInside" id="wb2-KL-e2r"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZq-o5-95G">
+                                        <rect key="frame" x="133" y="0.0" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="nextButtonTouched:" destination="9pv-A4-QxB" eventType="touchUpInside" id="TDU-LO-QLa"/>
+                                            <action selector="tadaButtonTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="9RV-OT-X7E"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5U2-K8-985">
+                                <rect key="frame" x="162.5" y="554.5" width="89" height="30"/>
                                 <color key="backgroundColor" red="0.97647058823529409" green="0.86265811761348365" blue="0.59887492025919942" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Background">
@@ -68,9 +69,8 @@
                                     <action selector="backgroundButtonDraged:" destination="9pv-A4-QxB" eventType="touchDragOutside" id="42y-st-Gcb"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TADA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5g-2Z-gKt">
-                                <rect key="frame" x="176" y="291" width="63" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TADA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5g-2Z-gKt">
+                                <rect key="frame" x="186" y="376" width="42.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -79,9 +79,15 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
+                            <constraint firstItem="5U2-K8-985" firstAttribute="top" secondItem="a9z-Tr-HTJ" secondAttribute="bottom" constant="10" id="QKa-ES-WVH"/>
+                            <constraint firstItem="U5g-2Z-gKt" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="V4K-eD-efy"/>
+                            <constraint firstItem="KQZ-1w-vlD" firstAttribute="top" secondItem="U5g-2Z-gKt" secondAttribute="bottom" constant="30" id="X5h-LZ-giM"/>
                             <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="cfb-er-3JN"/>
                             <constraint firstItem="A5M-7J-77L" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="e1l-AV-tCB"/>
                             <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
+                            <constraint firstItem="5U2-K8-985" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="gmg-Vl-Kg3"/>
+                            <constraint firstItem="a9z-Tr-HTJ" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="lNi-gE-Kj0"/>
+                            <constraint firstItem="a9z-Tr-HTJ" firstAttribute="top" secondItem="A5M-7J-77L" secondAttribute="bottom" constant="20" id="z16-B8-OqR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
