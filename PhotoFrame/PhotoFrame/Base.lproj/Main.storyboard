@@ -66,7 +66,7 @@
                                     <color key="titleColor" red="0.99607843139999996" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="backgroundButtonDraged:" destination="9pv-A4-QxB" eventType="touchDragOutside" id="42y-st-Gcb"/>
+                                    <action selector="backgroundButtonDraged:" destination="9pv-A4-QxB" eventType="touchDragExit" id="UPu-3x-2js"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TADA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5g-2Z-gKt">
