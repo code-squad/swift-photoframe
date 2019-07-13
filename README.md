@@ -1,5 +1,11 @@
 # Photo-Frame
 
+----
+
+<a href ="### Step2 - UILabel">ss</a>
+
+---
+
 ### Intro
 
 - **Literal expression**
@@ -154,4 +160,18 @@ y = 7
 | **`restorationIdentifier`**  | 뷰가 다시 복원되었을 때, 선택된 탭의 `ViewController`를 보존하기 위한 프로퍼티 🤔 |
 | **`viewControllers`**        | 각각의 `Tab`에 해당하는 `[rootViewController]` , `tab` 의 순서와 배열의 순서는 무관하다. |
 | **`tabBar`**                 | 내장된 `UITabBar`                                            |
+
+---
+
+
+
+
+
+### Step2 - UILabel
+
+
+
+<img width="307" alt="스크린샷 2019-07-14 오전 12 58 10" src="https://user-images.githubusercontent.com/39197978/61173772-e2e6c300-a5d2-11e9-9fec-59fbbd256550.png">
+
+
 
