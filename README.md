@@ -2,7 +2,9 @@
 
 ----
 
-<a href ="### Step2 - UILabel">ss</a>
+<a href ="#1-Step1---UITabBarController,-UITabBar">Step1 - UITabBarController, UITabBar</a>
+
+<a href ="#2-Step2---UILabel">Step2 - UILabel</a>
 
 ---
 
@@ -167,7 +169,7 @@ y = 7
 
 
 
-### Step2 - UILabel
+### 2. Step2 - UILabel
 
 
 
