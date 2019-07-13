@@ -10,8 +10,8 @@ import UIKit
 
 class FirstViewController: UIViewController {
     // MARK: - IBOutlet
-    @IBOutlet var firstLabel: UILabel!
-    @IBOutlet var firstDescription: UILabel!
+    @IBOutlet weak var firstLabel: UILabel!
+    @IBOutlet weak var firstDescription: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
