@@ -5,11 +5,11 @@
 
 <br>
 
-1. [STEP 11-1](#step-11-1.-tabbed-app-템플릿)
-2. [STEP 11-2](#step-11-2.-iboutlet)
-3. [STEP 11-3](#step-11-3.-ibaction)
+1. [STEP 11-1](#step-11-1-tabbed-app-템플릿)
+2. [STEP 11-2](#step-11-2-iboutlet)
+3. [STEP 11-3](#step-11-3-ibaction)
 
-## STEP 11-1. Tabbed App 템플릿
+## STEP 11-1 Tabbed App 템플릿
 
 <br>
 
@@ -145,7 +145,7 @@ class UITabBar: UIView
 
 
 
-## STEP 11-2. IBOutlet
+## STEP 11-2 IBOutlet
 
 <br>
 
@@ -214,7 +214,7 @@ class UITabBar: UIView
 
 <br>
 
-## STEP 11-3. IBAction
+## STEP 11-3 IBAction
 
 - 초기화면
 
