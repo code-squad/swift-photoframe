@@ -5,9 +5,9 @@
 
 <br>
 
-1. [STEP 11-1](step-11-1.-tabbed-app-템플릿)
-2. [STEP 11-2](step-11-2.-iboutlet)
-3. [STEP 11-3](step-11-3.-ibaction)
+1. [STEP 11-1](#step-11-1.-tabbed-app-템플릿)
+2. [STEP 11-2](#step-11-2.-iboutlet)
+3. [STEP 11-3](#step-11-3.-ibaction)
 
 ## STEP 11-1. Tabbed App 템플릿
 
