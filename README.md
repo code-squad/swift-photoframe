@@ -236,7 +236,7 @@ class UITabBar: UIView
 
 <img src = "./assets/Simulator Screen Shot - iPhone Xʀ - 2019-07-11 at 18.08.46.png" width = "300px" height = "630px">
 
-- **Background** 버튼 드래그 (Drag Outside)
+- **Background** 버튼 드래그 (Drag Exit)
 
 <img src = "./assets/Simulator Screen Shot - iPhone Xʀ - 2019-07-11 at 18.08.53.png" width="300px" height = "630px">
 
