@@ -255,6 +255,53 @@ class UITabBar: UIView
 - ![image-20190711182340572](assets/image-20190711182340572.png)
 - nextButtonTouched() 는 **다음** 버튼과 **Button** 버튼에 연결되어 있다.
 
+### IBAction
+
+> 컨트롤의 이벤트가 발생했을 때 실행될 행동
+
+### IBOutlet과 IBAction의 연결 구조
+
+![image-20190714183518269](assets/image-20190714183518269.png)
+
+- UI에 오브젝트를 추가한다.
+
+- 오브젝트의 행동을 구현하기 위해서 코드를 사용한다. (@IBAction)
+
+  - ex. 버튼을 클릭하면 버튼은 타겟에게 액션 메세지를 전송한다.
+
+- 컨트롤 이벤트가 발생하면 뷰가 감지해 컨트롤러에게 전달한다. 
+
+- 컨트롤러는 뷰를 업데이트한다.
+
+  - IBOutlet을 이용해 타겟의 속성등을 변경한다. (IBAction의 수행 내용)
+
+  
+
+### IBAction Control Event의 종류
+
+| Control Event          | 설명                              |
+| ---------------------- | --------------------------------- |
+| touchDown              | 컨트롤을 터치했을 때              |
+| touchDownRepeat        | 컨트롤을 연속 터치했을 때         |
+| touchDragInside        | 컨트롤 범위 내에서 드래그 했을 때 |
+| touchDragOutside					| 컨트롤 범위 바깥쪽에서 드래그 했을 때 |
+| touchDragEnter					| 컨트롤의 범위 바깥쪽으로 나갔다가 다시 들어왔을 때 |
+| touchDragExit					| 컨트롤의 범위 바깥쪽으로 나갔을때 |
+| touchUpInside          | 컨트롤 영역 안쪽에서 터치 후 뗐을 때 |
+| touchUpOutside         | 컨트롤 영역 안쪽에서 터치 후 컨트롤 바깥에서 뗐을 때 |
+| touchCancel            | 컨트롤의 현재 터치를 취소하는 이벤트 |
+| valueChanged           | 컨트롤을 드래깅이나 다른 방법으로 조작해서 값이 변경됐을 때 |
+| primaryActionTriggered | 버튼이 눌릴때 |
+| editingDidBegin        | UITextField에서 입력을 시작할 때 (텍스트 필드 눌렀을 때) |
+| editingChanged         | UITextField에서 값이 바뀔 때 |
+| editingDidEnd          | UITextField에서 입력이 끝났을 때 (텍스트 필드 바깥을 눌렀을 때) |
+| editingDidEndOnExit    | UITextField의 편집상태에서 키보드의 return을 눌렀을 때 |
+| allTouchEvents         | 모든 터치 이벤트 |
+| allEditingEvents       | UITextField에서 모든 편집 이벤트 |
+| applicationReserved    | 앱의 사용에 따라 지정할 수 있는 컨트롤 이벤트 값의 범위 |
+| systemReserved         | 내부 프레임워크 내에서 사용되는 예약된 컨트롤 이벤트 값의 범위 |
+| allEvents              | 시스템 이벤트를 포함한 모든 이벤트 |
+
 
 
 ---
@@ -264,4 +311,8 @@ class UITabBar: UIView
 http://monibu1548.github.io/2018/05/03/iboutlet-strong-weak/
 
 https://cocoacasts.com/should-outlets-be-optionals-or-implicitly-unwrapped-optionals
+
+https://developer.apple.com/documentation/uikit/uicontrol/event
+
+https://help.apple.com/xcode/mac/current/#/devc06f7ee11
 
