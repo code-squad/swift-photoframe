@@ -11,11 +11,24 @@ import UIKit
 class FirstViewController: UIViewController {
     // MARK: - IBOutlet
     @IBOutlet weak var firstLabel: UILabel!
+    
     @IBOutlet weak var firstDescription: UILabel!
+    
+    // MARK: - IBAction
+    @IBAction func nextButtonTouchUpInside(_ sender: UIButton) {
+        sender.setTitle("Touch up inside", for: .normal)
+    }
+    
+    @IBAction func nextButtonTouchUpOutside(_ sender: UIButton) {
+        sender.setTitle("Touch up outside", for: .normal)
+    }
+    
+    @IBAction func nextButtonTouchDown(_ sender: UIButton) {
+        sender.setTitle("Touch down", for: .normal)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configureFirstLabel()
         configureFirstDescription()
     }
