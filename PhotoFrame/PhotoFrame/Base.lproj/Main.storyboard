@@ -31,6 +31,31 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xY0-kN-gY7">
+                                <rect key="frame" x="82" y="244" width="250" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.84948662770000005" green="0.93295319899999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="다음"/>
+                                <connections>
+                                    <action selector="nextButtonTouchDown:" destination="9pv-A4-QxB" eventType="touchDown" id="Cc9-AL-djW"/>
+                                    <action selector="nextButtonTouchUpInside:" destination="9pv-A4-QxB" eventType="touchUpInside" id="o3C-mf-Fep"/>
+                                    <action selector="nextButtonTouchUpOutside:" destination="9pv-A4-QxB" eventType="touchUpOutside" id="3ek-Tb-BP5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ji-G3-jHP">
+                                <rect key="frame" x="82" y="282" width="250" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.74108069464203663" blue="0.91198830016853771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="0.74108069460000003" blue="0.91198830019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="따음">
+                                    <color key="titleColor" red="1" green="0.083141316549999997" blue="0.49481827969999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextButtonTouchDown:" destination="9pv-A4-QxB" eventType="touchDown" id="6Ff-wY-gjF"/>
+                                    <action selector="nextButtonTouchUpInside:" destination="9pv-A4-QxB" eventType="touchUpInside" id="YiK-Fl-CB9"/>
+                                    <action selector="nextButtonTouchUpOutside:" destination="9pv-A4-QxB" eventType="touchUpOutside" id="FOq-N3-pFP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -49,7 +74,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="749.27536231884062" y="-320.08928571428572"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">

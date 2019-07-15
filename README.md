@@ -241,15 +241,15 @@ y = 7
 
 - **Action**
 
-  - 액션은 하나의 컨트롤이 타겟에게 보내는 메시지 이다.
+  - 액션은 하나의 **컨트롤이 타겟에게 보내는 메시지** 이다.
 
-  - 시스템에게 의도를 전달하기 위해서 `Control`을 사용한다.
+  - **시스템에게 의도를 전달**하기 위해서 `Control`을 사용한다.
 
   - `Control`을 통해서 하드웨어에서 발생한 이벤트 자체는 의도를 내포하기 어렵다, 그래서 이벤트와 명령간의 변환에는 일종의 메커니즘이 필요하다.`target-action`이라고 불리는
 
-  - Appkit 에서는 액션을 SEL타입의 인스턴스 변수로 저장한다.
+  - Appkit 에서는 액션을 **SEL**타입의 인스턴스 변수로 저장한다.
 
-  - action메소드는 `sender(액션메시지를 보내는 컨트롤)`라는 Id타입의 단일 파라미터를 받으며, 반환은 따로 하지 않는다.
+  - **action메소드**는 `sender(액션메시지를 보내는 컨트롤)`라는 Id타입의 단일 파라미터를 받으며, 반환은 따로 하지 않는다.
 
   - UIkit에서의 이벤트는 사람의 손가락에서 시작되고, 이것은 멀티 터치또한 처리해야한다. 
 
@@ -265,33 +265,55 @@ y = 7
       •	- (void)action
       •	- (void)action:(id)sender
       •	- (void)action:(id)sender forEvent:(UIEvent *)event
-      
       ```
 
-```
-Target
-타겟은 액션메시지의 리시버이다.
-Control은 액션메시지에 타겟을 Outlet의 형태로 가지고있다.
-만약 action 의 타겟이 nil 이라도 아래의 절차에 따라 응답할 객체를 찾는다.
-1. 메시지처리를 위한 검색은 keyWindow를 첫번째로 window의 contentView로 연쇄된다.
-2. window와 window의 delegate를 시도한다.
-3. mainWIndow와 keyWindow가 다르다면 mainWindow로 다시 검색을 시작합니다.
-4. 오브젝트가 한번 시도를 하고 응답하지 못한다면, delegate에게 요청한다.
-```
+- **Target**
+
+- ```
+  타겟은 액션메시지의 리시버이다.
+  Control은 액션메시지에 타겟을 Outlet의 형태로 가지고있다.
+  만약 action 의 타겟이 nil 이라도 아래의 절차에 따라 응답할 객체를 찾는다.
+  1. 메시지처리를 위한 검색은 keyWindow를 첫번째로 window의 contentView로 연쇄된다.
+  2. window와 window의 delegate를 시도한다.
+  3. mainWIndow와 keyWindow가 다르다면 mainWindow로 다시 검색을 시작합니다.
+  4. 오브젝트가 한번 시도를 하고 응답하지 못한다면, delegate에게 요청한다.
+  ```
+
+- **Control**
+
+- ```
+  Control
+  컨트롤은 사용자의 의도를 시스템에 반영한다.
+  컨트롤은 사용자의 명령을 수행할 오브젝트에게 전달한다
+  
+  사용자가 컨트롤에서 어떤 작업을 했을 때, 하드웨어에는 이벤트를 발생시킨다.
+  이벤트는 컨트롤에게 전달되고, 특정 명령으로 변환된다.
+  
+  UIKit에서의 컨트롤들은 UIControl(iOS의 target-action 메커니즘의 대부분이 정의된 )의 자식클래스이다.
+  
+  
+  ```
+
+-  **Step3 - 실행영상**
+
+![ezgif com-resize](https://user-images.githubusercontent.com/39197978/61221321-3ed85580-a753-11e9-86e3-40ae587fe961.gif)
+
+하나의 버튼에는 여러개의 이벤트를 전달할 액션 메소드를 연결할 수 있고,
+
+그 액션메소드는 여러개의 컨트롤(UIControl 을 구현한 인스턴스) 들이 이벤트를 전달할 수있다.
+
+#####등록방법
+
+<img width="262" alt="스크린샷 2019-07-15 오후 10 48 30" src="https://user-images.githubusercontent.com/39197978/61221114-bc4f9600-a752-11e9-9624-caa3769c4e59.png">
+
+**하나의 버튼은 이벤트를 전달할 여러 개의 액션메소드를 지정할 수있다.**
 
 
+<img width="1680" alt="스크린샷 2019-07-15 오후 10 44 19" src="https://user-images.githubusercontent.com/39197978/61220846-29166080-a752-11e9-9571-141f581c9d2f.png">
 
-```Control
-Control
-컨트롤은 사용자의 의도를 시스템에 반영한다.
-컨트롤은 사용자의 명령을 수행할 오브젝트에게 전달한다
+**위의 스크린샷과 같이 하나의 버튼의 이벤트를 보낼 액션메소드를 이미 구현되어있는 액션메소드로 지정할 수있다.**
 
-사용자가 컨트롤에서 어떤 작업을 했을 때, 하드웨어에는 이벤트를 발생시킨다.
-이벤트는 컨트롤에게 전달되고, 특정 명령으로 변환된다.
 
-UIKit에서의 컨트롤들은 UIControl(iOS의 target-action 메커니즘의 대부분이 정의된 )의 자식클래스이다.
-
-```
 
 
 
