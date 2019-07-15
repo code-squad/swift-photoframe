@@ -253,9 +253,9 @@ y = 7
 
   - UIkit에서의 이벤트는 사람의 손가락에서 시작되고, 이것은 멀티 터치또한 처리해야한다. 
 
-  - Target  과 action을 하나 이상의 제어 이벤트와 연결하여 대상 개체에 작업 메시지를 보내도록 컨트롤을 설정합니다
+  - Target 과 action을 하나 이상의 제어 이벤트와 연결하여 대상 개체에 작업 메시지를 보내도록 컨트롤을 설정합니다
 
-  - 특정 지정된 방식으로 컨트롤을 터치하게되면, 컨트롤은 액션메시지 `(sendAction:to:from:forEvent:)`를 UIApplication에게 보낸다. 
+  - 특정 지정된 방식으로 컨트롤을 터치하게되면, **컨트롤은 액션메시지 `(sendAction:to:from:forEvent:)`를 UIApplication**에게 보낸다. 
 
   - 만약 액션메시지의 타겟이 nil이라면 액션메시지를 처리할 때 까지 체이닝을 통해 응답을 할 수 있는 객체를 찾는다.
 
@@ -287,7 +287,7 @@ y = 7
   컨트롤은 사용자의 명령을 수행할 오브젝트에게 전달한다
   
   사용자가 컨트롤에서 어떤 작업을 했을 때, 하드웨어에는 이벤트를 발생시킨다.
-  이벤트는 컨트롤에게 전달되고, 특정 명령으로 변환된다.
+  이벤트는 타겟에게 액션메시지로 전달되고, 명령이 실행된다.
   
   UIKit에서의 컨트롤들은 UIControl(iOS의 target-action 메커니즘의 대부분이 정의된 )의 자식클래스이다.
   
@@ -302,7 +302,7 @@ y = 7
 
 그 액션메소드는 여러개의 컨트롤(UIControl 을 구현한 인스턴스) 들이 이벤트를 전달할 수있다.
 
-#####등록방법
+##### 등록방법
 
 <img width="262" alt="스크린샷 2019-07-15 오후 10 48 30" src="https://user-images.githubusercontent.com/39197978/61221114-bc4f9600-a752-11e9-9624-caa3769c4e59.png">
 
@@ -317,26 +317,26 @@ y = 7
 
 **UIControl.Event**
 
-| Control Event          | 설명                                                         |
-| ---------------------- | ------------------------------------------------------------ |
-| touchDown              | 컨트롤을 누를 때 발생하는 이벤트                             |
-| touchDownRepeat        | 컨트롤을 연속해서 누를 때  발생하는 이벤트                   |
-| touchDragInside        | 컨트롤 내부에서 드래그가 이루어질 때 발생하는 이벤트         |
-| touchDragOutside       | 컨트롤 외부에서 드래그가 이루어 질 때 발생하는 이벤트        |
-| touchDragEnter         | 컨트롤이 외부에서 드래그를하며 내부로 드래그를 할 때 발생하는 이벤트 |
-| touchDragExit          | 컨트롤의 외부로 드래그를 할 때 발생하는 이벤트               |
-| touchUpInside          | 컨트롤 영역 안쪽에서 터치하고 손을 뗏을 때 발생하는 이벤트   |
-| touchUpOutside         | 컨트롤 영역 안쪽에서 터치 후 컨트롤 외부에서 손을 뗏을 때 발생하는 이벤트 |
-| touchCancel            | 컨트롤의 현재 터치를 취소햇을 때 발생하는 시스템이벤트       |
-| valueChanged           | 컨트롤을 드래깅이나 다른 방법으로 조작해서 값이 변경됐을 때 발생하는 이벤트 |
-| primaryActionTriggered | 버튼이 눌릴때                                                |
-| editingDidBegin        | UITextField에서 수정이 시작될 때 발생하는 이벤트 ( 텍스트 필드를 터치했을 때) |
-| editingChanged         | UITextField에서 텍스트가 변경되었을 때 발생하는 이벤트       |
-| editingDidEnd          | UITextField에서 수정이 끝났을 때 발생하는 이벤트 (텍스트 필드에서 포커싱이 사라질 때) |
-| editingDidEndOnExit    | UITextField의 편집중에 키보드의 return을 눌렀을 때 발생하는 이벤트 |
-| allTouchEvents         | 모든 터치 이벤트                                             |
-| allEditingEvents       | UITextField에서 모든 편집 이벤트                             |
-| applicationReserved    | 앱의 사용에 따라 지정할 수 있는 컨트롤 이벤트 값의 범위      |
-| systemReserved         | 내부 프레임워크 내에서 사용되는 예약된 컨트롤 이벤트 값의 범위 |
-| allEvents              | 시스템 이벤트를 포함한 모든 이벤트                           |
+| Control Event              | 설명                                                         |
+| -------------------------- | ------------------------------------------------------------ |
+| **touchDown**              | 컨트롤을 누를 때 발생하는 이벤트                             |
+| **touchDownRepeat**        | 컨트롤을 연속해서 누를 때  발생하는 이벤트                   |
+| **touchDragInside**        | 컨트롤 내부에서 드래그가 이루어질 때 발생하는 이벤트         |
+| **touchDragOutside**       | 컨트롤 외부에서 드래그가 이루어 질 때 발생하는 이벤트        |
+| **touchDragEnter**         | 컨트롤이 외부에서 드래그를하며 내부로 드래그를 할 때 발생하는 이벤트 |
+| **touchDragExit**          | 컨트롤의 외부로 드래그를 할 때 발생하는 이벤트               |
+| **touchUpInside**          | 컨트롤 영역 안쪽에서 터치하고 손을 뗏을 때 발생하는 이벤트   |
+| **touchUpOutside**         | 컨트롤 영역 안쪽에서 터치 후 컨트롤 외부에서 손을 뗏을 때 발생하는 이벤트 |
+| **touchCancel**            | 컨트롤의 현재 터치를 취소햇을 때 발생하는 시스템이벤트       |
+| **valueChanged**           | 컨트롤을 드래깅이나 다른 방법으로 조작해서 값이 변경됐을 때 발생하는 이벤트 |
+| **primaryActionTriggered** | 버튼이 눌릴때                                                |
+| **editingDidBegin**        | UITextField에서 수정이 시작될 때 발생하는 이벤트 ( 텍스트 필드를 터치했을 때) |
+| **editingChanged**         | UITextField에서 텍스트가 변경되었을 때 발생하는 이벤트       |
+| **editingDidEnd**          | UITextField에서 수정이 끝났을 때 발생하는 이벤트 (텍스트 필드에서 포커싱이 사라질 때) |
+| **editingDidEndOnExit**    | UITextField의 편집중에 키보드의 return을 눌렀을 때 발생하는 이벤트 |
+| **allTouchEvents**         | 모든 터치 이벤트                                             |
+| **allEditingEvents**       | UITextField에서 모든 편집 이벤트                             |
+| **applicationReserved**    | 앱의 사용에 따라 지정할 수 있는 컨트롤 이벤트 값의 범위      |
+| **systemReserved**         | 내부 프레임워크 내에서 사용되는 예약된 컨트롤 이벤트 값의 범위 |
+| **allEvents**              | 시스템 이벤트를 포함한 모든 이벤트                           |
 
