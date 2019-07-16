@@ -311,7 +311,15 @@ class UITabBar: UIView
 
 ## STEP 11-4 Scene과 Segue
 
+### 실행결과
+
+![step4result](assets/step4.gif)
+
+
+
 <br>
+
+### Segue
 
 - 유저 인터페이스의 다양한 경로를 그래픽적으로 레이아웃하기 위해 segue를 사용한다. 
 
