@@ -217,6 +217,10 @@ class UITabBar: UIView
 
 ## STEP 11-3 IBAction
 
+<br/>
+
+### 실행결과
+
 - 초기화면
 
 <img src = "./assets/Simulator Screen Shot - iPhone Xʀ - 2019-07-11 at 18.08.35.png" width = "300" height = "620">
@@ -310,6 +314,8 @@ class UITabBar: UIView
 <br/>
 
 ## STEP 11-4 Scene과 Segue
+
+<br/>
 
 ### 실행결과
 
