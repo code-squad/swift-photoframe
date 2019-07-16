@@ -46,6 +46,7 @@
                                         <state key="normal" title="다음"/>
                                         <connections>
                                             <action selector="nextButtonTouched:" destination="9pv-A4-QxB" eventType="touchUpInside" id="wb2-KL-e2r"/>
+                                            <segue destination="gDm-0U-AjR" kind="show" id="Cvl-b8-Afl"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZq-o5-95G">
@@ -109,7 +110,7 @@
                     <view key="view" contentMode="scaleToFill" id="6dE-tE-zvd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.82088863289444503" green="0.88924652493112" blue="0.94879450289731093" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="Mmf-57-o1p"/>
                     </view>
                 </viewController>
