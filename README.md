@@ -8,6 +8,7 @@
 1. [STEP 11-1](#step-11-1-tabbed-app-템플릿)
 2. [STEP 11-2](#step-11-2-iboutlet)
 3. [STEP 11-3](#step-11-3-ibaction)
+4. [STEP 11-4](#step-11-4-scene과-segue)
 
 ## STEP 11-1 Tabbed App 템플릿
 
@@ -306,7 +307,131 @@ class UITabBar: UIView
 | systemReserved         | 내부 프레임워크 내에서 사용되는 예약된 컨트롤 이벤트 값의 범위 |
 | allEvents              | 시스템 이벤트를 포함한 모든 이벤트 |
 
+<br/>
 
+## STEP 11-4 Scene과 Segue
+
+<br>
+
+- 유저 인터페이스의 다양한 경로를 그래픽적으로 레이아웃하기 위해 segue를 사용한다. 
+
+- 세그는 한 scene에서 다른 씬으로의 트랜지션을 정해준다.
+
+- 유저 인터페이스의 터치나 3D 터치 제스처 등으로 트리거 된다.
+
+-  각 세그 타입은 다른 트랜지션 결과를 가져온다.
+
+  <br/>
+
+### Segue Type
+
+![image-20190716221424912](assets/image-20190716221424912.png)
+
+
+
+| Symbol                                                       | Type               | Description                                                  |
+| ------------------------------------------------------------ | ------------------ | ------------------------------------------------------------ |
+| ![SB_segue_push](https://help.apple.com/xcode/mac/current/en.lproj/Art/SB_segue_push.png) | Show               | 초기 뷰 컨트롤러가 네비게이션 컨트롤러면  show를 통해 뷰를 뷰컨트롤러 스택에 푸시한다.<br />split view에서 화면의 컨텐츠에 따라 디테일 영역 또는 마스터 영역에 컨텐츠를 표시한다.<br/>앱이 마스터 및 디테일 뷰를 표시하는 경우 콘텐츠가 디테일 영역으로 푸시된다. 앱이 마스터와 디테일 중 하나만 표시하는 경우 콘텐츠는 현재 뷰컨트롤러 스택의 탑에 푸시된다. |
+| ![SB_segue_push](https://help.apple.com/xcode/mac/current/en.lproj/Art/SB_segue_push.png) | Show Detail        | split view 컨트롤러에서 사용된다.<br />show와 비슷하지만 push 가 아니라 replace이다. <br/>디테일 영역에 컨텐츠를 표시한다. 마스터와 디테일 뷰를 표시하고 있을 때, 새로운 컨텐츠가 현재 디테일뷰를 대체한다.<br/>마스터와 디테일 중 하나만 표시하는 경우에는 컨텐츠가 현재 뷰 컨트롤러 스택의 탑을 대체한다.<br />split view가 아닌 곳에서는 modal segue처럼 동작한다. |
+| ![SB_segue_modal](https://help.apple.com/xcode/mac/current/en.lproj/Art/SB_segue_modal.png) | Present Modally    | 컨텐츠를 모달 형태로 띄운다.<br />모달 뷰 컨트롤러는 계층 구조 또는 스택에 속하지 않고 이전 뷰 컨트롤러 위에 위치한다. |
+| ![SB_segue_popover](https://help.apple.com/xcode/mac/current/en.lproj/Art/SB_segue_popover.png) | Present as Popover | 뷰 위에 앵커를 가진 팝업 형태로 컨텐츠 뷰를 띄운다.<br />이 세그 타입은 iPad에서 주로 사용된다. iPhone과 같이 화면이 작은 기기에서는 일반적인 모달 트랜지션으로 동작한다. |
+| ![SB_segue_custom](https://help.apple.com/xcode/mac/current/en.lproj/Art/SB_segue_custom.png) | Custom             | 개발자가 지정한 세그 동작을 수행한다.                        |
+
+<br/>
+
+### Animations for modal segues
+
+- Cover Vertical: default, 뷰가 아래에서 위로 올라온다.
+- Flip Horizontal: 카드를 뒤집는 것처럼 뷰가 수평으로 뒤집힌다. 
+- Cross Dissolve: 이전 뷰는 서서히 사라지고 다음 뷰는 서서히 나타난다.
+- Partial Curl: 노트의 페이지를 넘기는 것처럼 뷰가 나타난다. 
+
+<br/>
+
+### Segue 연결 방법
+
+1. 스토리보드에서 직접 연결
+
+   - Ctrl + 클릭
+     ![image-20190716215232261](assets/image-20190716215232261.png)
+
+   <br/>
+
+2. 스토리보드와 코드를 이용해 연결
+
+   - `func performSegue(withIdentifier identifier: String, sender: Any?)`
+
+   - 세그웨이 identifier 설정
+
+   - ![image-20190716215617416](assets/image-20190716215617416.png)
+
+     
+
+   - ```swift
+     @IBAction func nextView(_ sender: UIButton) {
+       performSegue(withIdentifier: "next", sender: sender)
+     }
+     ```
+
+   <br/>
+
+3. 코드를 이용해 연결
+
+   - ```swift
+     @IBAction func nextButtonTapped(_ sender: UIButton) {
+       let vc = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
+             present(vc, animated: true, completion: nil)
+     }
+     ```
+
+<br/>
+
+### prepare
+
+segue 가 트리거되면 `prepare(for:)` 메소드가 뷰 컨트롤러에서 불리고 이 때, 대상 뷰 컨트롤러의 프로퍼티들을 설정할 수 있다. 
+
+```swift
+public class MyViewController2 {
+   var somePropertyFromMyViewController2: String!
+}
+
+public class MyViewController3 {
+   var someOtherPropertyFromMyViewController3 = [Int]()
+}
+
+public class MyViewController1 {
+   prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     if let vc1 = segue.destination as? MyViewController1 {
+        vc1.somePropertyFromMyViewController1 = someValueFromTheOriginVC
+     }
+     else if let vc2 = segue.destination as? MyViewController2 {
+        vc2.someOtherPropertyFromMyViewController2 = someOtherValue
+     }
+   }
+}
+```
+
+<br/>
+
+### About The Life Cycle Of View Controllers During Segues
+
+![mini1495222654-1100x752](assets/mini1495222654-1100x752.png)
+
+- `prepareForSegue` 는 destination 뷰 컨트롤러가 이니셜라이즈 되고 난 뒤, 그리고 viewDidLoad 메소드가 호출되기 전에 불린다.  
+
+- destination 뷰 컨트롤러의 프로퍼티를 설정할 때 viewDidLoad 이후로만 사용이 가능하다.  
+
+  - segue로 전달된 프로퍼티들은 viewDidLoad, viewWillAppear, viewDidAppear에서는 안전하게 사용할 수 있다. 
+
+  <br/>
+
+  
+
+### Unwind Segue
+
+![image-20190716214748777](assets/image-20190716214748777.png)
+
+- 세번째 뷰 컨트롤러에서 바로 첫번째 뷰 컨트롤러로 돌아와야할 때 unwindSegue를 사용한다. 
 
 ---
 
@@ -318,5 +443,11 @@ https://cocoacasts.com/should-outlets-be-optionals-or-implicitly-unwrapped-optio
 
 https://developer.apple.com/documentation/uikit/uicontrol/event
 
-https://help.apple.com/xcode/mac/current/#/devc06f7ee11
+https://help.apple.com/xcode/mac/current/#/devc06f7ee11https://help.apple.com/xcode/mac/current/#/dev7be043cad
+
+https://digitalleaves.com/define-segues-programmatically/
+
+https://developer.apple.com/documentation/uikit/uistoryboardsegue
+
+https://medium.com/@kyeahen/ios-unwind-segue-in-swift-e8ff0e7fbbcd
 
