@@ -116,6 +116,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <state key="normal" title="다음"/>
+                                <connections>
+                                    <segue destination="o6d-CK-REO" kind="show" id="cO1-oH-MMX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.82088863289444503" green="0.88924652493112" blue="0.94879450289731093" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -125,6 +128,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g5O-1o-iCx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1594.2028985507247" y="-315.40178571428572"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gCs-vx-b5t">
+            <objects>
+                <viewController id="o6d-CK-REO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XFa-M6-7zr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Oy9-ue-0nv"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4tQ-JJ-BZv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2358" y="-315"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
