@@ -15,7 +15,9 @@ class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(#file, #line, #function, #column)
+        firstLabel.textColor = .brown
+        firstLabel.textAlignment = .right
+        firstLabel.text = "흰의 사진 액자"
     }
 
 
