@@ -110,13 +110,21 @@
                     <view key="view" contentMode="scaleToFill" id="6dE-tE-zvd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mKk-jW-DoX">
+                                <rect key="frame" x="195" y="438" width="32" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="다음"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.82088863289444503" green="0.88924652493112" blue="0.94879450289731093" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="Mmf-57-o1p"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g5O-1o-iCx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1595" y="-315"/>
+            <point key="canvasLocation" x="1594.2028985507247" y="-315.40178571428572"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
