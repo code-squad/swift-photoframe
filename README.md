@@ -92,3 +92,113 @@ tab bar view 안에서 tab bar item 의 관리와
 /Users/allwhite/Desktop/Codesquad/swift-photoframe/PhotoFrame/PhotoFrame/SecondViewController.swift 15 viewDidLoad() 40 <- second item 맨 처음 선택시
 ```
 
+
+
+## 📍 Step 2 IBOutlet
+
+### View & UIView
+
+앱에서 user interface 중 가장 기초, 기반이 되는 구성요소이다. view 는 다시 다른 view 를 안에 내재할 수 있다. (embedded view)
+
+그 중 `UIView` 는 모든 view 의 최상위 class(root) class 로 공통 behavior 를 정의해 놓았다. 또한 사각형의 컨텐츠를 스크린에 표시할 수 있도록 관리를 담당하는 객체이다. 
+
+### UILabel
+
+> read-only text 를 보여주는 view
+
+```swift
+@interface UILabel : UIView
+```
+
+- the appearance of labels is configurable : 설정 가능하다
+- customize 가능
+
+설정 가능한 attributes
+
+| attribute                               |                                                              |
+| --------------------------------------- | ------------------------------------------------------------ |
+| `text`, `attributedText`                | label content 지정<br />attributedText(NSAttributedString) string 내에서 일부만, 부분만 스타일링 속성을 바꿀 수 있다 |
+| `textColor`                             | label 안 text 의 색상 지정                                   |
+| `font`                                  | 폰트 `UIFont` type                                           |
+| `textAlignment`                         | alignment 정렬                                               |
+| `numberOfLines`                         | lines. 최대 줄 개수를 설정                                   |
+| `isHighlighted`, `highlightedTextColor` | highlighted 된 상태로 그려져야 하는지 지정<br />그 때의 highlight 색상 지정 |
+| `lineBreakMode`                         | contents 가 label 크기보다 클 때, 어떻게                     |
+
+이외에도 label 크기, 그림자 관련 설정도 가능
+
+&nbsp;
+
+### NSAttributedString & NSMutableAttributedString
+
+`NSAttributedString` 관련 속성(스타일, 색상 등)을 가지고 있는 string 을 표현하는 클래스
+
+- 지정한 위치의 attribute 를 가져올 수 있다
+- `NSAttributedString.Key` : attributed string 의 text 에 적용할 수 있는 특성들을 선언함
+
+`NSMutableAttributedString` 은 `NSAttributedString` 의 하위 클래스
+
+- Attributed string 을 mutating(변하게, 수정하게) 하기 위한 용도로 만들어진 클래스
+- attribute 를 추가하여 지정할 수 있다
+- 기존의 `NSAttributedString` 의 메소드 + 수정/변동 관련 메소드 추가
+- [참조](https://developer.apple.com/documentation/foundation/nsmutableattributedstring)
+
+```swift
+let description = "NSMutableAttributedString 을 사용하여 설정되었습니다."
+let attributedString = NSMutableAttributedString(string: description)
+let yellowBackgroundAttribute: [NSAttributedString.Key : Any] = [
+            NSAttributedString.Key.backgroundColor : UIColor.yellow,
+            NSAttributedString.Key.foregroundColor : UIColor.blue
+            ]
+let convertedFirstLabelString = NSString(string: description)
+attributedString.setAttributes(yellowBackgroundAttribute
+            , range: convertedFirstLabelString.range(of: "NSMutableAttributedString"))
+self.firstDescription.attributedText = attributedString
+```
+
+![](./images/UILabel-AttributedString.png)
+
+&nbsp;
+
+### Interface Builder
+
+- 앱의 user interface 를 생성하는 툴
+- user interface file : user interface builder 에서 만든 interface 에 대한 정보를 저장하는 형식
+  - extension : `.storyboard` or `.xib`
+  - `.storyboard` : 여러개의 view controller 와 그 사이를 잇는 segues
+  - `.xib` : 한 개의 view controller or menu bar
+- [참조](https://developer.apple.com/library/archive/documentation/ToolsLanguages/Conceptual/Xcode_Overview/UsingInterfaceBuilder.html#//apple_ref/doc/uid/TP40010215-CH42-SW1)
+
+&nbsp;
+
+### Attribute
+
+Swift 에서 Attribute 은 선언(declaration) 혹은 타입에 대한 추가적인 정보를 제공한다. `@`기호와 함께 사용되며, 선언 혹은 타입 앞에 쓰여 추가적인 정보를 전달하는 역할을 한다. ([참조](https://docs.swift.org/swift-book/ReferenceManual/Attributes.html))
+
+```
+@ attribute_name
+@ attribute_name(attribute_arguments)
+```
+
+&nbsp;
+
+### Declaration Attibutes Used by Interface Builder
+
+그 중, interface builder 에서 사용되는 declaration attributes 는 다음과 같다. 이는 interface builder 의 object 와 코드의 선언부를 동기화(synchronize), 즉, 연결하기 위해 사용한다.
+
+- `IBAction`, `IBSegueAction`, `IBOutlet`, `IBDesignable`, and `IBInspectable`
+
+- *Example*
+
+  ```swift
+  @IBOutlet weak var firstLabel: UILabel!
+  ```
+
+&nbsp;
+
+### IBOutlet
+
+- interface builder 에서 생성한 객체와 소스코드를 연결하기 위해 사용하는 attribute
+- 주로 객체의 속성을 제어할 목적으로 클래스의 프로퍼티에 연결
+- 연결된 객체의 속성을 소스코드에서 변경할 수 있다.
+- [참조](https://velog.io/@sogih/IBOutlet%EA%B3%BC-IBAction-1djvdhxlhc)
