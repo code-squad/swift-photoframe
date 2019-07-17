@@ -14,7 +14,14 @@ class FirstViewController: UIViewController {
     
     @IBOutlet weak var firstDescription: UILabel!
     
-    // MARK: - IBAction
+    // MARK: - Methods
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configureFirstLabel()
+        configureFirstDescription()
+    }
+    
+    // MARK: IBAction
     @IBAction func nextButtonTouchUpInside(_ sender: UIButton) {
         sender.setTitle("Touch up inside", for: .normal)
     }
@@ -26,14 +33,9 @@ class FirstViewController: UIViewController {
     @IBAction func nextButtonTouchDown(_ sender: UIButton) {
         sender.setTitle("Touch down", for: .normal)
     }
+   
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        configureFirstLabel()
-        configureFirstDescription()
-    }
-    
-    // MARK: - Configure Method
+    // MARK: Configure Method
     private func configureFirstLabel() {
         self.firstLabel.text = "부엉이의 사진액자🦉"
         self.firstLabel.textColor = .brown
@@ -54,6 +56,7 @@ class FirstViewController: UIViewController {
             attributedString.addAttribute(.font, value: UIFont.boldSystemFont(ofSize: randomSize() ), range: NSRange(i*2...i*2+1))
             attributedString.addAttribute(.backgroundColor, value: UIColor.init(red: randomColor(), green: randomColor(), blue: randomColor(), alpha: randomColor()), range: NSRange(i*2...i*2+1))
         }
+        
         self.firstDescription.attributedText = attributedString
         self.firstDescription.preferredMaxLayoutWidth = 200
         self.firstDescription.numberOfLines = 4
