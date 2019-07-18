@@ -1,8 +1,8 @@
 # PhotoFrame (Step 11)
 
-- [Step 11-1  Tabbed App 템플릿](#-step-11-1-tabbed-app-템플릿)
-- [Step 11-2  IBOutlet](#-step-2-iboutlet)
-- [Step 11-3  IBAction]()
+- [Step 11-1  Tabbed App 템플릿](#-step-11-1--tabbed-app-템플릿)
+- [Step 11-2  IBOutlet](#-step-11-2--iboutlet)
+- [Step 11-3  IBAction](#-step-11-3--ibaction)
 
 &nbsp;
 
