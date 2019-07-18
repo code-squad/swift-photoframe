@@ -360,4 +360,53 @@ y = 7
 | ![img](https://help.apple.com/xcode/mac/current/en.lproj/Art/SB_segue_popover.png) | Present as Popover              | 기존 view 에 앵커를 둔 컨텐츠를 보여줍니다.                  |
 | ![img](https://help.apple.com/xcode/mac/current/en.lproj/Art/SB_segue_custom.png) | Custom                          | 개발자가 지정한 행동을 하는 segue입니다.                     |
 
-- - 
+
+
+- **UIModalTransitionStyle(animation - 전환 효과 )**
+
+- ```swift
+  enum UIModalTransitionStyle: Int {
+    	case coverVertical 
+    // viewcontroller가 전환될 때 view가 미끄러지듯이 올라오고, dissmiss시 내려가는 기본 transtion스타일
+  		case flipHorizontal
+    // 오른쪽에서 왼쪽으로 수평회전을 한다. 🔄 새로 떠오르는 뷰가 이전 뷰의 뒷면에 있던 것처럼 보인다. 뒤집히는 모양의 transition
+  		case crossDissolve
+    // 이전 뷰가 흐릿해지고 전환될 뷰가 뚜렷해지는 효과가 동시에 일어난다.
+  		case partialCurl
+    // 한 쪽 코너에서 전환될 뷰가 말아 올라오는 형태로 드러난다. UIModalPresentationStyle.fullScreen 에서만 지원되고 , 다른 형태에서 사용시 exception이 발생한다
+  }
+  ```
+
+- **UIModalPresentStyle**
+
+- ```swift
+  enum UIModalPresentStyle: Int {
+    case automatic
+  	// 시스템이 보여주는 방식을 정한다.
+  	case fullScreen
+  	// 스크린을 덮는 보여주는 방식
+  	case pageSheet
+    // 기본 뷰를 일부분을 덮는 보여주는 방식
+  	case formSheet
+    // 스크린의 중앙에 컨텐츠를 보여주는 방식
+  	case currentContext
+    // 다른 뷰컨트롤러를 통해 내용을 보여주는 방식
+  A presentation style where the content is displayed over another view controller’s content.
+  	case custom
+    // 사용자 정의 animator 객체로 부터 관리되는 보여주는 방식
+  	case overFullScreen
+    // 스크린을 덮는 뷰를 보여주는 방식
+  	case overCurrentContext
+    // 다른 뷰 컨트롤러의 컨텐츠를 통해 보여주는 방식
+  	case blurOverFullScreen
+    // 새로 표현하는 뷰를 보여주기 전에 기존의 뷰를 흐릿하게 하며 보여주는 방식
+  	case popover
+    // popover뷰로 보여주는 방식
+  	case none
+  
+  }
+  ```
+
+  
+
+- 
