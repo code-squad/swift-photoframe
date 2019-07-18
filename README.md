@@ -413,16 +413,55 @@ y = 7
 
   ![showPush](https://user-images.githubusercontent.com/39197978/61460661-23b35300-a9aa-11e9-970a-ffb67cd0a10d.gif)
 
-  - 
+  - **UINavigationViewController**의 경우 **Navigation Stack**에 viewcontroller가 **push**된다.
+
+  - 위의 **NavigationBar**의 **Item**을 보면 `< Back` 을 누르면 현재 viewcontroller가 **pop**된다.
+
+    
 
 - #### Present Modally
 
-![presentModally](https://user-images.githubusercontent.com/39197978/61460660-23b35300-a9aa-11e9-82e0-8cefad226927.gif)
+  ![presentModally](https://user-images.githubusercontent.com/39197978/61460660-23b35300-a9aa-11e9-82e0-8cefad226927.gif)
+
+  - viewcontroller를 modal로 보여주는 방식이다,
+  - 이전 view를 가리는 새로운 view가 보여지는 방식이다.
+
+
 
 - #### CustomSegue
 
   ![customSegue2](https://user-images.githubusercontent.com/39197978/61465239-a7713d80-a9b2-11e9-9259-bdda110579d1.gif)
 
+  - 사용자 정의 **segue**이다.
+  - 개발자가 정의한 대로 동작하고 **`UIStoryboardSegue`**를 상속하며 , **`perform()`**을 재정의하여 동작하게 할 수 있다.
+
+  
+
 - #### Prepare
 
   ![Prepare](https://user-images.githubusercontent.com/39197978/61465255-acce8800-a9b2-11e9-97dd-ee9320b6f7bf.gif)
+
+  - **Segue**가 발생하여 다른 viewcontroller로 전환되기 직전에 발생하는 **`prepare()`**가 호출된다.
+  - **source viewcontroller**에서 **destination viewcontroller** 로 *data*를 넘기기위해 사용할 수 있다. 
+
+- #### Unwind
+
+  ---
+
+- **액션메소드 정의하기**![스크린샷 2019-07-18 오후 3.52.47](/Users/ldcpaul/Downloads/스크린샷/스크린샷 2019-07-18 오후 3.52.47.png)
+
+  - **unwind()** 의 **destination**이 될 viewcontroller를 정한다.
+  - 그 곳에 **unwindSegue**를 받을 수 있는   **@IBAction** 메소드를 정의해둔다.
+
+
+
+
+
+- **Exit 연결하기**
+
+  <img width="251" alt="스크린샷 2019-07-18 오후 4 27 41" src="https://user-images.githubusercontent.com/39197978/61466831-8f4eed80-a9b5-11e9-9820-c735fbbe0cd4.png">
+
+  - **segue**의 트리거를 드래그해서 **exit**에 놓는다. 
+  - **IBAction**으로 정의된 메소드 목록이 노출되고 거기에 연결된다.
+
+
