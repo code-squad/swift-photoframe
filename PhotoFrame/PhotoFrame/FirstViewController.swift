@@ -18,6 +18,7 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initializeFirstLabel()
+        initializeFirstDescription()
     private func initializeFirstLabel() {
         firstLabel.text = "흰의 사진 액자"
         firstLabel.textAlignment = .center
@@ -25,19 +26,18 @@ class FirstViewController: UIViewController {
         firstLabel.lineBreakMode = .byWordWrapping
     }
 
+    private func initializeFirstDescription() {
+        firstDescription.numberOfLines = 0
+        firstDescription.lineBreakMode = .byWordWrapping
+        let description = "This desciription is created using NSMutableAttributedString"
+        let highlightedWord = "NSMutableAttributedString"
         let attributedString = NSMutableAttributedString(string: description)
         let yellowBackgroundAttribute: [NSAttributedString.Key : Any] = [
             NSAttributedString.Key.backgroundColor : UIColor.yellow,
-            NSAttributedString.Key.foregroundColor : UIColor.blue,
-            ]
+            NSAttributedString.Key.foregroundColor : UIColor.blue ]
         let convertedFirstLabelString = NSString(string: description)
-        
-        attributedString.setAttributes(yellowBackgroundAttribute
-            , range: convertedFirstLabelString.range(of: "NSMutableAttributedString"))
-        
+        attributedString.setAttributes(yellowBackgroundAttribute, range: convertedFirstLabelString.range(of: highlightedWord))
         firstDescription.attributedText = attributedString
     }
-
-
 }
 
