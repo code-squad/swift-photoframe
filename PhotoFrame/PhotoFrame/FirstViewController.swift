@@ -12,6 +12,8 @@ class FirstViewController: UIViewController {
 
     @IBOutlet weak var firstLabel: UILabel!
     @IBOutlet weak var firstDescription: UILabel!
+    @IBOutlet weak var firstButton: UIButton!
+    @IBOutlet weak var secondButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
