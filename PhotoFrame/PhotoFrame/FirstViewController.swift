@@ -19,6 +19,10 @@ class FirstViewController: UIViewController {
         super.viewDidLoad()
         initializeFirstLabel()
         initializeFirstDescription()
+        secondButton.addTarget(self, action: #selector(FirstViewController.setTextColorPurple), for: .touchUpInside)
+        secondButton.addTarget(self, action: #selector(FirstViewController.setBackgroundColorYellow(_:)), for: .touchUpInside)
+    }
+    
     private func initializeFirstLabel() {
         firstLabel.text = "흰의 사진 액자"
         firstLabel.textAlignment = .center
@@ -38,6 +42,20 @@ class FirstViewController: UIViewController {
         let convertedFirstLabelString = NSString(string: description)
         attributedString.setAttributes(yellowBackgroundAttribute, range: convertedFirstLabelString.range(of: highlightedWord))
         firstDescription.attributedText = attributedString
+    }
+    
+    @IBAction func setBackgroundColorYellow(_ sender: Any) {
+        self.firstLabel.backgroundColor = UIColor.yellow
+        self.firstLabel.alpha = 0.5
+    }
+    
+    @objc func setTextColorPurple() {
+        self.firstLabel.backgroundColor = nil
+        self.firstLabel.textColor = UIColor.purple
+    }
+    
+    @IBAction func setBackgroundColorGray(_ sender: UIButton) {
+        sender.backgroundColor = UIColor.gray
     }
 }
 
