@@ -347,7 +347,8 @@ control 이 직접 이벤트를 처리하지 않고, 처리할 target 과 처리
 
   ```swift
   secondButton.addTarget(self, action: #selector(FirstViewController.setTextColorPurple), for: .touchUpInside)
-          secondButton.addTarget(self, action: #selector(FirstViewController.setBackgroundColorYellow(_:)), for: .touchUpInside)
+  
+  secondButton.addTarget(self, action: #selector(FirstViewController.setBackgroundColorYellow(_:)), for: .touchUpInside)
   ```
 
   - touchUpInside event 에 action method 두 개 추가 -> 정상 동작함
