@@ -17,11 +17,14 @@ class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        firstLabel.textColor = .brown
-        firstLabel.textAlignment = .right
+        initializeFirstLabel()
+    private func initializeFirstLabel() {
         firstLabel.text = "흰의 사진 액자"
-        
-        let description = "NSMutableAttributedString 을 사용하여 설정되었습니다."
+        firstLabel.textAlignment = .center
+        firstLabel.numberOfLines = 0
+        firstLabel.lineBreakMode = .byWordWrapping
+    }
+
         let attributedString = NSMutableAttributedString(string: description)
         let yellowBackgroundAttribute: [NSAttributedString.Key : Any] = [
             NSAttributedString.Key.backgroundColor : UIColor.yellow,
