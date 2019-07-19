@@ -447,6 +447,20 @@ public class MyViewController1 {
 
 - 세번째 뷰 컨트롤러에서 바로 첫번째 뷰 컨트롤러로 돌아와야할 때 unwindSegue를 사용한다. 
 
+<br/>
+
+## STEP 11-5 ViewController 프로그래밍
+
+### 실행결과
+
+![step5result](assets/viewLifeCycle.gif)
+
+- `FirstView` , `BlueView`, `PurpleView` 의 뷰컨트롤러 라이프 사이클 콜백 메소드마다 `print(#file, #line, #function, #column)` 을 작성한 결과 (경로부분은 편의를 위해 편집함)
+
+<img src = "assets/image-20190719151744526.png" width = "350px" height="700px">
+
+
+
 ---
 
 ### Reference
