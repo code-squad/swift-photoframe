@@ -20,6 +20,22 @@ class FirstViewController: UIViewController {
         print(#file, #line, #function, #column)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        print(#file, #line, #function, #column)
+    }
+    
     @IBAction func nextButtonTouched(_ sender: Any) {
         photoLabel.text = "민디의 사진액자🥳"
         photoLabel.textColor = UIColor.init(red: 147/255, green: 203/255, blue: 255/255, alpha: 1)
