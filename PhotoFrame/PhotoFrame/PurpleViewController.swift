@@ -32,6 +32,11 @@ class PurpleViewController: UIViewController {
         print(#file, #line, #function, #column)
     }
     
+    @IBAction func nextButtonTouched(_ sender: UIButton) {
+        let navyView = NavyView(frame: view.frame)
+        view.addSubview(navyView)
+    }
+    
     @IBAction func closedButtonTouched(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
