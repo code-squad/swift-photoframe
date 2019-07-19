@@ -32,6 +32,11 @@ class BlueViewController: UIViewController {
         print(#file, #line, #function, #column)
     }
     
+    @IBAction func nextButtonTouched(_ sender: UIButton) {
+        guard let purpleVC = storyboard?.instantiateViewController(withIdentifier:  "PurpleViewController") else { return }
+        show(purpleVC, sender: self)
+    }
+    
     @IBAction func closeButtonTouched(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
