@@ -117,7 +117,7 @@
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <state key="normal" title="다음"/>
                                 <connections>
-                                    <segue destination="o6d-CK-REO" kind="presentation" modalTransitionStyle="crossDissolve" id="cO1-oH-MMX"/>
+                                    <action selector="nextButtonTouched:" destination="gDm-0U-AjR" eventType="touchUpInside" id="aPV-ZS-NIr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1D-OQ-ss7">
@@ -142,7 +142,7 @@
         <!--Purple View Controller-->
         <scene sceneID="gCs-vx-b5t">
             <objects>
-                <viewController id="o6d-CK-REO" customClass="PurpleViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PurpleViewController" id="o6d-CK-REO" customClass="PurpleViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XFa-M6-7zr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
