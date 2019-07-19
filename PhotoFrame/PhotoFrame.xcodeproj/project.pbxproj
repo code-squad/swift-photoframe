@@ -13,6 +13,7 @@
 		FAA25B0F22D4760600BA1E4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA25B0D22D4760600BA1E4A /* Main.storyboard */; };
 		FAA25B1122D4760700BA1E4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA25B1022D4760700BA1E4A /* Assets.xcassets */; };
 		FAA25B1422D4760700BA1E4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA25B1222D4760700BA1E4A /* LaunchScreen.storyboard */; };
+		FACC93BF22E18A5E00BF0EA4 /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC93BE22E18A5E00BF0EA4 /* BlueViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FAA25B1022D4760700BA1E4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAA25B1322D4760700BA1E4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAA25B1522D4760700BA1E4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FACC93BE22E18A5E00BF0EA4 /* BlueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				FAA25B0722D4760600BA1E4A /* AppDelegate.swift */,
 				FAA25B0922D4760600BA1E4A /* FirstViewController.swift */,
 				FAA25B0B22D4760600BA1E4A /* SecondViewController.swift */,
+				FACC93BE22E18A5E00BF0EA4 /* BlueViewController.swift */,
 				FAA25B0D22D4760600BA1E4A /* Main.storyboard */,
 				FAA25B1022D4760700BA1E4A /* Assets.xcassets */,
 				FAA25B1222D4760700BA1E4A /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				FAA25B0C22D4760600BA1E4A /* SecondViewController.swift in Sources */,
 				FAA25B0822D4760600BA1E4A /* AppDelegate.swift in Sources */,
+				FACC93BF22E18A5E00BF0EA4 /* BlueViewController.swift in Sources */,
 				FAA25B0A22D4760600BA1E4A /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
