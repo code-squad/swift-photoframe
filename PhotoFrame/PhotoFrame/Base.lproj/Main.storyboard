@@ -198,10 +198,10 @@
             </objects>
             <point key="canvasLocation" x="4216" y="-287"/>
         </scene>
-        <!--View Controller-->
+        <!--Neon View Controller-->
         <scene sceneID="7Qt-K4-5of">
             <objects>
-                <viewController storyboardIdentifier="NeonViewController" id="J5A-yJ-waM" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NeonViewController" id="J5A-yJ-waM" customClass="NeonViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8tC-7e-yPI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
