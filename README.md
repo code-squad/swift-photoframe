@@ -10,6 +10,8 @@
 
 <a href ="#4-Step4---Segue">Step4 - Segue</a>
 
+<a href ="#5-Step5---ViewController">Step5 - ViewController</a>
+
 ---
 
 # Intro
@@ -464,5 +466,14 @@ y = 7
 
   - **segue**의 트리거를 드래그해서 **exit**에 놓는다. 
   - **IBAction**으로 정의된 메소드 목록이 노출되고 거기에 연결된다.
+  
+  ---
+  
+  
+
+### 5. Step5 - ViewController
+
+
+
 
 
