@@ -42,7 +42,7 @@ class PurpleViewController: UIViewController {
         let navyView = NavyView(frame: view.frame)
         navyView.tag = 1
         view.addSubview(navyView)
-        let removeButton = UIButton(frame: CGRect(origin: navyView.center, size: CGSize(width: 100, height: 60)))
+        let removeButton = UIButton(frame: CGRect(origin: navyView.center, size: CGSize(width: 200, height: 60)))
         removeButton.setTitle("remove navy view", for: .normal)
         removeButton.addTarget(self, action: #selector(removeButtonTouched(_:)), for: .touchUpInside)
         navyView.addSubview(removeButton)
