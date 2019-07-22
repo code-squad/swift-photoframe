@@ -475,5 +475,46 @@ y = 7
 
 
 
+- **Responsibility**
 
+  - 주요한 데이터의 변화에 응답으로 뷰들의 컨텐트들을 업데이트 한다. 
+
+  - 뷰들과 함께 사용자와의 대화에 응답한다. - 이벤트 핸들링
+
+  - 뷰들의 사이즈 재조정과 전반적인 인터페이스의 레이아웃을 관리한다.
+
+  - 다른 객체(뷰컨트롤러 등)들과 함께 앱을 구성한다.
+
+    
+
+- **ViewController Type**
+
+  - **Content view controller **
+
+    - 앱의 컨텐트의 일부분을 관리하는 뷰 컨트롤러 
+    - 자신의 모든 뷰들을 스스로 관리한다.
+
+  - **Container view controller**
+
+    - 다른 뷰 컨트롤러들로 부터 정보를 모은다.
+
+    - 자신의 뷰들과 자신의 자식 뷰컨트롤러들의 root view들을 관리한다.
+
+    - 직접 자식 뷰컨트롤러릐 컨텐츠를 관리하지는 않고 root view의 크기조절과 위치조절에 대해서만 관리한다. 
+
+      
+
+- **Life Cycle Method**
+
+  - viewDidLoad()
+    - 뷰컨트롤러의 `var view! `프로퍼티는 지연로딩된다. view가 필요로 될 때 view가 nil이면 loadView() 메소드를 호출하여 view를 로드한다.
+    - loadView()이후에 호출되는 콜백메소드이다.
+  - viewWillAppear()
+    - 뷰컨트롤러의  root view 가 로드된 이후에 window 의 뷰 계층으로 더해지기 직전에 호출되는 메소드이다.
+  - viewDidAppear()
+    - window 의 root view가 뷰 계층으로 더해진 직후에 호출되는 메소드이다.
+  - viewWillDisAppear()
+    - window 의 root view가 뷰 계층으로 제거되기 직전에 호출되는 메소드이다.
+  - viewDidDisAppear()
+    - window 의 root view가 뷰 계층으로 제거된 직 후 호출되는 메소드이다.
 
