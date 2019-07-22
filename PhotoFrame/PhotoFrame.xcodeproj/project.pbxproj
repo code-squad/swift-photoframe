@@ -117,7 +117,6 @@
 				0EFD169222E072D000D2E97E /* EndPointViewController.swift */,
 				0E5B98AD22D36C8900DD0972 /* AppDelegate.swift */,
 				0E5B98AF22D36C8900DD0972 /* FirstViewController.swift */,
-				0E5B98B122D36C8900DD0972 /* SecondViewController.swift */,
 				0E5B98B322D36C8900DD0972 /* Main.storyboard */,
 				0E5B98B622D36C8900DD0972 /* Assets.xcassets */,
 				0E5B98B822D36C8900DD0972 /* LaunchScreen.storyboard */,
@@ -126,6 +125,7 @@
 				0EFD168E22E05F8700D2E97E /* CustomSegue.swift */,
 				0E9ECDDE22E0AA0E00E0B022 /* PrepareViewController.swift */,
 				0E9ECDE022E1772900E0B022 /* NeonViewController.swift */,
+				0E5B98B122D36C8900DD0972 /* SecondViewController.swift */,
 			);
 			path = PhotoFrame;
 			sourceTree = "<group>";
