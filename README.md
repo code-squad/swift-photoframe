@@ -511,14 +511,14 @@ public class MyViewController1 {
 <br/>
 
 - `FirstView` , `BlueView`, `PurpleView` 의 뷰컨트롤러 라이프 사이클 콜백 메소드마다 `print(#file, #line, #function, #column)` 을 작성한 결과 (경로부분은 편의를 위해 편집함)
-- <img src = "assets/image-20190722172846418.png" width = "500px" height = "200px">
+- 뷰 컨트롤러 흐름
+  - <img src = "assets/image-20190722172846418.png" width = "500px" height = "200px">
 - <img src = "assets/image-20190722173052946.png" width = 370px, height = 750px>
-
-- `loadView`, `viewDidLoad` 는 한 번씩만 호출된다.
-- 다음 씬으로 넘어가는 전환이 있으면 다음 뷰컨트롤러는 `loadView` 를 호출한 뒤 `viewDidLoad` 를 호출한다.
-- 이전 뷰가 뷰 계층구조에서 없어지기 직전에 (이전 뷰의 `viewWillDisappear`가 호출됨) 다음뷰의  `viewWillAppear`가 호출된다. 
-- 다음 뷰가 뷰 계층구조에 추가되면 (`viewDidAppear`가 호출됨) 이전 뷰컨트롤러의 뷰가 뷰 계층구조에서 제거된다.(`viewDidDisappear`)
-- `viewWillDisappear` 가 호출되기 전에 다음 뷰의 `viewDidLoad` 가 호출된다. 
+  - `loadView`, `viewDidLoad` 는 한 번씩만 호출된다.
+  - 다음 씬으로 넘어가는 전환이 있으면 다음 뷰컨트롤러는 `loadView` 를 호출한 뒤 `viewDidLoad` 를 호출한다.
+  - 이전 뷰가 뷰 계층구조에서 없어지기 직전에 (이전 뷰의 `viewWillDisappear`가 호출됨) 다음뷰의  `viewWillAppear`가 호출된다. 
+  - 다음 뷰가 뷰 계층구조에 추가되면 (`viewDidAppear`가 호출됨) 이전 뷰컨트롤러의 뷰가 뷰 계층구조에서 제거된다.(`viewDidDisappear`)
+  - `viewWillDisappear` 가 호출되기 전에 다음 뷰의 `viewDidLoad` 가 호출된다. 
 
 
 
