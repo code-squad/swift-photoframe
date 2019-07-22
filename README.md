@@ -633,7 +633,7 @@ y = 7
 
   - #### Show (Push)
 
-    - NavigationViewController 에서의 
+    - **NavigationViewController 에서의 Life Cycle 호출 순서**
 
   
 
