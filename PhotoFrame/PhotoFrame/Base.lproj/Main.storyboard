@@ -167,6 +167,11 @@
                                     <action selector="closedButtonTouched:" destination="o6d-CK-REO" eventType="touchUpInside" id="TIY-US-mkY"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AyG-hr-1ig" customClass="NavyView" customModule="PhotoFrame" customModuleProvider="target">
+                                <rect key="frame" x="87" y="512" width="250" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.87640054323755356" green="0.82359812284063671" blue="0.9487945029" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="Oy9-ue-0nv"/>
