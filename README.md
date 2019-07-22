@@ -5,10 +5,17 @@
 
 <br>
 
-1. [STEP 11-1](#step-11-1-tabbed-app-템플릿)
-2. [STEP 11-2](#step-11-2-iboutlet)
-3. [STEP 11-3](#step-11-3-ibaction)
-4. [STEP 11-4](#step-11-4-scene과-segue)
+[STEP 11-1](#step-11-1-tabbed-app-템플릿)
+
+[STEP 11-2](#step-11-2-iboutlet)
+
+[STEP 11-3](#step-11-3-ibaction)
+
+[STEP 11-4](#step-11-4-scene과-segue)
+
+[STEP 11-5](#step-11-5-viewcontroller-프로그래밍)
+
+   
 
 ## STEP 11-1 Tabbed App 템플릿
 
@@ -453,11 +460,65 @@ public class MyViewController1 {
 
 ### 실행결과
 
-![step5result](assets/viewLifeCycle.gif)
+![step5](assets/step5.gif)
+
+<br/>
+
+### ViewController의 책임
+
+- 뷰의 컨텐트 업데이트(보통 데이터 변경에 대한 응답)
+- 뷰와 유저 인터랙션에 대해 반응
+- 뷰 사이즈 조절, 전체 인터페이스 레이아웃 관리
+- 다른 오브젝트(다른 뷰 컨트롤러 포함)와 함께 앱을 구성한다.
+
+<br/>
+
+### ViewController Life Cycle
+
+- **`loadView()`**
+
+  - `view` 프로퍼티가 요청됐지만 nil 인 경우에 뷰컨트롤러가 이 메소드를 호출한다.
+- 뷰를 로드하거나 만들어서 `view` 프로퍼티에 할당한다.
+  - 관련된 nib 파일이 있는 경우, 메서드는 nib 파일에서 view를 로드한다.
+- 관련된 nib 파일이 없는 경우, 기본 `UIView` 객체를 생성한다.
+  - 인터페이스 빌더를 사용해 뷰 컨트롤러를 초기화하면 이 메서드를 override하면 안된다. 뷰를 수동으로 만들때 override 해야 한다. 
+- 뷰의 추가적인 초기화를 하려면 `viewDidLoad()` 메서드에서 하면 된다.
+  
+- **`viewDidLoad()`**
+
+  - 뷰 컨트롤러가 뷰 계층구조를 메모리에 로드한 뒤 호출된다. 
+
+  - 뷰가 처음 초기화될 때 한 번만 불린다.
+
+- **`viewWillAppear()`**
+
+  - 뷰 컨트롤러의 뷰가 뷰 계층구조에 추가 될 때, 뷰를 보여주기 위해 애니메이션이 구성되기 전에 호출된다.
+  - 뷰가 화면에 보일때마다 호출되기 때문에 다른 뷰에 갔다가 다시 돌아오는 경우에 해야하는 처리등을 할 수 있다.
+
+- **`viewDidAppear()`**
+
+  - 뷰가 화면에 나타난 직후에 호출된다. 
+  - 화면에 적용될 애니메이션을 그려준다.
+
+- **`viewWillDisappear`**
+
+  - 뷰가 뷰 계층 구조에서 없어지기 직전에 호출된다.
+
+- **`viewDidDisappear`**
+
+  - 뷰가 화면에서 제거된 직후에 호출된다.
+
+<br/>
 
 - `FirstView` , `BlueView`, `PurpleView` 의 뷰컨트롤러 라이프 사이클 콜백 메소드마다 `print(#file, #line, #function, #column)` 을 작성한 결과 (경로부분은 편의를 위해 편집함)
+- <img src = "assets/image-20190722172846418.png" width = "500px" height = "200px">
+- <img src = "assets/image-20190722173052946.png" width = 370px, height = 750px>
 
-<img src = "assets/image-20190719151744526.png" width = "350px" height="700px">
+- `loadView`, `viewDidLoad` 는 한 번씩만 호출된다.
+- 다음 씬으로 넘어가는 전환이 있으면 다음 뷰컨트롤러는 `loadView` 를 호출한 뒤 `viewDidLoad` 를 호출한다.
+- 이전 뷰가 뷰 계층구조에서 없어지기 직전에 (이전 뷰의 `viewWillDisappear`가 호출됨) 다음뷰의  `viewWillAppear`가 호출된다. 
+- 다음 뷰가 뷰 계층구조에 추가되면 (`viewDidAppear`가 호출됨) 이전 뷰컨트롤러의 뷰가 뷰 계층구조에서 제거된다.(`viewDidDisappear`)
+- `viewWillDisappear` 가 호출되기 전에 다음 뷰의 `viewDidLoad` 가 호출된다. 
 
 
 
