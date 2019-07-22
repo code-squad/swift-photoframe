@@ -56,12 +56,22 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uMs-NP-vTM">
+                                <rect key="frame" x="364" y="44" width="40" height="84"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
+                                <state key="normal" title="&gt;"/>
+                                <connections>
+                                    <segue destination="EgQ-YY-2zI" kind="show" id="T4Y-wh-e1k"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="V3T-Dq-71u" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="195-tY-yD5"/>
                             <constraint firstItem="A5M-7J-77L" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="10" id="7mq-bP-E52"/>
                             <constraint firstItem="xE9-5r-TeZ" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="JjM-Ql-R04"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="uMs-NP-vTM" secondAttribute="trailing" constant="10" id="QSR-1g-46K"/>
+                            <constraint firstItem="uMs-NP-vTM" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="Qen-c3-mcD"/>
                             <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="xE9-5r-TeZ" secondAttribute="bottom" constant="8" symbolic="YES" id="QmE-KC-KMb"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="xE9-5r-TeZ" secondAttribute="trailing" constant="10" id="VgR-5a-2g3"/>
                             <constraint firstItem="Lvd-zw-t14" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="Wjm-xp-gXM"/>
@@ -85,6 +95,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="749.27536231884062" y="-320.08928571428572"/>
+        </scene>
+        <!--Next View Controller-->
+        <scene sceneID="var-CN-u0U">
+            <objects>
+                <viewController id="EgQ-YY-2zI" customClass="NextViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Uq-yO-bHu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xjz-Jt-33c">
+                                <rect key="frame" x="12" y="44" width="40" height="84"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
+                                <state key="normal" title="&lt;">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="previousButtonTouched:" destination="EgQ-YY-2zI" eventType="touchUpInside" id="bf5-r2-DH1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.37647058820000001" green="0.63921568630000003" blue="0.73725490199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Xjz-Jt-33c" firstAttribute="leading" secondItem="WV3-dC-2yU" secondAttribute="leading" constant="10" id="69p-Os-dN0"/>
+                            <constraint firstItem="Xjz-Jt-33c" firstAttribute="top" secondItem="WV3-dC-2yU" secondAttribute="top" id="u1N-px-xFm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WV3-dC-2yU"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CbJ-r1-klq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1467" y="-318"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
