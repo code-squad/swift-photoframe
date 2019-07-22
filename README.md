@@ -3,6 +3,7 @@
 - [Step 11-1  Tabbed App 템플릿](#-step-11-1--tabbed-app-템플릿)
 - [Step 11-2  IBOutlet](#-step-11-2--iboutlet)
 - [Step 11-3  IBAction](#-step-11-3--ibaction)
+- [Step 11-4 Segue & Scene]
 
 &nbsp;
 
@@ -386,5 +387,72 @@ control 이 직접 이벤트를 처리하지 않고, 처리할 target 과 처리
 
   ![](./images/touchUpOutside.gif) 
 
+&nbsp;
 
+## 📍 Step 11-4  Segue & Scene
 
+![](./images/scene-segue.jpeg)
+
+### Scene
+
+> A *scene* contains a top-level view controller that represents an onscreen content area. On iPhone and Apple TV, a screen generally contains a single scene. On iPad and macOS, a screen can be composed of more than one scene. The top-level view controller can be a container such as a navigation controller, or can be content such as a table view controller.
+
+**화면에서 컨텐츠가 보여지는 공간을 Scene** 이라 한다. scene 은 최상위 view controller 를 가지고 있다(연결되어있다). 아이폰에서는 보통 single scene 을 갖고 있고, 아이패드와 맥에서는 한 개 이상의 scene 이 화면을 구성할 수 있다.
+
+최상위 view controller는 navigation controller 같은 view controller 가 될 수도 있고, table view controller 같은 컨텐츠도 될 수 있다.
+
+### Segue
+
+> A *segue* is a connection that represents a transition from one scene to another scene, such as one scene sliding over another. The connection is between an object in one scene that a user touches to initiate the transition, and a scene or a storyboard reference that is the target of the transition.
+
+Segue 는 **한 scene 에서 다른 scene 으로의 변환/연결/이동**이다. segue 는 scene 과 scene 사이, 그리고 storyboard 와 storyboard 간의 전환에도 사용할 수 있다. 주로 *seg-way* 라고 부른다.
+
+Storyboard 에서 segue 는 scene 사이에 화살표로 표시되고, 화살표 중간에 어떤 타입의 segue 인지 알려주는 symbol 이 포함되어 있다. 
+
+- [Segue Types](https://help.apple.com/xcode/mac/current/#/dev564169bb1) 
+
+- Segue 생성하는 두 가지 방법 : 전화면 → 후화면 으로 전환하는 segue 만들기
+
+  Interface Builder - Object Library - view controller 추가 (후화면)
+
+  1. 전환을 trigger 해줄 button 으로 바로 연결하는 방법 
+
+     전화면에 전환을 trigger 할 button 추가 후, 해당 버튼을 control + 드래그 하여 후화면으로 이동 → 전환 효과 선택
+
+     ![](./images/how-to-create-segue-1.gif)
+
+  2. 전화면 - 후화면 연결만 하고 어떤 button 이 전환할지는 code 에서 정하는 방법
+
+     전화면 view controller icon 과 후화면을 control + 드래그로 연결 → segue 에 identifier 설정 후 button action method 에서 `performSegue()` 메소드로 전환 구현
+
+     ```swift
+     @IBAction func nextButtonPressed(_ sender: UIButton) {
+     	perforeSegue(withIdentifier: "goToSecondScreen", sender: self)
+     }
+     ```
+
+     ![](./images/how-to-create-segue-1.gif)
+
+- 다시 이전 scene 으로 돌아가기 : `dismiss()`
+
+  - 연속으로 여러개의 view controller 를 보여주면, stack 구조로 view controller 가 쌓인다. 즉, 앱에서 새로운 scene 을 여러개 보여주는 과정에서 view controller 는 stack 구조로 쌓인다.
+
+  - 현재 보여지는 scene 의 view controller 가 stack top 에 있게 된다.
+
+  - `dismiss()` view controller의 method로 호출시 가장 top 에 있는 한개의 view controller 만 stack에서  제거된다(dismissed)
+
+  - `presentingViewController` property : 현재 보여지고 있는 view controller 의 reference. 이 속성을 사용해서 전 scene 으로 돌아갈 수 있다.
+
+    ```swift
+    self.presentingViewController?.dismiss(animated: true, completion: {
+                print("view controller successfully dismissed")
+            })
+    ```
+
+    
+
+### Reference
+
+- [About storyboard - Xcode help](https://help.apple.com/xcode/mac/current/#/dev62c993289)
+- [dismiss method](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621505-dismiss)
+- [scene navigation](https://digitalleaves.com/segues-navigation-ios-basics/)
