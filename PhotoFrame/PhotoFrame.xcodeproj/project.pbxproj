@@ -13,6 +13,7 @@
 		C241A71B22D49A4700A0B02C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C241A71922D49A4700A0B02C /* Main.storyboard */; };
 		C241A71D22D49A4900A0B02C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C241A71C22D49A4900A0B02C /* Assets.xcassets */; };
 		C241A72022D49A4900A0B02C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C241A71E22D49A4900A0B02C /* LaunchScreen.storyboard */; };
+		C2DE159C22E5693600FC4CC4 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DE159B22E5693600FC4CC4 /* NextViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C241A71C22D49A4900A0B02C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C241A71F22D49A4900A0B02C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C241A72122D49A4900A0B02C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2DE159B22E5693600FC4CC4 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				C241A71322D49A4700A0B02C /* AppDelegate.swift */,
 				C241A71522D49A4700A0B02C /* FirstViewController.swift */,
+				C2DE159B22E5693600FC4CC4 /* NextViewController.swift */,
 				C241A71722D49A4700A0B02C /* SecondViewController.swift */,
 				C241A71922D49A4700A0B02C /* Main.storyboard */,
 				C241A71C22D49A4900A0B02C /* Assets.xcassets */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C241A71822D49A4700A0B02C /* SecondViewController.swift in Sources */,
+				C2DE159C22E5693600FC4CC4 /* NextViewController.swift in Sources */,
 				C241A71422D49A4700A0B02C /* AppDelegate.swift in Sources */,
 				C241A71622D49A4700A0B02C /* FirstViewController.swift in Sources */,
 			);
