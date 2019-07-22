@@ -9,7 +9,10 @@
 import UIKit
 
 class BlueViewController: UIViewController {
-
+    override func loadView() {
+        super.loadView()
+        print(#file, #line, #function, #column)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,6 +36,7 @@ class BlueViewController: UIViewController {
     }
     
     @IBAction func nextButtonTouched(_ sender: UIButton) {
+         print(#file, #line, #function, #column)
         guard let purpleVC = storyboard?.instantiateViewController(withIdentifier:  "PurpleViewController") else { return }
         show(purpleVC, sender: self)
     }

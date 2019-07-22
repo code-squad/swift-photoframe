@@ -9,7 +9,12 @@
 import UIKit
 
 class PurpleViewController: UIViewController {
-
+    
+    override func loadView() {
+        super.loadView()
+        print(#file, #line, #function, #column)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,11 +38,13 @@ class PurpleViewController: UIViewController {
     }
     
     @IBAction func nextButtonTouched(_ sender: UIButton) {
+        print(#file, #line, #function, #column)
         let navyView = NavyView(frame: view.frame)
         view.addSubview(navyView)
     }
     
     @IBAction func closedButtonTouched(_ sender: Any) {
+        print(#file, #line, #function, #column)
         dismiss(animated: true, completion: nil)
     }
 }
