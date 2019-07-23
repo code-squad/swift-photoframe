@@ -13,6 +13,7 @@ class NextViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print(#file, #line, #function, #column)
         // Do any additional setup after loading the view.
     }
     
@@ -20,6 +21,20 @@ class NextViewController: UIViewController {
         self.presentingViewController?.dismiss(animated: true, completion: {
             print("view controller successfully dismissed")
         })
+    override func viewWillAppear(_ animated: Bool) {
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        print(#file, #line, #function, #column)
     }
     
     /*
