@@ -99,7 +99,7 @@
         <!--Next View Controller-->
         <scene sceneID="var-CN-u0U">
             <objects>
-                <viewController id="EgQ-YY-2zI" customClass="NextViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NextVC" id="EgQ-YY-2zI" customClass="NextViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Uq-yO-bHu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
