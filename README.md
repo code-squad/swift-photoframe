@@ -4,6 +4,7 @@
 - [Step 11-2  IBOutlet](#-step-11-2--iboutlet)
 - [Step 11-3  IBAction](#-step-11-3--ibaction)
 - [Step 11-4 Segue & Scene](#-step-11-4--segue--scene)
+- [Step 11-5 View Controller](#-step-11-5-view-controller)
 
 &nbsp;
 
@@ -584,7 +585,7 @@ root view 의 크기와 위치는 해당 root view 를 관리하는 vc 의 소�
   - 직접 호출하는 것은 권장되지 않음
   - Overriding 은 괜찮음
 
-
+&nbsp;
 
 ### View Controller 가 보여지는 방식
 
@@ -603,7 +604,7 @@ var presentingViewController? : UIViewController
 
 ![](./images/vc-relationship.jpeg)
 
-
+&nbsp;
 
 Container vc 는 children vc 를 위한 자체 presentaion 방식을 제공하므로, 그 안에서의 전환은 container vc 에서 담당한다. 
 
@@ -622,14 +623,14 @@ vc 에는 view 의 상태와 관련된 method 가 있다. 이 method 들은 view
 상태 변화 관련해서는 크게 두가지로 나눌 수 있다. - 메모리 관련 / visibility 관련
 
 - 메모리 관련
-  - loadView
+  - `loadView()`
   - `viewDidLoad()` : view 가 메모리에 올라오면 가장 먼저 실행되는 method ([이전 post 참조](https://daheenallwhite.github.io/ios/2019/07/11/View-Did-Load/))
-  - didReceiveMemoryWarning() 
+  - `didReceiveMemoryWarning()` 
 - Visibility 관련
   - `viewWillAppear()` : 스크린에 보이도록 view 를 준비해라
   - `viewWillDisappear()` : view 가 사라지니 그동안 변동된 내용이나 다른 정보를 저장해라
-  - viewDidAppear() : view 보이기 완료
-  - viewDidDisappear() : view 사라지기 완료
+  - `viewDidAppear()` : view 보이기 완료
+  - `viewDidDisappear()` : view 사라지기 완료
 
 유의할 점은 한 vc 에서 다음 vc 로 넘어갈 때, will, did 의 순서이다. 다음은 FirstViewController → NextViewController → FirstViewController 순서대로 vc 간 전환했을 때, 각 method 가 호출되는 순서이다.
 
