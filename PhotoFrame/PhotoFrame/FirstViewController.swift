@@ -59,6 +59,14 @@ class FirstViewController: UIViewController {
         sender.backgroundColor = UIColor.gray
     }
     
+    @IBAction func nextButtonPressed(_ sender: UIButton) {
+        print("--------------------------")
+        
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let nextVC = mainStoryboard.instantiateViewController(withIdentifier: "NextVC")
+        self.present(nextVC, animated: true, completion: nil)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         print(#file, #line, #function, #column)
     }
