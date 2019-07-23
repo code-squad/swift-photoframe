@@ -344,7 +344,7 @@ control 이 직접 이벤트를 처리하지 않고, 처리할 target 과 처리
   - First : firstLabel background color - yellow 로 설정
   - Second: firstLabel text color - purple 로 설정
 
-- 버튼 한 event 에 액션 여러 개 추가 가능할 수 있을까? - 가능 
+- 버튼 한 event 에 액션 여러 개 추가 가능할 수 있을까? - **가능** 
 
   ```swift
   secondButton.addTarget(self, action: #selector(FirstViewController.setTextColorPurple), for: .touchUpInside)
@@ -352,9 +352,9 @@ control 이 직접 이벤트를 처리하지 않고, 처리할 target 과 처리
   secondButton.addTarget(self, action: #selector(FirstViewController.setBackgroundColorYellow(_:)), for: .touchUpInside)
   ```
 
-  - touchUpInside event 에 action method 두 개 추가 -> 정상 동작함
+  - `touchUpInside` event 에 action method 두 개 추가 -> 정상 동작함
 
-- 버튼이 여러 개일 때 하나의 액션에 추가할 수 있는가? - 가능
+- 버튼이 여러 개일 때 하나의 액션에 추가할 수 있는가? - **가능**
 
   - 서로 다른 button 의 event 에 같은 action method 등록 가능
 
@@ -401,6 +401,8 @@ control 이 직접 이벤트를 처리하지 않고, 처리할 target 과 처리
 
 최상위 view controller는 navigation controller 같은 view controller 가 될 수도 있고, table view controller 같은 컨텐츠도 될 수 있다.
 
+&nbsp;
+
 ### Segue
 
 > A *segue* is a connection that represents a transition from one scene to another scene, such as one scene sliding over another. The connection is between an object in one scene that a user touches to initiate the transition, and a scene or a storyboard reference that is the target of the transition.
@@ -427,7 +429,7 @@ Storyboard 에서 segue 는 scene 사이에 화살표로 표시되고, 화살표
 
      ```swift
      @IBAction func nextButtonPressed(_ sender: UIButton) {
-     	perforeSegue(withIdentifier: "goToSecondScreen", sender: self)
+     	performSegue(withIdentifier: "goToSecondScreen", sender: self)
      }
      ```
 
@@ -439,20 +441,277 @@ Storyboard 에서 segue 는 scene 사이에 화살표로 표시되고, 화살표
 
   - 현재 보여지는 scene 의 view controller 가 stack top 에 있게 된다.
 
-  - `dismiss()` view controller의 method로 호출시 가장 top 에 있는 한개의 view controller 만 stack에서  제거된다(dismissed)
-
-  - `presentingViewController` property : 현재 보여지고 있는 view controller 의 reference. 이 속성을 사용해서 전 scene 으로 돌아갈 수 있다.
-
     ```swift
-    self.presentingViewController?.dismiss(animated: true, completion: {
+  self.presentingViewController?.dismiss(animated: true, completion: {
                 print("view controller successfully dismissed")
-            })
+          })
+    ```
+  
+  - `presentingViewController` property : 해당 view controller를 present 한 view controller 를 가리킴. 즉, 해당 vc 이전에 보여졌던 vc
+  
+  - `dismiss()`: view controller의 method. 해당 vc 가 present 했던 vc 를 없앤다.
+
+  - `self.presentingViewController?.dismiss(..)`
+  
+    지금 vc 를 present 한 이전 vc 가 부른 vc == 지금 vc 를 dismiss 없애라는 뜻
+  
+  - 이렇게 안하고 현재 vc 에서 dismiss() 호출해도 UIKit 이 자동으로 해당 request 를 presenting vc 로 넘겨줌
+  
+    ```swift
+    self.dismiss(...) // possible
     ```
 
-    
+&nbsp;
 
 ### Reference
 
 - [About storyboard - Xcode help](https://help.apple.com/xcode/mac/current/#/dev62c993289)
 - [dismiss method](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621505-dismiss)
 - [scene navigation](https://digitalleaves.com/segues-navigation-ios-basics/)
+
+&nbsp;
+
+## 📍 Step 11-5 View Controller
+
+### View Controller
+
+view controller 는 mvc 패턴에서 c로 view 와 model 사이의 중개자 역할을 한다. 구현체로 UIKit의 `UIViewController` 가 있으며, 이는 view 와 좀더 밀접하게 연결되어있다. 
+
+view controller 는 앱 내부 구조의 기반이 된다. 모든 앱은 최소 한 개 이상의 vc 를 가지고 있다. `UIViewController` 클래스가 UIKit 에서 view controller 가 해야할 책임들을 선언해놓았다. 
+
+vc 를 만들 땐, 주로 `UIViewController` class 를 서브클래싱(subclassing), 즉, 이를 상속받는 하위클래스를 만들어 구현한다. 주로 서브클래싱을 통해 사용하지 바로 UIViewController 에서 인스턴스를 생성하는건 드물다.
+
+프로젝트를 생성하면 자동으로 이렇게 subclassing 된 view controller 클래스가 있다.
+
+```swift
+class ViewController: UIViewController {...}
+```
+
+&nbsp;
+
+### 책임
+
+App 에서 하는 모든 처리의 중심지라고 볼 수 있다. 그래서 iOS 의 vc 는 *massive view controller*  라고 불리기도 한다.
+
+![](./images/role-of-vc.jpeg)
+
+- View 의 content upate - 주로 관련 데이터의 변화에 맞춰서
+
+- user interaction 에 view 로 응답하기 - event handling
+
+  - 주로 대부분의 control delegate or target 을 vc에서 담당한다.
+
+- view 사이즈 조절 / 전반적인 인터페이스 레이아웃 관리
+
+- 앱의 다른 객체 - 주로 다른 view controller - 와 협력
+
+  &nbsp;
+
+### Type
+
+![](./images/vc-type.jpeg)
+
+|           | Content VC                                             | Container VC                                     |
+| --------- | ------------------------------------------------------ | ------------------------------------------------ |
+|           | 일반 VC                                                | 다른 vc 들을 담는 vc<br />(vc 를 담는 container) |
+| 관리 대상 | root view & view hierarchy 내 모든 view                | 자신의 view & 자신의 child vc 의 root view       |
+| 관련 속성 | `view` property : root view 를 참조                    | `children` property : [`UIViewController`]       |
+|           | root view 위의 하위 view 들에 접근하려면 IBOutlet 사용 | children vc 의 root view 크기, 위치 등을 관리    |
+
+- Container View Controller 
+
+  - `UINavigationController`
+  - `UISplitViewController`
+  - `UITabBarViewController`
+  - `UIPageViewController`
+
+- Container View Controller  관련 method
+
+  ```swift
+  func addChild(UIviewcontroller)
+  func removeFromParent()
+  func willMove(toParent:)
+  func didMove(toParent:)
+  ```
+
+**Content VC**
+
+![](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/Art/VCPG_ControllerHierarchy_fig_1-1_2x.png)
+
+**Container VC**
+
+![](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/Art/VCPG_ContainerViewController_fig_1-2_2x.png)
+
+&nbsp;
+
+### 특징
+
+- ios 에서 view 는 view controller 와 밀접하게 연결됨 (tightly bound)
+
+- view 계층구조에서 event 관리를 책임진다
+
+  - `UIViewController` 는 `UIResponder` 의 하위클래스로 reponder chain 에 들어감
+
+  - chain 내 위치 : view controller 의 root view 와 그 view 의 super view 사이
+
+    ![](./images/location-of-vc-in-responder-chain.jpeg)
+
+&nbsp;
+
+### Root View Controller
+
+`UIWindow` 는 `rootViewController` property 를 가진다. 이 속성은 딱 한개의 view controller 만 연결되고, 이 view controller의 content 로 window 가 채워지게 된다. 
+
+root view 의 크기와 위치는 해당 root view 를 관리하는 vc 의 소유자에 따라 결정된다. root view 밑의 하위 view 의 크기와 위치는 auto layout constraint에 의해 결정된다.
+
+- window 가 주인 : window 를 다 채우는 사이즈로 view 크기가 결정될 것
+
+  ![](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/Art/VCPG-root-view-controller_2-1_2x.png)
+
+- container view controller : container view controller 가 정한 해당 view controller 의 root view 크기대로 보여짐
+
+  ![](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/Art/VCPG-container-acting-as-root-view-controller_2-2_2x.png)
+
+&nbsp;
+
+### view controller loads their view lazily. 
+
+- 요청이 있을 때, 그때 생성한다는 의미
+- `view` property 에 접근할 때 되서야 view controller 가 생성하고 로드함
+- 그 전에 미리 view 를 생성해 놓지 않음 
+- `loadView()` method
+  - `view` property 에 접근했는데, 그 값이 nil 이면 자동으로 호출되어 해당 vc 의 root view 를 생성한다.
+  - 직접 호출하는 것은 권장되지 않음
+  - Overriding 은 괜찮음
+
+
+
+### View Controller 가 보여지는 방식
+
+Presentation : 기존의 view controller의 content 를 가리면서 새로운 view controller 의 contents 가 modal 방식으로 올라옴
+
+새로운 vc 가 이전 vc 를 가리면서 보여질 때, UIKit 은 이전과 이후 vc 간 관계를 형성해준다. 두 vc 의 다음 property 에 서로를 연결해준다. 
+
+```swift
+var presentedViewController? : UIViewController
+var presentingViewController? : UIViewController
+```
+
+| presentedViewController                       | presentingViewController        |
+| --------------------------------------------- | ------------------------------- |
+| 해당 vc 에 의해 presented 된 다음 vc를 가리킴 | 해당 vc 를 present 해준 이전 vc |
+
+![](./images/vc-relationship.jpeg)
+
+
+
+Container vc 는 children vc 를 위한 자체 presentaion 방식을 제공하므로, 그 안에서의 전환은 container vc 에서 담당한다. 
+
+![](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/Art/VCPG-container-and-presented-view-controller_2-4_2x.png)
+
+
+
+- [추가 학습거리 - presenting a view controller](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/PresentingaViewController.html#//apple_ref/doc/uid/TP40007457-CH14-SW7)
+
+&nbsp;
+
+### View Controller Life Cycle
+
+vc 에는 view 의 상태와 관련된 method 가 있다. 이 method 들은 view 의 상태변화에 따라 호출되며, 이 method 를 override 하여 각 상태 변화 시기에 원하는 처리를 구현할 수 있다.
+
+상태 변화 관련해서는 크게 두가지로 나눌 수 있다. - 메모리 관련 / visibility 관련
+
+- 메모리 관련
+  - loadView
+  - `viewDidLoad()` : view 가 메모리에 올라오면 가장 먼저 실행되는 method ([이전 post 참조](https://daheenallwhite.github.io/ios/2019/07/11/View-Did-Load/))
+  - didReceiveMemoryWarning() 
+- Visibility 관련
+  - `viewWillAppear()` : 스크린에 보이도록 view 를 준비해라
+  - `viewWillDisappear()` : view 가 사라지니 그동안 변동된 내용이나 다른 정보를 저장해라
+  - viewDidAppear() : view 보이기 완료
+  - viewDidDisappear() : view 사라지기 완료
+
+유의할 점은 한 vc 에서 다음 vc 로 넘어갈 때, will, did 의 순서이다. 다음은 FirstViewController → NextViewController → FirstViewController 순서대로 vc 간 전환했을 때, 각 method 가 호출되는 순서이다.
+
+```
+FirstViewController : viewDidLoad
+FirstViewController : viewWillAppear
+FirstViewController : viewDidAppear
+-------------------------- // NextVC로 전환
+NextViewController : viewDidLoad
+FirstViewController : viewWillDisappear
+NextViewController : viewWillAppear
+NextViewController : viewDidAppear
+FirstViewController : viewDidDisappear
+-------------------- // 다시 FirstVC 로 전환
+NextViewController : viewWillDisappear
+FirstViewController : viewWillAppear
+FirstViewController : viewDidAppear
+NextViewController : viewDidDisappear
+
+```
+
+- viewDidLoad 는 맨 처음 생성시에만 호출된다
+- 나타날 vc 가 appear 완료한 뒤에, 이전 vc 가 disappear 완료하는 것을 알 수 있다.
+
+#### View State Transitions
+
+![](https://docs-assets.developer.apple.com/published/f06f30fa63/UIViewController_Class_Reference_2x_ddcaa00c-87d8-4c85-961e-ccfb9fa4aac2.png)
+
+&nbsp;
+
+### view - view controller 연결/설정하는 방법
+
+- Interface Builder : canvas 에 view controller object 추가 후, scene 선택 → Identity Inspector → Custom Class 에 view controller subclass 연결
+
+  이 때, 자동 완성되어야 클래스가 제대로 생성된 것임
+
+- code : `loadView()` method of view controller - view 계층을 프로그래밍으로 생성하고 view controller 의 root view 를 `view` property 에 할당해줌
+
+&nbsp;
+
+### Interface Builder 에서 Segue 없이 VC 전환하기
+
+Storyboard 에서 Segue 를 이용하여 다음 vc 로 전환하는 과정은 다음과 같다.
+
+![](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/Art/VCPG_displaying-view-controller-using-segue_9-4_2x.png)
+
+Segue 없이 코드로만 전환하는 과정도 이와 비슷하다. 그저 Segue 가 자동으로 해주던 일을 코드로 명시적으로 표현해주면 된다.
+
+1. 다음 vc 의 storyboard ID 를 설정한다 - 이 ID 로 view controller를 코드에서 찾을 수 있다.
+
+   ![](./images/storyboard-id.png)
+
+2. Vc 가 있는 storyboard 를 참조한다
+
+3. 해당 storyboard 에서 다음 vc 를 찾아 생성한다
+
+4. 현재 vc → 다음 vc presenting
+
+*FirstViewController → NextViewController*
+
+```swift
+class FirstViewController: UIViewController {
+	//....
+	@IBAction func nextButtonPressed(_ sender: UIButton) {
+    // 2. Main.storyboard 를 참조한다.
+    let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+    
+    // 3. 해당 storyboard 에서 NextVC id 를 가진 view controller 를 초기화한다
+    let nextVC = mainStoryboard.instantiateViewController(withIdentifier: "NextVC")
+    
+    // 4. nextVC 를 present 한다.
+    self.present(nextVC, animated: true, completion: nil)
+    }
+	
+}
+```
+
+&nbsp;
+
+### :pushpin: Reference
+
+- [View controller Programming Guide for iOS](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/index.html#//apple_ref/doc/uid/TP40007457-CH2-SW1)
+- [UIViewcontroller](https://developer.apple.com/documentation/uikit/uiviewcontroller)
+- [2 ViewController Navigation Without Segue](https://www.youtube.com/watch?v=c5blPI3Asmw)
+
