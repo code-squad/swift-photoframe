@@ -18,9 +18,10 @@ class NextViewController: UIViewController {
     }
     
     @IBAction func previousButtonTouched(_ sender: Any) {
-        self.presentingViewController?.dismiss(animated: true, completion: {
-            print("view controller successfully dismissed")
-        })
+        print("--------------------")
+        self.dismiss(animated: true)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         print(#file, #line, #function, #column)
     }
