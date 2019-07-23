@@ -294,10 +294,8 @@ y = 7
   이벤트는 타겟에게 액션메시지로 전달되고, 명령이 실행된다.
   
   UIKit에서의 컨트롤들은 UIControl(iOS의 target-action 메커니즘의 대부분이 정의된 )의 자식클래스이다.
-  
-  
   ```
-
+  
 -  **Step3 - 실행영상**
 
 ![ezgif com-resize](https://user-images.githubusercontent.com/39197978/61221321-3ed85580-a753-11e9-86e3-40ae587fe961.gif)
@@ -361,8 +359,6 @@ y = 7
 | ![img](https://help.apple.com/xcode/mac/current/en.lproj/Art/SB_segue_modal.png) | Present Modally                 | 이 segue는 view controller를 **모달**로 보여준다.<br/>       |
 | ![img](https://help.apple.com/xcode/mac/current/en.lproj/Art/SB_segue_popover.png) | Present as Popover              | 기존 view 에 앵커를 둔 컨텐츠를 보여줍니다.                  |
 | ![img](https://help.apple.com/xcode/mac/current/en.lproj/Art/SB_segue_custom.png) | Custom                          | 개발자가 지정한 행동을 하는 segue입니다.                     |
-
-
 
 - **UIModalTransitionStyle(animation - 전환 효과 )**
 
@@ -451,10 +447,60 @@ y = 7
   ---
 
 - **액션메소드 정의하기**<br/>
-![스크린샷 2019-07-18 오후 3.52.47](/Users/ldcpaul/Downloads/스크린샷/스크린샷 2019-07-18 오후 3.52.47.png)
 
+```swift
+  // Destination 에 해당하는 viewcontroller 파일 내에 정의한다. 
+  @IBAction func myUnwind(_ segue: UIStoryBoardSegue) {
+    
+  }
+  ```
+  
+  
+  
   - **unwind()** 의 **destination**이 될 viewcontroller를 정한다.
+  
   - 그 곳에 **unwindSegue**를 받을 수 있는   **@IBAction** 메소드를 정의해둔다.
+  
+    
+
+<img width="1044" alt="스크린샷 2019-07-23 오후 11 25 36" src="https://user-images.githubusercontent.com/39197978/61723415-1087f500-ada7-11e9-82fb-56063f6a1c2e.png">
+
+
+
+#### 스토리 보드의 흐름도
+
+
+
+- `shouldPerformSegue()` : 세그웨이 진행여부 판단
+
+-  ```swift
+  optional func shouldPerformSegue(withIdentifier identifier: NSStoryboardSegue.Identifier, 
+                            sender: Any?) -> Bool
+   ```
+
+  - 세그웨이의 진행여부를 결정한다.
+  - 내부에서 특정상태 일 때 세그웨이를 진행하지 않는 다면 이 부분에서 상태에 따른 반환을 하면된다.
+
+  
+
+- `prepareForSegue()` : 세그웨이 직전 제어
+
+- ```swift
+  // swift에서의 prepareForSegue
+  func prepare(for segue: UIStoryboardSegue, 
+        sender: Any?)
+  ```
+
+  - 세그웨이가 발생하기 직전에 수행된다.
+  - `sender` 는 **Segue**를 발생시킨 **trigger오브젝트**이다.
+    - 한 뷰 컨트롤러에서 다른 뷰컨트롤러의 세그웨이는 여러 개가 존재 할 수 있다
+    - 그에 해당하는 **trigger** 에 따른 분기가 가능하다.
+  - 이 메소드내에서 새로 보여질  뷰컨트롤러의 데이터를 제어할 수있다.
+  - `segue.identifier`  프로퍼티를 이용해서 `segue` 종류에 따른 분기가 가능하다. 
+    - 한 뷰 컨트롤러가 전환 될 뷰 컨트롤러가 다양하여 **Segue**가 여러개 존재 할 수 있다. 
+  - `segue.destination / segue.source` 프로퍼티를 이용해서 `destination`  에 해당하는 뷰 컨트롤러에 데이터를 전달할 수 있다.
+
+​	
 
 
 
@@ -515,20 +561,34 @@ y = 7
 
     - 뷰컨트롤러의  root view 가 로드된 이후에 **window 의 뷰 계층으로 더해지기 직 전** 호출되는 메소드이다.
 
-  - **`viewDidAppear()`**
-
-    - window 의 root view가 **뷰 계층으로 더해진 직 후** 호출되는 메소드이다.
-
-  - **`viewWillDisAppear()`**
-
-    - window 의 root view가 **뷰 계층에서 제거되기 직 전** 호출되는 메소드이다.
-
-  - **`viewDidDisAppear()`**
-
-    - window 의 root view가 **뷰 계층에서 제거된 직 후** 호출되는 메소드이다.
+    - > 여기서 뷰계층이란 - window 의 subView 의 계층입니다. 
+    >
+      > 뷰계층에 추가되야 화면에 디스플레이 될 수있고,
+    >
+      > window 의 `var rootViewController: UIViewController` 프로퍼티가 정해지면 
+    >
+      > `rootViewController`의 ` var view: UIView! ` 가 뷰계층에 추가된다.
+    >
+      > <img width="364" alt="스크린샷 2019-07-23 오후 11 31 32" src="https://user-images.githubusercontent.com/39197978/61720777-63ab7900-ada2-11e9-99f6-cf807184c0c0.png">
+    >
+      > 
 
       
 
+  - **`viewDidAppear()`**
+  
+    - window 의 root view가 **뷰 계층으로 더해진 직 후** 호출되는 메소드이다.
+  
+  - **`viewWillDisAppear()`**
+  
+    - window 의 root view가 **뷰 계층에서 제거되기 직 전** 호출되는 메소드이다.
+  
+  - **`viewDidDisAppear()`**
+  
+    - window 의 root view가 **뷰 계층에서 제거된 직 후** 호출되는 메소드이다.
+  
+      
+  
     ![UIViewController_Class_Reference_2x_ddcaa00c-87d8-4c85-961e-ccfb9fa4aac2](https://user-images.githubusercontent.com/39197978/61628981-aac03e00-acbe-11e9-9f8a-51ce0654d005.png)
 
 **Tip**
