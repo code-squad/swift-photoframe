@@ -17,6 +17,7 @@ class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(#file, #line, #function, #column)
         initializeFirstLabel()
         initializeFirstDescription()
         secondButton.addTarget(self, action: #selector(FirstViewController.setTextColorPurple), for: .touchUpInside)
@@ -56,6 +57,22 @@ class FirstViewController: UIViewController {
     
     @IBAction func setBackgroundColorGray(_ sender: UIButton) {
         sender.backgroundColor = UIColor.gray
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        print(#file, #line, #function, #column)
     }
 }
 
