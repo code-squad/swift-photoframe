@@ -61,7 +61,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
                                 <state key="normal" title="&gt;"/>
                                 <connections>
-                                    <segue destination="EgQ-YY-2zI" kind="show" id="T4Y-wh-e1k"/>
+                                    <action selector="nextButtonPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="HjR-hL-OKL"/>
                                 </connections>
                             </button>
                         </subviews>
