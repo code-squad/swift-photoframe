@@ -90,6 +90,7 @@
                         <outlet property="firstDescription" destination="A5M-7J-77L" id="iNz-tK-6n4"/>
                         <outlet property="firstLabel" destination="xE9-5r-TeZ" id="h4G-Gr-h6O"/>
                         <outlet property="secondButton" destination="V3T-Dq-71u" id="yrb-tK-IZf"/>
+                        <segue destination="cEU-LY-I9C" kind="show" identifier="goToNext" id="qMI-ry-bTQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
