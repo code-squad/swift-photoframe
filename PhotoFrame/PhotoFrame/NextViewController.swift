@@ -12,8 +12,8 @@ class NextViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.modalTransitionStyle = .flipHorizontal
         print(#file, #line, #function, #column)
+        self.title = "Next"
         // Do any additional setup after loading the view.
     }
     
