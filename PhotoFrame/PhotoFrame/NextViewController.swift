@@ -17,9 +17,10 @@ class NextViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func previousButtonTouched(_ sender: Any) {
+    @IBAction func closedButtonTouched(_ sender: Any) {
         print("--------------------")
-        self.dismiss(animated: true)
+        self.navigationController?.popViewController(animated: true)
+//        self.dismiss(animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
