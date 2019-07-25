@@ -22,6 +22,8 @@ class FirstViewController: UIViewController {
         initializeFirstDescription()
         secondButton.addTarget(self, action: #selector(FirstViewController.setTextColorPurple), for: .touchUpInside)
         secondButton.addTarget(self, action: #selector(FirstViewController.setBackgroundColorYellow(_:)), for: .touchUpInside)
+        
+        self.title = "First"
     }
     
     private func initializeFirstLabel() {
