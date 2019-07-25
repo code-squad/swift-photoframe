@@ -5,6 +5,7 @@
 - [Step 11-3  IBAction](#-step-11-3--ibaction)
 - [Step 11-4 Segue & Scene](#-step-11-4--segue--scene)
 - [Step 11-5 View Controller](#-step-11-5-view-controller)
+- [Step 11-6 Container View Controller](#-step-11-6--container-view-controller)
 
 &nbsp;
 
@@ -716,17 +717,17 @@ class FirstViewController: UIViewController {
 - [UIViewcontroller](https://developer.apple.com/documentation/uikit/uiviewcontroller)
 - [2 ViewController Navigation Without Segue](https://www.youtube.com/watch?v=c5blPI3Asmw)
 
-
+&nbsp;
 
 ## 📍 Step 11-6  Container View Controller
 
+![](./images/step-11-6.gif)
 
-
-일반 view controller. -> container view controller 로 변경하기
+### 일반 view controller → container view controller 로 변경하기
 
 Editor -> Embed in.. -> Navigation Controller 선택
 
-
+![](./images/editor.png)
 
 ### Container View Controller
 
