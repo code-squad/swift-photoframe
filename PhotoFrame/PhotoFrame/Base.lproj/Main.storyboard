@@ -95,7 +95,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1659.4202898550725" y="-320.08928571428572"/>
+            <point key="canvasLocation" x="1523" y="-320"/>
         </scene>
         <!--Next View Controller-->
         <scene sceneID="XCP-Xv-Exy">
@@ -104,13 +104,26 @@
                     <view key="view" contentMode="scaleToFill" id="bWi-YH-e2D">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oMI-ZH-6WR">
+                                <rect key="frame" x="192" y="433" width="30" height="30"/>
+                                <state key="normal" title="닫기"/>
+                                <connections>
+                                    <action selector="closedButtonTouched:" destination="cEU-LY-I9C" eventType="touchUpInside" id="4NG-Av-ZNd"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oMI-ZH-6WR" firstAttribute="centerY" secondItem="bWi-YH-e2D" secondAttribute="centerY" id="Js3-yI-3Ys"/>
+                            <constraint firstItem="oMI-ZH-6WR" firstAttribute="centerX" secondItem="bWi-YH-e2D" secondAttribute="centerX" id="KJU-KV-7jP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="8Xs-3C-DjP"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SL6-3W-suh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2386" y="-320"/>
+            <point key="canvasLocation" x="2270" y="-320"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
@@ -178,6 +191,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Enr-Et-4aT">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="cFE-HF-pWw"/>
                     </connections>
