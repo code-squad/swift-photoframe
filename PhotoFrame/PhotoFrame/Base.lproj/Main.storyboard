@@ -97,10 +97,10 @@
             </objects>
             <point key="canvasLocation" x="1659.4202898550725" y="-320.08928571428572"/>
         </scene>
-        <!--View Controller-->
+        <!--Next View Controller-->
         <scene sceneID="XCP-Xv-Exy">
             <objects>
-                <viewController storyboardIdentifier="NextVC" id="cEU-LY-I9C" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NextVC" id="cEU-LY-I9C" customClass="NextViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bWi-YH-e2D">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
