@@ -6,6 +6,7 @@
 - [Step 11-4 Segue & Scene](#-step-11-4--segue--scene)
 - [Step 11-5 View Controller](#-step-11-5-view-controller)
 - [Step 11-6 Container View Controller](#-step-11-6--container-view-controller)
+- [Step 11-7 Second Scene](#-step-11-7--second-scene-화면)
 
 &nbsp;
 
