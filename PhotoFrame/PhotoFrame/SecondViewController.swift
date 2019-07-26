@@ -16,6 +16,14 @@ class SecondViewController: UIViewController {
         print(#file, #line, #function, #column)
     }
 
-
+    @IBAction func animationButtonTouched(_ sender: UIButton) {
+        sender.isSelected.toggle()
+        switch sender.isSelected {
+        case true:
+            photoImageView.startAnimating()
+        case false:
+            photoImageView.stopAnimating()
+        }
+    }
 }
 
