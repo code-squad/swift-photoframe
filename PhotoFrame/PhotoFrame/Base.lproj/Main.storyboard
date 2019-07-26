@@ -147,15 +147,16 @@
                                     <constraint firstAttribute="width" constant="240" id="XR0-yC-JTB"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5O-OR-S09">
-                                <rect key="frame" x="192" y="536" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5O-OR-S09">
+                                <rect key="frame" x="192" y="529.5" width="30" height="30"/>
                                 <state key="normal" title="다음"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="fAa-Hv-SnH" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="2im-Qa-mbl"/>
+                            <constraint firstItem="m5O-OR-S09" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="3nG-SS-KiP"/>
+                            <constraint firstItem="m5O-OR-S09" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="60" id="VKt-az-Zv5"/>
                             <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                             <constraint firstItem="zEq-FU-wV5" firstAttribute="top" secondItem="fAa-Hv-SnH" secondAttribute="bottom" constant="25" id="xcA-H8-buo"/>
