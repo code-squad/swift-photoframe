@@ -18,7 +18,12 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(#file, #line, #function, #column)
+        createImageNames()
+        createImageObjects()
+        self.photoImageView.animationImages = images.shuffled()
+        self.photoImageView.animationDuration = 5.0
+    }
+    
     func createImageObjects() {
         for name in imageNames {
             guard let image = UIImage(named: name) else {
