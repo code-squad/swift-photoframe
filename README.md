@@ -913,3 +913,201 @@ func popToViewController(UIViewController, animated: Bool) -> [UIViewController]
 - [View Controller Programming Guide for iOS](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/ImplementingaContainerViewController.html)
 
 - [UINavigationController](https://developer.apple.com/documentation/uikit/uinavigationcontroller)
+
+&nbsp;
+
+## 📍 Step 11-7  Second Scene 화면
+
+### UIImage
+
+> An object that manages image data in your app<br>
+>
+> app 에서의 image data 를 관리하는 객체
+
+Image data 를 대표하기 위해 사용되는 객체이며 모든 image format 의 데이터를 관리하기 위한 클래스가 `UIImage` 이다. 
+
+image object 는 **immutable** → 존재하는 image data 로부터 객체를 생성한다
+
+#### image object 생성하기
+
+1. image asset 혹은 app main bundle 에 있는 파일로 생성하기
+
+   이 method는 image data를 자동으로 캐싱하기 대문에 자주 사용하는 이미지에 권장된다.
+
+   ```swift
+   init?(named name: String, 
+      in bundle: Bundle?, 
+   compatibleWith traitCollection: UITraitCollection?)
+   ```
+
+2. bundle 안에 있지 않은 데이터로 생성하기
+
+   ```swift
+   init?(contentsOfFile path: String)
+   ```
+
+3. 하나의 `UIImage` 객체로 여러개의 순차적인 images 생성하기
+
+   ```swift
+   class func animatedImage(with images: [UIImage], 
+                   duration: TimeInterval) -> UIImage?
+   class func animatedImageNamed(_ name: String, 
+                        duration: TimeInterval) -> UIImage?
+   ```
+
+#### image 비교하기
+
+```swift
+func isEqual(_ object: Any?) -> Bool
+```
+
+두 image object 가 같은 image data 를 가지고 있는지를 판단하는 메소드. 
+
+`==` 를 통한 image object 의 비교는 다른 결과가 나올 수 있음
+
+```swift
+let image1 = UIImage(named: "MyImage")
+let image2 = UIImage(named: "MyImage")
+
+image1.isEqual(image2) // true
+image1 == image2 // incorrect
+```
+
+&nbsp;
+
+### UIImageView
+
+> An object that displays a single image or a sequence of animated images in your interface.<br>
+>
+> 하나의 이미지 혹은 일련의 애니메이션과 함께 이미지를 보여주는 인터페이스 객체
+
+`UIImage` 객체를 사용하여 `UIImage` 에서 특정한 그 이미지를 보여주는 view 객체이다. 
+
+#### view 에 보일 image 조정하기 (image scaling)- content mode
+
+image view 의 사이즈, 비율이 항상 image와 같을 순 없다. 따라서 image view 는 자신의 content 로 image를 보여줄 때, 이를 조정해야 한다. **image scaling** 은 image 를 image view에 맞게 비율과 크기를 조정하는 작업을 의미한다.
+
+image view 는 자신의 `contentMode` property 로 어떻게 자신 안에 이미지가 보여져야 하는지를 결정한다. 이는 서로의 비율과 크기가 다를 때 조정할 기준을 설정하는 역할이다. 이 content mode 는 interface builder 에서도 설정할 수 있다. content mode 는 UIImageView 내부에 ContentMode enum 에 정의되어 있다.
+
+```swift
+var contentMode: UIImageView.ContentMode 
+```
+
+`ContentMode` 는 image view 의 scale 변화에 따라 자신의 content 를 어떻게 조정할 것인지에 대한 옵션을 선택할 수 있다.
+
+일단은 이해하기 쉽게 content => 사진으로 설명했다.
+
+| enum ContentMode: Int<br />case |                                                              |
+| ------------------------------- | ------------------------------------------------------------ |
+| scaleToFill                     | 사진의 비율을 view 에 맞춰 바꾼다<br />사진의 원래 비율과 달라질 수 있음 |
+| scaleAspectFit                  | 사진의 비율을 유지한 채, view 맞게 조절한다<br />view 의 남는 부분이 생기면 투명하게 보임 |
+| scaleAspectFill                 | view 를 꽉 채우도록 사진을 조정<br />사진에서 잘리는 부분이 있을 수 있음 |
+| redraw                          | `setNeedsDisplay()` method 에 의해 view 의 경계가 바뀔 경우 다시 그리는 옵션 |
+| center                          | 사진 비율은 그대로 유지한 채, view 의 경계 안의 가운데에 위치하기 |
+| top                             | view 경계 top 중간에 위치                                    |
+| bottom                          | view 경계 bottom 중간에 위치                                 |
+| left                            | view bound 의 왼쪽에 사진 정렬                               |
+| right                           | view bound 의 오른쪽에 사진 정렬                             |
+| topLeft                         | view bound 의 왼쪽 위에 사진 정렬                            |
+| topRight                        | view bound 의 오른쪽 위에 사진 정렬                          |
+| bottomLeft                      | view bound 의 왼쪽 아래에 사진 정렬                          |
+| bottomRight                     | view bound 의 오른쪽 위에 사진 정렬                          |
+
+
+
+![](https://i.stack.imgur.com/4g0Yd.png)
+
+(출처 : [[UIImage - Content mode fit and right position - Swift 4](https://stackoverflow.com/questions/50988255/uiimage-content-mode-fit-and-right-position-swift-4)])
+
+&nbsp;
+
+#### alpha blending 
+
+alpha 는 투명도를 설정하는 property 로 `UIView` 에 선언되어 있다. alpha는 `CGFloat` 타입으로,  **0.0 은 완전 투명 (transparent) ~ 1.0 완전 불투명(opaque)**
+
+![](./images/structure-alpha.jpeg)
+
+image 는 image view 의 background 에 얹어지는 형태로 구성된다. 따라서 image 에 있는 투명한 부분에는 UIImageView 의 background 가 뚫려 보이게 된다 .
+
+- 관련 속성: `isOpaque` 
+  - **true** : image pixel + image view background color 혼합되어 보임. image view 의 alpha 는 무시됨
+  - **false** : image pixel 의 alpha value * image view pixel 의 alpha value 곱해져서 보인다. 
+
+
+
+#### 일련의 image animating 
+
+image view 는 일련의 여러 image 를 가지고 있을 수 있으며, 이들 모두, 혹은 부분을 순서대로 보여줄 수 있다. 
+
+```swift
+var animationImages: [UIImage]
+```
+
+이 속성에 배열 객체가 할당되면, animation 관련 method 를 사용할 수 있다. 
+
+
+
+#### touch event 에 응답하기
+
+image view 는 디폴트로 user event 를 무시한다. 이를 바꾸고 싶다면 `isUserInteractionEnabled` property 를 true 로 설정하면 user event 에 응답하게 할 수 있다.
+
+
+
+#### peformance 향상을 위한 tip
+
+image scaling & alpha blending : 앱 퍼포먼스에 영향을 줄 수 있는 비싼 operation 
+
+image view 관련 성능을 높이기 위해 다음 tip을 고려해야 한다.
+
+1. 자주 사용되는 이미지의 scaled version 을 미리 caching 해 놓아라
+
+   큰 image 가 그보다 작은 사이즈의 thumbnail view 에 자주 보이는 동작을 해야한다면, 사이즈가 하향 조정된 image 를 미리 준비해두고 이를 cache 에 저장하는게 image view 가 계속해서  크기와 
+
+2. image view size 와 비슷한 size 의 image 를 준비해라
+
+   큰 사이즈의 Image 를 image view 에 넣기 보다는 해당 image view 사이즈에 맞게 조정된 버전의 image 를 생성하는 것이 좋다. 혹은 resizable image 객체를 사용할 수도 있다.
+
+3. 가능하다면 image view 를 opaque(투명하게) 만들어라
+
+   `isOpaque` property 를 true 로 설정해라. 
+
+&nbsp;
+
+### 구현 화면
+
+![](./images/animatedImages.gif)
+
+animation images - 5초마다 image 보여주기
+
+```swift
+@IBAction func animationButtonTouched(_ sender: UIButton) {
+        sender.isSelected.toggle()
+        switch sender.isSelected {
+        case true:
+            photoImageView.startAnimating()
+        case false:
+            photoImageView.stopAnimating()
+        }
+    }
+```
+
+![](./images/random-image.gif)
+
+버튼을 누를 때마다, random Image 보여주기
+
+```swift
+@IBAction func nextButtonTouched(_ sender: UIButton) {
+        guard let randomImage = images.randomElement() else {
+            self.photoImageView.image = images[0]
+            return
+        }
+        self.photoImageView.image = randomImage
+    }
+```
+
+&nbsp;
+
+### 📌 Reference
+
+- [UIImageView](https://developer.apple.com/documentation/uikit/uiimageview)
+- [UIImage](https://developer.apple.com/documentation/uikit/uiimage)
