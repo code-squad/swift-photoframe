@@ -14,9 +14,20 @@ class SecondViewController: UIViewController {
     let imageExtension = ".jpg"
     
     var imageNames = [String]()
+    var images = [UIImage]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print(#file, #line, #function, #column)
+    func createImageObjects() {
+        for name in imageNames {
+            guard let image = UIImage(named: name) else {
+                continue
+            }
+            images.append(image)
+        }
+    }
+    
     func createImageNames() {
         for num in 1...9 {
             let imageName = "0\(num)\(self.imageExtension)"
