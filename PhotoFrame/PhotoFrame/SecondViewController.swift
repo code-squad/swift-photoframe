@@ -25,5 +25,14 @@ class SecondViewController: UIViewController {
             photoImageView.stopAnimating()
         }
     }
+    
+    @IBAction func nextButtonTouched(_ sender: UIButton) {
+        guard let randomImage = images.randomElement() else {
+            self.photoImageView.image = images[0]
+            return
+        }
+        self.photoImageView.image = randomImage
+    }
+    
 }
 
