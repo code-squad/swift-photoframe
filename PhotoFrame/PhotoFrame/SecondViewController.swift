@@ -11,9 +11,21 @@ import UIKit
 class SecondViewController: UIViewController {
 
     @IBOutlet weak var photoImageView: UIImageView!
+    let imageExtension = ".jpg"
+    
+    var imageNames = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
         print(#file, #line, #function, #column)
+    func createImageNames() {
+        for num in 1...9 {
+            let imageName = "0\(num)\(self.imageExtension)"
+            imageNames.append(imageName)
+        }
+        for num in 10...22 {
+            let imageName = "\(num)\(self.imageExtension)"
+            imageNames.append(imageName)
+        }
     }
 
     @IBAction func animationButtonTouched(_ sender: UIButton) {
