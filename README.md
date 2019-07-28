@@ -734,7 +734,7 @@ y = 7
 
 
 
-### 6. Step6 -  View Controller Containter
+### 6. Step6 -  View Controller Container
 
 
 
@@ -823,7 +823,7 @@ view프로퍼티의  `var view: UIView!`는 NavigationBar, ToolBar( 옵션 ), �
 
 그리고 스택 최상단에 위치한 뷰컨트롤러가 화면에 보여진다.
 
-스택에 뷰컨트롤러를 세그웨이를 이용해서 **추가(Push)**하거나 **제거(Pop)**할 수 있다. 
+스택에 뷰컨트롤러를 세그웨이를 이용해서 **추가(Push)**  하거나 **제거(Pop)** 할 수 있다. 
 
 `UINavigationControllerDelegate` protocol을 채택함으로써, push, pop 동작을 재정의 할 수있다.
 
