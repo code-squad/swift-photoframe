@@ -13,6 +13,8 @@
 <a href ="#5-Step5---ViewController">Step5 - ViewController</a>
 
 <a href ="#6-Step6---View-Controller-Container">Step6 - View Controller Container</a>
+
+
 ---
 
 # Intro
@@ -729,9 +731,7 @@ y = 7
     
     
 
-
-
-### 6. Step6 -  View Controller Containter
+###  6. Step6 -  View Controller Containter
 
 
 
