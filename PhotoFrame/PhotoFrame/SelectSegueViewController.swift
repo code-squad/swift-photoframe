@@ -19,6 +19,7 @@ class SelectSegueViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("\(type(of: self))", #function)
+        print("현재 스택 count \(self.navigationController?.children.count))")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -34,6 +35,7 @@ class SelectSegueViewController: UIViewController {
     override func viewDidDisappear (_ animated: Bool) {
         super.viewDidDisappear(animated)
         print("\(type(of: self))", #function)
+        print("현재 스택 count \(self.navigationController?.children.count))")
     }
 
     @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue) {
