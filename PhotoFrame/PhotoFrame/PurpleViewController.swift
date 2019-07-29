@@ -51,7 +51,7 @@ class PurpleViewController: UIViewController {
     
     @IBAction func closedButtonTouched(_ sender: Any) {
         print(#file, #line, #function, #column)
-        dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
     }
     
     @objc private func removeButtonTouched(_ sender: UIButton) {
