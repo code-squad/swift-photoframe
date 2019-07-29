@@ -13,8 +13,10 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var photoLabel: UILabel!
     @IBOutlet weak var photoDescription: UILabel!
     @IBOutlet weak var tadaLabel: UILabel!
+    
     override func loadView() {
         super.loadView()
+        
         print(#file, #line, #function, #column)
     }
     override func viewDidLoad() {
@@ -48,7 +50,7 @@ class FirstViewController: UIViewController {
         photoDescription.text = "Photo by Mindy"
         photoDescription.alpha = 0.5
         photoDescription.font = UIFont.systemFont(ofSize: 18, weight: .light)
-         print(#file, #line, #function, #column)
+        print(#file, #line, #function, #column)
     }
     
     @IBAction func initButtonTouched(_ sender: Any) {

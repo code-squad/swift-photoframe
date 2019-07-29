@@ -15,7 +15,5 @@ class SecondViewController: UIViewController {
         
         print(#file, #line, #function, #column)
     }
-
-
 }
 
