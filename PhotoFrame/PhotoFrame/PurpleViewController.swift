@@ -12,6 +12,7 @@ class PurpleViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
+        
         print(#file, #line, #function, #column)
     }
     
