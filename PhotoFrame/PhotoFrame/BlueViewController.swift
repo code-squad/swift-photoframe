@@ -40,8 +40,7 @@ class BlueViewController: UIViewController {
     @IBAction func nextButtonTouched(_ sender: UIButton) {
         print(#file, #line, #function, #column)
         guard let purpleVC = storyboard?.instantiateViewController(withIdentifier:  "PurpleViewController") else { return }
-        purpleVC.modalPresentationStyle = .fullScreen
-        present(purpleVC, animated: true, completion: nil)
+        navigationController?.pushViewController(purpleVC, animated: true)
     }
     
     @IBAction func closeButtonTouched(_ sender: Any) {
