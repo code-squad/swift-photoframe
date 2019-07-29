@@ -45,6 +45,6 @@ class BlueViewController: UIViewController {
     }
     
     @IBAction func closeButtonTouched(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
     }
 }
