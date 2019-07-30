@@ -15,7 +15,7 @@
 
 [STEP 11-5](#step-11-5-viewcontroller-프로그래밍)
 
-   
+[STEP 11-6](#step-11-6-container-viewcontroller)   
 
 ## STEP 11-1 Tabbed App 템플릿
 
@@ -559,7 +559,33 @@ public class MyViewController1 {
 
   - overFullScreen과 overCurrentContext는 프레젠테이션이 끝난 뒤에도 presenting VC의 `view`를 뷰 계층구조에서 제거하지 않는다. 
 
-  - ####  
+
+&nbsp;
+
+## STEP 11-6 Container ViewController
+
+&nbsp;
+
+### 실행 결과
+
+![step6](assets/step6.gif)
+
+&nbsp;
+
+#### 뷰 컨트롤러 콜백 메서드 흐름
+
+![image-20190730153254067](assets/image-20190730153254067.png)
+
+- 모달방식은 두번째 뷰가 뷰 계층에서 추가되고 난 뒤 첫번째 뷰가 뷰 계층에서 제거된다.
+- 네비게이션 컨트롤러를 사용하면 첫번째뷰가 뷰 계층에서 제거되고 난 뒤 두번째 뷰가 뷰 계층에 추가된다.
+
+&nbsp;
+
+
+
+
+
+
 
 ---
 
