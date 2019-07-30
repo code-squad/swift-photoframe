@@ -592,7 +592,7 @@ public class MyViewController1 {
 
 <br/>
 
-#### Navigation Controller
+### Navigation Controller
 
 ![VCPG_structure-of-navigation-interface_5-1_2x](assets/VCPG_structure-of-navigation-interface_5-1_2x.png)
 
@@ -608,7 +608,7 @@ public class MyViewController1 {
 
 &nbsp;  
 
-##### 네비게이션 컨트롤러가 표시하는 뷰
+#### 네비게이션 컨트롤러가 표시하는 뷰
 
  ![68_1](assets/68_1.png)
 
@@ -648,7 +648,7 @@ public class MyViewController1 {
 
 ### Custom Container View Controller
 
-#### 스토리보드에서 추가
+### **스토리보드에서 추가**
 
 ![container_view_embed_2x](assets/container_view_embed_2x.png)
 
@@ -656,9 +656,9 @@ public class MyViewController1 {
 
 
 
-#### 프로그래밍 방식으로 추가
+### **프로그래밍 방식으로 추가**
 
-##### Adding a Child View Controller to Your Content
+#### Adding a Child View Controller to Your Content
 
 자식 뷰 컨트롤러를 프로그래밍 방식으로 컨텐츠에 통합하려면, 다음 단계를 통해 관련 뷰컨트롤러들 간에 부모-자식 관계를 만든다.
 
@@ -695,7 +695,7 @@ func displayContentController(_ content: UIViewController?) {
 
 
 
-##### Removing a Child View Controller
+#### Removing a Child View Controller
 
 자식 뷰 컨트롤러를 제거하면 부모-자식 관계는 영구적으로 끊어지기 때문에 더 이상 자식 뷰 컨트롤러를 참조할 필요가 없을 때 제거해야 한다.
 
@@ -723,7 +723,7 @@ func hideContentController(_ content: UIViewController?) {
 }
 ```
 
-##### Suggestions for Building a Container View Controller
+#### Suggestions for Building a Container View Controller
 
 Designing, developing, and testing a new container view controller takes time. Although the individual behaviors are straightforward, the controller as a whole can be quite complex. Consider the following tips when implementing your own container classes:
 
@@ -735,7 +735,7 @@ Designing, developing, and testing a new container view controller takes time. A
 - 첫번째로 일반적인 뷰를 이용해 컨테이너를 디자인한다.
   - 자식 뷰 컨트롤러의 뷰 대신 일반적인 뷰를 사용하면 단순한 환경에서 레이아웃 제약과 애니메이션 트랜지션을 테스트 할 수 있다.
 
-##### Delegating Control to a Child View Controller
+#### Delegating Control to a Child View Controller
 
 A container view controller can delegate some aspects of its own appearance to one or more of its children. You can delegate control in the following ways: 
 
@@ -767,4 +767,3 @@ https://medium.com/@kyeahen/ios-unwind-segue-in-swift-e8ff0e7fbbcd
 https://oaksong.github.io/2018/02/12/view-controller-life-cycle/
 
 https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/ImplementingaContainerViewController.html
-
