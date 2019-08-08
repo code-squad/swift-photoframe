@@ -841,6 +841,16 @@ view프로퍼티의  `var view: UIView!`는 NavigationBar, ToolBar( 옵션 ), �
 
 ### 7. Step7 - UIImage,UIImageView
 
+- 이미지 넘기기
+
+![이미지넘기기](https://user-images.githubusercontent.com/39197978/62710171-c141f580-ba31-11e9-91c9-e39924e97f44.gif)
+
+- 이미지 애니메이션 , 애니메이션 사이클 시간 제어
+
+![애니메이션](https://user-images.githubusercontent.com/39197978/62710170-c141f580-ba31-11e9-9c1d-36e4d43e7fcd.gif)
+
+
+
 - #### UIImage
 
   > 앱 내에서 이미지 데이터를 관리하는 객체
