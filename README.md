@@ -752,6 +752,10 @@ A container view controller can delegate some aspects of its own appearance to o
 
 ## STEP 11-7 Second Scene 화면
 
+### 실행 결과
+
+![step7](assets/step7.gif)
+
 ### UIImage
 
 > An object that manages image data in your app.	
