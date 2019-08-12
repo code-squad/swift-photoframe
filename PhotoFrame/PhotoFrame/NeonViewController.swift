@@ -13,29 +13,29 @@ class NeonViewController: UIViewController {
     // MARK: LifeCycle Method
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("\(type(of: self))", #function)
+        print(#file, #line, #function, #column)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("\(type(of: self))", #function)
+        print(#file, #line, #function, #column)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("\(type(of: self))", #function)
+        print(#file, #line, #function, #column)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        print("\(type(of: self))", #function)
+        print(#file, #line, #function, #column)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        print("\(type(of: self))", #function)
+        print(#file, #line, #function, #column)
     }
-    
+
     
     // MARK: IBAction
     @IBAction func exit(_ sender: Any) {

@@ -312,7 +312,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="np8-6E-urK">
-                                <rect key="frame" x="158" y="693" width="98" height="92"/>
+                                <rect key="frame" x="158" y="503" width="98" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.54367894589999999" green="0.43033714750000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
@@ -326,29 +326,16 @@ From Xib
                                     <action selector="touchUpLoadViewFromXib:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="XIZ-vo-dcG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nc-jU-Kyo">
-                                <rect key="frame" x="89" y="300" width="236" height="94"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.084314603330000001" blue="0.8762690944" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                <color key="tintColor" red="1" green="0.083141316549999997" blue="0.49481827969999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="OverCurrentContext">
-                                    <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchUpPresentOverCurrentContext:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="2Tg-uK-8fA"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUz-0L-PES">
-                                <rect key="frame" x="89" y="169" width="236" height="94"/>
+                                <rect key="frame" x="158" y="330" width="98" height="94"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                <state key="normal" title="CurrentContext">
+                                <state key="normal" title="Present">
                                     <color key="titleColor" white="0.93000000000000005" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchUpPresentCurrentContext:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="XIg-fq-gdB"/>
+                                    <action selector="touchUpPresent:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="XIg-fq-gdB"/>
                                 </connections>
                             </button>
                         </subviews>

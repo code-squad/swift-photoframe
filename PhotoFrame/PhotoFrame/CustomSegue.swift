@@ -21,7 +21,7 @@ class CustomSegue: UIStoryboardSegue {
         }) { _ in
             self.source.view.transform = .init(rotationAngle: 0)
             self.source.view.subviews.forEach{
-                $0.transform = initTransform
+                $0.transform =  initTransform
             }
             self.source.present(self.destination, animated: true)
         }
