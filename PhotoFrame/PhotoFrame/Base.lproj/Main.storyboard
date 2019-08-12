@@ -201,7 +201,7 @@
         <!--Neon View Controller-->
         <scene sceneID="7Qt-K4-5of">
             <objects>
-                <viewController storyboardIdentifier="NeonViewController" id="J5A-yJ-waM" customClass="NeonViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="J5A-yJ-waM" customClass="NeonViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8tC-7e-yPI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -225,7 +225,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G82-Dm-zut" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1690" y="360"/>
+            <point key="canvasLocation" x="1571.0144927536232" y="776.78571428571422"/>
         </scene>
         <!--End Point View Controller-->
         <scene sceneID="Zmw-tT-jP8">
@@ -311,23 +311,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="np8-6E-urK">
-                                <rect key="frame" x="158" y="503" width="98" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.54367894589999999" green="0.43033714750000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <state key="normal">
-                                    <string key="title">Load View 
-From Xib
-</string>
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchUpLoadViewFromXib:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="XIZ-vo-dcG"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUz-0L-PES">
-                                <rect key="frame" x="158" y="330" width="98" height="94"/>
+                                <rect key="frame" x="158" y="401" width="98" height="94"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
@@ -335,7 +320,7 @@ From Xib
                                     <color key="titleColor" white="0.93000000000000005" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchUpPresent:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="XIg-fq-gdB"/>
+                                    <segue destination="J5A-yJ-waM" kind="presentation" id="8SY-XN-jNt"/>
                                 </connections>
                             </button>
                         </subviews>
