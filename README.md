@@ -8,8 +8,6 @@
 
 <a href ="#3-Step3---IB">Step3 - IBOutlet, IBAction</a>
 
-<a href ="#4-Step4---Segue">Step4 - Segue</a>
-
 ---
 
 # Intro
@@ -342,22 +340,3 @@ y = 7
 | **systemReserved**         | 내부 프레임워크 내에서 사용되는 예약된 컨트롤 이벤트 값의 범위 |
 | **allEvents**              | 시스템 이벤트를 포함한 모든 이벤트                           |
 
----
-
-## 4. Step4 - Segue
-
-### Segue
-
->하나의 Scene 으로부터 다른 Scene으로의 전환을 보여주는 연결입니다.
-
-- **Segue Type**
-
-| Symbol                                                       | Type                            | Description                                                  |
-| :----------------------------------------------------------- | :------------------------------ | :----------------------------------------------------------- |
-| ![img](https://help.apple.com/xcode/mac/current/en.lproj/Art/SB_segue_push.png) | Show  <br/>**(Push)**           | 이 segue는 **target view controller**의 **`showViewController:sender:`** 가 실행된다.<br/> 일반적으로는 **source View Controller**위에 새로운 컨텐트가 모달로 보여진다.<br/> 몇몇 뷰컨트롤러들은 해당 메소드가 재정의 되어있어서 다른동작을 한다.<br/>UIKit은 **`targetViewControllerForAction:sender:`**메소드로 **source View Controller** 를 찾는다. <br/><br/>예) **NavigationViewController** 는 새로운 뷰컨트롤러를 네비게이션 스택에 push 한다. |
-| ![img](https://help.apple.com/xcode/mac/current/en.lproj/Art/SB_segue_push.png) | Show Detail  <br/>**(Replace)** | 이 segue는 **target view controller** 의 **`showDetailViewController:sender:`**메소드가 실행된다.<br/> 이 segue는 **UISplitViewController** 객체 내에 내장된 view controller에  대해서만 관련된 **segue**이다. <br/> split view controller는  자식 뷰컨트롤러를 새로운 컨텐츠로 replace합니다.<br/>나머지 대부분의 view controller에서는 모달로 보여줍니다. |
-| ![img](https://help.apple.com/xcode/mac/current/en.lproj/Art/SB_segue_modal.png) | Present Modally                 | 이 segue는 view controller를 **모달**로 보여준다.<br/>       |
-| ![img](https://help.apple.com/xcode/mac/current/en.lproj/Art/SB_segue_popover.png) | Present as Popover              | 기존 view 에 앵커를 둔 컨텐츠를 보여줍니다.                  |
-| ![img](https://help.apple.com/xcode/mac/current/en.lproj/Art/SB_segue_custom.png) | Custom                          | 개발자가 지정한 행동을 하는 segue입니다.                     |
-
-- - 
