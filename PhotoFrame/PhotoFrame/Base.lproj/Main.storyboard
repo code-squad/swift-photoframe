@@ -198,38 +198,25 @@
             </objects>
             <point key="canvasLocation" x="4216" y="-287"/>
         </scene>
-        <!--End Point View Controller-->
+        <!--View Controller-->
         <scene sceneID="Zmw-tT-jP8">
             <objects>
-                <viewController id="XnQ-x8-SrI" customClass="EndPointViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XnQ-x8-SrI" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lhd-WB-Ltg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZK-zP-xQY">
-                                <rect key="frame" x="152" y="416" width="110" height="104"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.95154669729999997" green="1" blue="0.93797137990000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Exit">
-                                    <color key="titleColor" red="1" green="0.083141316549999997" blue="0.49481827969999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="exit:" destination="XnQ-x8-SrI" eventType="touchUpInside" id="g01-Aw-8gA"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.48424340170000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="g3k-rJ-gBR"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jNf-T6-UvJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3457.971014492754" y="408.48214285714283"/>
+            <point key="canvasLocation" x="3458" y="409"/>
         </scene>
-        <!--Prepare View Controller-->
+        <!--View Controller-->
         <scene sceneID="P8G-uF-6Uo">
             <objects>
-                <viewController id="s0j-U5-Rx3" customClass="PrepareViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="s0j-U5-Rx3" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oh6-iW-AIy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -243,16 +230,13 @@
                                     <color key="titleColor" red="0.95154669729999997" green="1" blue="0.93797137990000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="g48-7U-rfG" kind="show" id="MjZ-HE-sZl"/>
+                                    <segue destination="g48-7U-rfG" kind="show" id="vqA-FR-Ns1"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.61116603889999999" green="0.7816692932" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Rlv-Om-Xhd"/>
                     </view>
-                    <connections>
-                        <outlet property="nextButton" destination="hkE-MZ-K1a" id="w3W-qp-sLi"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NiV-4G-Tll" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
