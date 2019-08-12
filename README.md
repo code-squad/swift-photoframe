@@ -171,50 +171,9 @@ y = 7
 
 ### 2. Step2 - UILabel
 
--  **UILabel**
-
-  - 읽기만 가능한 문자를 보여주는 뷰
-
-     
-
 
 
 <img width="307" alt="스크린샷 2019-07-14 오전 12 58 10" src="https://user-images.githubusercontent.com/39197978/61173772-e2e6c300-a5d2-11e9-9fec-59fbbd256550.png">
 
-**인터페이스 빌더 주요 속성**
-
-| Attribute    | Description                                                | Associated Attribute               |
-| ------------ | ---------------------------------------------------------- | ---------------------------------- |
-| **Text**     | `UILabel` 의 컨텐츠에 해당하는 속성                        | **`text`**,**`attrubutedText`**    |
-| **Color**    | **Text**의 색상을 제어하는 속성                            |                                    |
-| **Font**     | **Text**의 글꼴을 제어하는 속성                            |                                    |
-| **Lines**    | 렌더링될 **Text**의 최대 줄 수를 결정하는 속성             | **`numberOfLines`**                |
-| **Behavior** | Enable (활성화/비활성화) / Highlight 의 동작과 관련된 속성 | **`isEnable`**,**`isHighlighted`** |
-
-**인터페이스 빌더 간격에 관한 속성**
-
-| Attribute      | Description                                                  | Associated Attribute                                         |
-| -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| **Baseline**   | 수직 정렬을 제어하는 속성                                    | **`baselineadjustment`**                                     |
-| **LineBreaks** | 문자들이 `bound`보다 길어졌을 때, 글자 단위 또는 문자 단위로 줄바꿈을 할 것인 지 결정하는 속성        최대 줄이 보다 넘어가게 되면 … 으로 생략되게 되는 데 앞,뒤,중간 중 어느 부분을 생략할 것인 지 결정할 수 있다. | **`lineBreakMode`**                                          |
-| **AutoShrink** | **Text** 가 생략되기 전에 모양 조정을 제어하는 속성 간격을 줄이거나, 글자의 크기를 줄일 수 있다. | **`miimumScaleFactor`**, **`allowDefaultTighteningForTruncation`** |
 
 
-
-**인터페이스 빌더 고급 속성**
-
-| Attribute         | Description                                  | Associated Attribute       |
-| ----------------- | -------------------------------------------- | -------------------------- |
-| **Highlighted**   | 하이라이트된 **Text**의 색상에 적용되는 속성 | **`highlightedTextColor`** |
-| **Shadow**        | 그림자의 색상에 적용되는 속성                | **`shadowColor`**          |
-| **Shadow Offset** | 그람자의 오프셋을 제어하는 속성              | **`shadowOffset`**         |
-
-
-
-* **text , attributedText**
-
-  | text                                             | attributedText                                               |
-  | ------------------------------------------------ | ------------------------------------------------------------ |
-  | 문자열에 속하는 모든 문자들에게 동일한 속성 부여 | 문자열에 해당하는 문자들에게 `Range` 별로 각각의 속성을 부여할 수 있다. |
-
-  
