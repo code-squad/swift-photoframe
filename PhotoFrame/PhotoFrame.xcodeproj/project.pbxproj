@@ -16,7 +16,6 @@
 		0E5B98C522D36C8900DD0972 /* PhotoFrameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5B98C422D36C8900DD0972 /* PhotoFrameTests.swift */; };
 		0E5B98D022D36C8900DD0972 /* PhotoFrameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5B98CF22D36C8900DD0972 /* PhotoFrameUITests.swift */; };
 		0E9ECDDF22E0AA0E00E0B022 /* PrepareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9ECDDE22E0AA0E00E0B022 /* PrepareViewController.swift */; };
-		0E9ECDE122E1772900E0B022 /* NeonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9ECDE022E1772900E0B022 /* NeonViewController.swift */; };
 		0EFC0D8522E04E7500282742 /* SelectSegueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFC0D8422E04E7500282742 /* SelectSegueViewController.swift */; };
 		0EFD168F22E05F8700D2E97E /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFD168E22E05F8700D2E97E /* CustomSegue.swift */; };
 		0EFD169322E072D000D2E97E /* EndPointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFD169222E072D000D2E97E /* EndPointViewController.swift */; };
@@ -55,7 +54,6 @@
 		0E5B98CF22D36C8900DD0972 /* PhotoFrameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFrameUITests.swift; sourceTree = "<group>"; };
 		0E5B98D122D36C8900DD0972 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E9ECDDE22E0AA0E00E0B022 /* PrepareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepareViewController.swift; sourceTree = "<group>"; };
-		0E9ECDE022E1772900E0B022 /* NeonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeonViewController.swift; sourceTree = "<group>"; };
 		0EFC0D8422E04E7500282742 /* SelectSegueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSegueViewController.swift; sourceTree = "<group>"; };
 		0EFD168E22E05F8700D2E97E /* CustomSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegue.swift; sourceTree = "<group>"; };
 		0EFD169222E072D000D2E97E /* EndPointViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointViewController.swift; sourceTree = "<group>"; };
@@ -120,7 +118,6 @@
 				0EFC0D8422E04E7500282742 /* SelectSegueViewController.swift */,
 				0EFD168E22E05F8700D2E97E /* CustomSegue.swift */,
 				0E9ECDDE22E0AA0E00E0B022 /* PrepareViewController.swift */,
-				0E9ECDE022E1772900E0B022 /* NeonViewController.swift */,
 			);
 			path = PhotoFrame;
 			sourceTree = "<group>";
@@ -276,7 +273,6 @@
 			files = (
 				0E9ECDDF22E0AA0E00E0B022 /* PrepareViewController.swift in Sources */,
 				0E5B98B222D36C8900DD0972 /* SecondViewController.swift in Sources */,
-				0E9ECDE122E1772900E0B022 /* NeonViewController.swift in Sources */,
 				0E5B98AE22D36C8900DD0972 /* AppDelegate.swift in Sources */,
 				0EFC0D8522E04E7500282742 /* SelectSegueViewController.swift in Sources */,
 				0EFD168F22E05F8700D2E97E /* CustomSegue.swift in Sources */,
