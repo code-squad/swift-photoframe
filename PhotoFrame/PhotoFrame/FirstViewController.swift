@@ -26,6 +26,7 @@ class FirstViewController: UIViewController {
         self.firstLabel.textColor = .brown
         self.firstLabel.font = .preferredFont(forTextStyle: .largeTitle)
         self.firstLabel.backgroundColor = UIColor.brown.withAlphaComponent(0.3)
+        self.firstLabel.highlightedTextColor = .red
         self.firstLabel.shadowColor = .brown
         self.firstLabel.baselineAdjustment = .alignCenters
         
