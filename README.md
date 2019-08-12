@@ -432,7 +432,7 @@ y = 7
 
   ![customSegue2](https://user-images.githubusercontent.com/39197978/61465239-a7713d80-a9b2-11e9-9259-bdda110579d1.gif)
 
-  - 사용자 정의 **segue** 이다.
+  - 사용자 정의 **segue**이다.
   - 개발자가 정의한 대로 동작하고 **`UIStoryboardSegue`**를 상속하며 , **`perform()`**을 재정의하여 동작하게 할 수 있다.
 
   
@@ -441,15 +441,14 @@ y = 7
 
   ![Prepare](https://user-images.githubusercontent.com/39197978/61465255-acce8800-a9b2-11e9-97dd-ee9320b6f7bf.gif)
 
-  - **Segue** 가 발생하여 다른 viewcontroller로 전환되기 직전에 발생하는 **`prepare()`**가 호출된다.
+  - **Segue**가 발생하여 다른 viewcontroller로 전환되기 직전에 발생하는 **`prepare()`**가 호출된다.
   - **source viewcontroller**에서 **destination viewcontroller** 로 *data*를 넘기기위해 사용할 수 있다. 
 
 - #### Unwind
 
   ---
 
-- **액션메소드 정의하기**
-![스크린샷 2019-07-18 오후 3.52.47](/Users/ldcpaul/Downloads/스크린샷/스크린샷 2019-07-18 오후 3.52.47.png)
+- **액션메소드 정의하기**![스크린샷 2019-07-18 오후 3.52.47](/Users/ldcpaul/Downloads/스크린샷/스크린샷 2019-07-18 오후 3.52.47.png)
 
   - **unwind()** 의 **destination**이 될 viewcontroller를 정한다.
   - 그 곳에 **unwindSegue**를 받을 수 있는   **@IBAction** 메소드를 정의해둔다.
