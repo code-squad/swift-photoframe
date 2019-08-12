@@ -731,7 +731,7 @@ y = 7
     
     
 
-###  6. Step6 - View Controller Container
+###  6. Step6 -  View Controller Container
 
 
 
