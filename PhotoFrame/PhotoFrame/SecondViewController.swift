@@ -9,7 +9,7 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         print("file: \(#file)") // 어떤 파일인지 절대경로
@@ -19,20 +19,7 @@ class SecondViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
-    
-    
-    @IBAction func touchUpPresent(_ sender: UIButton) {
-        guard let storyboard = self.storyboard else {
-            return
-        }
-        let destination = storyboard.instantiateViewController(withIdentifier: "NeonViewController")
-        self.present(destination, animated: true)
-    }
-    
-    
-    @IBAction func touchUpLoadViewFromXib(_ sender: Any) {
-        let xibView = XibView(frame: self.view.frame)
-        self.view.addSubview(xibView)
-    }
+
+
 }
 
