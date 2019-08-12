@@ -79,7 +79,7 @@ y = 7
 
 
 
-###  1. Step1 - UITabBarController, UITabBar
+###  Step1 - UITabBarController, UITabBar
 
 - #### UITabBar
 
@@ -453,10 +453,10 @@ y = 7
   @IBAction func myUnwind(_ segue: UIStoryBoardSegue) {
     
   }
-```
-
+  ```
   
-
+  
+  
   - **unwind()** 의 **destination**이 될 viewcontroller를 정한다.
   
   - 그 곳에 **unwindSegue**를 받을 수 있는   **@IBAction** 메소드를 정의해둔다.
@@ -476,7 +476,7 @@ y = 7
 -  ```swift
   optional func shouldPerformSegue(withIdentifier identifier: NSStoryboardSegue.Identifier, 
                             sender: Any?) -> Bool
-  ```
+   ```
 
   - 세그웨이의 진행여부를 결정한다.
   - 내부에서 특정상태 일 때 세그웨이를 진행하지 않는 다면 이 부분에서 상태에 따른 반환을 하면된다.
@@ -723,111 +723,3 @@ y = 7
     
 
     네비게이션뷰컨트롤러는 두 개의 뷰 컨트롤러가 라이프 사이클 메소드를 주고 받듯 순서를 거치며 view가 전환된다.
-    
-    ---
-    
-    
-
-
-
-### 6. Step6 -  View Controller Containter
-
-
-
-Container View Controller은 여러 개의 viewcontroller들을 하나의 인터페이스로 결합하는 방법중 하나이다.
-
-- UITabBarController
-- UINavigationController
-- UISplitViewController
-
-UIKit은 위 3개의 Container View Controller를 내장하고 있다.
-
-
-
-`Container view controller`는 자신의 `root view`와 `content`를 관리한다는 점에서 `content view controller`와 유사하다.
-
-하지만 그 컨텐트가 **자신이 아닌 다른 뷰 컨트롤러**들의 일부를 가져온 다는 차이가 있다.
-
-**가져온 `content`는 다른 뷰컨트롤러의 뷰들**이며 그 뷰들도 독자적인 뷰 계층을 가진다.
-
-`container` 는 또 `content`의 사이즈와 위치를 제어한다. 
-
-하지만 `content 내의 view`는 `container view controller`가 아닌 `content view controller`가 제어한다.
-
-
-
-##### 컨테이너 뷰 컨트롤러를 설계하면서 고민해야하는 사항
-
-- 컨테이너와 자식 각각의 역할을 무엇인가?
-- 얼마나 많은 뷰 컨트롤러들이 동시에 디스플레이 되어야 하는가?
-- 형제 뷰 컨트롤러 사이에 관계가 어떤가?
-- 얼마나 많은 자식 뷰 컨트롤러들이 추가되고 삭제 될 것인가?
-- 자식의 크기와 위치는 변하는가? 어떤 상황에서 변하는가?
-- 컨테이너가 자체적으로 네비게이션이나 장식을 위한 뷰들을 제공하는가?
-- 컨테이너와 자식간의 소통은 어떤 방식으로 이루어져야하는가?
-- 컨테이너의 외형이 다른 방법으로 설정될 수있는가? 만약 있다면 어떻게 설정 하는가?
-
-
-
-#### UINavigationController 
-
->계층적인 컨텐트를 stack형태로 다루는 Container view controller
->
->
-
-
-
-<img width="772" alt="스크린샷 2019-07-28 오후 7 55 18" src="https://user-images.githubusercontent.com/39197978/62006687-f0797c80-b17e-11e9-985a-405dfaf575b4.png">
-
-##### 특징
-
-- `UINavigationController`는 계층적인 데이터의 집합을 디스플레이한다.
-
-- 한번에 하나의 `view controller`를 표현한다.
-
-- `navigation bar`는 화면 상단에 위치하며, 현재 표현하고 있는 데이터 계층과 이전 단계로 돌아가는 `Back`버튼을 포함한다.
-
-- `child view`의 `table row` 또는 `button`으로 유저와 상호작용을 하고 `children view controller`는 `container`에게 `new view controller`을 푸시할 것을 요청한다
-
-- 새로 화면에 보여질  `view controller`의 컨텐트는 `children view controller`가 설정하고, `container`가 전환을 담당한다.
-
-- 네비게이션바와 컨텐트 영역이 존재하며, `children view controller`의 최상단의 뷰가 대부분의 컨텐트 영역을 차지한다.
-
-- 상단에 네비게이션 바가 존재하고, 옵션으로 툴바를 가질 수 있다.
-
-  
-
-
-
-
-
-<img width="683" alt="스크린샷 2019-07-28 오후 10 09 19" src="https://user-images.githubusercontent.com/39197978/62007103-8237b880-b184-11e9-8049-97d6bef85f6d.png">
-
-네비게이션 뷰컨트롤러는 컨테이너 뷰 컨트롤러이다.
-
-view프로퍼티의  `var view: UIView!`는 NavigationBar, ToolBar( 옵션 ), 최상단에 해당하는 뷰컨트롤러의 뷰를 포함한다. 
-
-
-
-
-
-##### Navigation stack
-
-**UINavigationViewController**는 child View Controller 를 **정렬된 배열의 형태로 관리**한다.
-
-배열의 첫번째 요소는 rootViewController 이고 배열의 마지막 요소는 스택의 최상단에 위치한다.
-
-그리고 스택 최상단에 위치한 뷰컨트롤러가 화면에 보여진다.
-
-스택에 뷰컨트롤러를 세그웨이를 이용해서 **추가(Push)**하거나 **제거(Pop)**할 수 있다. 
-
-`UINavigationControllerDelegate` protocol을 채택함으로써, push, pop 동작을 재정의 할 수있다.
-
- 
-
-
-
-![navigation stack](https://user-images.githubusercontent.com/39197978/62006684-e8214180-b17e-11e9-8dfa-efd2643879c6.gif)
-
-
-

@@ -25,7 +25,6 @@ class PrepareViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         print("\(type(of: self))", #function)
-        print("현재 스택 count \(String(describing: self.navigationController?.children.count)))")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -36,7 +35,6 @@ class PrepareViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         print("\(type(of: self))", #function)
-        print("현재 스택 count \(String(describing: self.navigationController?.children.count)))")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
