@@ -506,43 +506,15 @@ y = 7
 
 - **Life Cycle Method**
 
-  - **`viewDidLoad()`**
+  - viewDidLoad()
+    - 뷰컨트롤러의 `var view! `프로퍼티는 지연로딩된다. view가 필요로 될 때 view가 nil이면 loadView() 메소드를 호출하여 view를 로드한다.
+    - loadView()이후에 호출되는 콜백메소드이다.
+  - viewWillAppear()
+    - 뷰컨트롤러의  root view 가 로드된 이후에 window 의 뷰 계층으로 더해지기 직전에 호출되는 메소드이다.
+  - viewDidAppear()
+    - window 의 root view가 뷰 계층으로 더해진 직후에 호출되는 메소드이다.
+  - viewWillDisAppear()
+    - window 의 root view가 뷰 계층으로 제거되기 직전에 호출되는 메소드이다.
+  - viewDidDisAppear()
+    - window 의 root view가 뷰 계층으로 제거된 직 후 호출되는 메소드이다.
 
-    - 뷰컨트롤러의 `var view: UIView! `프로퍼티는 지연로딩된다. view가 필요로 될 때 view가 nil이면 `loadView()` 메소드를 호출하여 view를 로드한다.
-    - **`loadView()`직 후**에 호출되는 콜백메소드이다.
-
-  - **`viewWillAppear()`**
-
-    - 뷰컨트롤러의  root view 가 로드된 이후에 **window 의 뷰 계층으로 더해지기 직 전** 호출되는 메소드이다.
-
-  - **`viewDidAppear()`**
-
-    - window 의 root view가 **뷰 계층으로 더해진 직 후** 호출되는 메소드이다.
-
-  - **`viewWillDisAppear()`**
-
-    - window 의 root view가 **뷰 계층에서 제거되기 직 전** 호출되는 메소드이다.
-
-  - **`viewDidDisAppear()`**
-
-    - window 의 root view가 **뷰 계층에서 제거된 직 후** 호출되는 메소드이다.
-
-      
-
-    ![UIViewController_Class_Reference_2x_ddcaa00c-87d8-4c85-961e-ccfb9fa4aac2](https://user-images.githubusercontent.com/39197978/61628981-aac03e00-acbe-11e9-9f8a-51ce0654d005.png)
-
-특징
-
-- 뷰 컨트롤러는 데이터 객체와 뷰컨트롤러 의 중개자이다.
-
-- 뷰 컨트롤러와 모델(데이터 오브젝트)의 책임을 깔끔하게 분리하는 걸 유지 해야한다.
-
-- 뷰 컨트롤러는Responder객체이고 Responder Chain 에 연결된다. 따라서 뷰 컨트롤러도 이벤트 헨들링을 할 수있다. 
-
-  ###### 
-
-  
-
-  
-
-  
