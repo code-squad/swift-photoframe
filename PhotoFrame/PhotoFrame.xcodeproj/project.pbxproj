@@ -15,9 +15,6 @@
 		0E5B98BA22D36C8900DD0972 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E5B98B822D36C8900DD0972 /* LaunchScreen.storyboard */; };
 		0E5B98C522D36C8900DD0972 /* PhotoFrameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5B98C422D36C8900DD0972 /* PhotoFrameTests.swift */; };
 		0E5B98D022D36C8900DD0972 /* PhotoFrameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5B98CF22D36C8900DD0972 /* PhotoFrameUITests.swift */; };
-		0EFC0D8522E04E7500282742 /* SelectSegueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFC0D8422E04E7500282742 /* SelectSegueViewController.swift */; };
-		0EFD168F22E05F8700D2E97E /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFD168E22E05F8700D2E97E /* CustomSegue.swift */; };
-		0EFD169322E072D000D2E97E /* EndPointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFD169222E072D000D2E97E /* EndPointViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,9 +49,6 @@
 		0E5B98CB22D36C8900DD0972 /* PhotoFrameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoFrameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E5B98CF22D36C8900DD0972 /* PhotoFrameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFrameUITests.swift; sourceTree = "<group>"; };
 		0E5B98D122D36C8900DD0972 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0EFC0D8422E04E7500282742 /* SelectSegueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSegueViewController.swift; sourceTree = "<group>"; };
-		0EFD168E22E05F8700D2E97E /* CustomSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegue.swift; sourceTree = "<group>"; };
-		0EFD169222E072D000D2E97E /* EndPointViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +99,6 @@
 		0E5B98AC22D36C8900DD0972 /* PhotoFrame */ = {
 			isa = PBXGroup;
 			children = (
-				0EFD169222E072D000D2E97E /* EndPointViewController.swift */,
 				0E5B98AD22D36C8900DD0972 /* AppDelegate.swift */,
 				0E5B98AF22D36C8900DD0972 /* FirstViewController.swift */,
 				0E5B98B122D36C8900DD0972 /* SecondViewController.swift */,
@@ -113,8 +106,6 @@
 				0E5B98B622D36C8900DD0972 /* Assets.xcassets */,
 				0E5B98B822D36C8900DD0972 /* LaunchScreen.storyboard */,
 				0E5B98BB22D36C8900DD0972 /* Info.plist */,
-				0EFC0D8422E04E7500282742 /* SelectSegueViewController.swift */,
-				0EFD168E22E05F8700D2E97E /* CustomSegue.swift */,
 			);
 			path = PhotoFrame;
 			sourceTree = "<group>";
@@ -270,10 +261,7 @@
 			files = (
 				0E5B98B222D36C8900DD0972 /* SecondViewController.swift in Sources */,
 				0E5B98AE22D36C8900DD0972 /* AppDelegate.swift in Sources */,
-				0EFC0D8522E04E7500282742 /* SelectSegueViewController.swift in Sources */,
-				0EFD168F22E05F8700D2E97E /* CustomSegue.swift in Sources */,
 				0E5B98B022D36C8900DD0972 /* FirstViewController.swift in Sources */,
-				0EFD169322E072D000D2E97E /* EndPointViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
