@@ -409,20 +409,4 @@ y = 7
 
   
 
-- #### Show (Push)
-
-  ![showPush](https://user-images.githubusercontent.com/39197978/61460661-23b35300-a9aa-11e9-970a-ffb67cd0a10d.gif)
-
-  - 
-
-- #### Present Modally
-
-![presentModally](https://user-images.githubusercontent.com/39197978/61460660-23b35300-a9aa-11e9-82e0-8cefad226927.gif)
-
-- #### CustomSegue
-
-  ![customSegue2](https://user-images.githubusercontent.com/39197978/61465239-a7713d80-a9b2-11e9-9259-bdda110579d1.gif)
-
-- #### Prepare
-
-  ![Prepare](https://user-images.githubusercontent.com/39197978/61465255-acce8800-a9b2-11e9-97dd-ee9320b6f7bf.gif)
+- 
