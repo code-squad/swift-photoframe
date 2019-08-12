@@ -531,135 +531,18 @@ y = 7
 
     ![UIViewController_Class_Reference_2x_ddcaa00c-87d8-4c85-961e-ccfb9fa4aac2](https://user-images.githubusercontent.com/39197978/61628981-aac03e00-acbe-11e9-9f8a-51ce0654d005.png)
 
-**Tip**
+특징
 
-- **뷰 컨트롤러**는 **데이터 객체와 뷰 사이의 중개자**이다.
+- 뷰 컨트롤러는 데이터 객체와 뷰컨트롤러 의 중개자이다.
 
 - 뷰 컨트롤러와 모델(데이터 오브젝트)의 책임을 깔끔하게 분리하는 걸 유지 해야한다.
 
-- **뷰 컨트롤러는** **Responder객체**이고 Responder Chain 에 연결된다. 따라서 view controller 도 **이벤트 헨들링**을 할 수있다. 
+- 뷰 컨트롤러는Responder객체이고 Responder Chain 에 연결된다. 따라서 뷰 컨트롤러도 이벤트 헨들링을 할 수있다. 
 
-  
-
-- **View Life Cycle**
-
-  **Present - CurrentContext / FullScreen 은 presentingViewController 의 rootView를 뷰계층에서 제거한다**
-
-  **Present -  OverCurrentContext / OverFullScreen 은 presentingViewController 의 rootView를 뷰계층에서 제거하지 않는다**
-
-  
-
-  - #### Present  - CurrentContext, fullScreen
-
-    - ![Context](https://user-images.githubusercontent.com/39197978/61656913-b894b400-acfc-11e9-9bc2-e37338d4f466.gif)
-
-    - **Present : beforeViewController -> afterViewController**
-
-    - ```
-      - afterViewController.viewDidload()
-      - beforeViewController.viewWillDisAppear()
-      - afterViewController.viewWillAppear()
-      - afterViewController.viewDidAppear()
-      - beforeViewController.viewDisappear()
-      ```
-
-    - **Dissmiss : afterViewController -> beforeViewController**
-
-    - ```
-      - afterViewController.viewWillDisappear()
-      - beforeViewController.viewWillAppear()
-      - beforeViewController.viewWillAppear()
-      - afterViewController.viewDisDisappear()
-      ```
-
-      **뷰 계층에서 사라질 뷰**  `WillDisappear()`
-
-      **뷰 계층에 추가될 뷰**	`WillAppear()`
-
-      **뷰 계층에 추가된 뷰**	`DidAppear()`
-
-      **뷰 계층에서 사라질 뷰 **	`DidDisappear() `
-
-      의 순서를 거치며 view가 전환된다.
-
-      
-
-      **CurrentContext / FullScreen 은 기존 presentingViewController 의 rootView가 뷰의 계층(window의 subView)에서 제거 된다.** 
-
-      따라서 최상단에 뜰 뷰 이전의 뷰가 disAppear()되는 생명주기 메소드가 호출된다.
-
-  ---
-
-  - #### Present  - OverCurrentContext, OverFullScreen
-
-    
-
-    ![OverContext](https://user-images.githubusercontent.com/39197978/61656916-b92d4a80-acfc-11e9-8d79-fa93f91127ff.gif)
-
-    
-
-    - **Present : beforeViewController -> afterViewController**
-
-    - ```
-      - afterViewController.viewDidload()
-      - afterViewController.viewWillAppear()
-      - afterViewController.viewDidAppear()
-      ```
-
-    - **Dissmiss : afterViewController -> beforeViewController**
-
-    - ```
-      - afterViewController.viewWillDisappear()
-      - afterViewController.viewDisDisappear()
-      ```
-
-      **뷰 계층에 추가될 뷰**	`WillAppear()`
-
-      **뷰 계층에 추가될 뷰**	`DidAppear()`
-
-      **뷰 계층에서 사라질 뷰 **	`DidDisappear() `
-
-      의 순서를 거치며 view가 전환된다.
-
-      
-
-      **OverCurrentContext / OverFullScreen 은 기존 presentingViewController 의 rootView가 뷰의 계층(window의 subView)에서 제거되지 않는다.** 
-
-      **Present** 시 `disappear` 되지 않으며,  **dismiss**시 다시 `appear `도 다시 호출되지 않는다 
+  ###### 
 
   
 
   
 
-  - #### Show (Push)
-
-    - NavigationViewController 에서의 
-
   
-
-  ![NaviLifeCycle](https://user-images.githubusercontent.com/39197978/61656914-b92d4a80-acfc-11e9-9042-adab6452c663.gif)
-
-  
-
-  - **Push : beforeView -> afterView**
-
-  - ```
-    - afterViewController.viewDidload()
-    - beforeViewController.viewWillDisappear()
-    - afterViewController.viewWillAppear()
-    - beforeViewController.viewDidDisappear()
-    - afterViewController.viewDidAppear()
-    ```
-
-  - **Pop : afterView -> beforeView**
-
-  - ```
-    - afterView.ControllerviewWillDisappear()
-    - beforeViewController.viewWillAppear()
-    - afterViewController.viewDisDisappear()
-    - beforeViewController.viewDidAppear()
-    ```
-
-    
-
-    네비게이션뷰컨트롤러는 두 개의 뷰 컨트롤러가 라이프 사이클 메소드를 주고 받듯 순서를 거치며 view가 전환된다.
