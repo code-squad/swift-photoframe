@@ -1,10 +1,10 @@
-#PhotoFrame
+# PhotoFrame
 
-##PhotoFrame - 1
-###실행 결과
+## PhotoFrame - 1
+### 실행 결과
 ![literal expression](./images/literal expression.png)
 
-###Literal Expression
+### Literal Expression
 
 - **special literals**
 
@@ -17,10 +17,11 @@
 
 <br>
 
-##PhotoFrame - 2
-###실행 결과
+## PhotoFrame - 2
+### 실행 결과
 ![UILabel](./images/UILabel.png)
-###UILabel
+
+### UILabel
 > 한 줄 이상의 읽기 전용 텍스트를 표시하는 뷰
 
 - **UILabel 속성**
