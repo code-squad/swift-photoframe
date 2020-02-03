@@ -19,4 +19,4 @@ Console
 - 만들어져 있는 레이블을 IBOutlet으로 연결
 - 연결한 아웃렛 변수에 값을 변경
 
-<img src="https://github.com/corykim0829/swift-photoframe/tree/corykim0829/screeenshots/step2.png">
+<img src="https://github.com/corykim0829/swift-photoframe/blob/corykim0829/screeenshots/step2.png?raw=true" style="zoom:30%;" >
