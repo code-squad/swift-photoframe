@@ -45,7 +45,9 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rC-6b-8UB">
                                 <rect key="frame" x="20" y="441" width="374" height="30"/>
+                                <state key="normal" title="Next"/>
                                 <connections>
+                                    <action selector="nextButtonTouched:" destination="i8u-Ja-nRD" eventType="touchUpInside" id="nwd-Bl-3AC"/>
                                     <segue destination="Tju-Fv-k0Q" kind="show" id="tk3-Ms-ptd"/>
                                 </connections>
                             </button>
