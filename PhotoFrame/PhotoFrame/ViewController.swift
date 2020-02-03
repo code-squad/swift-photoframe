@@ -23,6 +23,11 @@ class ViewController: UIViewController {
     }
     
     // MARK: - Actions
-
+    @IBAction func nextButtonTouched(_ sender: UIButton) {
+        photoLabel.textColor = .darkGray
+        photoLabel.backgroundColor = .blue
+        photoLabel.alpha = 0.5
+    }
+    
 }
 
