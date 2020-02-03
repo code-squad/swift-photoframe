@@ -76,10 +76,10 @@
             </objects>
             <point key="canvasLocation" x="263.768115942029" y="-581.25"/>
         </scene>
-        <!--View Controller-->
+        <!--Brown View Controller-->
         <scene sceneID="klM-d1-jCh">
             <objects>
-                <viewController id="Tju-Fv-k0Q" sceneMemberID="viewController">
+                <viewController id="Tju-Fv-k0Q" customClass="BrownViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4w3-bN-DjF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -88,6 +88,7 @@
                                 <rect key="frame" x="184" y="406" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
+                                    <action selector="ClosedButtonTouched:" destination="Tju-Fv-k0Q" eventType="touchUpInside" id="c19-X1-9We"/>
                                     <segue destination="l7G-pI-dPe" kind="show" id="LG0-Dd-nMg"/>
                                 </connections>
                             </button>

@@ -14,6 +14,7 @@
 		AE8B04CE23E7B2E200189A46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE8B04CC23E7B2E200189A46 /* LaunchScreen.storyboard */; };
 		AE8B04D923E7B2E200189A46 /* PhotoFrameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8B04D823E7B2E200189A46 /* PhotoFrameTests.swift */; };
 		AE8B04E423E7B2E200189A46 /* PhotoFrameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8B04E323E7B2E200189A46 /* PhotoFrameUITests.swift */; };
+		AE8B04F223E7C18700189A46 /* BrownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8B04F123E7C18700189A46 /* BrownViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		AE8B04DF23E7B2E200189A46 /* PhotoFrameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoFrameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE8B04E323E7B2E200189A46 /* PhotoFrameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFrameUITests.swift; sourceTree = "<group>"; };
 		AE8B04E523E7B2E200189A46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE8B04F123E7C18700189A46 /* BrownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrownViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				AE8B04C123E7B2E000189A46 /* AppDelegate.swift */,
 				AE8B04C523E7B2E000189A46 /* ViewController.swift */,
+				AE8B04F123E7C18700189A46 /* BrownViewController.swift */,
 				AE8B04C723E7B2E000189A46 /* Main.storyboard */,
 				AE8B04CA23E7B2E200189A46 /* Assets.xcassets */,
 				AE8B04CC23E7B2E200189A46 /* LaunchScreen.storyboard */,
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE8B04C623E7B2E000189A46 /* ViewController.swift in Sources */,
+				AE8B04F223E7C18700189A46 /* BrownViewController.swift in Sources */,
 				AE8B04C223E7B2E000189A46 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
