@@ -12,7 +12,6 @@ class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(#file, #line, #function, #column)
     }
 
 
