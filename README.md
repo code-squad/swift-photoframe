@@ -1,6 +1,6 @@
 ### Step1
 
-viewDidLoad()
+viewDidLoad() 함수에서 아래 코드를 추가하고 결과를 확인
 
 ```swift
 print(#file, #line, #function, #column)
