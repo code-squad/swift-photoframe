@@ -1,4 +1,4 @@
-##### Make Project
+#### Make Project
 
 - Xcode에서 Tabbed App 템플릿 선택
 
@@ -6,9 +6,9 @@
 
   ​	` **/Users/adorabledy/Desktop/delma/iOSClass/swift-photoframe/PhotoFrame/PhotoFrame/FirstViewController.swift 15 viewDidLoad() 40**`
 
+### 
 
-
-### IB Outlet
+## IBOutlet
 
 - storyboard 내 IBOutlet과 코드 연결
 - label 이름 설정
