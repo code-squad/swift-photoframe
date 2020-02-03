@@ -20,6 +20,12 @@ class FirstViewController: UIViewController {
         setupLabels()
     }
     
+    @IBAction func nextButtonTouched(_ sender: Any) {
+        self.photoLabel.textColor = UIColor.blue
+        self.photoLabel.backgroundColor = UIColor.yellow
+        self.photoLabel.alpha = 0.5
+    }
+    
     private func setupLabels() {
         self.photoLabel.text = "하이디의 사진액자"
         self.photoLabel.font = .boldSystemFont(ofSize: 26)
