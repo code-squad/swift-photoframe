@@ -1,4 +1,4 @@
-## ![image-20200203134139121](/Users/hanseop/Library/Application Support/typora-user-images/image-20200203134139121.png)
+## <img width="1440" alt="image" src="https://user-images.githubusercontent.com/37682858/73639380-974f5000-46af-11ea-9431-53a1286a49aa.png">
 
 ### 변경 사항
 
