@@ -12,7 +12,7 @@ class FirstViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(#file,#line,#function,#column)
+        print(#file,#line,#function)
         // Do any additional setup after loading the view.
     }
 
