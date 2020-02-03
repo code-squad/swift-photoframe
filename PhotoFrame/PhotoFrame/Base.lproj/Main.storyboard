@@ -38,8 +38,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
                     <connections>
-                        <outlet property="firstDescription" destination="A5M-7J-77L" id="z6o-dv-rT6"/>
-                        <outlet property="firstLabel" destination="KQZ-1w-vlD" id="DnA-lM-C9b"/>
+                        <outlet property="photoDescription" destination="A5M-7J-77L" id="FVN-Lg-VgA"/>
+                        <outlet property="photoLabel" destination="KQZ-1w-vlD" id="euP-kf-gf0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
