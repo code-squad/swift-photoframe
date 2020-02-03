@@ -1,19 +1,29 @@
-## <img width="535" alt="image" src="https://user-images.githubusercontent.com/37682858/73645043-df737000-46b9-11ea-8aa7-fa727fd04f98.png">
+## 버튼 누르기 전
+
+<img width="300" alt="image" src="https://user-images.githubusercontent.com/37682858/73662039-79e5aa80-46de-11ea-907d-a380ca2ebf6f.png">
+
+## 버튼 누른 후
+
+<img width="300" alt="image" src="https://user-images.githubusercontent.com/37682858/73662054-7eaa5e80-46de-11ea-95c7-9018cac74324.png">
 
 ### 변경 사항
 
-firstScene의 라벨을 IBOutlet으로 연결하여 값 변경.
+* IBAction을 통해 특정 이벤트 발생 시 취할 action을 정의 함.
+* 하나의 버튼에 두개의 action을 부여 함.
 
 ```swift
-self.firstLabel.text="Olaf의 사진액자" // 라벨의 텍스트 변경
-self.firstLabel.alpha=0.5 // 라벨의 투명도 조정
-self.firstLabel.backgroundColor=UIColor(displayP3Red: 0.5, green: 0.3, blue: 0.7, alpha: 0.3) // 라벨의 배경 색 변경
-self.firstLabel.textColor=UIColor(displayP3Red: 0.0, green: 0.3, blue: 0.5, alpha: 1) // 라벨의 텍스트 색깔 변경
-self.firstLabel.font=UIFont.systemFont(ofSize: CGFloat(50)) // 라벨의 텍스트 크기 변경
+@IBAction func nextButtonTouched(_ sender: Any) {
+  self.firstLabel.textColor=UIColor.blue
+  self.firstLabel.backgroundColor=UIColor.yellow
+}
+    
+@IBAction func secondEventBtn(_ sender: Any) {
+  self.firstLabel.alpha=0.5
+}
 ```
 
 
 
 ### 완료 시간
 
-2020-02-03-19:23
+2020-02-03-22:16
