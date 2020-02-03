@@ -9,7 +9,6 @@
 import UIKit
 
 class FirstViewController: UIViewController {
-    
     @IBOutlet weak var firstLabel: UILabel!
     @IBOutlet weak var firstDescription: UILabel!
     
@@ -38,8 +37,6 @@ class FirstViewController: UIViewController {
                                   range: (firstDescription.text! as NSString).range(of: "hello"))
     }
     
-    
-    
     private func setText(label : UILabel, text : String) {
         label.text = text
     }
@@ -56,5 +53,11 @@ class FirstViewController: UIViewController {
                                        range: range)
             label.attributedText = attributedStr
         }
+    }
+    
+    @IBAction func nextButtonTouched(_ sender: Any) {
+        self.firstLabel.textColor = UIColor.blue
+        self.firstLabel.backgroundColor = UIColor.yellow
+        self.firstLabel.alpha = 0.5
     }
 }
