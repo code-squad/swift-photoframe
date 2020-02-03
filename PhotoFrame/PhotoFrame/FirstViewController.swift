@@ -9,10 +9,21 @@
 import UIKit
 
 class FirstViewController: UIViewController {
-
+    
+    @IBOutlet weak var photoLabel: UILabel!
+    @IBOutlet weak var photoDescription: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(#file, #line, #function, #column)
+        setupUI()
+    }
+    
+    private func setupUI() {
+        photoLabel.text = " Cory의 사진액자 "
+        photoLabel.textColor = .white
+        photoLabel.backgroundColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
+        photoDescription.font = UIFont.boldSystemFont(ofSize: 14)
+        photoDescription.alpha = 0.7
     }
 }
