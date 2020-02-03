@@ -16,13 +16,13 @@
 2. fork한 프로젝트를 자신의 컴퓨터로 clone한다.
 ```
 git clone https://github.com/{본인_아이디}/{저장소 아이디}
-ex) https://github.com/godrm/swift-storeapp
+ex) https://github.com/godrm/swift-photoframe
 ```
 
 3. clone한 프로젝트 이동
 ```
 cd {저장소 아이디}
-ex) cd swift-storeapp
+ex) cd swift-photoframe
 ```
 
 4. 본인 아이디로 브랜치를 만들기 위한 checkout
@@ -34,7 +34,7 @@ ex) git checkout -t origin/godrm
 5. 기능 구현을 위한 브랜치 생성 (연속번호를 붙여나간다)
 ```
 git checkout -b 브랜치이름
-ex) git checkout -b store-step1
+ex) git checkout -b photoframe-step1
 ```
 
 6. commit
@@ -48,7 +48,7 @@ git commit -m "메세지" // 커밋
 7. 본인 원격 저장소에 올리기
 ```
 git push --set-upstream origin 브랜치이름
-ex) git push --set-upstream origin store-step1
+ex) git push --set-upstream origin photoframe-step1
 ```
 
 8. pull request
@@ -56,7 +56,7 @@ ex) git push --set-upstream origin store-step1
 	- pull request는 original 저장소의 브랜치(자신의 github 아이디)와 앞 단계에서 생성한 브랜치 이름을 기준으로 한다.
 
 	```
-	ex) code-squad/swift-photoframe godrm 브랜치 기준 => godrm/swift-storeapp store-step1
+	ex) code-squad/swift-photoframe godrm 브랜치 기준 => godrm/swift-photoframe store-step1
 	```
 	
 9. code review 및 push
@@ -70,10 +70,10 @@ ex) git push --set-upstream origin store-step1
 	git remote add upstream base_저장소_url
 
 	ex) git checkout godrm
-	ex) git remote add upstream https://github.com/code-squad/swift-storeapp.git
+	ex) git remote add upstream https://github.com/code-squad/swift-photoframe.git
 	```
 
-	- 위와 같이 base 저장소 추가한 후 remote 브랜치 목록을 본다.
+	- 위와 같이 base 저장소 추가한 후 remote 브랜치 목록을 보면 4개가 보여야 한다.
 
 	```
 	git remote -v
