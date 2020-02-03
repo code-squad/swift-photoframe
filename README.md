@@ -55,3 +55,9 @@ ex) git push origin godrm
 ## 앞의 코드 리뷰 과정은 [영상 보기](https://www.youtube.com/watch?v=ZSZoaG0PqLg) 를 통해 참고 가능
 
 ## 실습 중 모든 질문은 슬랙 채널에서...
+
+
+# git 기본 명령어와 의미
+- checkout : 브랜치로 이동. 새 브랜치를 만들면서 그곳으로 이동할 수도 있음
+- add : git 이 그 파일을 추적하게 되며 Staged 상태가 된다
+- commit : 스테이지에 올라온 모든 파일을 저장
