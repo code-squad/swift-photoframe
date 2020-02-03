@@ -11,12 +11,13 @@ import UIKit
 class FirstViewController: UIViewController {
     
     @IBOutlet weak var firstLabel: UILabel!
+    @IBOutlet weak var firstDescription: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print(#file, #line, #function, #column)
-        
         customizeFirstLabel()
+        customizeFirstDescription()
     }
     
     private func customizeFirstLabel() {
@@ -27,6 +28,17 @@ class FirstViewController: UIViewController {
                                   size: 50,
                                   range: (firstLabel.text! as NSString).range(of: "Jason"))
     }
+    
+    private func customizeFirstDescription() {
+        setText(label : firstDescription, text : "hello world")
+        setColor(label : firstDescription, color : UIColor.red)
+        setLableFontAndSizePartly(label: firstDescription,
+                                  name: "Apple Color Emoji",
+                                  size: 20,
+                                  range: (firstDescription.text! as NSString).range(of: "hello"))
+    }
+    
+    
     
     private func setText(label : UILabel, text : String) {
         label.text = text
@@ -46,4 +58,3 @@ class FirstViewController: UIViewController {
         }
     }
 }
-
