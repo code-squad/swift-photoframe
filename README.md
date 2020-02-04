@@ -1,55 +1,15 @@
 # 사진 액자 앱 
 
-# 3단계 : IBAction
+# 4단계 : Scene 과 Segue
 
 ## 1. 구현한 기능 목록 
 
-* '다음' 버튼을 터치하면 가운데의 라벨의 색상과 배경 색, 투명도가 변경되게끔 기능 구현  
+* 첫번째 화면에서 '다음' 버튼을 터치하면 show로 오렌지색 바탕의 화면이 나타나도록 기능 구현 
 
-> 다음 버튼 터치하기 전
+* 오렌지 바탕의 화면에서 '다음' 버튼을 터치하면 present Modally로 보라색 바탕의 화면이 나타나도록 기능 구현 
 
-<img width="300" alt="스크린샷 2020-02-04 오후 1 15 30" src="https://user-images.githubusercontent.com/38216027/73714225-9a038100-4753-11ea-8e1b-73c4d0da4fbe.png">
+<img src="/Users/kimdo/Downloads/appVideo.gif" height="696">
 
-> 다음 버튼 터치한 후 
+## Show vs Present Modally
 
-<img width="300" alt="스크린샷 2020-02-03 오후 9 29 28" src="https://user-images.githubusercontent.com/38216027/73653390-6893a280-46cc-11ea-9fc4-8ebafdb96a7a.png">
-
-* '다음' 버튼을 드래그 하면 가운데의 라벨의 색상과 배경 색, 투명도가 변경되게끔 기능 구현 
-
-> 다음 버튼 터치한 후 
-
-<img width="250" alt="스크린샷 2020-02-04 오후 1 47 13" src="https://user-images.githubusercontent.com/38216027/73714751-2f534500-4755-11ea-937a-b99ee183364c.png">
-
-* '이전' 버튼을 터치하면 셜명 라벨의 색상과 배경 색, 투명도가 변경되게끔 기능 구현 
-
-> 이전 버튼 터치하기 전 
-
-<img width="300" alt="스크린샷 2020-02-04 오후 1 15 30" src="https://user-images.githubusercontent.com/38216027/73714225-9a038100-4753-11ea-8e1b-73c4d0da4fbe.png">
-
-> 이전 버튼 터치한 후 
-
-<img width="300" alt="스크린샷 2020-02-04 오후 1 52 14" src="https://user-images.githubusercontent.com/38216027/73714885-9244dc00-4755-11ea-9129-ccd91b402b25.png">
-
-
-## 2. IBOutlet vs IBAction
-
-* what's mean IB?
-<br>=> IB 는 Interface Builder를 말한다. Interface Builder는 Xcode 내의 내장된 편집기로서 코드를 작성하지 않고 전체 사용자 인터페이스를 간단하게 디자인할 수 있도록 해준다.
-
-> @IBOutlet 
-
-* 화면상의 객체를 소스 코드에서 참조하기 위해 사용하는 어노테이션 
-* 주로 객체의 속성을 제어할 목적으로 클래스의 프로퍼티에 연결 
-* 인터페이스 빌더의 객체와 클래스의 프로퍼티는 **타입이 서로 일치해야 함**
-
-> @IBAction
-
-* 특정 객체에서 지정된 이벤트가 발생했을 때 일련의 프로세스를 실행하고자 할 때 사용
-* 터치, 클릭 등 동적인 상태를 처리하는 메소드와 연결한다. (액션 메소드)
-
-## 버튼에 액션을 여러개 추가할 수 있을까?
-=> 할 수 있다. 여러개 이벤트에 따라서 다르게 작동하도록 구현할 수 있다. 
-
-## 버튼이 여러일 때 하나의 액션에 추가할 수 있을까?
-
-=> 할 수 있다. 버튼을 복사할 때 이전 액션이 그대로 적용되므로 조심해야 한다. 
+=> 첫 '다음' 버튼의 segue를 show로 하고, 두 번째 '다음' 버튼의 segue를 present Modally로 했는데 효과의 차이점을 모르겠다... 미션 다하고 알아봐야 겠다. 
