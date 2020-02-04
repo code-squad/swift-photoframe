@@ -69,7 +69,7 @@
                                 <state key="normal" title="다음"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="KqQ-P3-yeB"/>
                     </view>
                     <navigationItem key="navigationItem" id="LX5-8H-3S1"/>
