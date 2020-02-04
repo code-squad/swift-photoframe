@@ -21,7 +21,7 @@ class SecondViewController: UIViewController {
         let randomNum = Int.random(in: 1...22)
         let resource = String(format: "%02d.jpg", randomNum)
         self.photoImageView.image = UIImage(named: resource)
-        
+        self.photoImageView.contentMode = .scaleAspectFill
     }
     
 }
