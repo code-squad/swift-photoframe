@@ -95,5 +95,10 @@
 
   다운로드한 사진 리소스를 Xcode 프로젝트 Assets에 추가
 
+  generateRandomNumber() 메소드 생성
 
+  generateRandomImage() 메소드 생성
 
+![image-20200205020148115](/Users/keunnalee/Library/Application Support/typora-user-images/image-20200205020148115.png)
+
+> 이미지의 제목이 01.jpg ~ 22.jpg 연속된 숫자임을 착안해 generateRandomImage() 메소드에서 generateRandomNumber() 메소드를 통해 생성된 랜덤 숫자를 이름으로 하는 UIImage를 반환해  UIImageView의 image 로 삽입하도록 구현.
