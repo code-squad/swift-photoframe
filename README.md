@@ -48,3 +48,33 @@
 **실행 화면**
 ![step1-4_result](step1-4_result.png)
 
+## STEP1-5 뷰 컨트롤러 닫기 기능 구현
+
+* 두 개의 뷰 컨트롤러에 닫기 버튼 추가
+* 닫기 버튼이 터치됐을 때 액션 메서드를 통해 화면을 닫도록 구현
+* 뷰의 상태 변화 관련 메서드들을 오버라이드하여 호출되는 시점 관찰
+
+### 학습한 내용
+
+#### 뷰의 상태 변화 관련 메서드들 정리
+
+* `viewDidLoad` — 뷰가 메모리에 로드될 때 호출된다.
+* `viewWillAppear` — 뷰 컨트롤러의 뷰가 뷰 계층 구조에 추가되기 직전에 호출되며, 화면 전환 애니메이션 등이 설정되기 전에 호출된다. 화면을 보여주는 작업과 관련된 일들을 수행하기에 적합하다.
+* `viewDidAppear` — 뷰 컨트롤러의 뷰가 뷰 계층 구조에 추가되었음을 알리기 위해 호출된다. 뷰의 presenting하는 것과 관련된 추가적인 일을 하기에 적합하다.
+* `viewWillDisappear` — 뷰 컨트롤러의 뷰가 뷰 계층 구조에서 제거되기 직전에 호출된다. `viewWillAppear`와 마찬가지로, 실제 뷰가 제거되기 이전에 애니메이션(여기서는 화면이 닫히는 애니메이션)이 설정되기 전에 호출된다.
+* `viewDidDisappear` — 뷰 컨트롤러의 뷰가 뷰 계층 구조에서 제거되었음을 알리기 위해 호출된다. 뷰가 사라지는 것과 관련된 추가적인 작업을 하기에 적합하다.
+
+#### 세그웨이를 이용하지 않고 화면 전환을 구현하는 방법 정리
+
+스토리보드에서 Green View Controller에 Storyboard ID를 `GreenViewController`라고 추가한 뒤에, presenting view controller에서 다음 코드를 추가하면 세그웨이에게 뷰 컨트롤러의 인스턴스 생성을 맡기는 것이 아니라 직접 코드에서 생성하여 보여지게 할 수 있다.
+
+```swift
+guard let viewController = storyboard?.instantiateViewController(
+    identifier: "GreenViewController") as? GreenViewController else {
+    return
+}
+show(viewController, sender: self)
+```
+
+**실행 화면**
+![step1-5_result](step1-5_result.png)
