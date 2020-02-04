@@ -44,4 +44,17 @@ Console
 
 <img src="https://github.com/corykim0829/swift-photoframe/blob/corykim0829/screeenshots/step5-1.png?raw=true" width="240px"><img src="https://github.com/corykim0829/swift-photoframe/blob/corykim0829/screeenshots/step5-2.png?raw=true" width="240px">
 
-<img src="https://github.com/corykim0829/swift-photoframe/blob/corykim0829/screeenshots/step5-3.png?raw=true" width="400px">
+<img src="https://github.com/corykim0829/swift-photoframe/blob/corykim0829/screeenshots/step5-3.png?raw=true" width="800px">
+
+## Step6: Container ViewController
+
+- First View에 Navigation Controller를 Embed
+- 기존 next action의 present 코드를 navigationController의 push 메소드로 변경
+- 기존 close action의 dismiss 코드를 navigationController의 pop 메소드로 변경
+- skyViewController로 가는 segue도 programmatically 변경 (마찬가지로 push 메소드로 구현)
+- 뷰컨트롤러 콜백 함수: navigation controller에서는 push되면 기존의 VC의 disappear가 실행된다.
+  - navigation controller가 아닌 일반적인 VC에서는 dismiss할 때에만 disappear가 반응했다.
+
+<img src="https://github.com/corykim0829/swift-photoframe/blob/corykim0829/screeenshots/step6-1.png?raw=true" width="240px"><img src="https://github.com/corykim0829/swift-photoframe/blob/corykim0829/screeenshots/step6-2.png?raw=true" width="240px"><img src="https://github.com/corykim0829/swift-photoframe/blob/corykim0829/screeenshots/step6-3.png?raw=true" width="240px">
+
+<img src="https://github.com/corykim0829/swift-photoframe/blob/corykim0829/screeenshots/step6-4.png?raw=true" width="800px">
