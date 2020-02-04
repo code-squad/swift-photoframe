@@ -25,5 +25,8 @@ class FirstViewController: UIViewController {
         firstDescription.text = "2020 Photo Collection"
     }
     @IBAction func nextButtonTouched(_ sender: Any) {
+        firstLabel.textColor = .blue
+        firstLabel.backgroundColor = .yellow
+        firstLabel.alpha = 0.5
     }
 }
