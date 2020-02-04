@@ -15,9 +15,7 @@
 		3039DC2723E816F9006BAEA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3039DC2623E816F9006BAEA6 /* Assets.xcassets */; };
 		3039DC2A23E816F9006BAEA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3039DC2823E816F9006BAEA6 /* LaunchScreen.storyboard */; };
 		308B847A23E940F2008111A3 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308B847923E940F2008111A3 /* YellowViewController.swift */; };
-<<<<<<< Updated upstream
 		308B847C23E94C7B008111A3 /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308B847B23E94C7B008111A3 /* GreenViewController.swift */; };
-=======
 		308B849423E95626008111A3 /* 12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 308B847E23E95620008111A3 /* 12.jpg */; };
 		308B849523E95626008111A3 /* 08.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 308B847F23E95621008111A3 /* 08.jpg */; };
 		308B849623E95626008111A3 /* 13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 308B848023E95621008111A3 /* 13.jpg */; };
@@ -40,7 +38,6 @@
 		308B84A723E95626008111A3 /* 11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 308B849123E95625008111A3 /* 11.jpg */; };
 		308B84A823E95626008111A3 /* 06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 308B849223E95626008111A3 /* 06.jpg */; };
 		308B84A923E95626008111A3 /* 02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 308B849323E95626008111A3 /* 02.jpg */; };
->>>>>>> Stashed changes
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,9 +51,7 @@
 		3039DC2923E816F9006BAEA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3039DC2B23E816F9006BAEA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		308B847923E940F2008111A3 /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
-<<<<<<< Updated upstream
 		308B847B23E94C7B008111A3 /* GreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenViewController.swift; sourceTree = "<group>"; };
-=======
 		308B847E23E95620008111A3 /* 12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 12.jpg; sourceTree = "<group>"; };
 		308B847F23E95621008111A3 /* 08.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 08.jpg; sourceTree = "<group>"; };
 		308B848023E95621008111A3 /* 13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 13.jpg; sourceTree = "<group>"; };
@@ -79,7 +74,6 @@
 		308B849123E95625008111A3 /* 11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11.jpg; sourceTree = "<group>"; };
 		308B849223E95626008111A3 /* 06.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 06.jpg; sourceTree = "<group>"; };
 		308B849323E95626008111A3 /* 02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 02.jpg; sourceTree = "<group>"; };
->>>>>>> Stashed changes
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
