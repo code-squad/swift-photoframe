@@ -31,6 +31,11 @@ class OrangeViewController: UIViewController {
         print("Orange-viewDidDisappear\n", #file, #line, #function, #column)
     }
     
+    @IBAction func nextButtonTouched(_ sender: Any) {
+        let skyViewController = self.storyboard?.instantiateViewController(identifier: "SkyVC") as! SkyViewController
+        navigationController?.pushViewController(skyViewController, animated: true)
+    }
+    
     @IBAction func closeButtonTouched(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }

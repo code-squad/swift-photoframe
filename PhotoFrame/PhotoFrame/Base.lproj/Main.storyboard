@@ -69,6 +69,10 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="0.13613065269999999" green="0.13876771800000001" blue="0.14006358390000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextButtonTouched:" destination="hq9-se-XyE" eventType="touchUpInside" id="Ja7-0t-azT"/>
+                                    <action selector="nextButtonTouched:" destination="4oS-TE-ztj" eventType="touchUpInside" id="TDw-vl-jbE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PkV-GF-nm7">
                                 <rect key="frame" x="189" y="335" width="37" height="30"/>
@@ -85,13 +89,14 @@
                     <navigationItem key="navigationItem" id="pe6-WE-c0H"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ci2-bj-cYs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="4oS-TE-ztj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2418.840579710145" y="-320.08928571428572"/>
         </scene>
         <!--Sky View Controller-->
         <scene sceneID="H9R-yn-chI">
             <objects>
-                <viewController id="Gkb-lD-c0I" customClass="SkyViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SkyVC" id="Gkb-lD-c0I" customClass="SkyViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Sj-bQ-Q0Z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
