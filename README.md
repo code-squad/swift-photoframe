@@ -115,3 +115,23 @@ view가 view hierarchy에서 제거될때 호출된다. 아직은 hierarchy에 �
 view가 view hierarchy에서 제거되고 호출한다.
 
 ## 
+
+## ContainerViewController
+
+다수의 viewcontroller를 단일 인터페이스로 결합하는 방식이다.
+
+탐색이 용이하며, 기존 컨텐츠 기반으로 새로운 인터페이스를 만드는데 사용됩니다.
+
+## UINavigationController
+
+naviagtion이 container viewcontroller라고 생각도 못했습니다.
+
+navigation은 각각의 viewcontroller에서 사용할 navigation bar를 설정, transition animation을 처리해줍니다.
+
+현재의 view는 child viewcontroller의 컨텐츠를 관리하는 형식입니다.
+
+### UISplitViewController UITabBarController
+
+Navigation Controller가 없으면 segue type중 show(push)를 사용해도 present(modal)이랑 같은 전환 효과가 나옵니다.
+
+Navigation Controller가 viewcontroller을 배열로 가지고 있어서 stack처럼 처리합니다. (FILO) No newline at end of file
