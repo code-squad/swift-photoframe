@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8DB10DC823E9175800B3BC0B /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB10DC723E9175800B3BC0B /* GreenViewController.swift */; };
 		8DFCD1D023E7BA2400E557BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFCD1CF23E7BA2400E557BD /* AppDelegate.swift */; };
 		8DFCD1D223E7BA2400E557BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFCD1D123E7BA2400E557BD /* SceneDelegate.swift */; };
 		8DFCD1D423E7BA2400E557BD /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFCD1D323E7BA2400E557BD /* FirstViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8DB10DC723E9175800B3BC0B /* GreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenViewController.swift; sourceTree = "<group>"; };
 		8DFCD1CC23E7BA2400E557BD /* PhotoFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DFCD1CF23E7BA2400E557BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DFCD1D123E7BA2400E557BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				8DFCD1D323E7BA2400E557BD /* FirstViewController.swift */,
 				8DFCD1D523E7BA2400E557BD /* SecondViewController.swift */,
 				8DFCD1D723E7BA2400E557BD /* Main.storyboard */,
+				8DB10DC723E9175800B3BC0B /* GreenViewController.swift */,
 				8DFCD1DA23E7BA2700E557BD /* Assets.xcassets */,
 				8DFCD1DC23E7BA2700E557BD /* LaunchScreen.storyboard */,
 				8DFCD1DF23E7BA2700E557BD /* Info.plist */,
@@ -266,6 +269,7 @@
 				8DFCD1D423E7BA2400E557BD /* FirstViewController.swift in Sources */,
 				8DFCD1D023E7BA2400E557BD /* AppDelegate.swift in Sources */,
 				8DFCD1D223E7BA2400E557BD /* SceneDelegate.swift in Sources */,
+				8DB10DC823E9175800B3BC0B /* GreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
