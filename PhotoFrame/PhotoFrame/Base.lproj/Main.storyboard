@@ -69,6 +69,9 @@
                                 <rect key="frame" x="306" y="475" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="닫기"/>
+                                <connections>
+                                    <action selector="closeButtonTouched" destination="nIH-ij-9mL" eventType="touchUpInside" id="qOC-Yw-bdM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mJM-S3-znT">
                                 <rect key="frame" x="77" y="475" width="30" height="30"/>
