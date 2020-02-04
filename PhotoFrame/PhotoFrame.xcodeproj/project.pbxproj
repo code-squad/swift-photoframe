@@ -16,6 +16,9 @@
 		5AA4C5AD23E7BEF90054FA50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AA4C5AB23E7BEF90054FA50 /* LaunchScreen.storyboard */; };
 		5AA4C5B823E7BEFA0054FA50 /* PhotoFrameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA4C5B723E7BEFA0054FA50 /* PhotoFrameTests.swift */; };
 		5AA4C5C323E7BEFA0054FA50 /* PhotoFrameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA4C5C223E7BEFA0054FA50 /* PhotoFrameUITests.swift */; };
+		5AE0908D23E957BF0046DA63 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE0908C23E957BF0046DA63 /* YellowViewController.swift */; };
+		5AE0908E23E957BF0046DA63 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE0908C23E957BF0046DA63 /* YellowViewController.swift */; };
+		5AE0908F23E957BF0046DA63 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE0908C23E957BF0046DA63 /* YellowViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,7 @@
 		5AA4C5BE23E7BEFA0054FA50 /* PhotoFrameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoFrameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AA4C5C223E7BEFA0054FA50 /* PhotoFrameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFrameUITests.swift; sourceTree = "<group>"; };
 		5AA4C5C423E7BEFA0054FA50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AE0908C23E957BF0046DA63 /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 				5AA4C5A223E7BEF70054FA50 /* FirstViewController.swift */,
 				5AA4C5A423E7BEF70054FA50 /* SecondViewController.swift */,
 				5AA4C5A623E7BEF70054FA50 /* Main.storyboard */,
+				5AE0908C23E957BF0046DA63 /* YellowViewController.swift */,
 				5AA4C5A923E7BEF90054FA50 /* Assets.xcassets */,
 				5AA4C5AB23E7BEF90054FA50 /* LaunchScreen.storyboard */,
 				5AA4C5AE23E7BEF90054FA50 /* Info.plist */,
@@ -266,6 +271,7 @@
 				5AA4C5A323E7BEF70054FA50 /* FirstViewController.swift in Sources */,
 				5AA4C59F23E7BEF70054FA50 /* AppDelegate.swift in Sources */,
 				5AA4C5A123E7BEF70054FA50 /* SceneDelegate.swift in Sources */,
+				5AE0908D23E957BF0046DA63 /* YellowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AE0908E23E957BF0046DA63 /* YellowViewController.swift in Sources */,
 				5AA4C5B823E7BEFA0054FA50 /* PhotoFrameTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AE0908F23E957BF0046DA63 /* YellowViewController.swift in Sources */,
 				5AA4C5C323E7BEFA0054FA50 /* PhotoFrameUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
