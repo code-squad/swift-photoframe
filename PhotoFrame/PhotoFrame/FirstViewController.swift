@@ -15,7 +15,7 @@ class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(#file, #line, #function, #column)
+        print("1 viewDidload")
         
         firstLabel.text = "Anna의 사진액자"
         firstLabel.backgroundColor = UIColor(red: 198/255, green: 164/255, blue: 222/255, alpha: 0.8)
@@ -24,6 +24,23 @@ class FirstViewController: UIViewController {
         
         firstDescription.text = "2020 Photo Collection"
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("1 viewWillAppear")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("1 viewDidAppear\n==================")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        print("1 viewWillDisappear")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        print("1 viewDidDisappear\n==================")
+    }
+    
     @IBAction func nextButtonTouched(_ sender: Any) {
         firstLabel.textColor = .blue
         firstLabel.backgroundColor = .yellow
