@@ -27,5 +27,10 @@ class FirstViewController: UIViewController {
         self.firstDescription.text = "사진 설명"
         self.firstDescription.textColor = .green
     }
+    @IBAction func nextButtonTouched(_ sender: Any) {
+        self.firstLabel.textColor = .purple
+        self.firstLabel.backgroundColor = .yellow
+        self.firstLabel.alpha = 0.5
+    }
 }
 
