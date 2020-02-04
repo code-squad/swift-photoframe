@@ -24,4 +24,6 @@ class FirstViewController: UIViewController {
         
         firstDescription.text = "2020 Photo Collection"
     }
+    @IBAction func nextButtonTouched(_ sender: Any) {
+    }
 }
