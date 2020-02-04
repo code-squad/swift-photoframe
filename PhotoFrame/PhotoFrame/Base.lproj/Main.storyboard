@@ -91,13 +91,23 @@
             </objects>
             <point key="canvasLocation" x="1525" y="-320"/>
         </scene>
-        <!--View Controller-->
+        <!--Apricot View Controller-->
         <scene sceneID="B3r-XR-lcN">
             <objects>
-                <viewController id="TQF-4K-CSg" sceneMemberID="viewController">
+                <viewController id="TQF-4K-CSg" customClass="ApricotViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M7f-Ws-GBY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQy-8w-yWZ">
+                                <rect key="frame" x="192" y="478" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="닫기"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="TQF-4K-CSg" eventType="touchUpInside" id="kKs-K5-ZRM"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.82745098039215681" blue="0.82745098039215681" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="cY5-cp-f6x"/>
                     </view>
