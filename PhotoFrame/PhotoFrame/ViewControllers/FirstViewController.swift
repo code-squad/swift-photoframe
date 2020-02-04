@@ -52,6 +52,6 @@ class FirstViewController: UIViewController {
         photoDescription.font = .systemFont(ofSize: 17)
         
         let orangeViewController = self.storyboard?.instantiateViewController(withIdentifier: "OrangeVC") as! OrangeViewController
-        self.present(orangeViewController, animated: true, completion: nil)
+        self.navigationController?.pushViewController(orangeViewController, animated: true)
     }
 }
