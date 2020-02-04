@@ -92,13 +92,25 @@
             </objects>
             <point key="canvasLocation" x="1509" y="-320"/>
         </scene>
-        <!--View Controller-->
+        <!--Sky View Controller-->
         <scene sceneID="H9R-yn-chI">
             <objects>
-                <viewController id="Gkb-lD-c0I" sceneMemberID="viewController">
+                <viewController id="Gkb-lD-c0I" customClass="SkyViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Sj-bQ-Q0Z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ma-lL-Rwe">
+                                <rect key="frame" x="353" y="20" width="37" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="close">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="Gkb-lD-c0I" eventType="touchUpInside" id="HHw-tu-WBT"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="eu8-1E-wCq"/>
                     </view>
