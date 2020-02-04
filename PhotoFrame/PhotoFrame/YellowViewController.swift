@@ -12,9 +12,11 @@ class YellowViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(#file, #line, #function, #column)
     }
 
     @IBAction func closeButtonTouched(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+
 }
