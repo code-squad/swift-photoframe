@@ -16,3 +16,6 @@
 3. FirstScene에 버튼 추가 후, FirstViewController에 @IBAction을 사용해 연결
 4. 연결한 액션에 대해 메서드 구현(색상 변경, label 배경색 변경, label 투명도 50% 적용)
 <img width="454" alt="스크린샷 2020-02-04 오후 4 18 54" src="https://user-images.githubusercontent.com/49548908/73722890-f32adf00-476a-11ea-8eb4-978ea5556203.png">
+
+5. 두개의 새로운 Scene을 추가 후 FirstScene에서 부터 Button에 Scene을 연결하여 Button을 누를시 해당 Scene으로 넘어감
+<img width="400" height="800" src="https://user-images.githubusercontent.com/49548908/73727054-15752a80-4774-11ea-9417-68b1de5e5531.gif">
