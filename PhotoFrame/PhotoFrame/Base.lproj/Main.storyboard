@@ -136,7 +136,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="08" translatesAutoresizingMaskIntoConstraints="NO" id="lJF-M4-PWb">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photoframe-border" translatesAutoresizingMaskIntoConstraints="NO" id="lJF-M4-PWb" userLabel="photoframe">
                                 <rect key="frame" x="67" y="188" width="280" height="280"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -205,8 +205,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="08" width="1024" height="682"/>
         <image name="first" width="30" height="30"/>
+        <image name="photoframe-border" width="720" height="720"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>
