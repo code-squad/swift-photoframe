@@ -54,3 +54,13 @@
     - view가 사라지고 나면 수행
 
 <img src="https://user-images.githubusercontent.com/40784518/73719028-7d6e4580-4761-11ea-8801-0c2626fdf87e.png" width="30%"></img>
+
+
+
+## Step6 - Container ViewController
+
+- 내비게이션 컨트롤러(Navigation Controller)를 Embed 시켜서 동작하도록 개선
+
+  
+
+<img src="https://user-images.githubusercontent.com/40784518/73721169-ffad3880-4766-11ea-9429-db01e0d72eca.png" width="30%"></img><img src="https://user-images.githubusercontent.com/40784518/73721207-1784bc80-4767-11ea-978c-d1eb4443b285.png" width="30%"></img>
