@@ -8,13 +8,15 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    let imagePicker = UIImagePickerController()
     var images:[String] = []
     @IBOutlet var photoImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        imagePicker.delegate = self
         makeImageName()
         self.photoImageView.image = UIImage(named: "01.jpg")
         self.photoImageView.contentMode = .scaleToFill
@@ -34,5 +36,21 @@ class SecondViewController: UIViewController {
         }
     }
 
-}
+    
+    @IBAction func selectButtonTouched(_ sender: Any) {
+        imagePicker.sourceType = .photoLibrary
+        present(imagePicker, animated: false, completion: nil)
 
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        imagePicker.dismiss(animated: false)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{       photoImageView.image = image
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    
+}

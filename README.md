@@ -75,3 +75,15 @@
 - `다음` 버튼 클릭 시 이미지 랜덤하게 변경되는 기능 추가
 
 <img src="https://user-images.githubusercontent.com/40784518/73725045-f6749980-476f-11ea-9346-8a7fba6c47b9.png" width="30%"></img><img src="https://user-images.githubusercontent.com/40784518/73725373-96322780-4770-11ea-8ca3-e7d32edd80b8.png" width="30%"></img><img src="https://user-images.githubusercontent.com/40784518/73725414-aba75180-4770-11ea-9543-867c897fa953.png" width="30%"></img>
+
+
+
+
+
+## 추가 요구사항
+
+- `Second Scene`  에 액자 이미지 추가 
+- `선택`  버튼으로 사진 앱 - 카메라롤 이동 
+- 사진 선택시 image view에 선택된 이미지 추가
+
+<img src="https://user-images.githubusercontent.com/40784518/73731313-9edc2b00-477b-11ea-94d9-876f62597a8a.png" width="30%"></img><img src="https://user-images.githubusercontent.com/40784518/73731358-b2879180-477b-11ea-826a-7b1ace1a053c.png" width="30%"></img><img src="https://user-images.githubusercontent.com/40784518/73731408-c7642500-477b-11ea-9e77-b51e8d58759e.png" width="30%"></img>
