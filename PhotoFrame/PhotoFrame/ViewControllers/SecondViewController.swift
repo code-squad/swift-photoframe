@@ -42,6 +42,7 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @IBAction func selectButtonTouched(_ sender: Any) {
         imagePickerController.sourceType = .photoLibrary
+        imagePickerController.modalPresentationStyle = .fullScreen
         present(imagePickerController, animated: true, completion: nil)
     }
     
