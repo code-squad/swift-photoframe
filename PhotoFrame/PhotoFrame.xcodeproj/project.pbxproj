@@ -14,6 +14,7 @@
 		DE0FBE0123E932E5007E1FEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE0FBDFF23E932E5007E1FEA /* Main.storyboard */; };
 		DE0FBE0323E932E8007E1FEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE0FBE0223E932E8007E1FEA /* Assets.xcassets */; };
 		DE0FBE0623E932E8007E1FEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE0FBE0423E932E8007E1FEA /* LaunchScreen.storyboard */; };
+		DE0FBE1023E9968C007E1FEA /* PurpleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0FBE0F23E9968C007E1FEA /* PurpleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		DE0FBE0223E932E8007E1FEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE0FBE0523E932E8007E1FEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE0FBE0723E932E8007E1FEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE0FBE0F23E9968C007E1FEA /* PurpleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				DE0FBDF723E932E5007E1FEA /* AppDelegate.swift */,
+				DE0FBE0F23E9968C007E1FEA /* PurpleViewController.swift */,
 				DE0FBDF923E932E5007E1FEA /* SceneDelegate.swift */,
 				DE0FBDFB23E932E5007E1FEA /* FirstViewController.swift */,
 				DE0FBDFD23E932E5007E1FEA /* SecondViewController.swift */,
@@ -143,6 +146,7 @@
 			files = (
 				DE0FBDFE23E932E5007E1FEA /* SecondViewController.swift in Sources */,
 				DE0FBDFC23E932E5007E1FEA /* FirstViewController.swift in Sources */,
+				DE0FBE1023E9968C007E1FEA /* PurpleViewController.swift in Sources */,
 				DE0FBDF823E932E5007E1FEA /* AppDelegate.swift in Sources */,
 				DE0FBDFA23E932E5007E1FEA /* SceneDelegate.swift in Sources */,
 			);
