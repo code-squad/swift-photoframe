@@ -54,3 +54,27 @@ UIViewController 주요 콜백 함수(viewWillAppear(), viewDidAppear(), viewWil
 화면이 닫힐 때 : viewWillDisappear() -> viewDidDisappear()
 
 화면은 스택으로 쌓이며 가장 나중에 열린 화면이 닫히고 그 전 화면이 나올 때, 다시  viewDidLoad() -> viewWillAppear() 를 거치지 않고 바로 화면이 보임.
+
+### Photoframe-step6
+
+2020.02.04 18:42
+
+First Scene에 NavigationController 추가 한 후 다음 버튼을 누르면 다음 화면이 우측에서 좌측으로 애니메이션 되면서 표시됨.
+IndigoViewController 와 PurpleViewController 의 `closeButtonTouched` 코드 수정.
+UIViewController 주요 콜백 함수(viewWillAppear(), viewDidAppear(), viewWillDisappear(), viewDidDisappear() )에 print(**#file**, **#line**, **#function**, **#column**) 코드를 추가하여 화면 전환이 이뤄지는 사이 ViewController의 라이프사이클 변화 확인. 
+
+![Screen Shot 2020-02-04 at 6.26.12 PM](/Users/keunnalee/Desktop/Screen Shot 2020-02-04 at 6.26.12 PM.png)
+
+![Screen Shot 2020-02-04 at 6.27.18 PM](/Users/keunnalee/Desktop/Screen Shot 2020-02-04 at 6.27.18 PM.png)
+
+(첫번째 스냅샷 - 왼쪽: IndigoViewController 화면 열림, 첫번째 스냅샷 - 오른쪽: IndigoViewController 화면에서 `[닫기]` 버튼을 누른 후 화면 닫힘 / 두번째 스냅샷 - 왼쪽 : PurpleViewController 화면 열림, 두번째 스냅샷 - 오른쪽 : PurpleViewController 화면에서 `[닫기]` 버튼을 누른 후 화면 닫힘 )
+
+화면이 새로 열릴 때 : viewDidLoad() -> viewWillAppear()
+
+(이전 스탭과 다른 부분) 이전 화면이 사라지고 다음 화면이 열릴때 : 다음 화면 viewDidLoad() -> 이전 화면 viewWillDisappear -> 다음화면 viewWillAppear() -> 이전화면 viewDidDisappear()
+
+(이전 스탭과 다른 부분) 화면이 닫히고 이전 화면이 열릴 때 : 현재 화면 viewWillDisappear() -> 이전 화면 viewWillAppear() -> 현재 화면 viewDidDisappear()
+
+화면이 닫힐 때 : viewWillDisappear() -> viewDidDisappear()
+
+화면이 사라지고 다시 보여질 때 이전에 한 번 로드한 화면이라면 다시 돌아올 때 viewDidLoad()와  viewWillAppear()가 호출되지 않았는데, NavigationController 추가 후 사이클이 변경됨.

@@ -14,7 +14,7 @@ class IndigoViewController: UIViewController {
     @IBOutlet weak var closeButton: UIButton!
     
     @IBAction func closeButtonTouched(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
