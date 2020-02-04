@@ -55,10 +55,10 @@
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
-        <!--View Controller-->
+        <!--Green View Controller-->
         <scene sceneID="6OF-PR-t15">
             <objects>
-                <viewController id="bin-D6-7F0" sceneMemberID="viewController">
+                <viewController id="bin-D6-7F0" customClass="GreenViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gHB-Sb-s9b">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,6 +69,14 @@
                                 <state key="normal" title="다음"/>
                                 <connections>
                                     <segue destination="yNT-aO-TOr" kind="show" id="Tg6-TS-wPV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2t-po-v7A">
+                                <rect key="frame" x="192" y="537" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="닫기"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="bin-D6-7F0" eventType="touchUpInside" id="kEu-Z0-Ewl"/>
                                 </connections>
                             </button>
                         </subviews>
