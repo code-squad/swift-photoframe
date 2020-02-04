@@ -22,4 +22,7 @@ class FirstViewController: UIViewController {
         firstDescription.font = .systemFont(ofSize: 18)
     }
 
+    @IBAction func nextButtonTouched(_ sender: UIButton) {
+    }
+    
 }
