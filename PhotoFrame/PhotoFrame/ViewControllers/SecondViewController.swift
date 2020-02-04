@@ -15,6 +15,11 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupUI()
+    }
+    
+    private func setupUI() {
+        photoImageView.contentMode = .scaleAspectFill
     }
 
     @IBAction func nextButtonTouched(_ sender: Any) {
