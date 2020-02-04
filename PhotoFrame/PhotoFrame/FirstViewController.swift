@@ -23,6 +23,9 @@ class FirstViewController: UIViewController {
     }
 
     @IBAction func nextButtonTouched(_ sender: UIButton) {
+        firstLabel.textColor = .white
+        firstLabel.backgroundColor = .cyan
+        firstLabel.alpha = 0.5
     }
     
 }
