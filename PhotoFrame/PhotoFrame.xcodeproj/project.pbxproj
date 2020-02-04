@@ -14,6 +14,7 @@
 		AB5034C923E7BAF000B703C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB5034C723E7BAF000B703C6 /* Main.storyboard */; };
 		AB5034CB23E7BAF400B703C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB5034CA23E7BAF400B703C6 /* Assets.xcassets */; };
 		AB5034CE23E7BAF400B703C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB5034CC23E7BAF400B703C6 /* LaunchScreen.storyboard */; };
+		AB5034D623E9726A00B703C6 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5034D523E9726A00B703C6 /* YellowViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		AB5034CA23E7BAF400B703C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB5034CD23E7BAF400B703C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB5034CF23E7BAF400B703C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB5034D523E9726A00B703C6 /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				AB5034CA23E7BAF400B703C6 /* Assets.xcassets */,
 				AB5034CC23E7BAF400B703C6 /* LaunchScreen.storyboard */,
 				AB5034CF23E7BAF400B703C6 /* Info.plist */,
+				AB5034D523E9726A00B703C6 /* YellowViewController.swift */,
 			);
 			path = PhotoFrame;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 				AB5034C423E7BAF000B703C6 /* FirstViewController.swift in Sources */,
 				AB5034C023E7BAF000B703C6 /* AppDelegate.swift in Sources */,
 				AB5034C223E7BAF000B703C6 /* SceneDelegate.swift in Sources */,
+				AB5034D623E9726A00B703C6 /* YellowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
