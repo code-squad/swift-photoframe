@@ -8,7 +8,7 @@
 
 * 오렌지 바탕의 화면에서 '다음' 버튼을 터치하면 present Modally로 보라색 바탕의 화면이 나타나도록 기능 구현 
 
-<img src="/Users/kimdo/Downloads/appVideo.gif" height="696">
+<img width="300" alt="appVideo" src="https://user-images.githubusercontent.com/38216027/73721010-9cbba180-4766-11ea-89a0-34a0c7227902.gif">
 
 ## Show vs Present Modally
 
