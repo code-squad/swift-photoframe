@@ -15,6 +15,7 @@
 		AB5034CB23E7BAF400B703C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB5034CA23E7BAF400B703C6 /* Assets.xcassets */; };
 		AB5034CE23E7BAF400B703C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB5034CC23E7BAF400B703C6 /* LaunchScreen.storyboard */; };
 		AB5034D623E9726A00B703C6 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5034D523E9726A00B703C6 /* YellowViewController.swift */; };
+		AB5034D823E978F100B703C6 /* OrangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5034D723E978F100B703C6 /* OrangeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		AB5034CD23E7BAF400B703C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB5034CF23E7BAF400B703C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB5034D523E9726A00B703C6 /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
+		AB5034D723E978F100B703C6 /* OrangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				AB5034CC23E7BAF400B703C6 /* LaunchScreen.storyboard */,
 				AB5034CF23E7BAF400B703C6 /* Info.plist */,
 				AB5034D523E9726A00B703C6 /* YellowViewController.swift */,
+				AB5034D723E978F100B703C6 /* OrangeViewController.swift */,
 			);
 			path = PhotoFrame;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			files = (
 				AB5034C623E7BAF000B703C6 /* SecondViewController.swift in Sources */,
 				AB5034C423E7BAF000B703C6 /* FirstViewController.swift in Sources */,
+				AB5034D823E978F100B703C6 /* OrangeViewController.swift in Sources */,
 				AB5034C023E7BAF000B703C6 /* AppDelegate.swift in Sources */,
 				AB5034C223E7BAF000B703C6 /* SceneDelegate.swift in Sources */,
 				AB5034D623E9726A00B703C6 /* YellowViewController.swift in Sources */,
