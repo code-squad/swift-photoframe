@@ -121,3 +121,49 @@ class SecondViewController: UIViewController {
 * contentMode 로 이미지가 꽉 차게 출력되도록 해줌
 * 초기 이미지를 설정해줌
 * 다음 버튼을 누를 때 마다 랜덤으로 이미지 출력되도록 해줌
+
+#### 7. UIImagePickerController
+
+<img width="466" alt="스크린샷 2020-02-04 오후 7 37 06" src="https://user-images.githubusercontent.com/50410213/73737328-c20bd800-4785-11ea-9569-cf99d4dfa421.png">
+<img width="466" alt="스크린샷 2020-02-04 오후 7 36 11" src="https://user-images.githubusercontent.com/50410213/73737344-ca641300-4785-11ea-9d28-9459edb6ab8f.png">
+<img width="466" alt="스크린샷 2020-02-04 오후 7 36 18" src="https://user-images.githubusercontent.com/50410213/73737346-ca641300-4785-11ea-9bc6-95cf8d794880.png">
+<img width="466" alt="스크린샷 2020-02-04 오후 7 36 35" src="https://user-images.githubusercontent.com/50410213/73737347-cafca980-4785-11ea-8a8c-61a09e54bcfd.png">
+
+```swift
+class SecondViewController: UIViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate  {
+
+    @IBOutlet weak var photoImageView: UIImageView!
+    
+    let picker = UIImagePickerController()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        picker.delegate = self
+        self.photoImageView.contentMode = .scaleToFill
+        self.photoImageView.image = UIImage(named: "01.jpg")
+    }
+    
+    @IBAction func nextImageButtonTouched(_ sender: Any) {
+        self.photoImageView.image = UIImage(named: String(format: "%02d", Int.random(in: 1...22)))
+    }
+    
+    @IBAction func selectButtonTouched(_ sender: Any) {
+        picker.sourceType = .photoLibrary
+        present(picker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
+            return
+        }
+        photoImageView.image = image
+        dismiss(animated: true, completion: nil)
+    }
+    
+}
+```
+1. SecondViewController 에 UIImagePickerControllerDelegate 와 UINavigationControllerDelegate 를 채택
+2. picker 를 만들어 UIImagePickerController 의 동작을 위임
+3. 버튼이 눌리면 picker 의 sourceType 을 photoLibrary 로 설정해서 앨범을 열도록 해줌
+4. imagePickerController 메소드를 만들어 선택한 이미지의 정보를 가져옴
+5. 가져온 정보에서 UIImage 부분을 꺼내와 이미지뷰에 넣어줌
