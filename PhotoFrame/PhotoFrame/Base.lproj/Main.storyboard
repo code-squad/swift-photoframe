@@ -62,7 +62,7 @@
                     <view key="view" contentMode="scaleToFill" id="gHB-Sb-s9b">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.60383173009478219" green="0.75644919019060086" blue="0.4279714052711372" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="nmV-zX-kfG"/>
                     </view>
                     <navigationItem key="navigationItem" id="HZ0-Po-GMo"/>
