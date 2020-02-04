@@ -69,3 +69,14 @@ Console
 - 중복 숫자 제외 기능 추가
 
 <img src="https://github.com/corykim0829/swift-photoframe/blob/corykim0829/screeenshots/step7-1.png?raw=true" width="240px"><img src="https://github.com/corykim0829/swift-photoframe/blob/corykim0829/screeenshots/step7-2.png?raw=true" width="240px">
+
+## Step8: Wrap up
+
+- 액자 imageView 추가
+- select button 추가 및 IBAction 연결
+- UIImagePickerControllerDelegate, UINavigationControllerDelegate 상속
+- info.plist 설정
+- imagePickerController 옵션 설정
+- imagePickerController에서 선택한 사진 photoImageView에 반영
+
+<img src="https://github.com/corykim0829/swift-photoframe/blob/corykim0829/screeenshots/step8-1.png?raw=true" width="240px"><img src="https://github.com/corykim0829/swift-photoframe/blob/corykim0829/screeenshots/step8-2.png?raw=true" width="240px"><img src="https://github.com/corykim0829/swift-photoframe/blob/corykim0829/screeenshots/step8-3.png?raw=true" width="240px"><img src="https://github.com/corykim0829/swift-photoframe/blob/corykim0829/screeenshots/step8-4.png?raw=true" width="240px">
