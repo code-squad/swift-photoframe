@@ -114,16 +114,26 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--Third View Controller-->
+        <!--Indigo View Controller-->
         <scene sceneID="PsE-N9-Me6">
             <objects>
-                <viewController id="Akk-by-XVC" customClass="ThirdViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Akk-by-XVC" customClass="IndigoViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g6a-lZ-Z1b">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83O-gb-Udh">
+                                <rect key="frame" x="70" y="572" width="37" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="[닫기]">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="Akk-by-XVC" eventType="touchUpInside" id="I2U-Vz-5OR"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVv-Mj-Wup">
-                                <rect key="frame" x="164" y="553" width="46" height="38"/>
+                                <rect key="frame" x="265" y="568" width="46" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="다음">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -137,26 +147,45 @@
                         <viewLayoutGuide key="safeArea" id="Alq-eQ-xDC"/>
                     </view>
                     <navigationItem key="navigationItem" id="5uK-CD-AsY"/>
+                    <connections>
+                        <outlet property="closeButton" destination="83O-gb-Udh" id="st8-gi-vzg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N9N-aK-VPF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1536.8" y="-321.42857142857144"/>
         </scene>
-        <!--Fourth View Controller-->
+        <!--Purple View Controller-->
         <scene sceneID="atz-Gd-8Kv">
             <objects>
-                <viewController id="jnJ-g1-wik" customClass="FourthViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jnJ-g1-wik" customClass="PurpleViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L5h-gE-AVU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UMa-ND-JfB">
+                                <rect key="frame" x="169" y="576" width="37" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="[닫기]">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="jnJ-g1-wik" eventType="touchUpInside" id="S2h-VS-HiL"/>
+                                    <action selector="closeButtonTouched:" destination="Akk-by-XVC" eventType="touchUpInside" id="xMF-h0-CA9"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="LBY-T0-m9Z"/>
                     </view>
                     <navigationItem key="navigationItem" id="GaI-cY-NNm"/>
+                    <connections>
+                        <outlet property="closeButton" destination="UMa-ND-JfB" id="FcK-Z6-jfE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XdD-Hl-FJR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2318" y="-321"/>
+            <point key="canvasLocation" x="2317.5999999999999" y="-321.42857142857144"/>
         </scene>
     </scenes>
     <resources>

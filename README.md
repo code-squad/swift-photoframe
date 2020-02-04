@@ -25,7 +25,7 @@ First Scene에 버튼을 추가하고 IBAction으로 연결.
 
 (왼쪽 스냅샷 : `다음` 버튼 누르기 전 , 오른쪽 스냅샷 : `다음` 버튼 누른 후 )
 
-### Photoframe-step4
+### photoframe-step4
 
 2020.02.04 16:40
 
@@ -34,3 +34,23 @@ First Scene에 버튼을 추가하고 IBAction으로 연결.
 ![Screen Shot 2020-02-04 at 4.33.04 PM](/Users/keunnalee/Desktop/Screen Shot 2020-02-04 at 4.33.04 PM.png)
 
 (첫번째 스냅샷 : `다음` 버튼 누르기 전 , 두번째 스냅샷 :첫번째 페이지에서 `다음` 버튼 누른 후 Indigo 배경색 화면, 세번째 스냅샷 : 두번째 페이지에서 `다음` 버튼 누른 후 Purple 배경색 화면)
+
+### Photoframe-step5
+
+2020.02.04 17:56
+
+ViewController 클래스 추가 및 스토리보드 Scene 과 연결.
+`[닫기]` 버튼 생성 및 IBAction 연결해 화면을 닫는 액션 추가.
+UIViewController 주요 콜백 함수(viewWillAppear(), viewDidAppear(), viewWillDisappear(), viewDidDisappear() )에 print(**#file**, **#line**, **#function**, **#column**) 코드를 추가하여 화면 전환이 이뤄지는 사이 ViewController의 라이프사이클 변화 확인. 
+
+![Screen Shot 2020-02-04 at 6.01.08 PM](/Users/keunnalee/Desktop/Screen Shot 2020-02-04 at 6.01.08 PM.png)
+
+![Screen Shot 2020-02-04 at 6.01.59 PM](/Users/keunnalee/Desktop/Screen Shot 2020-02-04 at 6.01.59 PM.png)
+
+(첫번째 스냅샷 - 왼쪽: IndigoViewController 화면 열림, 첫번째 스냅샷 - 오른쪽: IndigoViewController 화면에서 `[닫기]` 버튼을 누른 후 화면 닫힘 / 두번째 스냅샷 - 왼쪽 : PurpleViewController 화면 열림, 두번째 스냅샷 - 오른쪽 : PurpleViewController 화면에서 `[닫기]` 버튼을 누른 후 화면 닫힘 )
+
+화면이 새로 열릴 때 : viewDidLoad() -> viewWillAppear()
+
+화면이 닫힐 때 : viewWillDisappear() -> viewDidDisappear()
+
+화면은 스택으로 쌓이며 가장 나중에 열린 화면이 닫히고 그 전 화면이 나올 때, 다시  viewDidLoad() -> viewWillAppear() 를 거치지 않고 바로 화면이 보임.
