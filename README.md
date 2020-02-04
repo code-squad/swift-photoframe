@@ -90,3 +90,17 @@ show(viewController, sender: self)
 
 **실행 화면**
 ![step1-6_result](step1-6_result.png)
+
+## STEP1-7 랜덤 이미지 Display하기
+
+* 스토리보드에서 앨범 화면 구성
+* 에셋에 22개의 이미지 파일 추가
+* 다음 버튼을 누르면 랜덤하게 숫자를 발생시켜 해당하는 숫자의 이미지 파일을 보여줌
+
+## 학습한 내용
+
+### `UIImage`와 `UIImageView`
+`UIImage`는 이미지 데이터 자체를 관리하는 클래스이고, `UIImageView`는 인터페이스에 이미지를 보여주기 위한 뷰 클래스이다.
+
+**실행 화면**
+![step1-7_result](step1-7_result.png)
