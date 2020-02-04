@@ -20,6 +20,26 @@ class FirstViewController: UIViewController {
         setupLabels()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print(#file, #line, #function, #column)
+    }
+    
     @IBAction func nextButtonTouched(_ sender: Any) {
         self.photoLabel.textColor = UIColor.blue
         self.photoLabel.backgroundColor = UIColor.yellow
