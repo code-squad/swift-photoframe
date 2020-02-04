@@ -14,6 +14,12 @@ class YellowViewController: UIViewController {
            self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func nextButtonTouched(_ sender: Any) {
+        let vc=self.storyboard?.instantiateViewController(withIdentifier: "BlueViewController") as! BlueViewController
+        vc.modalTransitionStyle = .coverVertical
+        self.present(vc,animated: true,completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print(#file, #line, #function, #column)
