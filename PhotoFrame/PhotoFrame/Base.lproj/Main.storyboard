@@ -34,6 +34,7 @@
                                 <state key="normal" title="다음"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="9pv-A4-QxB" eventType="touchUpInside" id="5Kt-ag-8Kg"/>
+                                    <segue destination="7El-WT-Hix" kind="show" id="bdc-9K-xbo"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -55,6 +56,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="JJt-yQ-UA5">
+            <objects>
+                <viewController id="7El-WT-Hix" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sxp-fP-cHq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nue-74-QpP">
+                                <rect key="frame" x="190" y="456" width="35" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="다음">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="x7C-Bi-p1h" kind="show" id="4Mt-fu-afN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="R50-5f-1hT"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="a3f-ML-0Kc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eba-XQ-l1j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1696" y="-320"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="xCY-3e-lS4">
+            <objects>
+                <viewController id="x7C-Bi-p1h" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ano-hR-bP0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="OT7-gS-I9m"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="NHN-Ph-RGw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="95U-2c-wwo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2672" y="-320"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
