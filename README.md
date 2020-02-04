@@ -93,3 +93,31 @@ viewDidDisappear()
 ```
 * NavigationViewController는 stack으로 구현되어 있어서 기존의 present 방식으로 화면을 띄우는게 아닌 push로 화면을 띄워줘야함.
 * 화면 관련 콜백함수로 확인해본 결과 present 로 띄우고 dismiss 로 닫는건 띄워진 view 를 계속 살려두는 반면 push, pop 으로 띄우고 닫은건 그때그때 화면을 없애주었음.
+
+#### 6. ImageView
+
+<img width="471" alt="스크린샷 2020-02-04 오후 5 50 27" src="https://user-images.githubusercontent.com/50410213/73728570-eca26480-4776-11ea-95c2-534d344f4d54.png">
+<img width="471" alt="스크린샷 2020-02-04 오후 5 50 34" src="https://user-images.githubusercontent.com/50410213/73728571-eca26480-4776-11ea-9585-b3c8d417de43.png">
+
+```swift
+class SecondViewController: UIViewController {
+
+    @IBOutlet weak var photoImageView: UIImageView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.photoImageView.contentMode = .scaleToFill
+        self.photoImageView.image = UIImage(named: "01.jpg")
+    }
+    
+    @IBAction func nextImageButtonTouched(_ sender: Any) {
+        let randNum = Int.random(in: 1...22)
+        
+        self.photoImageView.image = UIImage(named: randNum < 10 ? "0\(randNum).jpg" : "\(randNum).jpg")
+    }
+    
+}
+```
+* contentMode 로 이미지가 꽉 차게 출력되도록 해줌
+* 초기 이미지를 설정해줌
+* 다음 버튼을 누를 때 마다 랜덤으로 이미지 출력되도록 해줌
