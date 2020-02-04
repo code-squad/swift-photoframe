@@ -62,3 +62,14 @@
 | ![](https://i.imgur.com/KKER2ZH.png) | ![](https://i.imgur.com/tzd4QpT.png) |
 
 완료시간 : 20.2.4 17:11
+
+### Step1-4 Scene과 Segue 요구사항
+* 스토리보드 구성 요소에 대해 학습하고 새로운 Scene과 Segue를 추가한다.
+* 실행하고 새로운 화면을 캡처해서 readme.md 파일에 포함한다.
+
+
+|             첫 번째 화면             |             두 번째 화면             |             세 번째 화면             |
+|:------------------------------------:|:------------------------------------:|:------------------------------------:|
+| ![](https://i.imgur.com/QsICwNc.png) | ![](https://i.imgur.com/Oslpe8y.png) | ![](https://i.imgur.com/6Ctvv9W.png) |
+
+완료시간 : 20.2.4 17:50
