@@ -20,6 +20,10 @@ class ViewController: UIViewController {
         print(#file, #line, #function, #column)
         photoLabel.text = "GangWoon의 사진액자"
         photoDescription.text = "굿드"
+        photoDescription.textAlignment = .left
+        photoDescription.numberOfLines = 0
+//        photoDescription.isHighlighted = true
+        photoDescription.highlightedTextColor = .blue
     }
     
     // MARK: - Actions
