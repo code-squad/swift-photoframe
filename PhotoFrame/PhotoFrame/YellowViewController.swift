@@ -14,6 +14,10 @@ class YellowViewController: UIViewController {
         super.viewDidLoad()
         print(#file, #line, #function, #column)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print(#file, #line, #function, #column)
+    }
 
     @IBAction func closeButtonTouched(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
