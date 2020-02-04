@@ -8,33 +8,26 @@
 
 import UIKit
 
-
 class BrownViewController: UIViewController {
-    
-    //MARK: - Lifecycle
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        print(#file, #line, #function, #column)
-    }
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        print(#file, #line, #function, #column)
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        print(#file, #line, #function, #column)
-    }
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        print(#file, #line, #function, #column)
-    }
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        print(#file, #line, #function, #column)
-    }
     
     // MARK: - Actions
     @IBAction func ClosedButtonTouched(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let grayViewController = storyBoard.instantiateViewController(identifier: "GrayViewController")
+        show(grayViewController, sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "GrayView" {
+            let popoverViewController = segue.destination
+            popoverViewController.modalPresentationStyle = .popover
+            popoverViewController.presentationController?.delegate = self
+        }
+    }
+}
+
+extension BrownViewController: UIPopoverPresentationControllerDelegate {
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return UIModalPresentationStyle.none
     }
 }

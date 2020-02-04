@@ -21,7 +21,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0lM-uU-B76" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="265" y="67"/>
+            <point key="canvasLocation" x="264" y="81"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="f4q-1J-c6v">
@@ -31,7 +31,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWe-lw-ViL">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWe-lw-ViL">
                                 <rect key="frame" x="20" y="344" width="374" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
@@ -42,6 +42,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rC-6b-8UB">
                                 <rect key="frame" x="20" y="441" width="374" height="30"/>
@@ -89,7 +90,9 @@
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="ClosedButtonTouched:" destination="Tju-Fv-k0Q" eventType="touchUpInside" id="c19-X1-9We"/>
-                                    <segue destination="l7G-pI-dPe" kind="show" id="LG0-Dd-nMg"/>
+                                    <segue destination="l7G-pI-dPe" kind="popoverPresentation" identifier="GrayView" popoverAnchorView="ANM-VY-beV" id="205-3e-D44">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                         </subviews>
@@ -106,26 +109,25 @@
             </objects>
             <point key="canvasLocation" x="1149" y="-581"/>
         </scene>
-        <!--View Controller-->
+        <!--Gray View Controller-->
         <scene sceneID="OHp-d4-rrN">
             <objects>
-                <viewController id="l7G-pI-dPe" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GrayViewController" id="l7G-pI-dPe" customClass="GrayViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cD2-I3-ifH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="j42-c9-h0N"/>
                     </view>
                     <navigationItem key="navigationItem" id="cKv-2g-bSu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="smm-v1-z3t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1984" y="-581"/>
+            <point key="canvasLocation" x="1980" y="-581"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="SSk-Jl-bu0">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wxy-eG-eOr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tabBarController id="wa4-EH-A1g" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4Mb-NV-LBG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -137,6 +139,7 @@
                         <segue destination="FsP-92-uUS" kind="relationship" relationship="viewControllers" id="agF-7a-mbX"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wxy-eG-eOr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-652" y="-257"/>
         </scene>
