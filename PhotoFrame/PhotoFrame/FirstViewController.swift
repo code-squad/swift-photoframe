@@ -60,9 +60,13 @@ class FirstViewController: UIViewController {
         self.firstLabel.backgroundColor = UIColor.yellow
         self.firstLabel.alpha = 0.5
     }
-    
+
     @IBAction func nextButtonDragged(_ sender: Any) {
         self.firstLabel.textColor = UIColor.red
         self.firstLabel.backgroundColor = UIColor.cyan
+    }
+    
+    @IBAction func prevButtonTouched(_ sender: Any) {
+        self.firstDescription.textColor = UIColor.brown
     }
 }
