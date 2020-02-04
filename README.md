@@ -1,5 +1,34 @@
 # PhotoFrame
 
+## Step 6: UIImageView
+
+### UIImageView
+
+- UIView 상속
+- 이미지를 표시하기 위한 객체. `UIImage` 객체 사용
+- 이미지 크기를 조정할 수 있음
+- 투명도를 줄수 있음
+- 사용자의 이벤트는 기본적으로 꺼져 있음.
+
+#### 속성
+
+- `image`: 표시될 이미지
+- `highlightedImage`: 하이라이트될 때 표시할 이미지
+- `isHighlighted`: 하이라이트 여부
+- `isUserInteractionEnabled` : 사용자 이벤트 수용 여부. 기본값은 `false`
+- `animationImages`: 애미메이션에 사용될 `UIImage` 배열
+- 
+
+### UIImage
+
+- 이미지 데이터를 다루기 위한 객체
+- 실제 이미지 파일을 다루는 객체.
+- 버튼, 슬라이더 같은 컨트롤을 이미지로 꾸밀 수 있음.
+- immutable
+- 이미지를 늘릴 수 있게 하려면(Stretchable) inset을 정의해야 함
+
+<img width="584" alt="스크린샷 2020-02-04 오후 6 47 54" src="https://user-images.githubusercontent.com/50904665/73733261-f9c35180-477e-11ea-97b3-3713f40ecad8.png">
+
 ## Step 5: View 생명 주기
 
 [UIViewController](https://developer.apple.com/documentation/uikit/uiviewcontroller)
