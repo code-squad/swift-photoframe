@@ -30,6 +30,7 @@
 		8DB10DF523E9418300B3BC0B /* 22.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8DB10DDE23E9418300B3BC0B /* 22.jpg */; };
 		8DB10DF623E9418300B3BC0B /* 18.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8DB10DDF23E9418300B3BC0B /* 18.jpg */; };
 		8DB10DF723E9418300B3BC0B /* 19.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8DB10DE023E9418300B3BC0B /* 19.jpg */; };
+		8DB10DF923E97A3B00B3BC0B /* photoframe-border.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DB10DF823E97A3B00B3BC0B /* photoframe-border.png */; };
 		8DFCD1D023E7BA2400E557BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFCD1CF23E7BA2400E557BD /* AppDelegate.swift */; };
 		8DFCD1D223E7BA2400E557BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFCD1D123E7BA2400E557BD /* SceneDelegate.swift */; };
 		8DFCD1D423E7BA2400E557BD /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFCD1D323E7BA2400E557BD /* FirstViewController.swift */; };
@@ -82,6 +83,7 @@
 		8DB10DDE23E9418300B3BC0B /* 22.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 22.jpg; sourceTree = "<group>"; };
 		8DB10DDF23E9418300B3BC0B /* 18.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 18.jpg; sourceTree = "<group>"; };
 		8DB10DE023E9418300B3BC0B /* 19.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 19.jpg; sourceTree = "<group>"; };
+		8DB10DF823E97A3B00B3BC0B /* photoframe-border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photoframe-border.png"; sourceTree = "<group>"; };
 		8DFCD1CC23E7BA2400E557BD /* PhotoFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DFCD1CF23E7BA2400E557BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DFCD1D123E7BA2400E557BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 		8DB10DC923E9418300B3BC0B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				8DB10DF823E97A3B00B3BC0B /* photoframe-border.png */,
 				8DB10DCB23E9418300B3BC0B /* 14.jpg */,
 				8DB10DCC23E9418300B3BC0B /* 15.jpg */,
 				8DB10DCD23E9418300B3BC0B /* 01.jpg */,
@@ -332,6 +335,7 @@
 				8DB10DED23E9418300B3BC0B /* 05.jpg in Resources */,
 				8DB10DEC23E9418300B3BC0B /* 13.jpg in Resources */,
 				8DB10DE923E9418300B3BC0B /* 12.jpg in Resources */,
+				8DB10DF923E97A3B00B3BC0B /* photoframe-border.png in Resources */,
 				8DB10DF623E9418300B3BC0B /* 18.jpg in Resources */,
 				8DB10DE623E9418300B3BC0B /* 03.jpg in Resources */,
 				8DB10DE323E9418300B3BC0B /* 15.jpg in Resources */,

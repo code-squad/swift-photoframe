@@ -10,14 +10,20 @@ import UIKit
 
 class SecondViewController: UIViewController {
     @IBOutlet weak var photoImageView: UIImageView!
+    @IBAction func selectButtonTouched(_ sender: Any) {
+        self.present(picker, animated: true)
+    }
     
     @IBAction func nextImageButtonTouched(_ sender: Any) {
-        viewImage()
+        self.viewImage()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewImage()
+        picker.delegate = self
+        picker.sourceType = .photoLibrary
+        picker.allowsEditing = false
+        self.viewImage()
     }
 
     fileprivate func viewImage() {
@@ -25,5 +31,23 @@ class SecondViewController: UIViewController {
         let fileName = String(format: "%02d", number) + ".jpg"
         self.photoImageView.image = UIImage(named: fileName)
     }
+    
+    let picker = UIImagePickerController()
 }
 
+extension SecondViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        print(#file, #line, #function, #column)
+        var newImage: UIImage? = nil
+        
+        if let possibleImage = info[.editedImage] as? UIImage {
+            newImage = possibleImage
+        } else if let possibleImage = info[.originalImage] as? UIImage {
+            newImage = possibleImage
+        }
+        
+        self.photoImageView.image = newImage
+        
+        picker.dismiss(animated: true)
+    }
+}

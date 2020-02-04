@@ -1,6 +1,33 @@
 # PhotoFrame
 
-## Step 6: UIImageView
+## Step 8: 
+
+- z축을 조정: 컨트롤 목록에서 아래에 있을 수록 앞쪽에 나타남. 즉 z값이 높다.
+
+### 미디어 라이브러리 사용
+
+사용자의 사진, 동영상을 접근, 사용
+
+#### UIImagePickerController
+
+- 이미지, 동영상 등을 선택하는 기능을 함
+- modality 형식
+
+#### 구현 방법
+
+- `UIImagePickerController() `생성
+- `UIViewController.present()`로 표시
+- delegate 지정: 포함하고 있는 뷰 컨트롤러에 지정
+- delegate 구현 필요: `UIImagePickerControllerDelegate, UINavigationControllerDelegate, imagePickerController()`
+- `imagePickerController()`: 이미지 선택 액션(pick)이 발생했을 때 실행됨
+
+![image_picker01](https://lh3.googleusercontent.com/Awj_D5hDvCyhIkiRH2oyt53eGS7rw6JLyxnEJpY7n2vIwFp8mCmtn0pkkvY1AU-M1aKQQXhc5N-sMNHbmAw1R105dDxKDcAZ0JyCGZM2yST0r92XrETGNoyiJG4yQl513-SBwxA_6g_O6JOntBoN9XNs0Cx7Gy23jemjl_ZKZGWj-X-VENHOIVUe6gSMsAPnozabFcwSvj-9q5F-bg_CQbuvw9bMzRSyu9a0qLJlLiXfrfwII-4LN0pGbYzemYkkpYGbgzdH4dIgOrQ8P1ZuY2LudMC7IWqf52QnKwL-1_K3ewMT1nNPOs6VQOsl3chnPqzfqSClAWxcFaT9p5jLkKSkNti137-jbJrff22tJ-F8JaNujpcfmJ0gUkmIagOAer-GyEncr8OHHaxM6kTd5JVXqOB3Qck05roGEy-0YydzDlHxTVPhPbrC3MBC6q2SFfqcFe9iX9ZrLe0PuA4HiS4NuqaXXDc1UQkobNyY4fQ-nw94zwrfoVWHfmSQBOSUQ5Ys1ir4v2KZTgg4iTtkFnIWN0KnNTDbZvWbQnCTdp0XkmjlzWhGfvxxmsKi0Xpu4CQYsxo19yJnWiNkpSTRAqhh4kBLr2WfvcNxiSvLgp4ewgx6w2o343Uph7wQh162TP_VM_rR03lFlgdecs8LG4DkNX9Z7FeB_3Dj54GUE0P48Mch=w554-h994-no)
+
+![image_picker02](https://lh3.googleusercontent.com/SigTO-ufrOvMn87t2FjTiT8FgyLLvSFSTAHVuXV1AfB3rVGnB_a0h6FTltsSMJbYPgPEsl8SgMCsGE16XbD-oAfJe8D9TxzWd32x-I2APZcKp_WdslsziYqyXU73S0EhEVYaVPGiqN2Io0T7v-kBTd99-jixptbIL5WLXNGpiozP5PN5nRY9MXdfhYJP0gTUD-cYy_mLv_0PFNGhYQKSCubfpj5KYdSwxP1oxSnDjoNtUDaZZqqpbnxGbhMfefouBugCF_-yftr_xqo8Ejylk0dMIkqiSTGQkVgFMwPaCsD8rA2mOmKHkwj_oMldZQDmof0TinZHV4vqKGT0pFlIlUDYXpElRGnqHLlcYgCoc4NrjqHr8Z3UdzrPu7LHiSmxlV7QjuWsUweCCwaWrYETQMV_MbR07Xw6G6A3Qd-qk-XH-uuDRtcqDJPrQ0FVujmW2owBnhVsqoR3fSLe9avP_Znj0AI4D-rAkMK5JyHOMcaS07Z4Ngnr1ZATIHDu4E3tgnOII96T2P8POtuf-aXh14KAUHRxCCh0jf8S4In9q5sVlM7B-ejAorcv1c6Hrs-0nyQMOwb2dg0AFP1JnjlNyrJgo3al2wN1WcvysfCKYYZiXM3TGgz3QzuKilxTMCpMqtt2Yp7TX9Fum_KJBwDKugCTgX-nLb6uguLCMKfn19dHPprX=w554-h994-no)
+
+
+
+## Step 7: UIImageView
 
 ### UIImageView
 
@@ -56,7 +83,11 @@ swift-photoframe/PhotoFrame/PhotoFrame/GreenViewController.swift 39 viewDidDisap
 
 스토리보드에서는 UI를 Scene 단위로 관리. Scene 간의 연결은 Segue(세그웨이)라 함.
 
-### Segue의 종류
+### Segue
+
+Scene 간 연결. 데이터 전송
+
+#### 종류
 
 - Show
 - Show Detail
