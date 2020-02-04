@@ -34,3 +34,14 @@ Console
 - 추가된 ViewController에 버튼 추가 후 ViewController 추가 후 segue 연결
 
 <img src="https://github.com/corykim0829/swift-photoframe/blob/corykim0829/screeenshots/step4-1.png?raw=true" width="240px"><img src="https://github.com/corykim0829/swift-photoframe/blob/corykim0829/screeenshots/step4-2.png?raw=true" width="240px">
+
+## Step5 - ViewController Programming
+
+- 만들어진 ViewController class file 생성 및 연결
+- close 버튼 생성 및 IBAction으로 dismiss 구현
+- 모든 ViewController에서 View Life-cycle 확인
+- FirstViewController에서 OrangeViewController로 가는 segue 제거 및 프로그래밍적으로 구현
+
+<img src="https://github.com/corykim0829/swift-photoframe/blob/corykim0829/screeenshots/step5-1.png?raw=true" width="240px"><img src="https://github.com/corykim0829/swift-photoframe/blob/corykim0829/screeenshots/step5-2.png?raw=true" width="240px">
+
+<img src="https://github.com/corykim0829/swift-photoframe/blob/corykim0829/screeenshots/step5-3.png?raw=true" width="400px">
