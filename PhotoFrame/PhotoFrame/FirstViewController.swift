@@ -25,6 +25,7 @@ class FirstViewController: UIViewController {
         view.backgroundColor = .black
         
     }
+    
     @IBAction func nextButtonTouched(_ sender: Any) {
         self.photoLabel.textColor = UIColor.blue
         self.photoLabel.backgroundColor = UIColor.yellow
