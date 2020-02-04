@@ -45,5 +45,8 @@ class FirstViewController: UIViewController {
         firstLabel.textColor = .blue
         firstLabel.backgroundColor = .yellow
         firstLabel.alpha = 0.5
+        
+        let vcName = self.storyboard?.instantiateViewController(identifier: "PurpleViewController") as! PurpleViewController
+        present(vcName, animated: true, completion: nil)
     }
 }

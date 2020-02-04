@@ -30,6 +30,12 @@ class PurpleViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         print("2 viewDidDisappear\n==================")
     }
+    
+    @IBAction func nextButtonTouched() {
+        let vcName = self.storyboard?.instantiateViewController(identifier: "ApricotViewController") as! ApricotViewController
+        self.present(vcName, animated: true, completion: nil)
+    }
+    
     @IBAction func closeButtonTouched() {
         self.dismiss(animated: true, completion: nil)
     }
