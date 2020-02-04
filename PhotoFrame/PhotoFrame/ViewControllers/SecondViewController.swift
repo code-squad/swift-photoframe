@@ -37,5 +37,9 @@ class SecondViewController: UIViewController {
         photoImageView.image = UIImage(named: filename)
         lastPhotoNumber = randomInt
     }
+    
+    @IBAction func selectButtonTouched(_ sender: Any) {
+        
+    }
 }
 
