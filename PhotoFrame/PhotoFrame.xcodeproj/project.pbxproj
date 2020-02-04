@@ -15,6 +15,7 @@
 		385F3AAA23E7B4F8003FA6A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 385F3AA923E7B4F8003FA6A2 /* Assets.xcassets */; };
 		385F3AAD23E7B4F8003FA6A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 385F3AAB23E7B4F8003FA6A2 /* LaunchScreen.storyboard */; };
 		385F3AB523E93626003FA6A2 /* OrangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385F3AB423E93626003FA6A2 /* OrangeViewController.swift */; };
+		385F3AB823E93818003FA6A2 /* SkyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385F3AB723E93818003FA6A2 /* SkyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		385F3AAC23E7B4F8003FA6A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		385F3AAE23E7B4F8003FA6A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		385F3AB423E93626003FA6A2 /* OrangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeViewController.swift; sourceTree = "<group>"; };
+		385F3AB723E93818003FA6A2 /* SkyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				385F3AA223E7B4F4003FA6A2 /* FirstViewController.swift */,
 				385F3AA423E7B4F4003FA6A2 /* SecondViewController.swift */,
 				385F3AB423E93626003FA6A2 /* OrangeViewController.swift */,
+				385F3AB723E93818003FA6A2 /* SkyViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 				385F3AB523E93626003FA6A2 /* OrangeViewController.swift in Sources */,
 				385F3AA323E7B4F4003FA6A2 /* FirstViewController.swift in Sources */,
 				385F3A9F23E7B4F4003FA6A2 /* AppDelegate.swift in Sources */,
+				385F3AB823E93818003FA6A2 /* SkyViewController.swift in Sources */,
 				385F3AA123E7B4F4003FA6A2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
