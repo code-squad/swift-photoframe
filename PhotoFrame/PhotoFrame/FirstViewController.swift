@@ -24,9 +24,9 @@ class FirstViewController: UIViewController {
     }
     
     @IBAction func nextButtonTouched(_ sender: Any) {
-        self.firstLabel.textColor = UIColor.blue
-        self.firstLabel.backgroundColor = UIColor.yellow
-        self.firstLabel.alpha = 0.5
+        let currentView = UIStoryboard(name: "Main", bundle: nil)
+        let nextView = currentView.instantiateViewController(identifier: "PurpleVC")
+        self.present(nextView, animated: true, completion: nil)
     }
 }
 
