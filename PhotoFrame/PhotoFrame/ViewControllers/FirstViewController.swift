@@ -50,5 +50,8 @@ class FirstViewController: UIViewController {
         photoLabel.alpha = 0.9
         photoDescription.textColor = #colorLiteral(red: 0.521568656, green: 0.1098039225, blue: 0.05098039284, alpha: 1)
         photoDescription.font = .systemFont(ofSize: 17)
+        
+        let orangeViewController = self.storyboard?.instantiateViewController(withIdentifier: "OrangeVC") as! OrangeViewController
+        self.present(orangeViewController, animated: true, completion: nil)
     }
 }
