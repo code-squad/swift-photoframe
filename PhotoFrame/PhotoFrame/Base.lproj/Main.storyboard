@@ -32,6 +32,7 @@
                                 <state key="normal" title="다음"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="9pv-A4-QxB" eventType="touchUpInside" id="tIg-7u-NKX"/>
+                                    <segue destination="hq9-se-XyE" kind="show" id="hJD-A9-0iB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -53,6 +54,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="xm3-LU-kAw">
+            <objects>
+                <viewController id="hq9-se-XyE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3sO-98-WrS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="gvE-87-7a6"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pe6-WE-c0H"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ci2-bj-cYs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1509" y="-320"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
