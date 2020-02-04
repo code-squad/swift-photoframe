@@ -19,3 +19,9 @@
 
 5. 두개의 새로운 Scene을 추가 후 FirstScene에서 부터 Button에 Scene을 연결하여 Button을 누를시 해당 Scene으로 넘어감
 <img width="400" height="800" src="https://user-images.githubusercontent.com/49548908/73727054-15752a80-4774-11ea-9417-68b1de5e5531.gif">
+
+2020.2.5
+1. 두개의 ViewController 클래스 추가 후 새로 추가한 2개의 Scene과 연결
+2. 닫기 Button을 추가하여 터치시 현재 화면을 닫는 동작을 구현함.
+<img width="400" height="800" src="https://user-images.githubusercontent.com/49548908/73760409-9f42e900-47b0-11ea-8c11-7ca2b67475ea.gif">
+3. ViewController Life Cycle을 가시적으로 확인하기 위해 콜백 관련 함수 4개 구현 (print문으로 확인)
