@@ -9,11 +9,20 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-
+    
+    @IBOutlet weak var photoImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
-
+    
+    @IBAction func nextImageButtonTouched(_ sender: Any) {
+        let randomNum = Int.random(in: 1...22)
+        let resource = String(format: "%02d.jpg", randomNum)
+        self.photoImageView.image = UIImage(named: resource)
+        
+    }
+    
 }
 
