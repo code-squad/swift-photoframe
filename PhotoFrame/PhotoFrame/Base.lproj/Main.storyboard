@@ -32,6 +32,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="다음"/>
                                 <connections>
+                                    <action selector="nextButtonDragged:" destination="9pv-A4-QxB" eventType="touchDragInside" id="hCy-QF-Jb7"/>
                                     <action selector="nextButtonTouched:" destination="9pv-A4-QxB" eventType="touchUpInside" id="jjw-NB-sAo"/>
                                 </connections>
                             </button>
