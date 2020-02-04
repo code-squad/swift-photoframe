@@ -17,6 +17,8 @@ class FirstViewController: UIViewController {
         print(#file, #line, #function, #column)
         
         firstLabel.text = "Anna의 사진액자"
+        firstLabel.backgroundColor = UIColor(red: 198/255, green: 164/255, blue: 222/255, alpha: 0.8)
+        firstLabel.textColor = .white
+        firstLabel.textAlignment = .center
     }
 }
-
