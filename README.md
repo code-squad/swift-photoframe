@@ -73,3 +73,23 @@ viewDidDisappear()
 * viewDidAppear() - 화면이 나타난 직후에 실행
 * viewWillDisappear() - 화면이 없어지기 직전에 실행
 * viewDidDisappear() - 화면이 없어진 직후에 실행
+
+#### 6. Embed NavigationController
+
+<img width="436" alt="스크린샷 2020-02-04 오후 3 50 44" src="https://user-images.githubusercontent.com/50410213/73720974-89103b00-4766-11ea-9f69-2b7856a2a65f.png">
+<img width="436" alt="스크린샷 2020-02-04 오후 3 50 49" src="https://user-images.githubusercontent.com/50410213/73720976-89a8d180-4766-11ea-9ae3-ac1f7343a45b.png">
+<img width="436" alt="스크린샷 2020-02-04 오후 3 50 55" src="https://user-images.githubusercontent.com/50410213/73720977-89a8d180-4766-11ea-85cc-2a624f495c78.png">
+
+```swift
+@IBAction func nextButtonTouched(_ sender: Any) {
+    let currentView = UIStoryboard(name: "Main", bundle: nil)
+    let nextView = currentView.instantiateViewController(identifier: "YellowVC")
+    self.navigationController?.pushViewController(nextView, animated: true)
+}
+    
+@IBAction func closeButtonTouched(_ sender: Any) {
+    self.navigationController?.popViewController(animated: true)
+}
+```
+* NavigationViewController는 stack으로 구현되어 있어서 기존의 present 방식으로 화면을 띄우는게 아닌 push로 화면을 띄워줘야함.
+* 화면 관련 콜백함수로 확인해본 결과 present 로 띄우고 dismiss 로 닫는건 띄워진 view 를 계속 살려두는 반면 push, pop 으로 띄우고 닫은건 그때그때 화면을 없애주었음.
