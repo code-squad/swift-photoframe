@@ -11,6 +11,7 @@ import UIKit
 class FirstViewController: UIViewController {
 
     @IBOutlet weak var firstLabel: UILabel!
+    @IBOutlet weak var firstDescription: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,5 +21,7 @@ class FirstViewController: UIViewController {
         firstLabel.backgroundColor = UIColor(red: 198/255, green: 164/255, blue: 222/255, alpha: 0.8)
         firstLabel.textColor = .white
         firstLabel.textAlignment = .center
+        
+        firstDescription.text = "2020 Photo Collection"
     }
 }
