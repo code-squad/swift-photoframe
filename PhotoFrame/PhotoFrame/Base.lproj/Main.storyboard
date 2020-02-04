@@ -27,7 +27,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ni-SD-ON7">
-                                <rect key="frame" x="192" y="260" width="30" height="30"/>
+                                <rect key="frame" x="364" y="44" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="다음"/>
                                 <connections>
@@ -73,20 +73,29 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--View Controller-->
+        <!--Yellow View Controller-->
         <scene sceneID="DOk-K1-db6">
             <objects>
-                <viewController id="cX3-IS-ZvX" sceneMemberID="viewController">
+                <viewController id="cX3-IS-ZvX" customClass="YellowViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BfS-uw-LNE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qm9-L2-URN">
-                                <rect key="frame" x="192" y="263" width="30" height="30"/>
+                                <rect key="frame" x="364" y="20" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="다음"/>
                                 <connections>
                                     <segue destination="gCc-7Z-fBv" kind="show" id="uEq-hX-U70"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVF-yk-r3u">
+                                <rect key="frame" x="28" y="20" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="닫기"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="s84-cx-eVk" eventType="touchUpInside" id="hTY-ns-jxr"/>
+                                    <action selector="closeButtonTouched:" destination="cX3-IS-ZvX" eventType="touchUpInside" id="tnY-Ki-IfM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -96,22 +105,38 @@
                     <navigationItem key="navigationItem" id="wde-6w-5J5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WEM-gs-oBn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="s84-cx-eVk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1457.9710144927537" y="0.0"/>
         </scene>
-        <!--View Controller-->
+        <!--Blue View Controller-->
         <scene sceneID="Zy0-R5-Fhp">
             <objects>
-                <viewController id="gCc-7Z-fBv" sceneMemberID="viewController">
+                <viewController id="gCc-7Z-fBv" customClass="BlueViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cU1-sf-ecu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xBz-bO-SUH">
+                                <rect key="frame" x="28" y="20" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="닫기">
+                                    <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonToched:" destination="iWk-yQ-FCj" eventType="touchUpInside" id="7rr-O7-RzP"/>
+                                    <action selector="closeButtonTouched:" destination="iWk-yQ-FCj" eventType="touchUpInside" id="9dz-WF-aHq"/>
+                                    <action selector="closeButtonTouched:" destination="gCc-7Z-fBv" eventType="touchUpInside" id="G5B-Z5-yUX"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="wmb-Mh-v0o"/>
                     </view>
                     <navigationItem key="navigationItem" id="agj-c8-TaP"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mUv-7w-ZDp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="iWk-yQ-FCj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2190" y="0.0"/>
         </scene>

@@ -19,6 +19,11 @@ class FirstViewController: UIViewController {
         self.firstLabel.alpha=0.5
     }
     
+
+    
+    @IBAction func closeButtonTouchedBlue(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         print(#file, #line, #function, #column)
