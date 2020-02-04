@@ -42,3 +42,10 @@
     보통 UITabBarController와 함께 사용하지만 혼자 쓰일 수도 있다. 위에서 말했듯 탭 표시 줄에 각 탭을 구분하는 버튼을 포함하고 있는데, 각각의 버튼은 탭의 종류를 뜻하며 item이라고 한다. TabBarItem은 TabBar에 최소 1개 이상 배치되어야 한다. 
 
 완료시간 : 20.2.4 10:13
+
+## Step1-2 IBOutlet 요구사항
+* Xcode 프로젝트 내비게이터에서 Main.storyboard 파일을 선택하고 First Scene 에 있는 'First View' 레이블(Label)을 선택하고 Assistant Editor 모드로 변경한다.
+* 레이블을 선택하고 Control + 드래그해서 ViewController 코드에 IBOutlet으로 연결한다.
+![](https://i.imgur.com/PMovIUT.png)
+
+완료시간 : 20.2.4 4:25
