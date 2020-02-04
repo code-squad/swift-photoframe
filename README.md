@@ -58,3 +58,14 @@ Console
 <img src="https://github.com/corykim0829/swift-photoframe/blob/corykim0829/screeenshots/step6-1.png?raw=true" width="240px"><img src="https://github.com/corykim0829/swift-photoframe/blob/corykim0829/screeenshots/step6-2.png?raw=true" width="240px"><img src="https://github.com/corykim0829/swift-photoframe/blob/corykim0829/screeenshots/step6-3.png?raw=true" width="240px">
 
 <img src="https://github.com/corykim0829/swift-photoframe/blob/corykim0829/screeenshots/step6-4.png?raw=true" width="800px">
+
+## Step7: Second Scene View
+
+- UIImageView 추가 및 크기 설정
+- next button 추가 IBAction 연결
+- 다운로드받은 이미지 파일들 추가
+- viewDidLoad()에서 imageView의 contentMode 설정
+- nextButton에 random 이미지 설정 구현
+- 중복 숫자 제외 기능 추가
+
+<img src="https://github.com/corykim0829/swift-photoframe/blob/corykim0829/screeenshots/step7-1.png?raw=true" width="240px"><img src="https://github.com/corykim0829/swift-photoframe/blob/corykim0829/screeenshots/step7-2.png?raw=true" width="240px">
