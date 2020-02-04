@@ -46,3 +46,9 @@
 
 
 
+## Step4
+
+- 새로운 Scene과 Segue 추가
+
+<img src="https://user-images.githubusercontent.com/40784518/73715011-f23b8280-4755-11ea-8d77-4b70f6dce172.png" width="30%"></img><img src="https://user-images.githubusercontent.com/40784518/73715088-2d3db600-4756-11ea-922e-93770297ee3f.png" width="30%"></img>
+

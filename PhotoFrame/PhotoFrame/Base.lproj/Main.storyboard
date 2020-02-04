@@ -33,6 +33,7 @@
                                 <state key="normal" title="다음"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="9pv-A4-QxB" eventType="touchUpInside" id="W9t-Z8-hm2"/>
+                                    <segue destination="nxw-Sf-2Ao" kind="show" id="rFX-te-f44"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -107,6 +108,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="C98-gb-BLz">
+            <objects>
+                <viewController id="nxw-Sf-2Ao" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W8k-jn-8Yb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSr-NL-rbg">
+                                <rect key="frame" x="210" y="288" width="35" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="다음"/>
+                                <connections>
+                                    <segue destination="Zsl-Hm-gHf" kind="show" id="Mgu-29-9QM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="PSi-Ix-UeT"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zwI-tF-dss"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s9b-y3-EeB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1610" y="-320"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="18C-Bm-zKt">
+            <objects>
+                <viewController id="Zsl-Hm-gHf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0RV-hr-ZXW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="NF7-XX-A2c"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pFo-m8-0VP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nWH-1t-AHs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2462" y="-320"/>
         </scene>
     </scenes>
     <resources>
