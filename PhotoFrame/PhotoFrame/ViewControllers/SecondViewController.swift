@@ -22,12 +22,20 @@ class SecondViewController: UIViewController {
         photoImageView.contentMode = .scaleAspectFill
     }
 
+    var lastPhotoNumber = -1
+    
     @IBAction func nextButtonTouched(_ sender: Any) {
-        var filename = ""
         let NUMBER_OF_PHOTOS = 22
-        let randomInt = Int.random(in: 1...NUMBER_OF_PHOTOS)
+        var filename = ""
+        var randomInt = Int.random(in: 1...NUMBER_OF_PHOTOS)
+        
+        while lastPhotoNumber == randomInt {
+            randomInt = Int.random(in: 1...NUMBER_OF_PHOTOS)
+        }
+        
         filename = randomInt < 10 ? "0\(randomInt)" : "\(randomInt)"
         photoImageView.image = UIImage(named: filename)
+        lastPhotoNumber = randomInt
     }
 }
 
