@@ -78,3 +78,15 @@ show(viewController, sender: self)
 
 **실행 화면**
 ![step1-5_result](step1-5_result.png)
+
+## STEP1-6 네비게이션 컨트롤러를 이용한 화면 전환 구현
+
+* 이전 스텝에서의 뷰 컨트롤러들을 네비게이션 컨트롤러에 임베드
+    * 이에 맞게 뷰 컨트롤러를 닫는 코드도 pop으로 수정
+    * 세그웨이를 연결할 때 선택했던 show가 네비게이션 컨트롤러에서는 뷰 transition 방식이 다르게 나타나는 것을 알 수 있다.
+* 뷰의 상태 변화 메서드들의 동작 확인
+    * Modal로 띄워졌을 때와 다르게 push할 때는 사라지는 뷰의 `viewWillDisappear`와 `viewDidDisappear`가 호출되며, pop할 때는 나타나는 뷰의 `viewWillAppear`와 `viewDidAppear`가 호출된다.
+    * 모달과 네비게이션 컨트롤러의 차이는 사라질 때 뷰 계층 구조에서 제거되느냐의 차이인가??(추측)
+
+**실행 화면**
+![step1-6_result](step1-6_result.png)
