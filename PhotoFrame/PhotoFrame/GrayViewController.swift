@@ -9,5 +9,8 @@
 import UIKit
 
 class GrayViewController: UIViewController {
-
+    
+    @IBAction func popAction(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
 }

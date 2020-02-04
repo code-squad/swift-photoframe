@@ -23,7 +23,7 @@
             </objects>
             <point key="canvasLocation" x="264" y="81"/>
         </scene>
-        <!--Item 1-->
+        <!--View Controller-->
         <scene sceneID="f4q-1J-c6v">
             <objects>
                 <viewController id="i8u-Ja-nRD" customClass="ViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,20 +32,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWe-lw-ViL">
-                                <rect key="frame" x="20" y="344" width="374" height="36"/>
+                                <rect key="frame" x="20" y="388" width="374" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gt4-37-DPd">
-                                <rect key="frame" x="20" y="400" width="374" height="21"/>
+                                <rect key="frame" x="20" y="444" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rC-6b-8UB">
-                                <rect key="frame" x="20" y="441" width="374" height="30"/>
+                                <rect key="frame" x="20" y="485" width="374" height="30"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="i8u-Ja-nRD" eventType="touchUpInside" id="nwd-Bl-3AC"/>
@@ -67,7 +67,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0uy-xv-Knf"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="CSb-h6-5G3"/>
+                    <navigationItem key="navigationItem" id="QDM-U4-GfL"/>
                     <connections>
                         <outlet property="photoDescription" destination="gt4-37-DPd" id="Hd7-af-ipX"/>
                         <outlet property="photoLabel" destination="zWe-lw-ViL" id="Bb6-UE-swq"/>
@@ -75,18 +75,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="55v-Uv-QZT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="263.768115942029" y="-581.25"/>
+            <point key="canvasLocation" x="1173.913043478261" y="-581.25"/>
         </scene>
         <!--Brown View Controller-->
         <scene sceneID="klM-d1-jCh">
             <objects>
                 <viewController id="Tju-Fv-k0Q" customClass="BrownViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4w3-bN-DjF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ANM-VY-beV">
-                                <rect key="frame" x="184" y="406" width="46" height="30"/>
+                                <rect key="frame" x="184" y="433" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="ClosedButtonTouched:" destination="Tju-Fv-k0Q" eventType="touchUpInside" id="c19-X1-9We"/>
@@ -107,7 +107,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hcU-0k-peE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1149" y="-581"/>
+            <point key="canvasLocation" x="2057.971014492754" y="-581.25"/>
         </scene>
         <!--Gray View Controller-->
         <scene sceneID="OHp-d4-rrN">
@@ -116,14 +116,27 @@
                     <view key="view" contentMode="scaleToFill" id="cD2-I3-ifH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOb-uz-6OH">
+                                <rect key="frame" x="184" y="406" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="popAction:" destination="l7G-pI-dPe" eventType="touchUpInside" id="mI4-cJ-5Q7"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oOb-uz-6OH" firstAttribute="centerX" secondItem="cD2-I3-ifH" secondAttribute="centerX" id="6GG-vT-RL2"/>
+                            <constraint firstItem="oOb-uz-6OH" firstAttribute="centerY" secondItem="cD2-I3-ifH" secondAttribute="centerY" id="dF7-kP-LXh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="j42-c9-h0N"/>
                     </view>
                     <navigationItem key="navigationItem" id="cKv-2g-bSu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="smm-v1-z3t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1980" y="-581"/>
+            <point key="canvasLocation" x="2889.8550724637685" y="-581.25"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="SSk-Jl-bu0">
@@ -135,13 +148,32 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="i8u-Ja-nRD" kind="relationship" relationship="viewControllers" id="JQ0-LK-Mae"/>
+                        <segue destination="ATT-X6-cJD" kind="relationship" relationship="viewControllers" id="JQ0-LK-Mae"/>
                         <segue destination="FsP-92-uUS" kind="relationship" relationship="viewControllers" id="agF-7a-mbX"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wxy-eG-eOr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-652" y="-257"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="Mgw-Bz-tSb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ATT-X6-cJD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item 1" id="CSb-h6-5G3"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pnE-fS-frj">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="i8u-Ja-nRD" kind="relationship" relationship="rootViewController" id="Mpw-dL-LzR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="95K-sc-CQb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="263.768115942029" y="-581.25"/>
         </scene>
     </scenes>
 </document>
