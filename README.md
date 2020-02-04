@@ -64,3 +64,14 @@
   
 
 <img src="https://user-images.githubusercontent.com/40784518/73721169-ffad3880-4766-11ea-9429-db01e0d72eca.png" width="30%"></img><img src="https://user-images.githubusercontent.com/40784518/73721207-1784bc80-4767-11ea-978c-d1eb4443b285.png" width="30%"></img>
+
+
+
+
+
+## Step7 - Second Scene 화면
+
+- `Second Scene`에 `UIImageView` 추가
+- `다음` 버튼 클릭 시 이미지 랜덤하게 변경되는 기능 추가
+
+<img src="https://user-images.githubusercontent.com/40784518/73725045-f6749980-476f-11ea-9346-8a7fba6c47b9.png" width="30%"></img><img src="https://user-images.githubusercontent.com/40784518/73725373-96322780-4770-11ea-8ca3-e7d32edd80b8.png" width="30%"></img><img src="https://user-images.githubusercontent.com/40784518/73725414-aba75180-4770-11ea-9543-867c897fa953.png" width="30%"></img>
