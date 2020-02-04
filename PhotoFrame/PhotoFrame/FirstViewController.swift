@@ -10,11 +10,13 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+    @IBOutlet weak var firstLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        print(#file, #line, #function, #column)
+        
+        firstLabel.text = "Anna의 사진액자"
     }
-
-
 }
 
