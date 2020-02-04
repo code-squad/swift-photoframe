@@ -87,11 +87,13 @@
 
   Second Scene 디자인 변경.
 
-  UIImageView 생성 후 photoImageView 아울렛으로 연결n
+  UIImageView 생성 후 photoImageView 아울렛으로 연결
 
   label 이름 및 "Photo Album"으로 텍스트 변경
 
   다음 버튼 추가 및 nextImageButtonTouched 액션으로 연결
+
+  다운로드한 사진 리소스를 Xcode 프로젝트 Assets에 추가
 
 
 
