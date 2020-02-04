@@ -45,3 +45,31 @@ class FirstViewController: UIViewController {
 <img width="435" alt="스크린샷 2020-02-04 오전 11 31 35" src="https://user-images.githubusercontent.com/50410213/73708681-61a77700-4742-11ea-9dd6-87d749664423.png">
 <img width="435" alt="스크린샷 2020-02-04 오전 11 31 41" src="https://user-images.githubusercontent.com/50410213/73708682-61a77700-4742-11ea-99f7-49dd2c888400.png">
 <img width="435" alt="스크린샷 2020-02-04 오전 11 31 49" src="https://user-images.githubusercontent.com/50410213/73708683-62400d80-4742-11ea-9c08-0d04c4128c8f.png">
+
+#### 5. 닫기 버튼 추가, 화면 관련 콜백 함수
+
+1. 닫기 버튼 추가
+```swift
+@IBAction func closeButtonTouched(_ sender: Any) {
+    self.dismiss(animated: true, completion: nil)
+}
+```
+
+<img width="495" alt="스크린샷 2020-02-04 오후 2 01 27" src="https://user-images.githubusercontent.com/50410213/73715321-f4eaa780-4756-11ea-90eb-c1fceca2077a.png">
+<img width="495" alt="스크린샷 2020-02-04 오후 2 01 33" src="https://user-images.githubusercontent.com/50410213/73715323-f5833e00-4756-11ea-843a-210d17a9c318.png">
+<img width="495" alt="스크린샷 2020-02-04 오후 2 01 37" src="https://user-images.githubusercontent.com/50410213/73715324-f5833e00-4756-11ea-8fdb-d8438c56b1d5.png">
+
+2. 화면 관련 콜백 함수
+```swift
+viewWillAppear()
+viewDidAppear()
+viewWillDisappear()
+viewDidDisappear()
+```
+
+각 함수마다 breakpoint 를 걸어서 동작을 확인하였음
+
+* viewWillAppear() - 화면이 나타나기 직전에 실행
+* viewDidAppear() - 화면이 나타난 직후에 실행
+* viewWillDisappear() - 화면이 없어지기 직전에 실행
+* viewDidDisappear() - 화면이 없어진 직후에 실행
