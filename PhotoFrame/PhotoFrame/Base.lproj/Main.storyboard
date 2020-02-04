@@ -62,6 +62,16 @@
                     <view key="view" contentMode="scaleToFill" id="gHB-Sb-s9b">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RSe-ry-ODe">
+                                <rect key="frame" x="192" y="406" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="다음"/>
+                                <connections>
+                                    <segue destination="yNT-aO-TOr" kind="show" id="Tg6-TS-wPV"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.60383173009478219" green="0.75644919019060086" blue="0.4279714052711372" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="nmV-zX-kfG"/>
                     </view>
@@ -70,6 +80,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dcN-oq-Vo9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1510" y="-320"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jDd-H5-euz">
+            <objects>
+                <viewController id="yNT-aO-TOr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="acC-fN-Pm9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="JVb-W4-kw8"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="52e-om-27G"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="feM-QS-SHO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2246" y="-320"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
