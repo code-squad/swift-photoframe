@@ -48,7 +48,7 @@ Console
 
 ## Step6: Container ViewController
 
-- First View에 Navigation Controller를 Embed
+- First ViewController에 Navigation Controller를 Embed
 - 기존 next action의 present 코드를 navigationController의 push 메소드로 변경
 - 기존 close action의 dismiss 코드를 navigationController의 pop 메소드로 변경
 - skyViewController로 가는 segue도 programmatically 변경 (마찬가지로 push 메소드로 구현)
