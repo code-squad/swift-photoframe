@@ -15,8 +15,25 @@ class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("Main-viewDidLoad\n", #file, #line, #function, #column)
         
         setupUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("Main-viewWillAppear\n", #file, #line, #function, #column)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("Main-viewDidAppear\n", #file, #line, #function, #column)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        print("Main-viewWillDisappear\n", #file, #line, #function, #column)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        print("Main-viewDidDisappear\n", #file, #line, #function, #column)
     }
     
     private func setupUI() {
