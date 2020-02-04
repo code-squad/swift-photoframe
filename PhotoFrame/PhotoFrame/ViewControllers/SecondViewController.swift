@@ -16,8 +16,15 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate, U
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        imagePickerController.delegate = self
         setupUI()
+        setupImagePickerController()
+    }
+    
+    private func setupImagePickerController() {
+        imagePickerController.delegate = self
+        imagePickerController.allowsEditing = true
+        imagePickerController.sourceType = .photoLibrary
+        imagePickerController.modalPresentationStyle = .fullScreen
     }
     
     private func setupUI() {
@@ -41,14 +48,19 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     @IBAction func selectButtonTouched(_ sender: Any) {
-        imagePickerController.sourceType = .photoLibrary
-        imagePickerController.modalPresentationStyle = .fullScreen
         present(imagePickerController, animated: true, completion: nil)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        picker.allowsEditing = true
-        guard let image = info[.editedImage] as? UIImage else { return }
-        photoImageView.image = image
+        var pickedImage: UIImage!
+        
+        if let image = info[.editedImage] as? UIImage {
+            pickedImage = image
+        } else if let image = info[.originalImage] as? UIImage {
+            pickedImage = image
+        }
+        
+        photoImageView.image = pickedImage
+        dismiss(animated: true, completion: nil)
     }
 }
