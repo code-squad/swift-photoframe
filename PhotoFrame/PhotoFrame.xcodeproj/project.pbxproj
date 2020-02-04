@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C27B611B23E93846006DEC9D /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27B611A23E93846006DEC9D /* GreenViewController.swift */; };
+		C27B611D23E93AB5006DEC9D /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27B611C23E93AB5006DEC9D /* YellowViewController.swift */; };
 		C2FD08FE23E7B4AC00C227EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FD08FD23E7B4AC00C227EC /* AppDelegate.swift */; };
 		C2FD090023E7B4AC00C227EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FD08FF23E7B4AC00C227EC /* SceneDelegate.swift */; };
 		C2FD090223E7B4AC00C227EC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FD090123E7B4AC00C227EC /* FirstViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		C27B611A23E93846006DEC9D /* GreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenViewController.swift; sourceTree = "<group>"; };
+		C27B611C23E93AB5006DEC9D /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
 		C2FD08FA23E7B4AC00C227EC /* PhotoFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2FD08FD23E7B4AC00C227EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2FD08FF23E7B4AC00C227EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				C2FD090123E7B4AC00C227EC /* FirstViewController.swift */,
 				C2FD090323E7B4AC00C227EC /* SecondViewController.swift */,
 				C27B611A23E93846006DEC9D /* GreenViewController.swift */,
+				C27B611C23E93AB5006DEC9D /* YellowViewController.swift */,
 				C2FD090523E7B4AC00C227EC /* Main.storyboard */,
 				C2FD090823E7B4B100C227EC /* Assets.xcassets */,
 				C2FD090A23E7B4B100C227EC /* LaunchScreen.storyboard */,
@@ -148,6 +151,7 @@
 				C2FD090223E7B4AC00C227EC /* FirstViewController.swift in Sources */,
 				C2FD08FE23E7B4AC00C227EC /* AppDelegate.swift in Sources */,
 				C2FD090023E7B4AC00C227EC /* SceneDelegate.swift in Sources */,
+				C27B611D23E93AB5006DEC9D /* YellowViewController.swift in Sources */,
 				C27B611B23E93846006DEC9D /* GreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
