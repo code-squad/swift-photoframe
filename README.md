@@ -38,3 +38,10 @@ class FirstViewController: UIViewController {
 
 * 버튼 누른 후
 <img width="497" alt="스크린샷 2020-02-03 오후 8 46 02" src="https://user-images.githubusercontent.com/50410213/73650773-41d26d80-46c6-11ea-8b0a-482dd47391aa.png">
+
+#### 4. 새로운 Scene과 Segue 추가
+
+<img width="435" alt="스크린샷 2020-02-04 오전 11 31 29" src="https://user-images.githubusercontent.com/50410213/73708680-61a77700-4742-11ea-80c2-4e6438dac423.png">
+<img width="435" alt="스크린샷 2020-02-04 오전 11 31 35" src="https://user-images.githubusercontent.com/50410213/73708681-61a77700-4742-11ea-9dd6-87d749664423.png">
+<img width="435" alt="스크린샷 2020-02-04 오전 11 31 41" src="https://user-images.githubusercontent.com/50410213/73708682-61a77700-4742-11ea-99f7-49dd2c888400.png">
+<img width="435" alt="스크린샷 2020-02-04 오전 11 31 49" src="https://user-images.githubusercontent.com/50410213/73708683-62400d80-4742-11ea-9c08-0d04c4128c8f.png">
