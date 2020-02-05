@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController,UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var photoImageView: UIImageView!
     
@@ -24,5 +24,17 @@ class SecondViewController: UIViewController {
         self.photoImageView.contentMode = .scaleAspectFill
     }
     
+    @IBAction func selectButtonTouched(_ sender: Any) {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = false
+        self.present(picker, animated: false)
+    }
+        
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        self.photoImageView.image = info[.originalImage] as? UIImage
+        self.photoImageView.contentMode = .scaleAspectFill
+        picker.dismiss(animated: false)
+    }
 }
 
