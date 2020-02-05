@@ -104,3 +104,9 @@ show(viewController, sender: self)
 
 **실행 화면**
 ![step1-7_result](step1-7_result.png)
+
+## STEP1-8 사진 앨범에서 사진 가져와서 보여주기 기능 구현
+
+* 에셋에 포토 프레임 이미지 파일 추가
+* 스토리보드에서 사진 앨범 화면 구성, 사진 선택 버튼 추가
+* 선택 버튼을 누르면 `UIImagePickerController`를 이용해 앨범에서 선택한 사진 디스플레이
