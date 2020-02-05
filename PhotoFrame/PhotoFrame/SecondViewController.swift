@@ -9,7 +9,9 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-
+    
+    var imageTitle: String = ""
+    
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var nextButton: UIButton!
     
@@ -20,7 +22,13 @@ class SecondViewController: UIViewController {
     }
     
     @IBAction func nextImageButtonTouched(_ sender: Any) {
-        
+        getRandomNumber()
+        self.photoImageView.image = UIImage(named: "\(imageTitle).jpg")
+    }
+    
+    func getRandomNumber() {
+        let randomNumber = Int.random(in: 1...22)
+        imageTitle = String(format: "%02d", randomNumber)
     }
 }
 
