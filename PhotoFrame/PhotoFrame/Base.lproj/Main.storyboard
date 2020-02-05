@@ -152,6 +152,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
                     <connections>
+                        <outlet property="firstLabel" destination="zEq-FU-wV5" id="Pb6-qj-wj6"/>
                         <outlet property="nextButton" destination="Jnz-KX-cnk" id="vOK-cw-t1s"/>
                         <outlet property="photoImageView" destination="Aq9-1Z-oA4" id="sQT-fR-pxs"/>
                     </connections>

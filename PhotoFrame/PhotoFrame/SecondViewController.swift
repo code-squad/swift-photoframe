@@ -14,11 +14,12 @@ class SecondViewController: UIViewController {
     
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var firstLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(#file, #line, #function, #column)
         nextButton.setTitle("다음", for: .normal)
+        firstLabel.text = "Photo Album"
     }
     
     @IBAction func nextImageButtonTouched(_ sender: Any) {
