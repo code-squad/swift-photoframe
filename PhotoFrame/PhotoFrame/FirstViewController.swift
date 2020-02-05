@@ -47,6 +47,6 @@ class FirstViewController: UIViewController {
         firstLabel.alpha = 0.5
         
         let vcName = self.storyboard?.instantiateViewController(identifier: "PurpleViewController") as! PurpleViewController
-        present(vcName, animated: true, completion: nil)
+        navigationController?.pushViewController(vcName, animated: true)
     }
 }
