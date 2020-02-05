@@ -14,6 +14,10 @@ class IndigoViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    @IBAction func closeButtonTouched(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
