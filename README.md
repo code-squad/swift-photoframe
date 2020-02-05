@@ -16,3 +16,11 @@
 
 ### IBOutlet
 - First Scene에 만들어져 있는 레이블을 IBOutlet으로 연결
+
+
+### IBAction
+- 객체 라이브러리 여는 법
+> Command + Shift + l
+
+
+<img width="794" alt="스크린샷 2020-02-05 오후 5 40 25" src="https://user-images.githubusercontent.com/34564706/73826640-81719480-4841-11ea-8a90-d004b901d59a.png">
