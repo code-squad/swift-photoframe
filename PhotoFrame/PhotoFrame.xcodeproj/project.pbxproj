@@ -32,6 +32,7 @@
 		A59B0EA223E9BFA000FA7D25 /* 07.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A59B0E8C23E9BFA000FA7D25 /* 07.jpg */; };
 		A59B0EA323E9BFA000FA7D25 /* 17.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A59B0E8D23E9BFA000FA7D25 /* 17.jpg */; };
 		A59B0EA423E9BFA000FA7D25 /* 22.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A59B0E8E23E9BFA000FA7D25 /* 22.jpg */; };
+		A5ABB40623EAD16D00C62F6D /* photoframe-border.png in Resources */ = {isa = PBXBuildFile; fileRef = A5ABB40523EAD16D00C62F6D /* photoframe-border.png */; };
 		A5CC78D623E7C47900F99D81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CC78D523E7C47900F99D81 /* AppDelegate.swift */; };
 		A5CC78D823E7C47900F99D81 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CC78D723E7C47900F99D81 /* SceneDelegate.swift */; };
 		A5CC78DA23E7C47900F99D81 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CC78D923E7C47900F99D81 /* FirstViewController.swift */; };
@@ -77,6 +78,7 @@
 		A59B0E8C23E9BFA000FA7D25 /* 07.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 07.jpg; sourceTree = "<group>"; };
 		A59B0E8D23E9BFA000FA7D25 /* 17.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 17.jpg; sourceTree = "<group>"; };
 		A59B0E8E23E9BFA000FA7D25 /* 22.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 22.jpg; sourceTree = "<group>"; };
+		A5ABB40523EAD16D00C62F6D /* photoframe-border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photoframe-border.png"; sourceTree = "<group>"; };
 		A5CC78D223E7C47900F99D81 /* PhotoFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5CC78D523E7C47900F99D81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5CC78D723E7C47900F99D81 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				A59B0E7323E97A6100FA7D25 /* YellowViewController.swift */,
 				A59B0E7523E97F2C00FA7D25 /* BlueViewController.swift */,
 				A59B0E7723E997F700FA7D25 /* SecondViewController.swift */,
+				A5ABB40523EAD16D00C62F6D /* photoframe-border.png */,
 				A59B0E7D23E9BF9F00FA7D25 /* 01.jpg */,
 				A59B0E8B23E9BFA000FA7D25 /* 02.jpg */,
 				A59B0E7B23E9BF9F00FA7D25 /* 03.jpg */,
@@ -275,6 +278,7 @@
 				A5CC78E123E7C47B00F99D81 /* Assets.xcassets in Resources */,
 				A59B0E9A23E9BFA000FA7D25 /* 19.jpg in Resources */,
 				A59B0E9323E9BFA000FA7D25 /* 01.jpg in Resources */,
+				A5ABB40623EAD16D00C62F6D /* photoframe-border.png in Resources */,
 				A59B0E9723E9BFA000FA7D25 /* 10.jpg in Resources */,
 				A59B0E9923E9BFA000FA7D25 /* 18.jpg in Resources */,
 				A59B0EA323E9BFA000FA7D25 /* 17.jpg in Resources */,
