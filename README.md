@@ -140,3 +140,15 @@
 | [닫기] 버튼을 누르고 첫 번째 Scene으로 되돌아 가기 위해 두 번째 Scene이 사라지면서 호출되는 함수 순서 | ![](https://i.imgur.com/abOqj3i.png) |
 
 완료 : 20.2.5 17:00
+
+### Step1-7 Second Scene 화면 프로그래밍 요구사항
+* 탭바의 두 번째 화면 (Second Scene) 디자인을 변경하고 액자 앱을 동작을 구현한다.
+* 앱에 포함할 사진 리소스를 이미지 다운로드 링크에서 다운로드한다. 압축을 풀고 이미지 파일들을 Xcode 프로젝트로 드래그해서 추가한다.
+* [다음]버튼에 연결된 nextImageButtonTouched에서는 01부터 22까지 랜덤으로 숫자를 선택해서 해당하는 이미지 파일을 photoImageView에 표시한다. 이미지뷰에 표시하는 방법은 다음과 같다.
+* 실행하고 새로운 화면을 캡처해서 readme.md 파일에 포함한다.
+
+| Second Scene 첫 화면 |[다음] 버튼 눌렀을 때|[다음]버튼 눌렀을 때|
+| :--------: | :--------: | :--------: |
+|![](https://i.imgur.com/jB5TBmS.png)|![](https://i.imgur.com/Uhr7nRd.png)|![](https://i.imgur.com/L7Y2WZY.png)|
+
+완료 : 20.2.5 21:46
