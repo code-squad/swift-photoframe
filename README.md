@@ -104,10 +104,21 @@
 > 이미지의 제목이 01.jpg ~ 22.jpg 연속된 숫자임을 착안해 generateRandomImage() 메소드에서 generateRandomNumber() 메소드를 통해 생성된 랜덤 숫자를 이름으로 하는 UIImage를 반환해  UIImageView의 image 로 삽입하도록 구현.
 
 * 2020.02.05 
+  이미지 규격이 일정하게 유지되도록 content mode를 aspect fill로 변경
 
+  > Scale to fill` - 미리 설정한 이미지 규격에 맞춰서 해당 이미지가 변형됨.(늘어나거나 줄어듦) ImageView의 Width와 height에 이미지를 변형해 ImageView에 넣음.
+  >
+  > `Aspect fit` - 원본 이미지의 크기 그대로 들어감. 비율 유지! 원본의 비율을 그대로 유지함. 비율이 맞지 않는경우 내부에 `여백` 이 생김.
+  >
+  > `Aspect fill` - 미리 설정한 이미지 규격 내의 이미지만 보이며 이외의 부분은 보이지 않음(잘림). 원본의 비율을 그대로 유지되지만 이미지가 짤림. ImageView의 내부에 `여백`이 생기지 않음.
+
+  ![image-20200205132139699](/Users/keunnalee/Library/Application Support/typora-user-images/image-20200205132139699.png)
 
 ### Photoframe-step7-plus
 
 * 2020.02.05 17:10 
 
   UIImageView 추가
+  UIImageView에 액자 이미지 추가
+
+  ![image-20200205172541031](/Users/keunnalee/Library/Application Support/typora-user-images/image-20200205172541031.png)
