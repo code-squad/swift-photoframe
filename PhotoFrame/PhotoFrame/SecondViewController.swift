@@ -18,7 +18,6 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.photoImageView.contentMode = .scaleAspectFit
-        self.photoImageView.clipsToBounds=true
+        self.photoImageView.contentMode = .left
     }
 }
