@@ -17,6 +17,7 @@
 		7836BD7823E90DCB008B487D /* PhotoFrameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7836BD7723E90DCB008B487D /* PhotoFrameTests.swift */; };
 		7836BD8323E90DCB008B487D /* PhotoFrameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7836BD8223E90DCB008B487D /* PhotoFrameUITests.swift */; };
 		786487F823EAD13B00DCF61A /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786487F723EAD13B00DCF61A /* YellowViewController.swift */; };
+		786487FA23EAD90B00DCF61A /* IndigoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786487F923EAD90B00DCF61A /* IndigoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		7836BD8223E90DCB008B487D /* PhotoFrameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFrameUITests.swift; sourceTree = "<group>"; };
 		7836BD8423E90DCB008B487D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		786487F723EAD13B00DCF61A /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
+		786487F923EAD90B00DCF61A /* IndigoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndigoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				7836BD6223E90DCA008B487D /* FirstViewController.swift */,
 				7836BD6423E90DCA008B487D /* SecondViewController.swift */,
 				7836BD6623E90DCA008B487D /* Main.storyboard */,
+				786487F923EAD90B00DCF61A /* IndigoViewController.swift */,
 				786487F723EAD13B00DCF61A /* YellowViewController.swift */,
 				7836BD6923E90DCB008B487D /* Assets.xcassets */,
 				7836BD6B23E90DCB008B487D /* LaunchScreen.storyboard */,
@@ -269,6 +272,7 @@
 				7836BD6323E90DCA008B487D /* FirstViewController.swift in Sources */,
 				7836BD5F23E90DCA008B487D /* AppDelegate.swift in Sources */,
 				7836BD6123E90DCA008B487D /* SceneDelegate.swift in Sources */,
+				786487FA23EAD90B00DCF61A /* IndigoViewController.swift in Sources */,
 				786487F823EAD13B00DCF61A /* YellowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
