@@ -22,7 +22,9 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.photoImageView.contentMode = .scaleAspectFill
+    
+        self.photoFrame.image = UIImage(named: "photoframe-border")
+    self.photoImageView.contentMode = .scaleAspectFill
         self.photoAlbumText.text = "Photo Album"
          self.photoImageView.image = generateRandomUIImage()
     }
