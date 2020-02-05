@@ -130,6 +130,14 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Aq9-1Z-oA4">
                                 <rect key="frame" x="87" y="115.5" width="240" height="240"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jnz-KX-cnk">
+                                <rect key="frame" x="184" y="520" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="nextImageButtonTouched:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="TF7-rP-4WN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -144,6 +152,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
                     <connections>
+                        <outlet property="nextButton" destination="Jnz-KX-cnk" id="vOK-cw-t1s"/>
                         <outlet property="photoImageView" destination="Aq9-1Z-oA4" id="sQT-fR-pxs"/>
                     </connections>
                 </viewController>

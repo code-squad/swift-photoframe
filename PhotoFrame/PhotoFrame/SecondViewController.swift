@@ -11,10 +11,16 @@ import UIKit
 class SecondViewController: UIViewController {
 
     @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var nextButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print(#file, #line, #function, #column)
+        nextButton.setTitle("다음", for: .normal)
+    }
+    
+    @IBAction func nextImageButtonTouched(_ sender: Any) {
+        
     }
 }
 
