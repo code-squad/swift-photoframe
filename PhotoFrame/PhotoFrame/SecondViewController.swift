@@ -10,6 +10,8 @@ import UIKit
 
 class SecondViewController: UIViewController {
    
+    @IBOutlet weak var photoFrame: UIImageView!
+    
     @IBOutlet weak var photoImageView: UIImageView!
     
     @IBOutlet weak var photoAlbumText: UILabel!
