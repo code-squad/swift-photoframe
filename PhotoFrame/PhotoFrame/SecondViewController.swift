@@ -18,6 +18,6 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.photoImageView.contentMode = .left
+        self.photoImageView.contentMode = .scaleAspectFill
     }
 }
