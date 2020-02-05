@@ -1,71 +1,40 @@
 ## 초기화면
 
-<img width="300" alt="image" src="https://user-images.githubusercontent.com/37682858/73809836-dbf5fb00-4817-11ea-95c5-25dc6c8788cd.png">
-
-## Tab bar 누른 후
-
-<img width="300" alt="image" src="https://user-images.githubusercontent.com/37682858/73809852-e4e6cc80-4817-11ea-99ed-ca5f661ad344.png">
-
-
+<img width="300" alt="image" src="https://user-images.githubusercontent.com/37682858/73841571-3b76f980-485e-11ea-893e-7b59505994e4.png">
 
 ## 다음 버튼 누른 후
 
-<img width="300" alt="image" src="https://user-images.githubusercontent.com/37682858/73810125-cf25d700-4818-11ea-84bb-a4a371267091.png">
+<img width="300" alt="image" src="https://user-images.githubusercontent.com/37682858/73841585-416cda80-485e-11ea-98d0-d0405bb0c279.png">
 
 
 
-## 닫기 버튼 누른 후
+## 선택 버튼 누른 후
 
-<img width="300" alt="image" src="https://user-images.githubusercontent.com/37682858/73810132-d351f480-4818-11ea-97eb-ac223fe4ac2e.png">
+<img width="300" alt="image" src="https://user-images.githubusercontent.com/37682858/73841592-4467cb00-485e-11ea-8053-090520309b29.png">
 
 
+
+## 사진 앨범 버튼 누른 후
+
+<img width="300" alt="image" src="https://user-images.githubusercontent.com/37682858/73841608-49c51580-485e-11ea-9810-f523b3e0fb1b.png">
+
+## 사진 선택 후
+
+<img width="300" alt="image" src="https://user-images.githubusercontent.com/37682858/73841617-4fbaf680-485e-11ea-9de0-281ada8925a2.png">
 
 ### 변경 사항
 
-* second tap에 imageView 추가 하여 image를 띄워 줄 수 있게 함.
-* second tap에 button을 추가 하여 랜덤으로 이미지를 띄워 줌.
+* second tap에 액자 imageView 추가 하고, 이미지를 띄워주는 view의 z index를 맨 앞으로 하여 마치 액자에 사진이 있는 것 처럼 표현
+* 선택 버튼을 눌러 디바이스 내의 사진 앨범에 접근하여 사진 불어오기 기능 추가
 
-### UIImageView, UIImage
 
-* UIImageView
-  * 이미지 또는 움직이는 이미지를 표시해주는 객체
-  * UIImage 객체를 사용하여 UIImageVIew에 이미지를 띄울 수 있음
-  * 이미지의 크기, 비율, 투명도 등 속성을 조정할 수 있음.
-  * 터치 이벤트를 장착하여 사용자의 action에 피드백을 줄 수 있음.
-* UIImage
-  * 이미지 데이터를 관리하는 객체
 
-### 이미지 뷰의 속성
+### Delegate 와 Protocol의 관계
 
-* scaleToFill
-  * imageView의 크기에 맞춰 image의 크기를 변경 해줌
-  * 비율이 바뀔 수 있음
-* scaleAspectFit
-  * imageView의 크기에 맞게 image의 크기를 조정 함. 남는 부분은 투명
-  * 비율 유지 함
-* scaleAspectFill
-  * imageView에 빈 영역 없이 image를 채움. 일부 내용 잘릴 수 있음
-  * 비율 유지 함
-* center
-  * image의 중앙 부분을 view에 보여줌.
-  * 비율 유지 함
-* top
-  * image의 상단 부분을 view에 보여줌.
-* bottom
-  * image의 하단 부분을 view에 보여줌.
-* left
-  * image의 왼쪽 부분을 view에 보여줌.
-* right
-  * image의 오른쪽 부분을 view에 보여줌.
-* topLeft
-  * image의 왼쪽 상단 부분을 view에 보여줌.
-* topRight
-  * image의 오른쪽 상단 부분을 view에 보여줌.
-* bottomLeft
-  * image의 하단 왼쪽 부분을 view에 보여줌.
-* bottomRight
-  * image의 하단 오른쪽 부분을 view에 보여줌.
+프로토콜? 
+
+프로토콜을 따르는 모든 타입은 해당 프로토콜의 요구사항을 지겨야함
 
 ### 완료 시간
 
-2020-02-05-10:40
+2020-02-05-21:56

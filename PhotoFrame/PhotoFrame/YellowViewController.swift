@@ -9,10 +9,6 @@
 import UIKit
 
 class YellowViewController: UIViewController {
-
-    @IBAction func closeButtonTouched(_ sender: Any) {
-           self.dismiss(animated: true, completion: nil)
-    }
     
     @IBAction func nextButtonTouched(_ sender: Any) {
         let vc=self.storyboard?.instantiateViewController(withIdentifier: "BlueViewController") as! BlueViewController
