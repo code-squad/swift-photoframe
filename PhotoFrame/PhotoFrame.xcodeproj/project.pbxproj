@@ -38,6 +38,7 @@
 		DE0FBE3D23EABCE2007E1FEA /* 17.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DE0FBE2723EABCE2007E1FEA /* 17.jpg */; };
 		DE0FBE3E23EABCE2007E1FEA /* 18.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DE0FBE2823EABCE2007E1FEA /* 18.jpg */; };
 		DE0FBE3F23EABCE2007E1FEA /* 20.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DE0FBE2923EABCE2007E1FEA /* 20.jpg */; };
+		DE0FBE4323EAFBF9007E1FEA /* photoframe-border.png in Resources */ = {isa = PBXBuildFile; fileRef = DE0FBE4223EAFBF9007E1FEA /* photoframe-border.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		DE0FBE2723EABCE2007E1FEA /* 17.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 17.jpg; sourceTree = "<group>"; };
 		DE0FBE2823EABCE2007E1FEA /* 18.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 18.jpg; sourceTree = "<group>"; };
 		DE0FBE2923EABCE2007E1FEA /* 20.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 20.jpg; sourceTree = "<group>"; };
+		DE0FBE4223EAFBF9007E1FEA /* photoframe-border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photoframe-border.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 		DE0FBE1323EABCAE007E1FEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DE0FBE4223EAFBF9007E1FEA /* photoframe-border.png */,
 				DE0FBE2123EABCE1007E1FEA /* 01.jpg */,
 				DE0FBE1423EABCDF007E1FEA /* 02.jpg */,
 				DE0FBE1E23EABCE1007E1FEA /* 03.jpg */,
@@ -228,6 +231,7 @@
 				DE0FBE3723EABCE2007E1FEA /* 01.jpg in Resources */,
 				DE0FBE0123E932E5007E1FEA /* Main.storyboard in Resources */,
 				DE0FBE3223EABCE2007E1FEA /* 12.jpg in Resources */,
+				DE0FBE4323EAFBF9007E1FEA /* photoframe-border.png in Resources */,
 				DE0FBE3B23EABCE2007E1FEA /* 19.jpg in Resources */,
 				DE0FBE2C23EABCE2007E1FEA /* 05.jpg in Resources */,
 				DE0FBE3623EABCE2007E1FEA /* 08.jpg in Resources */,
