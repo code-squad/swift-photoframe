@@ -33,7 +33,7 @@ class PurpleViewController: UIViewController {
     
     @IBAction func nextButtonTouched() {
         let vcName = self.storyboard?.instantiateViewController(identifier: "ApricotViewController") as! ApricotViewController
-        self.present(vcName, animated: true, completion: nil)
+        self.navigationController?.pushViewController(vcName, animated: true)
     }
     
     @IBAction func closeButtonTouched() {
