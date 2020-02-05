@@ -15,10 +15,12 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var firstLabel: UILabel!
+    @IBOutlet weak var selectButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         nextButton.setTitle("다음", for: .normal)
+        selectButton.setTitle("선택", for: .normal)
         firstLabel.text = "Photo Album"
     }
     

@@ -141,6 +141,14 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photoframe-border.png" translatesAutoresizingMaskIntoConstraints="NO" id="LKC-hs-d6u" userLabel="PhotoFrame">
                                 <rect key="frame" x="38" y="79" width="338" height="312.5"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCe-z9-z42">
+                                <rect key="frame" x="184" y="558" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="selectButtonTouched:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="WWQ-Ct-GrA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -162,6 +170,7 @@
                         <outlet property="firstLabel" destination="zEq-FU-wV5" id="Pb6-qj-wj6"/>
                         <outlet property="nextButton" destination="Jnz-KX-cnk" id="vOK-cw-t1s"/>
                         <outlet property="photoImageView" destination="Aq9-1Z-oA4" id="sQT-fR-pxs"/>
+                        <outlet property="selectButton" destination="fCe-z9-z42" id="HT7-RD-LRH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
