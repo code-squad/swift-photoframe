@@ -12,8 +12,7 @@ class BrownViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func ClosedButtonTouched(_ sender: UIButton) {
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let grayViewController = storyBoard.instantiateViewController(identifier: "GrayViewController")
+        let grayViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "GrayViewController")
         show(grayViewController, sender: self)
     }
     
