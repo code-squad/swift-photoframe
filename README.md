@@ -135,3 +135,32 @@ navigation은 각각의 viewcontroller에서 사용할 navigation bar를 설정,
 Navigation Controller가 없으면 segue type중 show(push)를 사용해도 present(modal)이랑 같은 전환 효과가 나옵니다.
 
 Navigation Controller가 viewcontroller을 배열로 가지고 있어서 stack처럼 처리합니다. (FILO) No newline at end of file
+
+
+
+## UIImage
+
+UIImage 객체는 불변성이다. -> 파일 이미지를 처음 메모리에 적재하는 객체를 뜻하는거 같습니다. 
+
+animationImage는 UIImage를 배열로 가지고 있고 startAnimating을 사용해서 보여주는거였습니다.
+
+
+
+## UIImageView
+
+isQpaque(Bool)에 따라서 background, aplha(0.0 ~ 1.0) 값 적용여부가 결정됩니다. 
+
+성능상의 이유로 shadow, background를 안쓰면 isQpaque를 true 설정.
+
+imageView도 이벤트 처리할 수 있다.
+
+### 성능향상 
+
+cache는 uiimageview에서 처리하는줄 몰랐습니다. 
+
+isQpaque 꼭 확인하기. 
+
+UIImageView 랑 UIImage랑 크기가 비슷하게 사용하기, 작거나 크면 새로운 객체를 생성해야되기 떄문입니다.
+
+ImageView에서는 draw()를 사용하지말고, UIView에서 처리해야합니다.
+

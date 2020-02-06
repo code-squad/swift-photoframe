@@ -9,29 +9,31 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     // MARK: - Properties
-    @IBOutlet var photoLabel: UILabel!
-    @IBOutlet var photoDescription: UILabel!
+    @IBOutlet weak var imageView: UIImageView! {
+        didSet {
+            imageView.isOpaque = true
+        }
+    }
+    @IBOutlet var photoDescription: UILabel! {
+        didSet {
+            photoDescription.text = "굿드"
+            photoDescription.textAlignment = .left
+        }
+    }
     
     // MARK: - Lifecycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        print(#file, #line, #function, #column)
-        photoLabel.text = "GangWoon의 사진액자"
-        photoDescription.text = "굿드"
-        photoDescription.textAlignment = .left
-        photoDescription.numberOfLines = 0
-//        photoDescription.isHighlighted = true
-        photoDescription.highlightedTextColor = .blue
-    }
     
     // MARK: - Actions
-    @IBAction func nextButtonTouched(_ sender: UIButton) {
-        photoLabel.textColor = .darkGray
-        photoLabel.backgroundColor = .blue
-        photoLabel.alpha = 0.5
+    func RandomImage() -> UIImage {
+        let random = Int.random(in: 1...22)
+        let imageName = random < 10 ? "0" + String(random) : String(random)
+        return UIImage(named: imageName) ?? UIImage()
     }
     
+    @IBAction func nextButtonTouched(_ sender: UIButton) {
+        imageView.image = RandomImage()
+    }
 }
 
