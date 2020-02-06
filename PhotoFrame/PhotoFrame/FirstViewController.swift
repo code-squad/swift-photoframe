@@ -24,24 +24,24 @@ class FirstViewController: UIViewController {
         self.firstDescription.textColor = .white
         view.backgroundColor = .black
         
-        print("viewDidLoad")
+        print("First viewDidLoad")
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        print("viewWillAppear", #file, #line, #function, #column)
+        print("First viewWillAppear", #file, #line, #function, #column)
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        print("viewDidAppear", #file, #line, #function, #column)
+        print("First viewDidAppear", #file, #line, #function, #column)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        print("viewWillDisapper", #file, #line, #function, #column)
+        print("First viewWillDisapper", #file, #line, #function, #column)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        print("viewDidDisappear", #file, #line, #function, #column)
+        print("First viewDidDisappear", #file, #line, #function, #column)
     }
     
     @IBAction func nextButtonTouched(_ sender: Any) {
@@ -54,8 +54,9 @@ class FirstViewController: UIViewController {
         guard let yellowView = self.storyboard?.instantiateViewController(identifier: "yellowView") else {
             return
         }
-        //모달로 표시
-        self.present(yellowView, animated: true)
+        
+        
+        self.show(yellowView, sender: nil)
     }
 }
 
