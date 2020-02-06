@@ -24,3 +24,8 @@
 
 
 <img width="794" alt="스크린샷 2020-02-05 오후 5 40 25" src="https://user-images.githubusercontent.com/34564706/73826640-81719480-4841-11ea-8a90-d004b901d59a.png">
+
+
+### Scene과 Segue
+- 새로운 Scene을 추가하는 법
+>Xcode 의 오른쪽 위 '+' 버튼(라이브러리)을 누른 뒤 팝업된 창에 ViewController 타이핑 해서 선택하면 새 Scene이 추가됨
