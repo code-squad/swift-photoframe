@@ -49,6 +49,13 @@ class FirstViewController: UIViewController {
         self.photoLabel.backgroundColor = UIColor.yellow
         //투명도
         self.photoLabel.alpha = 0.5
+    
+        //현재 스토리보드에서 식별자가 yellowView인것을 인스턴스화 시킴
+        guard let yellowView = self.storyboard?.instantiateViewController(identifier: "yellowView") else {
+            return
+        }
+        //모달로 표시
+        self.present(yellowView, animated: true)
     }
 }
 
