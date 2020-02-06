@@ -25,3 +25,8 @@
 2. 닫기 Button을 추가하여 터치시 현재 화면을 닫는 동작을 구현함.
 <img width="400" height="800" src="https://user-images.githubusercontent.com/49548908/73760409-9f42e900-47b0-11ea-8c11-7ca2b67475ea.gif">
 3. ViewController Life Cycle을 가시적으로 확인하기 위해 콜백 관련 함수 4개 구현 (print문으로 확인)
+
+2020.2.7
+1. Embed in Navigation Controller를 통해 Navigation Controller를 View Controller의 컨테이너로 만듦.
+2. 다음버튼을 누를때 화면전환을 present가 아닌 show로 변경
+3. back 버튼을 누를때 dismiss가 아닌 pop으로 변경
