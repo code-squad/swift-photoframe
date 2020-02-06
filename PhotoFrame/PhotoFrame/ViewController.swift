@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     // MARK: - Actions
     func RandomImage() -> UIImage {
         let random = Int.random(in: 1...22)
-        let imageName = random < 10 ? "0" + String(random) : String(random)
+        let imageName = String(format: "%02d", random)
         return UIImage(named: imageName) ?? UIImage()
     }
     
