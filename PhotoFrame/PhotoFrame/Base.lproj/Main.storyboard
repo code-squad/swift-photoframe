@@ -119,6 +119,9 @@
                                 <rect key="frame" x="192" y="300" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="다음"/>
+                                <connections>
+                                    <segue destination="Ije-kS-zGB" kind="show" id="SYj-nG-TZT"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -129,6 +132,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mzW-NP-LCn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1407" y="-320"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gEH-r5-ziJ">
+            <objects>
+                <viewController id="Ije-kS-zGB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rR7-zl-Cgz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="0Ke-4a-O9l"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kQs-5S-4gx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dsm-SB-y6U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2085" y="-319"/>
         </scene>
     </scenes>
     <resources>
