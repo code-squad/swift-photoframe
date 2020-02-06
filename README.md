@@ -164,3 +164,10 @@ UIImageView 랑 UIImage랑 크기가 비슷하게 사용하기, 작거나 크면
 
 ImageView에서는 draw()를 사용하지말고, UIView에서 처리해야합니다.
 
+
+
+
+
+## Protocol, Delegate 
+
+protocol을 사용해 class only protocol, required init, protocol 끼리 상속도 가능하다. delegate는 protocol 상속시 책임을 위임 시켜줄 수 있는 패턴이다. 항상 사용할때 optional로 사용하지 않으면 strong refernce가 발생하기 때문에 optional로 사용하자. (ARC 추가 정리 필요) protocol을 잘 사용하고 싶다는 생각을 매번 합니다.
