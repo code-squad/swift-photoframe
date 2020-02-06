@@ -32,37 +32,47 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gt4-37-DPd">
-                                <rect key="frame" x="20" y="368" width="374" height="21"/>
+                                <rect key="frame" x="47" y="628" width="320" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rC-6b-8UB">
-                                <rect key="frame" x="20" y="409" width="374" height="30"/>
+                                <rect key="frame" x="47" y="669" width="320" height="30"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="i8u-Ja-nRD" eventType="touchUpInside" id="nwd-Bl-3AC"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qds-Ko-BlP">
-                                <rect key="frame" x="87" y="108" width="240" height="240"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photoframe-border" translatesAutoresizingMaskIntoConstraints="NO" id="sdM-nb-vtQ" userLabel="PhotoFrame">
+                                <rect key="frame" x="47" y="288" width="320" height="320"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="qds-Ko-BlP" secondAttribute="height" multiplier="1:1" id="LIA-OJ-CM6"/>
-                                    <constraint firstAttribute="width" constant="240" id="lbJ-En-GyI"/>
+                                    <constraint firstAttribute="width" secondItem="sdM-nb-vtQ" secondAttribute="height" multiplier="1:1" id="ue5-qC-sOO"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qds-Ko-BlP">
+                                <rect key="frame" x="67" y="308" width="280" height="280"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qds-Ko-BlP" secondAttribute="height" multiplier="1:1" id="Opu-gE-xH3"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="7rC-6b-8UB" firstAttribute="top" secondItem="gt4-37-DPd" secondAttribute="bottom" constant="20" id="3V1-l4-cmI"/>
-                            <constraint firstItem="gt4-37-DPd" firstAttribute="top" secondItem="qds-Ko-BlP" secondAttribute="bottom" constant="20" id="IRr-qi-us7"/>
-                            <constraint firstItem="qds-Ko-BlP" firstAttribute="top" secondItem="0uy-xv-Knf" secondAttribute="top" constant="20" id="RqZ-af-0JC"/>
-                            <constraint firstItem="7rC-6b-8UB" firstAttribute="trailing" secondItem="gt4-37-DPd" secondAttribute="trailing" id="cRY-O9-NAk"/>
-                            <constraint firstItem="gt4-37-DPd" firstAttribute="leading" secondItem="0uy-xv-Knf" secondAttribute="leading" constant="20" id="fAB-h6-bkx"/>
-                            <constraint firstItem="7rC-6b-8UB" firstAttribute="leading" secondItem="gt4-37-DPd" secondAttribute="leading" id="jKB-xZ-t1S"/>
-                            <constraint firstItem="gt4-37-DPd" firstAttribute="centerX" secondItem="qds-Ko-BlP" secondAttribute="centerX" id="qxE-hc-zfg"/>
-                            <constraint firstItem="qds-Ko-BlP" firstAttribute="centerX" secondItem="p6C-uG-eIK" secondAttribute="centerX" id="yGn-Hz-TyQ"/>
+                            <constraint firstItem="7rC-6b-8UB" firstAttribute="top" secondItem="gt4-37-DPd" secondAttribute="bottom" constant="20" id="30X-bd-bcS"/>
+                            <constraint firstItem="qds-Ko-BlP" firstAttribute="top" secondItem="sdM-nb-vtQ" secondAttribute="top" constant="20" id="9ns-Rm-SgD"/>
+                            <constraint firstItem="7rC-6b-8UB" firstAttribute="leading" secondItem="sdM-nb-vtQ" secondAttribute="leading" id="DdI-te-gqp"/>
+                            <constraint firstItem="gt4-37-DPd" firstAttribute="trailing" secondItem="sdM-nb-vtQ" secondAttribute="trailing" id="FO6-dA-xZ2"/>
+                            <constraint firstItem="gt4-37-DPd" firstAttribute="top" secondItem="sdM-nb-vtQ" secondAttribute="bottom" constant="20" id="OrY-He-rg6"/>
+                            <constraint firstItem="sdM-nb-vtQ" firstAttribute="centerX" secondItem="p6C-uG-eIK" secondAttribute="centerX" id="VJl-yT-G38"/>
+                            <constraint firstItem="qds-Ko-BlP" firstAttribute="leading" secondItem="sdM-nb-vtQ" secondAttribute="leading" constant="20" id="asE-hP-dJK"/>
+                            <constraint firstItem="gt4-37-DPd" firstAttribute="leading" secondItem="sdM-nb-vtQ" secondAttribute="leading" id="hdo-Ie-iC9"/>
+                            <constraint firstItem="sdM-nb-vtQ" firstAttribute="centerY" secondItem="p6C-uG-eIK" secondAttribute="centerY" id="isz-63-R2m"/>
+                            <constraint firstItem="qds-Ko-BlP" firstAttribute="centerY" secondItem="p6C-uG-eIK" secondAttribute="centerY" id="n6z-0w-99L"/>
+                            <constraint firstItem="7rC-6b-8UB" firstAttribute="trailing" secondItem="sdM-nb-vtQ" secondAttribute="trailing" id="o7J-cB-oxk"/>
+                            <constraint firstItem="qds-Ko-BlP" firstAttribute="centerX" secondItem="p6C-uG-eIK" secondAttribute="centerX" id="osm-kG-7Rv"/>
+                            <constraint firstItem="sdM-nb-vtQ" firstAttribute="top" secondItem="0uy-xv-Knf" secondAttribute="top" constant="200" id="s0H-DC-daX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0uy-xv-Knf"/>
                     </view>
@@ -175,4 +185,7 @@
             <point key="canvasLocation" x="263.768115942029" y="-581.25"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="photoframe-border" width="720" height="720"/>
+    </resources>
 </document>
