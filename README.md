@@ -8,7 +8,7 @@
 
 ![popover](/Users/yun/Downloads/swift-photoframe/Imgaes/Screen Shot 2020-02-04 at 15.17.48.png)
 
-
+![additional mission](/Users/yun/Downloads/swift-photoframe/Imgaes/Screen Shot 2020-02-06 at 20.08.15.png)
 
 
 

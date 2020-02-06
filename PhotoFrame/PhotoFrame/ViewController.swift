@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView! {
         didSet {
             imageView.isOpaque = true
+            pickerController.delegate = self
         }
     }
     @IBOutlet var photoDescription: UILabel! {
@@ -22,18 +23,21 @@ class ViewController: UIViewController {
             photoDescription.textAlignment = .left
         }
     }
-    
-    // MARK: - Lifecycle
+    let pickerController = UIImagePickerController()
     
     // MARK: - Actions
-    func RandomImage() -> UIImage {
-        let random = Int.random(in: 1...22)
-        let imageName = String(format: "%02d", random)
-        return UIImage(named: imageName) ?? UIImage()
-    }
-    
     @IBAction func nextButtonTouched(_ sender: UIButton) {
-        imageView.image = RandomImage()
+        pickerController.sourceType = .photoLibrary
+        present(pickerController, animated: true, completion: nil)
     }
 }
 
+extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let photo = info[.originalImage] as? UIImage else { return }
+        DispatchQueue.main.async {
+            self.imageView.image = photo
+        }
+        dismiss(animated: true, completion: nil)
+    }
+}
