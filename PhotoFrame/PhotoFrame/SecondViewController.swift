@@ -34,11 +34,17 @@ class SecondViewController: UIViewController {
     }
     
     @IBAction func selectButtonTouched(_ sender: Any) {
+        openLibrary()
     }
     
     func getRandomNumber() {
         let randomNumber = Int.random(in: 1...22)
         imageTitle = String(format: "%02d", randomNumber)
+    }
+    
+    func openLibrary() {
+        picker.sourceType = .photoLibrary
+        present(picker, animated: true, completion: nil)
     }
 }
 
