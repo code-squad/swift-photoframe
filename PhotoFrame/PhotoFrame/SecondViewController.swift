@@ -19,5 +19,7 @@ class SecondViewController: UIViewController {
     }
 
 
+    @IBAction func nextImageButtonTouched(_ sender: Any) {
+    }
 }
 
