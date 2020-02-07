@@ -133,10 +133,10 @@
             </objects>
             <point key="canvasLocation" x="1407" y="-320"/>
         </scene>
-        <!--View Controller-->
+        <!--Yellow View Controller-->
         <scene sceneID="gEH-r5-ziJ">
             <objects>
-                <viewController id="Ije-kS-zGB" sceneMemberID="viewController">
+                <viewController id="Ije-kS-zGB" customClass="YellowViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rR7-zl-Cgz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
