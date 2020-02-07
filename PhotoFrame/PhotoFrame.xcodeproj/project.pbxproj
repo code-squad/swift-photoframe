@@ -17,6 +17,7 @@
 		862D3D7523E92BAC00BB56D4 /* PhotoFrameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862D3D7423E92BAC00BB56D4 /* PhotoFrameTests.swift */; };
 		862D3D8023E92BAC00BB56D4 /* PhotoFrameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862D3D7F23E92BAC00BB56D4 /* PhotoFrameUITests.swift */; };
 		862D3DD023ED2C3500BB56D4 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862D3DCF23ED2C3500BB56D4 /* YellowViewController.swift */; };
+		862D3DD223ED36CC00BB56D4 /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862D3DD123ED36CC00BB56D4 /* BlueViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		862D3D7F23E92BAC00BB56D4 /* PhotoFrameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFrameUITests.swift; sourceTree = "<group>"; };
 		862D3D8123E92BAC00BB56D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		862D3DCF23ED2C3500BB56D4 /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
+		862D3DD123ED36CC00BB56D4 /* BlueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				862D3D5F23E92BAB00BB56D4 /* FirstViewController.swift */,
 				862D3D6123E92BAB00BB56D4 /* SecondViewController.swift */,
 				862D3D6323E92BAB00BB56D4 /* Main.storyboard */,
+				862D3DD123ED36CC00BB56D4 /* BlueViewController.swift */,
 				862D3DCF23ED2C3500BB56D4 /* YellowViewController.swift */,
 				862D3D6623E92BAC00BB56D4 /* Assets.xcassets */,
 				862D3D6823E92BAC00BB56D4 /* LaunchScreen.storyboard */,
@@ -269,6 +272,7 @@
 				862D3D6023E92BAB00BB56D4 /* FirstViewController.swift in Sources */,
 				862D3D5C23E92BAB00BB56D4 /* AppDelegate.swift in Sources */,
 				862D3D5E23E92BAB00BB56D4 /* SceneDelegate.swift in Sources */,
+				862D3DD223ED36CC00BB56D4 /* BlueViewController.swift in Sources */,
 				862D3DD023ED2C3500BB56D4 /* YellowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
