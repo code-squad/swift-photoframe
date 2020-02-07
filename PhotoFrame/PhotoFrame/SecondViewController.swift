@@ -16,10 +16,6 @@ class SecondViewController: UIViewController {
     
     @IBOutlet weak var photoAlbumText: UILabel!
     
-    @IBAction func nextImageButtonTouched(_ sender: UIButton) {
-        self.photoImageView.image = generateRandomUIImage()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -38,6 +34,10 @@ class SecondViewController: UIViewController {
             $0 < 10 ? UIImage(named: "0\($0).jpg") : UIImage(named: "\($0).jpg")
            }
         return images[generateRandomNumber()]
+    }
+    
+    @IBAction func nextImageButtonTouched(_ sender: UIButton) {
+           self.photoImageView.image = generateRandomUIImage()
     }
 }
 
