@@ -17,11 +17,15 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var firstLabel: UILabel!
     @IBOutlet weak var selectButton: UIButton!
     
+    var picker = UIImagePickerController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         nextButton.setTitle("다음", for: .normal)
         selectButton.setTitle("선택", for: .normal)
         firstLabel.text = "Photo Album"
+        
+        picker.delegate = self
     }
     
     @IBAction func nextImageButtonTouched(_ sender: Any) {
@@ -36,7 +40,9 @@ class SecondViewController: UIViewController {
         let randomNumber = Int.random(in: 1...22)
         imageTitle = String(format: "%02d", randomNumber)
     }
+}
 
+extension SecondViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
 }
 
