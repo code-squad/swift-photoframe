@@ -26,12 +26,18 @@ class SecondViewController: UIViewController {
     
     @IBAction func nextImageButtonTouched(_ sender: Any) {
         getRandomNumber()
-        self.photoImageView.image = UIImage(named: "\(imageTitle).jpg")
+        photoImageView.image = UIImage(named: "\(imageTitle).jpg")
+    }
+    
+    @IBAction func selectButtonTouched(_ sender: Any) {
     }
     
     func getRandomNumber() {
         let randomNumber = Int.random(in: 1...22)
         imageTitle = String(format: "%02d", randomNumber)
     }
+
+    
 }
+
 
