@@ -29,3 +29,13 @@
 ### Scene과 Segue
 - 새로운 Scene을 추가하는 법
 >Xcode 의 오른쪽 위 '+' 버튼(라이브러리)을 누른 뒤 팝업된 창에 ViewController 타이핑 해서 선택하면 새 Scene이 추가됨
+
+
+### ViewController 프로그래밍
+- 뷰 컨트롤러 강의 자료에 있는 화면 관련 콜백 함수들에 모두 print(#file, #line, #function, #column) 코드를 추가한다.
+이 문제는 각 뷰 컨트롤러에 콜백함수들을 직접 넣어줘야 됨
+~~~
+override func 함수이름(_ animated: Bool) {
+        print("Scene이름 함수이름", #file, #line, #function, #column)
+    }
+~~~
