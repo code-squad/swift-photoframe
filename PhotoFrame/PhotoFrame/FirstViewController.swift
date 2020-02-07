@@ -16,7 +16,23 @@ class FirstViewController: UIViewController {
         print(#file, #line, #function, #column)
         self.firstLabel.text = "H 사진액자"
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("First viewWillAppear", #file, #line, #function, #column)
+    }
 
+    override func viewDidAppear(_ animated: Bool) {
+        print("First viewDidAppear", #file, #line, #function, #column)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        print("First viewWillDisappear", #file, #line, #function, #column)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        print("First viewDidDisappear", #file, #line, #function, #column)
+    }
+    
     @IBAction func nextButtonTouched(_ sender: Any) {
         self.firstLabel.textColor = UIColor.blue
         self.firstLabel.backgroundColor = UIColor.yellow
