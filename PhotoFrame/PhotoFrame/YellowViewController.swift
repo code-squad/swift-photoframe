@@ -16,7 +16,22 @@ class YellowViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        print("Yellow viewWillAppear", #file, #line, #function, #column)
+    }
 
+    override func viewDidAppear(_ animated: Bool) {
+        print("Yellow viewDidAppear", #file, #line, #function, #column)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        print("Yellow viewWillDisappear", #file, #line, #function, #column)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        print("Yellow viewDidDisappear", #file, #line, #function, #column)
+    }
+    
     @IBAction func closeButtonTouched(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
