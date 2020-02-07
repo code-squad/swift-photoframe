@@ -152,3 +152,16 @@
 |![](https://i.imgur.com/jB5TBmS.png)|![](https://i.imgur.com/Uhr7nRd.png)|![](https://i.imgur.com/L7Y2WZY.png)|
 
 완료 : 20.2.5 21:46
+
+### 추가요구사항
+* 이미지 테두리 액자 화면을 추가한다.
+![](https://i.imgur.com/jRa2x2X.png)
+
+* 사진 앨범에서 사진을 가져와서 보여줄 수 있도록 개선한다.
+
+
+|첫 화면|[선택] 버튼 터치|앨범 터치|맨 처음 사진 선택|
+| ------------------------------------ | ------------------------------------ | --- | ------------------------------------ |
+| ![](https://i.imgur.com/jRa2x2X.png) | ![](https://i.imgur.com/UG7Bpp7.png)|![](https://i.imgur.com/PWAaeOO.png)|![](https://i.imgur.com/MTvInVA.png)|
+
+완료 : 2020.2.7 11:53
