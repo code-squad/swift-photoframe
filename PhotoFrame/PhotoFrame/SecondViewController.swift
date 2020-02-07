@@ -18,8 +18,21 @@ class SecondViewController: UIViewController {
     }
 
     @IBAction func nextImageButtonTouched(_ sender: Any) {
-        
+        self.photoImageView.contentMode = .scaleAspectFill
+        self.photoImageView.image = UIImage(named: "\(randImg()).jpg")
     }
-
+    
+    func randImg() -> String {
+        let imgNum = arc4random_uniform(22)+1
+        var img:String
+        
+        if imgNum < 10 {
+            img = "0" + String(imgNum)
+        } else {
+            img = String(imgNum)
+        }
+        
+        return img
+    }
 }
 
