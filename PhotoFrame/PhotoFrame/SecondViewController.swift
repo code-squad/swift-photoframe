@@ -18,9 +18,9 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var photoImageView: UIImageView!
     
     @IBAction func nextImageButtonTouched(_ sender: UIButton) {
-        let number: Int = Int.random(in: 1...22)
-        let name: String = number < 10 ? String(format: "%02d", number) : String(number)
-        self.photoImageView.image = UIImage(named: "\(name).jpg")
+        let number = Int.random(in: 1...22)
+        let filename = String(format: "%02d", number) + ".jpg"
+        self.photoImageView.image = UIImage(named: filename)
     }
     
 }
