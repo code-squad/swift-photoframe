@@ -18,8 +18,19 @@ class SecondViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    func generateRandomUIImage() -> UIImage! {
+        
+        let randomNumber = Int.random(in: 1..<22)
+        
+        if randomNumber < 10 {
+            return UIImage(named: "0\(randomNumber).jpg")
+        }
+        
+        return UIImage(named: "\(randomNumber).jpg")
+    }
 
     @IBAction func nextImageButtonTouched(_ sender: Any) {
+
+        self.photoImageView.image = generateRandomUIImage()
     }
 }
-
