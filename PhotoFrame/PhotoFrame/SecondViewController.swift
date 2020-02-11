@@ -33,4 +33,8 @@ class SecondViewController: UIViewController {
 
         self.photoImageView.image = generateRandomUIImage()
     }
+    
+    @IBAction func selectButtonTouched(_ sender: Any) {
+    }
+    
 }
