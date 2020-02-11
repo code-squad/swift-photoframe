@@ -109,6 +109,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
                     <connections>
+                        <outlet property="photoFrame" destination="Mus-S3-Uwa" id="Whk-1y-G35"/>
                         <outlet property="photoImageView" destination="FYF-Vf-Sja" id="wBc-Fr-xgP"/>
                     </connections>
                 </viewController>
