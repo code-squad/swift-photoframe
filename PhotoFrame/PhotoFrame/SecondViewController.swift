@@ -13,9 +13,13 @@ class SecondViewController: UIViewController {
     
     @IBOutlet weak var photoImageView: UIImageView!
     
+    @IBOutlet weak var photoFrame: UIImageView!
+    
+    let imagePickerController = UIImagePickerController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        imagePickerController.delegate = self
     }
 
     func generateRandomUIImage() -> UIImage! {
@@ -35,6 +39,19 @@ class SecondViewController: UIViewController {
     }
     
     @IBAction func selectButtonTouched(_ sender: Any) {
+        
+        self.imagePickerController.sourceType = .photoLibrary
+        self.present(imagePickerController, animated: true, completion: nil)
+        
     }
-    
+}
+
+extension SecondViewController : UIImagePickerControllerDelegate,UINavigationControllerDelegate{
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+            
+        if let image = info[UIImagePickerController.InfoKey.originalImage]{
+                photoImageView.image = image as? UIImage
+        }
+        dismiss(animated: true, completion: nil)
+    }
 }
