@@ -2,7 +2,7 @@
 
 ## 주요 작업
 - 스토리보드에서  탭바 컨트롤러 추가 
-- viewDidLoad() 에서 *print(#file, #line, #function, #column)* 코드 실행
+- viewDidLoad()함수 에서 *print(#file, #line, #function, #column)* 코드 실행
 
 ## 스크린샷
 
