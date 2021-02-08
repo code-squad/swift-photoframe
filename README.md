@@ -10,12 +10,13 @@ Keychaain Access에서 git과 관련된 항목 삭제, git credential 삭제, gi
 하지만! 아이디를 넣어 git clone 하는 방법으로 결국 성공하였다! (Many thanks to Honux)
 
 `git clone https://1song2@github.com/1song2/swift-photoframe`
+
 👉 다른 궁극적인(?) 해결 방법이 있나 계속 공부해보기
 
 ## Step-1. Tabbed 앱
 1. 포토프레임 프로젝트 저장소를 본인 저장소로 fork하고 로컬에 clone
 2. 로컬 저장소 경로에 iOS-App 템플릿으로 프로젝트 "PhotoFrame" 생성
-3. ViewController.swift 파일의 viewDidLoad() 함수 내 `print(#file, #line, #function, #column)` 코드 추가
+3. ViewController.swift 파일의 `viewDidLoad()` 함수 내 `print(#file, #line, #function, #column)` 코드 추가
 * 실행 결과
 ```
 /Users/song/development/swift/masters/2021-iOS/swift-photoframe/PhotoFrame/PhotoFrame/ViewController.swift 14 viewDidLoad() 40
@@ -31,3 +32,18 @@ Keychaain Access에서 git과 관련된 항목 삭제, git credential 삭제, gi
 <img src="https://user-images.githubusercontent.com/56751259/107218910-a354b700-6a53-11eb-9643-2ea03b9d3bcc.png">
 
 완성 일자 및 시간: 2021-02-08 21:26PM
+
+## Step2. IBOutlet
+1. FirstViewController에 `UILabel`을 추가
+2. 레이블을 선택하고 ctrl을 누른채 코드로 드래그해 IBOutlet을 추가
+3. `viewDidLoad()` 함수 안에서 아웃렛 변수에 값을 변경 (= 속성을 변경)
+
+**시뮬레이터 스크린샷**
+
+<img src="https://user-images.githubusercontent.com/56751259/107239147-eae73d00-6a6b-11eb-8b31-c72836e3a096.png" width=50%>
+
+**Main.storyboard 스크린샷**
+
+<img src="https://user-images.githubusercontent.com/56751259/107239309-11a57380-6a6c-11eb-8a2e-6f1b956b5f13.png">
+
+완성 일자 및 시간: 2021-02-09 12:17AM
