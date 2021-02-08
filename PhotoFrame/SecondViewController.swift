@@ -21,7 +21,6 @@ class SecondViewController: UIViewController {
         let number = Int.random(in: 1...22)
         let numberStr = String(format: "%02d", number)
         self.photoImageView.image = UIImage(named: "/Users/parkhyewon/git/swift-photoframe/PhotoFrame/DemoImages/\(numberStr).jpg")
-        self.photoImageView.contentMode.scaleAspectFill
     }
     
     /*
