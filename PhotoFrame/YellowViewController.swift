@@ -17,11 +17,10 @@ class YellowViewController: UIViewController {
     
     @IBAction func insertButtonTouched(_ sender: Any) {
         guard let blueVC = self.storyboard?.instantiateViewController(identifier: "blueVC") else { return }
-        self.present(blueVC, animated: true)
+        self.navigationController?.pushViewController(blueVC, animated: true)
     }
     @IBAction func closeButtonTouched(_ sender: Any) {
-//        self.dismiss(animated: true, completion: nil)
-        self.presentingViewController?.dismiss(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     override func viewWillAppear(_ animated: Bool) {
         print(#file, #line, #function, #column)

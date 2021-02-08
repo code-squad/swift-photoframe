@@ -27,7 +27,7 @@ class FirstViewController: UIViewController {
         self.photoLabel.alpha = 0.5
         
         guard let yellowVC = self.storyboard?.instantiateViewController(identifier: "yellowVC") else { return }
-        self.present(yellowVC, animated: true)
+        self.navigationController?.pushViewController(yellowVC, animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
