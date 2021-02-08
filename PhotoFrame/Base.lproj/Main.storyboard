@@ -53,7 +53,6 @@
                                 <state key="normal" title="다음"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="XsP-Vt-ePu" eventType="touchUpInside" id="8Xw-oR-Mq5"/>
-                                    <segue destination="uiR-Tu-heG" kind="show" id="7Jn-OT-F7f"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -73,9 +72,9 @@
         <!--Yellow View Controller-->
         <scene sceneID="Utv-Gc-f8H">
             <objects>
-                <viewController id="uiR-Tu-heG" customClass="YellowViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="yellowVC" id="uiR-Tu-heG" customClass="YellowViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p41-n5-bqk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAx-EU-VT1">
@@ -84,7 +83,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="다음"/>
                                 <connections>
-                                    <segue destination="dZt-6T-Pev" kind="show" id="ghd-Po-w5V"/>
+                                    <action selector="insertButtonTouched:" destination="uiR-Tu-heG" eventType="touchUpInside" id="Zk5-Kh-3Ha"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lKO-m2-qen">
@@ -109,9 +108,9 @@
         <!--Blue View Controller-->
         <scene sceneID="YnI-mi-T6j">
             <objects>
-                <viewController id="dZt-6T-Pev" customClass="BlueViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="blueVC" id="dZt-6T-Pev" customClass="BlueViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OAg-fX-aw7" customClass="blue">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFV-9l-AE9">
