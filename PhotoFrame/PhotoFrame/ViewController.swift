@@ -8,12 +8,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var photoLabel: UILabel!
+    @IBOutlet weak var firstDescription: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.photoLabel.text = "JEJE의 사진액자"
+        self.firstDescription.text = "Are you ready to make?"
     }
-
-
 }
 
