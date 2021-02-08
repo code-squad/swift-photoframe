@@ -1,3 +1,5 @@
+# step 1
+dahun-lee-daji step -1 
 # 진행 방법
 
 - 포토프레임에 대한 요구사항을 파악한다.
