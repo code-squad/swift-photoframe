@@ -1,97 +1,89 @@
-# 진행 방법
+# 과  정
 
-- 포토프레임에 대한 요구사항을 파악한다.
-- 요구사항에 대한 구현을 완료한 후 자신의 github 아이디에 해당하는 브랜치에 Pull Request(이하 PR)를 통해 코드 리뷰 요청을 한다.
-- 코드 리뷰 피드백에 대한 개선 작업을 하고 다시 PUSH한다.
-- 모든 피드백을 완료하면 다음 단계를 도전하고 앞의 과정을 반복한다.
+## 1단계
 
-# 코드 리뷰 과정
-> 저장소 브랜치에 자신의 github 아이디에 해당하는 브랜치가 존재해야 한다.
->
-> 자신의 github 아이디에 해당하는 브랜치가 있는지 확인한다.
+"기존에 있었던 View Controller를 삭제하고 Tab Bar Controller를 추가한 다음 "Attributes inspector"에서 "is Initial View Controller"에 체크한다."
 
-1. 자신의 github 아이디에 해당하는 브랜치가 없는 경우 브랜치 생성 요청 채널을 통해 브랜치 생성을 요청한다.
-프로젝트를 자신의 계정으로 fork한다. 저장소 우측 상단의 fork 버튼을 활용한다.
+/Users/junhojang/Desktop/스크린샷 2021-02-08 오후 4.51.44.png
 
-2. fork한 프로젝트를 자신의 컴퓨터로 clone한다.
-```
-git clone https://github.com/{본인_아이디}/{저장소 아이디}
-ex) https://github.com/godrm/swift-photoframe
-```
+UITapBar와 UITapBarController의 차이?
 
-3. clone한 프로젝트 이동
-```
-cd {저장소 아이디}
-ex) cd swift-photoframe
-```
+처음 생각했었던 것 : UITapBar는 개별 View Controller에 추가할 수 있는 TapBar이고, UITapBarController는 하나의 View Controller이면서 하단에 버튼이 생기고 경로 이동이 바로 됨.
 
-4. 본인 아이디로 브랜치를 만들기 위한 checkout
-```
-git checkout -t origin/본인_아이디
-ex) git checkout -t origin/godrm
-```
+<Documentation Link>
+https://developer.apple.com/documentation/uikit/uitabbar
+https://developer.apple.com/documentation/uikit/uitabbarcontroller
 
-5. 기능 구현을 위한 브랜치 생성 (연속번호를 붙여나간다)
-```
-git checkout -b 브랜치이름
-ex) git checkout -b photoframe-step1
-```
+### UITabBar
 
-6. commit
-```
-git status //확인
-git rm 파일명 //삭제된 파일
-git add 파일명(or * 모두) // 추가/변경 파일
-git commit -m "메세지" // 커밋
-```
+"A controller that displays one or more buttons in a tab bar for selecting between different subtasks, views, or modes in an app."
 
-7. 본인 원격 저장소에 올리기
-```
-git push --set-upstream origin 브랜치이름
-ex) git push --set-upstream origin photoframe-step1
-```
+보통 UITabBarController와 함께 사용하지만, app 내에서 standalone controls로써 사용할 수 있다. 백그라운드 이미지, 컬러 등 인터페이스에서 커스텀이 가능하다. 사용 시 init(frame:) 메소드 혹은 다른 view initializer method를 통해 initial configuration을 set 해줘야 한다. 내용 중간에 UIToolbar 클래스와 유사해보이지만 서로 다른 목적을 가지고 있음을 알려주고 있다.
 
-8. pull request
-	- pull request는 github 서비스에서 진행할 수 있다.
-	- pull request는 original 저장소의 브랜치(자신의 github 아이디)와 앞 단계에서 생성한 브랜치 이름을 기준으로 한다.
+UIToolbar : to present the user with a set of actions that are relevant to the currently presented content.
+UITabBar : to convey and change your app's mode.
 
-	```
-	ex) code-squad/swift-photoframe godrm 브랜치 기준 => godrm/swift-photoframe store-step1
-	```
-	
-9. code review 및 push
-	- pull request를 통해 피드백을 받는다.
-	- 코드 리뷰 피드백에 대한 개선 작업을 하고 다시 PUSH한다.
+### UITabBarController
 
-10. 기본(upstream) 브랜치 전환 및 base 저장소 추가하기(최초 시작하기 단계 한번만 하면 됨)
+"A container view controller that manages a multiselection interface, where the selection determines which child view controller to display."
 
-	```
-	git checkout 본인_아이디
-	git remote add upstream base_저장소_url
+Tab bar interface는 화면 아래에 여러 tab을 둠으로써 다른 모드를 선택할 수 있도록 도와준다. 각 tab은 custom view controller에 연관된다. 특정 tab이 선택되면, 이전 tab이 무엇인지 상관하지 않고 view controller에 상응하는 root view를 보여준다. property에서 initial tab 설정이 가능하다. selectedIndex property를 사용하면서 view controller를 array index로 선택할 수 있다. UITabBarControllerDelegate protocol 준수가 필요하다.
 
-	ex) git checkout godrm
-	ex) git remote add upstream https://github.com/code-squad/swift-photoframe.git
-	```
+UITabBarController 클래스는 UIViewController 클래스로부터 상속받은 것이기 때문에 tab bar controller는 view property를 통해 접근 가능한 고유의 view를 가지고 있다. tab bar controller를 위한 view는 tab bar view, custom content를 포함하는 view의 컨테이너일 뿐이다.
 
-	- 위와 같이 base 저장소 추가한 후 remote 브랜치 목록을 보면 4개가 보여야 한다.
+UITabBar는 "controller", UITabBarController는 "container view controller"
 
-	```
-	git remote -v
-	```
 
-11. 기본 base 저장소와 sync하기 (PR 보낸 내용을 자신의 기본 저장소와 합치기)
+## 2단계
 
-	```
-	git fetch upstream
-	git rebase upstream/본인_아이디
-	ex) git rebase upstream/godrm
-	```
+"Cocoa Touch Class 파일을 Subclass가 UIViewController인 형태로 추가한다. Main.storyboard에서 ViewController를 선택하고 Identity inspector에서 Class에 추가한 파일의 클래스 이름을 입력함으로써 연결시킨다. Label 생성 후 추가된 파일에 Control + Drag로 IBOutlet을 추가한다."
 
-12. 다음 미션을 해결할 경우 [5단계 브랜치 생성]부터 다시 진행
+<Documentation Link>
+https://developer.apple.com/documentation/uikit/uilabel
 
-## 동영상을 통한 코드 리뷰() 를 통해 참고 가능
+<UILabel Property Link>
+https:/docs.microsoft.com/ko-kr/dotnet/api/uikit.uilabel.font?view=xamarin-ios-sdk-12
 
-- [fork하여 코드 리뷰하기](https://www.youtube.com/watch?v=ZSZoaG0PqLg) 
-- [PR 보내고 다시 PR보낼 때 유의 사항](https://www.youtube.com/watch?v=CbLNbCUsh5c&feature=youtu.be)
+### UILabel
 
-## 실습 중 모든 질문은 슬랙 채널에서...
+"A view that displays one or more lines of informational text"
+
+
+## 3단계
+
+"Button을 ViewController에 추가하고 Attributes에서 Text를 바꾼다. ViewController 파일에 Control + Drag로 IBAction 설정 후 추가한다."
+
+<Link>
+https://o-o-wl.tistory.com/45
+
+IB : Interface Builder
+
+IBOutlet : Object 간의 합성 형태? 객체 사이에서 메시지를 주고받는 동적 패턴
+IBAction : 하나의 컨트롤이 타깃에 보내는 메시지?
+
+Target : Receiver of action message
+Control : can reflect the purpose of user. deliver the order of user to object which is responsible for the order.
+
+[UIControl.Event]
+touchDown
+touchDownRepeat
+touchDragInside
+touchDragOutside
+touchDragEnter
+touchDragExit
+touchUpInside
+touchUpOutside
+touchCancel
+valueChanged
+primaryActionTriggered
+editingDidBegin
+edtingChanged
+editingDidEnd
+editingDidEndOnExit
+allTouchEvents
+allEditingEvents
+applicationReserved
+systemReserved
+allEvents
+
+
