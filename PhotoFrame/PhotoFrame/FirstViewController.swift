@@ -14,6 +14,15 @@ class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.photoLabel.text = "만사의 사진액자"
+        self.photoLabel.textColor = .systemRed
+        self.photoLabel.backgroundColor = .systemGreen
+        self.photoLabel.alpha = 0.9
+        self.photoLabel.font = UIFont.systemFont(ofSize: 40)
+        
+        self.photoDescription.textColor = .systemGray
+        self.photoDescription.alpha = 0.6
+        self.photoDescription.font = UIFont.systemFont(ofSize: 20)
     }
 }
 
