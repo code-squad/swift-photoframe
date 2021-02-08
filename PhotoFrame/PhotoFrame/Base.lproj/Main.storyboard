@@ -27,7 +27,7 @@
         <!--Item 1-->
         <scene sceneID="jYV-GO-J0V">
             <objects>
-                <viewController id="oPZ-Ao-bUs" sceneMemberID="viewController">
+                <viewController id="oPZ-Ao-bUs" customClass="FirstViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wcy-Qd-dAc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
