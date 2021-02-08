@@ -13,7 +13,11 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.firstLabel.text = "Song의 사진액자"
+        self.firstLabel.textColor = UIColor.systemGray6
+        self.firstLabel.backgroundColor = UIColor.systemGreen
+        self.firstLabel.alpha = 0.9
+        self.firstLabel.font = UIFont.systemFont(ofSize: 22.0)
     }
     
 
