@@ -52,6 +52,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="First" id="sFe-0V-w6L"/>
                     <connections>
+                        <outlet property="firstDescription" destination="5aH-61-pss" id="gVS-Vu-aY7"/>
                         <outlet property="firstLabel" destination="4x3-Wd-BYR" id="KCT-EH-39u"/>
                     </connections>
                 </viewController>
