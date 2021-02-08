@@ -10,6 +10,8 @@ import UIKit
 class FirstViewController: UIViewController {
 
     @IBOutlet weak var firstLabel: UILabel!
+    @IBOutlet weak var firstDescription: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,6 +20,10 @@ class FirstViewController: UIViewController {
         self.firstLabel.backgroundColor = UIColor.systemGreen
         self.firstLabel.alpha = 0.9
         self.firstLabel.font = UIFont.systemFont(ofSize: 22.0)
+        
+        self.firstDescription.text = "Pictures of my memories"
+        self.firstDescription.textColor = UIColor.darkGray
+        self.firstDescription.font = UIFont.italicSystemFont(ofSize: 15.0)
     }
     
 
