@@ -82,7 +82,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="3UZ-Uw-wQ6" kind="showDetail" id="VcH-ph-yNf"/>
+                                    <segue destination="3UZ-Uw-wQ6" kind="presentation" modalPresentationStyle="fullScreen" id="VcH-ph-yNf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -95,20 +95,33 @@
             </objects>
             <point key="canvasLocation" x="2075" y="-216"/>
         </scene>
-        <!--View Controller-->
+        <!--Blue View Controller-->
         <scene sceneID="Sbq-PS-Xb8">
             <objects>
-                <viewController id="3UZ-Uw-wQ6" sceneMemberID="viewController">
+                <viewController id="3UZ-Uw-wQ6" customClass="BlueViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ipg-ax-08l">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmk-Ov-evx">
+                                <rect key="frame" x="133" y="433" width="149" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back To Yellow Scene">
+                                    <color key="titleColor" systemColor="systemYellowColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButton:" destination="3UZ-Uw-wQ6" eventType="touchUpInside" id="4fo-Af-w71"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="uZs-Gt-8GR"/>
                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="jsn-7c-25C"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Bb-Do-KJg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2832" y="-216"/>
+            <point key="canvasLocation" x="2830.434782608696" y="-216.29464285714286"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="CrW-97-tMe">
@@ -126,7 +139,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yb4-ei-yeq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="480" y="88"/>
+            <point key="canvasLocation" x="417" y="74"/>
         </scene>
     </scenes>
     <resources>
