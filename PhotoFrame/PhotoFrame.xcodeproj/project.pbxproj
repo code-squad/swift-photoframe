@@ -15,6 +15,7 @@
 		229E0BEE25D1360200367A16 /* PhotoFrameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229E0BED25D1360200367A16 /* PhotoFrameTests.swift */; };
 		229E0BF925D1360200367A16 /* PhotoFrameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229E0BF825D1360200367A16 /* PhotoFrameUITests.swift */; };
 		229E0C0D25D1362C00367A16 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229E0C0C25D1362C00367A16 /* ViewController.swift */; };
+		22F6570925D1666700CA1D13 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F6570825D1666700CA1D13 /* FirstViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		229E0BF825D1360200367A16 /* PhotoFrameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFrameUITests.swift; sourceTree = "<group>"; };
 		229E0BFA25D1360200367A16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		229E0C0C25D1362C00367A16 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		22F6570825D1666700CA1D13 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				229E0BD625D135FF00367A16 /* AppDelegate.swift */,
 				229E0BD825D135FF00367A16 /* SceneDelegate.swift */,
 				229E0BDC25D135FF00367A16 /* Main.storyboard */,
+				22F6570825D1666700CA1D13 /* FirstViewController.swift */,
 				229E0C0C25D1362C00367A16 /* ViewController.swift */,
 				229E0BDF25D1360200367A16 /* Assets.xcassets */,
 				229E0BE125D1360200367A16 /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 				229E0C0D25D1362C00367A16 /* ViewController.swift in Sources */,
 				229E0BD725D135FF00367A16 /* AppDelegate.swift in Sources */,
 				229E0BD925D135FF00367A16 /* SceneDelegate.swift in Sources */,
+				22F6570925D1666700CA1D13 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

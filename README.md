@@ -1,21 +1,37 @@
-# Tabbed 앱
+
+
+# photoframe-step2 - IBOutlet
 
 
 
-- storyboard에서 TabBarController 생성 후 기존 ViewController는 삭제
-- 새로운 UITabBarController를 생성 후 show the identity inspector - class에 해당 ViewController 지정
-- initial View Controller 설정
-- `viewDidLoad()`에 `print(#file, #line, #function, #column)` 추가 후 실행
-  - file: 해당 swift파일 경로
-  - line: 해당 메소드가 실행 된 line
-  - function: 해당 메소드가 실행 된 함수 이름
-  - column: 시작하는 열 번호
+- 첫번째 view에 연결할 `FirstViewController` 생성
+- `photoLabel`, `firstDescription` IBOutlet 연결
+- 두 label text, textColor, backgroundColor, alpha, fontsize 변경
 
 
 
-완성날짜시간 : 02-08 18:05
+완료시간 02/08 10:55
 
-<img width="1468" alt="스크린샷 2021-02-08 오후 5 48 14" src="https://user-images.githubusercontent.com/62657991/107196539-1818f880-6a36-11eb-8280-c8782b78a3c6.png">
 
-<img width="1512" alt="스크린샷 2021-02-08 오후 5 48 18" src="https://user-images.githubusercontent.com/62657991/107196554-1e0ed980-6a36-11eb-97a2-9bb380eb9ea1.png">
-![스크린샷 2021-02-08 오후 5 48 19](https://user-images.githubusercontent.com/62657991/107196557-1ea77000-6a36-11eb-8fc4-beb707a0b17e.png)
+
+#### UILabel의 속성들
+
+- `numberOfLines` : Label 안의 텍스트가 몇개의 줄로 표현이 될지(그 줄을 넘어가면 좌 혹은 우로 짤림)
+
+- ```swift
+  // 부분 폰트 사이즈 바꾸는 법
+  let fontSize = UIFont.boldSystemFont(ofSize: 30)
+  let attributedStr = NSMutableAttributedString(string: self.firstDescription.text ?? "")
+  attributedStr.addAttribute(.font, value: fontSize, range: (firstDescription.text! as
+  NSString).range(of: "SOON"))
+  self.firstDescription.attributedText = attributedStr
+  
+  // 부분 글자 색 바꾸는 방법
+  let attributedString = NSMutableAttributedString(string: firstDescription.text ?? "")
+  attributedString.addAttribute(.foregroundColor, value: UIColor.blue, range: (firstDescription.text! as NSString).range(of:"SOON"))
+  firstDescription.attributedText = attributedString
+  ```
+
+![스크린샷 2021-02-08 오후 9 46 56](https://user-images.githubusercontent.com/62657991/107221679-49ee8700-6a57-11eb-8321-c9ee75c8a73d.png)
+![스크린샷 2021-02-08 오후 9 46 58](https://user-images.githubusercontent.com/62657991/107221695-4eb33b00-6a57-11eb-9431-29efa4e01e50.png)
+![스크린샷 2021-02-08 오후 9 47 09](https://user-images.githubusercontent.com/62657991/107221699-4eb33b00-6a57-11eb-9f6c-57f653cd15af.png)
