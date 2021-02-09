@@ -30,6 +30,13 @@ class ViewController: UITabBarController {
         print(#file, #line, #function, #column)
     }
     
+    override var shouldAutorotate: Bool {
+        return true
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return [.portrait, .portraitUpsideDown]
+    }
 
     /*
     // MARK: - Navigation

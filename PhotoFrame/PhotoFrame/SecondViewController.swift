@@ -9,9 +9,11 @@ import UIKit
 
 class SecondViewController: UIViewController {
     
+    @IBOutlet weak var nextButton: UIButton!
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print(#file, #line, #function, #column)
+        super.loadView()
     }
 
     override func viewDidLoad() {
@@ -31,6 +33,9 @@ class SecondViewController: UIViewController {
     }
     
     @IBAction func clickNextButton(_ sender: UIButton) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "third") as? ThirdViewController
+        self.present(newViewController!, animated: true, completion: nil)
     }
     
     @IBAction func closeButtonTouched(_ sender: UIButton) {

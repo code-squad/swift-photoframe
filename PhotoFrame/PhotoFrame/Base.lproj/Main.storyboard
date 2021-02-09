@@ -92,7 +92,6 @@
                                 <state key="normal" title="다음"/>
                                 <connections>
                                     <action selector="clickNextButton:" destination="pXz-xf-eCx" eventType="touchUpInside" id="LpL-mL-BjZ"/>
-                                    <segue destination="TYv-RU-Cm5" kind="show" identifier="next" id="mKo-JR-QkY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atF-qR-ios">
@@ -119,6 +118,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="TUC-QV-9be"/>
+                    <connections>
+                        <outlet property="nextButton" destination="mMG-yd-vMB" id="2nG-vY-C6Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hYJ-Gj-pTB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -147,11 +149,11 @@
             <objects>
                 <viewController storyboardIdentifier="third" id="TYv-RU-Cm5" customClass="ThirdViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NvL-jv-bJo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="데이터" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LcA-X4-eh3">
-                                <rect key="frame" x="137" y="164" width="140" height="97"/>
+                                <rect key="frame" x="137" y="208" width="140" height="97"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="97" id="b0p-0e-HTu"/>
                                 </constraints>
@@ -160,7 +162,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w9o-U4-vs1">
-                                <rect key="frame" x="75" y="684" width="274" height="90"/>
+                                <rect key="frame" x="75" y="738" width="274" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="IdR-4Y-ePn"/>
                                 </constraints>
