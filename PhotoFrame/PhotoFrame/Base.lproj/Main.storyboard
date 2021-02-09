@@ -85,6 +85,14 @@
                                     <segue destination="3UZ-Uw-wQ6" kind="presentation" modalPresentationStyle="fullScreen" id="VcH-ph-yNf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqa-xY-vD0">
+                                <rect key="frame" x="192" y="439" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="닫기"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="Dzv-od-Coq" eventType="touchUpInside" id="Ce6-jb-Gn3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bRK-rC-WPA"/>
                         <color key="backgroundColor" red="1" green="0.99490725006114422" blue="0.53895377191076121" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -104,13 +112,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmk-Ov-evx">
-                                <rect key="frame" x="133" y="433" width="149" height="30"/>
+                                <rect key="frame" x="193" y="433" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back To Yellow Scene">
+                                <state key="normal" title="닫기">
                                     <color key="titleColor" systemColor="systemYellowColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="backButton:" destination="3UZ-Uw-wQ6" eventType="touchUpInside" id="4fo-Af-w71"/>
+                                    <action selector="closeButtonTouched:" destination="3UZ-Uw-wQ6" eventType="touchUpInside" id="4fo-Af-w71"/>
                                 </connections>
                             </button>
                         </subviews>

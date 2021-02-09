@@ -13,7 +13,7 @@ class BlueViewController: UIViewController {
         super.viewDidLoad()
         
     }
-    @IBAction func backButton(_ sender: Any) {
+    @IBAction func closeButtonTouched(_ sender: Any) {
         self.dismiss(animated: true)
     }
     
