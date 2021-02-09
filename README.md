@@ -1,65 +1,45 @@
 
 
-# Photoframe-step5 - ViewController Programming
-
-- `viewWillAppear`, `viewDidLoad`, `viewWilldisappear`, `viewDidDisappear` 각 ViewComtroller에 넣고 언제 동작하는지 확인
-- `closeButtonTouched` IBAction 연결 후 `dismiss` 동작 확인
+# Photoframe-step6 - Container ViewController
 
 
 
-#### UIViewController Lifecycle [[참고](https://zeddios.tistory.com/43)]
-
-
-
-![R1280x0](https://user-images.githubusercontent.com/62657991/107321000-27a34a80-6ae5-11eb-94ae-24cd61223102.jpeg)
+- navigationController를 Embed하고 닫기 버튼에 연결된 코드 수정
 
 
 
 
 
-- viewDidLoad(): 뷰의 컨트롤러가 메모리에 로드되고 난 후에 호출
+#### Container ViewController
 
-- viewWillAppear() : view가 나타나기 전에 호출
-  - viewDidLoad와 차이점은 두번째 뷰로 갔다가 첫번째 뷰로 가면 viewDidLoad는 호출이 안되고 viewWillAppear가 호출 된다
-  - 이는 stack 구조처럼 view가 push했다가 pop하면 이전 view는 이미 메모리에 있으므로 viewDidLoad()는 호출이 안된다
+Container ViewController는 viewController와 viewController 사이의 연결관계를 보다 효율적인 수단으로 제공하기 위해 존재합니다. 
 
-- viewDidAppear(): 뷰가 나타난 후 호출
-- viewWillDisappear(): 뷰가 사라지기 직전 호출
-- viewDidDisappear(): 뷰가 사라지고 호출
+Container ViewController에 해당하는 대표적인 viewController는 
 
+- NavigationController
+- TabBarController
+- SplitViewController
+- PageViewController
 
-
-
-
-#### 새로 배운 것들
-
-- `override var shouldAutorotate: Bool` : 개별 view에 대해 자동회전해야 하는지 여부
-
-- `override var supportedInterfaceOrientations: UIInterfaceOrientationMask` : `shouldAutorotate` 가 `true` 일때만 불리게 된다.
-
-  - ```swift
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return [.portrait, .portraitUpsideDown]
-    ```
-
-  - portrait: 세로 인터페이스 방향
-  - landscapeLeft: 가로 방향 
-  - landscapeRight: 가로 오른쪽 방향
-  - portraitUpsideDown: 거꾸로 된 세로 인터페이스 방향
-  - [참고](https://developer.apple.com/documentation/uikit/uiinterfaceorientationmask)
-
-- `preferredInterfaceOrientationForPresentation` : ViewController가 나타날 때 지원되는 방향 중 한가지 방향을 설정할 수 있다 해당 메소드는 FullScreen으로 보여질 때 호출이 되는 함수라 NavigationController나 TabbarController에서 ViewController를 표시할 때는 호출되지 않는다
+가 있습니다.
 
 
 
-#### viewcontroller next view programmatically
+#### Navigation Controller
 
-```swift
-@IBAction func clickNextButton(_ sender: UIButton) {
-    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-    let newViewController = storyBoard.instantiateViewController(withIdentifier: "third") as? ThirdViewController
-    self.present(newViewController!, animated: true, completion: nil)
-}
-```
+Navigation Controller는 hierarchical data managed를 표방합니다.
 
-~~발음이 어렵다 프로그래메티컬리~~
+또한 Navigation Controller는 Navigation Stack이라는 배열을 사용해 view들을 관리합니다
+
+각각의 view는 안으로 들어갈수록 겹겹이 쌓인 모양을 하고 있으며 모두 pop하고(뒤로가기) 마지막으로 남은 root view는 제거가 되지 않습니다.
+
+
+
+완료 시간 02/09 21:40
+
+
+
+
+
+![스크린샷 2021-02-09 오후 9 34 22](https://user-images.githubusercontent.com/62657991/107364366-b3859880-6b1e-11eb-8279-bf0d1e50c7d1.png)
+![스크린샷 2021-02-09 오후 9 34 55](https://user-images.githubusercontent.com/62657991/107364388-b84a4c80-6b1e-11eb-8b7f-6ce49492c69f.png)
