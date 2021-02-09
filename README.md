@@ -9,6 +9,16 @@ Mission1 - 포토프레임 앱
 <img src="images/IBOutlet.png" width="300">
 
 3. IBAction으로 인터페이스 빌더와 뷰 컨트롤러 연결 2021.02.09 12:12
-<img src="images/IBActionBefore.png" width="300"> <img src="images/IBActionAfter.png" width="300">
+<p float="left">
+<img src="images/IBActionBefore.png" width="300" />
+<img src="images/IBActionAfter.png" width="300" />
+</p>
 
+4. Segue로 Scene(View Controller) 연결 2021.02.09 14:41
+<p float="left">
+<img src="images/Segue1.png" width="200" />
+<img src="images/Segue2.png" width="200" />
+<img src="images/Segue3.png" width="200" />
+<img src="images/Segue4.png" width="200" />
+</p>
 
