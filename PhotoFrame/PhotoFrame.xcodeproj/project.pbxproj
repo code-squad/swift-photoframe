@@ -13,6 +13,8 @@
 		93A96E6C25D13F380080F136 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93A96E6A25D13F380080F136 /* Main.storyboard */; };
 		93A96E6E25D13F3B0080F136 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93A96E6D25D13F3B0080F136 /* Assets.xcassets */; };
 		93A96E7125D13F3B0080F136 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93A96E6F25D13F3B0080F136 /* LaunchScreen.storyboard */; };
+		93A96E7D25D2252B0080F136 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A96E7C25D2252B0080F136 /* YellowViewController.swift */; };
+		93A96E8025D225430080F136 /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A96E7F25D225430080F136 /* BlueViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		93A96E6D25D13F3B0080F136 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93A96E7025D13F3B0080F136 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93A96E7225D13F3B0080F136 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93A96E7C25D2252B0080F136 /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
+		93A96E7F25D225430080F136 /* BlueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				93A96E6D25D13F3B0080F136 /* Assets.xcassets */,
 				93A96E6F25D13F3B0080F136 /* LaunchScreen.storyboard */,
 				93A96E7225D13F3B0080F136 /* Info.plist */,
+				93A96E7C25D2252B0080F136 /* YellowViewController.swift */,
+				93A96E7F25D225430080F136 /* BlueViewController.swift */,
 			);
 			path = PhotoFrame;
 			sourceTree = "<group>";
@@ -137,8 +143,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93A96E7D25D2252B0080F136 /* YellowViewController.swift in Sources */,
 				93A96E6925D13F380080F136 /* FirstViewController.swift in Sources */,
 				93A96E6525D13F380080F136 /* AppDelegate.swift in Sources */,
+				93A96E8025D225430080F136 /* BlueViewController.swift in Sources */,
 				93A96E6725D13F380080F136 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
