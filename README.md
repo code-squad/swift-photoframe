@@ -4,7 +4,7 @@
 
 "기존에 있었던 View Controller를 삭제하고 Tab Bar Controller를 추가한 다음 "Attributes inspector"에서 "is Initial View Controller"에 체크한다."
 
-![스크린샷 2021-02-08 오후 4 51 44](https://user-images.githubusercontent.com/61342175/107309446-cae86580-6acd-11eb-98c0-48f58fe2efa4.png)
+![스크린샷 2021-02-08 오후 4 51 44](https://user-images.githubusercontent.com/61342175/107309446-cae86580-6acd-11eb-98c0-48f58fe2efa4.png)
  
 UITapBar와 UITapBarController의 차이?
 
@@ -55,7 +55,7 @@ https:/docs.microsoft.com/ko-kr/dotnet/api/uikit.uilabel.font?view=xamarin-ios-s
 
 "Button을 ViewController에 추가하고 Attributes에서 Text를 바꾼다. ViewController 파일에 Control + Drag로 IBAction 설정 후 추가한다."
 
-![스크린샷 2021-02-08 오후 8 07 41](https://user-images.githubusercontent.com/61342175/107309456-cfad1980-6acd-11eb-85de-92140aeb88c8.png)
+![스크린샷 2021-02-08 오후 8 07 41](https://user-images.githubusercontent.com/61342175/107309456-cfad1980-6acd-11eb-85de-92140aeb88c8.png)
 
 Link
 https://o-o-wl.tistory.com/45
@@ -76,12 +76,11 @@ touchDown, touchDownRepeat, touchDragInside, touchDragOutside, touchDragEnter, t
 
  "특정 ViewController에 버튼을 추가하고 새로운 ViewController 생성 후 버튼에 Control + Drag로 Segue를 설정한다. 버튼 클릭 시 새롭게 생성된 ViewController로 이동한다."
 
- ![스크린샷 2021-02-08 오후 8 46 39](https://user-images.githubusercontent.com/61342175/107309459-d176dd00-6acd-11eb-88f5-4c5627891660.png)
+ ![스크린샷 2021-02-08 오후 8 46 39](https://user-images.githubusercontent.com/61342175/107309459-d176dd00-6acd-11eb-88f5-4c5627891660.png)
 
  Segue 액션 중 모달 등 다른 액션 설정으로 실행해봤다. Attributes inspector에서 변경할 수 있으며, 추가적으로 Animates를 Uncheck하고 실행해봤다. Animates를 Uncheck하면 새로운 ViewController가 움직이면서 나타나지 않고 바로 나타난다.
 
 
-## 5단계
 
 Link
 https://zeddios.tistory.com/43
