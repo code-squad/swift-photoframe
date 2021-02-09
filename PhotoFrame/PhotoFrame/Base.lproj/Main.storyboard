@@ -138,6 +138,10 @@
                     <connections>
                         <outlet property="closeBtn" destination="jR3-Vw-VY3" id="O6i-zF-Xk5"/>
                         <outlet property="closeBtnBottom" destination="HPB-N8-EGH" id="ZGx-4d-gtl"/>
+                        <outlet property="closeBtnCenterX" destination="Ls5-SJ-qjt" id="LEv-Wf-iGL"/>
+                        <outlet property="nextBtn" destination="NAi-tD-FSz" id="pkb-tb-cjE"/>
+                        <outlet property="nextBtnCenterX" destination="hKD-2s-7qQ" id="qO7-GW-Zwu"/>
+                        <outlet property="nextBtnCenterY" destination="N2Y-Px-mb2" id="9UB-pv-D4Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fja-ya-a0b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
