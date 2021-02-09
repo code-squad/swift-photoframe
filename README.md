@@ -18,3 +18,12 @@
 - 실행한 화면을 캡처해서 readme.md 파일에 포함한다.
 
 ![photoframe-step2](https://user-images.githubusercontent.com/27729150/107334767-790a0480-6afa-11eb-8d65-14c573750233.png)
+
+# IBAction (요구 사항)
+
+- 사진액자 - IBOutlet 요구사항을 구현한 상태로 시작한다.
+- First Scene에 버튼(UIButton)을 추가하고 IBAction으로 연결한다.
+- 연결한 액션에 대한 메서드를 구현한다.
+- 실행하고 버튼을 터치하기 이전/이후 화면을 캡처해서 readme.md 파일에 포함한다.
+
+<img width="1545" alt="스크린샷 2021-02-09 오후 9 02 38" src="https://user-images.githubusercontent.com/27729150/107362697-702a2a80-6b1c-11eb-9dd0-ad6fc0142e69.png">
