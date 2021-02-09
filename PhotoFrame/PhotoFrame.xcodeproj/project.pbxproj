@@ -16,6 +16,7 @@
 		93A96E7D25D2252B0080F136 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A96E7C25D2252B0080F136 /* YellowViewController.swift */; };
 		93A96E8025D225430080F136 /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A96E7F25D225430080F136 /* BlueViewController.swift */; };
 		93A96E8A25D25D9E0080F136 /* PhotoAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A96E8925D25D9E0080F136 /* PhotoAlbumViewController.swift */; };
+		93A96E9025D25EAA0080F136 /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A96E8F25D25EAA0080F136 /* StateController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		93A96E7C25D2252B0080F136 /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
 		93A96E7F25D225430080F136 /* BlueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueViewController.swift; sourceTree = "<group>"; };
 		93A96E8925D25D9E0080F136 /* PhotoAlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAlbumViewController.swift; sourceTree = "<group>"; };
+		93A96E8F25D25EAA0080F136 /* StateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				93A96E7C25D2252B0080F136 /* YellowViewController.swift */,
 				93A96E7F25D225430080F136 /* BlueViewController.swift */,
 				93A96E8925D25D9E0080F136 /* PhotoAlbumViewController.swift */,
+				93A96E8F25D25EAA0080F136 /* StateController.swift */,
 			);
 			path = PhotoFrame;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 				93A96E6925D13F380080F136 /* FirstViewController.swift in Sources */,
 				93A96E6525D13F380080F136 /* AppDelegate.swift in Sources */,
 				93A96E8025D225430080F136 /* BlueViewController.swift in Sources */,
+				93A96E9025D25EAA0080F136 /* StateController.swift in Sources */,
 				93A96E6725D13F380080F136 /* SceneDelegate.swift in Sources */,
 				93A96E8A25D25D9E0080F136 /* PhotoAlbumViewController.swift in Sources */,
 			);

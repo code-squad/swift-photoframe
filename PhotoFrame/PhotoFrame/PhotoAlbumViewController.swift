@@ -16,5 +16,6 @@ class PhotoAlbumViewController: UIViewController {
     }
     
     @IBAction func nextImageButtonTouched(_ sender: Any) {
+        photoImageView.image = StateController.loadRandomPhoto()
     }
 }
