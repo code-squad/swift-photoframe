@@ -13,7 +13,7 @@
 
   
 
-  ![TabBarController](/Users/gimjigyeong/Desktop/Developer/masters/swift-photoframe/image/TabBarController.png)
+![initial](https://user-images.githubusercontent.com/73650994/107309267-7644ea80-6acd-11eb-88ce-247b456e9971.png)
 
 
 
@@ -21,5 +21,5 @@
 
 - 실행 후 콘솔 영역에 출력된 것을 확인한다
 
-![console](/Users/gimjigyeong/Desktop/Developer/masters/swift-photoframe/image/console.png)
+![initial](https://user-images.githubusercontent.com/73650994/107309393-b1dfb480-6acd-11eb-8ecc-c91d4033e54a.png)
 
