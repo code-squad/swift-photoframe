@@ -26,9 +26,16 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var photoLabel: UILabel!
     @IBOutlet weak var photoDescription: UILabel!
     
-    @IBAction func nextButtonTouched(_ sender: Any) {
+    @IBAction func nextButtonTouchedUpInside(_ sender: Any) {
+        self.photoLabel.textColor = .black
+        self.photoLabel.backgroundColor = .clear
+        self.photoLabel.alpha = 1
+    }
+    
+    @IBAction func nextButtonTouchedDown(_ sender: Any) {
         self.photoLabel.textColor = .purple
         self.photoLabel.backgroundColor = .lightGray
         self.photoLabel.alpha = 0.5
     }
 }
+
