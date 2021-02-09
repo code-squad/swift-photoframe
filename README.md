@@ -44,7 +44,7 @@
 
 ----
 
-## STEP3. IBAction
+## STEP 3. IBAction
 
 - UIButton 추가 및 IBAction 연결
 - propertyChangeButton 메소드에 레이블 속성 변화 기능 추가
