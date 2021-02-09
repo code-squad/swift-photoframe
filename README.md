@@ -1,66 +1,65 @@
 
 
-# Photoframe-step4 - Scene and Segue
+# Photoframe-step5 - ViewController Programming
 
-- 추가되어있는 버튼에 ViewController(Orange)를 추가하고 segue 연결
-- 이동되는 첫번째 뷰에서 또 다시 버튼 설정 후 또 새로운 ViewController(purple) segue 연결
-
-
-
-### segue의 종류
-
-- show
-  - 가장 일반적인 세그웨이 이다. 새 화면으로 이동한다. Stack 구조로서 새 화면이 원래 화면 위를 덮는 구조이다.
-
-- Show Detail
-  - SplitView 구조에서 원래 화면을 Master, 새 화면을 Detail로 표시한다.
-  - 아이폰에서는 똑같아 보이지만 아이패드로 보면 화면이 둘로 분할되서 보이게 된다.
-
-- Present Modally
-  - 새 화면이 모달처럼 원래 화면 위 전체를 뒤덮는다. 원래 화면은 새 화면 뒤에 그대로 존재하게 된다.
-
-- Popover Presentation
-  - 아이패드에서 팝업창을 띄운다. 아이폰 앱한테는 Show Detail과 마찬가지로 큰 의미가 없다.
-
-[참고](https://roeldowney.tistory.com/72)
+- `viewWillAppear`, `viewDidLoad`, `viewWilldisappear`, `viewDidDisappear` 각 ViewComtroller에 넣고 언제 동작하는지 확인
+- `closeButtonTouched` IBAction 연결 후 `dismiss` 동작 확인
 
 
 
-### seque로 데이터 보내기
+#### UIViewController Lifecycle [[참고](https://zeddios.tistory.com/43)]
+
+
+
+![R1280x0](https://user-images.githubusercontent.com/62657991/107321000-27a34a80-6ae5-11eb-94ae-24cd61223102.jpeg)
+
+
+
+
+
+- viewDidLoad(): 뷰의 컨트롤러가 메모리에 로드되고 난 후에 호출
+
+- viewWillAppear() : view가 나타나기 전에 호출
+  - viewDidLoad와 차이점은 두번째 뷰로 갔다가 첫번째 뷰로 가면 viewDidLoad는 호출이 안되고 viewWillAppear가 호출 된다
+  - 이는 stack 구조처럼 view가 push했다가 pop하면 이전 view는 이미 메모리에 있으므로 viewDidLoad()는 호출이 안된다
+
+- viewDidAppear(): 뷰가 나타난 후 호출
+- viewWillDisappear(): 뷰가 사라지기 직전 호출
+- viewDidDisappear(): 뷰가 사라지고 호출
+
+
+
+
+
+#### 새로 배운 것들
+
+- `override var shouldAutorotate: Bool` : 개별 view에 대해 자동회전해야 하는지 여부
+
+- `override var supportedInterfaceOrientations: UIInterfaceOrientationMask` : `shouldAutorotate` 가 `true` 일때만 불리게 된다.
+
+  - ```swift
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return [.portrait, .portraitUpsideDown]
+    ```
+
+  - portrait: 세로 인터페이스 방향
+  - landscapeLeft: 가로 방향 
+  - landscapeRight: 가로 오른쪽 방향
+  - portraitUpsideDown: 거꾸로 된 세로 인터페이스 방향
+  - [참고](https://developer.apple.com/documentation/uikit/uiinterfaceorientationmask)
+
+- `preferredInterfaceOrientationForPresentation` : ViewController가 나타날 때 지원되는 방향 중 한가지 방향을 설정할 수 있다 해당 메소드는 FullScreen으로 보여질 때 호출이 되는 함수라 NavigationController나 TabbarController에서 ViewController를 표시할 때는 호출되지 않는다
+
+
+
+#### viewcontroller next view programmatically
 
 ```swift
-// 주는쪽
-override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "next" {
-            if let vc = segue.destination as? ThirdViewController {
-                vc.data = "Hello!"
-            }
-        }
-    }
+@IBAction func clickNextButton(_ sender: UIButton) {
+    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+    let newViewController = storyBoard.instantiateViewController(withIdentifier: "third") as? ThirdViewController
+    self.present(newViewController!, animated: true, completion: nil)
 }
-
-
 ```
 
-```swift
-// 받는 쪽
-class ThirdViewController: UIViewController {
-    var data: String? // init
-    @IBOutlet weak var dataLabel: UILabel!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        dataLabel.text = data
-    }
-}
-
-```
-
-
-
-완료시간 02/09 12:55
-
-
-
-![스크린샷 2021-02-09 오후 12 53 00](https://user-images.githubusercontent.com/62657991/107313421-d475cb80-6ad5-11eb-8ac0-c84e82c052fa.png)
-![스크린샷 2021-02-09 오후 12 53 10](https://user-images.githubusercontent.com/62657991/107313428-d6d82580-6ad5-11eb-8b04-93693e85a16d.png)
-
+~~발음이 어렵다 프로그래메티컬리~~

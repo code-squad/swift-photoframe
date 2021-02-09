@@ -8,14 +8,31 @@
 import UIKit
 
 class SecondViewController: UIViewController {
+    @IBOutlet weak var nextButton: UIButton!
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print(#file, #line, #function, #column)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        print(#file, #line, #function, #column)
     }
     
     @IBAction func clickNextButton(_ sender: UIButton) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "third") as? ThirdViewController
+        self.present(newViewController!, animated: true, completion: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -24,6 +41,9 @@ class SecondViewController: UIViewController {
                 vc.data = "Hello!"
             }
         }
+    }
+    @IBAction func closeButtonTouched(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     /*
