@@ -28,9 +28,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KoH-YR-O1S">
-                                <rect key="frame" x="192" y="338" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KoH-YR-O1S">
+                                <rect key="frame" x="192" y="336.5" width="30" height="30"/>
                                 <state key="normal" title="다음"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TzK-bY-Yfb"/>
@@ -41,6 +40,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="KoH-YR-O1S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7q6-ic-FH8"/>
+                            <constraint firstItem="rxm-b2-avS" firstAttribute="top" secondItem="KoH-YR-O1S" secondAttribute="bottom" constant="60" id="CeB-1q-4Nt"/>
                             <constraint firstItem="hUM-Ti-09s" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Okw-mR-CUW"/>
                             <constraint firstItem="rxm-b2-avS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fi6-wg-ERP"/>
                             <constraint firstItem="rxm-b2-avS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hNi-JR-EcB"/>
@@ -57,28 +58,49 @@
             </objects>
             <point key="canvasLocation" x="939.13043478260875" y="93.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Yellow View Controller-->
         <scene sceneID="cQx-ut-ShI">
             <objects>
-                <viewController id="Nki-Ot-inv" sceneMemberID="viewController">
+                <viewController id="Nki-Ot-inv" customClass="YellowViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KFN-qh-pkD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajk-uM-NvU">
-                                <rect key="frame" x="185" y="400" width="44" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="다음"/>
-                                <connections>
-                                    <segue destination="6oz-9h-Hma" kind="show" id="NYu-NL-3BV"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="250" translatesAutoresizingMaskIntoConstraints="NO" id="JG2-Gv-Foi">
+                                <rect key="frame" x="20" y="20" width="374" height="42"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPC-kf-PYD">
+                                        <rect key="frame" x="0.0" y="0.0" width="62" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Close"/>
+                                        <connections>
+                                            <action selector="closeButtonTouched:" destination="Nki-Ot-inv" eventType="touchUpInside" id="Azd-RM-jhs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajk-uM-NvU">
+                                        <rect key="frame" x="312" y="0.0" width="62" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Next"/>
+                                        <connections>
+                                            <action selector="nextButtonTouched:" destination="Nki-Ot-inv" eventType="touchUpInside" id="6pY-6D-jTW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yellow View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ees-jf-XI7">
+                                <rect key="frame" x="116" y="399.5" width="182" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LOM-uj-TH3"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
-                            <constraint firstItem="ajk-uM-NvU" firstAttribute="centerX" secondItem="KFN-qh-pkD" secondAttribute="centerX" id="YVu-HM-ckR"/>
-                            <constraint firstItem="ajk-uM-NvU" firstAttribute="centerY" secondItem="KFN-qh-pkD" secondAttribute="centerY" id="xkq-iI-9Sq"/>
+                            <constraint firstItem="ees-jf-XI7" firstAttribute="centerY" secondItem="KFN-qh-pkD" secondAttribute="centerY" id="Tfn-HD-jmL"/>
+                            <constraint firstItem="ees-jf-XI7" firstAttribute="centerX" secondItem="KFN-qh-pkD" secondAttribute="centerX" id="haa-4D-r4O"/>
+                            <constraint firstItem="JG2-Gv-Foi" firstAttribute="top" secondItem="LOM-uj-TH3" secondAttribute="top" constant="20" id="sCL-59-iBH"/>
+                            <constraint firstItem="JG2-Gv-Foi" firstAttribute="centerX" secondItem="KFN-qh-pkD" secondAttribute="centerX" id="wQn-Eh-Iyv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0F2-ke-Zs1"/>
@@ -90,12 +112,24 @@
         <!--View Controller-->
         <scene sceneID="nSB-kh-UZ8">
             <objects>
-                <viewController id="6oz-9h-Hma" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="blueVC" id="6oz-9h-Hma" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ot4-14-c10">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGV-tl-xaI">
+                                <rect key="frame" x="131.5" y="426.5" width="151.5" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="l6S-6y-cyQ"/>
                         <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <constraints>
+                            <constraint firstItem="rGV-tl-xaI" firstAttribute="centerX" secondItem="Ot4-14-c10" secondAttribute="centerX" id="ezJ-cu-GYX"/>
+                            <constraint firstItem="rGV-tl-xaI" firstAttribute="centerY" secondItem="Ot4-14-c10" secondAttribute="centerY" id="tb1-wl-Ldg"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wRf-KG-fob"/>
                 </viewController>
