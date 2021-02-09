@@ -90,6 +90,6 @@ extension YellowViewController {
         constraint.constant = -150
     }
     func zeroAlphaView(target : UIView) {
-        view.alpha = 0
+        target.alpha = 0 
     }
 }

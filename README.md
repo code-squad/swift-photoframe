@@ -65,3 +65,20 @@ UIButton 추가 후 IBAction 으로 연결
 
 <img width="1706" alt="스크린샷 2021-02-09 오후 2 16 40" src="https://user-images.githubusercontent.com/33626693/107319182-9ed6df80-6ae1-11eb-9ce6-31bb250a46d4.png">
 ![ezgif com-video-to-gif-2](https://user-images.githubusercontent.com/33626693/107319201-a7c7b100-6ae1-11eb-953c-589f467c9a21.gif)
+
+## (20.02.09 14:41)
+
+## Container ViewController
+
+#### 요구사항
+
+내비게이션 컨트롤러(Navigation Controller)를 Embed 시켜서 동작하도록 개선
+
+닫기 버튼 코드 수정 
+
+blueViewController 추가 및 닫기 버튼 코드 추가 
+
+뷰 컨트롤러 콜백함수 동작 확인
+
+<img width="1557" alt="스크린샷 2021-02-09 오후 3 48 39" src="https://user-images.githubusercontent.com/33626693/107326306-87eaba00-6aee-11eb-97cb-01213fd72f83.png">
+![ezgif com-video-to-gif-3](https://user-images.githubusercontent.com/33626693/107326310-8ae5aa80-6aee-11eb-8add-1dfbde862402.gif)
