@@ -52,6 +52,7 @@
                                 <state key="normal" title="다음"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="oPZ-Ao-bUs" eventType="touchUpInside" id="J5D-uU-Ir1"/>
+                                    <segue destination="xBJ-w0-85a" kind="show" id="WB7-cb-kag"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -73,11 +74,12 @@
             <objects>
                 <viewController id="xBJ-w0-85a" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ID2-t8-5rE">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Yjq-8N-EgD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="oI6-gc-dTd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iVm-l6-hqe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
