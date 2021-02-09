@@ -23,7 +23,7 @@
                                     <constraint firstAttribute="height" constant="240" id="aed-ZV-aFz"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo Album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CcO-b2-Cy3">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo Album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CcO-b2-Cy3">
                                 <rect key="frame" x="87.5" y="444" width="239" height="48"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <nil key="textColor"/>
@@ -51,6 +51,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="3cQ-z7-34D"/>
                     <connections>
+                        <outlet property="photoAlbumLabel" destination="CcO-b2-Cy3" id="7ev-Gs-h3V"/>
                         <outlet property="photoImageView" destination="Bge-s9-ZxP" id="Pzn-SH-Dvr"/>
                     </connections>
                 </viewController>
