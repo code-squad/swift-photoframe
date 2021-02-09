@@ -40,11 +40,11 @@ class YellowViewController: UIViewController {
     @IBAction func closeButtonTouched(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    
+    // 화면전환
     @IBAction func wind(_ sender: Any) {
         self.performSegue(withIdentifier: "ManualWind", sender: self)
     }
-    
+    // unwind 화면닫기
     @IBAction func unWind(_ segue: UIStoryboardSegue) {
         
     }

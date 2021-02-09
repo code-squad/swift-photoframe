@@ -16,3 +16,21 @@ IBOutlet : 특정한 값에 접근하기 위한 변수
 
 ### 결과
 <img width="652" alt="스크린샷 2021-02-08 오후 10 55 57" src="https://user-images.githubusercontent.com/69951890/107229182-d2255a00-6a60-11eb-8df7-4d063674ebb9.png">
+
+## 1.4 1.5 
+
+### 결과
+<img width="1070" alt="스크린샷 2021-02-09 오후 4 18 08" src="https://user-images.githubusercontent.com/69951890/107328664-6a1f5400-6af2-11eb-9fa4-094dc83393f7.png">
+
+<pre>
+<code>
+// 화면전환
+@IBAction func wind(_ sender: Any) {
+    self.performSegue(withIdentifier: "ManualWind", sender: self)
+}
+// unwind 화면닫기
+@IBAction func unWind(_ segue: UIStoryboardSegue) {
+    
+}
+</code>
+</pre>
