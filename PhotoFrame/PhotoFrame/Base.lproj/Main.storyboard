@@ -69,10 +69,10 @@
             </objects>
             <point key="canvasLocation" x="1366.6666666666667" y="-215.625"/>
         </scene>
-        <!--View Controller-->
+        <!--Yellow View Controller-->
         <scene sceneID="xTZ-RW-yoX">
             <objects>
-                <viewController id="Dzv-od-Coq" sceneMemberID="viewController">
+                <viewController id="Dzv-od-Coq" customClass="YellowViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BLO-v4-owt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -87,7 +87,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bRK-rC-WPA"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <color key="backgroundColor" red="1" green="0.99490725006114422" blue="0.53895377191076121" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="7b4-Jq-riA"/>
                 </viewController>
