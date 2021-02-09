@@ -1,5 +1,7 @@
 # 사진 액자 앱
 
+<<<<<<< HEAD
+
 - 2021년 2월 8일 생성
 
 - 코드스쿼드 마스터즈 iOS 코스
@@ -25,6 +27,11 @@
 
 
 ![initial](https://user-images.githubusercontent.com/73650994/107309393-b1dfb480-6acd-11eb-8ecc-c91d4033e54a.png)
+
+=======
+삭제 후 다시 생성
+>>>>>>> 7329cd2ad4054f30e538a952d5c2d0efbc33aefa
+
 
 
 ---
