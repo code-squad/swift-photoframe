@@ -19,12 +19,11 @@ class ViewController: UIViewController {
         self.firstLabel.text = "Neo 사진 액자"
         self.firstDescription.text = "Neo 설명"
     }
-
+    
     @IBAction func nextButtonTouched(_ sender: UIButton) {
-    self.firstLabel.alpha = 1
-    self.firstLabel.font = .boldSystemFont(ofSize: 45)
-    self.firstLabel.backgroundColor = .yellow
-
+        self.firstLabel.alpha = 1
+        self.firstLabel.font = .boldSystemFont(ofSize: 45)
+        self.firstLabel.backgroundColor = .yellow
     }
 }
 
