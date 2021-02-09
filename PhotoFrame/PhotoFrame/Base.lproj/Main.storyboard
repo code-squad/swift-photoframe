@@ -70,13 +70,24 @@
             </objects>
             <point key="canvasLocation" x="771.01449275362324" y="-417.1875"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="gv2-Mx-3Oh">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="0NZ-RY-Sam" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="0NZ-RY-Sam" customClass="SecondViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xBY-dQ-ium">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VlM-5c-x2F">
+                                <rect key="frame" x="192" y="553" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="다음"/>
+                                <connections>
+                                    <action selector="nextButtonTouched:" destination="0NZ-RY-Sam" eventType="touchUpInside" id="bQl-Ln-B0h"/>
+                                    <segue destination="1e6-h0-dfE" kind="show" id="ChS-9F-kOf"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="pfC-Od-a9U"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                     </view>
@@ -84,7 +95,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Db-TI-wHD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1445" y="-417"/>
+            <point key="canvasLocation" x="1452" y="-417"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="4J0-ae-C7B">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="1e6-h0-dfE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CET-U9-NnW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="VlJ-od-iFh"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Zci-Fu-GDS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4OF-2X-ldJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2122" y="-417"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Hv3-HY-Rvp">
@@ -108,6 +135,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
