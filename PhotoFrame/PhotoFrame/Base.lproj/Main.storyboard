@@ -55,15 +55,6 @@
                                     <action selector="nextButtonTouchedUpInside:" destination="ST0-J0-hHk" eventType="touchUpInside" id="5Fu-ty-1bj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0bA-LT-Jbw">
-                                <rect key="frame" x="136" y="731" width="142" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="여기도 있어요!🙋‍♀️"/>
-                                <connections>
-                                    <action selector="nextButtonTouchedDown:" destination="ST0-J0-hHk" eventType="touchDown" id="gOW-yY-VTZ"/>
-                                    <action selector="nextButtonTouchedUpInside:" destination="ST0-J0-hHk" eventType="touchUpInside" id="Uok-cG-oHX"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bZf-TQ-P14"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
