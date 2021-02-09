@@ -15,23 +15,15 @@ class PhotoAlbumViewController: UIViewController {
         super.viewDidLoad()
     }
     
-
     @IBAction func nextImageButtonTouched(_ sender: Any) {
-        self.photoImageView.image = UIImage(named: imageSelect())
+        self.photoImageView.image = UIImage(named: randomImageSelect())
     }
 }
 
 extension PhotoAlbumViewController {
-
-    func radomNumberGenerator() -> Int {
-        return Int.random(in: 1...22)
-    }
     
-    func imageSelect() -> String {
-        let number = radomNumberGenerator()
-        if number < 10 {
-            return "0\(number).jpg"
-        }
-        return "\(number).jpg"
+    func randomImageSelect() -> String {
+        let number = Int.random(in: 1...22)
+        return number < 10 ? "0\(number).jpg" : "\(number).jpg"
     }
 }
