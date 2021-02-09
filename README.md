@@ -44,21 +44,19 @@ Keychaain Access에서 git과 관련된 항목 삭제, git credential 삭제, gi
 
 	If no -b option is given, the name of the new branch will be derived from the remote-tracking branch, by looking at the local part of the refspec configured for the corresponding remote, and then stripping the initial part up to the `"*"`. This would tell us to use hack as the local branch when branching off of origin/hack (or remotes/origin/hack, or even refs/remotes/origin/hack). If the given name has no slash, or the above guessing results in an empty name, the guessing is aborted. You can explicitly give a name with -b in such a case. [출처](https://git-scm.com/docs/git-checkout#Documentation/git-checkout.txt--t)
 
-* Literal Expression
+* Literal Expression [출처](https://docs.swift.org/swift-book/ReferenceManual/Expressions.html)
 
 	A literal expression consists of either an ordinary literal (such as a string or a number), an array or dictionary literal, a playground literal, or one of the following special literals:
 
-|Literal|Type|Value|Example|
-|---|---|---|---|
-|`#file`|`String`|The path to the file in which it appears.|`/Users/song/development/swift/masters/2021-iOS/swift-photoframe/PhotoFrame/PhotoFrame/ViewController.swift `|
-|`#fileID`|`String`|The name of the file and module in which it appears.|
-|`#filePath`|`String`|The path to the file in which it appears.|
-|`#line`|`Int`|The line number on which it appears.|`14`|
-|`#column`|`Int`|The column number in which it begins.|`40`|
-|`#function`|`String`|The name of the declaration in which it appears.|`viewDidLoad()`|
-|`#dsohandle`|`UnsafeRawPointer`|The dynamic shared object (DSO) handle in use where it appears.|
-
-[출처](https://docs.swift.org/swift-book/ReferenceManual/Expressions.html)
+	|Literal|Type|Value|Example|
+	|--|--|-----|---|
+	|`#file`|`String`|The path to the file in which it appears.|`/Users/song/development/swift/masters/2021-iOS/swift-photoframe/PhotoFrame/PhotoFrame/ViewController.swift `|
+	|`#fileID`|`String`|The name of the file and module in which it appears.|
+	|`#filePath`|`String`|The path to the file in which it appears.|
+	|`#line`|`Int`|The line number on which it appears.|`14`|
+	|`#column`|`Int`|The column number in which it begins.|`40`|
+	|`#function`|`String`|The name of the declaration in which it appears.|`viewDidLoad()`|
+	|`#dsohandle`|`UnsafeRawPointer`|The dynamic shared object (DSO) handle in use where it appears.|
 
 * UITabBarController
 
