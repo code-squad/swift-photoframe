@@ -19,7 +19,15 @@ class FirstViewController: UIViewController{
         self.firstLabel.text = "BMO의 사진액자"
         self.firstLabel.textAlignment = .center
         self.firstLabel.backgroundColor = .lightGray
- 
+        let attributedString = NSMutableAttributedString(string: self.firstLabel.text!, attributes: [
+            .font: UIFont.boldSystemFont(ofSize: 25),
+            .foregroundColor: UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.8)
+        ])
+        attributedString.addAttribute(.font, value: UIFont.boldSystemFont(ofSize: 35), range: (self.firstLabel.text! as NSString).range(of: "BMO"))
+        attributedString.addAttribute(.foregroundColor, value: UIColor.black, range: (self.firstLabel.text! as NSString).range(of: "BMO"))
+        self.firstLabel.attributedText = attributedString
+        
+
     }
     
 }
