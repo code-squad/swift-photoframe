@@ -53,3 +53,30 @@ TabBarController의 TabBar중 한번에 하나만 선택되는 Radio Mode 각각
 <img width="474" alt="스크린샷 2021-02-09 오후 5 34 25" src="https://user-images.githubusercontent.com/73586326/107337259-74931b00-6afd-11eb-90e2-bf2266fbe765.png">
 
 [UILabel 클래스 속성(Property)](https://developer.apple.com/documentation/uikit/uilabel)
+
+# 3단계 IBAction
+
+2021.02.09(화)
+1. Main.storyboard 에서 First Scene에 UIButton을 추가한다.
+
+2. 방금 추가한 버튼을 선택하고 우측 유틸리티 영역 상단 4번째 탭 - 속성(Attributes)에서 Title을 다음으로 변경한다.
+
+3. 버튼을 선택하고 Control + 드래그해서 ViewController 코드에 IBAction으로 연결한다.
+
+4. 다음과 팝업에서 Connection 항목에서 IBOutlet 대신 IBAction 으로 변경한다.
+
+5. 액션 이름을 nextButtonTouched 로 지정한다.
+
+6. ViewController 클래스에 추가된 nextButtonTouched() 메서드에 아래처럼 구현을 추가한다.
+
+<img width="1792" alt="스크린샷 2021-02-09 오후 8 38 10" src="https://user-images.githubusercontent.com/73586326/107360269-08261500-6b19-11eb-8233-c15c625e8f53.png">
+
+<img width="476" alt="스크린샷 2021-02-09 오후 8 37 56" src="https://user-images.githubusercontent.com/73586326/107360308-13794080-6b19-11eb-81a6-c1fbe1f56e6c.png">
+
+### IBAction Event
+<img width="781" alt="스크린샷 2021-02-09 오후 9 03 58" src="https://user-images.githubusercontent.com/73586326/107361367-a23a8d00-6b1a-11eb-9ca7-1f916f5f9999.png">
+
+
+[출처1](https://o-o-wl.tistory.com/45)
+[출처2](https://roeldowney.tistory.com/65)
+[UIControl.Event](https://developer.apple.com/documentation/uikit/uicontrol/event)
