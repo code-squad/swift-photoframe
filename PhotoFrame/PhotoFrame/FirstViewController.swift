@@ -24,5 +24,11 @@ class FirstViewController: UIViewController {
         self.photoDescription.alpha = 0.6
         self.photoDescription.font = UIFont.systemFont(ofSize: 20)
     }
+    
+    @IBAction func nextButtonTouched(_ sender: Any) {
+        self.photoLabel.textColor = UIColor.blue
+        self.photoLabel.backgroundColor = UIColor.yellow
+        self.photoLabel.alpha = 0.5
+    }
 }
 
