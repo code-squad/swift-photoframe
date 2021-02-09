@@ -22,6 +22,11 @@ class FirstViewController: UIViewController {
         print(#file, #line, #function, #column)
     }
 
-
+    @IBAction func nextButtonTouched(_ sender: Any) {
+        self.firstLabel.textColor = UIColor.blue
+        self.firstLabel.backgroundColor = UIColor.yellow
+        self.firstLabel.alpha = 0.5
+    }
+    
 }
 
