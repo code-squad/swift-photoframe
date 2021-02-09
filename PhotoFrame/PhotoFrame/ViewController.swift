@@ -16,5 +16,10 @@ class ViewController: UIViewController {
         self.photoLabel.text = "JEJE의 사진액자"
         self.firstDescription.text = "Are you ready to make?"
     }
+    @IBAction func nextButtonTouched(_ sender: UIButton) {
+            self.photoLabel.textColor = UIColor.blue
+            self.photoLabel.backgroundColor = UIColor.yellow
+            self.photoLabel.alpha = 0.5
+    }
 }
 
