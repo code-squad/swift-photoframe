@@ -38,7 +38,7 @@ Keychaain Access에서 git과 관련된 항목 삭제, git credential 삭제, gi
 ### TIL
 * `git checkout -b <new_branch>`
 
-Create a new branch named <new_branch> and start it at <start_point> [출처](https://git-scm.com/docs/git-checkout#Documentation/git-checkout.txt--Bltnewbranchgt)
+	Create a new branch named <new_branch> and start it at <start_point> [출처](https://git-scm.com/docs/git-checkout#Documentation/git-checkout.txt--Bltnewbranchgt)
 
 * `git checkout -t origin/<branch_name>`
 
@@ -49,6 +49,7 @@ Create a new branch named <new_branch> and start it at <start_point> [출처](ht
 	A literal expression consists of either an ordinary literal (such as a string or a number), an array or dictionary literal, a playground literal, or one of the following special literals:
 
 |Literal|Type|Value|Example|
+|---|---|---|---|
 |`#file`|`String`|The path to the file in which it appears.|`/Users/song/development/swift/masters/2021-iOS/swift-photoframe/PhotoFrame/PhotoFrame/ViewController.swift `|
 |`#fileID`|`String`|The name of the file and module in which it appears.|
 |`#filePath`|`String`|The path to the file in which it appears.|
