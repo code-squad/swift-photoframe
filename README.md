@@ -32,3 +32,17 @@
 
 
 #### 완성날짜 : 2021.02.09(화) 17:18
+
+
+---
+---
+
+# IBAction
+
+#### 요구사항
+- First Scene에 버튼(UIButton)을 추가하고 IBAction으로 연결한다.
+- 연결한 액션에 대한 메서드를 구현한다.
+
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/73683735/107347170-e45ad300-6b08-11eb-922f-3c9f8da2fc06.gif)
+
+#### 완성날짜 : 2021.02.09(화) 19:00
