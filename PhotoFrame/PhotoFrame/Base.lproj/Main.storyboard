@@ -117,15 +117,27 @@
                                     <segue destination="I10-vn-6OJ" kind="show" id="5Id-WM-bO1"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jR3-Vw-VY3">
+                                <rect key="frame" x="192" y="832" width="30" height="30"/>
+                                <state key="normal" title="닫기"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="qbe-9N-v5B" eventType="touchUpInside" id="q5a-Sv-fv0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="O6y-zt-qAH"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
+                            <constraint firstItem="O6y-zt-qAH" firstAttribute="bottom" secondItem="jR3-Vw-VY3" secondAttribute="bottom" id="HPB-N8-EGH"/>
+                            <constraint firstItem="jR3-Vw-VY3" firstAttribute="centerX" secondItem="aQ1-V2-6jG" secondAttribute="centerX" id="Ls5-SJ-qjt"/>
                             <constraint firstItem="NAi-tD-FSz" firstAttribute="centerY" secondItem="aQ1-V2-6jG" secondAttribute="centerY" id="N2Y-Px-mb2"/>
                             <constraint firstItem="NAi-tD-FSz" firstAttribute="centerX" secondItem="aQ1-V2-6jG" secondAttribute="centerX" id="hKD-2s-7qQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3Fr-a1-tbX"/>
+                    <connections>
+                        <outlet property="closeBtn" destination="jR3-Vw-VY3" id="O6i-zF-Xk5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fja-ya-a0b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
