@@ -47,7 +47,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Dm-nD-BaQ">
-                                <rect key="frame" x="192" y="555" width="30" height="30"/>
+                                <rect key="frame" x="192" y="620" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="다음"/>
                                 <connections>
@@ -73,9 +73,9 @@
         <!--Second View Controller-->
         <scene sceneID="gv2-Mx-3Oh">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="0NZ-RY-Sam" customClass="SecondViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0NZ-RY-Sam" customClass="SecondViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xBY-dQ-ium">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VlM-5c-x2F">
@@ -84,7 +84,7 @@
                                 <state key="normal" title="다음"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="0NZ-RY-Sam" eventType="touchUpInside" id="bQl-Ln-B0h"/>
-                                    <segue destination="1e6-h0-dfE" kind="show" id="ChS-9F-kOf"/>
+                                    <segue destination="1e6-h0-dfE" kind="showDetail" id="ChS-9F-kOf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -100,10 +100,20 @@
         <!--View Controller-->
         <scene sceneID="4J0-ae-C7B">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="1e6-h0-dfE" sceneMemberID="viewController">
+                <viewController id="1e6-h0-dfE" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CET-U9-NnW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzM-40-qSS">
+                                <rect key="frame" x="192" y="559" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="다음"/>
+                                <connections>
+                                    <segue destination="O4f-ml-jDJ" kind="presentation" modalPresentationStyle="fullScreen" id="gwj-9C-u60"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="VlJ-od-iFh"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                     </view>
@@ -112,6 +122,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4OF-2X-ldJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2122" y="-417"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Msc-cj-uZ4">
+            <objects>
+                <viewController id="O4f-ml-jDJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PHf-uk-aaX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Q87-0r-KRc"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xs5-zZ-sxs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VpO-bC-3E0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2786" y="-417"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Hv3-HY-Rvp">
@@ -135,6 +161,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
