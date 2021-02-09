@@ -63,3 +63,18 @@
 
 ![initial](https://user-images.githubusercontent.com/73650994/107332724-dfd9ee80-6af7-11eb-8255-6f6bebdacbb0.png)
 
+
+
+----
+
+## STEP 4. Scene과 Segue
+
+-  ViewController 를 추가하고 연결해서 새로운 Scene을 추가한다
+- Scene 연결 작업을 하며 Segue 실습해본다
+
+![initial](https://user-images.githubusercontent.com/73650994/107338107-85905c00-6afe-11eb-8520-f74d1c6db811.png)
+
+![initial](https://user-images.githubusercontent.com/73650994/107337719-10bd2200-6afe-11eb-82d8-94288015b018.png)
+
+![initial](https://user-images.githubusercontent.com/73650994/107337737-161a6c80-6afe-11eb-886c-0910cf71419e.png)
+
