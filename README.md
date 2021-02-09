@@ -100,3 +100,6 @@ ex) git push --set-upstream origin photoframe-step1
 step-1 Tabbar
 <img width="565" alt="스크린샷 2021-02-09 오후 1 17 29" src="https://user-images.githubusercontent.com/69688078/107315787-b6f73080-6ada-11eb-80c1-c3af33c0ba3a.png">
 
+step-2 IBOutlet
+
+<img width="309" alt="스크린샷 2021-02-09 오후 1 51 17" src="https://user-images.githubusercontent.com/69688078/107317456-09861c00-6ade-11eb-83b0-1f3b3f8183af.png">
