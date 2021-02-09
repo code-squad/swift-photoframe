@@ -22,23 +22,48 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jK7-wD-kIb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="504" y="147"/>
+            <point key="canvasLocation" x="364" y="786"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="rQ2-Ux-8fu">
             <objects>
-                <viewController id="nJz-lB-oaW" sceneMemberID="viewController">
+                <viewController id="nJz-lB-oaW" customClass="Tab1ViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BkC-U0-StS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Emq-qi-NMc">
+                                <rect key="frame" x="136" y="427.5" width="142" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by FirstViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jaq-Cb-boY">
+                                <rect key="frame" x="104" y="503.5" width="206" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="wdc-lf-oxl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jaq-Cb-boY" firstAttribute="centerX" secondItem="BkC-U0-StS" secondAttribute="centerX" id="5VF-Xh-6bw"/>
+                            <constraint firstItem="Emq-qi-NMc" firstAttribute="centerY" secondItem="BkC-U0-StS" secondAttribute="centerY" id="6xz-Uk-leA"/>
+                            <constraint firstItem="Jaq-Cb-boY" firstAttribute="top" secondItem="Emq-qi-NMc" secondAttribute="bottom" constant="35" id="BVh-Ch-Kdx"/>
+                            <constraint firstItem="Jaq-Cb-boY" firstAttribute="centerY" secondItem="BkC-U0-StS" secondAttribute="centerY" id="D25-GR-vUO"/>
+                            <constraint firstItem="Emq-qi-NMc" firstAttribute="centerX" secondItem="BkC-U0-StS" secondAttribute="centerX" id="a38-nD-Rvk"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="Ucu-uR-zaF"/>
+                    <connections>
+                        <outlet property="firstDescription" destination="Jaq-Cb-boY" id="Hhq-uC-GoW"/>
+                        <outlet property="photoLabel" destination="Emq-qi-NMc" id="KfX-tc-Jw2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6oW-S8-leB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="503" y="794"/>
+            <point key="canvasLocation" x="364" y="151"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="8wk-os-9je">

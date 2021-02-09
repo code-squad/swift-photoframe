@@ -15,6 +15,7 @@
 		8262018125D222F300760235 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8262017F25D222F300760235 /* LaunchScreen.storyboard */; };
 		8262018C25D222F400760235 /* PhotoFrameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8262018B25D222F400760235 /* PhotoFrameTests.swift */; };
 		8262019725D222F400760235 /* PhotoFrameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8262019625D222F400760235 /* PhotoFrameUITests.swift */; };
+		826201AB25D22C6900760235 /* Tab1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826201AA25D22C6900760235 /* Tab1ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		8262019225D222F400760235 /* PhotoFrameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoFrameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8262019625D222F400760235 /* PhotoFrameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFrameUITests.swift; sourceTree = "<group>"; };
 		8262019825D222F400760235 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		826201AA25D22C6900760235 /* Tab1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab1ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				8262017425D222F300760235 /* AppDelegate.swift */,
 				8262017625D222F300760235 /* SceneDelegate.swift */,
 				8262017825D222F300760235 /* TabBarController.swift */,
+				826201AA25D22C6900760235 /* Tab1ViewController.swift */,
 				8262017A25D222F300760235 /* Main.storyboard */,
 				8262017D25D222F300760235 /* Assets.xcassets */,
 				8262017F25D222F300760235 /* LaunchScreen.storyboard */,
@@ -260,6 +263,7 @@
 			files = (
 				8262017925D222F300760235 /* TabBarController.swift in Sources */,
 				8262017525D222F300760235 /* AppDelegate.swift in Sources */,
+				826201AB25D22C6900760235 /* Tab1ViewController.swift in Sources */,
 				8262017725D222F300760235 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
