@@ -148,15 +148,25 @@
             </objects>
             <point key="canvasLocation" x="2610.144927536232" y="363.61607142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Blue View Controller-->
         <scene sceneID="lbc-Ws-HeW">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="I10-vn-6OJ" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="I10-vn-6OJ" customClass="BlueViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wRu-yJ-ODP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7P-8c-nZ0">
+                                <rect key="frame" x="192" y="433" width="30" height="30"/>
+                                <state key="normal" title="닫기"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="VpY-Ms-ktC"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="V7P-8c-nZ0" firstAttribute="centerX" secondItem="wRu-yJ-ODP" secondAttribute="centerX" id="TDx-Ts-DSy"/>
+                            <constraint firstItem="V7P-8c-nZ0" firstAttribute="centerY" secondItem="wRu-yJ-ODP" secondAttribute="centerY" id="rvd-pi-RIW"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aOG-jm-8i7"/>
                 </viewController>

@@ -14,6 +14,7 @@
 		BF8D0A2B25D131F000C65891 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF8D0A2A25D131F000C65891 /* Assets.xcassets */; };
 		BF8D0A2E25D131F000C65891 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF8D0A2C25D131F000C65891 /* LaunchScreen.storyboard */; };
 		BF8D0A3A25D2316F00C65891 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8D0A3925D2316F00C65891 /* YellowViewController.swift */; };
+		BF8D0A3F25D262B400C65891 /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8D0A3E25D262B400C65891 /* BlueViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		BF8D0A2D25D131F000C65891 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF8D0A2F25D131F000C65891 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF8D0A3925D2316F00C65891 /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
+		BF8D0A3E25D262B400C65891 /* BlueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				BF8D0A2525D131EE00C65891 /* ViewController.swift */,
 				BF8D0A3925D2316F00C65891 /* YellowViewController.swift */,
 				BF8D0A2725D131EE00C65891 /* Main.storyboard */,
+				BF8D0A3E25D262B400C65891 /* BlueViewController.swift */,
 				BF8D0A2A25D131F000C65891 /* Assets.xcassets */,
 				BF8D0A2C25D131F000C65891 /* LaunchScreen.storyboard */,
 				BF8D0A2F25D131F000C65891 /* Info.plist */,
@@ -143,6 +146,7 @@
 				BF8D0A3A25D2316F00C65891 /* YellowViewController.swift in Sources */,
 				BF8D0A2625D131EE00C65891 /* ViewController.swift in Sources */,
 				BF8D0A2225D131EE00C65891 /* AppDelegate.swift in Sources */,
+				BF8D0A3F25D262B400C65891 /* BlueViewController.swift in Sources */,
 				BF8D0A2425D131EE00C65891 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
