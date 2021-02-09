@@ -159,6 +159,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7P-8c-nZ0">
                                 <rect key="frame" x="192" y="433" width="30" height="30"/>
                                 <state key="normal" title="닫기"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="I10-vn-6OJ" eventType="touchUpInside" id="Qla-Ho-rLi"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VpY-Ms-ktC"/>
@@ -169,6 +172,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aOG-jm-8i7"/>
+                    <connections>
+                        <outlet property="closeButton" destination="V7P-8c-nZ0" id="GdJ-D9-DND"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aMZ-zC-Ely" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
