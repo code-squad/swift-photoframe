@@ -14,6 +14,8 @@ Keychaain Access에서 git과 관련된 항목 삭제, git credential 삭제, gi
 👉 다른 궁극적인(?) 해결 방법이 있나 계속 공부해보기
 
 ## Step-1. Tabbed 앱
+
+### 미션 수행
 1. 포토프레임 프로젝트 저장소를 본인 저장소로 fork하고 로컬에 clone
 2. 로컬 저장소 경로에 iOS-App 템플릿으로 프로젝트 "PhotoFrame" 생성
 3. ViewController.swift 파일의 `viewDidLoad()` 함수 내 `print(#file, #line, #function, #column)` 코드 추가
@@ -32,6 +34,34 @@ Keychaain Access에서 git과 관련된 항목 삭제, git credential 삭제, gi
 <img src="https://user-images.githubusercontent.com/56751259/107218910-a354b700-6a53-11eb-9643-2ea03b9d3bcc.png">
 
 완성 일자 및 시간: 2021-02-08 09:26PM
+
+### TIL
+* `git checkout -b <new_branch>`
+
+Create a new branch named <new_branch> and start it at <start_point> [출처](https://git-scm.com/docs/git-checkout#Documentation/git-checkout.txt--Bltnewbranchgt)
+
+* `git checkout -t origin/<branch_name>`
+
+If no -b option is given, the name of the new branch will be derived from the remote-tracking branch, by looking at the local part of the refspec configured for the corresponding remote, and then stripping the initial part up to the `"*"`. This would tell us to use hack as the local branch when branching off of origin/hack (or remotes/origin/hack, or even refs/remotes/origin/hack). If the given name has no slash, or the above guessing results in an empty name, the guessing is aborted. You can explicitly give a name with -b in such a case. [출처](https://git-scm.com/docs/git-checkout#Documentation/git-checkout.txt--t)
+
+* Literal Expression
+A literal expression consists of either an ordinary literal (such as a string or a number), an array or dictionary literal, a playground literal, or one of the following special literals:
+
+|Literal|Type|Value|Example|
+|`#file`|`String`|The path to the file in which it appears.|`/Users/song/development/swift/masters/2021-iOS/swift-photoframe/PhotoFrame/PhotoFrame/ViewController.swift `|
+|`#fileID`|`String`|The name of the file and module in which it appears.|
+|`#filePath`|`String`|The path to the file in which it appears.|
+|`#line`|`Int`|The line number on which it appears.|`14`|
+|`#column`|`Int`|The column number in which it begins.|`40`|
+|`#function`|`String`|The name of the declaration in which it appears.|`viewDidLoad()`|
+|`#dsohandle`|`UnsafeRawPointer`|The dynamic shared object (DSO) handle in use where it appears.|
+[출처](https://docs.swift.org/swift-book/ReferenceManual/Expressions.html)
+
+* UITabBarController
+To Be Added
+
+* UITabBar
+To Be Added
 
 
 ## Step2. IBOutlet
