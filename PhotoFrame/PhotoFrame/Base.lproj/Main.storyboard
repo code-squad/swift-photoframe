@@ -114,8 +114,22 @@
                     <view key="view" contentMode="scaleToFill" id="Dx1-TJ-KoU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8S-Oa-vew">
+                                <rect key="frame" x="161" y="396" width="92" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="Ien-gR-dxp" eventType="touchUpInside" id="EXy-mt-DKd"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="XeD-Vl-9fI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="s8S-Oa-vew" firstAttribute="centerX" secondItem="XeD-Vl-9fI" secondAttribute="centerX" id="6F9-1R-ypF"/>
+                            <constraint firstItem="s8S-Oa-vew" firstAttribute="top" secondItem="XeD-Vl-9fI" secondAttribute="top" constant="396" id="mvI-2x-oSe"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wsd-iK-jkl"/>
                 </viewController>
