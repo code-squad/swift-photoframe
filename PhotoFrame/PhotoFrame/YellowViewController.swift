@@ -13,5 +13,8 @@ class YellowViewController: UIViewController {
         super.viewDidLoad()
 
     }
-
+    @IBAction func closeButtonTouched(_ sender: UIButton) {
+        self.dismiss(animated: true)
+    }
+    
 }
