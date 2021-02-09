@@ -14,6 +14,7 @@
 		E4EC6CCB25D15E9B00743C87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4EC6CCA25D15E9B00743C87 /* Assets.xcassets */; };
 		E4EC6CCE25D15E9B00743C87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4EC6CCC25D15E9B00743C87 /* LaunchScreen.storyboard */; };
 		E4EC6CD825D17B2E00743C87 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EC6CD725D17B2E00743C87 /* FirstViewController.swift */; };
+		E4EC6CDD25D2784600743C87 /* RedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EC6CDC25D2784600743C87 /* RedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E4EC6CCD25D15E9B00743C87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4EC6CCF25D15E9B00743C87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4EC6CD725D17B2E00743C87 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		E4EC6CDC25D2784600743C87 /* RedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				E4EC6CC525D15E9A00743C87 /* ViewController.swift */,
 				E4EC6CC725D15E9A00743C87 /* Main.storyboard */,
 				E4EC6CD725D17B2E00743C87 /* FirstViewController.swift */,
+				E4EC6CDC25D2784600743C87 /* RedViewController.swift */,
 				E4EC6CCA25D15E9B00743C87 /* Assets.xcassets */,
 				E4EC6CCC25D15E9B00743C87 /* LaunchScreen.storyboard */,
 				E4EC6CCF25D15E9B00743C87 /* Info.plist */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4EC6CDD25D2784600743C87 /* RedViewController.swift in Sources */,
 				E4EC6CC625D15E9A00743C87 /* ViewController.swift in Sources */,
 				E4EC6CC225D15E9A00743C87 /* AppDelegate.swift in Sources */,
 				E4EC6CC425D15E9A00743C87 /* SceneDelegate.swift in Sources */,
