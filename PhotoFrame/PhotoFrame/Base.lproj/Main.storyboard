@@ -51,7 +51,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="다음"/>
                                 <connections>
-                                    <action selector="nextButtonTouched:" destination="ST0-J0-hHk" eventType="touchUpInside" id="5Fu-ty-1bj"/>
+                                    <action selector="nextButtonTouchedDown:" destination="ST0-J0-hHk" eventType="touchDown" id="l86-Gg-cV2"/>
+                                    <action selector="nextButtonTouchedUpInside:" destination="ST0-J0-hHk" eventType="touchUpInside" id="5Fu-ty-1bj"/>
                                 </connections>
                             </button>
                         </subviews>
