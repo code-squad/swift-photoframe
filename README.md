@@ -31,7 +31,8 @@ Keychaain Access에서 git과 관련된 항목 삭제, git credential 삭제, gi
 
 <img src="https://user-images.githubusercontent.com/56751259/107218910-a354b700-6a53-11eb-9643-2ea03b9d3bcc.png">
 
-완성 일자 및 시간: 2021-02-08 21:26PM
+완성 일자 및 시간: 2021-02-08 09:26PM
+
 
 ## Step2. IBOutlet
 1. FirstViewController에 `UILabel`을 추가
@@ -47,3 +48,15 @@ Keychaain Access에서 git과 관련된 항목 삭제, git credential 삭제, gi
 <img src="https://user-images.githubusercontent.com/56751259/107239309-11a57380-6a6c-11eb-8a2e-6f1b956b5f13.png">
 
 완성 일자 및 시간: 2021-02-09 12:17AM
+
+
+## Step3. IBAction
+1. FirstViewController에 `UIButton`을 추가
+2. 버튼을 선택하고 ctrl을 누른채 코드로 드래그해 IBAction으로 연결
+3. 위에서 추가한 IBAction 메서드 안에 원하는 구현 사항을 코드로 추가
+
+**시뮬레이터 스크린샷**
+
+<img src="https://user-images.githubusercontent.com/56751259/107318500-418e5e80-6ae0-11eb-80c4-053a9c7e4aed.gif" width=50%>
+
+완성 일자 및 시간: 2021-02-09 02:09PM
