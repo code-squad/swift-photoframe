@@ -9,18 +9,15 @@ import UIKit
 
 class YellowViewController: UIViewController {
 
-    @IBOutlet weak var closeBtn: UIButton!
-    @IBOutlet weak var nextBtn: UIButton!
+    @IBOutlet weak var closeButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
     
-    @IBOutlet weak var closeBtnBottom: NSLayoutConstraint!
-    @IBOutlet weak var closeBtnCenterX: NSLayoutConstraint!
+    @IBOutlet weak var closeButtonConstraintBottom: NSLayoutConstraint!
+    @IBOutlet weak var closeButtonConstraintCenterX: NSLayoutConstraint!
     
-    @IBOutlet weak var nextBtnCenterY: NSLayoutConstraint!
-    @IBOutlet weak var nextBtnCenterX: NSLayoutConstraint!
-    
-    @IBOutlet weak var closeBtn1: UIButton!
-    @IBOutlet weak var closeBtn2: UIButton!
-    
+    @IBOutlet weak var nextButtonConstraintCenterY: NSLayoutConstraint!
+    @IBOutlet weak var nextButtonConstraintCenterX: NSLayoutConstraint!
+     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -32,7 +29,7 @@ class YellowViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        closeBtnUpAnimation()
+        closeButtonUpAnimation()
         print(#file, #line, #function, #column)
     }
     
@@ -49,20 +46,13 @@ class YellowViewController: UIViewController {
     @IBAction func closeButtonTouched(_ sender: UIButton) {
         viewCloseAnimation()
     }
-    
-    @IBAction func printOneTouched(_ sender: Any) {
-        print(1)
-    }
-    @IBAction func printTwoTouched(_ sender: Any) {
-        print(2)
-    }
 }
 
 
 extension YellowViewController {
     
-    func closeBtnUpAnimation() {
-        closeBtnBottom.constant = self.view.frame.height/2 - 100
+    func closeButtonUpAnimation() {
+        closeButtonConstraintBottom.constant = self.view.frame.height/2 - 100
         UIView.animate(withDuration: 0.5) {
             self.view.layoutIfNeeded()
         }
@@ -70,25 +60,25 @@ extension YellowViewController {
     
     func viewCloseAnimation() {
         UIView.animateKeyframes(withDuration: 1, delay: 0, options: []) {
-            self.leftAnimation(self.nextBtnCenterX)
+            self.leftAnimation(self.nextButtonConstraintCenterX)
             UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.25) {
                 self.view.layoutIfNeeded()
             }
-            self.upAnimation(self.nextBtnCenterY)
+            self.upAnimation(self.nextButtonConstraintCenterY)
             UIView.addKeyframe(withRelativeStartTime: 0.25, relativeDuration: 0.25) {
-                self.zeroAlphaView(self.nextBtn)
+                self.zeroAlphaView(self.nextButton)
                 self.view.layoutIfNeeded()
             }
-            self.leftAnimation(self.closeBtnCenterX)
+            self.leftAnimation(self.closeButtonConstraintCenterX)
             UIView.addKeyframe(withRelativeStartTime: 0.5, relativeDuration: 0.25) {
                 self.view.layoutIfNeeded()
             }
-            self.upAnimation(self.closeBtnBottom)
+            self.upAnimation(self.closeButtonConstraintBottom)
             UIView.addKeyframe(withRelativeStartTime: 0.75, relativeDuration: 0.25) {
-                self.zeroAlphaView(self.closeBtn)
+                self.zeroAlphaView(self.closeButton)
                 self.view.layoutIfNeeded()
             }
-        } completion: { (_) in
+        } completion: { (Finished) in
             self.dismiss(animated: true, completion: nil)
         }
     }
@@ -99,7 +89,7 @@ extension YellowViewController {
     func upAnimation(_ constraint : NSLayoutConstraint) {
         constraint.constant = -150
     }
-    func zeroAlphaView(_ ui : UIView) {
-        ui.alpha = 0
+    func zeroAlphaView(_ view : UIView) {
+        view.alpha = 0
     }
 }

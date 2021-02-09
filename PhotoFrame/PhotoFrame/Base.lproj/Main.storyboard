@@ -124,23 +124,6 @@
                                     <action selector="closeButtonTouched:" destination="qbe-9N-v5B" eventType="touchUpInside" id="q5a-Sv-fv0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJG-Mz-Knn">
-                                <rect key="frame" x="282" y="98" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="printOneTouched:" destination="qbe-9N-v5B" eventType="touchUpInside" id="OU3-2a-p7e"/>
-                                    <action selector="printTwoTouched:" destination="qbe-9N-v5B" eventType="touchUpInside" id="jgA-fa-qRb"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="key-7o-dsh">
-                                <rect key="frame" x="184" y="97" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="closeButtonTouched:" destination="qbe-9N-v5B" eventType="touchUpInside" id="3mY-iC-WQp"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="O6y-zt-qAH"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
@@ -153,14 +136,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="3Fr-a1-tbX"/>
                     <connections>
-                        <outlet property="closeBtn" destination="jR3-Vw-VY3" id="O6i-zF-Xk5"/>
-                        <outlet property="closeBtn1" destination="BJG-Mz-Knn" id="UOK-RB-tBK"/>
-                        <outlet property="closeBtn2" destination="key-7o-dsh" id="vgi-94-mul"/>
-                        <outlet property="closeBtnBottom" destination="HPB-N8-EGH" id="ZGx-4d-gtl"/>
-                        <outlet property="closeBtnCenterX" destination="Ls5-SJ-qjt" id="LEv-Wf-iGL"/>
-                        <outlet property="nextBtn" destination="NAi-tD-FSz" id="pkb-tb-cjE"/>
-                        <outlet property="nextBtnCenterX" destination="hKD-2s-7qQ" id="qO7-GW-Zwu"/>
-                        <outlet property="nextBtnCenterY" destination="N2Y-Px-mb2" id="9UB-pv-D4Q"/>
+                        <outlet property="closeButton" destination="jR3-Vw-VY3" id="VzQ-aw-ts3"/>
+                        <outlet property="closeButtonConstraintBottom" destination="HPB-N8-EGH" id="0GD-BK-Dhe"/>
+                        <outlet property="closeButtonConstraintCenterX" destination="Ls5-SJ-qjt" id="IM6-lG-3FT"/>
+                        <outlet property="nextButton" destination="NAi-tD-FSz" id="2Hh-Gx-UEC"/>
+                        <outlet property="nextButtonConstraintCenterX" destination="hKD-2s-7qQ" id="SGg-TH-8Qe"/>
+                        <outlet property="nextButtonConstraintCenterY" destination="N2Y-Px-mb2" id="6SZ-Aa-jsH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fja-ya-a0b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
