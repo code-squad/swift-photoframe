@@ -15,8 +15,36 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bge-s9-ZxP">
+                                <rect key="frame" x="87" y="174" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="XnU-qt-9MY"/>
+                                    <constraint firstAttribute="height" constant="240" id="aed-ZV-aFz"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo Album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CcO-b2-Cy3">
+                                <rect key="frame" x="87.5" y="444" width="239" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivk-gY-Rn8">
+                                <rect key="frame" x="190.5" y="522" width="33" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="다음"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ivk-gY-Rn8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5L3-o5-QMi"/>
+                            <constraint firstItem="Bge-s9-ZxP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="130" id="5sW-dE-Dvb"/>
+                            <constraint firstItem="CcO-b2-Cy3" firstAttribute="top" secondItem="Bge-s9-ZxP" secondAttribute="bottom" constant="30" id="Juq-gh-Iy8"/>
+                            <constraint firstItem="ivk-gY-Rn8" firstAttribute="top" secondItem="CcO-b2-Cy3" secondAttribute="bottom" constant="30" id="S7j-xV-Fy3"/>
+                            <constraint firstItem="CcO-b2-Cy3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="thV-pj-BCk"/>
+                            <constraint firstItem="Bge-s9-ZxP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="x6s-H2-Iea"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="3cQ-z7-34D"/>
                 </viewController>
