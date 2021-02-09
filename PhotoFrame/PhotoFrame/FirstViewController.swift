@@ -9,4 +9,8 @@ import Foundation
 
 class FirstViewController: UIViewController {
     @IBOutlet weak var firstLabel: UILabel!
+    
+    override func viewDidLoad() {
+        self.firstLabel.text = "Hong의 사진"
+    }
 }
