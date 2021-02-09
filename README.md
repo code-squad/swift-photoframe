@@ -1,8 +1,5 @@
 # 사진 액자 앱
 
-
-<<<<<<< HEAD
-
 - 2021년 2월 8일 생성
 
 - 코드스쿼드 마스터즈 iOS 코스
@@ -28,9 +25,6 @@
 
 
 ![initial](https://user-images.githubusercontent.com/73650994/107309393-b1dfb480-6acd-11eb-8ecc-c91d4033e54a.png)
-=======
-삭제 후 다시 생성
->>>>>>> 7329cd2ad4054f30e538a952d5c2d0efbc33aefa
 
 
 ---
@@ -105,4 +99,20 @@
 - close button revise
 
 ![initial](https://user-images.githubusercontent.com/73650994/107346061-9c877c00-6b07-11eb-9b13-0930d941addf.png)
+
+
+
+---
+
+## STEP 7. Second Scene
+
+- Tab bar의 두번째 화면을 만들고
+- UIImageView를 사용하여 이미지뷰를 익힌다
+
+![initial](https://user-images.githubusercontent.com/73650994/107361085-28a29f00-6b1a-11eb-8c04-d301d17671cf.png)
+
+![initial](https://user-images.githubusercontent.com/73650994/107361100-2fc9ad00-6b1a-11eb-9516-96c0adeccf0b.png)
+
+- 이미지 뷰 속성 관리 : content mode
+- aspect fill 을 사용 (원본 비율, UIImageView 화면에 꽉 참)
 
