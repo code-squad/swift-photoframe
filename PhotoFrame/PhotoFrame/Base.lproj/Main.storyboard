@@ -51,6 +51,7 @@
                                 <state key="normal" title="다음"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="P5n-pB-pFs" eventType="touchUpInside" id="G4B-6u-s2h"/>
+                                    <segue destination="pXz-xf-eCx" kind="show" id="POA-E9-KKG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -77,6 +78,34 @@
             </objects>
             <point key="canvasLocation" x="-504.34782608695656" y="-564.50892857142856"/>
         </scene>
+        <!--Second View Controller-->
+        <scene sceneID="tTr-Hf-NLI">
+            <objects>
+                <viewController id="pXz-xf-eCx" customClass="SecondViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i50-ZV-Mc8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMG-yd-vMB">
+                                <rect key="frame" x="138" y="174" width="139" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="다음"/>
+                                <connections>
+                                    <action selector="clickNextButton:" destination="pXz-xf-eCx" eventType="touchUpInside" id="LpL-mL-BjZ"/>
+                                    <segue destination="TYv-RU-Cm5" kind="show" identifier="next" id="mKo-JR-QkY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Tpj-Qz-LDA"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="TUC-QV-9be"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hYJ-Gj-pTB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="366.66666666666669" y="-565.17857142857144"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="YEJ-lZ-Z6p">
             <objects>
@@ -95,10 +124,44 @@
             </objects>
             <point key="canvasLocation" x="-1393" y="-259"/>
         </scene>
+        <!--Third View Controller-->
+        <scene sceneID="Xg7-RH-67E">
+            <objects>
+                <viewController storyboardIdentifier="third" id="TYv-RU-Cm5" customClass="ThirdViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NvL-jv-bJo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="데이터" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LcA-X4-eh3">
+                                <rect key="frame" x="137" y="164" width="141" height="97"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Jke-jo-NMN"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jnk-0Y-Rgh"/>
+                    <connections>
+                        <outlet property="dataLabel" destination="LcA-X4-eh3" id="R11-UY-ssC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5e6-Ek-f3G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1227.536231884058" y="-565.17857142857144"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

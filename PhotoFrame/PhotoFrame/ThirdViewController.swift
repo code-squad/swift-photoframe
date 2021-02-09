@@ -1,17 +1,18 @@
 //
-//  ViewController.swift
+//  ThirdViewController.swift
 //  PhotoFrame
 //
-//  Created by Issac on 2021/02/08.
+//  Created by Issac on 2021/02/09.
 //
 
 import UIKit
 
-class ViewController: UITabBarController {
-
+class ThirdViewController: UIViewController {
+    var data: String?
+    @IBOutlet weak var dataLabel: UILabel!
     override func viewDidLoad() {
-        super.viewDidLoad() 
-        print(#file, #line, #function, #column)
+        super.viewDidLoad()
+        dataLabel.text = data
         // Do any additional setup after loading the view.
     }
     
