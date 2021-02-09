@@ -9,8 +9,6 @@ import UIKit
 
 class ViewController: UIViewController {
 
-
-
     @IBOutlet weak var firstLabel: UILabel!
     
     @IBOutlet weak var firstDescription: UILabel!
@@ -40,6 +38,6 @@ class ViewController: UIViewController {
         self.firstLabel.backgroundColor = UIColor.yellow
         self.firstLabel.alpha = 0.5
     }
-    
+
 }
 
