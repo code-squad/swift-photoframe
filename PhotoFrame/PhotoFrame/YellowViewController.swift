@@ -52,7 +52,7 @@ class YellowViewController: UIViewController {
 extension YellowViewController {
     
     func closeButtonMoveAnimation() {
-        closeButtonConstraintBottom.constant = self.view.frame.height/2 - 100
+        closeButtonConstraintBottom.constant = self.view.frame.height/2 - self.view.frame.width/2
         UIView.animate(withDuration: 0.5) {
             self.view.layoutIfNeeded()
         }
