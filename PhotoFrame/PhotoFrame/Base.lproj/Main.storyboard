@@ -28,6 +28,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ej-vX-b5g">
+                                <rect key="frame" x="184" y="387.5" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="nextButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0f5-GA-4cz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -36,6 +43,8 @@
                             <constraint firstItem="EFv-ZF-swK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6of-Fs-RaR"/>
                             <constraint firstItem="EKG-OY-5GI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8zl-EO-EIy"/>
                             <constraint firstItem="EFv-ZF-swK" firstAttribute="top" secondItem="EKG-OY-5GI" secondAttribute="bottom" constant="15" id="DPy-Hf-0Hm"/>
+                            <constraint firstItem="EKG-OY-5GI" firstAttribute="top" secondItem="4ej-vX-b5g" secondAttribute="bottom" constant="20" id="LSy-YV-HwZ"/>
+                            <constraint firstItem="4ej-vX-b5g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hMI-p5-MXw"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="hBV-wn-REI"/>
