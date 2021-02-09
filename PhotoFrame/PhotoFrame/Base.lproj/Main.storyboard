@@ -129,11 +129,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="closeButtonTouched:" destination="qbe-9N-v5B" eventType="touchUpInside" id="Xsl-7o-UPb"/>
+                                    <action selector="printOneTouched:" destination="qbe-9N-v5B" eventType="touchUpInside" id="OU3-2a-p7e"/>
+                                    <action selector="printTwoTouched:" destination="qbe-9N-v5B" eventType="touchUpInside" id="jgA-fa-qRb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="key-7o-dsh">
-                                <rect key="frame" x="184" y="98" width="46" height="30"/>
+                                <rect key="frame" x="184" y="97" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
@@ -153,6 +154,8 @@
                     <navigationItem key="navigationItem" id="3Fr-a1-tbX"/>
                     <connections>
                         <outlet property="closeBtn" destination="jR3-Vw-VY3" id="O6i-zF-Xk5"/>
+                        <outlet property="closeBtn1" destination="BJG-Mz-Knn" id="UOK-RB-tBK"/>
+                        <outlet property="closeBtn2" destination="key-7o-dsh" id="vgi-94-mul"/>
                         <outlet property="closeBtnBottom" destination="HPB-N8-EGH" id="ZGx-4d-gtl"/>
                         <outlet property="closeBtnCenterX" destination="Ls5-SJ-qjt" id="LEv-Wf-iGL"/>
                         <outlet property="nextBtn" destination="NAi-tD-FSz" id="pkb-tb-cjE"/>

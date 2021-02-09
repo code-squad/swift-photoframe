@@ -18,6 +18,9 @@ class YellowViewController: UIViewController {
     @IBOutlet weak var nextBtnCenterY: NSLayoutConstraint!
     @IBOutlet weak var nextBtnCenterX: NSLayoutConstraint!
     
+    @IBOutlet weak var closeBtn1: UIButton!
+    @IBOutlet weak var closeBtn2: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -47,6 +50,12 @@ class YellowViewController: UIViewController {
         viewCloseAnimation()
     }
     
+    @IBAction func printOneTouched(_ sender: Any) {
+        print(1)
+    }
+    @IBAction func printTwoTouched(_ sender: Any) {
+        print(2)
+    }
 }
 
 
