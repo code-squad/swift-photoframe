@@ -13,7 +13,5 @@ class TabBarController: UITabBarController {
         super.viewDidLoad()
         print(#file,#function,#line,#column)
     }
-
-
 }
 
