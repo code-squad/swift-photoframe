@@ -21,5 +21,10 @@ class ViewController: UIViewController {
     }
 
     
+    @IBAction func nextButtonTouched(_ sender: UIButton) {
+        self.firstLabel.alpha = 1
+        self.firstLabel.font = .boldSystemFont(ofSize: 45)
+        self.firstLabel.backgroundColor = .yellow
+    }
 }
 

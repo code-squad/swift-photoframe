@@ -15,8 +15,6 @@
 
 ## (20.02.08:21:45:00)
 
----
-
 ## IBOutlet
 
 #### 요구사항
@@ -25,3 +23,20 @@
 
 연결한 아웃렛 변수에 값을 변경
 
+<img width="2020" alt="스크린샷 2021-02-08 오후 10 57 09" src="https://user-images.githubusercontent.com/33626693/107302806-4d1e5d00-6ac1-11eb-9895-54a379cc04c3.png">
+
+## (20.02.08:21:45:00)
+
+## IBAction
+
+#### 요구사항
+
+UIButton 추가 후 IBAction 으로 연결
+
+액션에 메서드 구현 
+
+실행하고 버튼 터치하기 이전/이후 화면 캡쳐해서 Readme.md 파일에 포함
+
+<img width="1963" alt="스크린샷 2021-02-09 오전 10 38 10" src="https://user-images.githubusercontent.com/33626693/107303721-f44fc400-6ac2-11eb-99d7-2b455526afab.png">
+
+<img width="1968" alt="스크린샷 2021-02-09 오전 10 36 34" src="https://user-images.githubusercontent.com/33626693/107303716-eef27980-6ac2-11eb-9ae6-c51ae11cc190.png">
