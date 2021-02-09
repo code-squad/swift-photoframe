@@ -49,12 +49,22 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJu-Ve-SwO">
+                                <rect key="frame" x="187.5" y="212.5" width="39" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="다음"/>
+                                <connections>
+                                    <action selector="nextButtonTouched:" destination="adN-6m-hfu" eventType="touchUpInside" id="UL4-Xs-BrL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="T8c-wj-gtu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="OJu-Ve-SwO" firstAttribute="centerX" secondItem="73B-Wa-GPH" secondAttribute="centerX" id="B8O-B9-bmd"/>
                             <constraint firstItem="HhR-XC-RAP" firstAttribute="centerY" secondItem="QrI-YZ-cCj" secondAttribute="centerY" id="FLm-vJ-fbT"/>
                             <constraint firstItem="HhR-XC-RAP" firstAttribute="centerX" secondItem="QrI-YZ-cCj" secondAttribute="centerX" id="qyt-6R-Zke"/>
+                            <constraint firstItem="HhR-XC-RAP" firstAttribute="top" secondItem="OJu-Ve-SwO" secondAttribute="bottom" constant="160" id="xqG-18-xB7"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="PxM-tp-hXe"/>
