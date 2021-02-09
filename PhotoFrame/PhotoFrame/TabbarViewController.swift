@@ -14,8 +14,6 @@ class TabbarViewController: UITabBarController {
       print(#file, #line, #function, #column)
         // Do any additional setup after loading the view.
     }
-    
-
     /*
     // MARK: - Navigation
 

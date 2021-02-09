@@ -96,3 +96,7 @@ ex) git push --set-upstream origin photoframe-step1
 
 ## 실습 중 모든 질문은 슬랙 채널에서...
 ### test ###
+
+step-1 Tabbar
+<img width="565" alt="스크린샷 2021-02-09 오후 1 17 29" src="https://user-images.githubusercontent.com/69688078/107315787-b6f73080-6ada-11eb-80c1-c3af33c0ba3a.png">
+
