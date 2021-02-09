@@ -86,9 +86,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMG-yd-vMB">
-                                <rect key="frame" x="138" y="174" width="139" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMG-yd-vMB">
+                                <rect key="frame" x="138" y="174" width="138" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="다음"/>
                                 <connections>
@@ -96,9 +95,28 @@
                                     <segue destination="TYv-RU-Cm5" kind="show" identifier="next" id="mKo-JR-QkY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atF-qR-ios">
+                                <rect key="frame" x="70" y="679" width="274" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="64r-Hr-zco"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="뒤로가기"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="pXz-xf-eCx" eventType="touchUpInside" id="UyD-D8-KEe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Tpj-Qz-LDA"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="mMG-yd-vMB" firstAttribute="centerX" secondItem="i50-ZV-Mc8" secondAttribute="centerX" id="3sW-kW-Ala"/>
+                            <constraint firstItem="Tpj-Qz-LDA" firstAttribute="bottom" secondItem="atF-qR-ios" secondAttribute="bottom" constant="39" id="Gn4-tu-9Jw"/>
+                            <constraint firstItem="mMG-yd-vMB" firstAttribute="top" secondItem="Tpj-Qz-LDA" secondAttribute="top" constant="174" id="J3q-mq-73J"/>
+                            <constraint firstItem="mMG-yd-vMB" firstAttribute="leading" secondItem="Tpj-Qz-LDA" secondAttribute="leading" constant="138" id="Twp-Jc-2Qk"/>
+                            <constraint firstItem="atF-qR-ios" firstAttribute="leading" secondItem="Tpj-Qz-LDA" secondAttribute="leading" constant="70" id="dJD-Ns-rJ3"/>
+                            <constraint firstItem="mMG-yd-vMB" firstAttribute="centerX" secondItem="atF-qR-ios" secondAttribute="centerX" id="l7a-JF-itd"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="TUC-QV-9be"/>
                 </viewController>
@@ -132,16 +150,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="데이터" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LcA-X4-eh3">
-                                <rect key="frame" x="137" y="164" width="141" height="97"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="데이터" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LcA-X4-eh3">
+                                <rect key="frame" x="137" y="164" width="140" height="97"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="97" id="b0p-0e-HTu"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w9o-U4-vs1">
+                                <rect key="frame" x="75" y="684" width="274" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="IdR-4Y-ePn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="뒤로가기">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="TYv-RU-Cm5" eventType="touchUpInside" id="SXt-4A-oBY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Jke-jo-NMN"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <constraints>
+                            <constraint firstItem="Jke-jo-NMN" firstAttribute="bottom" secondItem="w9o-U4-vs1" secondAttribute="bottom" constant="34" id="6RM-qW-mlM"/>
+                            <constraint firstItem="w9o-U4-vs1" firstAttribute="leading" secondItem="Jke-jo-NMN" secondAttribute="leading" constant="75" id="9wN-Vd-84h"/>
+                            <constraint firstItem="Jke-jo-NMN" firstAttribute="trailing" secondItem="w9o-U4-vs1" secondAttribute="trailing" constant="65" id="QSk-dp-kyx"/>
+                            <constraint firstItem="LcA-X4-eh3" firstAttribute="centerX" secondItem="NvL-jv-bJo" secondAttribute="centerX" id="Sdz-F0-wfR"/>
+                            <constraint firstItem="LcA-X4-eh3" firstAttribute="leading" secondItem="Jke-jo-NMN" secondAttribute="leading" constant="137" id="n28-Wr-uAr"/>
+                            <constraint firstItem="LcA-X4-eh3" firstAttribute="top" secondItem="Jke-jo-NMN" secondAttribute="top" constant="164" id="pMX-b1-18f"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jnk-0Y-Rgh"/>
                     <connections>

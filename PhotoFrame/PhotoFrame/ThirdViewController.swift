@@ -10,13 +10,32 @@ import UIKit
 class ThirdViewController: UIViewController {
     var data: String?
     @IBOutlet weak var dataLabel: UILabel!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print(#file, #line, #function, #column)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        dataLabel.text = data
+        print(#file, #line, #function, #column)
         // Do any additional setup after loading the view.
     }
     
-
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print(#file, #line, #function, #column)
+    }
+    
+    @IBAction func closeButtonTouched(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
