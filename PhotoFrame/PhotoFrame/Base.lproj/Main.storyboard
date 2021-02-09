@@ -34,6 +34,7 @@
                                 <state key="normal" title="다음"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TzK-bY-Yfb"/>
+                                    <segue destination="Nki-Ot-inv" kind="show" id="PLX-X1-YNu"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -55,6 +56,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="939.13043478260875" y="93.75"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cQx-ut-ShI">
+            <objects>
+                <viewController id="Nki-Ot-inv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KFN-qh-pkD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajk-uM-NvU">
+                                <rect key="frame" x="185" y="400" width="44" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="다음"/>
+                                <connections>
+                                    <segue destination="6oz-9h-Hma" kind="show" id="NYu-NL-3BV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LOM-uj-TH3"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="ajk-uM-NvU" firstAttribute="centerX" secondItem="KFN-qh-pkD" secondAttribute="centerX" id="YVu-HM-ckR"/>
+                            <constraint firstItem="ajk-uM-NvU" firstAttribute="centerY" secondItem="KFN-qh-pkD" secondAttribute="centerY" id="xkq-iI-9Sq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0F2-ke-Zs1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1UB-XS-Wi5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1680" y="94"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nSB-kh-UZ8">
+            <objects>
+                <viewController id="6oz-9h-Hma" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ot4-14-c10">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="l6S-6y-cyQ"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wRf-KG-fob"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DLP-5V-ZkT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2422" y="94"/>
         </scene>
         <!--Item-->
         <scene sceneID="vyi-Wv-YUL">
@@ -97,6 +144,12 @@
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
