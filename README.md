@@ -78,3 +78,19 @@
 
 ![initial](https://user-images.githubusercontent.com/73650994/107337737-161a6c80-6afe-11eb-886c-0910cf71419e.png)
 
+
+
+
+---
+
+## STEP 5. ViewController programming
+
+- 새로운 viewController 추가 및 연결
+- 화면 닫기 동작 (dismiss)
+
+![initial](https://user-images.githubusercontent.com/73650994/107342338-6fd16580-6b03-11eb-8d65-d62617d0d80b.png)
+
+![initial](https://user-images.githubusercontent.com/73650994/107342354-73fd8300-6b03-11eb-8b81-6b58d27eb41a.png)
+
+- dismiss: 뷰 스택을 줄여주는 역할을 한다고 한다
+
