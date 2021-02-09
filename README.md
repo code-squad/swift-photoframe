@@ -4,13 +4,14 @@
 
 "기존에 있었던 View Controller를 삭제하고 Tab Bar Controller를 추가한 다음 "Attributes inspector"에서 "is Initial View Controller"에 체크한다."
 
-![스크린샷 2021-02-08 오후 4 51 44](https://user-images.githubusercontent.com/61342175/107309446-cae86580-6acd-11eb-98c0-48f58fe2efa4.png)
+![스크린샷 2021-02-08 오후 4 51 44](https://user-images.githubusercontent.com/61342175/107374922-812e6800-6b2b-11eb-9d35-186575b271d3.png)
  
 UITapBar와 UITapBarController의 차이?
 
 처음 생각했었던 것 : UITapBar는 개별 View Controller에 추가할 수 있는 TapBar이고, UITapBarController는 하나의 View Controller이면서 하단에 버튼이 생기고 경로 이동이 바로 됨.
 
 Documentation Link
+
 https://developer.apple.com/documentation/uikit/uitabbar
 https://developer.apple.com/documentation/uikit/uitabbarcontroller
 
@@ -36,14 +37,16 @@ UITabBar는 "controller", UITabBarController는 "container view controller"
 
 ## 2단계
 
-
-
 "Cocoa Touch Class 파일을 Subclass가 UIViewController인 형태로 추가한다. Main.storyboard에서 ViewController를 선택하고 Identity inspector에서 Class에 추가한 파일의 클래스 이름을 입력함으로써 연결시킨다. Label 생성 후 추가된 파일에 Control + Drag로 IBOutlet을 추가한다."
 
+![스크린샷 2021-02-08 오후 7 40 24](https://user-images.githubusercontent.com/61342175/107374977-91464780-6b2b-11eb-912b-322963e05354.png)
+
 Documentation Link
+
 https://developer.apple.com/documentation/uikit/uilabel
 
 UILabel Property Link
+
 https:/docs.microsoft.com/ko-kr/dotnet/api/uikit.uilabel.font?view=xamarin-ios-sdk-12
 
 ### UILabel
@@ -55,9 +58,10 @@ https:/docs.microsoft.com/ko-kr/dotnet/api/uikit.uilabel.font?view=xamarin-ios-s
 
 "Button을 ViewController에 추가하고 Attributes에서 Text를 바꾼다. ViewController 파일에 Control + Drag로 IBAction 설정 후 추가한다."
 
-![스크린샷 2021-02-08 오후 8 07 41](https://user-images.githubusercontent.com/61342175/107309456-cfad1980-6acd-11eb-85de-92140aeb88c8.png)
+![스크린샷 2021-02-08 오후 8 07 41](https://user-images.githubusercontent.com/61342175/107375047-a9b66200-6b2b-11eb-81f9-f82f8d937963.png)
 
 Link
+
 https://o-o-wl.tistory.com/45
 
 IB : Interface Builder
@@ -76,7 +80,7 @@ touchDown, touchDownRepeat, touchDragInside, touchDragOutside, touchDragEnter, t
 
  "특정 ViewController에 버튼을 추가하고 새로운 ViewController 생성 후 버튼에 Control + Drag로 Segue를 설정한다. 버튼 클릭 시 새롭게 생성된 ViewController로 이동한다."
 
- ![스크린샷 2021-02-08 오후 8 46 39](https://user-images.githubusercontent.com/61342175/107309459-d176dd00-6acd-11eb-88f5-4c5627891660.png)
+![스크린샷 2021-02-08 오후 8 46 39](https://user-images.githubusercontent.com/61342175/107375132-c05cb900-6b2b-11eb-88cb-92f3fe35432f.png)
 
  Segue 액션 중 모달 등 다른 액션 설정으로 실행해봤다. Attributes inspector에서 변경할 수 있으며, 추가적으로 Animates를 Uncheck하고 실행해봤다. Animates를 Uncheck하면 새로운 ViewController가 움직이면서 나타나지 않고 바로 나타난다.
 
@@ -84,6 +88,7 @@ touchDown, touchDownRepeat, touchDragInside, touchDragOutside, touchDragEnter, t
 ## 5단계
 
 Link
+
 https://zeddios.tistory.com/43
 https://deliorange.tistory.com/25
 
@@ -96,9 +101,11 @@ viewDidDisappear : view가 사라졌다고 알려줌.
 
 ## 6단계
 
-Link
+![스크린샷 2021-02-09 오후 7 35 05](https://user-images.githubusercontent.com/61342175/107375237-da969700-6b2b-11eb-8805-681e36057d01.png)
 
 "NavigationController를 추가하고자 하는 ViewController를 선택하고 상단에 있는 Editor -> Embed In -> Navigation Controller"
+
+Link
 
 https://developer.apple.com/documentation/uikit/uiviewcontroller
 
