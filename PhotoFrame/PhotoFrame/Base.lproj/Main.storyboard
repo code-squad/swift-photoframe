@@ -24,19 +24,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ao0-p8-e1J">
-                                <rect key="frame" x="126" y="297" width="163" height="133"/>
+                                <rect key="frame" x="51" y="302" width="312" height="133"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWs-zQ-Mnk">
-                                <rect key="frame" x="190" y="258" width="35" height="36"/>
+                                <rect key="frame" x="173" y="258" width="51" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="다음"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GPZ-df-rEa"/>
+                                    <segue destination="pnR-B1-lnb" kind="show" id="B66-8I-Yv6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -51,7 +52,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="926.08695652173924" y="88.392857142857139"/>
+            <point key="canvasLocation" x="902.89855072463774" y="-84.375"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="QG7-eo-2OR">
@@ -86,7 +87,49 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AT5-LL-buL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1646" y="88"/>
+            <point key="canvasLocation" x="903" y="593"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fE4-Bl-Jpe">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="pnR-B1-lnb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kZY-fu-ws2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAd-u4-ukF">
+                                <rect key="frame" x="190" y="430" width="35" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="다음"/>
+                                <connections>
+                                    <segue destination="6eJ-yM-406" kind="showDetail" id="QeU-M6-76d"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yWF-oT-1Eu"/>
+                        <color key="backgroundColor" red="1" green="0.96965854121275097" blue="0.93562492007173648" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1Y4-PC-3MY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7vr-Ah-Qdt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1612" y="-84"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bhw-st-AkM">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="6eJ-yM-406" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="96Z-Du-e6e">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="twm-e6-L82"/>
+                        <color key="backgroundColor" red="0.86987242573339196" green="1" blue="0.94690556476944499" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I4t-oq-jqw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2391" y="-84"/>
         </scene>
     </scenes>
     <resources>
