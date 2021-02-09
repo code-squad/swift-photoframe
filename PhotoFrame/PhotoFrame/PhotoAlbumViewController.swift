@@ -8,7 +8,7 @@
 import UIKit
 
 class PhotoAlbumViewController: UIViewController {
-
+    
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var photoAlbumLabel: UILabel!
     
@@ -17,8 +17,9 @@ class PhotoAlbumViewController: UIViewController {
     }
     
     @IBAction func nextImageButtonTouched(_ sender: Any) {
-        imageTransitionAnimate()
-        labelAlpha()
+        Animation.imageCrossDissolveAnimate(imageView: photoImageView,
+                                            selectImage: randomImageSelect())
+        Animation.labelAlphaIncrease(target: photoAlbumLabel, withDuration: 0.5)
     }
 }
 
@@ -27,20 +28,5 @@ extension PhotoAlbumViewController {
     func randomImageSelect() -> String {
         let number = Int.random(in: 1...22)
         return String(format: "%02d.jpg", number)
-    }
-    
-    func imageTransitionAnimate() {
-        UIView.transition(with: self.photoImageView,
-                          duration: 1.0,
-                          options: .transitionCrossDissolve,
-                          animations: {
-                            self.photoImageView.image = UIImage(named: self.randomImageSelect())
-                          }, completion: nil)
-    }
-    
-    func labelAlpha() {
-        UIView.animate(withDuration: 0.5) {
-            self.photoAlbumLabel.alpha = 1
-        }
     }
 }

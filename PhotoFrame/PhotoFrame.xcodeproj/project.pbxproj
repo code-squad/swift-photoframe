@@ -38,6 +38,7 @@
 		BF8D0A9E25D27A9E00C65891 /* 08.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF8D0A8825D27A9E00C65891 /* 08.jpg */; };
 		BF8D0A9F25D27A9E00C65891 /* 13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF8D0A8925D27A9E00C65891 /* 13.jpg */; };
 		BF8D0AA025D27A9E00C65891 /* 19.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF8D0A8A25D27A9E00C65891 /* 19.jpg */; };
+		BF8D0AA325D2939E00C65891 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8D0AA225D2939E00C65891 /* Animation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		BF8D0A8825D27A9E00C65891 /* 08.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 08.jpg; sourceTree = "<group>"; };
 		BF8D0A8925D27A9E00C65891 /* 13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 13.jpg; sourceTree = "<group>"; };
 		BF8D0A8A25D27A9E00C65891 /* 19.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 19.jpg; sourceTree = "<group>"; };
+		BF8D0AA225D2939E00C65891 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 				BF8D0A3925D2316F00C65891 /* YellowViewController.swift */,
 				BF8D0A2725D131EE00C65891 /* Main.storyboard */,
 				BF8D0A7225D2747E00C65891 /* PhotoAlbumViewController.swift */,
+				BF8D0AA225D2939E00C65891 /* Animation.swift */,
 				BF8D0A3E25D262B400C65891 /* BlueViewController.swift */,
 				BF8D0A2A25D131F000C65891 /* Assets.xcassets */,
 				BF8D0A2C25D131F000C65891 /* LaunchScreen.storyboard */,
@@ -236,6 +239,7 @@
 			files = (
 				BF8D0A3A25D2316F00C65891 /* YellowViewController.swift in Sources */,
 				BF8D0A2625D131EE00C65891 /* ViewController.swift in Sources */,
+				BF8D0AA325D2939E00C65891 /* Animation.swift in Sources */,
 				BF8D0A2225D131EE00C65891 /* AppDelegate.swift in Sources */,
 				BF8D0A3F25D262B400C65891 /* BlueViewController.swift in Sources */,
 				BF8D0A2425D131EE00C65891 /* SceneDelegate.swift in Sources */,
