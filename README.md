@@ -1,4 +1,4 @@
-# 과  정
+# 과정
 
 ## 1단계
 
@@ -81,6 +81,7 @@ touchDown, touchDownRepeat, touchDragInside, touchDragOutside, touchDragEnter, t
  Segue 액션 중 모달 등 다른 액션 설정으로 실행해봤다. Attributes inspector에서 변경할 수 있으며, 추가적으로 Animates를 Uncheck하고 실행해봤다. Animates를 Uncheck하면 새로운 ViewController가 움직이면서 나타나지 않고 바로 나타난다.
 
 
+## 5단계
 
 Link
 https://zeddios.tistory.com/43
@@ -89,5 +90,36 @@ https://deliorange.tistory.com/25
 viewDidLoad : ViewController 생성 후 항상 보였던 함수. 메모리에 올려지고 시스템에 의해 바로 호출. 리소스 초기화 및 초기 화면 구성하는 용도로 사용.
 viewWillAppear : stack, LIFO를 생각. 다른 뷰에 갔다가 돌아왔을 때 viewDidLoad가 아닌 viewWillAppear가 호출.
 viewDidAppear : view가 나타난 직후에 실행.
-viewWillDisappear : view가 사라질 것이다.
-viewDidDisappear : view가 사라졌다고 알려준다.
+viewWillDisappear : view가 사라짐.
+viewDidDisappear : view가 사라졌다고 알려줌.
+
+
+## 6단계
+
+Link
+
+"NavigationController를 추가하고자 하는 ViewController를 선택하고 상단에 있는 Editor -> Embed In -> Navigation Controller"
+
+https://developer.apple.com/documentation/uikit/uiviewcontroller
+
+View Controller Container : ViewController를 담는 그릇? 화면 안에 여러 ViewController를 둘 수 있는 것?
+
+NavigationController, TapBarController, SystemContainerViewController 세 가지
+
+### Implementing a Container View Controller
+
+"A custom UIViewController subclass can also act as a container view controller. A container view controller manages the presentation of content of other view controllers it owns, also known as its child view controllers. A child's view can be presented as-is or in conjunction with views owned by the container view controller."
+
+- ViewController에서 한 번에 몇 개의 child view를 보여줄 것인지 결정해줘야 한다.
+- 언제 child view를 보여줄 것인지도 결정해줘야 한다.
+- ViewController의 hierarchy에서 어느 곳에 나타나야 하는지 결정해줘야 한다.
+
+아래와 같은 함수가 눈에 띈다.
+addChild(_:)
+removeFromParent()
+willMove(toParent:)
+didMove(toParent:)
+
+### push / pop
+
+먼저 NavigationController를 통한 이해가 쉬울 것 같다. stack 구조라는 점을 떠올리자.
