@@ -31,3 +31,17 @@
 =======
 삭제 후 다시 생성
 >>>>>>> 7329cd2ad4054f30e538a952d5c2d0efbc33aefa
+
+
+---
+
+
+
+## STEP 2. IBOutlet
+
+- 레이블을 만들고 ViewController 코드에 IBOutlet으로 연결한다
+- photoDescription 레이블도 마찬가지로 연결한다
+- 레이블의 속성을 코드로 변경한다
+
+![initial](https://user-images.githubusercontent.com/73650994/107325741-a1d7cd00-6aed-11eb-8002-0937ca308d1e.png)
+
