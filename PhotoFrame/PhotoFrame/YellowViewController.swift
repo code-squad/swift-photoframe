@@ -38,7 +38,10 @@ class YellowViewController: UIViewController {
     }
 
     @IBAction func closeButtonTouched(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+//        Segue 로 진행했을때는 닫기버튼 유효
+//         self.dismiss(animated: true, completion: nil)
+        // Navigation Controller 의 경우
+        self.navigationController?.popViewController(animated: true)
     }
     // 화면전환
     @IBAction func wind(_ sender: Any) {
