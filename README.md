@@ -1,23 +1,20 @@
-# PhotoFrame-step1
-
-- Tabbed앱
-
-  <img width="400" alt="스크린샷 2021-02-08 오후 4 25 34" src="https://user-images.githubusercontent.com/42647277/107194425-5eb92380-6a33-11eb-9178-f4d8372545f9.png">
-
-  1. 기존 ViewController를 지우고 새로 TabBar Controller를 추가
-  2. Initial ViewController로 지정
-
-  
-
-  프로그래밍 요구사항
-
-  - 자동 생성된 ViewController 클래스 viewDidLoad() 함수에서 `print(#file, #line, #function, #column)` 코드를 추가하고 실행하면 콘솔 영역에 무엇이 출력되는지 확인한다.
-
-  - 콘솔화면
-
-  <img width="671" alt="스크린샷 2021-02-08 오후 5 52 43" src="https://user-images.githubusercontent.com/42647277/107196932-9c6b7b80-6a36-11eb-9fcf-f6662ecb875c.png">
+# PhotoFrame
 
 
 
--  IBOutlet
-- 
+## Step-2(IBOulet)
+
+### 요구사항
+
+- 사진액자 앱 - 시작하기 요구사항을 구현한 상태로 시작한다.
+- First Scene에 만들어져 있는 레이블을 IBOutlet으로 연결한다.
+- 연결한 아웃렛 변수에 값을 변경한다.
+- 실행한 화면을 캡처해서 readme.md 파일에 포함한다.
+
+
+
+### 실행 화면
+
+<img width="300" alt="스크린샷 2021-02-09 오전 11 03 43" src="https://user-images.githubusercontent.com/42647277/107306112-a1c4d680-6ac7-11eb-9fbe-12bf72c9f5fa.png">
+
+
