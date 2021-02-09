@@ -11,7 +11,7 @@
         <!--Item 2-->
         <scene sceneID="XoR-Nj-hda">
             <objects>
-                <viewController id="y4H-dl-r5g" sceneMemberID="viewController">
+                <viewController id="y4H-dl-r5g" customClass="SecondViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4kr-25-k5D">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,14 +27,45 @@
         <!--Item 1-->
         <scene sceneID="sqS-Zt-IK7">
             <objects>
-                <viewController id="0mY-AK-IlK" sceneMemberID="viewController">
+                <viewController id="0mY-AK-IlK" customClass="FirstViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8pV-1g-hoJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzq-ke-xyc">
+                                <rect key="frame" x="0.0" y="438" width="414" height="20"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="First View">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="NanumPen"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPa-vd-7dk">
+                                <rect key="frame" x="0.0" y="458" width="414" height="24.5"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="2OI-hL-UVa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lzq-ke-xyc" firstAttribute="leading" secondItem="2OI-hL-UVa" secondAttribute="leading" id="6lH-pB-qOB"/>
+                            <constraint firstItem="WPa-vd-7dk" firstAttribute="top" secondItem="lzq-ke-xyc" secondAttribute="bottom" id="EcT-TX-6DZ"/>
+                            <constraint firstItem="WPa-vd-7dk" firstAttribute="leading" secondItem="2OI-hL-UVa" secondAttribute="leading" id="RSd-9W-ik7"/>
+                            <constraint firstItem="2OI-hL-UVa" firstAttribute="trailing" secondItem="lzq-ke-xyc" secondAttribute="trailing" id="cRE-0Y-Yat"/>
+                            <constraint firstItem="2OI-hL-UVa" firstAttribute="trailing" secondItem="WPa-vd-7dk" secondAttribute="trailing" id="nZY-JC-tVq"/>
+                            <constraint firstItem="lzq-ke-xyc" firstAttribute="centerY" secondItem="8pV-1g-hoJ" secondAttribute="centerY" id="vVv-IR-YY3"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="6x7-1V-mnU"/>
+                    <connections>
+                        <outlet property="firstLabel" destination="lzq-ke-xyc" id="cfJ-j0-bkS"/>
+                        <outlet property="firstSubLabel" destination="WPa-vd-7dk" id="1ZB-Oq-HKJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ccd-h9-YFW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
