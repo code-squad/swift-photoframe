@@ -15,6 +15,7 @@
 		93A96E7125D13F3B0080F136 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93A96E6F25D13F3B0080F136 /* LaunchScreen.storyboard */; };
 		93A96E7D25D2252B0080F136 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A96E7C25D2252B0080F136 /* YellowViewController.swift */; };
 		93A96E8025D225430080F136 /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A96E7F25D225430080F136 /* BlueViewController.swift */; };
+		93A96E8A25D25D9E0080F136 /* PhotoAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A96E8925D25D9E0080F136 /* PhotoAlbumViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		93A96E7225D13F3B0080F136 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93A96E7C25D2252B0080F136 /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
 		93A96E7F25D225430080F136 /* BlueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueViewController.swift; sourceTree = "<group>"; };
+		93A96E8925D25D9E0080F136 /* PhotoAlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAlbumViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				93A96E7225D13F3B0080F136 /* Info.plist */,
 				93A96E7C25D2252B0080F136 /* YellowViewController.swift */,
 				93A96E7F25D225430080F136 /* BlueViewController.swift */,
+				93A96E8925D25D9E0080F136 /* PhotoAlbumViewController.swift */,
 			);
 			path = PhotoFrame;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				93A96E6525D13F380080F136 /* AppDelegate.swift in Sources */,
 				93A96E8025D225430080F136 /* BlueViewController.swift in Sources */,
 				93A96E6725D13F380080F136 /* SceneDelegate.swift in Sources */,
+				93A96E8A25D25D9E0080F136 /* PhotoAlbumViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
