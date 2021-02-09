@@ -38,20 +38,35 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by FirstViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jaq-Cb-boY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loaded by FirstViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jaq-Cb-boY">
                                 <rect key="frame" x="104" y="503.5" width="206" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D8J-GD-HnJ">
+                                <rect key="frame" x="192" y="294" width="30" height="29"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="다음">
+                                            <attributes>
+                                                <color key="NSColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="15" name=".AppleSDGothicNeoI-Regular"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="nextButtonTouched:" destination="nJz-lB-oaW" eventType="touchUpInside" id="Lz5-Lg-b7w"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wdc-lf-oxl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Jaq-Cb-boY" firstAttribute="centerX" secondItem="BkC-U0-StS" secondAttribute="centerX" id="5VF-Xh-6bw"/>
                             <constraint firstItem="Emq-qi-NMc" firstAttribute="centerY" secondItem="BkC-U0-StS" secondAttribute="centerY" id="6xz-Uk-leA"/>
-                            <constraint firstItem="Jaq-Cb-boY" firstAttribute="top" secondItem="Emq-qi-NMc" secondAttribute="bottom" constant="35" id="BVh-Ch-Kdx"/>
-                            <constraint firstItem="Jaq-Cb-boY" firstAttribute="centerY" secondItem="BkC-U0-StS" secondAttribute="centerY" id="D25-GR-vUO"/>
+                            <constraint firstItem="D8J-GD-HnJ" firstAttribute="centerX" secondItem="BkC-U0-StS" secondAttribute="centerX" id="XGi-eV-Hun"/>
                             <constraint firstItem="Emq-qi-NMc" firstAttribute="centerX" secondItem="BkC-U0-StS" secondAttribute="centerX" id="a38-nD-Rvk"/>
                         </constraints>
                     </view>

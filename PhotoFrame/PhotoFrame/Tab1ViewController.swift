@@ -18,7 +18,6 @@ class Tab1ViewController : UIViewController{
         super.viewDidLoad()
         changephotoLabelelement()
         changeDescriptionLabelelement()
-        
     }
     
     func changephotoLabelelement() -> Void{
@@ -36,4 +35,11 @@ class Tab1ViewController : UIViewController{
         self.firstDescription.alpha = 0.5
         self.firstDescription.font = .systemFont(ofSize: 15)
     }
+    
+    @IBAction func nextButtonTouched(_ sender: UIButton) {
+        self.photoLabel.textColor = .blue
+        self.photoLabel.backgroundColor = UIColor.yellow
+        self.photoLabel.alpha = 0.5
+    }
+    
 }
