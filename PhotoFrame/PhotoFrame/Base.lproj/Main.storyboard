@@ -32,8 +32,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="firstDescription" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cX8-1Q-zK5">
+                                <rect key="frame" x="0.0" y="429" width="414" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jxo-WG-Ma6">
-                                <rect key="frame" x="89" y="356" width="220" height="65"/>
+                                <rect key="frame" x="0.0" y="356" width="414" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <nil key="textColor"/>
@@ -45,12 +52,13 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="alQ-BM-p08"/>
                     <connections>
+                        <outlet property="firstDescription" destination="cX8-1Q-zK5" id="f1L-7H-hlW"/>
                         <outlet property="firstLabel" destination="Jxo-WG-Ma6" id="drz-ne-BGw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mD0-NW-U3O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="503" y="-506"/>
+            <point key="canvasLocation" x="502.89855072463774" y="-506.25"/>
         </scene>
         <!--MyUI Tab Bar Controller-->
         <scene sceneID="ZIr-cT-Syq">
