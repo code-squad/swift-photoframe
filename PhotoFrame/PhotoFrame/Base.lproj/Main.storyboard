@@ -93,7 +93,15 @@
                                 <state key="normal" title="다음"/>
                                 <connections>
                                     <action selector="clickNextButton:" destination="pXz-xf-eCx" eventType="touchUpInside" id="LpL-mL-BjZ"/>
-                                    <segue destination="TYv-RU-Cm5" kind="show" identifier="next" id="mKo-JR-QkY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TkQ-wz-qbY">
+                                <rect key="frame" x="102" y="676" width="210" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="뒤로가기"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="pXz-xf-eCx" eventType="touchUpInside" id="kwK-Ar-TlC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -101,6 +109,9 @@
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="TUC-QV-9be"/>
+                    <connections>
+                        <outlet property="nextButton" destination="mMG-yd-vMB" id="2nG-vY-C6Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hYJ-Gj-pTB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -129,16 +140,32 @@
             <objects>
                 <viewController storyboardIdentifier="third" id="TYv-RU-Cm5" customClass="ThirdViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NvL-jv-bJo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="데이터" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LcA-X4-eh3">
-                                <rect key="frame" x="137" y="164" width="141" height="97"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="데이터" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LcA-X4-eh3">
+                                <rect key="frame" x="137" y="208" width="140" height="97"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="97" id="b0p-0e-HTu"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w9o-U4-vs1">
+                                <rect key="frame" x="75" y="738" width="274" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="IdR-4Y-ePn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="뒤로가기">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="TYv-RU-Cm5" eventType="touchUpInside" id="SQu-5z-cd4"/>
+                                    <action selector="closeButtonTouched:" destination="Z7O-vu-Vh6" eventType="touchUpInside" id="ZfZ-m9-Lb3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Jke-jo-NMN"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
@@ -149,6 +176,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5e6-Ek-f3G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Z7O-vu-Vh6" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1227.536231884058" y="-565.17857142857144"/>
         </scene>

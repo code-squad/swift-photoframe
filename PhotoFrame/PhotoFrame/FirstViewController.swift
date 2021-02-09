@@ -12,6 +12,21 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var photoLabel: UILabel!
     @IBOutlet weak var firstDescription: UILabel!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print(#file, #line, #function, #column)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print(#file, #line, #function, #column)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.photoLabel.text = "okstring의 사진액자"
