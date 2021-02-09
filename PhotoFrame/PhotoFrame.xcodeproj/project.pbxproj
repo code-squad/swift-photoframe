@@ -64,8 +64,8 @@
 			children = (
 				B39E63E125D1791C00FDB471 /* AppDelegate.swift */,
 				B39E63E325D1791C00FDB471 /* SceneDelegate.swift */,
-				B39E63E525D1791C00FDB471 /* ViewController.swift */,
 				B39E63E725D1791C00FDB471 /* Main.storyboard */,
+				B39E63E525D1791C00FDB471 /* ViewController.swift */,
 				B31EEF0F25D2225600202D5D /* FirstViewController.swift */,
 				B364235925D271D4007D7E90 /* YellowViewController.swift */,
 				B364235325D25F72007D7E90 /* BlueViewController.swift */,
