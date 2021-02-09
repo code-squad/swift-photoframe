@@ -79,7 +79,7 @@ extension YellowViewController {
                 self.view.layoutIfNeeded()
             }
         } completion: { (Finished) in
-            self.dismiss(animated: true, completion: nil)
+            self.navigationController?.popViewController(animated: true)
         }
     }
     
