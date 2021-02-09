@@ -21,3 +21,11 @@
 - 새로운 scene으로 segue 연결
 
 <img width="291" alt="yellow" src="https://user-images.githubusercontent.com/75113784/107325121-8fa95f00-6aec-11eb-81af-fdacc7c3b4af.png"><img width="291" alt="blue" src="https://user-images.githubusercontent.com/75113784/107325124-91732280-6aec-11eb-86b4-ac33a2e55f32.png">
+
+## Step 5 - ViewController
+- custom view controller를 생성하고 main 스토리보드에서 연결
+- 스토리보드에서 segue를 제거하고 custom class에서 IBAction으로 화면 전환하도록 수정
+- close 버튼과 action 추가
+- view life cycle과 관련된 콜백 함수의 동작 확인
+
+<img width="291" alt="스크린샷 2021-02-09 오후 5 05 04" src="https://user-images.githubusercontent.com/75113784/107341625-8dea9600-6b02-11eb-89fd-e8f8b1ad35df.png"><img width="291" alt="스크린샷 2021-02-09 오후 5 05 08" src="https://user-images.githubusercontent.com/75113784/107341606-89be7880-6b02-11eb-8ced-bd7aa2651780.png">
