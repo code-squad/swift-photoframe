@@ -21,5 +21,8 @@ class FirstViewController: UIViewController {
     @IBOutlet var photoLabel: UILabel!
     @IBOutlet var firstDescription: UILabel!
     
+    @IBAction func nextButtonTouched(_ sender: UIButton) {
 
+    }
+    
 }
