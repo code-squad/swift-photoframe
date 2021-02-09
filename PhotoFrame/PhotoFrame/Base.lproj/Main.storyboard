@@ -102,10 +102,10 @@
             </objects>
             <point key="canvasLocation" x="784" y="385"/>
         </scene>
-        <!--View Controller-->
+        <!--Yellow View Controller-->
         <scene sceneID="DP4-OM-NCC">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="qbe-9N-v5B" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="qbe-9N-v5B" customClass="YellowViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aQ1-V2-6jG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -129,7 +129,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fja-ya-a0b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1594" y="384"/>
+            <point key="canvasLocation" x="1603" y="384"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="lbc-Ws-HeW">
