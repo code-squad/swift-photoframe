@@ -45,3 +45,21 @@
 
 ![initial](https://user-images.githubusercontent.com/73650994/107325741-a1d7cd00-6aed-11eb-8002-0937ca308d1e.png)
 
+
+
+
+----
+
+## STEP3. IBAction
+
+- UIButton 추가 및 IBAction 연결
+- propertyChangeButton 메소드에 레이블 속성 변화 기능 추가
+
+- before Button touch
+
+![initial](https://user-images.githubusercontent.com/73650994/107332622-bcaf3f00-6af7-11eb-968c-2373f9908a7e.png)
+
+- after Button touch
+
+![initial](https://user-images.githubusercontent.com/73650994/107332724-dfd9ee80-6af7-11eb-8255-6f6bebdacbb0.png)
+
