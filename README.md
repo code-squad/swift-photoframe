@@ -74,3 +74,39 @@
 <img src = "img/step02-02.png" width = "60%">
 
 Todo : AutoLayout 설정에 대해 알아보자.
+
+## Step03 - IBAction
+### 실행 영상
+<img src = "img/step03-01.gif" width ="40%">
+
+### IBAction Event
+|Event|	Description|
+|---|---|
+|touchDown|	컨트롤을 누를 때 발생하는 이벤트|
+|touchDownRepeat|	컨트롤을 연속해서 누를 때 발생하는 이벤트|
+|touchDragInside|	컨트롤 내부에서 드래그가 이루어질 때 발생하는 이벤트|
+|touchDragOutside|	컨트롤 외부에서 드래그가 이루어 질 때 발생하는 이벤트|
+|touchDragEnter	|컨트롤이 외부에서 드래그를하며 내부로 드래그를 할 때 발생하는 이벤트|
+|touchDragExit	|컨트롤의 외부로 드래그를 할 때 발생하는 이벤트|
+|touchUpInside	|컨트롤 영역 안쪽에서 터치하고 손을 뗏을 때 발생하는 이벤트|
+|touchUpOutside	|컨트롤 영역 안쪽에서 터치 후 컨트롤 외부에서 손을 뗏을 때 발생하는 이벤트|
+|touchCancel	|컨트롤의 현재 터치를 취소햇을 때 발생하는 시스템이벤트|
+|valueChanged	|컨트롤을 드래깅이나 다른 방법으로 조작해서 값이 변경됐을 때 발생하는 이벤트|
+|primaryActionTriggered	|버튼이 눌릴때|
+|editingDidBegin	|UITextField에서 수정이 시작될 때 발생하는 이벤트 ( 텍스트 필드를 터치했을 때)|
+|editingChanged	|UITextField에서 텍스트가 변경되었을 때 발생하는 이벤트|
+|editingDidEnd	|UITextField에서 수정이 끝났을 때 발생하는 이벤트 (텍스트 필드에서 포커싱이 사라질 때)|
+|editingDidEndOnExit|	UITextField의 편집중에 키보드의 return을 눌렀을 때 발생하는 이벤트|
+|allTouchEvents|	모든 터치 이벤트|
+|allEditingEvents|	UITextField에서 모든 편집 이벤트|
+|applicationReserved|	앱의 사용에 따라 지정할 수 있는 컨트롤 이벤트 값의 범위|
+|systemReserved	|내부 프레임워크 내에서 사용되는 예약된 컨트롤 이벤트 값의 범위|
+|allEvents|	시스템 이벤트를 포함한 모든 이벤트|
+
+[출처](https://o-o-wl.tistory.com/45?category=326739)
+
+### 하나의 버튼 여러액션, 버튼이 여러개일때 하나의 액션?
+
+- 하나의 버튼은 이벤트를 전달할 여러 개의 액션 메소드를 지정할 수 있다!
+
+- 하나의 IBAction에 다수의 Button 또한 등록 할 수 있다. 비슷한 유형의 작업을 하는 버튼들에게 적용하면 효율적으로 사용 할 수 있을 것 같다.
