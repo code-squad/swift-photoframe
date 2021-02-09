@@ -27,7 +27,10 @@ class FirstViewController: UIViewController{
         attributedString.addAttribute(.foregroundColor, value: UIColor.black, range: (self.firstLabel.text! as NSString).range(of: "BMO"))
         self.firstLabel.attributedText = attributedString
         
-
+        self.firstSubLabel.text = "Go Go"
+        self.firstSubLabel.textColor = UIColor.init(displayP3Red: 1, green: 1, blue: 1, alpha: 1)
+        self.firstSubLabel.backgroundColor = UIColor.init(displayP3Red: 0, green: 0, blue: 0, alpha: 0.8)
+        self.firstSubLabel.textAlignment = .center
     }
     
 }
