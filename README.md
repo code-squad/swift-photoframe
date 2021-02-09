@@ -82,3 +82,15 @@ blueViewController 추가 및 닫기 버튼 코드 추가
 
 <img width="1557" alt="스크린샷 2021-02-09 오후 3 48 39" src="https://user-images.githubusercontent.com/33626693/107326306-87eaba00-6aee-11eb-97cb-01213fd72f83.png">
 ![ezgif com-video-to-gif-3](https://user-images.githubusercontent.com/33626693/107326310-8ae5aa80-6aee-11eb-8add-1dfbde862402.gif)
+
+
+
+## Second Scene 화면
+
+#### 요구사항
+
+탭바의 두 번째 화면 (Second Scene) 디자인을 변경하고 액자 앱을 동작을 구현
+
+화면을 캡처해서 readme.md 파일에 포함
+
+![ezgif com-video-to-gif-5](https://user-images.githubusercontent.com/33626693/107354770-ea08e680-6b11-11eb-8110-e3ce7025af5d.gif)
