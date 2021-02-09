@@ -16,9 +16,9 @@ Mission1 - 포토프레임 앱
 
 4. Segue로 Scene(View Controller) 연결 2021.02.09 14:41
 <p float="left">
-<img src="images/Segue1.png" width="200" />
-<img src="images/Segue2.png" width="200" />
-<img src="images/segue3.png" width="200" />
-<img src="images/segue4.png" width="200" />
+<img src="images/Segue1.png" width="150" />
+<img src="images/Segue2.png" width="150" />
+<img src="images/segue3.png" width="150" />
+<img src="images/segue4.png" width="150" />
 </p>
 
