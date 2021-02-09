@@ -20,6 +20,11 @@ class ViewController: UIViewController {
         self.firstDescription.text = "Neo 설명"
     }
 
-    
+    @IBAction func nextButtonTouched(_ sender: UIButton) {
+    self.firstLabel.alpha = 1
+    self.firstLabel.font = .boldSystemFont(ofSize: 45)
+    self.firstLabel.backgroundColor = .yellow
+
+    }
 }
 
