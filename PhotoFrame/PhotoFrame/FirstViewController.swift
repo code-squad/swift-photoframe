@@ -22,7 +22,9 @@ class FirstViewController: UIViewController {
     @IBOutlet var firstDescription: UILabel!
     
     @IBAction func nextButtonTouched(_ sender: UIButton) {
-
+        self.photoLabel.textColor = UIColor.green
+        self.photoLabel.backgroundColor = UIColor.yellow
+        self.photoLabel.alpha = 0.5
     }
     
 }
