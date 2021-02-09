@@ -14,10 +14,16 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.changeProperty()
+    }
+    
+    func changeProperty() {
         self.photoLabel.text = "Lia의 사진액자"
         self.photoLabel.backgroundColor = .systemTeal
         self.photoLabel.textColor = .black
         self.photoLabel.alpha = 0.5
+        self.photoLabel.clipsToBounds = true
+        self.photoLabel.layer.cornerRadius = 20
         self.photoDescription.textColor = .systemGray
     }
     
