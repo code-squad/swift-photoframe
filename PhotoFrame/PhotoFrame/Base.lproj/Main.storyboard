@@ -115,6 +115,7 @@
                         <viewLayoutGuide key="safeArea" id="Srr-sA-gEB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Iip-6S-U2z"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="npr-92-f6s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="QXB-tt-OYE" userLabel="Exit" sceneMemberID="exit"/>
