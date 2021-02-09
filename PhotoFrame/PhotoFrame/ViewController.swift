@@ -9,12 +9,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var photoLabel: UILabel!
+    @IBOutlet weak var firstDescription: UILabel!
+    
 
     override func viewDidLoad() {
-        
-        print(#file, #line, #function, #column)
-        
-        
+        self.photoLabel.text = "Pico's Photo App"
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
