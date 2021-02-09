@@ -94,3 +94,15 @@
 
 - dismiss: 뷰 스택을 줄여주는 역할을 한다고 한다
 
+
+
+
+----
+
+## STEP 6. Containter ViewController
+
+- Navigation Controller Embed
+- close button revise
+
+![initial](https://user-images.githubusercontent.com/73650994/107346061-9c877c00-6b07-11eb-9b13-0930d941addf.png)
+
