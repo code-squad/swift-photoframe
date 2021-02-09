@@ -25,7 +25,7 @@
 
 <img width="2020" alt="스크린샷 2021-02-08 오후 10 57 09" src="https://user-images.githubusercontent.com/33626693/107302806-4d1e5d00-6ac1-11eb-9895-54a379cc04c3.png">
 
-## **(20.02.08:21:45:00)**
+## **(20.02.09 09:26)**
 
 ## **IBAction**
 
@@ -40,3 +40,15 @@ UIButton 추가 후 IBAction 으로 연결
 ![https://user-images.githubusercontent.com/33626693/107303721-f44fc400-6ac2-11eb-99d7-2b455526afab.png](https://user-images.githubusercontent.com/33626693/107303721-f44fc400-6ac2-11eb-99d7-2b455526afab.png)
 
 ![https://user-images.githubusercontent.com/33626693/107303716-eef27980-6ac2-11eb-9ae6-c51ae11cc190.png](https://user-images.githubusercontent.com/33626693/107303716-eef27980-6ac2-11eb-9ae6-c51ae11cc190.png)
+
+## **(20.02.09 :21:45:00)**
+
+## Scene & Segue
+
+#### 요구사항
+
+ 새로운 Scene과 Segue를 추가
+
+새로운 화면을 캡처해서 readme.md 파일에 포함
+
+![ezgif com-video-to-gif](https://user-images.githubusercontent.com/33626693/107308434-ff5b2200-6acb-11eb-88f9-89d8b2073490.gif)
