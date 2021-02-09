@@ -11,7 +11,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         print(#file, #line, #function, #column)
-        
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
