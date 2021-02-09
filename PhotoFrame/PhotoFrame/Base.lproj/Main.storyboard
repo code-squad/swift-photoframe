@@ -45,20 +45,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D8J-GD-HnJ">
-                                <rect key="frame" x="192" y="294" width="30" height="29"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WPw-4e-a5v">
+                                <rect key="frame" x="192" y="319" width="30" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="다음">
                                             <attributes>
                                                 <color key="NSColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="15" name=".AppleSDGothicNeoI-Regular"/>
+                                                <font key="NSFont" metaFont="system" size="15"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <action selector="nextButtonTouched:" destination="nJz-lB-oaW" eventType="touchUpInside" id="Lz5-Lg-b7w"/>
+                                    <action selector="nextButtonTouched:" destination="nJz-lB-oaW" eventType="touchUpInside" id="e2k-5h-zfR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -66,7 +67,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Emq-qi-NMc" firstAttribute="centerY" secondItem="BkC-U0-StS" secondAttribute="centerY" id="6xz-Uk-leA"/>
-                            <constraint firstItem="D8J-GD-HnJ" firstAttribute="centerX" secondItem="BkC-U0-StS" secondAttribute="centerX" id="XGi-eV-Hun"/>
                             <constraint firstItem="Emq-qi-NMc" firstAttribute="centerX" secondItem="BkC-U0-StS" secondAttribute="centerX" id="a38-nD-Rvk"/>
                         </constraints>
                     </view>
@@ -78,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6oW-S8-leB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="364" y="151"/>
+            <point key="canvasLocation" x="363.768115942029" y="150.66964285714286"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="8wk-os-9je">
