@@ -55,6 +55,7 @@
                                 <state key="normal" title="다음"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="adN-6m-hfu" eventType="touchUpInside" id="UL4-Xs-BrL"/>
+                                    <segue destination="Ka0-wz-fSm" kind="show" id="a0u-9z-XLR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -76,6 +77,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZUn-pa-hUB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-89" y="-474"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bKI-jR-qGw">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Ka0-wz-fSm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wrw-Y8-TrY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTF-Ep-vfR">
+                                <rect key="frame" x="187.5" y="220" width="39" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="다음"/>
+                                <connections>
+                                    <segue destination="rX9-Rg-6ml" kind="show" id="UFT-oy-esF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gJd-oF-Ieh"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="tTF-Ep-vfR" firstAttribute="centerX" secondItem="Wrw-Y8-TrY" secondAttribute="centerX" id="vrh-8o-pEM"/>
+                            <constraint firstItem="tTF-Ep-vfR" firstAttribute="top" secondItem="gJd-oF-Ieh" secondAttribute="top" constant="176" id="ykd-c9-cTZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="QxM-6Q-go0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rMX-29-plE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="751" y="-474"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="kDT-5c-hWi">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="rX9-Rg-6ml" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FCY-Xn-WXu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="rVo-YE-Lqy"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Bnz-q4-rki"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mfx-VF-Vm3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1614" y="-474"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="5Id-BG-vkT">
@@ -99,6 +146,12 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
