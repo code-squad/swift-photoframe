@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  PhotoFrame
+//  photoframe
 //
-//  Created by 이용현 on 2021/02/08.
+//  Created by 이용현 on 2021/02/09.
 //
 
 import UIKit
