@@ -29,7 +29,7 @@ class YellowViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        closeButtonUpAnimation()
+        closeButtonMoveAnimation()
         print(#file, #line, #function, #column)
     }
     
@@ -51,7 +51,7 @@ class YellowViewController: UIViewController {
 
 extension YellowViewController {
     
-    func closeButtonUpAnimation() {
+    func closeButtonMoveAnimation() {
         closeButtonConstraintBottom.constant = self.view.frame.height/2 - 100
         UIView.animate(withDuration: 0.5) {
             self.view.layoutIfNeeded()
@@ -60,20 +60,20 @@ extension YellowViewController {
     
     func viewCloseAnimation() {
         UIView.animateKeyframes(withDuration: 1, delay: 0, options: []) {
-            self.leftAnimation(self.nextButtonConstraintCenterX)
+            self.leftMoveAnimation(self.nextButtonConstraintCenterX)
             UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.25) {
                 self.view.layoutIfNeeded()
             }
-            self.upAnimation(self.nextButtonConstraintCenterY)
+            self.upMoveAnimation(self.nextButtonConstraintCenterY)
             UIView.addKeyframe(withRelativeStartTime: 0.25, relativeDuration: 0.25) {
                 self.zeroAlphaView(self.nextButton)
                 self.view.layoutIfNeeded()
             }
-            self.leftAnimation(self.closeButtonConstraintCenterX)
+            self.leftMoveAnimation(self.closeButtonConstraintCenterX)
             UIView.addKeyframe(withRelativeStartTime: 0.5, relativeDuration: 0.25) {
                 self.view.layoutIfNeeded()
             }
-            self.upAnimation(self.closeButtonConstraintBottom)
+            self.upMoveAnimation(self.closeButtonConstraintBottom)
             UIView.addKeyframe(withRelativeStartTime: 0.75, relativeDuration: 0.25) {
                 self.zeroAlphaView(self.closeButton)
                 self.view.layoutIfNeeded()
@@ -83,10 +83,10 @@ extension YellowViewController {
         }
     }
     
-    func leftAnimation(_ constraint : NSLayoutConstraint) {
+    func leftMoveAnimation(_ constraint : NSLayoutConstraint) {
         constraint.constant = -(self.view.frame.width/3)
     }
-    func upAnimation(_ constraint : NSLayoutConstraint) {
+    func upMoveAnimation(_ constraint : NSLayoutConstraint) {
         constraint.constant = -150
     }
     func zeroAlphaView(_ view : UIView) {
