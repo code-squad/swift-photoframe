@@ -24,17 +24,44 @@
             </objects>
             <point key="canvasLocation" x="334" y="343"/>
         </scene>
-        <!--Item 1-->
+        <!--First-->
         <scene sceneID="l5a-i8-G2h">
             <objects>
-                <viewController id="LWY-Lr-Hth" sceneMemberID="viewController">
+                <viewController id="LWY-Lr-Hth" customClass="FirstViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9SK-Re-jHe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MGL-fh-8CX">
+                                <rect key="frame" x="112.5" y="416" width="189" height="64.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FirstView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Wo-lS-ezf">
+                                        <rect key="frame" x="35" y="0.0" width="119.5" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" systemColor="systemPinkColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="loaded by viewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTk-UF-btX">
+                                        <rect key="frame" x="0.0" y="44" width="189" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemBlueColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="S65-B1-K7r"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MGL-fh-8CX" firstAttribute="centerX" secondItem="9SK-Re-jHe" secondAttribute="centerX" id="XqY-TE-yeh"/>
+                            <constraint firstItem="MGL-fh-8CX" firstAttribute="centerY" secondItem="9SK-Re-jHe" secondAttribute="centerY" id="aXF-e3-lEw"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="V7p-mH-d1v"/>
+                    <tabBarItem key="tabBarItem" title="First" id="V7p-mH-d1v"/>
+                    <connections>
+                        <outlet property="firstDescription" destination="DTk-UF-btX" id="Twh-Yy-soJ"/>
+                        <outlet property="firstLabel" destination="2Wo-lS-ezf" id="2nn-c1-DHo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t0i-xV-pCT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -62,6 +89,12 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

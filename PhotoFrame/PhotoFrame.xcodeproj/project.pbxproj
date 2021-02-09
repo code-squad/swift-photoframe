@@ -13,6 +13,7 @@
 		35C29B9525D24084008A5A1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35C29B9425D24084008A5A1F /* Assets.xcassets */; };
 		35C29B9825D24084008A5A1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35C29B9625D24084008A5A1F /* LaunchScreen.storyboard */; };
 		35C29BA325D243FF008A5A1F /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C29BA225D243FF008A5A1F /* TabbarViewController.swift */; };
+		35C29BA725D24A08008A5A1F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C29BA625D24A08008A5A1F /* FirstViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		35C29B9725D24084008A5A1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35C29B9925D24084008A5A1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35C29BA225D243FF008A5A1F /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
+		35C29BA625D24A08008A5A1F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				35C29B8B25D24083008A5A1F /* AppDelegate.swift */,
 				35C29B8D25D24083008A5A1F /* SceneDelegate.swift */,
+				35C29BA625D24A08008A5A1F /* FirstViewController.swift */,
 				35C29BA225D243FF008A5A1F /* TabbarViewController.swift */,
 				35C29B9125D24083008A5A1F /* Main.storyboard */,
 				35C29B9425D24084008A5A1F /* Assets.xcassets */,
@@ -140,6 +143,7 @@
 				35C29B8C25D24083008A5A1F /* AppDelegate.swift in Sources */,
 				35C29B8E25D24083008A5A1F /* SceneDelegate.swift in Sources */,
 				35C29BA325D243FF008A5A1F /* TabbarViewController.swift in Sources */,
+				35C29BA725D24A08008A5A1F /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
