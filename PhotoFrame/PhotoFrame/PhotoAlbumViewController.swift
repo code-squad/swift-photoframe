@@ -9,21 +9,29 @@ import UIKit
 
 class PhotoAlbumViewController: UIViewController {
 
+    @IBOutlet weak var photoImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func nextImageButtonTouched(_ sender: Any) {
+        self.photoImageView.image = UIImage(named: imageSelect())
     }
-    */
+}
 
+extension PhotoAlbumViewController {
+
+    func radomNumberGenerator() -> Int {
+        return Int.random(in: 1...22)
+    }
+    
+    func imageSelect() -> String {
+        let number = radomNumberGenerator()
+        if number < 10 {
+            return "0\(number).jpg"
+        }
+        return "\(number).jpg"
+    }
 }
