@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE0FF90125D27E490011F413 /* OrangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0FF90025D27E490011F413 /* OrangeViewController.swift */; };
+		AE0FF90525D27EA40011F413 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0FF90425D27EA40011F413 /* YellowViewController.swift */; };
 		AEC202FE25D13B9100CEFDCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC202FD25D13B9100CEFDCD /* AppDelegate.swift */; };
 		AEC2030025D13B9100CEFDCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC202FF25D13B9100CEFDCD /* SceneDelegate.swift */; };
 		AEC2030225D13B9100CEFDCD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC2030125D13B9100CEFDCD /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE0FF90025D27E490011F413 /* OrangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeViewController.swift; sourceTree = "<group>"; };
+		AE0FF90425D27EA40011F413 /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
 		AEC202FA25D13B9100CEFDCD /* PhotoFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEC202FD25D13B9100CEFDCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEC202FF25D13B9100CEFDCD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +66,8 @@
 				AEC202FF25D13B9100CEFDCD /* SceneDelegate.swift */,
 				AEC2030125D13B9100CEFDCD /* ViewController.swift */,
 				AECB672625D25C4C00A6BC15 /* SecondViewController.swift */,
+				AE0FF90025D27E490011F413 /* OrangeViewController.swift */,
+				AE0FF90425D27EA40011F413 /* YellowViewController.swift */,
 				AEC2030325D13B9100CEFDCD /* Main.storyboard */,
 				AEC2030625D13B9200CEFDCD /* Assets.xcassets */,
 				AEC2030825D13B9200CEFDCD /* LaunchScreen.storyboard */,
@@ -141,8 +147,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AECB672725D25C4C00A6BC15 /* SecondViewController.swift in Sources */,
+				AE0FF90125D27E490011F413 /* OrangeViewController.swift in Sources */,
 				AEC2030225D13B9100CEFDCD /* ViewController.swift in Sources */,
 				AEC202FE25D13B9100CEFDCD /* AppDelegate.swift in Sources */,
+				AE0FF90525D27EA40011F413 /* YellowViewController.swift in Sources */,
 				AEC2030025D13B9100CEFDCD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
