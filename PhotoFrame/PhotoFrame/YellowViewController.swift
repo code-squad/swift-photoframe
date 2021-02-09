@@ -11,6 +11,9 @@ class YellowViewController: UIViewController {
 
     @IBOutlet weak var closeBtn: UIButton!
     
+    @IBOutlet weak var closeBtnBottom: NSLayoutConstraint!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -22,6 +25,7 @@ class YellowViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        animation()
         print(#file, #line, #function, #column)
     }
     
@@ -37,5 +41,13 @@ class YellowViewController: UIViewController {
     
     @IBAction func closeButtonTouched(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    func animation() {
+        // 최근에 공부한 애니메이션을 적용해보겠습니다
+        closeBtnBottom.constant = self.view.frame.height/2 - 100
+        UIView.animate(withDuration: 1) {
+            self.view.layoutIfNeeded()
+        }
     }
 }

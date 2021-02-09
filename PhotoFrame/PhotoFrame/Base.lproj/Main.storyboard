@@ -137,6 +137,7 @@
                     <navigationItem key="navigationItem" id="3Fr-a1-tbX"/>
                     <connections>
                         <outlet property="closeBtn" destination="jR3-Vw-VY3" id="O6i-zF-Xk5"/>
+                        <outlet property="closeBtnBottom" destination="HPB-N8-EGH" id="ZGx-4d-gtl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fja-ya-a0b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
