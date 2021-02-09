@@ -25,13 +25,14 @@ class FirstViewController: UIViewController {
         self.firstDescription.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         self.firstDescription.alpha = 0.2
         self.firstDescription.font = firstDescription.font.withSize(20)
-        
-        let attributedString = NSMutableAttributedString(string: firstDescription.text ?? "")
-        attributedString.addAttribute(.foregroundColor, value: UIColor.blue, range: (firstDescription.text! as NSString).range(of:"SOON"))
-        firstDescription.attributedText = attributedString
     }
     
-
+    @IBAction func nextButtonTouched(_ sender: UIButton) {
+        self.photoLabel.textColor = UIColor.blue
+        self.photoLabel.backgroundColor = UIColor.yellow
+        self.photoLabel.alpha = 0.5
+    }
+    
     /*
     // MARK: - Navigation
 
