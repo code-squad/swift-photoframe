@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--First View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="FirstViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,7 +48,7 @@
                             <constraint firstItem="hUM-Ti-09s" firstAttribute="top" secondItem="rxm-b2-avS" secondAttribute="bottom" constant="8" id="pQs-XO-SGR"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="star.fill" catalog="system" id="U49-vg-ld5"/>
+                    <navigationItem key="navigationItem" id="Eg5-fa-cBu"/>
                     <connections>
                         <outlet property="firstLabel" destination="rxm-b2-avS" id="Iy2-6a-TF2"/>
                         <outlet property="firstdescription" destination="hUM-Ti-09s" id="m3w-TH-pxc"/>
@@ -56,30 +56,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="939.13043478260875" y="93.75"/>
+            <point key="canvasLocation" x="1849.2753623188407" y="93.75"/>
         </scene>
         <!--Yellow View Controller-->
         <scene sceneID="cQx-ut-ShI">
             <objects>
                 <viewController id="Nki-Ot-inv" customClass="YellowViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KFN-qh-pkD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="250" translatesAutoresizingMaskIntoConstraints="NO" id="JG2-Gv-Foi">
-                                <rect key="frame" x="20" y="20" width="374" height="42"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yellow View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ees-jf-XI7">
+                                <rect key="frame" x="116" y="426.5" width="182" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="JG2-Gv-Foi">
+                                <rect key="frame" x="147" y="477.5" width="120" height="36"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPC-kf-PYD">
-                                        <rect key="frame" x="0.0" y="0.0" width="62" height="42"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Close"/>
                                         <connections>
                                             <action selector="closeButtonTouched:" destination="Nki-Ot-inv" eventType="touchUpInside" id="Azd-RM-jhs"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajk-uM-NvU">
-                                        <rect key="frame" x="312" y="0.0" width="62" height="42"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <rect key="frame" x="70" y="0.0" width="50" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Next"/>
                                         <connections>
                                             <action selector="nextButtonTouched:" destination="Nki-Ot-inv" eventType="touchUpInside" id="6pY-6D-jTW"/>
@@ -87,27 +93,27 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yellow View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ees-jf-XI7">
-                                <rect key="frame" x="116" y="399.5" width="182" height="43"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LOM-uj-TH3"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
+                            <constraint firstItem="JG2-Gv-Foi" firstAttribute="top" secondItem="ees-jf-XI7" secondAttribute="bottom" constant="8" id="LQH-OH-xsL"/>
                             <constraint firstItem="ees-jf-XI7" firstAttribute="centerY" secondItem="KFN-qh-pkD" secondAttribute="centerY" id="Tfn-HD-jmL"/>
                             <constraint firstItem="ees-jf-XI7" firstAttribute="centerX" secondItem="KFN-qh-pkD" secondAttribute="centerX" id="haa-4D-r4O"/>
-                            <constraint firstItem="JG2-Gv-Foi" firstAttribute="top" secondItem="LOM-uj-TH3" secondAttribute="top" constant="20" id="sCL-59-iBH"/>
                             <constraint firstItem="JG2-Gv-Foi" firstAttribute="centerX" secondItem="KFN-qh-pkD" secondAttribute="centerX" id="wQn-Eh-Iyv"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="0F2-ke-Zs1"/>
+                    <navigationItem key="navigationItem" id="0F2-ke-Zs1">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="SyB-cD-gCw">
+                            <connections>
+                                <action selector="NextBarButtonTouched:" destination="Nki-Ot-inv" id="SHR-4k-cZH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1UB-XS-Wi5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1680" y="94"/>
+            <point key="canvasLocation" x="2589.8550724637685" y="93.75"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="nSB-kh-UZ8">
@@ -135,7 +141,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DLP-5V-ZkT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2422" y="94"/>
+            <point key="canvasLocation" x="3331.884057971015" y="93.75"/>
         </scene>
         <!--Item-->
         <scene sceneID="vyi-Wv-YUL">
@@ -164,13 +170,32 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="5Pn-AL-2eg"/>
+                        <segue destination="89K-EY-i8f" kind="relationship" relationship="viewControllers" id="5Pn-AL-2eg"/>
                         <segue destination="NLP-Wy-6Fm" kind="relationship" relationship="viewControllers" id="vhV-pC-cZP"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HZ1-0t-IXx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32" y="417"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="kLf-G1-L76">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="89K-EY-i8f" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="star.fill" catalog="system" id="U49-vg-ld5"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wqt-lm-Rvx">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Dke-Bf-vA5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QTy-tS-QTW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="939.13043478260875" y="93.75"/>
         </scene>
     </scenes>
     <resources>
