@@ -1,21 +1,31 @@
 //
-//  ViewController.swift
+//  SecondViewController.swift
 //  PhotoFrame
 //
-//  Created by Issac on 2021/02/08.
+//  Created by Issac on 2021/02/09.
 //
 
 import UIKit
 
-class ViewController: UITabBarController {
-
+class SecondViewController: UIViewController {
+    
     override func viewDidLoad() {
-        super.viewDidLoad() 
-        print(#file, #line, #function, #column)
+        super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func clickNextButton(_ sender: UIButton) {
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "next" {
+            if let vc = segue.destination as? ThirdViewController {
+                vc.data = "Hello!"
+            }
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
