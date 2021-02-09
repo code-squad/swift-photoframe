@@ -41,7 +41,7 @@ UIButton 추가 후 IBAction 으로 연결
 
 ![https://user-images.githubusercontent.com/33626693/107303716-eef27980-6ac2-11eb-9ae6-c51ae11cc190.png](https://user-images.githubusercontent.com/33626693/107303716-eef27980-6ac2-11eb-9ae6-c51ae11cc190.png)
 
-## **(20.02.09 :21:45:00)**
+## **(20.02.09 10:45)**
 
 ## Scene & Segue
 
@@ -52,3 +52,16 @@ UIButton 추가 후 IBAction 으로 연결
 새로운 화면을 캡처해서 readme.md 파일에 포함
 
 ![ezgif com-video-to-gif](https://user-images.githubusercontent.com/33626693/107308434-ff5b2200-6acb-11eb-88f9-89d8b2073490.gif)
+
+## (20.02.09 11:30)
+
+## ViewController 프로그래밍
+
+#### 요구사항
+
+클래스 코드와 연결해서 동작
+
+새로운 화면 캡쳐해서 readme.md 포함
+
+<img width="1706" alt="스크린샷 2021-02-09 오후 2 16 40" src="https://user-images.githubusercontent.com/33626693/107319182-9ed6df80-6ae1-11eb-9ce6-31bb250a46d4.png">
+![ezgif com-video-to-gif-2](https://user-images.githubusercontent.com/33626693/107319201-a7c7b100-6ae1-11eb-953c-589f467c9a21.gif)
