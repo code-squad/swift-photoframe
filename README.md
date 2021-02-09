@@ -93,3 +93,26 @@ Keychaain Access에서 git과 관련된 항목 삭제, git credential 삭제, gi
 <img src="https://user-images.githubusercontent.com/56751259/107318500-418e5e80-6ae0-11eb-80c4-053a9c7e4aed.gif" width=50%>
 
 완성 일자 및 시간: 2021-02-09 02:09PM
+
+
+## Step4. Scene과 Segue
+
+### 미션 수행
+1. 버튼을 선택하고 ctrl + 드래그해 Scene에 연결 (Segue)
+2. Scene과 Scene 사이의 화살표를 선택해 Segue 속성 변경
+
+**시뮬레이터 스크린샷**
+
+<img src="https://user-images.githubusercontent.com/56751259/107336213-30534b00-6afc-11eb-87ca-070aef045b19.gif" width=50%>
+
+완성 일자 및 시간: 2021-02-09 05:27PM
+
+### TIL
+
+* Types of segues
+	* Show (e.g. Push)
+	* Show Detail (e.g. Replace)
+	* Present Modally
+	* Present As Popover
+
+	To Be Added
