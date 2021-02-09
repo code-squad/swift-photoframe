@@ -19,12 +19,20 @@ class ViewController: UIViewController {
     
     func changeProperty() {
         self.photoLabel.text = "Lia의 사진액자"
-        self.photoLabel.backgroundColor = .systemTeal
         self.photoLabel.textColor = .black
+        self.photoLabel.backgroundColor = .systemTeal
         self.photoLabel.alpha = 0.5
         self.photoLabel.clipsToBounds = true
         self.photoLabel.layer.cornerRadius = 20
         self.photoDescription.textColor = .systemGray
+    }
+    
+    @IBAction func propertyChangeButton(_ sender: Any) {
+        self.photoLabel.textColor = .systemTeal
+        self.photoLabel.backgroundColor = .black
+        self.photoLabel.alpha = 0.5
+        self.photoLabel.clipsToBounds = true
+        self.photoLabel.layer.cornerRadius = 20
     }
     
 }
