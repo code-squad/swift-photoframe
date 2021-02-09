@@ -121,7 +121,7 @@
                                 <rect key="frame" x="192" y="783" width="30" height="30"/>
                                 <state key="normal" title="닫기"/>
                                 <connections>
-                                    <action selector="closeButtonTouched:" destination="qbe-9N-v5B" eventType="touchUpInside" id="q5a-Sv-fv0"/>
+                                    <action selector="closeButtonTouched:" destination="qbe-9N-v5B" eventType="touchUpInside" id="9ey-yv-S6X"/>
                                 </connections>
                             </button>
                         </subviews>
