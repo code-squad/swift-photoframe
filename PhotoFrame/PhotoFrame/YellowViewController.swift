@@ -9,6 +9,8 @@ import UIKit
 
 class YellowViewController: UIViewController {
 
+    @IBOutlet weak var closeBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -31,5 +33,9 @@ class YellowViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         print(#file, #line, #function, #column)
+    }
+    
+    @IBAction func closeButtonTouched(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
 }
