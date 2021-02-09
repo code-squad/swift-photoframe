@@ -107,6 +107,7 @@
 
 ![initial](https://user-images.githubusercontent.com/73650994/107346061-9c877c00-6b07-11eb-9b13-0930d941addf.png)
 
+<<<<<<< HEAD
 
 
 ---
@@ -123,3 +124,5 @@
 - 이미지 뷰 속성 관리 : content mode
 - aspect fill 을 사용 (원본 비율, UIImageView 화면에 꽉 참)
 
+=======
+>>>>>>> 52631559208345861a4848606fac865ce04347ff
