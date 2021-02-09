@@ -15,3 +15,9 @@
 - next 버튼에 `IBAction` 연결하고 구현부 작성
 
 <img width="291" alt="before" src="https://user-images.githubusercontent.com/75113784/107311569-e6ee0600-6ad1-11eb-95f6-3538d4292ed2.png"><img width="291" alt="next" src="https://user-images.githubusercontent.com/75113784/107311279-66c7a080-6ad1-11eb-9ee6-da09811eb0ae.png">
+
+## Step 4 - Segue
+- `Main.storyboard`에 scene 추가
+- 새로운 scene으로 segue 연결
+
+<img width="291" alt="yellow" src="https://user-images.githubusercontent.com/75113784/107325121-8fa95f00-6aec-11eb-81af-fdacc7c3b4af.png"><img width="291" alt="blue" src="https://user-images.githubusercontent.com/75113784/107325124-91732280-6aec-11eb-86b4-ac33a2e55f32.png">
