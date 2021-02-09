@@ -26,4 +26,7 @@ class FirstViewController: UIViewController {
         self.firstLabel.attributedText = fontAttribute
         self.firstDescription.alpha = 0.5
     }
+    
+    @IBAction func nextButtonTouched(_ sender: Any) {
+    }
 }
