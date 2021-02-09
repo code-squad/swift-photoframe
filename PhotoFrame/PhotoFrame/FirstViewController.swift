@@ -12,7 +12,12 @@ class FirstViewController: UIViewController {
     
     @IBOutlet var photoLabel: UILabel!
     @IBOutlet var photoDiscription: UILabel!
-    
+    @IBAction func nextButtonTouched(_ sender: Any) {
+        self.photoLabel.textColor = UIColor.blue
+        self.photoLabel.backgroundColor = UIColor.yellow
+        self.photoLabel.alpha = 0.5
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.photoLabel.text = "Dumba의 사진 액자"

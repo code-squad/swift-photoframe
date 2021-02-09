@@ -44,14 +44,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SvW-nQ-5YN">
+                                <rect key="frame" x="192" y="377" width="30" height="30"/>
+                                <state key="normal" title="다음"/>
+                                <connections>
+                                    <action selector="nextButtonTouched:" destination="ykQ-4V-MQE" eventType="touchUpInside" id="ofs-QH-dZU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Vrg-68-r3E"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Wxq-iV-Bjv" firstAttribute="top" secondItem="awo-zj-g0Q" secondAttribute="top" constant="69" id="3Lm-9B-Mdr"/>
-                            <constraint firstItem="awo-zj-g0Q" firstAttribute="centerY" secondItem="Vrg-68-r3E" secondAttribute="centerY" id="Iek-8e-dV9"/>
-                            <constraint firstItem="awo-zj-g0Q" firstAttribute="centerX" secondItem="Vrg-68-r3E" secondAttribute="centerX" id="Pe4-MT-RFE"/>
-                            <constraint firstItem="Wxq-iV-Bjv" firstAttribute="centerX" secondItem="Vrg-68-r3E" secondAttribute="centerX" id="qBx-zo-eTm"/>
+                            <constraint firstItem="SvW-nQ-5YN" firstAttribute="centerX" secondItem="Vrg-68-r3E" secondAttribute="centerX" id="0Nc-4D-DRE"/>
+                            <constraint firstItem="awo-zj-g0Q" firstAttribute="centerX" secondItem="Vrg-68-r3E" secondAttribute="centerX" id="a6c-Rs-KFq"/>
+                            <constraint firstItem="Wxq-iV-Bjv" firstAttribute="top" secondItem="awo-zj-g0Q" secondAttribute="top" constant="69" id="g3A-2A-xct"/>
+                            <constraint firstItem="SvW-nQ-5YN" firstAttribute="top" secondItem="awo-zj-g0Q" secondAttribute="top" constant="-30" id="uR2-B3-p9m"/>
+                            <constraint firstItem="Wxq-iV-Bjv" firstAttribute="centerX" secondItem="Vrg-68-r3E" secondAttribute="centerX" id="v0o-kF-Ytl"/>
+                            <constraint firstItem="awo-zj-g0Q" firstAttribute="centerY" secondItem="Vrg-68-r3E" secondAttribute="centerY" id="x7e-0q-hrj"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="TbO-Eb-f9i"/>
