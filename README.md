@@ -96,4 +96,5 @@ ex) git push --set-upstream origin photoframe-step1
 
 ## 실습 중 모든 질문은 슬랙 채널에서...
 
-![before](/images/스크린샷 2021-02-09 17.54.49)
+![before](/images/before)
+![after](/images/after)
