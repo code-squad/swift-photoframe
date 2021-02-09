@@ -124,6 +124,22 @@
                                     <action selector="closeButtonTouched:" destination="qbe-9N-v5B" eventType="touchUpInside" id="q5a-Sv-fv0"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJG-Mz-Knn">
+                                <rect key="frame" x="282" y="98" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="qbe-9N-v5B" eventType="touchUpInside" id="Xsl-7o-UPb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="key-7o-dsh">
+                                <rect key="frame" x="184" y="98" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="qbe-9N-v5B" eventType="touchUpInside" id="3mY-iC-WQp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="O6y-zt-qAH"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
