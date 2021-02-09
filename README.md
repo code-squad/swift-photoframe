@@ -18,7 +18,7 @@ Mission1 - 포토프레임 앱
 <p float="left">
 <img src="images/Segue1.png" width="200" />
 <img src="images/Segue2.png" width="200" />
-<img src="images/Segue3.png" width="200" />
-<img src="images/Segue4.png" width="200" />
+<img src="images/segue3.png" width="200" />
+<img src="images/segue4.png" width="200" />
 </p>
 
