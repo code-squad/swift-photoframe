@@ -44,7 +44,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="Pg0-fo-sWc"/>
+                    <navigationItem key="navigationItem" id="wAa-MY-hyM"/>
                     <connections>
                         <outlet property="photoDescription" destination="Neg-4j-hQI" id="Y8t-YW-Zky"/>
                         <outlet property="photoLabel" destination="PNg-QF-272" id="KLT-Co-Qa3"/>
@@ -52,14 +52,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="917.60000000000002" y="-149.26108374384236"/>
+            <point key="canvasLocation" x="1860" y="-149.26108374384236"/>
         </scene>
         <!--Orange View Controller-->
         <scene sceneID="TU3-83-nzq">
             <objects>
                 <viewController id="tgf-uW-Y19" customClass="OrangeViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B5a-MW-cVn">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" clipsSubviews="YES" alpha="0.90000000000000002" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anI-OP-Vec">
@@ -94,14 +94,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r7V-dM-H2T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1672.8" y="-149.26108374384236"/>
+            <point key="canvasLocation" x="2615.1999999999998" y="-149.26108374384236"/>
         </scene>
         <!--Yellow View Controller-->
         <scene sceneID="kcW-Aw-pCA">
             <objects>
                 <viewController id="exQ-lX-4K0" customClass="YellowViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V55-C3-nsg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ljt-N5-DjC">
@@ -124,7 +124,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vMT-r5-x0H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2453.5999999999999" y="-149.26108374384236"/>
+            <point key="canvasLocation" x="3396" y="-149.26108374384236"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ZCB-lt-fCk">
@@ -137,7 +137,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="O34-AO-KOS"/>
+                        <segue destination="nF0-Ia-e7a" kind="relationship" relationship="viewControllers" id="O34-AO-KOS"/>
                         <segue destination="76N-rg-WUd" kind="relationship" relationship="viewControllers" id="WkF-hf-7Sb"/>
                     </connections>
                 </tabBarController>
@@ -160,6 +160,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hiA-wF-TW1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="918" y="525"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rod-32-Ed7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nF0-Ia-e7a" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="Pg0-fo-sWc"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ydh-mO-eTE">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="hXK-jM-hPW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LP9-5b-M7R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="917.60000000000002" y="-149.26108374384236"/>
         </scene>
     </scenes>
     <resources>
