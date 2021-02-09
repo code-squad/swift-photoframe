@@ -32,14 +32,20 @@ class YellowViewController: UIViewController {
     }
     
     // MARK: - IBAction
+    @IBAction func NextBarButtonTouched(_ sender: Any) {
+        if let blueVC = storyboard?.instantiateViewController(identifier: "blueVC") {
+            navigationController?.pushViewController(blueVC, animated: true)
+        }
+    }
+    
     @IBAction func nextButtonTouched(_ sender: Any) {
         if let blueVC = storyboard?.instantiateViewController(identifier: "blueVC") {
-            present(blueVC, animated: true, completion: nil)
+            navigationController?.pushViewController(blueVC, animated: true)
         }
     }
     
     @IBAction func closeButtonTouched(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
 
 }
