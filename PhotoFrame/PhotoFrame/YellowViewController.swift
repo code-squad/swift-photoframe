@@ -25,7 +25,7 @@ class YellowViewController: UIViewController {
         print(#file, #line, #function, #column)
     }
     @IBAction func closeButtonTouched(_ sender: UIButton) {
-        self.dismiss(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     
 }

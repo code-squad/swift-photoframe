@@ -16,7 +16,6 @@ class FirstViewController: UIViewController {
         self.firstDescription.text = "Zeke의 사진액자"
         self.firstDescription.adjustsFontSizeToFitWidth = true
         self.firstDescription.textAlignment = .center
-
     }
     @IBOutlet var photoLabel: UILabel!
     @IBOutlet var firstDescription: UILabel!
