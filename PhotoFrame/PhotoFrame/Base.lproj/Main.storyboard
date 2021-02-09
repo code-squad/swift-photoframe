@@ -22,15 +22,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFv-ZF-swK">
+                                <rect key="frame" x="186" y="473.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="EKG-OY-5GI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3am-dW-QSC"/>
+                            <constraint firstItem="EFv-ZF-swK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6of-Fs-RaR"/>
                             <constraint firstItem="EKG-OY-5GI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8zl-EO-EIy"/>
+                            <constraint firstItem="EFv-ZF-swK" firstAttribute="top" secondItem="EKG-OY-5GI" secondAttribute="bottom" constant="15" id="DPy-Hf-0Hm"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="hBV-wn-REI"/>
+                    <connections>
+                        <outlet property="firstDescription" destination="EFv-ZF-swK" id="9Ds-MJ-748"/>
+                        <outlet property="firstLabel" destination="EKG-OY-5GI" id="QMF-Cw-yui"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
