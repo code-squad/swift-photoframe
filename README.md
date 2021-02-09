@@ -49,8 +49,8 @@ Keychaain Access에서 git과 관련된 항목 삭제, git credential 삭제, gi
 	A literal expression consists of either an ordinary literal (such as a string or a number), an array or dictionary literal, a playground literal, or one of the following special literals:
 
 	|Literal|Type|Value|Example|
-	|--|--|----------------|---|
-	|`#file`|`String`|The path to the file in which it appears.|`/Users/song/development/swift/masters/2021-iOS/swift-photoframe/PhotoFrame/PhotoFrame/ViewController.swift `|
+	|---|---|---|---|
+	|`#file`|`String`|The path to the file in which it appears.|`/Users/song/.../PhotoFrame/ViewController.swift `|
 	|`#fileID`|`String`|The name of the file and module in which it appears.|
 	|`#filePath`|`String`|The path to the file in which it appears.|
 	|`#line`|`Int`|The line number on which it appears.|`14`|
