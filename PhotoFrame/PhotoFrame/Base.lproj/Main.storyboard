@@ -53,6 +53,7 @@
                                 <connections>
                                     <action selector="nextButtonTouchedDown:" destination="ST0-J0-hHk" eventType="touchDown" id="l86-Gg-cV2"/>
                                     <action selector="nextButtonTouchedUpInside:" destination="ST0-J0-hHk" eventType="touchUpInside" id="5Fu-ty-1bj"/>
+                                    <segue destination="0NZ-RY-Sam" kind="show" id="QRh-S4-ESi"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -68,6 +69,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fFC-Li-Y8b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="771.01449275362324" y="-417.1875"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gv2-Mx-3Oh">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="0NZ-RY-Sam" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xBY-dQ-ium">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="pfC-Od-a9U"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wUX-Qy-MrY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Db-TI-wHD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1445" y="-417"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Hv3-HY-Rvp">
@@ -91,6 +108,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
