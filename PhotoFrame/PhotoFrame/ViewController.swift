@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var firstLabel: UILabel!
     
     @IBOutlet weak var firstDescription: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -26,7 +27,7 @@ class ViewController: UIViewController {
         self.firstDescription.text = "Loaded by FirstViewController"
         let font = UIFont(name: "Apple Color Emoji", size: 50)
         
-        var attributeStr = NSMutableAttributedString(string: firstDescription.text!)
+        let attributeStr = NSMutableAttributedString(string: firstDescription.text!)
         attributeStr.addAttribute(.font, value: font, range: (firstDescription.text as! NSString).range(of: "First"))
         attributeStr.addAttribute(.foregroundColor, value: UIColor.blue, range: (firstDescription.text as! NSString).range(of: "First"))
         attributeStr.addAttribute(.backgroundColor, value: UIColor.red, range: (firstDescription.text as! NSString).range(of: "ller"))
@@ -34,6 +35,11 @@ class ViewController: UIViewController {
         firstDescription.attributedText = attributeStr
     }
 
-
+    @IBAction func nextButtonTouched(_ sender: UIButton) {
+        self.firstLabel.textColor = UIColor.blue
+        self.firstLabel.backgroundColor = UIColor.yellow
+        self.firstLabel.alpha = 0.5
+    }
+    
 }
 
