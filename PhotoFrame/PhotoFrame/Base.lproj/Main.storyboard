@@ -56,6 +56,7 @@
                                 <connections>
                                     <action selector="nextButtonTouchDown:" destination="0mY-AK-IlK" eventType="touchDown" id="bod-Q6-ayO"/>
                                     <action selector="nextButtonTouchUp:" destination="0mY-AK-IlK" eventType="touchUpInside" id="CfY-Dh-5kH"/>
+                                    <segue destination="XnF-nv-Z6b" kind="show" id="stl-yG-2N8"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -83,6 +84,33 @@
             <point key="canvasLocation" x="22" y="-347"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="wi5-io-RFP">
+            <objects>
+                <viewController id="XnF-nv-Z6b" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Urx-yR-7gx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fcj-RK-P2e">
+                                <rect key="frame" x="185" y="400" width="44" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="다음"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5WQ-oC-ZdH"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="Fcj-RK-P2e" firstAttribute="centerY" secondItem="Urx-yR-7gx" secondAttribute="centerY" id="d8L-jm-luU"/>
+                            <constraint firstItem="Fcj-RK-P2e" firstAttribute="centerX" secondItem="Urx-yR-7gx" secondAttribute="centerX" id="eMT-A6-ucu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hzt-Fb-A6b"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UjG-2A-G17" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="842" y="-348"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="Txy-D4-YRF">
             <objects>
                 <tabBarController id="hA5-wD-ars" customClass="ViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
@@ -104,6 +132,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
