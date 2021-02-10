@@ -80,3 +80,25 @@ TabBarController의 TabBar중 한번에 하나만 선택되는 Radio Mode 각각
 [출처1](https://o-o-wl.tistory.com/45)
 [출처2](https://roeldowney.tistory.com/65)
 [UIControl.Event](https://developer.apple.com/documentation/uikit/uicontrol/event)
+
+# 4단계 Scene과 Segue
+
+1. Main 스토리보드에서 First Scene 옆에 ViewController를 드래그해서 새로운 Scene을 추가한다.
+
+2. 앞 단계에서 추가한 [다음]버튼을 선택하고 Control + 드래그를 해서 새로 추가한 Scene에 연결한다.
+
+3. 팝업으로 표시되는 Action Segue에서 Show 항목을 선택한다.
+
+4. 새로 추가한 Scene 속성에서 배경 색상(Background Color)을 원하는 색상으로 변경한다. 새로 앱을 실행해보고 [다음] 버튼을 누르면 새로운 화면이 나타나는지 확인한다.
+
+5. 다시 스토리보드에서 위에 추가한 Scene (혹은 ViewController)에 [다음] 버튼을 추가한다. 우측 옆에 한 단계 더 표현하기 위한 ViewController를 추가하고 배경 색상을 다른 색상으로 변경한다. 위와 마찬가지로 [다음]버튼에서 새 Scene으로 Segue를 연결한다.
+
+<img width="1792" alt="스크린샷 2021-02-10 오후 2 37 09" src="https://user-images.githubusercontent.com/73586326/107470014-183c0400-6bae-11eb-918f-98f583c23676.png">
+
+![Simulator Screen Shot - iPhone 11 - 2021-02-10 at 14 37 00](https://user-images.githubusercontent.com/73586326/107470126-3dc90d80-6bae-11eb-8c04-d99c5649f6d2.png)
+
+![Simulator Screen Shot - iPhone 11 - 2021-02-10 at 14 20 31](https://user-images.githubusercontent.com/73586326/107470148-44f01b80-6bae-11eb-9876-65a6e65bfbe9.png)
+
+![Simulator Screen Shot - iPhone 11 - 2021-02-10 at 14 20 38](https://user-images.githubusercontent.com/73586326/107470179-51747400-6bae-11eb-88e8-32dc18c943b8.png)
+
+
