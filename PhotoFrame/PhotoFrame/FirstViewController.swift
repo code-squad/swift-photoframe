@@ -25,7 +25,24 @@ class FirstViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(#file,#function,#line,#column)
         self.photoLabel.text = "Dumba의 사진 액자"
         self.photoDiscription.text = "안녕하세요"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print(#file,#function,#line,#column)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print(#file,#function,#line,#column)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        print(#file,#function,#line,#column)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        print(#file,#function,#line,#column)
     }
 }
