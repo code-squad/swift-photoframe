@@ -15,6 +15,12 @@ class PurpleViewController: UIViewController {
         print()
     }
     
+    @IBAction func nextButtonTouched(_ sender: Any) {
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        let redVC = main.instantiateViewController(identifier: "RedVC")
+        self.present(redVC, animated: true, completion: nil)
+    }
+    
     @IBAction func closeButtonTouched(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }

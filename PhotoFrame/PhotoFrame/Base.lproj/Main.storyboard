@@ -91,6 +91,9 @@
                                 <state key="normal" title="다음">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextButtonTouched:" destination="xBJ-w0-85a" eventType="touchUpInside" id="Kws-OE-vdd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHU-1l-aju">
                                 <rect key="frame" x="180" y="418" width="30" height="30"/>
@@ -115,7 +118,7 @@
         <!--Red View Controller-->
         <scene sceneID="kRN-Os-tnW">
             <objects>
-                <viewController id="54f-3A-hpB" customClass="RedViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="RedVC" storyboardIdentifier="RedVC" id="54f-3A-hpB" customClass="RedViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kd0-mv-Of2">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
