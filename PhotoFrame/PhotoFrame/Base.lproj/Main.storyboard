@@ -121,6 +121,16 @@
                     <view key="view" contentMode="scaleToFill" id="Oe8-bE-9al">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFh-iI-ziN">
+                                <rect key="frame" x="192" y="225" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="다음"/>
+                                <connections>
+                                    <segue destination="r6e-3r-kJ3" kind="modal" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="NzG-8f-lqN"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="kzI-Ye-Ret"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                     </view>
@@ -130,6 +140,22 @@
             </objects>
             <point key="canvasLocation" x="1374" y="-506"/>
         </scene>
+        <!--NextNextOfFirstView-->
+        <scene sceneID="3Ro-sJ-Bb3">
+            <objects>
+                <viewController title="NextNextOfFirstView" id="r6e-3r-kJ3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mWG-95-hBn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4Pw-j7-ovR"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="d05-6a-2fP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PoU-1m-ydr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2204" y="-506"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
@@ -137,6 +163,9 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
