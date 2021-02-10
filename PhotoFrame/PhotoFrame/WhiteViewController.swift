@@ -51,6 +51,10 @@ class WhiteViewController: UIViewController {
         self.photoLabel.textColor = .black
         self.photoLabel.backgroundColor = .clear
         self.photoLabel.alpha = 1
+        
+        let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
+        let nextVC = mainStoryBoard.instantiateViewController(withIdentifier: "YellowVC")
+        self.present(nextVC, animated: true, completion: nil)
     }
     
     @IBAction func nextButtonTouchedDown(_ sender: Any) {
