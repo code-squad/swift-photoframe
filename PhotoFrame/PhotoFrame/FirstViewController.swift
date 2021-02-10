@@ -19,7 +19,7 @@ class FirstViewController: UIViewController {
         self.firstDescription.textColor = UIColor.white
         self.firstDescription.backgroundColor = UIColor.blue
         self.firstDescription.font = UIFont.boldSystemFont(ofSize: 15)
-        print(#file, #line, #function, #column)
+        print("1st ViewDidLoad")
     }
 
     @IBAction func nextButtonTouched(_ sender: Any) {
@@ -29,22 +29,23 @@ class FirstViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print(#file, #line, #function, #column)
+        print("1st ViewWillAppear")
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print(#file, #line, #function, #column)
+        print("1st ViewDidAppear")
+        print()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        print(#file, #line, #function, #column)
+        print("1st ViewWillDisappear")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        print(#file, #line, #function, #column)
+        print("1st ViewDidDisappear")
     }
 }
 
