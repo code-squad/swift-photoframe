@@ -9,9 +9,13 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet var photoImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
-
+    @IBAction func nextImageButtonTouched(_ sender: UIButton) {
+    }
+    
 }
