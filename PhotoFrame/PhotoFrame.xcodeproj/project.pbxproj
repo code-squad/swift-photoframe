@@ -14,6 +14,7 @@
 		1E1D7A9525D13F6100361757 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E1D7A9425D13F6100361757 /* Assets.xcassets */; };
 		1E1D7A9825D13F6100361757 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E1D7A9625D13F6100361757 /* LaunchScreen.storyboard */; };
 		1E577EFE25D268CD0033DCED /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E577EFD25D268CD0033DCED /* FirstViewController.swift */; };
+		1E81EAF625D3BF7F0031513E /* NextOfFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E81EAF525D3BF7F0031513E /* NextOfFirstViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		1E1D7A9725D13F6100361757 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E1D7A9925D13F6100361757 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E577EFD25D268CD0033DCED /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		1E81EAF525D3BF7F0031513E /* NextOfFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextOfFirstViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				1E1D7A9625D13F6100361757 /* LaunchScreen.storyboard */,
 				1E1D7A9925D13F6100361757 /* Info.plist */,
 				1E577EFD25D268CD0033DCED /* FirstViewController.swift */,
+				1E81EAF525D3BF7F0031513E /* NextOfFirstViewController.swift */,
 			);
 			path = PhotoFrame;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E1D7A9025D13F5E00361757 /* MyUITabBarController.swift in Sources */,
+				1E81EAF625D3BF7F0031513E /* NextOfFirstViewController.swift in Sources */,
 				1E1D7A8C25D13F5E00361757 /* AppDelegate.swift in Sources */,
 				1E1D7A8E25D13F5E00361757 /* SceneDelegate.swift in Sources */,
 				1E577EFE25D268CD0033DCED /* FirstViewController.swift in Sources */,
