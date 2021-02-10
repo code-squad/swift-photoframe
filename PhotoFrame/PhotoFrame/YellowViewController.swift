@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class YellowViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
