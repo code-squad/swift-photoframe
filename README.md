@@ -174,7 +174,7 @@ ViewController에 UIImageView를 가득 채우고 안에 Core Graphics로 Draw. 
 
 ~~앞에서 UITabBar는 Controller라고 했다. UITabBar가 가지는 요소는 UITabBarItem objects인데, 하나 이상의 이 objects에 대한 Controller이지 않을까 싶은 생각이 들었다. 반면에 UITabBarController는 Container View Controller로써 View Controller를 제어하는 하나의 Controller로 이해하고 있다.~~
 
-위 1단계 내용에서 수정한 내용 참고.
+위 1단계 내용에서 수정한 내용 참고하면 된다.
 
 ## UILabel Property
 
@@ -182,9 +182,11 @@ text, attributedText, font, textColor, textAlignment, lineBreakMode 등
 
 ## View Controller Life Cycle
 
-https://zeddios.tistory.com/43
 
-https://zeddios.tistory.com/44
+Link
+<https://zeddios.tistory.com/43>
+
+<https://zeddios.tistory.com/44>
 
 위 Zedd님의 글에서 이미지의 내용을 살펴보겠다. 첫 번째 View Controller에서 두 번째 View Controller로 이동, 다시 첫 번째 View Controller로 이동할 때 호출되는 함수의 순서를 보여준다. 아래 내용을 읽기 전에 viewDidLoad는 메모리에 올려질 때 호출된다는 점을 기억하는 것이 좋다.
 
