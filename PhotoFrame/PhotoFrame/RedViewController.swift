@@ -21,8 +21,13 @@ class RedViewController: UIViewController {
         closeButton.backgroundColor = UIColor.systemYellow
         closeButton.setTitle("닫기", for: .normal)
         closeButton.setTitleColor(UIColor.black, for: .normal)
+        closeButton.addTarget(self, action: #selector(closeButtonTouched), for: .touchUpInside)
         
         self.view.addSubview(closeButton)
+    }
+    
+    @objc func closeButtonTouched() {
+        self.dismiss(animated: true, completion: nil)
     }
     
     /*
