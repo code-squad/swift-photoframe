@@ -1,5 +1,17 @@
 # 사진액자 앱
 
+리터럴 표현
+
+| Literal | Type | Value |
+|--|--|--|
+|#file|String|표시되는 파일의 경로입니다.|
+|#fileID|String|표시되는 파일 및 모듈의 이름입니다.|
+|#filePath|String|표시되는 파일의 경로입니다.|
+|#line|Int|표시되는 줄 번호입니다.|
+|#column|Int|시작하는 열 번호입니다.|
+|#function|String|표시되는 선언의 이름입니다.|
+|#dsohandle|UnsafeRawPointer|표시되는 위치에서 사용중인 동적 공유 개체 (DSO) 핸들입니다.|
+
 
 ## UITabBarController
 https://developer.apple.com/documentation/uikit/uitabbarcontroller#2934713
