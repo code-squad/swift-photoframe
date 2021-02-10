@@ -87,6 +87,15 @@
                                     <segue destination="1e6-h0-dfE" kind="showDetail" id="ChS-9F-kOf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Znp-Xp-qxo">
+                                <rect key="frame" x="19" y="16" width="30" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="❌"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="0NZ-RY-Sam" eventType="touchUpInside" id="and-af-8uJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pfC-Od-a9U"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>

@@ -13,6 +13,10 @@ class YellowViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    @IBAction func closeButtonTouched(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func nextButtonTouched(_ sender: Any) {
     }
 }
