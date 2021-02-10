@@ -21,6 +21,9 @@ class PhotoAlbumViewController: UIViewController {
                                             selectImage: randomImageSelect())
         Animation.labelAlphaIncrease(target: photoAlbumLabel, withDuration: 0.5)
     }
+    @IBAction func selectButtonTouched(_ sender: Any) {
+        
+    }
 }
 
 extension PhotoAlbumViewController {
