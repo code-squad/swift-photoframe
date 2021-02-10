@@ -14,6 +14,7 @@
 		BDDF7E9F25D1747500BD2CAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDDF7E9D25D1747500BD2CAF /* Main.storyboard */; };
 		BDDF7EA125D1747600BD2CAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDDF7EA025D1747600BD2CAF /* Assets.xcassets */; };
 		BDDF7EA425D1747600BD2CAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDDF7EA225D1747600BD2CAF /* LaunchScreen.storyboard */; };
+		BDE417FA25D3BBD800DC756E /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE417F925D3BBD800DC756E /* YellowViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		BDDF7EA025D1747600BD2CAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDDF7EA325D1747600BD2CAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDDF7EA525D1747600BD2CAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDE417F925D3BBD800DC756E /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				BDDF7E9B25D1747500BD2CAF /* ViewController.swift */,
 				BD72E03625D251EF008249B6 /* FirstViewController.swift */,
 				BDDF7E9D25D1747500BD2CAF /* Main.storyboard */,
+				BDE417F925D3BBD800DC756E /* YellowViewController.swift */,
 				BDDF7EA025D1747600BD2CAF /* Assets.xcassets */,
 				BDDF7EA225D1747600BD2CAF /* LaunchScreen.storyboard */,
 				BDDF7EA525D1747600BD2CAF /* Info.plist */,
@@ -144,6 +147,7 @@
 				BDDF7E9825D1747500BD2CAF /* AppDelegate.swift in Sources */,
 				BDDF7E9A25D1747500BD2CAF /* SceneDelegate.swift in Sources */,
 				BD72E03725D251EF008249B6 /* FirstViewController.swift in Sources */,
+				BDE417FA25D3BBD800DC756E /* YellowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
