@@ -33,6 +33,19 @@ class FirstViewController: UIViewController{
         self.firstSubLabel.textAlignment = .center
     }
     
+    @IBAction func nextButtonTouchUp(_ sender: Any) {
+        self.firstLabel.backgroundColor = .lightGray
+        let attributedString = NSMutableAttributedString(string: self.firstLabel.text!, attributes: [
+            .font: UIFont.boldSystemFont(ofSize: 25),
+            .foregroundColor: UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.8)
+        ])
+        attributedString.addAttribute(.font, value: UIFont.boldSystemFont(ofSize: 35), range: (self.firstLabel.text! as NSString).range(of: "BMO"))
+        attributedString.addAttribute(.foregroundColor, value: UIColor.black, range: (self.firstLabel.text! as NSString).range(of: "BMO"))
+        self.firstLabel.attributedText = attributedString
+        
+    }
+    
+    
     @IBAction func nextButtonTouchDown(_ sender: Any) {
         self.firstLabel.textColor = UIColor.blue
         self.firstLabel.backgroundColor = UIColor.yellow
