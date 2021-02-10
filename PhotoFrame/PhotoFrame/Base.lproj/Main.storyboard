@@ -87,6 +87,16 @@
                                     <segue destination="54f-3A-hpB" kind="presentation" id="ynE-fB-2gG"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHU-1l-aju">
+                                <rect key="frame" x="180" y="418" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="닫기">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="xBJ-w0-85a" eventType="touchUpInside" id="MSC-XZ-5aq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Yjq-8N-EgD"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
