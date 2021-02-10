@@ -16,8 +16,7 @@ IBOutlet : 특정한 값에 접근하기 위한 변수
 
 ### 결과
 <img width="652" alt="스크린샷 2021-02-08 오후 10 55 57" src="https://user-images.githubusercontent.com/69951890/107229182-d2255a00-6a60-11eb-8df7-4d063674ebb9.png">
-<<<<<<< HEAD
-=======
+
 
 ## 1.4 1.5 View Controller
 
@@ -44,4 +43,9 @@ IBOutlet : 특정한 값에 접근하기 위한 변수
 <img width="719" alt="스크린샷 2021-02-09 오후 7 43 09" src="https://user-images.githubusercontent.com/69951890/107352349-13744300-6b0f-11eb-83ea-4731a4ea42c0.png">
 
 <img width="722" alt="스크린샷 2021-02-09 오후 7 45 03" src="https://user-images.githubusercontent.com/69951890/107352542-50403a00-6b0f-11eb-8b16-a90bda8b141f.png">
->>>>>>> bfbe7c8ca87249230bd9bed456e28a31c9de9fdb
+
+## 1.7 Second Scene
+
+### 결과
+<img width="965" alt="스크린샷 2021-02-10 오후 5 50 05" src="https://user-images.githubusercontent.com/69951890/107486488-72e25980-6bc8-11eb-9d47-c1321907b1bd.png">
+
