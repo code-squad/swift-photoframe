@@ -50,13 +50,13 @@ Keychaain Access에서 git과 관련된 항목 삭제, git credential 삭제, gi
 
 	|Literal|Type|Value|Example|
 	|---|---|---|---|
-	|`#file`|`String`|The path to the file in which it appears.|`/Users/song/.../PhotoFrame/ViewController.swift `|
-	|`#fileID`|`String`|The name of the file and module in which it appears.|
-	|`#filePath`|`String`|The path to the file in which it appears.|
+	|`#file`|`String`|The path to the file in which it appears.|/Users/.../PhotoFrame/ViewController.swift|
+	|`#fileID`|`String`|The name of the file and module in which it appears.||
+	|`#filePath`|`String`|The path to the file in which it appears.||
 	|`#line`|`Int`|The line number on which it appears.|`14`|
 	|`#column`|`Int`|The column number in which it begins.|`40`|
 	|`#function`|`String`|The name of the declaration in which it appears.|`viewDidLoad()`|
-	|`#dsohandle`|`UnsafeRawPointer`|The dynamic shared object (DSO) handle in use where it appears.|
+	|`#dsohandle`|`UnsafeRawPointer`|The dynamic shared object (DSO) handle in use where it appears.||
 
 * UITabBarController
 
@@ -116,3 +116,69 @@ Keychaain Access에서 git과 관련된 항목 삭제, git credential 삭제, gi
 	* Present As Popover
 
 	To Be Added
+
+
+## Step5. ViewController 프로그래밍
+
+### 기본 미션
+1. 새로운 ViewController 클래스를 생성하고 Scene에 연결
+2. [닫기] 버튼에 ` self.dismiss(animated:completion:)` 코드 추가
+3. 화면 관련 콜백 함수들에 `print(#file, #line, #function, #column)` 코드를 추가해 ViewController의 라이프사이클을 확인
+
+### 추가 미션
+* 버튼을 코드로 구현하기
+	1. UIButton을 상수로 선언 ([다양한 버튼 타입 참고](https://developer.apple.com/documentation/uikit/uibutton/buttontype))
+	```swift
+	let closeButton = UIButton(type: .system)
+	```
+	2. 버튼의 위치, 크기, 타이틀 등을 설정
+	```swift
+	closeButton.frame = CGRect(x: self.view.frame.midX - closeButtonWidth / 2, y: self.view.frame.midY - closeButtonHeight / 2, width: closeButtonWidth, height: closeButtonHeight)
+        closeButton.backgroundColor = UIColor.systemYellow
+        closeButton.setTitle("닫기", for: .normal)
+        closeButton.setTitleColor(UIColor.black, for: .normal)
+	```
+	3. `addTarget(_:action:for:)` method로 원하는 동작을 버튼에 추가
+	```swift
+	closeButton.addTarget(self, action: #selector(closeButtonTouched), for: .touchUpInside)
+	```
+	cf. closeButtonTouched 함수 앞에는 `@objc` 키워드를 붙여줘야 함
+	4. view에 버튼을 추가
+	```swift
+	self.view.addSubview(closeButton)
+	```
+
+* 연결된 Segue를 코드로 구현
+	1. Segue를 연결: UIButton 같은 요소를 다른 VC로 드래그해 연결하거나 혹은 VC를 다른 VC로 드래그해서도 연결할 수 있다!
+	2. storyboard에서 Segue 화살표를 선택, 우측 Attributes inspector에서 identifier를 지정
+	3. 버튼 등에 `performSegue(withIdentifier:sender:)` 코드를 추가해 Segue를 구현
+
+* Segue 없이 화면간 이동
+	1. 목적지가 될 ViewController의 Attributes inspector에서 Storyboard ID와 Restoration ID를 지정
+	2. 출발지 ViewController에 `present(_:animated:completion:)` 코드 추가
+	예시 코드
+	```swift
+	@IBAction func nextButtonTouched(_ sender: Any) {
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        let redVC = main.instantiateViewController(identifier: "RedVC")
+        self.present(redVC, animated: true, completion: nil)
+  }
+	```
+	🤔 궁금증: storyboard 대신 코드로 ViewController를 구현해야해 identifier를 알 수 없는 상황이라면 어떤 방법을 사용할 수 있을까?
+
+**시뮬레이터 스크린샷**
+
+<img src="https://user-images.githubusercontent.com/56751259/107485894-bb4d4780-6bc7-11eb-9abf-2669593c6a94.gif" width=50%>
+
+완성 일자 및 시간: 2021-02-10 05:25PM
+
+### TIL
+
+* View Controller Lifecycle
+	* `viewDidLoad()`
+	* `viewWillAppear()`
+	* `viewDidAppear()`
+	* `viewWillDisappear()`
+	* `viewDidDisappear()`
+
+	To be Added
