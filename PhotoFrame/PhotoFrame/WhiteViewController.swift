@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class WhiteViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
