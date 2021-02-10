@@ -49,7 +49,6 @@
                                 <state key="normal" title="다음"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="ykQ-4V-MQE" eventType="touchUpInside" id="ofs-QH-dZU"/>
-                                    <segue destination="TBH-fE-AI4" kind="show" id="bgE-ZQ-3qb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -88,7 +87,6 @@
                                 <state key="normal" title="다음"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="TBH-fE-AI4" eventType="touchUpInside" id="yDx-hQ-52F"/>
-                                    <segue destination="e3q-2U-ulC" kind="show" id="6tV-xx-p8K"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMw-sa-aiC">
@@ -123,7 +121,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PoS-D4-tcm">
-                                <rect key="frame" x="192" y="435.5" width="30" height="30"/>
+                                <rect key="frame" x="192" y="438" width="30" height="30"/>
                                 <state key="normal" title="닫기"/>
                                 <connections>
                                     <action selector="closeButtonTouched:" destination="TBH-fE-AI4" eventType="touchUpInside" id="Vfc-t5-xfK"/>

@@ -43,9 +43,13 @@ class OrangeViewController: UIViewController {
     
     // ViewController 코드로 호출
     @IBAction func nextButtonTouched(_ sender: Any) {
-//        guard let nextVC = self.storyboard?.instantiateViewController(identifier: "GreenViewController") else { return }
+        guard let nextVC = self.storyboard?.instantiateViewController(identifier: "GreenViewController") else { return }
+        // ViewController 호출 코드로 구현 ( Segue X )
 //        nextVC.modalTransitionStyle = UIModalTransitionStyle.coverVertical
 //        self.present(nextVC, animated: true)
+
+        // navigationCotroller push 코드로 구현 ( Segue X )
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
 
