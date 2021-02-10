@@ -31,18 +31,22 @@ class FirstViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         print(#file,#function,#line,#column)
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
         print(#file,#function,#line,#column)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(true)
         print(#file,#function,#line,#column)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
         print(#file,#function,#line,#column)
     }
 }
