@@ -130,6 +130,14 @@
                                     <segue destination="r6e-3r-kJ3" kind="modal" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="NzG-8f-lqN"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OyY-xy-34n">
+                                <rect key="frame" x="192" y="296" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="닫기"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="Cpg-dv-Enl" eventType="touchUpInside" id="Pqs-Uu-R8d"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kzI-Ye-Ret"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
