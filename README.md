@@ -1,6 +1,17 @@
 # step 1
-dahun-lee-daji step -1 
-/Users/idahun/Desktop/스크린샷 2021-02-10 오후 4.14.24.png
+<img width="969" alt="스크린샷 2021-02-10 오후 4 14 24" src="https://user-images.githubusercontent.com/68788135/107478066-37da2900-6bbc-11eb-87a6-584164829ab7.png">
+
+UITabBar와 UITabBarController의 차이점은 무엇인가?
+
+UITabBar는 UIView를 상속 받음.
+UITabBarController는 UIViewController를 상속 받음.
+
+UITabBarController는 containerViewController이며 하위 viewController를 가질 수 있음. 
+UITabBarController의 Tabbar에 있는 tabBarItem을 클릭하면 알맞는 viewController의 root view를 present 해준다.
+
+UITabBar는 보통 UITabBarController와 결합되어 쓰이지만, 단독으로 쓰일 수도 있다. UITabBar는 항상 화면의 하단에 위치하며 하나 이상의 UITabBarItem을 표시한다.
+: https://velog.io/@hanseop95/UITabBarController%EC%99%80-UITabBar. 
+
 # 진행 방법
 
 - 포토프레임에 대한 요구사항을 파악한다.
