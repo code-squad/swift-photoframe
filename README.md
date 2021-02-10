@@ -158,3 +158,126 @@ ViewController에 UIImageView를 가득 채우고 안에 Core Graphics로 Draw. 
   - Use an image to customize system controls shcu as buttons, sliders, and segmented controls.
   - Draw an image directly into a view or other graphics context.
   - Pass an image to other APIs that might require image data.
+
+
+
+
+# 추가적으로 고민해본 부분
+
+## UITabBar vs. UITabBarController
+
+더 근본적인 질문. Swift에서 Controller가 어떤 의미인지 생각해보기로 했다. 애플 개발자 문서에 검색하면 게임패드 컨트롤러 등이 보이며, 기초적인 개념이기 때문인지 별도의 설명은 없다. Naver에 controller를 검색하면 영어사전에 1. (특히 큰 조직이나 부서의) 관리자, 2. (기계의) 조종[제어] 장치, 3. (회사의) 회계 담당자 [경리 부장]이라는 설명이 나온다. 개인적으로 제어 장치라는 표현이 더 와닿는다. 이전부터 이해하고 있었던 View Controller는 단순한 화면이 아니라 여러 가지 View에 대한 Controller, 즉 View를 제어하는 무엇이라고 생각했다.
+
+앞에서 UITabBar는 Controller라고 했다. UITabBar가 가지는 요소는 UITabBarItem objects인데, 하나 이상의 이 objects에 대한 Controller이지 않을까 싶은 생각이 들었다. 반면에 UITabBarController는 Container View Controller로써 View Controller를 제어하는 하나의 Controller로 이해하고 있다.
+
+## UILabel Property
+
+text, attributedText, font, textColor, textAlignment, lineBreakMode 등
+
+## View Controller Life Cycle
+
+https://zeddios.tistory.com/43
+
+https://zeddios.tistory.com/44
+
+위 Zedd님의 글에서 이미지의 내용을 살펴보겠다. 첫 번째 View Controller에서 두 번째 View Controller로 이동, 다시 첫 번째 View Controller로 이동할 때 호출되는 함수의 순서를 보여준다. 아래 내용을 읽기 전에 viewDidLoad는 메모리에 올려질 때 호출된다는 점을 기억하는 것이 좋다.
+
+```
+1st viewDidLoad
+1st viewWillAppear
+1st viewDidAppear
+========================
+1st viewWillDisappear
+2nd viewDidLoad
+2nd viewWillAppear
+1st viewDidDisappear
+2nd viewDidAppear
+========================
+2nd viewWillDisappear
+1st viewWillAppear
+2nd viewDidDisappear
+1st viewDidAppear
+```
+
+개별 View Controller를 순서대로 잘라서 정리하면 아래와 같다.
+
+```
+첫 번째 View Controller
+
+1st viewDidLoad
+1st viewWillAppear
+1st viewDidAppear
+1st viewWillDisappear
+1st viewDidDisappear
+1st viewWillAppear
+1st viewDidAppear
+
+두 번째 View Controller
+
+2nd viewDidLoad
+2nd viewWillAppear
+2nd viewDidAppear
+2nd viewWillDisappear
+2nd viewDidDisappear
+```
+
+![https://static.packt-cdn.com/products/9781783550814/graphics/0814OT_06_02.jpg](https://static.packt-cdn.com/products/9781783550814/graphics/0814OT_06_02.jpg)
+
+순환은 대체로 위 이미지에서 viewDidLoad와 viewDidDisappear 순서로 반복된다. 잘 살펴보면 반드시 그렇지는 않다. 첫 번째 View Controller의 viewDidLoad는 처음 한 번만 등장한다. 패턴을 더 확실하게 보고싶기도 하고, 두 번째 View Controller의 viewDidLoad의 호출을 보고 싶어서 직접 다시 해봤다. 첫 번째 View Controller에서 두 번째 View Controller로 이동했다가 다시 돌아오고 한 번 더 반복함으로써 확인해봤다. 아래 결과가 나왔다.
+
+```
+1st viewDidLoad()
+1st viewWillAppear()
+1st viewDidAppear()
+2nd viewDidLoad()
+1st viewWillDisappear()
+2nd viewWillAppear()
+1st viewDidDisappear()
+2nd viewDidAppear()
+2nd viewWillDisappear()
+1st viewWillAppear()
+2nd viewDidDisappear()
+1st viewDidAppear()
+2nd viewDidLoad()
+1st viewWillDisappear()
+2nd viewWillAppear()
+1st viewDidDisappear()
+2nd viewDidAppear()
+2nd viewWillDisappear()
+1st viewWillAppear()
+2nd viewDidDisappear()
+1st viewDidAppear()
+```
+
+다시 한 번 첫 번째와 두 번째로 나눠보겠다.
+
+```
+첫 번째 View Controller
+
+1st viewDidLoad()
+1st viewWillAppear()
+1st viewDidAppear()
+1st viewWillDisappear()
+1st viewDidDisappear()
+1st viewWillAppear()
+1st viewDidAppear()
+1st viewWillDisappear()
+1st viewDidDisappear()
+1st viewWillAppear()
+1st viewDidAppear()
+
+두 번째 View Controller
+
+2nd viewDidLoad()
+2nd viewWillAppear()
+2nd viewDidAppear()
+2nd viewWillDisappear()
+2nd viewDidDisappear()
+2nd viewDidLoad()
+2nd viewWillAppear()
+2nd viewDidAppear()
+2nd viewWillDisappear()
+2nd viewDidDisappear()
+```
+
+첫 번째 View Controller만 viewDidLoad가 한 번만 출력되고, 두 번째 View Controller는 두 번째 View Controller로 이동할 때마다 viewDidLoad가 호출된다. Navigation Bar를 이해해야 알 수 있다. Stack 구조이며, 두 번째 View Controller가 사라질 때 메모리에서 아예 사라지기 때문에 두 번째 View Controller에 다시 이동할 때는 메모리에 다시 올려지면서 viewDidLoad가 호출된다. push와 pop을 떠올리면 이해하기 쉽다. Life Cycle에 대한 이해가 있어야 인스턴스 생성 및 제거로 메모리 낭비를 하지 않도록 구현할 수 있다.
