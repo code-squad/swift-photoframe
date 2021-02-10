@@ -11,34 +11,36 @@ class GreenViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(#file, #line, #function, #column)
+        print("3rd ViewDidLoad")
         // Do any additional setup after loading the view.
     }
     
 
     @IBAction func closeButtonTouched(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print(#file, #line, #function, #column)
+        print("3rd ViewWillAppear")
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print(#file, #line, #function, #column)
+        print("3rd ViewDidAppear")
+        print()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        print(#file, #line, #function, #column)
+        print("3rd ViewWillDisappear")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        print(#file, #line, #function, #column)
+        print("3rd ViewDidDisappear")
     }
+}
     /*
     // MARK: - Navigation
 
@@ -49,4 +51,3 @@ class GreenViewController: UIViewController {
     }
     */
 
-}

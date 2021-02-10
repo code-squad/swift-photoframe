@@ -11,7 +11,7 @@ class PinkViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(#file, #line, #function, #column)
+        print("2nd ViewDidLoad")
         // Do any additional setup after loading the view.
     }
     
@@ -20,27 +20,28 @@ class PinkViewController: UIViewController {
     }
     
     @IBAction func closeButtonTouched(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print(#file, #line, #function, #column)
+        print("2nd ViewWillAppear")
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print(#file, #line, #function, #column)
+        print("2nd ViewDidAppear")
+        print()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        print(#file, #line, #function, #column)
+        print("2nd ViewWillDisappear")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        print(#file, #line, #function, #column)
+        print("2nd ViewDidDisappear")
     }
     /*
     // MARK: - Navigation

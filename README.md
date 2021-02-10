@@ -148,3 +148,35 @@ segue연결시 iOS13부터 modalPresentation 디폴트값 변경 => fullscreen �
 이전 무한 viewDidLoad호출은 일반 viewController끼리 Segue(show)사용해서 계속 새로운 페이지로 이동하는 현상
 
 - Segue 삭제후 코드로 구현
+
+# Step.6
+
+- Navigation Controller Embeded
+
+첫번째 뷰 컨트롤러에  Navagation VC 추가
+
+닫기 버튼 수정(실행 후 확인결과 네비게이션 바 이전버튼과 동일하게 작동)
+
+- 실행 콘솔화면(1st -> 2nd -> 3rd -> 2nd -> 1st)
+
+<img width="241" alt="스크린샷 2021-02-10 오후 2 46 51" src="https://user-images.githubusercontent.com/74946802/107470717-30605300-6baf-11eb-9f13-5c51bd36a892.png">
+
+- 네비게이션 push/pop
+
+네비게이션 컨트롤러를 활용하여 두 화면을 반복해서 왔다갔다 할 경우 두번째 화면의 viewDidLoad는 계속 호출 됨
+
+이는 네비게이션 컨트롤러의 작동방식이 자료구조 '스택'과 동일하다는 것을 의미
+
+즉, 첫번째 화면을 호출하면 스택에 push되어 top이 됨
+
+두번째 화면을 호출하면 스택에 push되어 두번째 화면이 스택의 top이 됨
+
+이전버튼을 통해 뒤로가면 top이었던 두번째 화면이 pop되고, 첫번째 화면이 다시 top이 됨
+
+이때, 다시 두번째화면으로 돌아가면 메모리에서 pop됐기 때문에 다시 viewDidLoad가 호출됨
+
+- Segue를 통한 이전화면
+
+네비게이션 컨트롤러 없이 Segue를 활용하여 이전화면과 연결하면 모든 화면에서 viewDidLoad가 반복적으로 호출됨
+
+메모리에는 남아있지만 추가적으로 새로운 화면을 반복해서 호출하는 것으로 보임 -> 이전화면을 segue로 연결할 때는 주의가 필요
