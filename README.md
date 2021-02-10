@@ -45,6 +45,8 @@
 
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/73683735/107347170-e45ad300-6b08-11eb-922f-3c9f8da2fc06.gif)
 
+
+
 #### 완성날짜 : 2021.02.09(화) 19:00
 
 
@@ -60,3 +62,19 @@
 ![ezgif com-gif-maker (3)](https://user-images.githubusercontent.com/73683735/107472331-1a07c680-6bb2-11eb-954f-ea53cbfa2f1b.gif)
 
 #### 완성날짜 : 2021.02.10(수) 15:12
+
+
+---
+---
+
+# ViewController 프로그래밍
+
+#### 요구사항
+- 스토리보드 구성 요소와 커스텀 클래스와 연결해서 동작을 확장한다.
+- NextOfFirstView와 NextNextOfFirstView에 이전으로 가는 버튼을 구현한다.
+- 만들어놓은 컨트롤러뷰에 주요 콜백에 print(#file, #line, #function, #column) 코드를 추가하여 동작을 확인한다.
+
+![ezgif com-gif-maker (4)](https://user-images.githubusercontent.com/73683735/107482341-e5e8d180-6bc2-11eb-8c01-bc0d76ca08f6.gif)
+
+#### 완성날짜 : 2021.02.10(수) 17:11
+
