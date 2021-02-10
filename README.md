@@ -1,5 +1,6 @@
 # step 1
 dahun-lee-daji step -1 
+/Users/idahun/Desktop/스크린샷 2021-02-10 오후 4.14.24.png
 # 진행 방법
 
 - 포토프레임에 대한 요구사항을 파악한다.
