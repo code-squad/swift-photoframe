@@ -14,7 +14,9 @@ class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(#file, #line, #function, #column)
+        print()
+        
         self.firstLabel.text = "Song의 사진액자"
         self.firstLabel.textColor = UIColor.systemGray6
         self.firstLabel.backgroundColor = UIColor.systemGreen
@@ -30,6 +32,30 @@ class FirstViewController: UIViewController {
         self.firstLabel.textColor = UIColor.blue
         self.firstLabel.backgroundColor = UIColor.yellow
         self.firstLabel.alpha = 0.5
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print(#file, #line, #function, #column)
+        print()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print(#file, #line, #function, #column)
+        print()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print(#file, #line, #function, #column)
+        print()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print(#file, #line, #function, #column)
+        print()
     }
     
     /*
