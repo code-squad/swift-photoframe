@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UITabBarController {
     
+    @IBOutlet weak var bottomContainerView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print(#file, #line, #function, #column)
@@ -29,13 +31,6 @@ class ViewController: UITabBarController {
         print(#file, #line, #function, #column)
     }
     
-    override var shouldAutorotate: Bool {
-        return true
-    }
-    
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return [.portrait, .portraitUpsideDown]
-    }
 
     /*
     // MARK: - Navigation
