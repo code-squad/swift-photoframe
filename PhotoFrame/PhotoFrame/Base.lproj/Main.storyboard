@@ -22,9 +22,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nyn-kK-V4b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="91" y="83"/>
+            <point key="canvasLocation" x="1000.0000000000001" y="82.366071428571431"/>
         </scene>
-        <!--Item 1-->
+        <!--First View Controller-->
         <scene sceneID="7WQ-jg-dTW">
             <objects>
                 <viewController id="ykQ-4V-MQE" customClass="FirstViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
@@ -45,10 +45,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SvW-nQ-5YN">
-                                <rect key="frame" x="192" y="377" width="30" height="30"/>
+                                <rect key="frame" x="192" y="399" width="30" height="30"/>
                                 <state key="normal" title="다음"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="ykQ-4V-MQE" eventType="touchUpInside" id="ofs-QH-dZU"/>
+                                    <segue destination="TBH-fE-AI4" kind="show" id="bgE-ZQ-3qb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -63,7 +64,7 @@
                             <constraint firstItem="awo-zj-g0Q" firstAttribute="centerY" secondItem="Vrg-68-r3E" secondAttribute="centerY" id="x7e-0q-hrj"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="TbO-Eb-f9i"/>
+                    <navigationItem key="navigationItem" id="c6b-ei-R1M"/>
                     <connections>
                         <outlet property="photoDiscription" destination="Wxq-iV-Bjv" id="FDj-Pp-CfJ"/>
                         <outlet property="photoLabel" destination="awo-zj-g0Q" id="uIu-65-Zxr"/>
@@ -71,7 +72,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EPo-yb-0DO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="88.405797101449281" y="-525"/>
+            <point key="canvasLocation" x="998.55072463768124" y="-525"/>
         </scene>
         <!--Orange View Controller-->
         <scene sceneID="3WI-EK-UPB">
@@ -87,6 +88,7 @@
                                 <state key="normal" title="다음"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="TBH-fE-AI4" eventType="touchUpInside" id="yDx-hQ-52F"/>
+                                    <segue destination="e3q-2U-ulC" kind="show" id="6tV-xx-p8K"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMw-sa-aiC">
@@ -110,7 +112,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ovk-BT-xzk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="987" y="-526"/>
+            <point key="canvasLocation" x="1897.1014492753625" y="-526.33928571428567"/>
         </scene>
         <!--Green View Controller-->
         <scene sceneID="dLW-A9-waZ">
@@ -121,7 +123,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PoS-D4-tcm">
-                                <rect key="frame" x="192" y="438" width="30" height="30"/>
+                                <rect key="frame" x="192" y="435.5" width="30" height="30"/>
                                 <state key="normal" title="닫기"/>
                                 <connections>
                                     <action selector="closeButtonTouched:" destination="TBH-fE-AI4" eventType="touchUpInside" id="Vfc-t5-xfK"/>
@@ -140,7 +142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HIs-VG-46L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1851" y="-525"/>
+            <point key="canvasLocation" x="2760.8695652173915" y="-525"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="p9q-np-WuE">
@@ -152,13 +154,32 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="ykQ-4V-MQE" kind="relationship" relationship="viewControllers" id="lWy-XJ-eqD"/>
+                        <segue destination="IsE-Aw-yj1" kind="relationship" relationship="viewControllers" id="lWy-XJ-eqD"/>
                         <segue destination="Bie-vM-ME5" kind="relationship" relationship="viewControllers" id="GEz-cb-Vyj"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aXH-jb-E4H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-804" y="-221"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="IEe-t7-iB2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IsE-Aw-yj1" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item 1" id="TbO-Eb-f9i"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oWM-2d-8wW">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ykQ-4V-MQE" kind="relationship" relationship="rootViewController" id="naK-2y-qeK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="326-M1-FA0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="88.405797101449281" y="-525"/>
         </scene>
     </scenes>
     <resources>

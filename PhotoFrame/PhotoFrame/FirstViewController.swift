@@ -17,10 +17,10 @@ class FirstViewController: UIViewController {
         self.photoLabel.backgroundColor = UIColor.yellow
         self.photoLabel.alpha = 0.5
         
-        guard let newVC = self.storyboard?.instantiateViewController(identifier: "OrangeViewController") else { return }
-        newVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
-        
-        present(newVC, animated: true)
+//        guard let newVC = self.storyboard?.instantiateViewController(identifier: "OrangeViewController") else { return }
+//        newVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+//
+//        present(newVC, animated: true)
     }
 
     override func viewDidLoad() {
