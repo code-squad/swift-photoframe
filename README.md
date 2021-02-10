@@ -180,3 +180,27 @@ segue연결시 iOS13부터 modalPresentation 디폴트값 변경 => fullscreen �
 네비게이션 컨트롤러 없이 Segue를 활용하여 이전화면과 연결하면 모든 화면에서 viewDidLoad가 반복적으로 호출됨
 
 메모리에는 남아있지만 추가적으로 새로운 화면을 반복해서 호출하는 것으로 보임 -> 이전화면을 segue로 연결할 때는 주의가 필요
+
+# Step.7
+
+- 이미지 뷰 및 버튼 추가
+
+- 다음 버튼 누를 시 랜덤으로 이미지 변경 구현 완료
+
+- 이미지 뷰 Content Mode Aspect Fit으로 수정
+
+- 실행화면
+
+<img src="https://user-images.githubusercontent.com/74946802/107476744-d1540b80-6bb9-11eb-9fbf-98bb187b4415.png" width="280" height="600"> <img src="https://user-images.githubusercontent.com/74946802/107476790-eb8de980-6bb9-11eb-8a87-f6b056ebdcfd.png" width="280" height="600"> <img src="https://user-images.githubusercontent.com/74946802/107476828-fba5c900-6bb9-11eb-9a8d-8568098bb6df.png" width="280" height="600">
+
+#### UIImage vs UIImageView
+
+UIImage는 변하지 않는 이미지 데이터를 저장하여 나타내줌
+
+UIImageView는 여러 UIImage를 나타낼 수 있음
+
+UIImageView가 UIImage를 포함하고 있다고 볼 수 있음
+
+UIImageView가 더 넓은 범위이며 연속된 사진을 나타내는 것도 가능함
+
+공식문서에도 UIImageView는 UIImage를 활용하여 효율적으로 이미지를 가져와서 보여주는 것이 가능하다고 언급됨
