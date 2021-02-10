@@ -117,7 +117,7 @@
         <!--NextOfFirstView-->
         <scene sceneID="x8E-NQ-fQb">
             <objects>
-                <viewController title="NextOfFirstView" id="Cpg-dv-Enl" sceneMemberID="viewController">
+                <viewController title="NextOfFirstView" id="Cpg-dv-Enl" customClass="NextOfFirstViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Oe8-bE-9al">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
