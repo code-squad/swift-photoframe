@@ -146,14 +146,47 @@
         <!--Item-->
         <scene sceneID="vyi-Wv-YUL">
             <objects>
-                <viewController id="NLP-Wy-6Fm" sceneMemberID="viewController">
+                <viewController id="NLP-Wy-6Fm" customClass="SecondViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b3h-0E-BZO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bzu-0y-M5C">
+                                <rect key="frame" x="87" y="136.5" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="W4L-bR-RdL"/>
+                                    <constraint firstAttribute="height" constant="240" id="fLA-RE-0Zx"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39w-Rq-bhl">
+                                <rect key="frame" x="190" y="519.5" width="35" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="다음"/>
+                                <connections>
+                                    <action selector="nextImageButtonTouched:" destination="NLP-Wy-6Fm" eventType="touchUpInside" id="vu6-ae-vmm"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo Album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9r3-6l-zAz">
+                                <rect key="frame" x="107.5" y="426.5" width="199" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="71w-j1-CJj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="39w-Rq-bhl" firstAttribute="top" secondItem="9r3-6l-zAz" secondAttribute="bottom" constant="50" id="1tv-2P-eoK"/>
+                            <constraint firstItem="9r3-6l-zAz" firstAttribute="centerX" secondItem="b3h-0E-BZO" secondAttribute="centerX" id="5kY-AD-txR"/>
+                            <constraint firstItem="9r3-6l-zAz" firstAttribute="top" secondItem="Bzu-0y-M5C" secondAttribute="bottom" constant="50" id="DpP-Ov-tPr"/>
+                            <constraint firstItem="Bzu-0y-M5C" firstAttribute="centerX" secondItem="b3h-0E-BZO" secondAttribute="centerX" id="UlC-Id-K3l"/>
+                            <constraint firstItem="9r3-6l-zAz" firstAttribute="centerY" secondItem="b3h-0E-BZO" secondAttribute="centerY" id="hYG-B4-daN"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" image="moon.fill" catalog="system" id="mRZ-B9-M86"/>
+                    <connections>
+                        <outlet property="photoImageView" destination="Bzu-0y-M5C" id="18p-Sb-U3k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WHn-rC-jHR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
