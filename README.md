@@ -118,3 +118,23 @@ Todo : AutoLayout 설정에 대해 알아보자.
 
 ### 실행 영상
 <img src = "img/step04-01.gif" width = "40%">
+
+## Step05 - ViewController 프로그래밍
+
+### 실행 영상
+
+<img src = "img/step05-01.gif" width = "40%">
+
+
+### ❗️ ViewController Life - Cycle
+
+<img src = "img/step05-02.png" width = "80%">
+
+TabBarController는 `viewDidAppear`이 되었지만, FirstViewController는 `viewWillApear()`까지만 완료되고 `viewDidAppear()`은 출력되지 않는다..? 왜그러는지 학습해야한다.
+
+### Segue 제거 후 Code로 ViewController 호출 하기
+`let newVC = self.storyboard?.instantiateViewController(identifier:)` 이때 identifier는 storyboard에 있는 ViewController의 storyboard ID이다. (class 이름이 아니라 따로 지정해줘야한다.)
+- **UIModalPresentationStyle**
+- **UIModalTransitionStyle**
+
+`self.present(nextVC, animated: true)`
