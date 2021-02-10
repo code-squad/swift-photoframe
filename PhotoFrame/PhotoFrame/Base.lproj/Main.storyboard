@@ -49,15 +49,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cze-Zr-Tqu">
+                                <rect key="frame" x="187.5" y="492.5" width="39" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="다음"/>
+                                <connections>
+                                    <action selector="nextButtonTouchDown:" destination="0mY-AK-IlK" eventType="touchDown" id="bod-Q6-ayO"/>
+                                    <action selector="nextButtonTouchUp:" destination="0mY-AK-IlK" eventType="touchUpInside" id="CfY-Dh-5kH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2OI-hL-UVa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="lzq-ke-xyc" firstAttribute="leading" secondItem="2OI-hL-UVa" secondAttribute="leading" id="6lH-pB-qOB"/>
                             <constraint firstItem="WPa-vd-7dk" firstAttribute="top" secondItem="lzq-ke-xyc" secondAttribute="bottom" id="EcT-TX-6DZ"/>
+                            <constraint firstItem="cze-Zr-Tqu" firstAttribute="top" secondItem="WPa-vd-7dk" secondAttribute="bottom" constant="10" id="P8F-pP-0wz"/>
                             <constraint firstItem="WPa-vd-7dk" firstAttribute="leading" secondItem="2OI-hL-UVa" secondAttribute="leading" id="RSd-9W-ik7"/>
                             <constraint firstItem="2OI-hL-UVa" firstAttribute="trailing" secondItem="lzq-ke-xyc" secondAttribute="trailing" id="cRE-0Y-Yat"/>
                             <constraint firstItem="2OI-hL-UVa" firstAttribute="trailing" secondItem="WPa-vd-7dk" secondAttribute="trailing" id="nZY-JC-tVq"/>
+                            <constraint firstItem="cze-Zr-Tqu" firstAttribute="centerX" secondItem="8pV-1g-hoJ" secondAttribute="centerX" id="qNM-lr-bWc"/>
                             <constraint firstItem="lzq-ke-xyc" firstAttribute="centerY" secondItem="8pV-1g-hoJ" secondAttribute="centerY" id="vVv-IR-YY3"/>
                         </constraints>
                     </view>
