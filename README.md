@@ -46,3 +46,17 @@
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/73683735/107347170-e45ad300-6b08-11eb-922f-3c9f8da2fc06.gif)
 
 #### 완성날짜 : 2021.02.09(화) 19:00
+
+
+---
+---
+
+# Scene과 Segue
+
+#### 요구사항
+- First Scene에서 Next Scene으로 가는 버튼을 만들고 segue로 연결한다.
+- Next Scene에서 NextNext Scene으로 가는 버튼을 만들고 segue로 연결한다.
+
+![ezgif com-gif-maker (3)](https://user-images.githubusercontent.com/73683735/107472331-1a07c680-6bb2-11eb-954f-ea53cbfa2f1b.gif)
+
+#### 완성날짜 : 2021.02.10(수) 15:12
