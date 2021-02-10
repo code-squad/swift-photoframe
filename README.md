@@ -29,3 +29,10 @@
 - view life cycle과 관련된 콜백 함수의 동작 확인
 
 <img width="291" alt="스크린샷 2021-02-09 오후 5 05 04" src="https://user-images.githubusercontent.com/75113784/107341625-8dea9600-6b02-11eb-89fd-e8f8b1ad35df.png"><img width="291" alt="스크린샷 2021-02-09 오후 5 05 08" src="https://user-images.githubusercontent.com/75113784/107341606-89be7880-6b02-11eb-8ced-bd7aa2651780.png">
+
+## Step 6 - Container ViewController
+- Navigation Controller embed in
+- 네비게이션 화면 전환을 위해 `present()`에서 `pushViewController()`로 변경
+- 스토리보드에서 navigation bar 영역에 BarButtonItem 추가하고 IBAction 연결
+
+<img width="291" alt="스크린샷 2021-02-10 오후 1 55 35" src="https://user-images.githubusercontent.com/75113784/107466677-cc865c00-6ba7-11eb-9dfb-9fd018d87473.png"><img width="291" alt="스크린샷 2021-02-10 오후 1 55 43" src="https://user-images.githubusercontent.com/75113784/107466683-d0b27980-6ba7-11eb-8fc7-db7b2ab8727c.png">
