@@ -11,10 +11,16 @@
         <!--Item 2-->
         <scene sceneID="nXu-7E-kgu">
             <objects>
-                <viewController id="dt4-lX-SOq" sceneMemberID="viewController">
+                <viewController id="dt4-lX-SOq" customClass="SecondViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lec-GZ-wB2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KcB-Vk-1lZ">
+                                <rect key="frame" x="87" y="253" width="240" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="YQ1-qk-Gj9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -22,7 +28,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14W-R5-Qd9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2276.8115942028985" y="391.74107142857139"/>
+            <point key="canvasLocation" x="2275" y="440"/>
         </scene>
         <!--First View Controller-->
         <scene sceneID="5CI-YW-XVG">
