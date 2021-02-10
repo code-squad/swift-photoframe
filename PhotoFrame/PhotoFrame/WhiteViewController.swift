@@ -11,6 +11,7 @@ class WhiteViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(#file, #line, #function, #column)
         self.photoLabel.text = "Lollo's Photo"
         self.photoLabel.adjustsFontSizeToFitWidth = true
         self.photoLabel.shadowColor = .lightGray
@@ -21,6 +22,26 @@ class WhiteViewController: UIViewController {
         self.photoDescription.textColor = .white
         self.photoDescription.backgroundColor = .black
         self.photoDescription.alpha = 0.6
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print(#file, #line, #function, #column)
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print(#file, #line, #function, #column)
     }
     
     @IBOutlet weak var photoLabel: UILabel!
