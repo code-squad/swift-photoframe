@@ -60,6 +60,7 @@
                                 </state>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="nJz-lB-oaW" eventType="touchUpInside" id="e2k-5h-zfR"/>
+                                    <segue destination="Xm1-Th-0Kd" kind="show" id="0aE-Xq-g7y"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -97,6 +98,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2B9-BU-dzw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-454" y="460"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="QPj-ao-3vx">
+            <objects>
+                <viewController id="Xm1-Th-0Kd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FXZ-I0-hJV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Us8-Zr-tIv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="oDY-TZ-rbf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="50I-VJ-jJh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1161" y="151"/>
         </scene>
     </scenes>
     <resources>
