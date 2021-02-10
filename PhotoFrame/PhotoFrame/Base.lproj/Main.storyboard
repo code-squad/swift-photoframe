@@ -106,8 +106,38 @@
                     <view key="view" contentMode="scaleToFill" id="FXZ-I0-hJV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61C-q1-hFj">
+                                <rect key="frame" x="179" y="257" width="56" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="다음 다음">
+                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="arN-2M-S1O" kind="show" id="uVW-JJ-P8q"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2번째 화면" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VX5-YE-f6v">
+                                <rect key="frame" x="132.5" y="375" width="149" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="국어 사랑합니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kqt-NA-xqe">
+                                <rect key="frame" x="153.5" y="430.5" width="107.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Us8-Zr-tIv"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        <constraints>
+                            <constraint firstItem="Kqt-NA-xqe" firstAttribute="centerX" secondItem="FXZ-I0-hJV" secondAttribute="centerX" id="7BC-Em-Z22"/>
+                            <constraint firstItem="Kqt-NA-xqe" firstAttribute="centerY" secondItem="FXZ-I0-hJV" secondAttribute="centerY" constant="20" id="9XI-Wz-JjN"/>
+                            <constraint firstItem="VX5-YE-f6v" firstAttribute="centerY" secondItem="FXZ-I0-hJV" secondAttribute="centerY" constant="-25" id="DsB-gz-QiN"/>
+                            <constraint firstItem="VX5-YE-f6v" firstAttribute="centerX" secondItem="FXZ-I0-hJV" secondAttribute="centerX" id="Qzq-L3-srV"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oDY-TZ-rbf"/>
                 </viewController>
@@ -115,10 +145,32 @@
             </objects>
             <point key="canvasLocation" x="1161" y="151"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="0du-vh-j36">
+            <objects>
+                <viewController id="arN-2M-S1O" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IK0-o4-Y0N">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="2RA-A6-aVy"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dyl-QI-jTX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="09j-JJ-2h7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1975" y="151"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
