@@ -15,6 +15,8 @@ class RedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(#file, #line, #function, #column)
+        print()
         self.view.backgroundColor = UIColor.systemRed
         
         closeButton.frame = CGRect(x: self.view.frame.midX - closeButtonWidth / 2, y: self.view.frame.midY - closeButtonHeight / 2, width: closeButtonWidth, height: closeButtonHeight)
@@ -28,6 +30,30 @@ class RedViewController: UIViewController {
     
     @objc func closeButtonTouched() {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print(#file, #line, #function, #column)
+        print()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print(#file, #line, #function, #column)
+        print()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print(#file, #line, #function, #column)
+        print()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print(#file, #line, #function, #column)
+        print()
     }
     
     /*
