@@ -52,7 +52,15 @@
                                 <state key="normal" title="다음"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="oPZ-Ao-bUs" eventType="touchUpInside" id="J5D-uU-Ir1"/>
-                                    <segue destination="xBJ-w0-85a" kind="show" id="WB7-cb-kag"/>
+                                    <segue destination="xBJ-w0-85a" kind="show" identifier="goToPurple" id="WB7-cb-kag"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LMs-lR-X0W">
+                                <rect key="frame" x="118" y="294" width="154" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Segue Programatically"/>
+                                <connections>
+                                    <action selector="segueButtonTouched:" destination="oPZ-Ao-bUs" eventType="touchUpInside" id="iyX-oe-a38"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -67,7 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nOz-vz-51k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="971" y="-92"/>
+            <point key="canvasLocation" x="970.76923076923072" y="-92.417061611374407"/>
         </scene>
         <!--Purple View Controller-->
         <scene sceneID="F8o-dj-cKt">
@@ -83,9 +91,6 @@
                                 <state key="normal" title="다음">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <segue destination="54f-3A-hpB" kind="presentation" id="ynE-fB-2gG"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHU-1l-aju">
                                 <rect key="frame" x="180" y="418" width="30" height="30"/>
@@ -112,7 +117,7 @@
             <objects>
                 <viewController id="54f-3A-hpB" customClass="RedViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kd0-mv-Of2">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="ixs-tg-EbM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

@@ -34,6 +34,10 @@ class FirstViewController: UIViewController {
         self.firstLabel.alpha = 0.5
     }
     
+    @IBAction func segueButtonTouched(_ sender: Any) {
+        self.performSegue(withIdentifier: "goToPurple", sender: nil)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print(#file, #line, #function, #column)
