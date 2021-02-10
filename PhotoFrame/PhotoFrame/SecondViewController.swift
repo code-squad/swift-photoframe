@@ -29,12 +29,6 @@ class SecondViewController: UIViewController {
         print(#file, #line, #function, #column)
     }
     
-    @IBAction func clickNextButton(_ sender: UIButton) {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "third") as? ThirdViewController
-        self.present(newViewController!, animated: true, completion: nil)
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "next" {
             if let vc = segue.destination as? ThirdViewController {
@@ -43,7 +37,7 @@ class SecondViewController: UIViewController {
         }
     }
     @IBAction func closeButtonTouched(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     /*
