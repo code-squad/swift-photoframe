@@ -25,7 +25,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="nextImageButtonTouched:" destination="dt4-lX-SOq" eventType="touchUpInside" id="g5U-ZQ-sEl"/>
+                                    <action selector="nextImageButtonTouched:" destination="dt4-lX-SOq" eventType="touchUpInside" id="Obh-UE-df5"/>
                                 </connections>
                             </button>
                         </subviews>
