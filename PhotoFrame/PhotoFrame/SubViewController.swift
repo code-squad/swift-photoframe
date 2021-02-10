@@ -7,14 +7,10 @@
 
 import UIKit
 
-class InitialViewController: UITabBarController {
-
+class SubViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(#file, #line, #function, #column)
+        print("SubView")
         // Do any additional setup after loading the view.
     }
-
-
 }
-
