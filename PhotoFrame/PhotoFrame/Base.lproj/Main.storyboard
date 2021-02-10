@@ -22,9 +22,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DLH-Xh-18i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="772" y="190"/>
+            <point key="canvasLocation" x="1681.1594202898552" y="189.50892857142856"/>
         </scene>
-        <!--Item 1-->
+        <!--White View Controller-->
         <scene sceneID="Pr6-6J-GDt">
             <objects>
                 <viewController storyboardIdentifier="WhiteVC" id="ST0-J0-hHk" customClass="WhiteViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
@@ -53,13 +53,14 @@
                                 <connections>
                                     <action selector="nextButtonTouchedDown:" destination="ST0-J0-hHk" eventType="touchDown" id="l86-Gg-cV2"/>
                                     <action selector="nextButtonTouchedUpInside:" destination="ST0-J0-hHk" eventType="touchUpInside" id="5Fu-ty-1bj"/>
+                                    <segue destination="0NZ-RY-Sam" kind="show" id="thE-oW-I59"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bZf-TQ-P14"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="d4t-KF-rxh"/>
+                    <navigationItem key="navigationItem" id="2YC-gs-Pnu"/>
                     <connections>
                         <outlet property="photoDescription" destination="CFG-3N-exC" id="48w-yG-ZBz"/>
                         <outlet property="photoLabel" destination="6PP-GC-G1m" id="2nQ-eL-9pg"/>
@@ -67,7 +68,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fFC-Li-Y8b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="771.01449275362324" y="-417.1875"/>
+            <point key="canvasLocation" x="1681.1594202898552" y="-417.1875"/>
         </scene>
         <!--Yellow View Controller-->
         <scene sceneID="gv2-Mx-3Oh">
@@ -83,7 +84,7 @@
                                 <state key="normal" title="다음"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="0NZ-RY-Sam" eventType="touchUpInside" id="bQl-Ln-B0h"/>
-                                    <segue destination="1e6-h0-dfE" kind="presentation" modalPresentationStyle="fullScreen" id="ChS-9F-kOf"/>
+                                    <segue destination="1e6-h0-dfE" kind="show" id="ChS-9F-kOf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Znp-Xp-qxo">
@@ -103,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Db-TI-wHD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1452" y="-417"/>
+            <point key="canvasLocation" x="2360.8695652173915" y="-417.1875"/>
         </scene>
         <!--Orange View Controller-->
         <scene sceneID="4J0-ae-C7B">
@@ -118,7 +119,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="다음"/>
                                 <connections>
-                                    <segue destination="O4f-ml-jDJ" kind="presentation" modalPresentationStyle="fullScreen" id="gwj-9C-u60"/>
+                                    <segue destination="O4f-ml-jDJ" kind="show" id="gwj-9C-u60"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egH-TM-K46">
@@ -138,7 +139,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4OF-2X-ldJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2122" y="-417"/>
+            <point key="canvasLocation" x="3031.884057971015" y="-417.1875"/>
         </scene>
         <!--Indigo View Controller-->
         <scene sceneID="Msc-cj-uZ4">
@@ -165,7 +166,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VpO-bC-3E0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2786" y="-417"/>
+            <point key="canvasLocation" x="3695.652173913044" y="-417.1875"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Hv3-HY-Rvp">
@@ -177,13 +178,32 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="ST0-J0-hHk" kind="relationship" relationship="viewControllers" id="0aI-Yd-mHs"/>
+                        <segue destination="jMg-nM-2aZ" kind="relationship" relationship="viewControllers" id="0aI-Yd-mHs"/>
                         <segue destination="zkZ-N4-Y4E" kind="relationship" relationship="viewControllers" id="kOK-Yd-We8"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cAI-Wf-bWu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-118" y="-113"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="5Fl-C2-5hL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jMg-nM-2aZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item 1" id="d4t-KF-rxh"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="srI-LS-gZb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ST0-J0-hHk" kind="relationship" relationship="rootViewController" id="1dO-mX-kAG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r2b-Z2-BmZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="771.01449275362324" y="-417.1875"/>
         </scene>
     </scenes>
     <resources>
