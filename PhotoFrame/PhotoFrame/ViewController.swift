@@ -7,11 +7,11 @@
 
 import UIKit
 
-class ViewController: UITabBarController {
+class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(#file, #line, #function, #column)
+//        print(#file, #line, #function, #column)
     }
 
 

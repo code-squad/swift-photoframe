@@ -34,6 +34,7 @@ TabBarController의 TabBar중 한번에 하나만 선택되는 Radio Mode 각각
 # 2단계 IBOutlet
 
 2021.02.09(화)
+
 1. Xcode 프로젝트 내비게이터에서 Main.storyboard 파일을 선택하고 First Scene 에 있는 'First View' 레이블(Label)을 선택하고 Assistant Editor 모드로 변경한다.
 
 2. 레이블을 선택하고 Control + 드래그해서 ViewController 코드에 IBOutlet으로 연결한다.
@@ -57,6 +58,7 @@ TabBarController의 TabBar중 한번에 하나만 선택되는 Radio Mode 각각
 # 3단계 IBAction
 
 2021.02.09(화)
+
 1. Main.storyboard 에서 First Scene에 UIButton을 추가한다.
 
 2. 방금 추가한 버튼을 선택하고 우측 유틸리티 영역 상단 4번째 탭 - 속성(Attributes)에서 Title을 다음으로 변경한다.
@@ -83,6 +85,8 @@ TabBarController의 TabBar중 한번에 하나만 선택되는 Radio Mode 각각
 
 # 4단계 Scene과 Segue
 
+2021.02.10(수)
+
 1. Main 스토리보드에서 First Scene 옆에 ViewController를 드래그해서 새로운 Scene을 추가한다.
 
 2. 앞 단계에서 추가한 [다음]버튼을 선택하고 Control + 드래그를 해서 새로 추가한 Scene에 연결한다.
@@ -101,4 +105,7 @@ TabBarController의 TabBar중 한번에 하나만 선택되는 Radio Mode 각각
 
 ![Simulator Screen Shot - iPhone 11 - 2021-02-10 at 14 20 38](https://user-images.githubusercontent.com/73586326/107470179-51747400-6bae-11eb-88e8-32dc18c943b8.png)
 
+# 5단계 ViewController 프로그래밍
+
+2021.02.10(수)
 
