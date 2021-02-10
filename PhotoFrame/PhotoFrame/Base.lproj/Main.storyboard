@@ -73,21 +73,45 @@
             </objects>
             <point key="canvasLocation" x="15.942028985507248" y="88.392857142857139"/>
         </scene>
-        <!--Item-->
+        <!--Second-->
         <scene sceneID="I1i-K8-ej6">
             <objects>
                 <viewController id="f8e-zd-0S3" customClass="SecondViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6I1-vh-fsT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lza-6h-eRV">
+                                <rect key="frame" x="87" y="137" width="240" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Photo Album" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrn-Js-wKl">
+                                <rect key="frame" x="87" y="413" width="240" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m7E-WJ-ODL">
+                                <rect key="frame" x="192" y="493" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="다음"/>
+                                <connections>
+                                    <action selector="nextImageButtonTouched:" destination="f8e-zd-0S3" eventType="touchUpInside" id="RXh-A7-gII"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="rKx-9h-kgX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Z8a-v5-RB7"/>
+                    <tabBarItem key="tabBarItem" title="Second" id="Z8a-v5-RB7"/>
+                    <connections>
+                        <outlet property="photoImageView" destination="Lza-6h-eRV" id="ksY-Eb-etd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AT5-LL-buL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="903" y="593"/>
+            <point key="canvasLocation" x="902.89855072463774" y="592.63392857142856"/>
         </scene>
         <!--Pink View Controller-->
         <scene sceneID="fE4-Bl-Jpe">
@@ -156,11 +180,11 @@
             </objects>
             <point key="canvasLocation" x="3300.0000000000005" y="-84.375"/>
         </scene>
-        <!--Item-->
+        <!--First-->
         <scene sceneID="mjT-4k-KIR">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fBd-YN-zkl" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="RtH-Du-vhv"/>
+                    <tabBarItem key="tabBarItem" title="First" id="RtH-Du-vhv"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nNB-EM-jrX">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
