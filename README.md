@@ -1,5 +1,39 @@
 # step 1
-dahun-lee-daji step -1 
+<img width="969" alt="스크린샷 2021-02-10 오후 4 14 24" src="https://user-images.githubusercontent.com/68788135/107478066-37da2900-6bbc-11eb-87a6-584164829ab7.png">
+
+UITabBar와 UITabBarController의 차이점은 무엇인가?
+
+UITabBar는 UIView를 상속 받음.
+UITabBarController는 UIViewController를 상속 받음.
+
+UITabBarController는 containerViewController이며 하위 viewController를 가질 수 있음. 
+UITabBarController의 Tabbar에 있는 tabBarItem을 클릭하면 알맞는 viewController의 root view를 present 해준다.
+
+UITabBar는 보통 UITabBarController와 결합되어 쓰이지만, 단독으로 쓰일 수도 있다. UITabBar는 항상 화면의 하단에 위치하며 하나 이상의 UITabBarItem을 표시한다.
+: https://velog.io/@hanseop95/UITabBarController%EC%99%80-UITabBar. 
+
+# step 2
+
+* var text: String?  
+ -> label 이 보여줄 내용. 
+* var attributedText: NSAttributedString?
+ -> 해당 레이블의 스타일 텍스트
+* var font: UIFont!
+ -> 레이블이 보여줄 text의 폰트 설정, nil로 설정 시 default value로 reset한다 ( 공식문서 :  https://developer.apple.com/documentation/uikit/uilabel/1620532-font). 
+ default value : system font at a size of 17 points.  
+* var textColor: UIColor!
+ -> text의 색상. UIColor(displayP3Red: cgFloat, green: cgFloat, blue: cgFloat, alpha: cgFloat) : rgba로 조정가능. alpha를 조정하여 투명도 조정. 0.0~1.0 까지의 범위를 지니며 해당 범위를 초과하면 가장 가까운 경계값으로 지정된다.
+* var textAlignment: NSTextAlignment
+ -> label의 alignment를 조절. UILabel객체의 위치를 조정하는게 아니라, 내부의 text의 위치를 조절함에 주의
+* var lineBreakMode: NSLineBreakMode
+ -> text가 길 경우 작동하는 lineBreakMode를 설정 할 수 있음.
+* var isEnabled: Bool
+ -> 활성화 유무
+* var enablesMarqueeWhenAncestorFocused: Bool 
+__ TVOS Only! __
+ -> 텍스트가 우측에서 좌측으로 움직임.
+ 
+이 외의 속성은 텍스트 크기, 텍스트 그림자, 이벤트 관련, 하이라이트 색상, 중첩 그리기 등이 있음
 # 진행 방법
 
 - 포토프레임에 대한 요구사항을 파악한다.
