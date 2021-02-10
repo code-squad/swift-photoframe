@@ -36,14 +36,16 @@ class OrangeViewController: UIViewController {
     }
     
     @IBAction func closeButtonTouched(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+//        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
+
     }
     
     // ViewController 코드로 호출
     @IBAction func nextButtonTouched(_ sender: Any) {
-        guard let nextVC = self.storyboard?.instantiateViewController(identifier: "GreenViewController") else { return }
-        nextVC.modalTransitionStyle = UIModalTransitionStyle.coverVertical
-        self.present(nextVC, animated: true)
+//        guard let nextVC = self.storyboard?.instantiateViewController(identifier: "GreenViewController") else { return }
+//        nextVC.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+//        self.present(nextVC, animated: true)
     }
     
 
