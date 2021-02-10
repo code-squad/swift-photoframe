@@ -95,6 +95,9 @@
                                 <rect key="frame" x="185" y="400" width="44" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="다음"/>
+                                <connections>
+                                    <segue destination="eya-vA-GXY" kind="show" id="dI1-aW-HXm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5WQ-oC-ZdH"/>
@@ -109,6 +112,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UjG-2A-G17" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="842" y="-348"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="pEA-jJ-0TQ">
+            <objects>
+                <viewController id="eya-vA-GXY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tll-Mx-sve">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="gb2-AE-q7o"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wTE-It-vue"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3m0-T9-hNK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1580" y="-348"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Txy-D4-YRF">
@@ -132,6 +151,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
