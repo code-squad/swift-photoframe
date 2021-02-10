@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A0684AE525D3A27E0006D325 /* SecondTapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0684AE425D3A27E0006D325 /* SecondTapViewController.swift */; };
 		A0AE58E325D12377001C64D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AE58E225D12377001C64D5 /* AppDelegate.swift */; };
 		A0AE58E525D12377001C64D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AE58E425D12377001C64D5 /* SceneDelegate.swift */; };
 		A0AE58E725D12377001C64D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AE58E625D12377001C64D5 /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A0684AE425D3A27E0006D325 /* SecondTapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTapViewController.swift; sourceTree = "<group>"; };
 		A0AE58DF25D12377001C64D5 /* PhotoFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0AE58E225D12377001C64D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0AE58E425D12377001C64D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				A0AE58E425D12377001C64D5 /* SceneDelegate.swift */,
 				A0AE58E625D12377001C64D5 /* ViewController.swift */,
 				A0AE58E825D12377001C64D5 /* Main.storyboard */,
+				A0684AE425D3A27E0006D325 /* SecondTapViewController.swift */,
 				A0AE592725D15BA1001C64D5 /* NextNextViewController.swift */,
 				A0AE592225D15997001C64D5 /* NextViewController.swift */,
 				A0AE591D25D14AAE001C64D5 /* FirstViewController.swift */,
@@ -269,6 +272,7 @@
 			files = (
 				A0AE592325D15997001C64D5 /* NextViewController.swift in Sources */,
 				A0AE58E725D12377001C64D5 /* ViewController.swift in Sources */,
+				A0684AE525D3A27E0006D325 /* SecondTapViewController.swift in Sources */,
 				A0AE592825D15BA1001C64D5 /* NextNextViewController.swift in Sources */,
 				A0AE58E325D12377001C64D5 /* AppDelegate.swift in Sources */,
 				A0AE58E525D12377001C64D5 /* SceneDelegate.swift in Sources */,
