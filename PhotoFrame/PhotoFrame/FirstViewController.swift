@@ -34,6 +34,7 @@ class FirstViewController: UIViewController{
     }
     
     @IBAction func nextButtonTouchUp(_ sender: Any) {
+        self.firstLabel.alpha = 1
         self.firstLabel.backgroundColor = .lightGray
         let attributedString = NSMutableAttributedString(string: self.firstLabel.text!, attributes: [
             .font: UIFont.boldSystemFont(ofSize: 25),
