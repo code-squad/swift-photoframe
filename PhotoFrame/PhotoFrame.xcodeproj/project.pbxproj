@@ -39,6 +39,7 @@
 		BF8D0A9F25D27A9E00C65891 /* 13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF8D0A8925D27A9E00C65891 /* 13.jpg */; };
 		BF8D0AA025D27A9E00C65891 /* 19.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF8D0A8A25D27A9E00C65891 /* 19.jpg */; };
 		BF8D0AA325D2939E00C65891 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8D0AA225D2939E00C65891 /* Animation.swift */; };
+		BF8D0AEF25D3C05300C65891 /* photoframe-border.png in Resources */ = {isa = PBXBuildFile; fileRef = BF8D0AEE25D3C05300C65891 /* photoframe-border.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		BF8D0A8925D27A9E00C65891 /* 13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 13.jpg; sourceTree = "<group>"; };
 		BF8D0A8A25D27A9E00C65891 /* 19.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 19.jpg; sourceTree = "<group>"; };
 		BF8D0AA225D2939E00C65891 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		BF8D0AEE25D3C05300C65891 /* photoframe-border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photoframe-border.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				BF8D0A8325D27A9E00C65891 /* 20.jpg */,
 				BF8D0A7625D27A9D00C65891 /* 21.jpg */,
 				BF8D0A7B25D27A9D00C65891 /* 22.jpg */,
+				BF8D0AEE25D3C05300C65891 /* photoframe-border.png */,
 				BF8D0A2025D131EE00C65891 /* PhotoFrame */,
 				BF8D0A1F25D131EE00C65891 /* Products */,
 			);
@@ -222,6 +225,7 @@
 				BF8D0A9925D27A9E00C65891 /* 20.jpg in Resources */,
 				BF8D0A9A25D27A9E00C65891 /* 07.jpg in Resources */,
 				BF8D0A9B25D27A9E00C65891 /* 15.jpg in Resources */,
+				BF8D0AEF25D3C05300C65891 /* photoframe-border.png in Resources */,
 				BF8D0A9C25D27A9E00C65891 /* 17.jpg in Resources */,
 				BF8D0A9D25D27A9E00C65891 /* 11.jpg in Resources */,
 				BF8D0A9E25D27A9E00C65891 /* 08.jpg in Resources */,
