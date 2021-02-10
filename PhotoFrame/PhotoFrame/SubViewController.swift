@@ -10,7 +10,7 @@ import UIKit
 class SubViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("SubView")
+        print(#file, #line, #function, #column)
         // Do any additional setup after loading the view.
     }
 }
