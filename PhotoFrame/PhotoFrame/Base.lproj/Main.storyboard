@@ -141,13 +141,24 @@
             </objects>
             <point key="canvasLocation" x="2122" y="-417"/>
         </scene>
-        <!--View Controller-->
+        <!--Indigo View Controller-->
         <scene sceneID="Msc-cj-uZ4">
             <objects>
-                <viewController id="O4f-ml-jDJ" sceneMemberID="viewController">
+                <viewController id="O4f-ml-jDJ" customClass="IndigoViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PHf-uk-aaX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pU3-GM-cSH">
+                                <rect key="frame" x="20" y="68" width="30" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="❌"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="O4f-ml-jDJ" eventType="touchUpInside" id="WMv-mh-j1n"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Q87-0r-KRc"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                     </view>
