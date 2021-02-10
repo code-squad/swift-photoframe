@@ -6,7 +6,7 @@
 
 ![스크린샷 2021-02-08 오후 4 51 44](https://user-images.githubusercontent.com/61342175/107374922-812e6800-6b2b-11eb-9d35-186575b271d3.png)
  
-UITapBar와 UITapBarController의 차이?
+UITapBar와 UITapBarController의 차이
 
 처음 생각했었던 것 : UITapBar는 개별 View Controller에 추가할 수 있는 TapBar이고, UITapBarController는 하나의 View Controller이면서 하단에 버튼이 생기고 경로 이동이 바로 됨.
 
@@ -34,8 +34,6 @@ UITabBar : to convey and change your app's mode.
 Tab bar interface는 화면 아래에 여러 tab을 둠으로써 다른 모드를 선택할 수 있도록 도와준다. 각 tab은 custom view controller에 연관된다. 특정 tab이 선택되면, 이전 tab이 무엇인지 상관하지 않고 view controller에 상응하는 root view를 보여준다. property에서 initial tab 설정이 가능하다. selectedIndex property를 사용하면서 view controller를 array index로 선택할 수 있다. UITabBarControllerDelegate protocol 준수가 필요하다.
 
 UITabBarController 클래스는 UIViewController 클래스로부터 상속받은 것이기 때문에 tab bar controller는 view property를 통해 접근 가능한 고유의 view를 가지고 있다. tab bar controller를 위한 view는 tab bar view, custom content를 포함하는 view의 컨테이너일 뿐이다.
-
-UITabBar는 "controller", UITabBarController는 "container view controller"
 
 
 ## 2단계
