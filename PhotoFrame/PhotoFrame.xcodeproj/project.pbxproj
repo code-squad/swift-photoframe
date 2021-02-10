@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF2550CE25D3A0F800BD975D /* OrangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2550CD25D3A0F800BD975D /* OrangeViewController.swift */; };
+		FF2550D325D3A31100BD975D /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2550D225D3A31100BD975D /* GreenViewController.swift */; };
 		FF4F77B425D20E24003CB33F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4F77B325D20E24003CB33F /* AppDelegate.swift */; };
 		FF4F77B625D20E24003CB33F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4F77B525D20E24003CB33F /* SceneDelegate.swift */; };
 		FF4F77B825D20E24003CB33F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4F77B725D20E24003CB33F /* TabBarController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FF2550CD25D3A0F800BD975D /* OrangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeViewController.swift; sourceTree = "<group>"; };
+		FF2550D225D3A31100BD975D /* GreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenViewController.swift; sourceTree = "<group>"; };
 		FF4F77B025D20E24003CB33F /* PhotoFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF4F77B325D20E24003CB33F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF4F77B525D20E24003CB33F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +65,8 @@
 				FF4F77B325D20E24003CB33F /* AppDelegate.swift */,
 				FF4F77B525D20E24003CB33F /* SceneDelegate.swift */,
 				FF4F77CA25D21ED5003CB33F /* FirstViewController.swift */,
+				FF2550D225D3A31100BD975D /* GreenViewController.swift */,
+				FF2550CD25D3A0F800BD975D /* OrangeViewController.swift */,
 				FF4F77B725D20E24003CB33F /* TabBarController.swift */,
 				FF4F77B925D20E24003CB33F /* Main.storyboard */,
 				FF4F77BC25D20E26003CB33F /* Assets.xcassets */,
@@ -140,6 +146,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF2550D325D3A31100BD975D /* GreenViewController.swift in Sources */,
+				FF2550CE25D3A0F800BD975D /* OrangeViewController.swift in Sources */,
 				FF4F77B825D20E24003CB33F /* TabBarController.swift in Sources */,
 				FF4F77B425D20E24003CB33F /* AppDelegate.swift in Sources */,
 				FF4F77B625D20E24003CB33F /* SceneDelegate.swift in Sources */,

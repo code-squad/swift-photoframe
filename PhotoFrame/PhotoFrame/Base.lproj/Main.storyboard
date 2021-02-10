@@ -49,7 +49,7 @@
                                 <state key="normal" title="다음"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="ykQ-4V-MQE" eventType="touchUpInside" id="ofs-QH-dZU"/>
-                                    <segue destination="TBH-fE-AI4" kind="show" id="53w-AS-gG7"/>
+                                    <segue destination="TBH-fE-AI4" kind="presentation" modalPresentationStyle="fullScreen" id="53w-AS-gG7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -74,12 +74,12 @@
             </objects>
             <point key="canvasLocation" x="88.405797101449281" y="-525"/>
         </scene>
-        <!--View Controller-->
+        <!--Orange View Controller-->
         <scene sceneID="3WI-EK-UPB">
             <objects>
-                <viewController id="TBH-fE-AI4" sceneMemberID="viewController">
+                <viewController id="TBH-fE-AI4" customClass="OrangeViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6x0-lW-ddB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKE-kY-fmN">
@@ -87,14 +87,23 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="다음"/>
                                 <connections>
-                                    <segue destination="e3q-2U-ulC" kind="show" id="kMd-Lj-7zS"/>
+                                    <segue destination="e3q-2U-ulC" kind="presentation" modalPresentationStyle="fullScreen" id="kMd-Lj-7zS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMw-sa-aiC">
+                                <rect key="frame" x="197" y="477" width="30" height="30"/>
+                                <state key="normal" title="닫기"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="TBH-fE-AI4" eventType="touchUpInside" id="CtT-g4-EYo"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="051-yv-oet"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
+                            <constraint firstItem="jMw-sa-aiC" firstAttribute="bottom" secondItem="hKE-kY-fmN" secondAttribute="bottom" constant="40" id="70P-HS-N9A"/>
                             <constraint firstItem="hKE-kY-fmN" firstAttribute="centerX" secondItem="051-yv-oet" secondAttribute="centerX" id="Drb-xt-e4R"/>
+                            <constraint firstItem="jMw-sa-aiC" firstAttribute="centerX" secondItem="051-yv-oet" secondAttribute="centerX" id="seL-2R-Ofk"/>
                             <constraint firstItem="hKE-kY-fmN" firstAttribute="centerY" secondItem="051-yv-oet" secondAttribute="centerY" id="znd-VX-Hct"/>
                         </constraints>
                     </view>
@@ -104,15 +113,29 @@
             </objects>
             <point key="canvasLocation" x="987" y="-526"/>
         </scene>
-        <!--View Controller-->
+        <!--Green View Controller-->
         <scene sceneID="dLW-A9-waZ">
             <objects>
-                <viewController id="e3q-2U-ulC" sceneMemberID="viewController">
+                <viewController id="e3q-2U-ulC" customClass="GreenViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="veM-72-5y5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PoS-D4-tcm">
+                                <rect key="frame" x="192" y="438" width="30" height="30"/>
+                                <state key="normal" title="닫기"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="TBH-fE-AI4" eventType="touchUpInside" id="Vfc-t5-xfK"/>
+                                    <action selector="closeButtonTouched:" destination="e3q-2U-ulC" eventType="touchUpInside" id="krd-Db-loo"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="YUN-v7-kr7"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="PoS-D4-tcm" firstAttribute="centerY" secondItem="YUN-v7-kr7" secondAttribute="centerY" id="AB2-IU-gOK"/>
+                            <constraint firstItem="PoS-D4-tcm" firstAttribute="centerX" secondItem="YUN-v7-kr7" secondAttribute="centerX" id="vFA-sI-JR3"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ML2-qk-hS4"/>
                 </viewController>
