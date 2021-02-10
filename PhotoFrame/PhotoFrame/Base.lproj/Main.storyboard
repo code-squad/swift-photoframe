@@ -35,6 +35,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" image="pencil" catalog="system" id="hBv-0u-As2"/>
+
                     <connections>
                         <outlet property="firstDescription" destination="bjY-Vs-xcS" id="cvm-WK-xpb"/>
                         <outlet property="photoLabel" destination="duA-zy-wkT" id="j4P-yt-J8B"/>
@@ -43,11 +44,13 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A60-zy-YUO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1095.6521739130435" y="87.723214285714278"/>
+
         </scene>
         <!--Item-->
         <scene sceneID="UkZ-q2-RyJ">
             <objects>
                 <viewController id="vta-3V-AgF" customClass="SecondSceneViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+
                     <view key="view" contentMode="scaleToFill" id="Sg6-DO-R0Z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
