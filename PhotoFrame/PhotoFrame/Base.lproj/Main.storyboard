@@ -151,10 +151,21 @@
         <!--NextNextOfFirstView-->
         <scene sceneID="3Ro-sJ-Bb3">
             <objects>
-                <viewController title="NextNextOfFirstView" id="r6e-3r-kJ3" sceneMemberID="viewController">
+                <viewController title="NextNextOfFirstView" id="r6e-3r-kJ3" customClass="NextNextOfFristViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mWG-95-hBn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xqr-5r-Zez">
+                                <rect key="frame" x="192" y="291" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="닫기"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="Cpg-dv-Enl" eventType="touchUpInside" id="SSy-dZ-wee"/>
+                                    <action selector="closeButtonTouched:" destination="r6e-3r-kJ3" eventType="touchUpInside" id="l9m-tX-3fe"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="4Pw-j7-ovR"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                     </view>
