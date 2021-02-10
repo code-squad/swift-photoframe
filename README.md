@@ -46,5 +46,13 @@
 
 ![step 5-2](https://user-images.githubusercontent.com/72188416/107474447-b67f9800-6bb5-11eb-9782-f530ff014ae4.png)
 
+<br>
+
+## Step 6 - Container ViewController
+
+- `Navigation Controller`를 적용하여 이전 단계로 돌아가는 `Back` 버튼을 생성하였다.
+- `❌` 버튼의 기능을 맨 처음 화면으로 돌아가는 것으로 변경하였다.
 
 
+
+![step 6](https://user-images.githubusercontent.com/72188416/107481879-3d3a7200-6bc2-11eb-8fac-2121e8a706a6.gif)
