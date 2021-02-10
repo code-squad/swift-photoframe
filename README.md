@@ -87,3 +87,64 @@ segue연결시 iOS13부터 modalPresentation 디폴트값 변경 => fullscreen �
 
 - 세번째 화면
 <img src="https://user-images.githubusercontent.com/74946802/107326639-21b26700-6aef-11eb-8830-3987e32a64e0.png" width="300" height="600">
+
+# Step.5
+
+- View Controller의 생명주기
+<img src="https://user-images.githubusercontent.com/74946802/107330692-414c8e00-6af5-11eb-9cfa-4b525c81f16d.jpeg" width="350" height="500">
+
+#### viewDidLoad
+
+시스템에 의해 자동 호출
+
+일반적으로 리소스를 초기화하거나 초기화면 구성 용도
+
+화면이 처음 호출될 때 한번만 실행
+
+처음 한번만 실행되는 초기화 코드의 경우 viewDidLoad에 작성
+
+#### viewWillAppear
+
+뷰가 나타날 거라는 신호를 컨트롤러에 알리는 역할
+
+뷰가 나타나기 직전에 호출되며 viewDidLoad와 다름
+
+앱 실행 시 viewDidLoad -> viewWillAppear순으로 호출
+
+가장 큰 차이점은 다른 뷰로 이동했다가 돌아왔을 때는 viewWillAppear만 호출
+
+다른 뷰로 이동했다가 돌아왔을 때도 처리해야하는 작업은 viewWillAppear에 작성
+
+#### viewDidAppear
+
+뷰가 화면에 나타났다는 신호를 컨트롤러에 알리는 역할
+
+화면에 적용될 애니메이션을 그려주는 역할
+
+뷰가 화면에 나타난 직후에 호출
+
+위 내용을 제외하고는 viewWillAppear와 거의 같음
+
+#### viewWillDisappear
+
+뷰가 사라지기 직전에 호출
+
+뷰가 삭제되려고 하는 것을 컨트롤러에 알리는 역할
+
+#### viewDidDisappear
+
+뷰 컨트롤러가 제거됐을 때 호출
+
+- 첫번째 화면 -> 두번째 화면 -> 첫번째 화면 실행 순서
+
+<img width="168" alt="스크린샷 2021-02-09 오후 5 10 40" src="https://user-images.githubusercontent.com/74946802/107334615-47913900-6afa-11eb-8932-8346b55ca68d.png"> <img width="168" alt="스크린샷 2021-02-09 오후 5 10 51" src="https://user-images.githubusercontent.com/74946802/107334631-4d871a00-6afa-11eb-984e-be2026567914.png"> <img width="172" alt="스크린샷 2021-02-09 오후 5 11 01" src="https://user-images.githubusercontent.com/74946802/107334657-54ae2800-6afa-11eb-88ae-135c063d5fda.png">
+
+?? viewDidLoad가 왜 계속 실행되는지...?
+
+<img width="219" alt="스크린샷 2021-02-10 오후 2 07 47" src="https://user-images.githubusercontent.com/74946802/107467580-a497f800-6ba9-11eb-8553-e935f2ba9cf5.png">
+
+루트 뷰 컨트롤러를 TabBar로 사용하는 뷰컨트롤러끼리는 정상 작동
+
+이전 무한 viewDidLoad호출은 일반 viewController끼리 Segue(show)사용해서 계속 새로운 페이지로 이동하는 현상
+
+- Segue 삭제후 코드로 구현
