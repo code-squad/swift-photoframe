@@ -152,8 +152,20 @@
                     <view key="view" contentMode="scaleToFill" id="IK0-o4-Y0N">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3번째!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="huF-Jx-Ind">
+                                <rect key="frame" x="185" y="410.5" width="44.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="2RA-A6-aVy"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <constraints>
+                            <constraint firstItem="huF-Jx-Ind" firstAttribute="centerX" secondItem="IK0-o4-Y0N" secondAttribute="centerX" id="aYF-mP-TcB"/>
+                            <constraint firstItem="huF-Jx-Ind" firstAttribute="centerY" secondItem="IK0-o4-Y0N" secondAttribute="centerY" id="zQa-oH-dPd"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dyl-QI-jTX"/>
                 </viewController>
