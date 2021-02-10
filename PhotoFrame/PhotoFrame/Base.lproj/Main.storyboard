@@ -106,10 +106,10 @@
             </objects>
             <point key="canvasLocation" x="1452" y="-417"/>
         </scene>
-        <!--View Controller-->
+        <!--Orange View Controller-->
         <scene sceneID="4J0-ae-C7B">
             <objects>
-                <viewController id="1e6-h0-dfE" sceneMemberID="viewController">
+                <viewController id="1e6-h0-dfE" customClass="OrangeViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CET-U9-NnW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -120,6 +120,15 @@
                                 <state key="normal" title="다음"/>
                                 <connections>
                                     <segue destination="O4f-ml-jDJ" kind="presentation" modalPresentationStyle="fullScreen" id="gwj-9C-u60"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egH-TM-K46">
+                                <rect key="frame" x="20" y="20" width="30" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="❌"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="1e6-h0-dfE" eventType="touchUpInside" id="srP-De-F2W"/>
                                 </connections>
                             </button>
                         </subviews>
