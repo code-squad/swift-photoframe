@@ -82,7 +82,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="3UZ-Uw-wQ6" kind="show" id="VcH-ph-yNf"/>
+                                    <action selector="moveButtonTouched:" destination="Dzv-od-Coq" eventType="touchUpInside" id="2LR-uW-r9C"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqa-xY-vD0">
@@ -106,7 +106,7 @@
         <!--Blue View Controller-->
         <scene sceneID="Sbq-PS-Xb8">
             <objects>
-                <viewController id="3UZ-Uw-wQ6" customClass="BlueViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BlueVC" id="3UZ-Uw-wQ6" customClass="BlueViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ipg-ax-08l">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
