@@ -41,9 +41,9 @@ class WhiteViewController: UIViewController {
     @IBAction func nextButtonTouchedUpInside(_ sender: Any) {
         photoLabelToDefault()
         
-//        let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
-//        let nextVC = mainStoryBoard.instantiateViewController(withIdentifier: "YellowVC")
-//        self.present(nextVC, animated: true, completion: nil)
+        let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
+        let nextVC = mainStoryBoard.instantiateViewController(withIdentifier: "YellowVC")
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
     @IBAction func nextButtonTouchedDown(_ sender: Any) {
