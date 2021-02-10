@@ -17,10 +17,13 @@ class FirstViewController: UIViewController {
         self.photoLabel.backgroundColor = UIColor.yellow
         self.photoLabel.alpha = 0.5
         
-//        guard let newVC = self.storyboard?.instantiateViewController(identifier: "OrangeViewController") else { return }
+        guard let nextVC = self.storyboard?.instantiateViewController(identifier: "OrangeViewController") else { return }
+        // ViewController 호출 코드로 구현 ( Segue X )
 //        newVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
-//
 //        present(newVC, animated: true)
+        
+        // navigationCotroller push 코드로 구현 ( Segue X )
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
 
     override func viewDidLoad() {
