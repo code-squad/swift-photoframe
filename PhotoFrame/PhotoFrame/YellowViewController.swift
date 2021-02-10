@@ -27,5 +27,11 @@ class YellowViewController: UIViewController {
     @IBAction func closeButtonTouched(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
+    @IBAction func moveButtonTouched(_ sender: UIButton) {
+        guard let bvc = self.storyboard?.instantiateViewController(identifier: "BlueVC") else {
+            return
+        }
+        self.navigationController?.pushViewController(bvc, animated: true)
+    }
     
 }
