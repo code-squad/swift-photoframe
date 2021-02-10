@@ -35,6 +35,6 @@ class IndigoViewController: UIViewController {
     }
 
     @IBAction func closeButtonTouched(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        self.navigationController?.popToRootViewController(animated: true)
     }
 }

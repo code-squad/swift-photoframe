@@ -47,13 +47,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Dm-nD-BaQ">
-                                <rect key="frame" x="192" y="620" width="30" height="30"/>
+                                <rect key="frame" x="192" y="556" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="다음"/>
                                 <connections>
                                     <action selector="nextButtonTouchedDown:" destination="ST0-J0-hHk" eventType="touchDown" id="l86-Gg-cV2"/>
                                     <action selector="nextButtonTouchedUpInside:" destination="ST0-J0-hHk" eventType="touchUpInside" id="5Fu-ty-1bj"/>
-                                    <segue destination="0NZ-RY-Sam" kind="show" id="thE-oW-I59"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -111,7 +110,7 @@
             <objects>
                 <viewController id="1e6-h0-dfE" customClass="OrangeViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CET-U9-NnW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzM-40-qSS">
@@ -146,7 +145,7 @@
             <objects>
                 <viewController id="O4f-ml-jDJ" customClass="IndigoViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PHf-uk-aaX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pU3-GM-cSH">
