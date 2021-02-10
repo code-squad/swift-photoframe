@@ -40,7 +40,9 @@
                                 <state key="normal" title="다음"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="eih-Px-uec" eventType="touchUpInside" id="o1U-mq-zhU"/>
-                                    <segue destination="a3c-3F-wsA" kind="show" id="OJ0-Fw-wNq"/>
+                                    <segue destination="a3c-3F-wsA" kind="popoverPresentation" popoverAnchorView="W5V-8u-vaC" id="OJ0-Fw-wNq">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                         </subviews>
@@ -69,7 +71,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="다음"/>
                                 <connections>
-                                    <segue destination="3YE-4s-e2V" kind="showDetail" id="owx-IS-FmU"/>
+                                    <segue destination="3YE-4s-e2V" kind="presentation" modalPresentationStyle="fullScreen" id="owx-IS-FmU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -87,7 +89,7 @@
             <objects>
                 <viewController id="3YE-4s-e2V" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h8q-Pk-DUl">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="CTO-vF-6af"/>
                         <color key="backgroundColor" systemColor="systemBlueColor"/>
