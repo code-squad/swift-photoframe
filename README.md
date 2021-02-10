@@ -16,7 +16,11 @@ Documentation Link
 
 ### UITabBar
 
-"A controller that displays one or more buttons in a tab bar for selecting between different subtasks, views, or modes in an app."
+~~"A controller that displays one or more buttons in a tab bar for selecting between different subtasks, views, or modes in an app."~~
+
+"A control that displays one or more buttons in a tab bar for selecting between different subtasks, views, or modes in an app."
+
+수정 : 스스로 만들어낸 오타에 잘못 이해하고 있었다. UITabBar는 서로 다른 하위 tasks, views, modes 중 선택할 수 있는 tab bar로, 하나 이상의 버튼을 표시하는 control이다. 동시에 UIView로부터 상속받았다.
 
 보통 UITabBarController와 함께 사용하지만, app 내에서 standalone controls로써 사용할 수 있다. 백그라운드 이미지, 컬러 등 인터페이스에서 커스텀이 가능하다. 사용 시 init(frame:) 메소드 혹은 다른 view initializer method를 통해 initial configuration을 set 해줘야 한다. 내용 중간에 UIToolbar 클래스와 유사해보이지만 서로 다른 목적을 가지고 있음을 알려주고 있다.
 
@@ -168,7 +172,9 @@ ViewController에 UIImageView를 가득 채우고 안에 Core Graphics로 Draw. 
 
 더 근본적인 질문. Swift에서 Controller가 어떤 의미인지 생각해보기로 했다. 애플 개발자 문서에 검색하면 게임패드 컨트롤러 등이 보이며, 기초적인 개념이기 때문인지 별도의 설명은 없다. Naver에 controller를 검색하면 영어사전에 1. (특히 큰 조직이나 부서의) 관리자, 2. (기계의) 조종[제어] 장치, 3. (회사의) 회계 담당자 [경리 부장]이라는 설명이 나온다. 개인적으로 제어 장치라는 표현이 더 와닿는다. 이전부터 이해하고 있었던 View Controller는 단순한 화면이 아니라 여러 가지 View에 대한 Controller, 즉 View를 제어하는 무엇이라고 생각했다.
 
-앞에서 UITabBar는 Controller라고 했다. UITabBar가 가지는 요소는 UITabBarItem objects인데, 하나 이상의 이 objects에 대한 Controller이지 않을까 싶은 생각이 들었다. 반면에 UITabBarController는 Container View Controller로써 View Controller를 제어하는 하나의 Controller로 이해하고 있다.
+~~앞에서 UITabBar는 Controller라고 했다. UITabBar가 가지는 요소는 UITabBarItem objects인데, 하나 이상의 이 objects에 대한 Controller이지 않을까 싶은 생각이 들었다. 반면에 UITabBarController는 Container View Controller로써 View Controller를 제어하는 하나의 Controller로 이해하고 있다.~~
+
+위 1단계 내용에서 수정한 내용 참고.
 
 ## UILabel Property
 
