@@ -25,6 +25,7 @@ class FirstSceneViewController: UIViewController {
         firstDescription.text = "init"
         firstDescription.font.withSize(20)
         firstDescription.textColor = UIColor(displayP3Red: 0.2, green: 0.5, blue: 0.3, alpha: 0.3)
+        
         firstDescription.textAlignment = .right
         // Do any additional setup after loading the view.
     }
