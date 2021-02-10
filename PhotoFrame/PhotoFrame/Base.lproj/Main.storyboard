@@ -89,10 +89,10 @@
             </objects>
             <point key="canvasLocation" x="903" y="593"/>
         </scene>
-        <!--View Controller-->
+        <!--Pink View Controller-->
         <scene sceneID="fE4-Bl-Jpe">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="pnR-B1-lnb" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="pnR-B1-lnb" customClass="PinkViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kZY-fu-ws2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -103,7 +103,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="다음"/>
                                 <connections>
-                                    <segue destination="6eJ-yM-406" kind="showDetail" id="QeU-M6-76d"/>
+                                    <action selector="nextToGreenView:" destination="pnR-B1-lnb" eventType="touchUpInside" id="54s-vc-d4Y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifV-Sy-fea">
+                                <rect key="frame" x="190" y="505" width="35" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="닫기"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="pnR-B1-lnb" eventType="touchUpInside" id="328-Cf-ErM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -111,21 +120,37 @@
                         <color key="backgroundColor" red="1" green="0.96965854121275097" blue="0.93562492007173648" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="1Y4-PC-3MY"/>
+                    <connections>
+                        <segue destination="6eJ-yM-406" kind="show" identifier="ShowGreen" id="Ce9-Ax-m6h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7vr-Ah-Qdt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1612" y="-84"/>
         </scene>
-        <!--View Controller-->
+        <!--Green View Controller-->
         <scene sceneID="bhw-st-AkM">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="6eJ-yM-406" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="6eJ-yM-406" customClass="GreenViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="96Z-Du-e6e">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SvK-zT-bAc">
+                                <rect key="frame" x="190" y="505" width="35" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="닫기"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="pnR-B1-lnb" eventType="touchUpInside" id="SEy-hW-WWG"/>
+                                    <action selector="closeButtonTouched:" destination="6eJ-yM-406" eventType="touchUpInside" id="Zrc-ML-SW4"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="twm-e6-L82"/>
                         <color key="backgroundColor" red="0.86987242573339196" green="1" blue="0.94690556476944499" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <navigationItem key="navigationItem" id="obY-cc-lo1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I4t-oq-jqw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
