@@ -8,7 +8,6 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-    @IBOutlet weak var nextButton: UIButton!
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
