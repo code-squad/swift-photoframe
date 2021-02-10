@@ -138,3 +138,17 @@ TabBarController는 `viewDidAppear`이 되었지만, FirstViewController는 `vie
 - **UIModalTransitionStyle**
 
 `self.present(nextVC, animated: true)`
+
+## Step06 - Container ViewContatiner
+
+### 실행 영상
+
+<img src = "img/step06-01.gif" width = "40%">
+
+**ViewController Container**
+- Split View Controller
+- TabBar Controller
+- Navigation Controller
+
+### Navigation Controller
+Navigation Controller는 자식 Container들을 스택 형식으로 쌓기 때문에 관련 메소드들이 `push`, `pop`이다.
