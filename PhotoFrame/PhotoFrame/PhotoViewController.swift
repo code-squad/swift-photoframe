@@ -11,10 +11,12 @@ class PhotoViewController: UIViewController {
 
     @IBOutlet weak var photoLabel: UILabel!
     @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var photoFrameView: UIImageView!
     
     override func viewDidLoad() {
         photoLabel.text = "Photo Album"
         photoLabel.adjustsFontSizeToFitWidth = true
+        photoImageView.contentMode = .scaleAspectFill
         setRandomImage()
         super.viewDidLoad()
     }
