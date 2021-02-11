@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TabViewController : UIViewController{
+class Tab1ViewController : UIViewController{
     
     @IBOutlet weak var photoLabel: UILabel!
     @IBOutlet weak var firstDescription: UILabel!
