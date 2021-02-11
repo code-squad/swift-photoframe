@@ -49,6 +49,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E486B5F025D53AF300B59A4B /* SecondScene */ = {
+			isa = PBXGroup;
+			children = (
+				E486B5E725D5342F00B59A4B /* SecondViewController.swift */,
+				E486B5EA25D5344400B59A4B /* SunFlowerViewController.swift */,
+				E486B5ED25D5345600B59A4B /* OrangeViewController.swift */,
+			);
+			path = SecondScene;
+			sourceTree = "<group>";
+		};
+		E486B5F225D53B0E00B59A4B /* FirstScene */ = {
+			isa = PBXGroup;
+			children = (
+				E4EC6CD725D17B2E00743C87 /* FirstViewController.swift */,
+				E42409E025D3AAA7001F19F6 /* PurpleViewController.swift */,
+				E4EC6CDC25D2784600743C87 /* RedViewController.swift */,
+			);
+			path = FirstScene;
+			sourceTree = "<group>";
+		};
 		E4EC6CB525D15E9A00743C87 = {
 			isa = PBXGroup;
 			children = (
@@ -72,12 +92,8 @@
 				E4EC6CC325D15E9A00743C87 /* SceneDelegate.swift */,
 				E4EC6CC525D15E9A00743C87 /* ViewController.swift */,
 				E4EC6CC725D15E9A00743C87 /* Main.storyboard */,
-				E42409E025D3AAA7001F19F6 /* PurpleViewController.swift */,
-				E4EC6CD725D17B2E00743C87 /* FirstViewController.swift */,
-				E486B5E725D5342F00B59A4B /* SecondViewController.swift */,
-				E486B5EA25D5344400B59A4B /* SunFlowerViewController.swift */,
-				E486B5ED25D5345600B59A4B /* OrangeViewController.swift */,
-				E4EC6CDC25D2784600743C87 /* RedViewController.swift */,
+				E486B5F225D53B0E00B59A4B /* FirstScene */,
+				E486B5F025D53AF300B59A4B /* SecondScene */,
 				E4EC6CCA25D15E9B00743C87 /* Assets.xcassets */,
 				E4EC6CCC25D15E9B00743C87 /* LaunchScreen.storyboard */,
 				E4EC6CCF25D15E9B00743C87 /* Info.plist */,
