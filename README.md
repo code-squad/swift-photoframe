@@ -109,3 +109,32 @@ TabBarController의 TabBar중 한번에 하나만 선택되는 Radio Mode 각각
 
 2021.02.10(수)
 
+<img width="1792" alt="스크린샷 2021-02-10 오후 5 50 02" src="https://user-images.githubusercontent.com/73586326/107630544-0427fd80-6ca7-11eb-9090-27c91837fbef.png">
+
+<img width="1792" alt="스크린샷 2021-02-10 오후 5 38 41" src="https://user-images.githubusercontent.com/73586326/107630660-320d4200-6ca7-11eb-981d-7373d0cf8bac.png">
+
+<img width="1792" alt="스크린샷 2021-02-10 오후 5 39 01" src="https://user-images.githubusercontent.com/73586326/107630690-3f2a3100-6ca7-11eb-800d-6be6fee00a84.png">
+
+## View Controller Life-Cycle
+
+### loadView
+컨트롤러가 관리하는 뷰를 만드는 역할을 한다.
+
+### viewDidLoad
+뷰의 로딩이 완료 되었을 때 시스템에 의해 자동으로 호출되기 때문에 일반적으로 리소스를 초기화하거나 초기 화면을 구성하는 용도로 주로 사용한다.
+화면이 처음 만들어질 때 한번 실행되므로 처음 한번 실행해야 하는 초기화 코드가 있을 경우 사용하면 된다.
+
+### viewWillAppear
+뷰가 나타날 거라는 신호를 컨트롤러에게 알리는 역할을 한다. 뷰가 나타나기 직전에 호출된다.
+다른 뷰에서 다시 돌아오는 상황에 실행해야 하는 것들을 사용하면 된다.
+
+### viewDidAppear
+뷰가 나타났다는 것을 컨트롤러에게 알리는 역할을 하고 화면에 적용될 애니메이션을 그려준다. viewDidAppear는 뷰가 화면에 나타난 직후에 실행된다.
+
+### viewWillDisappear
+뷰가 사라지기 직전에 호출되는 함수이다. 뷰가 삭제 되려고 하는 것을 뷰 컨트롤러에게 알리는 역할을 한다.
+
+### viewDidDisappear
+viewDidDisappear가 호출되면 뷰 컨트롤러가 뷰가 제거된 것을 알려준다.
+
+[참고](https://zeddios.tistory.com/43)
