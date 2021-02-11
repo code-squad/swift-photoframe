@@ -20,8 +20,12 @@
                                 <rect key="frame" x="87" y="210" width="240" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photoframe-border.png" translatesAutoresizingMaskIntoConstraints="NO" id="oo5-9C-6tj" userLabel="photoFrame">
+                                <rect key="frame" x="57" y="180" width="300" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjB-7j-aG8">
-                                <rect key="frame" x="187" y="565" width="40" height="54"/>
+                                <rect key="frame" x="187" y="598" width="40" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <state key="normal" title="🎲"/>
@@ -30,7 +34,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tvE-MA-uo2">
-                                <rect key="frame" x="87" y="458" width="240" height="55"/>
+                                <rect key="frame" x="57" y="488" width="300" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="46"/>
                                 <nil key="textColor"/>
@@ -42,6 +46,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="VFu-B6-scr"/>
                     <connections>
+                        <outlet property="photoFrameView" destination="oo5-9C-6tj" id="qxG-vS-Y2D"/>
                         <outlet property="photoImageView" destination="G5B-6k-Du2" id="sjz-pS-b1U"/>
                         <outlet property="photoLabel" destination="tvE-MA-uo2" id="mex-qE-JIW"/>
                     </connections>
@@ -232,6 +237,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="photoframe-border.png" width="720" height="720"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
