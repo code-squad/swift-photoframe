@@ -22,9 +22,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jK7-wD-kIb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="364" y="786"/>
+            <point key="canvasLocation" x="1273.913043478261" y="785.49107142857144"/>
         </scene>
-        <!--Item 1-->
+        <!--Tab1 View Controller-->
         <scene sceneID="rQ2-Ux-8fu">
             <objects>
                 <viewController id="nJz-lB-oaW" customClass="Tab1ViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
@@ -71,7 +71,7 @@
                             <constraint firstItem="Emq-qi-NMc" firstAttribute="centerX" secondItem="BkC-U0-StS" secondAttribute="centerX" id="a38-nD-Rvk"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="Ucu-uR-zaF"/>
+                    <navigationItem key="navigationItem" id="mCM-Zr-Q03"/>
                     <connections>
                         <outlet property="firstDescription" destination="Jaq-Cb-boY" id="Hhq-uC-GoW"/>
                         <outlet property="photoLabel" destination="Emq-qi-NMc" id="KfX-tc-Jw2"/>
@@ -79,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6oW-S8-leB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="363.768115942029" y="150.66964285714286"/>
+            <point key="canvasLocation" x="1273.913043478261" y="150.66964285714286"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="8wk-os-9je">
@@ -91,7 +91,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="nJz-lB-oaW" kind="relationship" relationship="viewControllers" id="Oke-tC-tcm"/>
+                        <segue destination="hK0-gU-2H7" kind="relationship" relationship="viewControllers" id="Oke-tC-tcm"/>
                         <segue destination="cSW-jx-GAa" kind="relationship" relationship="viewControllers" id="IAN-yx-oYx"/>
                     </connections>
                 </tabBarController>
@@ -104,7 +104,7 @@
             <objects>
                 <viewController id="Xm1-Th-0Kd" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FXZ-I0-hJV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61C-q1-hFj">
@@ -118,13 +118,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2번째 화면" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VX5-YE-f6v">
-                                <rect key="frame" x="132.5" y="375" width="149" height="42"/>
+                                <rect key="frame" x="132.5" y="402" width="149" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="국어 사랑합니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kqt-NA-xqe">
-                                <rect key="frame" x="153.5" y="430.5" width="107.5" height="21"/>
+                                <rect key="frame" x="153.5" y="457.5" width="107.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -143,24 +143,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="50I-VJ-jJh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1161" y="151"/>
+            <point key="canvasLocation" x="2071.0144927536235" y="150.66964285714286"/>
         </scene>
         <!--Violet View Controller-->
         <scene sceneID="0du-vh-j36">
             <objects>
                 <viewController id="arN-2M-S1O" customClass="VioletViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IK0-o4-Y0N">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3번째!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="huF-Jx-Ind">
-                                <rect key="frame" x="185" y="410.5" width="44.5" height="21"/>
+                                <rect key="frame" x="185" y="437.5" width="44.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWT-qD-eks">
-                                <rect key="frame" x="181" y="327" width="52" height="48"/>
+                                <rect key="frame" x="181" y="354" width="52" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="닫기"/>
                                 <connections>
@@ -181,7 +181,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="09j-JJ-2h7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1975" y="151"/>
+            <point key="canvasLocation" x="2884.057971014493" y="150.66964285714286"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="Xr8-os-eFu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hK0-gU-2H7" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item 1" id="Ucu-uR-zaF"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="akg-7z-KjJ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nJz-lB-oaW" kind="relationship" relationship="rootViewController" id="035-qT-HMN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Md1-mh-3So" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="363.768115942029" y="150.66964285714286"/>
         </scene>
     </scenes>
     <resources>
