@@ -101,3 +101,4 @@ ex) git push --set-upstream origin photoframe-step1
 ![second_View](/images/second_View.png)
 ![third_View](/images/third_View.png)
 ![navigationView](/images/Navigation.png)
+![photoAlbum](/images/PhotoAlbum.png)
