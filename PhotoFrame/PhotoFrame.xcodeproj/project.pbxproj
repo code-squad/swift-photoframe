@@ -10,6 +10,7 @@
 		E4089EBA25D3A68E00A18D32 /* OrangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4089EB925D3A68E00A18D32 /* OrangeViewController.swift */; };
 		E4089EBE25D3A77E00A18D32 /* IndigoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4089EBD25D3A77E00A18D32 /* IndigoViewController.swift */; };
 		E4089EC425D4EEC000A18D32 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4089EC325D4EEC000A18D32 /* PhotoViewController.swift */; };
+		E4089EC825D4F1F900A18D32 /* Demo Images in Resources */ = {isa = PBXBuildFile; fileRef = E4089EC725D4F1F900A18D32 /* Demo Images */; };
 		E49079B025D1397D00096A4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49079AF25D1397D00096A4F /* AppDelegate.swift */; };
 		E49079B225D1397D00096A4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49079B125D1397D00096A4F /* SceneDelegate.swift */; };
 		E49079B425D1397D00096A4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49079B325D1397D00096A4F /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 		E4089EB925D3A68E00A18D32 /* OrangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeViewController.swift; sourceTree = "<group>"; };
 		E4089EBD25D3A77E00A18D32 /* IndigoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndigoViewController.swift; sourceTree = "<group>"; };
 		E4089EC325D4EEC000A18D32 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		E4089EC725D4F1F900A18D32 /* Demo Images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Demo Images"; path = "../Demo Images"; sourceTree = "<group>"; };
 		E49079AC25D1397D00096A4F /* PhotoFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E49079AF25D1397D00096A4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E49079B125D1397D00096A4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +52,7 @@
 		E49079A325D1397D00096A4F = {
 			isa = PBXGroup;
 			children = (
+				E4089EC725D4F1F900A18D32 /* Demo Images */,
 				E49079AE25D1397D00096A4F /* PhotoFrame */,
 				E49079AD25D1397D00096A4F /* Products */,
 			);
@@ -141,6 +144,7 @@
 			files = (
 				E49079BC25D1397F00096A4F /* LaunchScreen.storyboard in Resources */,
 				E49079B925D1397F00096A4F /* Assets.xcassets in Resources */,
+				E4089EC825D4F1F900A18D32 /* Demo Images in Resources */,
 				E49079B725D1397D00096A4F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

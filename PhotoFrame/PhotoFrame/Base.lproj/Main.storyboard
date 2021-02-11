@@ -29,10 +29,10 @@
                                     <action selector="randomButtonTouched:" destination="zkZ-N4-Y4E" eventType="touchUpInside" id="2TO-iy-Ll3"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tvE-MA-uo2">
-                                <rect key="frame" x="88" y="458" width="238" height="46"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tvE-MA-uo2">
+                                <rect key="frame" x="87" y="458" width="240" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="57"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="46"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -42,6 +42,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="VFu-B6-scr"/>
                     <connections>
+                        <outlet property="photoImageView" destination="G5B-6k-Du2" id="sjz-pS-b1U"/>
                         <outlet property="photoLabel" destination="tvE-MA-uo2" id="mex-qE-JIW"/>
                     </connections>
                 </viewController>
