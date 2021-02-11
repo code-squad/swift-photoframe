@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		E42409E125D3AAA7001F19F6 /* PurpleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42409E025D3AAA7001F19F6 /* PurpleViewController.swift */; };
+		E486B5E825D5342F00B59A4B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E486B5E725D5342F00B59A4B /* SecondViewController.swift */; };
+		E486B5EB25D5344400B59A4B /* SunFlowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E486B5EA25D5344400B59A4B /* SunFlowerViewController.swift */; };
+		E486B5EE25D5345600B59A4B /* OrangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E486B5ED25D5345600B59A4B /* OrangeViewController.swift */; };
 		E4EC6CC225D15E9A00743C87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EC6CC125D15E9A00743C87 /* AppDelegate.swift */; };
 		E4EC6CC425D15E9A00743C87 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EC6CC325D15E9A00743C87 /* SceneDelegate.swift */; };
 		E4EC6CC625D15E9A00743C87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EC6CC525D15E9A00743C87 /* ViewController.swift */; };
@@ -20,6 +23,9 @@
 
 /* Begin PBXFileReference section */
 		E42409E025D3AAA7001F19F6 /* PurpleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleViewController.swift; sourceTree = "<group>"; };
+		E486B5E725D5342F00B59A4B /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		E486B5EA25D5344400B59A4B /* SunFlowerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunFlowerViewController.swift; sourceTree = "<group>"; };
+		E486B5ED25D5345600B59A4B /* OrangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeViewController.swift; sourceTree = "<group>"; };
 		E4EC6CBE25D15E9A00743C87 /* PhotoFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4EC6CC125D15E9A00743C87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4EC6CC325D15E9A00743C87 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +74,9 @@
 				E4EC6CC725D15E9A00743C87 /* Main.storyboard */,
 				E42409E025D3AAA7001F19F6 /* PurpleViewController.swift */,
 				E4EC6CD725D17B2E00743C87 /* FirstViewController.swift */,
+				E486B5E725D5342F00B59A4B /* SecondViewController.swift */,
+				E486B5EA25D5344400B59A4B /* SunFlowerViewController.swift */,
+				E486B5ED25D5345600B59A4B /* OrangeViewController.swift */,
 				E4EC6CDC25D2784600743C87 /* RedViewController.swift */,
 				E4EC6CCA25D15E9B00743C87 /* Assets.xcassets */,
 				E4EC6CCC25D15E9B00743C87 /* LaunchScreen.storyboard */,
@@ -150,6 +159,9 @@
 				E4EC6CC625D15E9A00743C87 /* ViewController.swift in Sources */,
 				E42409E125D3AAA7001F19F6 /* PurpleViewController.swift in Sources */,
 				E4EC6CC225D15E9A00743C87 /* AppDelegate.swift in Sources */,
+				E486B5EB25D5344400B59A4B /* SunFlowerViewController.swift in Sources */,
+				E486B5EE25D5345600B59A4B /* OrangeViewController.swift in Sources */,
+				E486B5E825D5342F00B59A4B /* SecondViewController.swift in Sources */,
 				E4EC6CC425D15E9A00743C87 /* SceneDelegate.swift in Sources */,
 				E4EC6CD825D17B2E00743C87 /* FirstViewController.swift in Sources */,
 			);
