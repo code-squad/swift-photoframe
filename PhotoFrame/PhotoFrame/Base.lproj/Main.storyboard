@@ -145,10 +145,10 @@
             </objects>
             <point key="canvasLocation" x="1161" y="151"/>
         </scene>
-        <!--View Controller-->
+        <!--Violet View Controller-->
         <scene sceneID="0du-vh-j36">
             <objects>
-                <viewController id="arN-2M-S1O" sceneMemberID="viewController">
+                <viewController id="arN-2M-S1O" customClass="VioletViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IK0-o4-Y0N">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -159,11 +159,21 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWT-qD-eks">
+                                <rect key="frame" x="181" y="327" width="52" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="닫기"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="arN-2M-S1O" eventType="touchUpInside" id="pte-jw-lcP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2RA-A6-aVy"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                         <constraints>
                             <constraint firstItem="huF-Jx-Ind" firstAttribute="centerX" secondItem="IK0-o4-Y0N" secondAttribute="centerX" id="aYF-mP-TcB"/>
+                            <constraint firstItem="aWT-qD-eks" firstAttribute="centerY" secondItem="IK0-o4-Y0N" secondAttribute="centerY" constant="-70" id="npv-oT-1B3"/>
+                            <constraint firstItem="aWT-qD-eks" firstAttribute="centerX" secondItem="IK0-o4-Y0N" secondAttribute="centerX" id="uOh-rC-5lg"/>
                             <constraint firstItem="huF-Jx-Ind" firstAttribute="centerY" secondItem="IK0-o4-Y0N" secondAttribute="centerY" id="zQa-oH-dPd"/>
                         </constraints>
                     </view>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		823B871025D543D30054A668 /* VioletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823B870F25D543D30054A668 /* VioletViewController.swift */; };
 		8262017525D222F300760235 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8262017425D222F300760235 /* AppDelegate.swift */; };
 		8262017725D222F300760235 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8262017625D222F300760235 /* SceneDelegate.swift */; };
 		8262017925D222F300760235 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8262017825D222F300760235 /* TabBarController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		823B870F25D543D30054A668 /* VioletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VioletViewController.swift; sourceTree = "<group>"; };
 		8262017125D222F300760235 /* PhotoFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8262017425D222F300760235 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8262017625D222F300760235 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				8262017625D222F300760235 /* SceneDelegate.swift */,
 				8262017825D222F300760235 /* TabBarController.swift */,
 				826201AA25D22C6900760235 /* Tab1ViewController.swift */,
+				823B870F25D543D30054A668 /* VioletViewController.swift */,
 				8262017A25D222F300760235 /* Main.storyboard */,
 				8262017D25D222F300760235 /* Assets.xcassets */,
 				8262017F25D222F300760235 /* LaunchScreen.storyboard */,
@@ -265,6 +268,7 @@
 				8262017525D222F300760235 /* AppDelegate.swift in Sources */,
 				826201AB25D22C6900760235 /* Tab1ViewController.swift in Sources */,
 				8262017725D222F300760235 /* SceneDelegate.swift in Sources */,
+				823B871025D543D30054A668 /* VioletViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
