@@ -16,11 +16,15 @@ class PhotoViewController: UIViewController {
     let imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        imagePicker.delegate = self
+        
         photoLabel.text = "Photo Album"
         photoLabel.adjustsFontSizeToFitWidth = true
         photoImageView.contentMode = .scaleAspectFill
+        
         setRandomImage()
-        super.viewDidLoad()
     }
 
     @IBAction func randomButtonTouched(_ sender: Any) {
@@ -28,11 +32,7 @@ class PhotoViewController: UIViewController {
     }
     
     @IBAction func selectButtonTouched(_ sender: Any) {
-        let type = UIImagePickerController.SourceType.photoLibrary
-        guard UIImagePickerController.isSourceTypeAvailable(type) else { return }
-        
-        imagePicker.sourceType = type
-        present(imagePicker, animated: true, completion: nil)
+        openPhotoLibrary()
     }
     
     func generateImageNumber() -> String {
@@ -44,4 +44,22 @@ class PhotoViewController: UIViewController {
         let imageNumber = generateImageNumber()
         self.photoImageView.image = UIImage(named: "Demo Images/\(imageNumber).jpg")
     }
+}
+
+extension PhotoViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func openPhotoLibrary() {
+        imagePicker.sourceType = .photoLibrary
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            photoImageView.image = image
+        }
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
