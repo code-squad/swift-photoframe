@@ -13,6 +13,8 @@ class PhotoViewController: UIViewController {
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var photoFrameView: UIImageView!
     
+    let imagePicker = UIImagePickerController()
+    
     override func viewDidLoad() {
         photoLabel.text = "Photo Album"
         photoLabel.adjustsFontSizeToFitWidth = true
@@ -23,6 +25,14 @@ class PhotoViewController: UIViewController {
 
     @IBAction func randomButtonTouched(_ sender: Any) {
         setRandomImage()
+    }
+    
+    @IBAction func selectButtonTouched(_ sender: Any) {
+        let type = UIImagePickerController.SourceType.photoLibrary
+        guard UIImagePickerController.isSourceTypeAvailable(type) else { return }
+        
+        imagePicker.sourceType = type
+        present(imagePicker, animated: true, completion: nil)
     }
     
     func generateImageNumber() -> String {
