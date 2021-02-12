@@ -39,6 +39,6 @@ extension SecondViewController: UIImagePickerControllerDelegate, UINavigationCon
             return
         }
         photoImageView.image = selectedImage
-        dismiss(animated: true, completion: nil)
+        picker.dismiss(animated: true, completion: nil)
     }
 }

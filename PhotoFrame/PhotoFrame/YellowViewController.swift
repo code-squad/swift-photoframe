@@ -32,11 +32,6 @@ class YellowViewController: UIViewController {
     }
     
     // MARK: - IBAction
-    @IBAction func NextBarButtonTouched(_ sender: Any) {
-        if let blueVC = storyboard?.instantiateViewController(identifier: "blueVC") {
-            navigationController?.pushViewController(blueVC, animated: true)
-        }
-    }
     
     @IBAction func nextButtonTouched(_ sender: Any) {
         if let blueVC = storyboard?.instantiateViewController(identifier: "blueVC") {
