@@ -15,6 +15,7 @@ class OrangeViewController: UIViewController {
         super.viewDidLoad()
         print(#file, #line, #function, #column)
         print()
+        self.view.backgroundColor = #colorLiteral(red: 0.9529411765, green: 0.6117647059, blue: 0.07058823529, alpha: 1)
         
         closeButton.setTitle("닫기", for: .normal)
         closeButton.addTarget(self, action: #selector(closeButtonTouched(_:)), for: .touchUpInside)
