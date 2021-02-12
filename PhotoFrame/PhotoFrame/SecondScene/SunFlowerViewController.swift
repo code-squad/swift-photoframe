@@ -13,6 +13,7 @@ class SunFlowerViewController: UIViewController {
         super.viewDidLoad()
         print(#file, #line, #function, #column)
         print()
+        self.view.backgroundColor = #colorLiteral(red: 0.9450980392, green: 0.768627451, blue: 0.05882352941, alpha: 1)
     }
     
     override func viewWillAppear(_ animated: Bool) {
