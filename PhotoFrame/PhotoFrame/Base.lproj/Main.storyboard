@@ -130,8 +130,24 @@
                     <view key="view" contentMode="scaleToFill" id="Tll-Mx-sve">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6V-e5-7gR">
+                                <rect key="frame" x="185" y="790" width="44" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="닫기">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="eya-vA-GXY" eventType="touchUpInside" id="XUD-1I-dKm"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="gb2-AE-q7o"/>
                         <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <constraints>
+                            <constraint firstItem="O6V-e5-7gR" firstAttribute="centerX" secondItem="Tll-Mx-sve" secondAttribute="centerX" id="7o9-os-noO"/>
+                            <constraint firstItem="gb2-AE-q7o" firstAttribute="bottom" secondItem="O6V-e5-7gR" secondAttribute="bottom" constant="30" id="I7A-Ij-j8t"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wTE-It-vue"/>
                 </viewController>
@@ -159,6 +175,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
