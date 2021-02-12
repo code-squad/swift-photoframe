@@ -39,6 +39,12 @@ class SunFlowerViewController: UIViewController {
         print()
     }
 
+    @IBAction func nextButtonTouched(_ sender: UIButton) {
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        let orangeVC = main.instantiateViewController(withIdentifier: "OrangeVC")
+        self.navigationController?.pushViewController(orangeVC, animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 
