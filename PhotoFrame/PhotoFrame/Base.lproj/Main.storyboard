@@ -135,11 +135,12 @@
                     <connections>
                         <segue destination="kiT-Jd-RKi" kind="relationship" relationship="viewControllers" id="ukf-TM-B1t"/>
                         <segue destination="iLW-uB-XCk" kind="relationship" relationship="viewControllers" id="5N6-9g-e1M"/>
+                        <segue destination="XsW-1v-HiG" kind="relationship" relationship="viewControllers" id="Hrf-eD-epv"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="obo-bt-7Nm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-84" y="429"/>
+            <point key="canvasLocation" x="-75" y="816"/>
         </scene>
         <!--Photo View Controller-->
         <scene sceneID="uTb-N4-7n7">
@@ -201,11 +202,11 @@
             </objects>
             <point key="canvasLocation" x="939.13043478260875" y="88.392857142857139"/>
         </scene>
-        <!--Item-->
+        <!--photo-->
         <scene sceneID="LtI-1M-0v3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iLW-uB-XCk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="qRW-Ax-pbu"/>
+                    <tabBarItem key="tabBarItem" title="photo" image="folder" catalog="system" id="qRW-Ax-pbu"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Y65-38-xa7">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -220,8 +221,60 @@
             </objects>
             <point key="canvasLocation" x="937.68115942028987" y="815.625"/>
         </scene>
+        <!--사진가져오기-->
+        <scene sceneID="QTX-gD-JJl">
+            <objects>
+                <viewController id="ZbX-4Q-vLl" customClass="AlbumViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5XV-UZ-vxL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BR3-Td-4Ah">
+                                <rect key="frame" x="87" y="208" width="240" height="480"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RKd-g7-vHd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="사진가져오기" id="DIk-qL-RkF">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="uf7-2U-iXZ">
+                            <connections>
+                                <action selector="plusButtonTouched:" destination="ZbX-4Q-vLl" id="FSG-IR-PW8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imgView" destination="BR3-Td-4Ah" id="2XP-sP-RH4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sY6-lx-uBB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1849.2753623188407" y="1578.3482142857142"/>
+        </scene>
+        <!--Album-->
+        <scene sceneID="M3G-nZ-vsW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XsW-1v-HiG" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Album" image="photo" catalog="system" id="f5O-JI-IHk"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="o2c-hV-7od">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZbX-4Q-vLl" kind="relationship" relationship="rootViewController" id="D2E-lT-aOT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jHr-v6-ZVy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="937.68115942028987" y="1577.6785714285713"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="folder" catalog="system" width="128" height="97"/>
+        <image name="photo" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
