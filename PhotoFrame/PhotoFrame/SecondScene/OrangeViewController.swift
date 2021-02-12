@@ -20,6 +20,12 @@ class OrangeViewController: UIViewController {
         closeButton.addTarget(self, action: #selector(closeButtonTouched(_:)), for: .touchUpInside)
         
         self.view.addSubview(closeButton)
+        
+        closeButton.translatesAutoresizingMaskIntoConstraints = false
+        closeButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        closeButton.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+        closeButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        closeButton.widthAnchor.constraint(equalToConstant: 100).isActive = true
     }
     
     @objc func closeButtonTouched(_ sender: UIButton) {
