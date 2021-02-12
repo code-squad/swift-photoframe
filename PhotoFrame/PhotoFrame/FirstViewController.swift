@@ -27,11 +27,7 @@ class FirstViewController: UIViewController {
         self.firstLabel.textColor = UIColor.blue
         self.firstLabel.backgroundColor = UIColor.yellow
         self.firstLabel.alpha = 0.5
-        print("IBAction called")
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("prepare called")
-    }
+
 }
 
