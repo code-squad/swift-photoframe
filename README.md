@@ -41,3 +41,14 @@
 - 버튼과 Scene을 연결
 - 사이의 화살표를 선택해 Segue의 속성을 변경할 수 있다 (Full Screen 등)
 
+## Step-5
+### ViewController 프로그래밍
+
+<p align="center">
+<img width="300" alt="스크린샷 2021-02-12" src="https://user-images.githubusercontent.com/45817559/107725770-56f6c900-6d2a-11eb-8340-1ec99cbfb6b1.gif">
+</p>
+
+- 뷰 컨트롤러 콜백 함수를 통해 라이프사이클 확인
+- YellowViewController에서 Segue 제거 후 프로그래밍으로 다음 화면 보여줄 수 있게 코드 추가
+
+
