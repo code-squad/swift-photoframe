@@ -103,6 +103,9 @@
                                 <rect key="frame" x="185" y="736" width="44" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="닫기"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="XnF-nv-Z6b" eventType="touchUpInside" id="i6p-CK-PBL"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5WQ-oC-ZdH"/>
