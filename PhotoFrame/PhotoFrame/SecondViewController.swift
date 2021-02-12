@@ -7,24 +7,18 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    let picker = UIImagePickerController()
     
     @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var frameImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.photoImageView.image = UIImage(named: "01.jpg")
-        print(#file, #line, #function, #column)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        print(#file, #line, #function, #column)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        print(#file, #line, #function, #column)
+        self.frameImageView.image = UIImage(named: "frame.png")
+        self.photoImageView.bringSubviewToFront(self.frameImageView)
     }
     
     @IBAction func nextImageButtonTouched(_ sender: Any) {
@@ -32,13 +26,18 @@ class SecondViewController: UIViewController {
         self.photoImageView.image = UIImage(named: String(format: "%02d.jpg", ranNum))
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        print(#file, #line, #function, #column)
+    @IBAction func selectButtonTouched(_ sender: Any) {
+        let picker = UIImagePickerController()
+        picker.sourceType = .photoLibrary
+        picker.delegate = self
+        present(picker, animated: true, completion: nil)
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        print(#file, #line, #function, #column)
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            self.photoImageView.image = image
+            dismiss(animated: true, completion: nil)
+        }
     }
 }
+

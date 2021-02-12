@@ -204,3 +204,40 @@ UIImageView가 UIImage를 포함하고 있다고 볼 수 있음
 UIImageView가 더 넓은 범위이며 연속된 사진을 나타내는 것도 가능함
 
 공식문서에도 UIImageView는 UIImage를 활용하여 효율적으로 이미지를 가져와서 보여주는 것이 가능하다고 언급됨
+
+# Step.8
+
+- frame.png 추가하여 액자 구성 완료
+
+- bringSubviewToFront활용하여 액자를 뒤로 보내기 완료
+
+- 액자 추가 이미지
+<img width="289" alt="스크린샷 2021-02-12 오전 8 05 00" src="https://user-images.githubusercontent.com/74946802/107709927-5f8ad780-6d09-11eb-9819-60cf1b5fa19e.png">
+
+- imagePickerController 기능 구현 완료
+
+- 실행화면
+
+<img src="https://user-images.githubusercontent.com/74946802/107710151-cc05d680-6d09-11eb-9d00-66bee0fc8273.png" width="280" height="600"> <img src="https://user-images.githubusercontent.com/74946802/107710200-e3dd5a80-6d09-11eb-8059-1a8657eff30e.png" width="280" height="600"> <img src="https://user-images.githubusercontent.com/74946802/107710255-f35ca380-6d09-11eb-9746-8c0778471cb0.png" width="280" height="600">
+
+#### 델리게이트와 프로토콜
+
+프로토콜은 선언만되고 구현되지 않은 메서드
+
+프로토콜은 특정 기능이나 속성에 대한 설계도
+
+델리게이트는 '대리자'의 개념
+
+즉, 하나의 객체에서 모든 일을 처리하는 것이 아니라 일부를 다른 객체에 넘기는 것
+
+일반적으로 프로토콜은 자주쓰이는 방식이 델리게이트 패턴
+
+프로토콜 타입으로 선언된 값을 사용한다는 것은 할당된 객체가 어떠한 기능을 갖추고 있는지 상관 없다는 뜻
+
+단순히 객체를 사용하여 프로토콜에 정의된 프로퍼티나 메소르를 호출하겠다는 의도
+
+iOS에서는 클래스가 단일 상속만 지원하기 때문에 이러한 프로토콜 타입의 특성을 활용하여 델리게이션을 구현
+
+하나의 부모 클래스를 상속받고 나면 다른 클래스를 상속받을 수 없어서 기능적으로 제한
+
+이를 해결하기 위해 구현 개수에 제한이 없는 프로토콜을 이용하여 필요한 기능단위별 객체작성
