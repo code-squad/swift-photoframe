@@ -92,13 +92,25 @@
             </objects>
             <point key="canvasLocation" x="1562" y="385"/>
         </scene>
-        <!--View Controller-->
+        <!--Blue View Controller-->
         <scene sceneID="2IL-EA-kxz">
             <objects>
-                <viewController id="3YE-4s-e2V" sceneMemberID="viewController">
+                <viewController id="3YE-4s-e2V" customClass="BlueViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h8q-Pk-DUl">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hG-Fw-kiT">
+                                <rect key="frame" x="180" y="387" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="닫기">
+                                    <color key="titleColor" red="1" green="0.51064854449999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="CloseButtonTouched:" destination="3YE-4s-e2V" eventType="touchUpInside" id="ZIr-E8-Nq6"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="CTO-vF-6af"/>
                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                     </view>
