@@ -50,6 +50,14 @@
                                     <action selector="nextButtonTouched:" destination="1V6-Sc-Efj" eventType="touchUpInside" id="gDr-jn-8Je"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3nz-Ib-FHE">
+                                <rect key="frame" x="180" y="445" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="닫기"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="1V6-Sc-Efj" eventType="touchUpInside" id="Fcp-vB-WSZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LMu-29-0ms"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

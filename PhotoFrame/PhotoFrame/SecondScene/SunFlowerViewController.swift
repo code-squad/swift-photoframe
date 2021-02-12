@@ -45,6 +45,10 @@ class SunFlowerViewController: UIViewController {
         self.navigationController?.pushViewController(orangeVC, animated: true)
     }
     
+    @IBAction func closeButtonTouched(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 
