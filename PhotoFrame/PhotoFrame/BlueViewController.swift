@@ -16,6 +16,7 @@ class BlueViewController: UIViewController {
     }
     
     @IBAction func CloseButtonTouched(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     /*
