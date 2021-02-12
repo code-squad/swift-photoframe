@@ -83,10 +83,10 @@
             </objects>
             <point key="canvasLocation" x="22" y="-347"/>
         </scene>
-        <!--View Controller-->
+        <!--Yellow View Controller-->
         <scene sceneID="wi5-io-RFP">
             <objects>
-                <viewController id="XnF-nv-Z6b" sceneMemberID="viewController">
+                <viewController id="XnF-nv-Z6b" customClass="YellowViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Urx-yR-7gx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -99,12 +99,19 @@
                                     <segue destination="eya-vA-GXY" kind="show" id="dI1-aW-HXm"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BjX-PK-zNi">
+                                <rect key="frame" x="185" y="736" width="44" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="닫기"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5WQ-oC-ZdH"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
                             <constraint firstItem="Fcj-RK-P2e" firstAttribute="centerY" secondItem="Urx-yR-7gx" secondAttribute="centerY" id="d8L-jm-luU"/>
                             <constraint firstItem="Fcj-RK-P2e" firstAttribute="centerX" secondItem="Urx-yR-7gx" secondAttribute="centerX" id="eMT-A6-ucu"/>
+                            <constraint firstItem="5WQ-oC-ZdH" firstAttribute="bottom" secondItem="BjX-PK-zNi" secondAttribute="bottom" constant="30" id="ep9-L9-4hs"/>
+                            <constraint firstItem="BjX-PK-zNi" firstAttribute="centerX" secondItem="Urx-yR-7gx" secondAttribute="centerX" id="mcx-Rb-dSN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hzt-Fb-A6b"/>
