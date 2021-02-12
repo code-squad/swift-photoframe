@@ -9,10 +9,21 @@ import UIKit
 
 class OrangeViewController: UIViewController {
 
+    let closeButton = UIButton(type: .system)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print(#file, #line, #function, #column)
         print()
+        
+        closeButton.setTitle("닫기", for: .normal)
+        closeButton.addTarget(self, action: #selector(closeButtonTouched(_:)), for: .touchUpInside)
+        
+        self.view.addSubview(closeButton)
+    }
+    
+    @objc func closeButtonTouched(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
