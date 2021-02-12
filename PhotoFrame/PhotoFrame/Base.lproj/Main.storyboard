@@ -74,6 +74,14 @@
                                     <segue destination="3YE-4s-e2V" kind="presentation" modalPresentationStyle="fullScreen" id="owx-IS-FmU"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5h-e1-Dgk">
+                                <rect key="frame" x="180" y="514" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="닫기"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="a3c-3F-wsA" eventType="touchUpInside" id="1hk-r6-2IT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Gfk-Bw-6ir"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
