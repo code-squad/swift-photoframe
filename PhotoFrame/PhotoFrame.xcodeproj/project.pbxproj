@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		CE86938925D22C5E00F75CF6 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE86938825D22C5E00F75CF6 /* FirstViewController.swift */; };
 		CE86938C25D2301000F75CF6 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE86938B25D2301000F75CF6 /* SecondViewController.swift */; };
+		CE8E177B25D6165B00644984 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E177A25D6165B00644984 /* YellowViewController.swift */; };
+		CE8E177F25D620DC00644984 /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E177E25D620DC00644984 /* BlueViewController.swift */; };
 		CEAC849025D1803A009DE26A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC848F25D1803A009DE26A /* AppDelegate.swift */; };
 		CEAC849225D1803A009DE26A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC849125D1803A009DE26A /* SceneDelegate.swift */; };
 		CEAC849425D1803A009DE26A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC849325D1803A009DE26A /* ViewController.swift */; };
@@ -20,6 +22,8 @@
 /* Begin PBXFileReference section */
 		CE86938825D22C5E00F75CF6 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		CE86938B25D2301000F75CF6 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		CE8E177A25D6165B00644984 /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
+		CE8E177E25D620DC00644984 /* BlueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueViewController.swift; sourceTree = "<group>"; };
 		CEAC848C25D1803A009DE26A /* PhotoFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEAC848F25D1803A009DE26A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEAC849125D1803A009DE26A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,10 +64,12 @@
 		CEAC848E25D1803A009DE26A /* PhotoFrame */ = {
 			isa = PBXGroup;
 			children = (
+				CE8E177A25D6165B00644984 /* YellowViewController.swift */,
 				CEAC848F25D1803A009DE26A /* AppDelegate.swift */,
 				CEAC849125D1803A009DE26A /* SceneDelegate.swift */,
 				CEAC849325D1803A009DE26A /* ViewController.swift */,
 				CEAC849525D1803A009DE26A /* Main.storyboard */,
+				CE8E177E25D620DC00644984 /* BlueViewController.swift */,
 				CEAC849825D1803B009DE26A /* Assets.xcassets */,
 				CEAC849A25D1803B009DE26A /* LaunchScreen.storyboard */,
 				CEAC849D25D1803B009DE26A /* Info.plist */,
@@ -147,7 +153,9 @@
 				CEAC849025D1803A009DE26A /* AppDelegate.swift in Sources */,
 				CEAC849225D1803A009DE26A /* SceneDelegate.swift in Sources */,
 				CE86938C25D2301000F75CF6 /* SecondViewController.swift in Sources */,
+				CE8E177B25D6165B00644984 /* YellowViewController.swift in Sources */,
 				CE86938925D22C5E00F75CF6 /* FirstViewController.swift in Sources */,
+				CE8E177F25D620DC00644984 /* BlueViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
