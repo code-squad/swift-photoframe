@@ -96,7 +96,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="다음"/>
                                 <connections>
-                                    <segue destination="eya-vA-GXY" kind="show" id="dI1-aW-HXm"/>
+                                    <action selector="nextButtonTouched:" destination="XnF-nv-Z6b" eventType="touchUpInside" id="brj-kp-sJF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BjX-PK-zNi">
@@ -123,12 +123,12 @@
             </objects>
             <point key="canvasLocation" x="842" y="-348"/>
         </scene>
-        <!--View Controller-->
+        <!--Blue View Controller-->
         <scene sceneID="pEA-jJ-0TQ">
             <objects>
-                <viewController id="eya-vA-GXY" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BlueVC" id="eya-vA-GXY" customClass="BlueViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tll-Mx-sve">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="gb2-AE-q7o"/>
                         <color key="backgroundColor" systemColor="systemBlueColor"/>
