@@ -158,30 +158,52 @@
                                     <constraint firstAttribute="height" constant="240" id="fLA-RE-0Zx"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39w-Rq-bhl">
-                                <rect key="frame" x="189.5" y="519.5" width="35" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="다음"/>
-                                <connections>
-                                    <action selector="nextImageButtonTouched:" destination="NLP-Wy-6Fm" eventType="touchUpInside" id="vu6-ae-vmm"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="jbx-uZ-B9y">
+                                <rect key="frame" x="189.5" y="519.5" width="35" height="91"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39w-Rq-bhl">
+                                        <rect key="frame" x="0.0" y="0.0" width="35" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="다음"/>
+                                        <connections>
+                                            <action selector="nextImageButtonTouched:" destination="NLP-Wy-6Fm" eventType="touchUpInside" id="vu6-ae-vmm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GjI-OA-bKD">
+                                        <rect key="frame" x="0.0" y="55" width="35" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="선택"/>
+                                        <connections>
+                                            <action selector="selectButtonTouched:" destination="NLP-Wy-6Fm" eventType="touchUpInside" id="a7H-fZ-3kl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo Album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9r3-6l-zAz">
-                                <rect key="frame" x="107.5" y="426.5" width="199" height="43"/>
+                                <rect key="frame" x="108" y="426.5" width="198.5" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photoframe-border.png" translatesAutoresizingMaskIntoConstraints="NO" id="a67-Ut-9OL" userLabel="PhotoFrame">
+                                <rect key="frame" x="57" y="106.5" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Esq-Tt-w1t"/>
+                                    <constraint firstAttribute="height" constant="300" id="kao-jq-66t"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="71w-j1-CJj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="39w-Rq-bhl" firstAttribute="top" secondItem="9r3-6l-zAz" secondAttribute="bottom" constant="50" id="1tv-2P-eoK"/>
                             <constraint firstItem="9r3-6l-zAz" firstAttribute="centerX" secondItem="b3h-0E-BZO" secondAttribute="centerX" id="5kY-AD-txR"/>
+                            <constraint firstItem="jbx-uZ-B9y" firstAttribute="centerX" secondItem="b3h-0E-BZO" secondAttribute="centerX" id="A37-xm-Qw1"/>
                             <constraint firstItem="9r3-6l-zAz" firstAttribute="top" secondItem="Bzu-0y-M5C" secondAttribute="bottom" constant="50" id="DpP-Ov-tPr"/>
                             <constraint firstItem="Bzu-0y-M5C" firstAttribute="centerX" secondItem="b3h-0E-BZO" secondAttribute="centerX" id="UlC-Id-K3l"/>
+                            <constraint firstItem="a67-Ut-9OL" firstAttribute="centerY" secondItem="Bzu-0y-M5C" secondAttribute="centerY" id="g8G-Qb-DrL"/>
                             <constraint firstItem="9r3-6l-zAz" firstAttribute="centerY" secondItem="b3h-0E-BZO" secondAttribute="centerY" id="hYG-B4-daN"/>
-                            <constraint firstItem="39w-Rq-bhl" firstAttribute="centerX" secondItem="b3h-0E-BZO" secondAttribute="centerX" id="jze-tm-dVn"/>
+                            <constraint firstItem="a67-Ut-9OL" firstAttribute="centerX" secondItem="Bzu-0y-M5C" secondAttribute="centerX" id="iZY-Qy-6tc"/>
+                            <constraint firstItem="jbx-uZ-B9y" firstAttribute="top" secondItem="9r3-6l-zAz" secondAttribute="bottom" constant="50" id="ngS-Yd-xAG"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" image="moon.fill" catalog="system" id="mRZ-B9-M86"/>
@@ -191,7 +213,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WHn-rC-jHR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="939" y="792"/>
+            <point key="canvasLocation" x="937.68115942028987" y="791.51785714285711"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Bqg-uF-Ugg">
@@ -234,6 +256,7 @@
     </scenes>
     <resources>
         <image name="moon.fill" catalog="system" width="128" height="121"/>
+        <image name="photoframe-border.png" width="720" height="720"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

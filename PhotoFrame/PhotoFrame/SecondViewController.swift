@@ -11,10 +11,12 @@ class SecondViewController: UIViewController {
 
     @IBOutlet weak var photoImageView: UIImageView!
     
+    let picker = UIImagePickerController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        picker.delegate = self
+        picker.allowsEditing = true
     }
     
 
@@ -24,4 +26,19 @@ class SecondViewController: UIViewController {
         self.photoImageView.image = UIImage(named: "\(string).jpg")
     }
 
+    @IBAction func selectButtonTouched(_ sender: Any) {
+        picker.sourceType = .photoLibrary
+        present(picker, animated: true, completion: nil)
+    }
+}
+
+extension SecondViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let selectedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else {
+            return
+        }
+        photoImageView.image = selectedImage
+        dismiss(animated: true, completion: nil)
+    }
 }
