@@ -16,12 +16,12 @@ class YellowViewController: UIViewController {
     }
     
     @IBAction func nextButtonTouched(_ sender: Any) {
-        guard let BlueVC = self.storyboard?.instantiateViewController(withIdentifier: "BlueVC") else {return}
-        self.present(BlueVC, animated: true)
+//        guard let BlueVC = self.storyboard?.instantiateViewController(withIdentifier: "BlueVC") else {return}
+//        self.present(BlueVC, animated: true)
     }
     
     @IBAction func closeButtonTouched(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
