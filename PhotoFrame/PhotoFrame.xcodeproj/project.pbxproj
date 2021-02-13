@@ -17,6 +17,7 @@
 		CEAC849725D1803A009DE26A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAC849525D1803A009DE26A /* Main.storyboard */; };
 		CEAC849925D1803B009DE26A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEAC849825D1803B009DE26A /* Assets.xcassets */; };
 		CEAC849C25D1803B009DE26A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAC849A25D1803B009DE26A /* LaunchScreen.storyboard */; };
+		CEB0C55B25D7F14C00241AFF /* Demo Images in Resources */ = {isa = PBXBuildFile; fileRef = CEB0C55A25D7F14C00241AFF /* Demo Images */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		CEAC849825D1803B009DE26A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEAC849B25D1803B009DE26A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEAC849D25D1803B009DE26A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEB0C55A25D7F14C00241AFF /* Demo Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Demo Images"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				CEAC849525D1803A009DE26A /* Main.storyboard */,
 				CE8E177E25D620DC00644984 /* BlueViewController.swift */,
 				CEAC849825D1803B009DE26A /* Assets.xcassets */,
+				CEB0C55A25D7F14C00241AFF /* Demo Images */,
 				CEAC849A25D1803B009DE26A /* LaunchScreen.storyboard */,
 				CEAC849D25D1803B009DE26A /* Info.plist */,
 				CE86938825D22C5E00F75CF6 /* FirstViewController.swift */,
@@ -138,6 +141,7 @@
 			files = (
 				CEAC849C25D1803B009DE26A /* LaunchScreen.storyboard in Resources */,
 				CEAC849925D1803B009DE26A /* Assets.xcassets in Resources */,
+				CEB0C55B25D7F14C00241AFF /* Demo Images in Resources */,
 				CEAC849725D1803A009DE26A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
