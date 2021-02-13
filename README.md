@@ -62,3 +62,20 @@
 - Navigation Controller Embed
 - 코드로 BlueViewController에 연결했던 부분 해제
 
+## Step-7
+### Second Scene 화면
+
+<p align="center">
+<img width="310" alt="step7" src="https://user-images.githubusercontent.com/45817559/107849957-f5c21900-6e41-11eb-8cc4-a46c080bf515.gif">
+</p>
+
+
+- Demo Images 프로젝트에 추가
+- 1~22까지의 랜덤 숫자 생성
+    - String(format: , _ )으로 랜덤 숫자 생성 후 01, 02과 같은 포맷 설정
+- UIImageView ContentMode에서 scale~ 의 차이점
+    - **scaleToFill**: 이미지 높이와 너비가 View의 크기와 일치하도록 비율 신경 쓰지 않고 늘어남
+    - **scaleAspectFit**: 이미지의 **가장 긴** 쪽이 뷰와 일치하도록 늘어남 (비율을 왜곡시키지 않음)
+    - **scaleAspectFill**: 이미지의 **가장 짧은** 쪽이 뷰와 일치하도록 늘어남 (비율이 왜곡되지 않지만, 이미지가 짤릴수도 있음)
+
+
