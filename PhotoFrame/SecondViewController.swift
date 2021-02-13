@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+class SecondViewController: UIViewController {
     
     @IBOutlet weak var photoImageView: UIImageView!
     
@@ -36,6 +36,19 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate & 
         }
     }
     
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+}
+
+extension SecondViewController : UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         imagePicker.dismiss(animated: false, completion: {() in
@@ -53,13 +66,5 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate & 
             self.present(alert, animated: false)
         })
     }
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    
 }
