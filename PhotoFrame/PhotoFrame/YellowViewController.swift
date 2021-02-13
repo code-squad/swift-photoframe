@@ -9,6 +9,7 @@ import UIKit
 
 class YellowViewController: UIViewController {
 
+    //MARK:- VC LIFE CYCLE METHODS
     override func viewDidLoad() {
         super.viewDidLoad()
         print(#file, #line, #function, #column)
@@ -32,8 +33,17 @@ class YellowViewController: UIViewController {
         super.viewDidDisappear(false)
         print(#file, #line, #function, #column)
     }
+    
+    //MARK:- IBACTIONS
     @IBAction func closeButtonTouched(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+
+    @IBAction func nextButtonTouched(_ sender: UIButton) {
+        let nextViewController = storyboard?.instantiateViewController(withIdentifier: "blueVC") as! BlueViewController
+        nextViewController.modalPresentationStyle = .fullScreen
+        self.present(nextViewController, animated: false, completion: nil)
     }
     
     /*

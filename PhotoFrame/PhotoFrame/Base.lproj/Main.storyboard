@@ -71,7 +71,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="다음"/>
                                 <connections>
-                                    <segue destination="3YE-4s-e2V" kind="presentation" modalPresentationStyle="fullScreen" id="owx-IS-FmU"/>
+                                    <action selector="nextButtonTouched:" destination="a3c-3F-wsA" eventType="touchUpInside" id="xRR-gJ-hjB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5h-e1-Dgk">
@@ -95,7 +95,7 @@
         <!--Blue View Controller-->
         <scene sceneID="2IL-EA-kxz">
             <objects>
-                <viewController id="3YE-4s-e2V" customClass="BlueViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="blueVC" id="3YE-4s-e2V" customClass="BlueViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h8q-Pk-DUl">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
