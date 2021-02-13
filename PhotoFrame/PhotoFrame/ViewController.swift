@@ -38,7 +38,6 @@ class ViewController: UIViewController {
         print(#file, #line, #function, #column)
     }
     
-    
     @IBAction func nextButtonTouched(_ sender: UIButton) {
             self.photoLabel.textColor = UIColor.blue
             self.photoLabel.backgroundColor = UIColor.yellow
