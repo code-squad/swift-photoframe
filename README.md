@@ -52,3 +52,13 @@
 - 뷰 컨트롤러 콜백 함수를 통해 라이프사이클 확인
 - YellowViewController에서 Segue 제거 후 프로그래밍으로 다음 화면 보여줄 수 있게 코드 추가
 
+## Step-6
+### Container ViewController
+
+<p align="center">
+<img width="300" alt="스크린샷 2021-02-13" src="https://user-images.githubusercontent.com/45817559/107848691-c2c75780-6e38-11eb-9bc4-17ed9fbb6990.gif">
+</p>
+
+- Navigation Controller Embed
+- 코드로 BlueViewController에 연결했던 부분 해제
+
