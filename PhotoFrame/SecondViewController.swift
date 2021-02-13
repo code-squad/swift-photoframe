@@ -7,9 +7,11 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     
     @IBOutlet weak var photoImageView: UIImageView!
+    
+    let imagePicker : UIImagePickerController! = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +25,34 @@ class SecondViewController: UIViewController {
         self.photoImageView.image = UIImage(named: "/Users/parkhyewon/git/swift-photoframe/PhotoFrame/DemoImages/\(numberStr).jpg")
     }
     
+    @IBAction func roadImageButtonTouched(_ sender: Any) {
+        if (UIImagePickerController.isSourceTypeAvailable(.photoLibrary)){
+            imagePicker.delegate = self
+            
+            imagePicker.sourceType = .photoLibrary
+            imagePicker.allowsEditing = true
+            
+            self.present(imagePicker, animated: false)
+        }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        imagePicker.dismiss(animated: false, completion: {() in
+            let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
+            self.photoImageView.image = image
+        })
+    }
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        imagePicker.dismiss(animated: false, completion: { () in
+            
+            let alert = UIAlertController(title: "",
+                                          message: "이미지 선택이 취소되었습니다",
+                                          preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "확인", style: .cancel))
+            self.present(alert, animated: false)
+        })
+    }
     /*
      // MARK: - Navigation
      
