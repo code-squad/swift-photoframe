@@ -16,6 +16,7 @@ class NextNextOfFristViewController: UIViewController {
     }
     
     @IBAction func closeButtonTouched(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
         self.dismiss(animated: true, completion: nil)
     }
     //will: 직전
