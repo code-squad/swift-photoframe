@@ -78,3 +78,46 @@
 
 #### 완성날짜 : 2021.02.10(수) 17:11
 
+---
+---
+
+# Container ViewController
+
+#### 요구사항
+- 네이게이션바를 Embed in 한다.
+- 닫기 버튼의 코드에 self.navigationController?.popViewController(animated: true) 를 추가하고 동작을 확인한다.
+
+
+
+![스크린샷 2021-02-14 오후 7 57 07](https://user-images.githubusercontent.com/73683735/107884438-76fbd780-6f38-11eb-9287-ca47c52642ea.png)
+
+
+네비게이션 컨트롤러는 스택을 가지고 있다.
+
+제일 상위의 뷰를 보여준다.
+
+POP하면 화면뿐 아니라 메모리상에서도 제거된다.
+
+알게된것 : View(_)Disapper() 된다고해서 메모리에서 제거된 것은 아니다. deinit되어야 메모리에서 제거된다.
+
+
+#### 완성날짜 : 2021.02.14(일) 18:00
+
+
+---
+---
+
+# Second Scene 화면
+
+#### 요구사항
+- UIImageView를 화면 상단 중앙에 240 x 240 크기로 배치하고, `photoImageView` 아웃렛으로 연결한다.
+- 화면 하단에 [다음] 버튼을 추가하고 `nextImageButtonTouched` 액션으로 연결한다.
+- 다음 버튼 클릭시 사진 22개가 랜덤으로 photoImageView에 나오게 한다.
+- 사진 테두리 액자 화면을 만들고 z축 위-아래를 구분하여 액자틀이 제일 아래로 가게 한다.
+- 다음 버튼 밑 선택 버튼을 추가하고 사진보관함에서 사진 선택 시 photoImageView로 불러오게 한다.
+
+![ezgif com-gif-maker (5)](https://user-images.githubusercontent.com/73683735/107884329-c8f02d80-6f37-11eb-885c-d2e11d15b9d4.gif)
+
+
+#### 완성날짜 : 2021.02.15(월) 12:10
+
