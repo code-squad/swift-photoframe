@@ -8,7 +8,8 @@
 import UIKit
 
 class NextOfFirstViewController: UIViewController {
-
+    @IBOutlet weak var photoImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print(#file, #line, #function, #column)
@@ -32,5 +33,8 @@ class NextOfFirstViewController: UIViewController {
     }
     override func viewDidDisappear(_ animated: Bool) {
         print(#file, #line, #function, #column)
+    }
+    @IBAction func nextImageButtonTouched(_ sender: Any) {
+
     }
 }
