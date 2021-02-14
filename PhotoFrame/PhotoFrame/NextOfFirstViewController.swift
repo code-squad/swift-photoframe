@@ -9,8 +9,10 @@ import UIKit
 
 class NextOfFirstViewController: UIViewController {
     @IBOutlet weak var photoImageView: UIImageView!
-    
+    @IBOutlet weak var photoFrame: UIImageView!
     override func viewDidLoad() {
+        //액자 프레임 가장 뒤로 보냄
+        self.view.insertSubview(photoFrame, at: 0)
         super.viewDidLoad()
         print(#file, #line, #function, #column)
         // Do any additional setup after loading the view.
