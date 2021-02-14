@@ -24,19 +24,37 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IAb-Mc-pG5">
-                                <rect key="frame" x="189.5" y="505" width="35" height="36"/>
+
+                                <rect key="frame" x="189.5" y="525" width="35" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="다음"/>
                                 <connections>
                                     <action selector="nextImageButtonTouched:" destination="y4H-dl-r5g" eventType="touchUpInside" id="nWS-PC-naZ"/>
                                 </connections>
                             </button>
+
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photoframe-border.png" translatesAutoresizingMaskIntoConstraints="NO" id="4D9-A1-eAG" userLabel="PhotoFrame">
+                                <rect key="frame" x="57" y="114" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Jc4-LB-mj0"/>
+                                    <constraint firstAttribute="width" constant="300" id="i6A-Pl-NqI"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo Album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHk-z1-qrF">
-                                <rect key="frame" x="98.5" y="414" width="217" height="41"/>
+                                <rect key="frame" x="98.5" y="434" width="217" height="41"/>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGc-as-FBA">
+                                <rect key="frame" x="189.5" y="581" width="35" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="선택"/>
+                                <connections>
+                                    <action selector="selectButtonTouched:" destination="y4H-dl-r5g" eventType="touchUpInside" id="sMh-9w-HbC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mdh-94-mHu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -46,7 +64,12 @@
                             <constraint firstItem="cfz-TF-GHU" firstAttribute="centerX" secondItem="4kr-25-k5D" secondAttribute="centerX" id="Aa4-D0-CLv"/>
                             <constraint firstItem="FHk-z1-qrF" firstAttribute="centerX" secondItem="4kr-25-k5D" secondAttribute="centerX" id="MBi-8S-eqX"/>
                             <constraint firstItem="cfz-TF-GHU" firstAttribute="top" secondItem="mdh-94-mHu" secondAttribute="top" constant="100" id="N0o-oL-nq9"/>
-                            <constraint firstItem="FHk-z1-qrF" firstAttribute="top" secondItem="cfz-TF-GHU" secondAttribute="bottom" constant="30" id="Nh4-AT-LG7"/>
+
+                            <constraint firstItem="FHk-z1-qrF" firstAttribute="top" secondItem="cfz-TF-GHU" secondAttribute="bottom" constant="50" id="Nh4-AT-LG7"/>
+                            <constraint firstItem="FHk-z1-qrF" firstAttribute="top" secondItem="4D9-A1-eAG" secondAttribute="bottom" constant="20" id="Pqu-aU-Y0h"/>
+                            <constraint firstItem="VGc-as-FBA" firstAttribute="top" secondItem="IAb-Mc-pG5" secondAttribute="bottom" constant="20" id="SkT-fN-pZJ"/>
+                            <constraint firstItem="4D9-A1-eAG" firstAttribute="centerX" secondItem="4kr-25-k5D" secondAttribute="centerX" id="ei5-Dk-595"/>
+                            <constraint firstItem="VGc-as-FBA" firstAttribute="centerX" secondItem="4kr-25-k5D" secondAttribute="centerX" id="hlt-De-oNf"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="fCR-j5-zPE"/>
@@ -56,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oyQ-ya-S71" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="22" y="303"/>
+            <point key="canvasLocation" x="21.739130434782609" y="302.67857142857139"/>
         </scene>
         <!--First View Controller-->
         <scene sceneID="sqS-Zt-IK7">
@@ -229,6 +252,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="photoframe-border.png" width="720" height="720"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -8,7 +8,8 @@
 import UIKit
 
 class SecondViewController: UIViewController{
-    
+    let picker = UIImagePickerController()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -23,5 +24,26 @@ class SecondViewController: UIViewController{
         self.photoImageView.contentMode = .scaleAspectFill
         self.photoImageView.image = UIImage(named: imageName)
     }
+    
+    @IBAction func selectButtonTouched(_ sender: Any) {
+        picker.delegate = self
+        openLibrary()
+        
+    }
 }
 
+extension SecondViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func openLibrary() {
+        picker.sourceType = .photoLibrary
+        present(picker, animated: false, completion: nil)
+        
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            photoImageView.image = image
+            photoImageView.contentMode = .scaleAspectFill
+        }
+        dismiss(animated: true, completion: nil)
+    }
+}
