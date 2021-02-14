@@ -42,7 +42,7 @@ extension SecondViewController : UIImagePickerControllerDelegate, UINavigationCo
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             photoImageView.image = image
-            print(info)
+            photoImageView.contentMode = .scaleAspectFill
         }
         dismiss(animated: true, completion: nil)
     }
