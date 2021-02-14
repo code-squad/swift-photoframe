@@ -148,3 +148,8 @@ viewDidDisappear가 호출되면 뷰 컨트롤러가 뷰가 제거된 것을 알
 <img width="1792" alt="스크린샷 2021-02-14 오후 3 05 57" src="https://user-images.githubusercontent.com/73586326/107869889-a11cad80-6ed6-11eb-99db-92b0195a3582.png">
 
 [참고](https://zeddios.tistory.com/44)
+
+# 7단계 Second Scene 화면
+
+2021.02.14(일)
+
