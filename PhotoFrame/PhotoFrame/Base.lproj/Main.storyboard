@@ -16,6 +16,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photoframe-border.png" translatesAutoresizingMaskIntoConstraints="NO" id="UBj-tN-Ojy" userLabel="PhotoFrame">
+                                <rect key="frame" x="87" y="145" width="240" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo Album" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNo-Bm-zfb">
                                 <rect key="frame" x="124" y="430" width="166.5" height="36"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="30"/>
@@ -34,6 +38,14 @@
                                     <action selector="nextImageButtonTouched:" destination="cSW-jx-GAa" eventType="touchUpInside" id="7bZ-yr-jve"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cen-if-PEb">
+                                <rect key="frame" x="181" y="556" width="52" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="선택"/>
+                                <connections>
+                                    <action selector="selectButtonTouched:" destination="cSW-jx-GAa" eventType="touchUpInside" id="C4K-c6-TqN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bfc-9k-Qgg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -42,6 +54,8 @@
                             <constraint firstItem="wNo-Bm-zfb" firstAttribute="centerY" secondItem="C5X-ug-LcX" secondAttribute="centerY" id="mRO-cM-Bgi"/>
                             <constraint firstItem="KqZ-pM-L34" firstAttribute="centerY" secondItem="C5X-ug-LcX" secondAttribute="centerY" constant="70" id="ogq-1C-jXn"/>
                             <constraint firstItem="KqZ-pM-L34" firstAttribute="centerX" secondItem="C5X-ug-LcX" secondAttribute="centerX" id="tPS-NE-DYp"/>
+                            <constraint firstItem="Cen-if-PEb" firstAttribute="centerY" secondItem="C5X-ug-LcX" secondAttribute="centerY" constant="132" id="x4h-LB-VZm"/>
+                            <constraint firstItem="Cen-if-PEb" firstAttribute="centerX" secondItem="C5X-ug-LcX" secondAttribute="centerX" id="yEu-U2-7Qv"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="kAg-bp-hWR"/>
@@ -233,6 +247,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="photoframe-border.png" width="720" height="720"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
