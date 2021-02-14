@@ -138,3 +138,13 @@ TabBarController의 TabBar중 한번에 하나만 선택되는 Radio Mode 각각
 viewDidDisappear가 호출되면 뷰 컨트롤러가 뷰가 제거된 것을 알려준다.
 
 [참고](https://zeddios.tistory.com/43)
+
+# 6단계 Container ViewController
+
+2021.02.14(일)
+
+<img width="1792" alt="스크린샷 2021-02-14 오후 2 52 32" src="https://user-images.githubusercontent.com/73586326/107869886-95c98200-6ed6-11eb-9131-4cc47c51cdb9.png">
+
+<img width="1792" alt="스크린샷 2021-02-14 오후 3 05 57" src="https://user-images.githubusercontent.com/73586326/107869889-a11cad80-6ed6-11eb-99db-92b0195a3582.png">
+
+[참고](https://zeddios.tistory.com/44)
