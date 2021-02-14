@@ -35,6 +35,7 @@ class NextOfFirstViewController: UIViewController {
         print(#file, #line, #function, #column)
     }
     @IBAction func nextImageButtonTouched(_ sender: Any) {
-
+        let randomNum = String(format: "%02d", Int.random(in: 1...22))
+        photoImageView.image = UIImage(named: "\(randomNum).jpg")
     }
 }
