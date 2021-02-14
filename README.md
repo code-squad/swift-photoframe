@@ -79,3 +79,13 @@
     - **scaleAspectFill**: 이미지의 **가장 짧은** 쪽이 뷰와 일치하도록 늘어남 (비율이 왜곡되지 않지만, 이미지가 짤릴수도 있음)
 
 
+## Step-8
+### 액자 추가 & 사진첩에서 사진 불러오기
+
+<p align="center">
+<img width="310" alt="step8" src="https://user-images.githubusercontent.com/45817559/107875054-05546700-6f01-11eb-8e46-9e2088a248fe.gif">
+</p>
+
+- PhotoFrame-border 추가
+- 사진첩에서 사진 불러오기 추가
+
