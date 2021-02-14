@@ -48,6 +48,9 @@
                                 <rect key="frame" x="189.5" y="581" width="35" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="선택"/>
+                                <connections>
+                                    <action selector="selectButtonTouched:" destination="y4H-dl-r5g" eventType="touchUpInside" id="sMh-9w-HbC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mdh-94-mHu"/>
