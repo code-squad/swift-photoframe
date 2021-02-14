@@ -1,5 +1,5 @@
 //
-//  SecondScene.swift
+//  SecondViewController.swift
 //  PhotoFrame
 //
 //  Created by sonjuhyeong on 2021/02/14.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SecondScene: UIViewController {
+class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +17,7 @@ class SecondScene: UIViewController {
     @IBOutlet weak var photoImageView: UIImageView!
     
     @IBAction func nextImageButtonTouched(_ sender: Any) {
-        
+        self.photoImageView.image = UIImage(named: "01.jpg")
     }
     
 
