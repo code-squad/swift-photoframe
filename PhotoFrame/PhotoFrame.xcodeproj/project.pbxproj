@@ -39,6 +39,7 @@
 		1EDE599425D9601800360436 /* 22.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1EDE597D25D9601800360436 /* 22.jpg */; };
 		1EDE599525D9601800360436 /* 18.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1EDE597E25D9601800360436 /* 18.jpg */; };
 		1EDE599625D9601800360436 /* 19.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1EDE597F25D9601800360436 /* 19.jpg */; };
+		1EDE599925D9867800360436 /* photoframe-border.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EDE599825D9867800360436 /* photoframe-border.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		1EDE597D25D9601800360436 /* 22.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 22.jpg; sourceTree = "<group>"; };
 		1EDE597E25D9601800360436 /* 18.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 18.jpg; sourceTree = "<group>"; };
 		1EDE597F25D9601800360436 /* 19.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 19.jpg; sourceTree = "<group>"; };
+		1EDE599825D9867800360436 /* photoframe-border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photoframe-border.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 		1EDE596825D9601800360436 /* Demo Images */ = {
 			isa = PBXGroup;
 			children = (
+				1EDE599825D9867800360436 /* photoframe-border.png */,
 				1EDE596925D9601800360436 /* Thumbs.db */,
 				1EDE596A25D9601800360436 /* 14.jpg */,
 				1EDE596B25D9601800360436 /* 15.jpg */,
@@ -223,6 +226,7 @@
 				1E1D7A9525D13F6100361757 /* Assets.xcassets in Resources */,
 				1E1D7A9325D13F5E00361757 /* Main.storyboard in Resources */,
 				1EDE598625D9601800360436 /* 02.jpg in Resources */,
+				1EDE599925D9867800360436 /* photoframe-border.png in Resources */,
 				1EDE599625D9601800360436 /* 19.jpg in Resources */,
 				1EDE598425D9601800360436 /* 17.jpg in Resources */,
 				1EDE598F25D9601800360436 /* 04.jpg in Resources */,

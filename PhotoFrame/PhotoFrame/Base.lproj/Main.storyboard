@@ -79,10 +79,10 @@
             </objects>
             <point key="canvasLocation" x="1413.0434782608697" y="-506.25"/>
         </scene>
-        <!--View Controller-->
+        <!--Next Of First View Controller-->
         <scene sceneID="auW-7d-Sl6">
             <objects>
-                <viewController id="Zon-fM-vLC" sceneMemberID="viewController">
+                <viewController id="Zon-fM-vLC" customClass="NextOfFirstViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="baO-QL-20n">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -122,12 +122,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Na-wI-eqd">
-                                <rect key="frame" x="87" y="164" width="240" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Photo Album" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ue5-Ov-fcq">
-                                <rect key="frame" x="87" y="435" width="240" height="58"/>
+                                <rect key="frame" x="87" y="450" width="240" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                 <nil key="textColor"/>
@@ -141,13 +137,22 @@
                                     <action selector="nextImageButtonTouched:" destination="Cpg-dv-Enl" eventType="touchUpInside" id="bjM-T3-PFn"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photoframe-border.png" translatesAutoresizingMaskIntoConstraints="NO" id="cdg-FB-chp">
+                                <rect key="frame" x="56" y="126" width="298" height="316"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Ss-fz-vfZ">
+                                <rect key="frame" x="87" y="164" width="240" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kzI-Ye-Ret"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="ajL-mL-yDX"/>
                     <connections>
-                        <outlet property="photoImageView" destination="7Na-wI-eqd" id="3fD-7Z-Ntc"/>
+                        <outlet property="photoFrame" destination="cdg-FB-chp" id="ZOp-tL-6cz"/>
+                        <outlet property="photoImageView" destination="1Ss-fz-vfZ" id="hRA-ai-pbd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cLn-6e-LWy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -202,6 +207,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="photoframe-border.png" width="720" height="720"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
