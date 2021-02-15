@@ -245,6 +245,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Third" id="9yx-RX-mHk"/>
+                    <connections>
+                        <outlet property="photoImageView" destination="Hi6-dA-VuL" id="tkg-F2-Te9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WSB-vd-iiA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
