@@ -182,3 +182,35 @@ Keychaain Access에서 git과 관련된 항목 삭제, git credential 삭제, gi
 	* `viewDidDisappear()`
 
 	To be Added
+
+## Step6. Container ViewController
+
+### 기본 미션
+* `다음` 버튼을 누르면 다음 scene으로 이동 (`pushViewController(_:animated:)`)
+* `닫기` 버튼을 누르면 이전 scene으로 이동 (`popViewController(animated:)`)
+* 좌상단 `< Back` 버튼도 `닫기` 버튼과 같은 역할
+
+### 추가 미션
+* Auto Layout을 코드로 구현하기: 코드로 Auto Layout 구현 시, `translatesAutoresizingMaskIntoConstraints`를 `false`로 설정해주어야 함
+
+**시뮬레이터 스크린샷**
+
+<img src="https://user-images.githubusercontent.com/56751259/107912618-29b45000-6fa2-11eb-9cb6-423821f7b1bb.gif">
+
+완성 일자 및 시간: 2021-02-15 03:28PM
+
+### TIL
+
+#### 네비게이션 컨트롤러에서의 화면 전환 동작
+
+* 새로운 scene으로 이동
+	* `viewDidLoad()`
+	* `viewWillDisappear()`
+	* `viewWillAppear()`
+	* `viewDidDisappear()`
+	* `viewDidAppear()`
+* `> Back` 버튼 or `popViewController(animated:)`
+	* `viewWillDisapeear()`
+	* `viewWillAppear()`
+	* `viewDidDisapper()`
+	* `viewDidAppear()`
