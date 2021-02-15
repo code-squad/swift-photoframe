@@ -33,6 +33,7 @@ class ThirdViewController: UIViewController, UIImagePickerControllerDelegate & U
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             photoImageView.image = image
         }
+        dismiss(animated: true, completion: nil)
     }
     
     /*
