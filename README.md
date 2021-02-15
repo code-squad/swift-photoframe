@@ -45,10 +45,10 @@ IB : Interface Builder
 @UIApplicationMain // App의 Main이 여기에 있다.
 
 하나의 객체에 여려개의 event를 추가 할 수 있음. -> touchup inside와 outside를 추가하여 확인함.
-여러 객체의 event를 하나의 IBAction에 지정 가능한가? -> 가능, 추가 객체를 선언하여 확인.
-<img width="391" alt="스크린샷 2021-02-15 오후 1 03 39" src="https://user-images.githubusercontent.com/68788135/107907397-f3250800-6f96-11eb-920d-2614f87cd523.png">
-<img width="399" alt="스크린샷 2021-02-15 오후 1 03 55" src="https://user-images.githubusercontent.com/68788135/107907405-f7512580-6f96-11eb-9f5c-a08ffa95bccd.png">
-<img width="394" alt="스크린샷 2021-02-15 오후 1 03 47" src="https://user-images.githubusercontent.com/68788135/107907409-f91ae900-6f96-11eb-862d-6b76a07d4346.png">
+여러 객체의 event를 하나의 IBAction에 지정 가능한가? -> 가능, 추가 객체를 선언하여 확인.  
+<img width="300" alt="스크린샷 2021-02-15 오후 1 03 39" src="https://user-images.githubusercontent.com/68788135/107907397-f3250800-6f96-11eb-920d-2614f87cd523.png">
+<img width="300" alt="스크린샷 2021-02-15 오후 1 03 55" src="https://user-images.githubusercontent.com/68788135/107907405-f7512580-6f96-11eb-9f5c-a08ffa95bccd.png">
+<img width="300" alt="스크린샷 2021-02-15 오후 1 03 47" src="https://user-images.githubusercontent.com/68788135/107907409-f91ae900-6f96-11eb-862d-6b76a07d4346.png">
 
 
 # 진행 방법
