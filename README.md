@@ -103,6 +103,13 @@ enum UIModalPresentStyle: Int {
 
 }
 ```
+
+# step 5
+view가 스택으로 쌓인 경우, 스와이프해서 제거 할 수 있는데, 이 때 dismiss와 같은 동작을 하는 것으로 보인다.
+viewWillDisappear(_:) -> viewDidDisappear(_:)
+
+<img width="813" alt="스크린샷 2021-02-15 오후 3 01 22" src="https://user-images.githubusercontent.com/68788135/107910933-ce349300-6f9e-11eb-89ce-07ae8a7d0390.png">
+
 # 진행 방법
 
 - 포토프레임에 대한 요구사항을 파악한다.
