@@ -41,3 +41,11 @@ Mission1 - 포토프레임 앱
 <img src="images/step7_1.png" width="200" />
 <img src="images/step7_2.png" width="200" />
 </p>
+
+8. UIImagePickerController 구현  2021.02.15 18:19
+<p float="left">
+<img src="images/step8_1.png" width="150" />
+<img src="images/step8_2.png" width="150" />
+<img src="images/step8_3.png" width="150" />
+<img src="images/step8_4.png" width="150" />
+</p>
