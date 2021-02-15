@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ThirdViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+class ThirdViewController: UIViewController {
 
     let imagePicker = UIImagePickerController()
     
@@ -29,13 +29,6 @@ class ThirdViewController: UIViewController, UIImagePickerControllerDelegate & U
         present(imagePicker, animated: true, completion: nil)
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            photoImageView.image = image
-        }
-        dismiss(animated: true, completion: nil)
-    }
-    
     /*
     // MARK: - Navigation
 
@@ -46,4 +39,16 @@ class ThirdViewController: UIViewController, UIImagePickerControllerDelegate & U
     }
     */
 
+}
+
+//MARK: - UIImagePickerControllerDelegate & UINavigationControllerDelegate
+
+extension ThirdViewController: UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            photoImageView.image = image
+        }
+        dismiss(animated: true, completion: nil)
+    }
 }
