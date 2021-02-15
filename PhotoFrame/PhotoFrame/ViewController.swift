@@ -15,6 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         print(#file, #line, #function, #column)
         self.photoLabel.text = "JEJE의 사진액자"
+        self.photoImageView.contentMode = .scaleAspectFill
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,7 +49,6 @@ class ViewController: UIViewController {
         }
         
         self.photoImageView.image = UIImage(named: "\(randomNumberString).jpg")
-        self.photoImageView.contentMode = .scaleAspectFill
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -38,6 +38,6 @@ Mission1 - 포토프레임 앱
 
 7. UIImageView 사용하기  2021.02.15 16:33
 <p float="left">
-<img src="images/step7_1.png" width="170" />
+<img src="images/step7_1.png" width="200" />
 <img src="images/step7_2.png" width="200" />
 </p>
