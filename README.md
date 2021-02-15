@@ -139,6 +139,7 @@ modal : 표시 : present, 제거 : dismiss
 UINavigationController는 viewControllers, navigationBar, toolbar, delegate를 갖는다. 
 : https://developer.apple.com/documentation/uikit/uinavigationcontroller
 
+<img width="858" alt="스크린샷 2021-02-15 오후 4 22 05" src="https://user-images.githubusercontent.com/68788135/107918347-d4317080-6fac-11eb-8e63-c249d97529b9.png">
 # 진행 방법
 
 - 포토프레임에 대한 요구사항을 파악한다.
