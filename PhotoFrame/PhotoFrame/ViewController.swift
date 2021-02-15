@@ -15,7 +15,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         print(#file, #line, #function, #column)
         self.photoLabel.text = "JEJE의 사진액자"
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
