@@ -110,6 +110,15 @@ viewWillDisappear(_:) -> viewDidDisappear(_:)
 
 <img width="813" alt="스크린샷 2021-02-15 오후 3 01 22" src="https://user-images.githubusercontent.com/68788135/107910933-ce349300-6f9e-11eb-89ce-07ae8a7d0390.png">
 
+segue없이 새로운 view를 보여주기 위해서는 아래와 같은 코드를 활용한다
+``` swift
+let detailStoryboard = UIStoryboard.init(name: "Detail", bundle: nil)
+        guard let detailVC = detailStoryboard.instantiateViewController(identifier: "DetailViewController") as? DetailViewController else {return}
+        detailVC.tempCurrentCoordinate = cooperate
+        
+        present(detailVC, animated: true, completion: nil)
+```
+
 # 진행 방법
 
 - 포토프레임에 대한 요구사항을 파악한다.
