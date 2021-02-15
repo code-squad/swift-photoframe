@@ -50,7 +50,59 @@ IB : Interface Builder
 <img width="300" alt="스크린샷 2021-02-15 오후 1 03 55" src="https://user-images.githubusercontent.com/68788135/107907405-f7512580-6f96-11eb-9f5c-a08ffa95bccd.png">
 <img width="300" alt="스크린샷 2021-02-15 오후 1 03 47" src="https://user-images.githubusercontent.com/68788135/107907409-f91ae900-6f96-11eb-862d-6b76a07d4346.png">
 
+# step 4
+* Show(Push)    
+이 segue는 target view controller의 showViewController:sender: 가 실행된다.
+일반적으로는 source View Controller위에 새로운 컨텐트가 모달로 보여진다.
+몇몇 뷰컨트롤러들은 해당 메소드가 재정의 되어있어서 다른동작을 한다.
+UIKit은 targetViewControllerForAction:sender:메소드로 source View Controller 를 찾는다.  
+* Show Detail (Replace)    
+이 segue는 target view controller 의 showDetailViewController:sender:메소드가 실행된다.
+이 segue는 UISplitViewController 객체 내에 내장된 view controller에 대해서만 관련된 segue이다.
+split view controller는 자식 뷰컨트롤러를 새로운 컨텐츠로 replace합니다.
+나머지 대부분의 view controller에서는 모달로 보여줌
+* Present Modally    이 segue는 view controller를 모달로 보여준다.
+* Present as Popover    기존 view 에 앵커를 둔 컨텐츠를 보여줍니다.
 
+``` swift
+enum UIModalTransitionStyle: Int {
+      case coverVertical 
+  // viewcontroller가 전환될 때 view가 미끄러지듯이 올라오고, dissmiss시 내려가는 기본 transtion스타일
+        case flipHorizontal
+  // 오른쪽에서 왼쪽으로 수평회전을 한다. 🔄 새로 떠오르는 뷰가 이전 뷰의 뒷면에 있던 것처럼 보인다. 뒤집히는 모양의 transition
+        case crossDissolve
+  // 이전 뷰가 흐릿해지고 전환될 뷰가 뚜렷해지는 효과가 동시에 일어난다.
+        case partialCurl
+  // 한 쪽 코너에서 전환될 뷰가 말아 올라오는 형태로 드러난다. UIModalPresentationStyle.fullScreen 에서만 지원되고 , 다른 형태에서 사용시 exception이 발생한다
+}
+```
+
+``` swift
+enum UIModalPresentStyle: Int {
+    case automatic
+  // 시스템이 보여주는 방식을 정한다.
+    case fullScreen
+  // 스크린을 덮는 보여주는 방식
+    case pageSheet
+  // 기본 뷰를 일부분을 덮는 보여주는 방식
+    case formSheet
+  // 스크린의 중앙에 컨텐츠를 보여주는 방식
+    case currentContext
+  // 다른 뷰컨트롤러를 통해 내용을 보여주는 방식
+    case custom
+  // 사용자 정의 animator 객체로 부터 관리되는 보여주는 방식
+    case overFullScreen
+  // 스크린을 덮는 뷰를 보여주는 방식
+    case overCurrentContext
+  // 다른 뷰 컨트롤러의 컨텐츠를 통해 보여주는 방식
+    case blurOverFullScreen
+  // 새로 표현하는 뷰를 보여주기 전에 기존의 뷰를 흐릿하게 하며 보여주는 방식
+    case popover
+  // popover뷰로 보여주는 방식
+    case none
+
+}
+```
 # 진행 방법
 
 - 포토프레임에 대한 요구사항을 파악한다.
