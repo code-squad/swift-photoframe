@@ -50,6 +50,9 @@ class ViewController: UIViewController {
         
         self.photoImageView.image = UIImage(named: "\(randomNumberString).jpg")
     }
+    @IBAction func selectButtonTouched(_ sender: UIButton) {
+        
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVC = segue.destination as UIViewController
