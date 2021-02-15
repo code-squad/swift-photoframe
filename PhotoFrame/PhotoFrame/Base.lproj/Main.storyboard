@@ -106,12 +106,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rxs-RK-Nk8">
-                                <rect key="frame" x="182" y="341" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I8g-89-U1Y">
+                                <rect key="frame" x="192" y="406" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="닫기"/>
                                 <connections>
-                                    <action selector="closeButtonTouched:" destination="Wrc-0e-XGx" eventType="touchUpInside" id="xkG-IC-StJ"/>
+                                    <action selector="closeButtonTouched:" destination="7k2-13-VPG" eventType="touchUpInside" id="HWJ-ou-3JD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -122,7 +122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MvI-NE-xii" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2825" y="99"/>
+            <point key="canvasLocation" x="2824.6376811594205" y="98.4375"/>
         </scene>
         <!--Item-->
         <scene sceneID="UkZ-q2-RyJ">
