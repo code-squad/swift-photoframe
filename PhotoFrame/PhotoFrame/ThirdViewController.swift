@@ -18,6 +18,9 @@ class ThirdViewController: UIViewController {
     }
     
     @IBAction func nextImageButtonTouched(_ sender: UIButton) {
+        let randomInt = Int.random(in: 1...22)
+        let randomString = String(format: "%02d", randomInt)
+        self.photoImageView.image = UIImage(named: "\(randomString).jpg")
     }
     
     /*
