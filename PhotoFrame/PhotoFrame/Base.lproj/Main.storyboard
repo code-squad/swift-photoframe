@@ -40,7 +40,7 @@
                                 <state key="normal" title="노란색 화면"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="eih-Px-uec" eventType="touchUpInside" id="o1U-mq-zhU"/>
-                                    <segue destination="a3c-3F-wsA" kind="show" id="sNr-po-j5f"/>
+                                    <segue destination="a3c-3F-wsA" kind="show" identifier="YellowVC" id="sNr-po-j5f"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wa2-K0-pUG">
@@ -48,7 +48,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="파란색 화면"/>
                                 <connections>
-                                    <segue destination="3YE-4s-e2V" kind="show" id="wsh-L7-6Af"/>
+                                    <segue destination="3YE-4s-e2V" kind="show" identifier="BlueVC" id="wsh-L7-6Af"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -91,7 +91,6 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Gfk-Bw-6ir"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="f6c-nD-nyS"/>
                 </viewController>
@@ -119,7 +118,6 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CTO-vF-6af"/>
-                        <color key="backgroundColor" systemColor="systemBlueColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="iwF-gu-Bjb"/>
                 </viewController>
@@ -149,9 +147,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
