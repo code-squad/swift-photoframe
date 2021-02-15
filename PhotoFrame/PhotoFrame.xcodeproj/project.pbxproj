@@ -34,6 +34,7 @@
 		E4E8146425DA59DA00AC0DB5 /* 01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E4E8144E25DA59D900AC0DB5 /* 01.jpg */; };
 		E4E8146525DA59DA00AC0DB5 /* 02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E4E8144F25DA59D900AC0DB5 /* 02.jpg */; };
 		E4E8146625DA59DA00AC0DB5 /* 22.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E4E8145025DA59DA00AC0DB5 /* 22.jpg */; };
+		E4E8146D25DA6C6D00AC0DB5 /* photoframe-border.png in Resources */ = {isa = PBXBuildFile; fileRef = E4E8146C25DA6C6D00AC0DB5 /* photoframe-border.png */; };
 		E4EC6CC225D15E9A00743C87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EC6CC125D15E9A00743C87 /* AppDelegate.swift */; };
 		E4EC6CC425D15E9A00743C87 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EC6CC325D15E9A00743C87 /* SceneDelegate.swift */; };
 		E4EC6CC625D15E9A00743C87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EC6CC525D15E9A00743C87 /* ViewController.swift */; };
@@ -72,6 +73,7 @@
 		E4E8144E25DA59D900AC0DB5 /* 01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 01.jpg; sourceTree = "<group>"; };
 		E4E8144F25DA59D900AC0DB5 /* 02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 02.jpg; sourceTree = "<group>"; };
 		E4E8145025DA59DA00AC0DB5 /* 22.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 22.jpg; sourceTree = "<group>"; };
+		E4E8146C25DA6C6D00AC0DB5 /* photoframe-border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photoframe-border.png"; sourceTree = "<group>"; };
 		E4EC6CBE25D15E9A00743C87 /* PhotoFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4EC6CC125D15E9A00743C87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4EC6CC325D15E9A00743C87 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 		E4E8146825DA59E900AC0DB5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				E4E8146C25DA6C6D00AC0DB5 /* photoframe-border.png */,
 				E4E8144E25DA59D900AC0DB5 /* 01.jpg */,
 				E4E8144F25DA59D900AC0DB5 /* 02.jpg */,
 				E4E8144225DA59D900AC0DB5 /* 03.jpg */,
@@ -255,6 +258,7 @@
 				E4E8146225DA59DA00AC0DB5 /* 15.jpg in Resources */,
 				E4E8145325DA59DA00AC0DB5 /* 11.jpg in Resources */,
 				E4E8146425DA59DA00AC0DB5 /* 01.jpg in Resources */,
+				E4E8146D25DA6C6D00AC0DB5 /* photoframe-border.png in Resources */,
 				E4E8146125DA59DA00AC0DB5 /* 06.jpg in Resources */,
 				E4E8145D25DA59DA00AC0DB5 /* 16.jpg in Resources */,
 				E4E8145125DA59DA00AC0DB5 /* 09.jpg in Resources */,
