@@ -9,13 +9,13 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var photoLabel: UILabel!
-    @IBOutlet weak var firstDescription: UILabel!
+    @IBOutlet weak var photoImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print(#file, #line, #function, #column)
         self.photoLabel.text = "JEJE의 사진액자"
-        self.firstDescription.text = "Are you ready to make?"
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,10 +38,17 @@ class ViewController: UIViewController {
         print(#file, #line, #function, #column)
     }
     
-    @IBAction func nextButtonTouched(_ sender: UIButton) {
-            self.photoLabel.textColor = UIColor.blue
-            self.photoLabel.backgroundColor = UIColor.yellow
-            self.photoLabel.alpha = 0.5
+    @IBAction func nextImageButtonTouched(_ sender: UIButton) {
+        let randomNumber = Int.random(in: 1...22)
+        var randomNumberString: String {
+            var myString = String(randomNumber)
+            if myString.count == 1 {
+                myString = "0\(myString)"
+            }
+            return myString
+        }
+        
+        self.photoImageView.image = UIImage(named: "\(randomNumberString).jpg")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -53,7 +60,6 @@ class ViewController: UIViewController {
             destinationVC.view.backgroundColor = UIColor.systemBlue
             destinationVC.view.alpha = 1
         }
-        
     }
 }
 

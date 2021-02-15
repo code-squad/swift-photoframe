@@ -26,38 +26,37 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ksc-cW-C1w">
-                                <rect key="frame" x="20" y="474" width="354" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o62-Ku-EuO">
+                                <rect key="frame" x="180" y="502" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="systemYellowColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5V-8u-vaC">
-                                <rect key="frame" x="161" y="228" width="69" height="30"/>
+                                <state key="normal" title="다음"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vx3-C2-aAC">
+                                <rect key="frame" x="180" y="502" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="노란색 화면"/>
+                                <state key="normal" title="다음"/>
                                 <connections>
-                                    <action selector="nextButtonTouched:" destination="eih-Px-uec" eventType="touchUpInside" id="o1U-mq-zhU"/>
-                                    <segue destination="a3c-3F-wsA" kind="show" identifier="YellowVC" id="sNr-po-j5f"/>
+                                    <action selector="nextImageButtonTouched:" destination="eih-Px-uec" eventType="touchUpInside" id="Apt-Xg-DpE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wa2-K0-pUG">
-                                <rect key="frame" x="161" y="278" width="69" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="파란색 화면"/>
-                                <connections>
-                                    <segue destination="3YE-4s-e2V" kind="show" identifier="BlueVC" id="wsh-L7-6Af"/>
-                                </connections>
-                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="02" translatesAutoresizingMaskIntoConstraints="NO" id="bsJ-VP-oxT">
+                                <rect key="frame" x="75" y="104" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Sms-cu-b2B"/>
+                                    <constraint firstAttribute="height" constant="240" id="n1y-pg-O2T"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ioi-8L-EDR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bsJ-VP-oxT" firstAttribute="top" secondItem="Ioi-8L-EDR" secondAttribute="top" constant="16" id="1Tl-XO-v02"/>
+                            <constraint firstItem="bsJ-VP-oxT" firstAttribute="centerX" secondItem="49x-gg-02f" secondAttribute="centerX" id="bYF-83-guh"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="O0u-qP-U2V"/>
                     <connections>
-                        <outlet property="firstDescription" destination="Ksc-cW-C1w" id="C9Q-di-P28"/>
+                        <outlet property="photoImageView" destination="bsJ-VP-oxT" id="Heu-YJ-nyr"/>
                         <outlet property="photoLabel" destination="LoZ-x9-Asi" id="8uA-NJ-ymE"/>
                     </connections>
                 </viewController>
@@ -145,11 +144,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="02" width="1024" height="766"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
