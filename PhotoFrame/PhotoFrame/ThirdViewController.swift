@@ -17,7 +17,9 @@ class ThirdViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func nextImageButtonTouched(_ sender: UIButton) {
+    }
+    
     /*
     // MARK: - Navigation
 
