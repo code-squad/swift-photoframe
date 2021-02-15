@@ -53,6 +53,14 @@
                                     <constraint firstAttribute="height" constant="240" id="n1y-pg-O2T"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJo-UU-4kp">
+                                <rect key="frame" x="180" y="584" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="선택"/>
+                                <connections>
+                                    <action selector="selectButtonTouched:" destination="eih-Px-uec" eventType="touchUpInside" id="b8z-ah-fT7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ioi-8L-EDR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
