@@ -242,6 +242,7 @@ Keychaain Access에서 git과 관련된 항목 삭제, git credential 삭제, gi
 		* An object that manages image data in your app.
 		* Assign an image to a UIImageView object to display the image in your interface.
 * contentMode
+
 |Case|Descriptioin|
 |---|---|
 |scaleToFill|The option to scale the content to fit the size of itself by changing the aspect ratio of the content if necessary.|
@@ -257,3 +258,15 @@ Keychaain Access에서 git과 관련된 항목 삭제, git credential 삭제, gi
 |topRight|The option to align the content in the top-right corner of the view.|
 |bottomLeft|The option to align the content in the bottom-left corner of the view.|
 |bottomRight|The option to align the content in the bottom-right corner of the view.|
+
+## Step8 - 마무리하기
+
+### 구현 사항
+* `선택` 버튼을 누르면 사진 앨범을 띄운다.
+* 사진 앨범에서 사진을 선택하면 액자 안의 이미지로 보여준다.
+
+**시뮬레이터 스크린샷**
+
+<img src="https://user-images.githubusercontent.com/56751259/107934613-a3a90100-6fc3-11eb-9520-50e13ad704ad.gif">
+
+완성 일자 및 시간: 2021-02-15 07:31PM
