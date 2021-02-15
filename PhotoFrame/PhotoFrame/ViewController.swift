@@ -51,6 +51,13 @@ class ViewController: UIViewController {
         self.photoImageView.image = UIImage(named: "\(randomNumberString).jpg")
     }
     @IBAction func selectButtonTouched(_ sender: UIButton) {
+        let ipc = UIImagePickerController()
+        ipc.sourceType = .photoLibrary
+        ipc.allowsEditing = true
+//        ipc.mediaTypes =
+        ipc.delegate = self
+        present(ipc, animated: true)
+        
         
     }
     
@@ -65,4 +72,15 @@ class ViewController: UIViewController {
         }
     }
 }
-
+extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+//        print("\(info)") -> To get rawValue below
+        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
+            photoImageView.image = image
+        }
+        picker.dismiss(animated: true, completion: nil)
+    }
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+}
