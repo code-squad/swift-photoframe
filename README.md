@@ -214,3 +214,46 @@ Keychaain Access에서 git과 관련된 항목 삭제, git credential 삭제, gi
 	* `viewWillAppear()`
 	* `viewDidDisapper()`
 	* `viewDidAppear()`
+
+## Step7. Second Scene 화면
+
+### 기본 미션
+* `다음` 버튼을 누르면 22가지 이미지 중 랜덤하게 하나를 보여줌
+
+**시뮬레이터 스크린샷**
+
+<img src="https://user-images.githubusercontent.com/56751259/107918568-47d37d80-6fad-11eb-9dd5-5f1817ce709a.gif">
+
+완성 일자 및 시간: 2021-02-15 04:46PM
+
+### TIL
+
+* UIImageView VS. UIImage
+	* UIImageView
+		```swift
+		class UIImageView : UIView
+		```
+		* An object that displays a single image or a sequence of animated images in your interface.
+		* Image views let you efficiently draw any imag that can be specified using a UIImage object.
+	* UIImage
+		```swift
+		class UIImage : NSObject
+		```
+		* An object that manages image data in your app.
+		* Assign an image to a UIImageView object to display the image in your interface.
+* contentMode
+|Case|Descriptioin|
+|---|---|
+|scaleToFill|The option to scale the content to fit the size of itself by changing the aspect ratio of the content if necessary.|
+|scaleAspectFit|The option to scale the content to fit the size of the view by maintaining the aspect ratio. Any remaining area of the view’s bounds is transparent.|
+|scaleAspectFill|The option to scale the content to fill the size of the view. Some portion of the content may be clipped to fill the view’s bounds.|
+|redraw|The option to redisplay the view when the bounds change by invoking the setNeedsDisplay() method.|
+|center|The option to center the content in the view’s bounds, keeping the proportions the same.|
+|top|The option to center the content aligned at the top in the view’s bounds.|
+|bottom|The option to center the content aligned at the bottom in the view’s bounds.|
+|left|The option to align the content on the left of the view.|
+|right|The option to align the content on the right of the view.|
+|topLeft|The option to align the content in the top-left corner of the view.|
+|topRight|The option to align the content in the top-right corner of the view.|
+|bottomLeft|The option to align the content in the bottom-left corner of the view.|
+|bottomRight|The option to align the content in the bottom-right corner of the view.|
