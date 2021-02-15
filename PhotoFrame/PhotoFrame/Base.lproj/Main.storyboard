@@ -231,10 +231,16 @@
         <!--Third-->
         <scene sceneID="Tkn-NG-Okf">
             <objects>
-                <viewController id="hsa-td-PU0" sceneMemberID="viewController">
+                <viewController id="hsa-td-PU0" customClass="ThirdViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V0l-qY-4v5">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hi6-dA-VuL">
+                                <rect key="frame" x="75" y="147" width="240" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="dIR-r4-Phh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
