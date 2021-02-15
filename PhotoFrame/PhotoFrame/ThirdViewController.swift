@@ -7,14 +7,15 @@
 
 import UIKit
 
-class ThirdViewController: UIViewController {
+class ThirdViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
 
+    let imagePicker = UIImagePickerController()
+    
     @IBOutlet weak var photoImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        imagePicker.delegate = self
     }
     
     @IBAction func nextImageButtonTouched(_ sender: UIButton) {
