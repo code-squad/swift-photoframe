@@ -22,9 +22,16 @@ Mission1 - 포토프레임 앱
 <img src="images/segue4.png" width="150" />
 </p>
 
-5. Playaround with segue and view controller lifycydle  2021.02.15 14:33
+5. Playaround with segue and view controller lifycycle  2021.02.15 14:33
 <p float="left">
 <img src="images/step5_1.png" width="170" />
 <img src="images/step5_2.png" width="170" />
 <img src="images/step5_3.png" width="170" />
+</p>
+
+5. Embed container controller (navigation controller)  2021.02.15 15:33
+<p float="left">
+<img src="images/step6_1.png" width="170" />
+<img src="images/step6_2.png" width="170" />
+<img src="images/step6_3.png" width="170" />
 </p>
