@@ -25,6 +25,8 @@ class ThirdViewController: UIViewController, UIImagePickerControllerDelegate & U
     }
     
     @IBAction func selectButtonTouched(_ sender: UIButton) {
+        imagePicker.sourceType = .photoLibrary
+        present(imagePicker, animated: true, completion: nil)
     }
     
     /*
