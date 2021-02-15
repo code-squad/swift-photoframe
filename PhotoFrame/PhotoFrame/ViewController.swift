@@ -43,5 +43,17 @@ class ViewController: UIViewController {
             self.photoLabel.backgroundColor = UIColor.yellow
             self.photoLabel.alpha = 0.5
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as UIViewController
+        if segue.identifier == "YellowVC" {
+            destinationVC.view.backgroundColor = UIColor.systemYellow
+            destinationVC.view.alpha = 1
+        } else if segue.identifier == "BlueVC" {
+            destinationVC.view.backgroundColor = UIColor.systemBlue
+            destinationVC.view.alpha = 1
+        }
+        
+    }
 }
 
