@@ -35,12 +35,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5V-8u-vaC">
-                                <rect key="frame" x="180" y="228" width="30" height="30"/>
+                                <rect key="frame" x="161" y="228" width="69" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="다음"/>
+                                <state key="normal" title="노란색 화면"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="eih-Px-uec" eventType="touchUpInside" id="o1U-mq-zhU"/>
                                     <segue destination="a3c-3F-wsA" kind="show" id="sNr-po-j5f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wa2-K0-pUG">
+                                <rect key="frame" x="161" y="278" width="69" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="파란색 화면"/>
+                                <connections>
+                                    <segue destination="3YE-4s-e2V" kind="show" id="wsh-L7-6Af"/>
                                 </connections>
                             </button>
                         </subviews>
