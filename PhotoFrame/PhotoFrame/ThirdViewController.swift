@@ -23,6 +23,9 @@ class ThirdViewController: UIViewController {
         self.photoImageView.image = UIImage(named: "\(randomString).jpg")
     }
     
+    @IBAction func selectButtonTouched(_ sender: UIButton) {
+    }
+    
     /*
     // MARK: - Navigation
 
