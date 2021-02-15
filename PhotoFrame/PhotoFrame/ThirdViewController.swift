@@ -29,6 +29,12 @@ class ThirdViewController: UIViewController, UIImagePickerControllerDelegate & U
         present(imagePicker, animated: true, completion: nil)
     }
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            photoImageView.image = image
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
