@@ -49,6 +49,7 @@ class ViewController: UIViewController {
         }
         
         self.photoImageView.image = UIImage(named: "\(randomNumberString).jpg")
+        self.photoImageView.contentMode = .scaleAspectFill
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
