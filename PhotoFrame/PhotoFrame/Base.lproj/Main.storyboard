@@ -30,12 +30,30 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1N9-9o-oJm">
+                                <rect key="frame" x="179" y="209" width="35" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="다음"/>
+                                <connections>
+                                    <action selector="nextButtonTouched:" destination="I2t-ha-RBA" eventType="touchUpInside" id="BUO-Qx-544"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhq-AD-fjS">
+                                <rect key="frame" x="165" y="272" width="47" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="다음2"/>
+                                <connections>
+                                    <action selector="nextButtonTouched:" destination="I2t-ha-RBA" eventType="touchUpInside" id="EH0-jQ-4YU"/>
+                                    <action selector="nextButtonTouchedOutside:" destination="I2t-ha-RBA" eventType="touchUpOutside" id="PQ0-Yj-rvF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="74c-fq-7qN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" image="pencil" catalog="system" id="hBv-0u-As2"/>
-
                     <connections>
                         <outlet property="firstDescription" destination="bjY-Vs-xcS" id="cvm-WK-xpb"/>
                         <outlet property="photoLabel" destination="duA-zy-wkT" id="j4P-yt-J8B"/>
@@ -44,13 +62,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A60-zy-YUO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1095.6521739130435" y="87.723214285714278"/>
-
         </scene>
         <!--Item-->
         <scene sceneID="UkZ-q2-RyJ">
             <objects>
                 <viewController id="vta-3V-AgF" customClass="SecondSceneViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
-
                     <view key="view" contentMode="scaleToFill" id="Sg6-DO-R0Z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
