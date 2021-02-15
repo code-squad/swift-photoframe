@@ -31,6 +31,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="다음"/>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photoframe-border" translatesAutoresizingMaskIntoConstraints="NO" id="pfc-Xi-fTP" userLabel="PhotoFrame">
+                                <rect key="frame" x="60" y="94" width="270" height="270"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="270" id="LGJ-BL-1ZN"/>
+                                    <constraint firstAttribute="width" constant="270" id="c1m-lq-X8L"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vx3-C2-aAC">
                                 <rect key="frame" x="180" y="502" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -40,7 +47,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="02" translatesAutoresizingMaskIntoConstraints="NO" id="bsJ-VP-oxT">
-                                <rect key="frame" x="75" y="104" width="240" height="240"/>
+                                <rect key="frame" x="75" y="109" width="240" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="Sms-cu-b2B"/>
                                     <constraint firstAttribute="height" constant="240" id="n1y-pg-O2T"/>
@@ -50,7 +57,10 @@
                         <viewLayoutGuide key="safeArea" id="Ioi-8L-EDR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="bsJ-VP-oxT" firstAttribute="top" secondItem="Ioi-8L-EDR" secondAttribute="top" constant="16" id="1Tl-XO-v02"/>
+                            <constraint firstItem="pfc-Xi-fTP" firstAttribute="centerX" secondItem="49x-gg-02f" secondAttribute="centerX" id="ACC-yb-yHJ"/>
+                            <constraint firstItem="bsJ-VP-oxT" firstAttribute="centerY" secondItem="pfc-Xi-fTP" secondAttribute="centerY" id="C85-ns-AjQ"/>
+                            <constraint firstItem="pfc-Xi-fTP" firstAttribute="top" secondItem="Ioi-8L-EDR" secondAttribute="top" constant="6" id="DN5-Ch-VVJ"/>
+                            <constraint firstItem="bsJ-VP-oxT" firstAttribute="centerX" secondItem="pfc-Xi-fTP" secondAttribute="centerX" id="UJe-Sp-5o6"/>
                             <constraint firstItem="bsJ-VP-oxT" firstAttribute="centerX" secondItem="49x-gg-02f" secondAttribute="centerX" id="bYF-83-guh"/>
                         </constraints>
                     </view>
@@ -145,6 +155,7 @@
     </scenes>
     <resources>
         <image name="02" width="1024" height="766"/>
+        <image name="photoframe-border" width="720" height="720"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
