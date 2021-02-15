@@ -119,6 +119,26 @@ let detailStoryboard = UIStoryboard.init(name: "Detail", bundle: nil)
         present(detailVC, animated: true, completion: nil)
 ```
 
+# step 6
+참고 : https://minominodomino.github.io/devlog/2019/05/19/ios-ContainerViewController/
+
+기존 segue action : show에서는 새로운 view가 열리거나 닫힐 때 viewWillDisappear(_:) -> viewDidDisappear(_:) 방식으로 열리거나 닫히는 내용만 호출되었다.
+
+하지만 navigationController.popViewController 를 통하면, 
+viewWillDisappear(_:) -> viewWillAppear(_:) -> viewDidDisappear(_:)  -> viewDidAppear(_:) 순서로 동작한다.  
+사유는 navigation stack으로 되어있기 때문으로 보이며, tree구조 처럼 상위에서 하위로 넓어져가기 때문인 것 같다. -> LIFO
+stack의 최하위에는 Root View Contoller가 존재하며 이는 stack 에서 pop하지 않는다. 
+
+dismiss로 해제되지 않는 이유 : func dismiss : Dismisses the view controller that was presented **modally** by the view controller.
+
+navigation interface와 modal에서의 화면전환 차이는 화면 흐름과 관련되는지 유무이다.
+-> navigation interface : 화면 흐름 있음, modal : 기존의 흐름을 끊고 새로운 입력을 받거나 알람표시.
+navigation controller : 표시 : push, 제거 : pop
+modal : 표시 : present, 제거 : dismiss
+
+UINavigationController는 viewControllers, navigationBar, toolbar, delegate를 갖는다. 
+: https://developer.apple.com/documentation/uikit/uinavigationcontroller
+
 # 진행 방법
 
 - 포토프레임에 대한 요구사항을 파악한다.
