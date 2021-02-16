@@ -189,3 +189,8 @@ preferredSymbolConfiguration : 이미지 랜더링 중 사용 될 설정 (모래
 isUserInteractionEnabled : userEvent를 무시할 지 유무
 isHighlighted : 이미지가 하이라이트 되었는지 유무 
 
+# finishing
+
+imagePicker = UIImagePickerController() 선언 후
+viewDidLoad() 에서 imagePicker.delegate = self 함. -> 해당 내용을 넣지 않으면, 이미지를 선택해도 가져오지 못 함.
+imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) 를 사용하여 이미지 선택 후 동작을 정의함.
