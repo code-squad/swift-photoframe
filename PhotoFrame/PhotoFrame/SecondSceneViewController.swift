@@ -10,6 +10,7 @@ import UIKit
 class SecondSceneViewController: UIViewController {
     @IBOutlet weak var photoImageView: UIImageView!
     
+    @IBOutlet weak var photoFrame: UIImageView!
     @IBAction func nextImageButtonTouched(_ sender: Any) {
         self.photoImageView.image = UIImage(named: "\(randomNumberAsString()).jpg")
         
