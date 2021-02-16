@@ -155,6 +155,14 @@
                                     <action selector="nextImageButtonTouched:" destination="vta-3V-AgF" eventType="touchUpInside" id="Kws-6f-wBw"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2f2-80-OcL">
+                                <rect key="frame" x="192" y="709" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="선택"/>
+                                <connections>
+                                    <action selector="selectButtonTouched:" destination="vta-3V-AgF" eventType="touchUpInside" id="qLJ-Gz-3tx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2wz-q5-VfM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
