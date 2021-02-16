@@ -172,3 +172,5 @@ UIImageView : UIImage로 전달받은 어떤 이미지라도 그려 줌. animate
 투명도 조절 : 
 isOpaque 속성이 true면 이미지의 픽셀이 ImageView의 배경색 위에 합성되고 의 알파 속성 무시
 isOpaque 속성이 false이면 각 픽셀의 알파 값에 ImageView의 알파 값을 곱하여 결과 값이 해당 픽셀의 실제 투명도 값. 영상에 알파 경로가 없는 경우 각 픽셀의 알파 값은 1.0으로 가정합니다.
+
+<img width="360" alt="스크린샷 2021-02-15 오후 6 11 10" src="https://user-images.githubusercontent.com/68788135/108010827-29bb5b00-7049-11eb-8166-d93c26d2db90.png">  
