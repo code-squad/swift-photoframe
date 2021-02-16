@@ -174,3 +174,18 @@ isOpaque 속성이 true면 이미지의 픽셀이 ImageView의 배경색 위에 
 isOpaque 속성이 false이면 각 픽셀의 알파 값에 ImageView의 알파 값을 곱하여 결과 값이 해당 픽셀의 실제 투명도 값. 영상에 알파 경로가 없는 경우 각 픽셀의 알파 값은 1.0으로 가정합니다.
 
 <img width="360" alt="스크린샷 2021-02-15 오후 6 11 10" src="https://user-images.githubusercontent.com/68788135/108010827-29bb5b00-7049-11eb-8166-d93c26d2db90.png">  
+
+속성 : 
+image : 표시 될 이미지
+highlightedImage : 하이라이트 시 표시 될 이미지
+animationImages : 애니메이션에 사용될 이미지들
+highlightedAnimationImages : 하이라이트 되었을 시 사용될 이미지들
+animationDuration : 1회 반복 당 소요될 시간
+animationRepeatCount : 애니메이션 반복 횟수
+startAnimating() : 애니메이션 시작
+stopAnimating() : 애니메이션을 멈춤
+isAnimating : 애니메이션이 동작 중인지 유무 확인
+preferredSymbolConfiguration : 이미지 랜더링 중 사용 될 설정 (모래시계 같은 이미지)
+isUserInteractionEnabled : userEvent를 무시할 지 유무
+isHighlighted : 이미지가 하이라이트 되었는지 유무 
+
