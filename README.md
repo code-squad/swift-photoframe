@@ -195,5 +195,6 @@ imagePicker = UIImagePickerController() 선언 후
 viewDidLoad() 에서 imagePicker.delegate = self 함. -> 해당 내용을 넣지 않으면, 이미지를 선택해도 가져오지 못 함.
 imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) 를 사용하여 이미지 선택 후 동작을 정의함.
 
-<img width="381" alt="스크린샷 2021-02-16 오후 2 43 59" src="https://user-images.githubusercontent.com/68788135/108023194-6c8b2c00-7065-11eb-8d3a-6a12e360b7f0.png">
-<img width="399" alt="스크린샷 2021-02-16 오후 2 42 53" src="https://user-images.githubusercontent.com/68788135/108023158-57ae9880-7065-11eb-8a5e-147eaf054fa3.png">
+<img width="350" alt="스크린샷 2021-02-16 오후 2 43 59" src="https://user-images.githubusercontent.com/68788135/108023194-6c8b2c00-7065-11eb-8d3a-6a12e360b7f0.png">. 
+
+<img width="350" alt="스크린샷 2021-02-16 오후 2 42 53" src="https://user-images.githubusercontent.com/68788135/108023158-57ae9880-7065-11eb-8a5e-147eaf054fa3.png">
