@@ -143,4 +143,32 @@ UINavigationController는 viewControllers, navigationBar, toolbar, delegate를 �
 
 # step 7
 
+UIImage : UIkit에서 이미지를 관리하는 객체, 이미지는 불변하며 기본 플랫폼의 모든 이미지형식의 데이터를 사용 가능.
+PNG와 JPEG가 추천되며, PNG는 무손실이기에 특히나 추천됨.
+-> UIImageView 객체에 이미지 할당, btn 또는 slider 등의 controls를 customize하는데 사용
+- 앱의 기본번들에 대한 경로를 지정하지 않아도 mainBundle 로부터 이미지를 찾아 로드한다.
+- 파일 확장자를 이용하지 않아도 PNG 이미지를 자동으로 로드한다.
+- 이미지를 로드할 때 화면의 크기를 고려한다. (scale - @2x, device - ~iphone, ~ipad)
+- 메모리 캐시 기능을 사용한다. 같은 이미지를 이미 로드한 상태에서 로드 요청을 받으면 기존에 로드한 이미지를 리턴한다.
+사용 예시 링크 : https://beankhan.tistory.com/111
 
+CGImage : (CoreGraphics)  bitmap. 수정 가능.
+CG -> UI
+``` swift
+var aNewUIImage = UIImage(CGImage: imageRef
+// 출처: https://zeddios.tistory.com/455 [ZeddiOS]
+```
+
+CIImage : (CoreImage)  
+CIImage 객체는 이미지를 생성하는 데 필요한 모든 정보를 가지고 있지만 (실제로 이미지를 생성할 때 까지) 이미지를 렌더링하지 않습니다. 
+이미지가 아님. CIImage 객체는 **이미지 레시피(recipe)**.
+
+CIContext 및 CIImage 객체는 변경 불가능합니다. -> 각 객체를 스레드간에 안전하게 공유
+주요 기능 : 사진에 필터 씌우기
+
+UIImageView : UIImage로 전달받은 어떤 이미지라도 그려 줌. animatedImage도 가능.
+기본적으로 user events를 무시한다. User initiative interaction을 사용하고 싶다면, isUserInteractionEnabled 를 true
+
+투명도 조절 : 
+isOpaque 속성이 true면 이미지의 픽셀이 ImageView의 배경색 위에 합성되고 의 알파 속성 무시
+isOpaque 속성이 false이면 각 픽셀의 알파 값에 ImageView의 알파 값을 곱하여 결과 값이 해당 픽셀의 실제 투명도 값. 영상에 알파 경로가 없는 경우 각 픽셀의 알파 값은 1.0으로 가정합니다.
