@@ -132,6 +132,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photoframe-border" translatesAutoresizingMaskIntoConstraints="NO" id="3td-xT-lMF">
+                                <rect key="frame" x="61" y="191" width="285" height="273"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gYx-Eg-xd4">
                                 <rect key="frame" x="87" y="209" width="240" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -151,18 +155,27 @@
                                     <action selector="nextImageButtonTouched:" destination="vta-3V-AgF" eventType="touchUpInside" id="Kws-6f-wBw"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2f2-80-OcL">
+                                <rect key="frame" x="192" y="709" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="선택"/>
+                                <connections>
+                                    <action selector="selectButtonTouched:" destination="vta-3V-AgF" eventType="touchUpInside" id="qLJ-Gz-3tx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2wz-q5-VfM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" image="note" catalog="system" id="m68-es-OB2"/>
                     <connections>
+                        <outlet property="photoFrame" destination="3td-xT-lMF" id="9GI-E7-120"/>
                         <outlet property="photoImageView" destination="gYx-Eg-xd4" id="4q0-qx-vhd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q5Q-kU-Rxf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1096" y="820"/>
+            <point key="canvasLocation" x="1095.6521739130435" y="819.64285714285711"/>
         </scene>
         <!--Initial View Controller-->
         <scene sceneID="RoS-Zn-hZp">
@@ -206,6 +219,7 @@
     <resources>
         <image name="note" catalog="system" width="128" height="106"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="photoframe-border" width="720" height="720"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
