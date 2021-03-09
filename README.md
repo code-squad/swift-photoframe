@@ -1,3 +1,16 @@
+# Tabbed 앱
+ - 첫 깃 연동 연습
+ - ViewController를 재 설정해서 탭바로 만들기.
+
+ - 실행 화면
+ /Users/jinseopark/Downloads/IMG_1718.PNG
+ /Users/jinseopark/Downloads/IMG_1717.PNG
+
+- 콘솔 화면
+/Users/jinseopark/Desktop/Screen Shot 2021-03-09 at 4.48.22 PM.png
+
+
+# ============================
 # 진행 방법
 
 - 포토프레임에 대한 요구사항을 파악한다.
