@@ -15,6 +15,7 @@
 		FA5BF41625F65C8D000155FD /* PhotoFrameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5BF41525F65C8D000155FD /* PhotoFrameTests.swift */; };
 		FA5BF42125F65C8D000155FD /* PhotoFrameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5BF42025F65C8D000155FD /* PhotoFrameUITests.swift */; };
 		FA5BF43525F75E8C000155FD /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5BF43425F75E8C000155FD /* TabBarController.swift */; };
+		FADA185E25F792BD007940FD /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADA185D25F792BD007940FD /* FirstViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		FA5BF42025F65C8D000155FD /* PhotoFrameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFrameUITests.swift; sourceTree = "<group>"; };
 		FA5BF42225F65C8D000155FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA5BF43425F75E8C000155FD /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		FADA185D25F792BD007940FD /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				FA5BF40925F65C8D000155FD /* LaunchScreen.storyboard */,
 				FA5BF40C25F65C8D000155FD /* Info.plist */,
 				FA5BF43425F75E8C000155FD /* TabBarController.swift */,
+				FADA185D25F792BD007940FD /* FirstViewController.swift */,
 			);
 			path = PhotoFrame;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				FA5BF43525F75E8C000155FD /* TabBarController.swift in Sources */,
 				FA5BF3FF25F65C8A000155FD /* AppDelegate.swift in Sources */,
 				FA5BF40125F65C8A000155FD /* SceneDelegate.swift in Sources */,
+				FADA185E25F792BD007940FD /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
