@@ -1,4 +1,4 @@
-# Tabbed 앱
+# 1. Tabbed 앱
  - 첫 깃 연동 연습
  - ViewController를 재 설정해서 탭바로 만들기.
 
@@ -9,8 +9,23 @@
 - 콘솔 화면
 /Users/jinseopark/Desktop/Screen Shot 2021-03-09 at 4.48.22 PM.png
 
+# 2. Label 과 Btn 으로 Outlet, Action 관리 
+#### 2021/03/10 11 : 28AM
+
+### IBOutlet
+
+<img src= "https://user-images.githubusercontent.com/52390975/110567576-18232a00-8195-11eb-91da-fab8570238ee.png" width="200">
+
+
+### IBAction
+
+<img src= "https://user-images.githubusercontent.com/52390975/110567592-1d807480-8195-11eb-803b-69794d8611d3.png" width="200">
+
+### Outlet은 출력의 의미 , Action은 컨트롤러의 의미로 이해했다.
 
 # ============================
+
+
 # 진행 방법
 
 - 포토프레임에 대한 요구사항을 파악한다.
