@@ -10,13 +10,26 @@ import UIKit
 class YellowViewController: UIViewController {
     
     @IBAction func closeBtnTouched(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        
+        /*Segue Action*/
+        //self.dismiss(animated: true, completion: nil)
+        
+        /*Navigation Action*/
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func nxtSceneNaviBtnTouched(_ sender: Any) {
+        guard let newVC = self.storyboard?.instantiateViewController(identifier: "BlueViewController") else {
+            return
+        }
+        
+        self.navigationController?.pushViewController(newVC, animated: true)
+        
     }
     
     
     @IBAction func nxtSceneBtnTouched(_ sender: Any) {
-        
-        guard let newVC = self.storyboard?.instantiateViewController(identifier: "blueViewController") else {
+        guard let newVC = self.storyboard?.instantiateViewController(identifier: "BlueViewController") else {
             return
         }
         
@@ -26,18 +39,17 @@ class YellowViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print(#file, #line, #function, #column)
-        // Do any additional setup after loading the view.
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        print(#file, #line, #function, #column)
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         print(#file, #line, #function, #column)
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        print(#file, #line, #function, #column)
+    }
     override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(true)
         print(#file, #line, #function, #column)
     }
     

@@ -32,7 +32,6 @@
 ### 이 씬이 불러질 때 순서대로 viewDidLoad, viewWillAppear, 그리고  viewDidAppear 로 생겨진다.
 ### viewDidDisappear는 segue로 연결된 다음 Scene으로 갈 때 나타나지 않고 exit 버튼으로 dismiss함수가 호출 될 때 생겨난다.
 
-
 <img src="https://user-images.githubusercontent.com/52390975/110582779-0dc25980-81b0-11eb-8445-2640fcda2302.png" width="600">
 
 ```
@@ -58,6 +57,34 @@
 }
 
 ```
+
+# Step 6. Container View Controller
+
+#### 2021/03/10 4:30PM
+
+- 네비게이션 동작을 구현하였고, 세그웨이와 다른 점은 새로운 View가 밑에서 아래가 아닌 좌에서 우로 간다는 점을 파악했다.
+- 세그웨이와 다른 점은 새로운 뷰이기 때문에 기존의 view에 viewDidDisappear가 작동된다는 점이다.
+- 시각적인 차이를 보기 위해서 버튼을 두가지 종류(세그웨이, 내비게이션)를 만들어서 구현하였다.
+
+<img src = "https://user-images.githubusercontent.com/52390975/110591617-a2cb4f80-81bc-11eb-8e22-4aca0c1c1a11.gif" width="200">
+
+
+- push와 Pop을 이해하기 위해 다른 view를 push를 이용해 코드 작업
+
+```swift
+
+@IBAction func nxtSceneNaviBtnTouched(_ sender: Any) {
+    guard let newVC = self.storyboard?.instantiateViewController(identifier: "BlueViewController") else {
+        return
+    }
+    
+    self.navigationController?.pushViewController(newVC, animated: true)
+    
+}
+
+```
+
+
 
 # ============================
 
