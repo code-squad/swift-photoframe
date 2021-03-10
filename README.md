@@ -1,15 +1,8 @@
-# 1. Tabbed 앱
+# Step 1. Tabbed 앱
  - 첫 깃 연동 연습
  - ViewController를 재 설정해서 탭바로 만들기.
 
- - 실행 화면
- /Users/jinseopark/Downloads/IMG_1718.PNG
- /Users/jinseopark/Downloads/IMG_1717.PNG
-
-- 콘솔 화면
-/Users/jinseopark/Desktop/Screen Shot 2021-03-09 at 4.48.22 PM.png
-
-# 2. Label 과 Btn 으로 Outlet, Action 관리 
+# Step 2&3. Label 과 Btn 으로 Outlet, Action 관리 
 #### 2021/03/10 11 : 28AM
 
 ### IBOutlet
@@ -22,6 +15,49 @@
 <img src= "https://user-images.githubusercontent.com/52390975/110567592-1d807480-8195-11eb-803b-69794d8611d3.png" width="200">
 
 ### Outlet은 출력의 의미 , Action은 컨트롤러의 의미로 이해했다.
+
+# Step 4. Scene과 Segue
+#### 2021/03/10 2 : 00PM
+
+### 2개의 씬을 넣어서 Segue를 이용하여 배경색을 바꾸는 기술을 적용함.
+
+
+<img src="https://user-images.githubusercontent.com/52390975/110580940-f59d0b00-81ac-11eb-8472-d69fde39d362.gif" width="200">
+
+# Step 5. ViewController Programming
+#### 2021/03/10 3 : 30PM
+
+### Cocoa Touch Class를 이용해서 새로운 UIViewController 를 만들어 첫번째 Scene의 뷰를 컨트롤 한다.
+### 이 때 이용한 view(DidLoad, WillAppear, DidAppear, DidDisappear)의 Cycle을 확인한다.
+### 이 씬이 불러질 때 순서대로 viewDidLoad, viewWillAppear, 그리고  viewDidAppear 로 생겨진다.
+### viewDidDisappear는 segue로 연결된 다음 Scene으로 갈 때 나타나지 않고 exit 버튼으로 dismiss함수가 호출 될 때 생겨난다.
+
+
+<img src="https://user-images.githubusercontent.com/52390975/110582779-0dc25980-81b0-11eb-8445-2640fcda2302.png" width="600">
+
+```
+/Users/jinseopark/Documents/GitHub/swift-photoframe/PhotoFrame/PhotoFrame/YellowViewController.swift 17 viewDidLoad() 40
+/Users/jinseopark/Documents/GitHub/swift-photoframe/PhotoFrame/PhotoFrame/YellowViewController.swift 26 viewWillAppear(_:) 40
+/Users/jinseopark/Documents/GitHub/swift-photoframe/PhotoFrame/PhotoFrame/YellowViewController.swift 22 viewDidAppear(_:) 40
+
+/Users/jinseopark/Documents/GitHub/swift-photoframe/PhotoFrame/PhotoFrame/YellowViewController.swift 30 viewDidDisappear(_:) 40
+```
+
+
+### 2번째에서 3번째 view로 갈 때 코드와 버튼 Action을 이용해서 3번째 화면을 가도록 구현.
+
+``` swift
+
+@IBAction func nxtSceneBtnTouched(_ sender: Any) {
+    
+    guard let newVC = self.storyboard?.instantiateViewController(identifier: "blueViewController") else {
+        return
+    }
+    
+    self.present(newVC, animated: true)       
+}
+
+```
 
 # ============================
 

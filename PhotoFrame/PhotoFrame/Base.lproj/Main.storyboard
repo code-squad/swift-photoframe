@@ -50,6 +50,7 @@
                                 <state key="normal" title="다음"/>
                                 <connections>
                                     <action selector="nextBtnTouched:" destination="kNa-HP-kbX" eventType="touchUpInside" id="hfl-JR-mxX"/>
+                                    <segue destination="X9S-dx-QJ3" kind="show" id="hFN-Sm-cri"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -75,6 +76,47 @@
             </objects>
             <point key="canvasLocation" x="-581.15942028985512" y="-569.19642857142856"/>
         </scene>
+        <!--Yellow View Controller-->
+        <scene sceneID="YeS-p5-yCV">
+            <objects>
+                <viewController id="X9S-dx-QJ3" customClass="YellowViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8E6-nF-JW8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5p-QW-YFo">
+                                <rect key="frame" x="100" y="592" width="214" height="86"/>
+                                <state key="normal" title="다른색Button"/>
+                                <connections>
+                                    <action selector="nxtSceneBtnTouched:" destination="X9S-dx-QJ3" eventType="touchUpInside" id="BGF-d0-tJO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMR-4U-Ycj">
+                                <rect key="frame" x="150" y="250" width="114" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="닫기"/>
+                                <connections>
+                                    <action selector="closeBtnTouched:" destination="X9S-dx-QJ3" eventType="touchUpInside" id="MSP-tU-Mmk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kmn-28-Ll3"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="kmn-28-Ll3" firstAttribute="bottom" secondItem="G5p-QW-YFo" secondAttribute="bottom" constant="100" id="67V-ew-GAc"/>
+                            <constraint firstItem="kmn-28-Ll3" firstAttribute="trailing" secondItem="G5p-QW-YFo" secondAttribute="trailing" constant="100" id="CE1-a8-8du"/>
+                            <constraint firstItem="DMR-4U-Ycj" firstAttribute="leading" secondItem="kmn-28-Ll3" secondAttribute="leading" constant="150" id="ckN-1w-DiI"/>
+                            <constraint firstItem="kmn-28-Ll3" firstAttribute="trailing" secondItem="DMR-4U-Ycj" secondAttribute="trailing" constant="150" id="dbn-lt-8pw"/>
+                            <constraint firstItem="G5p-QW-YFo" firstAttribute="leading" secondItem="kmn-28-Ll3" secondAttribute="leading" constant="100" id="e9l-we-iab"/>
+                            <constraint firstItem="DMR-4U-Ycj" firstAttribute="top" secondItem="kmn-28-Ll3" secondAttribute="top" constant="250" id="k58-jc-0aY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="RNP-7C-NSb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fsU-oO-Ze2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="144.92753623188406" y="-569.19642857142856"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="tUx-tk-K8Y">
             <objects>
@@ -93,10 +135,32 @@
             </objects>
             <point key="canvasLocation" x="-1475" y="-263"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="0qx-3s-mSK">
+            <objects>
+                <viewController storyboardIdentifier="blueViewController" id="Idp-3e-RBE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oFd-o9-s0k">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Mxh-nV-lTK"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6yi-3s-qCG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qfd-Jk-hnk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="875" y="-569"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
