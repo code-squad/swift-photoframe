@@ -84,6 +84,37 @@
 
 ```
 
+# Step 7. Second Scene
+
+#### 2021/03/10 6:10PM
+
+- Img를 다운받아서 UIImageView에 보여주는 것이 목표
+- viewDidLoad()에서 부터 이미지를 보여주고 '다음' 버튼을 누를때마다 랜덤으로 이미지를 보여준다.
+- 이때 이미지는 ImageView에 맞게 scaleToFill을 해준다.
+
+```swift
+@IBAction func changeImgBtnTouched(_ sender: Any) {
+    let randInt = Int.random(in: 1...22)
+    
+    //Path가 Stirng이기에 10 이하 숫자(n)는 0n.jpg 이며 정확한 str를 위해 if-else 구문 사용
+    if randInt < 10 {
+        self.photoImgView.image =
+            UIImage(named: "0"+String(randInt)+".jpg")
+    }else {
+        self.photoImgView.image =
+            UIImage(named: String(randInt)+".jpg")
+    }
+    
+
+    /* contentMode의 scaleToFill을 이용해서 사이즈를 조정한다.*/
+    self.photoImgView.contentMode = .scaleToFill
+    
+
+}
+
+```
+
+<img src = "https://user-images.githubusercontent.com/52390975/110604304-44f23400-81cb-11eb-9d98-19b7d6870561.gif" width="200">
 
 
 # ============================
