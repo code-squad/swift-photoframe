@@ -11,18 +11,54 @@
         <!--Item 2-->
         <scene sceneID="04G-0v-LpN">
             <objects>
-                <viewController id="HzN-hg-z1Z" sceneMemberID="viewController">
+                <viewController id="HzN-hg-z1Z" customClass="SecondViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rzh-w6-VYQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tbr-sb-spm">
+                                <rect key="frame" x="87" y="194" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="4Tb-2K-u4f"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo Album" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yr-8g-54g">
+                                <rect key="frame" x="87" y="486" width="240" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nEj-2k-CMt">
+                                <rect key="frame" x="150" y="552" width="114" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="다음"/>
+                                <connections>
+                                    <action selector="changeImgBtnTouched:" destination="HzN-hg-z1Z" eventType="touchUpInside" id="69z-hT-MlH"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="xPU-sa-Y8c"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nEj-2k-CMt" firstAttribute="leading" secondItem="xPU-sa-Y8c" secondAttribute="leading" constant="150" id="2iq-gC-Hdt"/>
+                            <constraint firstItem="Tbr-sb-spm" firstAttribute="top" secondItem="xPU-sa-Y8c" secondAttribute="top" constant="150" id="8GF-ll-LwI"/>
+                            <constraint firstItem="xPU-sa-Y8c" firstAttribute="trailing" secondItem="nEj-2k-CMt" secondAttribute="trailing" constant="150" id="9fg-0W-jai"/>
+                            <constraint firstItem="nEj-2k-CMt" firstAttribute="top" secondItem="6yr-8g-54g" secondAttribute="bottom" constant="30" id="9n8-JP-1aB"/>
+                            <constraint firstItem="xPU-sa-Y8c" firstAttribute="trailing" secondItem="Tbr-sb-spm" secondAttribute="trailing" constant="87" id="DwN-yb-A5O"/>
+                            <constraint firstItem="6yr-8g-54g" firstAttribute="top" secondItem="Tbr-sb-spm" secondAttribute="bottom" constant="52" id="NW2-Fk-yef"/>
+                            <constraint firstItem="Tbr-sb-spm" firstAttribute="leading" secondItem="xPU-sa-Y8c" secondAttribute="leading" constant="87" id="SZn-6F-JTc"/>
+                            <constraint firstItem="6yr-8g-54g" firstAttribute="leading" secondItem="xPU-sa-Y8c" secondAttribute="leading" constant="87" id="WW7-aI-1Oo"/>
+                            <constraint firstItem="xPU-sa-Y8c" firstAttribute="trailing" secondItem="6yr-8g-54g" secondAttribute="trailing" constant="87" id="eia-SK-oC6"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="J6X-Tk-2B2"/>
+                    <connections>
+                        <outlet property="photoImgView" destination="Tbr-sb-spm" id="oQq-MI-Fgc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wIa-Yh-sbo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="328.98550724637681" y="37.5"/>
+            <point key="canvasLocation" x="327.536231884058" y="109.82142857142857"/>
         </scene>
         <!--First View Controller-->
         <scene sceneID="Ync-pz-1Ld">
