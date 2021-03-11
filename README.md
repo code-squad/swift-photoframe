@@ -117,6 +117,32 @@
 <img src = "https://user-images.githubusercontent.com/52390975/110604304-44f23400-81cb-11eb-9d98-19b7d6870561.gif" width="200">
 
 
+# Step 8. 추가 학습
+
+- 델리게이트에 대한 학습
+
+- 정의 : 다른 객체가 해주는 일을 대신한다.(스스로 할 수도 있다)
+
+- 1. 다른 객체 변화에 대응하거나 2. 다른 객체 행동에 변화를 준다.
+
+- 두 객체가 힘을 합치어서 문제를 해결
+
+- 액자를 다운받아 AutoLayout을 이용하여 사진외부에 걸치게 되었다.
+
+- 이때 중간에 알파값이 있는지 겹쳐서 사진이 가려지는 일은 없었다.
+
+- 스토리보드에 스택순서? 대로 겹쳐지는것이 다르긴 한데 확실히는 모르겠다.
+
+<div>
+
+<img src = "https://user-images.githubusercontent.com/52390975/110750921-8f84b680-8286-11eb-8ab7-0396c3404d11.gif" width="200">
+
+<img src = "https://user-images.githubusercontent.com/52390975/110750951-96132e00-8286-11eb-8142-b093b4e13858.gif" width="200">
+
+<img src = "https://user-images.githubusercontent.com/52390975/110750959-97445b00-8286-11eb-8d6d-f04765453f1a.gif" width="200">
+
+</div>
+
 # ============================
 
 
